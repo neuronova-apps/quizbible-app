@@ -715,6 +715,25 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "juda", "judá", "jerusalen", "jerusalén", "monte", "egipto", "casa", "templo"
         },
     },
+    "zechariah": {
+        "canonical_name": "Zacarías",
+        "api_name": "Zacarias",
+        "aliases": {
+            "zacarias", "zacarías", "zechariah", "zac", "libro de zacarias", "libro de zacarías"
+        },
+        "total_chapters": 14,
+        "blocks": [
+            (1, 14, "zechariah-01-14.json"),
+        ],
+        "default_output_dir": "build/audit/zechariah",
+        "ambient_places": {
+            "jerusalen", "jerusalén", "juda", "judá", "israel", "sion", "sión", "monte de los olivos",
+            "valle de los montes", "valle de josafat", "valle de meguido", "hadadrimon", "hadadrimón",
+            "babilonia", "sinar", "sinear", "damasco", "hamat", "tiro", "sidon", "sidón", "ascalon", "ascalón",
+            "gaza", "ecron", "ecrón", "asdod", "filistea", "grecia", "efrain", "efraín", "galaad", "libano", "líbano",
+            "asiria", "egipto", "bet-el", "betel", "mar", "eufrates", "éufrates", "geba", "rimon", "rimón"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -836,6 +855,8 @@ BIBLE_PERSONAJES = {
     "sofonias", "sofonías", "josias", "josías", "cusi", "gedalias", "gedalías", "amarias", "amarías",
     # Hageo
     "hageo", "haggai", "dario", "darío", "salatiel", "sealtiel", "josadac", "jehozadac", "zorobabel", "josue", "josué",
+    # Zacarías
+    "zacarias", "zacarías", "berequias", "berequías", "ido", "iddó", "iddo", "satanas", "satanás", "serezer", "regem-melec", "regemmelec", "heldai", "tobias", "tobías", "jedaias", "jedaías", "hen",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",
