@@ -87,6 +87,7 @@ LUKE_PATH = Path(__file__).parent / "luke-master-input.json"
 JOHN_PATH = Path(__file__).parent / "john-master-input.json"
 ACTS_PATH = Path(__file__).parent / "acts-master-input.json"
 ROMANS_PATH = Path(__file__).parent / "romans-master-input.json"
+CORINTHIANS1_PATH = Path(__file__).parent / "1corinthians-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -358,6 +359,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.romans_questions = {q["id"]: q for q in (raw_rom.get("questions", []) if isinstance(raw_rom, dict) else raw_rom)}
         else:
             cls.romans_questions = {}
+
+        if CORINTHIANS1_PATH.exists():
+            raw_1co = json.loads(CORINTHIANS1_PATH.read_text(encoding="utf-8"))
+            cls.corinthians1_questions = {q["id"]: q for q in (raw_1co.get("questions", []) if isinstance(raw_1co, dict) else raw_1co)}
+        else:
+            cls.corinthians1_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -4778,6 +4785,132 @@ class TestAuditorCanonical(unittest.TestCase):
         self.assertTrue(is_narrative_source_attribution("pablo", "Pablo argumenta que la fe precede a la circuncisión"))
         self.assertTrue(is_narrative_source_attribution("pablo", "Pablo concluye que no hay condenación para los creyentes"))
         self.assertTrue(is_narrative_source_attribution("pablo", "Según expone Pablo en la carta"))
+
+    # --- PRUEBAS ESPECÍFICAS DE 1 CORINTIOS ---
+
+    def get_1corinthians_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.corinthians1_questions, f"ID '{qid}' no encontrado en 1corinthians-master-input.json")
+        return copy.deepcopy(self.corinthians1_questions[qid])
+
+    def test_detect_book_key_1corinthians(self) -> None:
+        """Verifica detección de book_key para 1 Corintios y sus variantes."""
+        spec_1co = {"questions": [{"id": "NQB-NT-1CO-0001", "book": "1 Corintios"}]}
+        self.assertEqual(detect_book_key(spec_1co), "1corinthians")
+
+        spec_alias = {"questions": [{"id": "NQB-NT-1CO-0001", "book": "1corintios"}]}
+        self.assertEqual(detect_book_key(spec_alias), "1corinthians")
+
+        spec_en = {"questions": [{"id": "NQB-NT-1CO-0001", "book": "1 Corinthians"}]}
+        self.assertEqual(detect_book_key(spec_en), "1corinthians")
+
+        spec_1co_short = {"questions": [{"id": "NQB-NT-1CO-0001", "book": "1 cor"}]}
+        self.assertEqual(detect_book_key(spec_1co_short), "1corinthians")
+
+        spec_carta = {"questions": [{"id": "NQB-NT-1CO-0001", "book": "Primera Carta a los Corintios"}]}
+        self.assertEqual(detect_book_key(spec_carta), "1corinthians")
+
+    def test_1corinthians_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de 1 Corintios en BOOK_CONFIGS."""
+        self.assertIn("1corinthians", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["1corinthians"]
+        self.assertEqual(cfg["canonical_name"], "1 Corintios")
+        self.assertEqual(cfg["api_name"], "1 Corintios")
+        self.assertEqual(cfg["total_chapters"], 16)
+        self.assertEqual(len(cfg["blocks"]), 2)
+        self.assertIn("1 corintios", cfg["aliases"])
+        self.assertIn("1corintios", cfg["aliases"])
+        self.assertIn("1 corinthians", cfg["aliases"])
+        self.assertIn("corinto", cfg["ambient_places"])
+        self.assertIn("efeso", cfg["ambient_places"])
+        self.assertIn("macedonia", cfg["ambient_places"])
+
+    def test_global_canonical_id_reference_integrity_1corinthians(self) -> None:
+        """Verifica consistencia de IDs y referencias en 1 Corintios."""
+        if not self.corinthians1_questions:
+            self.skipTest("1corinthians-master-input.json no disponible")
+        for qid, q in self.corinthians1_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_1corinthians_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de 1 Corintios."""
+        if not self.corinthians1_questions:
+            self.skipTest("1corinthians-master-input.json no disponible")
+        self.assertEqual(len(self.corinthians1_questions), 80)
+        
+        # 5 preguntas por capítulo
+        ch_counts = collections.Counter(q["chapter"] for q in self.corinthians1_questions.values())
+        self.assertEqual(len(ch_counts), 16)
+        for ch in range(1, 17):
+            self.assertEqual(ch_counts[ch], 5, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 5")
+
+        # Dificultad: Básico=19, Intermedio=25, Avanzado=29, Experto=7
+        diff_counts = collections.Counter(q["difficulty"] for q in self.corinthians1_questions.values())
+        self.assertEqual(diff_counts["Básico"], 19)
+        self.assertEqual(diff_counts["Intermedio"], 25)
+        self.assertEqual(diff_counts["Avanzado"], 29)
+        self.assertEqual(diff_counts["Experto"], 7)
+
+        # Tipos: 71 MC, 9 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.corinthians1_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 71)
+        self.assertEqual(type_counts["TRUE_FALSE"], 9)
+
+    def test_1corinthians_additional_references(self) -> None:
+        """Verifica las 14 preguntas con 15 referencias adicionales en 1 Corintios."""
+        if not self.corinthians1_questions:
+            self.skipTest("1corinthians-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-1CO-0003": ["Isaías 29:14"],
+            "NQB-NT-1CO-0005": ["Jeremías 9:23-24"],
+            "NQB-NT-1CO-0007": ["Isaías 64:4"],
+            "NQB-NT-1CO-0010": ["Isaías 40:13"],
+            "NQB-NT-1CO-0015": ["Job 5:13"],
+            "NQB-NT-1CO-0022": ["Éxodo 12:15"],
+            "NQB-NT-1CO-0024": ["Deuteronomio 17:7"],
+            "NQB-NT-1CO-0029": ["Génesis 2:24"],
+            "NQB-NT-1CO-0042": ["Deuteronomio 25:4"],
+            "NQB-NT-1CO-0047": ["Éxodo 32:6"],
+            "NQB-NT-1CO-0049": ["Salmos 24:1"],
+            "NQB-NT-1CO-0068": ["Isaías 28:11-12"],
+            "NQB-NT-1CO-0073": ["Salmos 8:6"],
+            "NQB-NT-1CO-0075": ["Isaías 25:8", "Oseas 13:14"]
+        }
+        found_add_refs = {}
+        for qid, q in self.corinthians1_questions.items():
+            refs = q.get("additional_references", [])
+            if refs:
+                found_add_refs[qid] = refs
+
+        self.assertEqual(len(found_add_refs), 14)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 15)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_1corinthians_modes_and_categories(self) -> None:
+        """Verifica la asignación de modos y categorías sin categorías de Jesús en 1 Corintios."""
+        if not self.corinthians1_questions:
+            self.skipTest("1corinthians-master-input.json no disponible")
+        for qid, q in self.corinthians1_questions.items():
+            cat = q.get("category")
+            self.assertIn(cat, {"NT_GENERAL", "PERSONAJES_BIBLICOS"})
+            self.assertNotIn(cat, {"JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"})
+            modes = q.get("eligible_modes", [])
+            self.assertIn("NT", modes)
+            self.assertIn("AMBOS", modes)
+            if cat == "PERSONAJES_BIBLICOS":
+                self.assertIn("PERSONAJES_NT", modes)
+                self.assertIn("PERSONAJES_AMBOS", modes)
+            if q.get("question_type") == "TRUE_FALSE":
+                self.assertIn("VERDADERO_FALSO_NT", modes)
+                self.assertIn("VERDADERO_FALSO_AMBOS", modes)
 
 
 if __name__ == "__main__":

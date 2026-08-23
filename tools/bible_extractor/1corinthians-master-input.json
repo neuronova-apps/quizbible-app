@@ -1,0 +1,2405 @@
+{
+  "source": "Quiz Bible master bank - 1 Corintios",
+  "version": "RVR1960",
+  "book": "1 Corintios",
+  "total_questions": 80,
+  "questions": [
+    {
+      "id": "NQB-NT-1CO-0001",
+      "book": "1 Corintios",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 9,
+      "reference": "1 Corintios 1:1-9",
+      "category": "NT_GENERAL",
+      "subcategory": "Llamado y comunión",
+      "characters": [
+        "Pablo",
+        "iglesia en Corinto"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué identidad destaca Pablo de la comunidad a la que escribe?",
+      "opcion_a": "Personas santificadas en Cristo y llamadas a ser santas",
+      "opcion_b": "Una élite sin problemas internos",
+      "opcion_c": "Un grupo formado solo por dirigentes",
+      "opcion_d": "Una comunidad aislada de otras iglesias",
+      "correct_option": "A",
+      "correct_answer": "Personas santificadas en Cristo y llamadas a ser santas",
+      "explanation": "El argumento de Pablo destaca que personas santificadas en Cristo y llamadas a ser santas. En el contexto de llamado y comunión, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0002",
+      "book": "1 Corintios",
+      "chapter": 1,
+      "verse_start": 10,
+      "verse_end": 17,
+      "reference": "1 Corintios 1:10-17",
+      "category": "NT_GENERAL",
+      "subcategory": "Divisiones y lealtades",
+      "characters": [
+        "Pablo",
+        "Apolos",
+        "Cefas",
+        "Cristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué problema intenta corregir Pablo cuando algunos se identifican con distintos líderes?",
+      "opcion_a": "Las divisiones y rivalidades que desplazan la centralidad de Cristo",
+      "opcion_b": "La falta de edificios propios",
+      "opcion_c": "La ausencia de viajes misioneros",
+      "opcion_d": "El desconocimiento de idiomas extranjeros",
+      "correct_option": "A",
+      "correct_answer": "Las divisiones y rivalidades que desplazan la centralidad de Cristo",
+      "explanation": "El argumento de Pablo destaca que las divisiones y rivalidades que desplazan la centralidad de Cristo. En el contexto de divisiones y lealtades, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0003",
+      "book": "1 Corintios",
+      "chapter": 1,
+      "verse_start": 17,
+      "verse_end": 25,
+      "reference": "1 Corintios 1:17-25",
+      "category": "NT_GENERAL",
+      "subcategory": "Cruz y sabiduría",
+      "characters": [
+        "Cristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo presenta la cruz como un mensaje que invierte los criterios humanos de poder y sabiduría",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Verdadero corresponde al sentido del argumento de Pablo en el tema de cruz y sabiduría; el pasaje orienta la conducta comunitaria sin convertirla en una regla ajena a su contexto.",
+      "additional_references": [
+        "Isaías 29:14"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0004",
+      "book": "1 Corintios",
+      "chapter": 1,
+      "verse_start": 26,
+      "verse_end": 29,
+      "reference": "1 Corintios 1:26-29",
+      "category": "NT_GENERAL",
+      "subcategory": "Llamamiento y jactancia",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué propósito atribuye Pablo al hecho de que muchos creyentes no pertenecieran a las élites de su sociedad?",
+      "opcion_a": "Impedir que la jactancia humana ocupe el lugar que corresponde a Dios",
+      "opcion_b": "Demostrar que la educación siempre es perjudicial",
+      "opcion_c": "Prohibir que personas influyentes formen parte de la iglesia",
+      "opcion_d": "Enseñar que la pobreza garantiza superioridad espiritual",
+      "correct_option": "A",
+      "correct_answer": "Impedir que la jactancia humana ocupe el lugar que corresponde a Dios",
+      "explanation": "El argumento de Pablo destaca que impedir que la jactancia humana ocupe el lugar que corresponde a Dios. En el contexto de llamamiento y jactancia, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0005",
+      "book": "1 Corintios",
+      "chapter": 1,
+      "verse_start": 30,
+      "verse_end": 31,
+      "reference": "1 Corintios 1:30-31",
+      "category": "NT_GENERAL",
+      "subcategory": "Jactancia en el Señor",
+      "characters": [
+        "Cristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Dónde orienta Pablo la jactancia de la comunidad?",
+      "opcion_a": "En el Señor, de quien procede su vida en Cristo",
+      "opcion_b": "En la reputación de sus maestros favoritos",
+      "opcion_c": "En la riqueza de la ciudad",
+      "opcion_d": "En la capacidad de ganar debates",
+      "correct_option": "A",
+      "correct_answer": "En el Señor, de quien procede su vida en Cristo",
+      "explanation": "El argumento de Pablo destaca que en el Señor, de quien procede su vida en Cristo. En el contexto de jactancia en el señor, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [
+        "Jeremías 9:23-24"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0006",
+      "book": "1 Corintios",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "1 Corintios 2:1-5",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Predicación y poder de Dios",
+      "characters": [
+        "Pablo",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué quiso evitar Pablo al anunciar su mensaje entre los corintios?",
+      "opcion_a": "Que la fe descansara principalmente en la habilidad persuasiva humana",
+      "opcion_b": "Que la comunidad hiciera preguntas",
+      "opcion_c": "Que alguien aprendiera a hablar en público",
+      "opcion_d": "Que se mencionara la crucifixión",
+      "correct_option": "A",
+      "correct_answer": "Que la fe descansara principalmente en la habilidad persuasiva humana",
+      "explanation": "El argumento de Pablo destaca que que la fe descansara principalmente en la habilidad persuasiva humana. En el contexto de predicación y poder de dios, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0007",
+      "book": "1 Corintios",
+      "chapter": 2,
+      "verse_start": 6,
+      "verse_end": 9,
+      "reference": "1 Corintios 2:6-9",
+      "category": "NT_GENERAL",
+      "subcategory": "Sabiduría de Dios",
+      "characters": [
+        "Pablo",
+        "gobernantes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo describe Pablo la sabiduría que comunica entre los maduros?",
+      "opcion_a": "Como sabiduría de Dios antes oculta y destinada para gloria",
+      "opcion_b": "Como estrategia política reservada a gobernantes",
+      "opcion_c": "Como conocimiento que elimina toda necesidad de fe",
+      "opcion_d": "Como tradición secreta comprada con dinero",
+      "correct_option": "A",
+      "correct_answer": "Como sabiduría de Dios antes oculta y destinada para gloria",
+      "explanation": "El argumento de Pablo destaca que como sabiduría de Dios antes oculta y destinada para gloria. En el contexto de sabiduría de dios, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [
+        "Isaías 64:4"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0008",
+      "book": "1 Corintios",
+      "chapter": 2,
+      "verse_start": 10,
+      "verse_end": 13,
+      "reference": "1 Corintios 2:10-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Revelación por el Espíritu",
+      "characters": [
+        "Espíritu de Dios"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función atribuye Pablo al Espíritu respecto de las cosas de Dios?",
+      "opcion_a": "Escudriñarlas y hacer posible comprender lo que Dios concede",
+      "opcion_b": "Sustituir toda reflexión responsable",
+      "opcion_c": "Garantizar que cada opinión personal sea infalible",
+      "opcion_d": "Eliminar la necesidad de comunicación comprensible",
+      "correct_option": "A",
+      "correct_answer": "Escudriñarlas y hacer posible comprender lo que Dios concede",
+      "explanation": "El argumento de Pablo destaca que escudriñarlas y hacer posible comprender lo que Dios concede. En el contexto de revelación por el espíritu, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0009",
+      "book": "1 Corintios",
+      "chapter": 2,
+      "verse_start": 14,
+      "verse_end": 16,
+      "reference": "1 Corintios 2:14-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Discernimiento espiritual",
+      "characters": [
+        "Espíritu",
+        "Cristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué evita la afirmación sobre la mente de Cristo en el argumento de Pablo?",
+      "opcion_a": "Convertir la madurez espiritual en desprecio hacia quienes comprenden de modo distinto",
+      "opcion_b": "Aceptar que la comprensión espiritual requiere discernimiento",
+      "opcion_c": "Reconocer que la comunidad depende de Cristo",
+      "opcion_d": "Valorar la enseñanza recibida",
+      "correct_option": "A",
+      "correct_answer": "Convertir la madurez espiritual en desprecio hacia quienes comprenden de modo distinto",
+      "explanation": "El argumento de Pablo destaca que convertir la madurez espiritual en desprecio hacia quienes comprenden de modo distinto. En el contexto de discernimiento espiritual, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0010",
+      "book": "1 Corintios",
+      "chapter": 2,
+      "verse_start": 16,
+      "verse_end": 16,
+      "reference": "1 Corintios 2:16",
+      "category": "NT_GENERAL",
+      "subcategory": "Mente de Cristo",
+      "characters": [
+        "Cristo",
+        "comunidad"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué afirmación culmina el contraste entre comprensión espiritual y criterios meramente humanos?",
+      "opcion_a": "La comunidad tiene la mente de Cristo",
+      "opcion_b": "Cada creyente posee conocimiento ilimitado",
+      "opcion_c": "La razón humana carece por completo de valor",
+      "opcion_d": "Ningún desacuerdo puede existir entre cristianos",
+      "correct_option": "A",
+      "correct_answer": "La comunidad tiene la mente de Cristo",
+      "explanation": "El argumento de Pablo destaca que la comunidad tiene la mente de Cristo. En el contexto de mente de cristo, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [
+        "Isaías 40:13"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0011",
+      "book": "1 Corintios",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "1 Corintios 3:1-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Inmadurez y facciones",
+      "characters": [
+        "Pablo",
+        "Apolos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué señal de inmadurez observa Pablo en la comunidad?",
+      "opcion_a": "Celos y contiendas vinculados con facciones alrededor de líderes",
+      "opcion_b": "La existencia de distintos oficios",
+      "opcion_c": "La lectura de las Escrituras",
+      "opcion_d": "El deseo de ayudar a personas necesitadas",
+      "correct_option": "A",
+      "correct_answer": "Celos y contiendas vinculados con facciones alrededor de líderes",
+      "explanation": "El argumento de Pablo destaca que celos y contiendas vinculados con facciones alrededor de líderes. En el contexto de inmadurez y facciones, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0012",
+      "book": "1 Corintios",
+      "chapter": 3,
+      "verse_start": 5,
+      "verse_end": 9,
+      "reference": "1 Corintios 3:5-9",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Servidores y crecimiento",
+      "characters": [
+        "Pablo",
+        "Apolos",
+        "Dios"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo presenta Pablo su trabajo y el de Apolos?",
+      "opcion_a": "Como servicios distintos mientras Dios da el crecimiento",
+      "opcion_b": "Como competencias por obtener seguidores",
+      "opcion_c": "Como ministerios sin relación entre sí",
+      "opcion_d": "Como funciones que reemplazan la acción de Dios",
+      "correct_option": "A",
+      "correct_answer": "Como servicios distintos mientras Dios da el crecimiento",
+      "explanation": "El argumento de Pablo destaca que como servicios distintos mientras Dios da el crecimiento. En el contexto de servidores y crecimiento, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0013",
+      "book": "1 Corintios",
+      "chapter": 3,
+      "verse_start": 10,
+      "verse_end": 15,
+      "reference": "1 Corintios 3:10-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Fundamento y obra",
+      "characters": [
+        "Pablo",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué fundamento considera Pablo que ya está puesto para la edificación de la comunidad?",
+      "opcion_a": "Jesucristo",
+      "opcion_b": "La fama de los maestros",
+      "opcion_c": "La riqueza de los miembros",
+      "opcion_d": "La tradición de una ciudad determinada",
+      "correct_option": "A",
+      "correct_answer": "Jesucristo",
+      "explanation": "El argumento de Pablo destaca que jesucristo. En el contexto de fundamento y obra, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0014",
+      "book": "1 Corintios",
+      "chapter": 3,
+      "verse_start": 16,
+      "verse_end": 17,
+      "reference": "1 Corintios 3:16-17",
+      "category": "NT_GENERAL",
+      "subcategory": "Templo de Dios",
+      "characters": [
+        "Espíritu",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué imagen usa Pablo para subrayar la santidad y responsabilidad colectiva de la comunidad?",
+      "opcion_a": "La comunidad como templo de Dios habitado por su Espíritu",
+      "opcion_b": "La comunidad como ejército destinado a dominar",
+      "opcion_c": "La comunidad como empresa privada",
+      "opcion_d": "La comunidad como grupo sin obligaciones mutuas",
+      "correct_option": "A",
+      "correct_answer": "La comunidad como templo de Dios habitado por su Espíritu",
+      "explanation": "El argumento de Pablo destaca que la comunidad como templo de Dios habitado por su Espíritu. En el contexto de templo de dios, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0015",
+      "book": "1 Corintios",
+      "chapter": 3,
+      "verse_start": 18,
+      "verse_end": 23,
+      "reference": "1 Corintios 3:18-23",
+      "category": "NT_GENERAL",
+      "subcategory": "Sabiduría y pertenencia",
+      "characters": [
+        "Pablo",
+        "Apolos",
+        "Cefas",
+        "Cristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo concluye que los creyentes pertenecen en última instancia a sus líderes humanos favoritos",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. El desarrollo sobre sabiduría y pertenencia contradice esa formulación y conserva el énfasis de Pablo en responsabilidad, amor y fidelidad al evangelio.",
+      "additional_references": [
+        "Job 5:13"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0016",
+      "book": "1 Corintios",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "1 Corintios 4:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Mayordomía y juicio",
+      "characters": [
+        "Pablo",
+        "Apolos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo pide Pablo que sean considerados quienes sirven en el ministerio?",
+      "opcion_a": "Como servidores de Cristo y administradores responsables de lo recibido",
+      "opcion_b": "Como dueños de la comunidad",
+      "opcion_c": "Como autoridades inmunes a evaluación",
+      "opcion_d": "Como figuras que deben competir por prestigio",
+      "correct_option": "A",
+      "correct_answer": "Como servidores de Cristo y administradores responsables de lo recibido",
+      "explanation": "El argumento de Pablo destaca que como servidores de Cristo y administradores responsables de lo recibido. En el contexto de mayordomía y juicio, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0017",
+      "book": "1 Corintios",
+      "chapter": 4,
+      "verse_start": 6,
+      "verse_end": 7,
+      "reference": "1 Corintios 4:6-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Orgullo y comparación",
+      "characters": [
+        "Pablo",
+        "Apolos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pregunta utiliza Pablo para desmontar la superioridad basada en dones recibidos?",
+      "opcion_a": "Qué tienes que no hayas recibido",
+      "opcion_b": "Quién posee más recursos económicos",
+      "opcion_c": "Quién habla con mayor volumen",
+      "opcion_d": "Quién viajó más lejos",
+      "correct_option": "A",
+      "correct_answer": "Qué tienes que no hayas recibido",
+      "explanation": "El argumento de Pablo destaca que qué tienes que no hayas recibido. En el contexto de orgullo y comparación, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0018",
+      "book": "1 Corintios",
+      "chapter": 4,
+      "verse_start": 8,
+      "verse_end": 13,
+      "reference": "1 Corintios 4:8-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Ironía sobre poder y prestigio",
+      "characters": [
+        "Pablo",
+        "apóstoles"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué logra la ironía de Pablo al contrastar el supuesto triunfo de algunos con la vulnerabilidad apostólica?",
+      "opcion_a": "Cuestionar una visión de éxito espiritual basada en prestigio y comodidad",
+      "opcion_b": "Enseñar que el sufrimiento debe buscarse deliberadamente",
+      "opcion_c": "Probar que toda autoridad es ilegítima",
+      "opcion_d": "Exigir que todos los creyentes vivan en pobreza extrema",
+      "correct_option": "A",
+      "correct_answer": "Cuestionar una visión de éxito espiritual basada en prestigio y comodidad",
+      "explanation": "El argumento de Pablo destaca que cuestionar una visión de éxito espiritual basada en prestigio y comodidad. En el contexto de ironía sobre poder y prestigio, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0019",
+      "book": "1 Corintios",
+      "chapter": 4,
+      "verse_start": 14,
+      "verse_end": 17,
+      "reference": "1 Corintios 4:14-17",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Paternidad pastoral y Timoteo",
+      "characters": [
+        "Pablo",
+        "Timoteo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿A quién dice Pablo haber enviado para recordar sus caminos en Cristo?",
+      "opcion_a": "A Timoteo",
+      "opcion_b": "A Apolos",
+      "opcion_c": "A Cefas",
+      "opcion_d": "A Estéfanas",
+      "correct_option": "A",
+      "correct_answer": "A Timoteo",
+      "explanation": "El argumento de Pablo destaca que a Timoteo. En el contexto de paternidad pastoral y timoteo, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0020",
+      "book": "1 Corintios",
+      "chapter": 4,
+      "verse_start": 18,
+      "verse_end": 21,
+      "reference": "1 Corintios 4:18-21",
+      "category": "NT_GENERAL",
+      "subcategory": "Reino y autoridad",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste establece Pablo entre palabras y poder al hablar del reino de Dios?",
+      "opcion_a": "El reino no se reduce a discursos impresionantes, sino que implica poder transformador",
+      "opcion_b": "El reino depende del volumen de la voz",
+      "opcion_c": "La elocuencia reemplaza la conducta",
+      "opcion_d": "Toda enseñanza verbal carece de valor",
+      "correct_option": "A",
+      "correct_answer": "El reino no se reduce a discursos impresionantes, sino que implica poder transformador",
+      "explanation": "El argumento de Pablo destaca que el reino no se reduce a discursos impresionantes, sino que implica poder transformador. En el contexto de reino y autoridad, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0021",
+      "book": "1 Corintios",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "1 Corintios 5:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Caso de inmoralidad y disciplina",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué reacción considera Pablo inadecuada ante una conducta sexual grave tolerada dentro de la comunidad?",
+      "opcion_a": "Jactarse o actuar con indiferencia en lugar de afrontar responsablemente el caso",
+      "opcion_b": "Buscar proteger a las personas vulnerables",
+      "opcion_c": "Reconocer la gravedad del daño",
+      "opcion_d": "Distinguir entre disciplina y venganza",
+      "correct_option": "A",
+      "correct_answer": "Jactarse o actuar con indiferencia en lugar de afrontar responsablemente el caso",
+      "explanation": "Pablo reprende a la comunidad por tolerar un caso grave que exige una respuesta responsable. La disciplina se orienta a la integridad comunitaria y no autoriza humillación, violencia ni hostigamiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0022",
+      "book": "1 Corintios",
+      "chapter": 5,
+      "verse_start": 6,
+      "verse_end": 8,
+      "reference": "1 Corintios 5:6-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Levadura y sinceridad",
+      "characters": [
+        "Cristo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué enseña la imagen de un poco de levadura que afecta toda la masa?",
+      "opcion_a": "Que una conducta dañina tolerada puede influir en toda la comunidad",
+      "opcion_b": "Que toda tradición antigua debe eliminarse",
+      "opcion_c": "Que la comida material contamina moralmente",
+      "opcion_d": "Que un error convierte automáticamente a todos en culpables",
+      "correct_option": "A",
+      "correct_answer": "Que una conducta dañina tolerada puede influir en toda la comunidad",
+      "explanation": "El argumento de Pablo destaca que que una conducta dañina tolerada puede influir en toda la comunidad. En el contexto de levadura y sinceridad, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [
+        "Éxodo 12:15"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0023",
+      "book": "1 Corintios",
+      "chapter": 5,
+      "verse_start": 9,
+      "verse_end": 11,
+      "reference": "1 Corintios 5:9-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Alcance de la separación",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué aclaración hace Pablo sobre no asociarse con personas que practican conductas destructivas?",
+      "opcion_a": "No propone aislarse de toda la sociedad, sino afrontar ciertos casos dentro de la comunidad",
+      "opcion_b": "Ordena abandonar todo contacto con personas no cristianas",
+      "opcion_c": "Prohíbe trabajar con quien piense distinto",
+      "opcion_d": "Exige formar comunidades físicamente cerradas",
+      "correct_option": "A",
+      "correct_answer": "No propone aislarse de toda la sociedad, sino afrontar ciertos casos dentro de la comunidad",
+      "explanation": "El argumento de Pablo destaca que no propone aislarse de toda la sociedad, sino afrontar ciertos casos dentro de la comunidad. En el contexto de alcance de la separación, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0024",
+      "book": "1 Corintios",
+      "chapter": 5,
+      "verse_start": 12,
+      "verse_end": 13,
+      "reference": "1 Corintios 5:12-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Responsabilidad interna",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Dónde concentra Pablo la responsabilidad disciplinaria inmediata de la iglesia?",
+      "opcion_a": "En evaluar responsablemente a quienes se consideran parte de la comunidad",
+      "opcion_b": "En controlar jurídicamente a toda la sociedad",
+      "opcion_c": "En perseguir a quienes siguen otras religiones",
+      "opcion_d": "En imponer castigos civiles",
+      "correct_option": "A",
+      "correct_answer": "En evaluar responsablemente a quienes se consideran parte de la comunidad",
+      "explanation": "Pablo distingue la responsabilidad de la comunidad sobre quienes se identifican con ella de cualquier pretensión de controlar a toda la sociedad. El pasaje no autoriza persecución ni castigos civiles religiosos.",
+      "additional_references": [
+        "Deuteronomio 17:7"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0025",
+      "book": "1 Corintios",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 13,
+      "reference": "1 Corintios 5:1-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Disciplina y propósito",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Experto",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la disciplina descrita por Pablo autoriza a humillar públicamente o ejercer violencia contra una persona",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa: el texto trata una disciplina interna excepcional, no una licencia para humillar o agredir. Cualquier aplicación responsable debe excluir violencia y abuso.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0026",
+      "book": "1 Corintios",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 8,
+      "reference": "1 Corintios 6:1-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Pleitos entre creyentes",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué fracaso comunitario denuncia Pablo cuando creyentes llevan sus disputas unos contra otros sin buscar una solución coherente con su fe?",
+      "opcion_a": "La incapacidad de resolver conflictos de manera responsable dentro de la comunidad",
+      "opcion_b": "El uso de cualquier mecanismo legal en toda circunstancia",
+      "opcion_c": "La existencia de leyes civiles",
+      "opcion_d": "La posibilidad de recibir asesoría externa",
+      "correct_option": "A",
+      "correct_answer": "La incapacidad de resolver conflictos de manera responsable dentro de la comunidad",
+      "explanation": "Pablo critica que las disputas entre creyentes se conviertan en una derrota comunitaria. El pasaje no elimina automáticamente el valor de recursos legales, protección de víctimas o asesoría externa cuando son necesarios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0027",
+      "book": "1 Corintios",
+      "chapter": 6,
+      "verse_start": 9,
+      "verse_end": 11,
+      "reference": "1 Corintios 6:9-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Cambio de vida",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste hace Pablo después de enumerar conductas incompatibles con el reino?",
+      "opcion_a": "Recuerda que algunos habían vivido así, pero fueron lavados, santificados y justificados",
+      "opcion_b": "Afirma que esas conductas son hereditarias e inmodificables",
+      "opcion_c": "Declara que algunas personas carecen de posibilidad de cambio",
+      "opcion_d": "Ordena identificar públicamente a antiguos pecadores",
+      "correct_option": "A",
+      "correct_answer": "Recuerda que algunos habían vivido así, pero fueron lavados, santificados y justificados",
+      "explanation": "El argumento de Pablo destaca que recuerda que algunos habían vivido así, pero fueron lavados, santificados y justificados. En el contexto de cambio de vida, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0028",
+      "book": "1 Corintios",
+      "chapter": 6,
+      "verse_start": 12,
+      "verse_end": 14,
+      "reference": "1 Corintios 6:12-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Libertad y dominio",
+      "characters": [
+        "Pablo",
+        "Cristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué límite establece Pablo al principio de que algo pueda ser permitido?",
+      "opcion_a": "No todo conviene y nada debe dominar a la persona",
+      "opcion_b": "Todo lo permitido debe practicarse",
+      "opcion_c": "La libertad elimina las consecuencias",
+      "opcion_d": "Solo importa la intención privada",
+      "correct_option": "A",
+      "correct_answer": "No todo conviene y nada debe dominar a la persona",
+      "explanation": "El argumento de Pablo destaca que no todo conviene y nada debe dominar a la persona. En el contexto de libertad y dominio, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0029",
+      "book": "1 Corintios",
+      "chapter": 6,
+      "verse_start": 15,
+      "verse_end": 18,
+      "reference": "1 Corintios 6:15-18",
+      "category": "NT_GENERAL",
+      "subcategory": "Cuerpo y unión",
+      "characters": [
+        "Cristo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué razón ofrece Pablo para tomar en serio el uso sexual del cuerpo?",
+      "opcion_a": "Los cuerpos pertenecen a Cristo y la conducta corporal tiene dimensión relacional y espiritual",
+      "opcion_b": "El cuerpo carece de importancia",
+      "opcion_c": "La sexualidad es mala por definición",
+      "opcion_d": "Solo las apariencias públicas importan",
+      "correct_option": "A",
+      "correct_answer": "Los cuerpos pertenecen a Cristo y la conducta corporal tiene dimensión relacional y espiritual",
+      "explanation": "Pablo relaciona la sexualidad con la pertenencia del cuerpo a Cristo y con una unión que tiene consecuencias personales y relacionales. El argumento no convierte el cuerpo o la sexualidad en algo malo por naturaleza.",
+      "additional_references": [
+        "Génesis 2:24"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0030",
+      "book": "1 Corintios",
+      "chapter": 6,
+      "verse_start": 19,
+      "verse_end": 20,
+      "reference": "1 Corintios 6:19-20",
+      "category": "NT_GENERAL",
+      "subcategory": "Cuerpo como templo",
+      "characters": [
+        "Espíritu Santo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué implica la imagen del cuerpo como templo del Espíritu?",
+      "opcion_a": "La vida corporal pertenece a Dios y debe vivirse con responsabilidad",
+      "opcion_b": "El cuerpo es irrelevante para la fe",
+      "opcion_c": "La enfermedad demuestra falta de espiritualidad",
+      "opcion_d": "Solo ciertas partes de la vida pertenecen a Dios",
+      "correct_option": "A",
+      "correct_answer": "La vida corporal pertenece a Dios y debe vivirse con responsabilidad",
+      "explanation": "El argumento de Pablo destaca que la vida corporal pertenece a Dios y debe vivirse con responsabilidad. En el contexto de cuerpo como templo, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0031",
+      "book": "1 Corintios",
+      "chapter": 7,
+      "verse_start": 1,
+      "verse_end": 7,
+      "reference": "1 Corintios 7:1-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Mutualidad matrimonial y dones",
+      "characters": [
+        "Pablo",
+        "esposos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué rasgo de reciprocidad aparece en las responsabilidades íntimas del matrimonio?",
+      "opcion_a": "Cada cónyuge tiene responsabilidades hacia el otro y no se presenta un control unilateral",
+      "opcion_b": "Solo uno de los cónyuges decide siempre",
+      "opcion_c": "La intimidad puede imponerse sin consentimiento",
+      "opcion_d": "El matrimonio elimina toda obligación de cuidado mutuo",
+      "correct_option": "A",
+      "correct_answer": "Cada cónyuge tiene responsabilidades hacia el otro y no se presenta un control unilateral",
+      "explanation": "Pablo formula responsabilidades íntimas de manera recíproca entre los cónyuges. Esa mutualidad no puede usarse para justificar coerción sexual ni ignorar el consentimiento y la seguridad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0032",
+      "book": "1 Corintios",
+      "chapter": 7,
+      "verse_start": 8,
+      "verse_end": 16,
+      "reference": "1 Corintios 7:8-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Soltería, matrimonio y separación",
+      "characters": [
+        "Pablo",
+        "cónyuges"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo aborda Pablo situaciones familiares diversas en una comunidad ya formada por creyentes y no creyentes?",
+      "opcion_a": "Ofrece orientaciones diferenciadas y reconoce que ciertas separaciones pueden ocurrir",
+      "opcion_b": "Impone una única situación civil a todas las personas",
+      "opcion_c": "Ordena romper todo matrimonio mixto",
+      "opcion_d": "Promete que toda relación conflictiva se resolverá de inmediato",
+      "correct_option": "A",
+      "correct_answer": "Ofrece orientaciones diferenciadas y reconoce que ciertas separaciones pueden ocurrir",
+      "explanation": "La carta contempla matrimonios y situaciones familiares diversas, incluso la posibilidad real de separación. No debe emplearse para obligar a una persona a permanecer en abuso o peligro.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0033",
+      "book": "1 Corintios",
+      "chapter": 7,
+      "verse_start": 17,
+      "verse_end": 24,
+      "reference": "1 Corintios 7:17-24",
+      "category": "NT_GENERAL",
+      "subcategory": "Llamamiento y condición social",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio aplica Pablo a distintas condiciones sociales en las que una persona recibió el llamado?",
+      "opcion_a": "La pertenencia a Cristo no depende de cambiar compulsivamente toda condición externa",
+      "opcion_b": "Toda condición social es moralmente perfecta",
+      "opcion_c": "La esclavitud debe buscarse como ideal",
+      "opcion_d": "La libertad civil carece de importancia en cualquier contexto",
+      "correct_option": "A",
+      "correct_answer": "La pertenencia a Cristo no depende de cambiar compulsivamente toda condición externa",
+      "explanation": "Pablo relativiza la idea de que el llamado de Dios dependa de cambiar de inmediato toda condición externa. Esto no convierte instituciones injustas como la esclavitud en ideales ni niega el valor de la libertad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0034",
+      "book": "1 Corintios",
+      "chapter": 7,
+      "verse_start": 25,
+      "verse_end": 35,
+      "reference": "1 Corintios 7:25-35",
+      "category": "NT_GENERAL",
+      "subcategory": "Soltería y presente necesidad",
+      "characters": [
+        "Pablo",
+        "solteros"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cautela acompaña la recomendación paulina de permanecer sin casarse en ciertos casos?",
+      "opcion_a": "Está relacionada con una situación presente de dificultad y con una opinión pastoral, no con inferioridad del matrimonio",
+      "opcion_b": "Declara que el matrimonio es pecado",
+      "opcion_c": "Afirma que las personas casadas no pueden servir a Dios",
+      "opcion_d": "Ordena una regla universal para toda época y cultura",
+      "correct_option": "A",
+      "correct_answer": "Está relacionada con una situación presente de dificultad y con una opinión pastoral, no con inferioridad del matrimonio",
+      "explanation": "La recomendación está vinculada con una necesidad presente y con la conveniencia pastoral percibida por Pablo. No presenta el matrimonio como inferior ni establece una regla universal de celibato.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0035",
+      "book": "1 Corintios",
+      "chapter": 7,
+      "verse_start": 36,
+      "verse_end": 40,
+      "reference": "1 Corintios 7:36-40",
+      "category": "NT_GENERAL",
+      "subcategory": "Libertad para casarse",
+      "characters": [
+        "Pablo",
+        "parejas"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo trata el matrimonio legítimo como pecado para quienes deciden casarse",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. El desarrollo sobre libertad para casarse contradice esa formulación y conserva el énfasis de Pablo en responsabilidad, amor y fidelidad al evangelio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0036",
+      "book": "1 Corintios",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end": 3,
+      "reference": "1 Corintios 8:1-3",
+      "category": "NT_GENERAL",
+      "subcategory": "Conocimiento y amor",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste establece Pablo entre conocimiento y amor?",
+      "opcion_a": "El conocimiento puede inflar el orgullo, mientras el amor edifica",
+      "opcion_b": "El amor elimina la necesidad de aprender",
+      "opcion_c": "Todo conocimiento es moralmente malo",
+      "opcion_d": "La ignorancia garantiza madurez espiritual",
+      "correct_option": "A",
+      "correct_answer": "El conocimiento puede inflar el orgullo, mientras el amor edifica",
+      "explanation": "El argumento de Pablo destaca que el conocimiento puede inflar el orgullo, mientras el amor edifica. En el contexto de conocimiento y amor, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0037",
+      "book": "1 Corintios",
+      "chapter": 8,
+      "verse_start": 4,
+      "verse_end": 6,
+      "reference": "1 Corintios 8:4-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Un Dios y un Señor",
+      "characters": [
+        "Dios",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué confesión utiliza Pablo al hablar de alimentos asociados con ídolos?",
+      "opcion_a": "Hay un solo Dios, el Padre, y un solo Señor, Jesucristo",
+      "opcion_b": "Cada ídolo representa una divinidad equivalente",
+      "opcion_c": "Todas las prácticas religiosas son idénticas",
+      "opcion_d": "La comida posee poder espiritual autónomo",
+      "correct_option": "A",
+      "correct_answer": "Hay un solo Dios, el Padre, y un solo Señor, Jesucristo",
+      "explanation": "El argumento de Pablo destaca que hay un solo Dios, el Padre, y un solo Señor, Jesucristo. En el contexto de un dios y un señor, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0038",
+      "book": "1 Corintios",
+      "chapter": 8,
+      "verse_start": 7,
+      "verse_end": 10,
+      "reference": "1 Corintios 8:7-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Conciencia vulnerable",
+      "characters": [
+        "Pablo",
+        "creyentes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué riesgo observa Pablo cuando alguien con conocimiento actúa sin considerar a una conciencia vulnerable?",
+      "opcion_a": "Que su conducta pueda animar a otra persona a actuar contra su conciencia",
+      "opcion_b": "Que toda conciencia vulnerable deba ser ridiculizada",
+      "opcion_c": "Que cualquier comida sea intrínsecamente impura",
+      "opcion_d": "Que el conocimiento deba ocultarse siempre",
+      "correct_option": "A",
+      "correct_answer": "Que su conducta pueda animar a otra persona a actuar contra su conciencia",
+      "explanation": "El argumento de Pablo destaca que que su conducta pueda animar a otra persona a actuar contra su conciencia. En el contexto de conciencia vulnerable, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0039",
+      "book": "1 Corintios",
+      "chapter": 8,
+      "verse_start": 11,
+      "verse_end": 12,
+      "reference": "1 Corintios 8:11-12",
+      "category": "NT_GENERAL",
+      "subcategory": "Daño al hermano",
+      "characters": [
+        "Cristo",
+        "creyentes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo valora Pablo el daño causado a la conciencia de otro creyente?",
+      "opcion_a": "Como una falta seria que alcanza también la relación con Cristo",
+      "opcion_b": "Como un asunto sin importancia",
+      "opcion_c": "Como responsabilidad exclusiva de la persona vulnerable",
+      "opcion_d": "Como prueba de superioridad doctrinal",
+      "correct_option": "A",
+      "correct_answer": "Como una falta seria que alcanza también la relación con Cristo",
+      "explanation": "El argumento de Pablo destaca que como una falta seria que alcanza también la relación con Cristo. En el contexto de daño al hermano, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0040",
+      "book": "1 Corintios",
+      "chapter": 8,
+      "verse_start": 13,
+      "verse_end": 13,
+      "reference": "1 Corintios 8:13",
+      "category": "NT_GENERAL",
+      "subcategory": "Renuncia por amor",
+      "characters": [
+        "Pablo",
+        "creyentes"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué decisión personal presenta Pablo como posible respuesta cuando una libertad propia puede hacer tropezar a otro?",
+      "opcion_a": "Limitar voluntariamente esa libertad por amor",
+      "opcion_b": "Exigir que el otro abandone su conciencia",
+      "opcion_c": "Ejercer la libertad para demostrar conocimiento",
+      "opcion_d": "Romper toda relación con quien piensa distinto",
+      "correct_option": "A",
+      "correct_answer": "Limitar voluntariamente esa libertad por amor",
+      "explanation": "El argumento de Pablo destaca que limitar voluntariamente esa libertad por amor. En el contexto de renuncia por amor, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0041",
+      "book": "1 Corintios",
+      "chapter": 9,
+      "verse_start": 1,
+      "verse_end": 6,
+      "reference": "1 Corintios 9:1-6",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Apostolado y derechos",
+      "characters": [
+        "Pablo",
+        "Bernabé"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué derecho ministerial defiende Pablo aunque después explique por qué decidió no ejercerlo plenamente?",
+      "opcion_a": "Recibir sustento por su trabajo apostólico",
+      "opcion_b": "Controlar políticamente la ciudad",
+      "opcion_c": "Exigir honores civiles",
+      "opcion_d": "Evitar toda responsabilidad laboral",
+      "correct_option": "A",
+      "correct_answer": "Recibir sustento por su trabajo apostólico",
+      "explanation": "El argumento de Pablo destaca que recibir sustento por su trabajo apostólico. En el contexto de apostolado y derechos, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0042",
+      "book": "1 Corintios",
+      "chapter": 9,
+      "verse_start": 7,
+      "verse_end": 14,
+      "reference": "1 Corintios 9:7-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Sustento de quienes sirven",
+      "characters": [
+        "Pablo",
+        "ministros"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio extrae Pablo de ejemplos laborales y de la ley sobre el buey que trilla?",
+      "opcion_a": "Quien trabaja en el ministerio puede recibir sustento por ese trabajo",
+      "opcion_b": "El trabajo religioso debe enriquecerse sin límites",
+      "opcion_c": "Toda persona debe entregar recursos aunque quede desprotegida",
+      "opcion_d": "La remuneración vuelve impuro cualquier servicio",
+      "correct_option": "A",
+      "correct_answer": "Quien trabaja en el ministerio puede recibir sustento por ese trabajo",
+      "explanation": "Pablo usa la ley y ejemplos de trabajo para defender que quienes sirven pueden recibir sustento. El principio no autoriza enriquecimiento, manipulación económica ni exigir a personas vulnerables que den lo necesario para subsistir.",
+      "additional_references": [
+        "Deuteronomio 25:4"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0043",
+      "book": "1 Corintios",
+      "chapter": 9,
+      "verse_start": 15,
+      "verse_end": 18,
+      "reference": "1 Corintios 9:15-18",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Renuncia voluntaria a un derecho",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué Pablo explica que no utilizó ciertos derechos económicos?",
+      "opcion_a": "Para no poner un obstáculo al evangelio y poder anunciarlo sin convertir ese derecho en exigencia",
+      "opcion_b": "Porque consideraba inmoral recibir cualquier ayuda",
+      "opcion_c": "Porque nadie le ofreció apoyo",
+      "opcion_d": "Porque quería demostrar superioridad económica",
+      "correct_option": "A",
+      "correct_answer": "Para no poner un obstáculo al evangelio y poder anunciarlo sin convertir ese derecho en exigencia",
+      "explanation": "El argumento de Pablo destaca que para no poner un obstáculo al evangelio y poder anunciarlo sin convertir ese derecho en exigencia. En el contexto de renuncia voluntaria a un derecho, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0044",
+      "book": "1 Corintios",
+      "chapter": 9,
+      "verse_start": 19,
+      "verse_end": 23,
+      "reference": "1 Corintios 9:19-23",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Adaptación misionera",
+      "characters": [
+        "Pablo",
+        "diversos grupos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué objetivo guía la adaptación de Pablo a distintos grupos?",
+      "opcion_a": "Ganar a más personas sin presentar la adaptación como pérdida de toda convicción",
+      "opcion_b": "Manipular a cada grupo con identidades falsas",
+      "opcion_c": "Evitar relacionarse con personas diferentes",
+      "opcion_d": "Conseguir poder político sobre las comunidades",
+      "correct_option": "A",
+      "correct_answer": "Ganar a más personas sin presentar la adaptación como pérdida de toda convicción",
+      "explanation": "El argumento de Pablo destaca que ganar a más personas sin presentar la adaptación como pérdida de toda convicción. En el contexto de adaptación misionera, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0045",
+      "book": "1 Corintios",
+      "chapter": 9,
+      "verse_start": 24,
+      "verse_end": 27,
+      "reference": "1 Corintios 9:24-27",
+      "category": "NT_GENERAL",
+      "subcategory": "Disciplina y carrera",
+      "characters": [
+        "Pablo",
+        "atletas"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que las imágenes deportivas de Pablo promueven disciplina y dominio propio, no daño deliberado del cuerpo",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Verdadero corresponde al sentido del argumento de Pablo en el tema de disciplina y carrera; el pasaje orienta la conducta comunitaria sin convertirla en una regla ajena a su contexto.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0046",
+      "book": "1 Corintios",
+      "chapter": 10,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "1 Corintios 10:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Israel como advertencia",
+      "characters": [
+        "Moisés",
+        "Israel",
+        "Cristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste establece Pablo al recordar que muchos participaron de privilegios comunes en el desierto?",
+      "opcion_a": "Compartir experiencias religiosas no elimina la responsabilidad por la conducta",
+      "opcion_b": "Los privilegios garantizan aprobación automática",
+      "opcion_c": "La historia de Israel carece de valor para la comunidad",
+      "opcion_d": "El juicio demuestra inferioridad étnica de Israel",
+      "correct_option": "A",
+      "correct_answer": "Compartir experiencias religiosas no elimina la responsabilidad por la conducta",
+      "explanation": "Pablo usa episodios de Israel como advertencia para la comunidad cristiana. El argumento no atribuye inferioridad étnica al pueblo judío ni legitima antijudaísmo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0047",
+      "book": "1 Corintios",
+      "chapter": 10,
+      "verse_start": 6,
+      "verse_end": 13,
+      "reference": "1 Corintios 10:6-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Ejemplos y tentación",
+      "characters": [
+        "Israel",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué propósito atribuye Pablo a varios episodios del desierto?",
+      "opcion_a": "Servir como advertencias para no repetir deseos y conductas destructivas",
+      "opcion_b": "Justificar desprecio hacia el pueblo judío",
+      "opcion_c": "Enseñar que toda dificultad es castigo por un pecado concreto",
+      "opcion_d": "Ofrecer una cronología del fin del mundo",
+      "correct_option": "A",
+      "correct_answer": "Servir como advertencias para no repetir deseos y conductas destructivas",
+      "explanation": "El argumento de Pablo destaca que servir como advertencias para no repetir deseos y conductas destructivas. En el contexto de ejemplos y tentación, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [
+        "Éxodo 32:6"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0048",
+      "book": "1 Corintios",
+      "chapter": 10,
+      "verse_start": 14,
+      "verse_end": 22,
+      "reference": "1 Corintios 10:14-22",
+      "category": "NT_GENERAL",
+      "subcategory": "Idolatría y mesa del Señor",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué incompatibilidad destaca Pablo al hablar de la copa y la mesa del Señor?",
+      "opcion_a": "La comunión con Cristo no debe mezclarse con participación cultual idolátrica",
+      "opcion_b": "Toda comida compartida con no creyentes es idolatría",
+      "opcion_c": "Los objetos materiales poseen poder mágico propio",
+      "opcion_d": "La fe cristiana exige vandalizar lugares religiosos ajenos",
+      "correct_option": "A",
+      "correct_answer": "La comunión con Cristo no debe mezclarse con participación cultual idolátrica",
+      "explanation": "La incompatibilidad se refiere a participación cultual dentro del argumento sobre idolatría. No autoriza hostigamiento, destrucción de objetos religiosos ni violencia contra personas de otras creencias.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0049",
+      "book": "1 Corintios",
+      "chapter": 10,
+      "verse_start": 23,
+      "verse_end": 30,
+      "reference": "1 Corintios 10:23-30",
+      "category": "NT_GENERAL",
+      "subcategory": "Libertad y conciencia",
+      "characters": [
+        "Pablo",
+        "creyentes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo equilibra Pablo libertad, beneficio y conciencia al tratar alimentos?",
+      "opcion_a": "La libertad debe considerar edificación y conciencia, sin investigar obsesivamente cada alimento",
+      "opcion_b": "Toda libertad individual es absoluta",
+      "opcion_c": "La conciencia ajena siempre controla cualquier decisión propia",
+      "opcion_d": "Comer cualquier alimento es moralmente obligatorio",
+      "correct_option": "A",
+      "correct_answer": "La libertad debe considerar edificación y conciencia, sin investigar obsesivamente cada alimento",
+      "explanation": "El argumento de Pablo destaca que la libertad debe considerar edificación y conciencia, sin investigar obsesivamente cada alimento. En el contexto de libertad y conciencia, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [
+        "Salmos 24:1"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0050",
+      "book": "1 Corintios",
+      "chapter": 10,
+      "verse_start": 31,
+      "verse_end": 33,
+      "reference": "1 Corintios 10:31-33",
+      "category": "NT_GENERAL",
+      "subcategory": "Gloria de Dios y bien del otro",
+      "characters": [
+        "Pablo",
+        "judíos",
+        "griegos",
+        "iglesia"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué horizonte da Pablo a las decisiones ordinarias sobre comer, beber y otras acciones?",
+      "opcion_a": "Buscar la gloria de Dios y el bien de otras personas",
+      "opcion_b": "Convertir cada detalle cotidiano en competencia religiosa",
+      "opcion_c": "Ignorar las consecuencias sobre otros",
+      "opcion_d": "Buscar siempre el beneficio personal",
+      "correct_option": "A",
+      "correct_answer": "Buscar la gloria de Dios y el bien de otras personas",
+      "explanation": "El argumento de Pablo destaca que buscar la gloria de Dios y el bien de otras personas. En el contexto de gloria de dios y bien del otro, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0051",
+      "book": "1 Corintios",
+      "chapter": 11,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "1 Corintios 11:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Imitación y tradición",
+      "characters": [
+        "Pablo",
+        "Cristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué límite implícito tiene la invitación de Pablo a imitarlo?",
+      "opcion_a": "Su propia imitación de Cristo es el referente de esa invitación",
+      "opcion_b": "Todo comportamiento personal de Pablo es automáticamente universal",
+      "opcion_c": "La comunidad debe renunciar a discernir",
+      "opcion_d": "Imitar significa copiar cultura y vestimenta sin contexto",
+      "correct_option": "A",
+      "correct_answer": "Su propia imitación de Cristo es el referente de esa invitación",
+      "explanation": "El argumento de Pablo destaca que su propia imitación de Cristo es el referente de esa invitación. En el contexto de imitación y tradición, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0052",
+      "book": "1 Corintios",
+      "chapter": 11,
+      "verse_start": 3,
+      "verse_end": 16,
+      "reference": "1 Corintios 11:3-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Cabeza, honor y prácticas de culto",
+      "characters": [
+        "Pablo",
+        "hombres",
+        "mujeres"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué precaución ayuda a interpretar las instrucciones sobre cobertura de la cabeza y honor en la reunión?",
+      "opcion_a": "Reconocer su argumento teológico y su contexto de honor, género y práctica comunitaria sin usarlo para justificar inferioridad o abuso",
+      "opcion_b": "Convertir cada detalle cultural en una jerarquía de valor humano",
+      "opcion_c": "Ignorar que mujeres oran y profetizan en el mismo pasaje",
+      "opcion_d": "Usar el texto para controlar coercitivamente la apariencia de otras personas",
+      "correct_option": "A",
+      "correct_answer": "Reconocer su argumento teológico y su contexto de honor, género y práctica comunitaria sin usarlo para justificar inferioridad o abuso",
+      "explanation": "El pasaje combina lenguaje teológico, honor y prácticas de reunión, y además presupone que mujeres oran y profetizan. Debe interpretarse con atención al contexto histórico y no como justificación de inferioridad, control o abuso.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0053",
+      "book": "1 Corintios",
+      "chapter": 11,
+      "verse_start": 17,
+      "verse_end": 22,
+      "reference": "1 Corintios 11:17-22",
+      "category": "NT_GENERAL",
+      "subcategory": "Desigualdad en la Cena",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué problema social denuncia Pablo en las reuniones relacionadas con la Cena del Señor?",
+      "opcion_a": "Unos comen abundantemente mientras otros quedan con hambre y son avergonzados",
+      "opcion_b": "La ausencia de una mesa de piedra",
+      "opcion_c": "Que todos comen exactamente lo mismo",
+      "opcion_d": "Que la comunidad ayuda demasiado a personas pobres",
+      "correct_option": "A",
+      "correct_answer": "Unos comen abundantemente mientras otros quedan con hambre y son avergonzados",
+      "explanation": "Pablo denuncia que las desigualdades económicas contradicen el sentido comunitario de la Cena. Su preocupación incluye que personas con menos recursos no sean avergonzadas ni excluidas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0054",
+      "book": "1 Corintios",
+      "chapter": 11,
+      "verse_start": 23,
+      "verse_end": 26,
+      "reference": "1 Corintios 11:23-26",
+      "category": "NT_GENERAL",
+      "subcategory": "Tradición de la Cena",
+      "characters": [
+        "Pablo",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué anuncia la comunidad al participar de la Cena según la tradición que Pablo transmite?",
+      "opcion_a": "La muerte del Señor hasta que él venga",
+      "opcion_b": "La superioridad de un grupo social",
+      "opcion_c": "La independencia de la comunidad respecto de Cristo",
+      "opcion_d": "La sustitución de toda comida comunitaria",
+      "correct_option": "A",
+      "correct_answer": "La muerte del Señor hasta que él venga",
+      "explanation": "El argumento de Pablo destaca que la muerte del Señor hasta que él venga. En el contexto de tradición de la cena, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0055",
+      "book": "1 Corintios",
+      "chapter": 11,
+      "verse_start": 27,
+      "verse_end": 34,
+      "reference": "1 Corintios 11:27-34",
+      "category": "NT_GENERAL",
+      "subcategory": "Examen y cuidado comunitario",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el autoexamen en la Cena puede separarse del modo en que la comunidad trata a otros miembros",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "El autoexamen está unido al discernimiento de la comunidad y al trato hacia otros miembros. No es una invitación a escrúpulos obsesivos ni a culpabilizar enfermedad o sufrimiento como castigo automático.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0056",
+      "book": "1 Corintios",
+      "chapter": 12,
+      "verse_start": 1,
+      "verse_end": 3,
+      "reference": "1 Corintios 12:1-3",
+      "category": "NT_GENERAL",
+      "subcategory": "Confesión y Espíritu",
+      "characters": [
+        "Espíritu Santo",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué confesión relaciona Pablo con la obra del Espíritu Santo?",
+      "opcion_a": "Reconocer a Jesús como Señor",
+      "opcion_b": "Declarar que un don convierte a alguien en superior",
+      "opcion_c": "Afirmar que solo un grupo puede hablar de Dios",
+      "opcion_d": "Negar toda diversidad de experiencias",
+      "correct_option": "A",
+      "correct_answer": "Reconocer a Jesús como Señor",
+      "explanation": "El argumento de Pablo destaca que reconocer a Jesús como Señor. En el contexto de confesión y espíritu, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0057",
+      "book": "1 Corintios",
+      "chapter": 12,
+      "verse_start": 4,
+      "verse_end": 11,
+      "reference": "1 Corintios 12:4-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Diversidad de dones",
+      "characters": [
+        "Espíritu",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué unidad mantiene Pablo dentro de la diversidad de dones, servicios y operaciones?",
+      "opcion_a": "El mismo Espíritu, Señor y Dios actúan para el bien común",
+      "opcion_b": "Todos deben recibir exactamente el mismo don",
+      "opcion_c": "Cada don pertenece exclusivamente a quien lo recibe",
+      "opcion_d": "Los dones sirven para establecer una jerarquía fija de valor",
+      "correct_option": "A",
+      "correct_answer": "El mismo Espíritu, Señor y Dios actúan para el bien común",
+      "explanation": "El argumento de Pablo destaca que el mismo Espíritu, Señor y Dios actúan para el bien común. En el contexto de diversidad de dones, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0058",
+      "book": "1 Corintios",
+      "chapter": 12,
+      "verse_start": 12,
+      "verse_end": 20,
+      "reference": "1 Corintios 12:12-20",
+      "category": "NT_GENERAL",
+      "subcategory": "Un cuerpo y muchos miembros",
+      "characters": [
+        "Cristo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué enseña la imagen de un cuerpo con muchos miembros?",
+      "opcion_a": "La unidad necesita diversidad y ningún miembro puede convertir su diferencia en exclusión",
+      "opcion_b": "La unidad exige que todos hagan lo mismo",
+      "opcion_c": "Solo los miembros visibles son necesarios",
+      "opcion_d": "La diversidad demuestra falta de comunión",
+      "correct_option": "A",
+      "correct_answer": "La unidad necesita diversidad y ningún miembro puede convertir su diferencia en exclusión",
+      "explanation": "El argumento de Pablo destaca que la unidad necesita diversidad y ningún miembro puede convertir su diferencia en exclusión. En el contexto de un cuerpo y muchos miembros, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0059",
+      "book": "1 Corintios",
+      "chapter": 12,
+      "verse_start": 21,
+      "verse_end": 26,
+      "reference": "1 Corintios 12:21-26",
+      "category": "NT_GENERAL",
+      "subcategory": "Honor a miembros vulnerables",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué trato propone Pablo para los miembros considerados más débiles o menos honorables?",
+      "opcion_a": "Mayor cuidado y honor, de modo que no haya división y exista preocupación mutua",
+      "opcion_b": "Apartarlos para proteger la imagen del grupo",
+      "opcion_c": "Negarles participación",
+      "opcion_d": "Culparlos por necesitar apoyo",
+      "correct_option": "A",
+      "correct_answer": "Mayor cuidado y honor, de modo que no haya división y exista preocupación mutua",
+      "explanation": "Pablo pide mayor honor y cuidado para miembros considerados más débiles. La metáfora del cuerpo rechaza la exclusión y no relaciona menor visibilidad, discapacidad o necesidad de apoyo con menor valor.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0060",
+      "book": "1 Corintios",
+      "chapter": 12,
+      "verse_start": 27,
+      "verse_end": 31,
+      "reference": "1 Corintios 12:27-31",
+      "category": "NT_GENERAL",
+      "subcategory": "Funciones y camino superior",
+      "characters": [
+        "Apóstoles",
+        "profetas",
+        "maestros",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué muestran las preguntas sobre si todos son apóstoles, profetas o hablan lenguas?",
+      "opcion_a": "Que la comunidad necesita diversidad de funciones y no uniformidad de dones",
+      "opcion_b": "Que todos deben ocupar el mismo ministerio",
+      "opcion_c": "Que solo un don es legítimo",
+      "opcion_d": "Que las diferencias de dones prueban desigual valor humano",
+      "correct_option": "A",
+      "correct_answer": "Que la comunidad necesita diversidad de funciones y no uniformidad de dones",
+      "explanation": "El argumento de Pablo destaca que que la comunidad necesita diversidad de funciones y no uniformidad de dones. En el contexto de funciones y camino superior, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0061",
+      "book": "1 Corintios",
+      "chapter": 13,
+      "verse_start": 1,
+      "verse_end": 3,
+      "reference": "1 Corintios 13:1-3",
+      "category": "NT_GENERAL",
+      "subcategory": "Dones sin amor",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué valor tienen los dones y sacrificios extraordinarios si falta el amor según el argumento de Pablo?",
+      "opcion_a": "No alcanzan su propósito y pueden quedar vacíos de verdadero valor",
+      "opcion_b": "Garantizan madurez espiritual por sí solos",
+      "opcion_c": "Convierten automáticamente a alguien en líder",
+      "opcion_d": "Sustituyen toda responsabilidad hacia otras personas",
+      "correct_option": "A",
+      "correct_answer": "No alcanzan su propósito y pueden quedar vacíos de verdadero valor",
+      "explanation": "El argumento de Pablo destaca que no alcanzan su propósito y pueden quedar vacíos de verdadero valor. En el contexto de dones sin amor, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0062",
+      "book": "1 Corintios",
+      "chapter": 13,
+      "verse_start": 4,
+      "verse_end": 7,
+      "reference": "1 Corintios 13:4-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Rasgos del amor",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué conjunto refleja mejor el amor descrito por Pablo?",
+      "opcion_a": "Paciencia, bondad, rechazo de la arrogancia y perseverancia",
+      "opcion_b": "Control, orgullo y resentimiento",
+      "opcion_c": "Indiferencia ante la injusticia",
+      "opcion_d": "Búsqueda constante del propio interés",
+      "correct_option": "A",
+      "correct_answer": "Paciencia, bondad, rechazo de la arrogancia y perseverancia",
+      "explanation": "El argumento de Pablo destaca que paciencia, bondad, rechazo de la arrogancia y perseverancia. En el contexto de rasgos del amor, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0063",
+      "book": "1 Corintios",
+      "chapter": 13,
+      "verse_start": 6,
+      "verse_end": 6,
+      "reference": "1 Corintios 13:6",
+      "category": "NT_GENERAL",
+      "subcategory": "Amor y verdad",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el amor descrito por Pablo se alegra de la injusticia con tal de evitar conflictos",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. El desarrollo sobre amor y verdad contradice esa formulación y conserva el énfasis de Pablo en responsabilidad, amor y fidelidad al evangelio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0064",
+      "book": "1 Corintios",
+      "chapter": 13,
+      "verse_start": 8,
+      "verse_end": 12,
+      "reference": "1 Corintios 13:8-12",
+      "category": "NT_GENERAL",
+      "subcategory": "Lo parcial y lo pleno",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste usa Pablo para ubicar los dones de conocimiento y profecía?",
+      "opcion_a": "Son parciales frente a una plenitud futura que supera el conocimiento presente",
+      "opcion_b": "Son inútiles en toda circunstancia",
+      "opcion_c": "Ofrecen conocimiento absoluto ahora",
+      "opcion_d": "Eliminan toda necesidad de esperanza",
+      "correct_option": "A",
+      "correct_answer": "Son parciales frente a una plenitud futura que supera el conocimiento presente",
+      "explanation": "El argumento de Pablo destaca que son parciales frente a una plenitud futura que supera el conocimiento presente. En el contexto de lo parcial y lo pleno, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0065",
+      "book": "1 Corintios",
+      "chapter": 13,
+      "verse_start": 13,
+      "verse_end": 13,
+      "reference": "1 Corintios 13:13",
+      "category": "NT_GENERAL",
+      "subcategory": "Fe esperanza y amor",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cuál considera Pablo mayor entre fe, esperanza y amor?",
+      "opcion_a": "El amor",
+      "opcion_b": "La esperanza",
+      "opcion_c": "La fe aislada del amor",
+      "opcion_d": "Ninguno tiene importancia duradera",
+      "correct_option": "A",
+      "correct_answer": "El amor",
+      "explanation": "El argumento de Pablo destaca que el amor. En el contexto de fe esperanza y amor, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0066",
+      "book": "1 Corintios",
+      "chapter": 14,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "1 Corintios 14:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Profecía y lenguas",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué criterio hace que Pablo prefiera la profecía a una lengua no interpretada en la reunión?",
+      "opcion_a": "La capacidad de edificar comprensiblemente a la comunidad",
+      "opcion_b": "La superioridad personal del profeta",
+      "opcion_c": "El rechazo de todos los idiomas distintos",
+      "opcion_d": "La prohibición absoluta de hablar en lenguas",
+      "correct_option": "A",
+      "correct_answer": "La capacidad de edificar comprensiblemente a la comunidad",
+      "explanation": "El argumento de Pablo destaca que la capacidad de edificar comprensiblemente a la comunidad. En el contexto de profecía y lenguas, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0067",
+      "book": "1 Corintios",
+      "chapter": 14,
+      "verse_start": 6,
+      "verse_end": 19,
+      "reference": "1 Corintios 14:6-19",
+      "category": "NT_GENERAL",
+      "subcategory": "Inteligibilidad",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio ilustra Pablo con instrumentos que producen sonidos distinguibles?",
+      "opcion_a": "La comunicación comunitaria debe ser suficientemente clara para que otros comprendan",
+      "opcion_b": "La música debe eliminarse del culto",
+      "opcion_c": "Solo personas expertas pueden hablar",
+      "opcion_d": "Todo lenguaje espiritual es necesariamente incomprensible",
+      "correct_option": "A",
+      "correct_answer": "La comunicación comunitaria debe ser suficientemente clara para que otros comprendan",
+      "explanation": "El argumento de Pablo destaca que la comunicación comunitaria debe ser suficientemente clara para que otros comprendan. En el contexto de inteligibilidad, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0068",
+      "book": "1 Corintios",
+      "chapter": 14,
+      "verse_start": 20,
+      "verse_end": 25,
+      "reference": "1 Corintios 14:20-25",
+      "category": "NT_GENERAL",
+      "subcategory": "Señal y comprensión",
+      "characters": [
+        "Pablo",
+        "creyentes",
+        "visitantes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué resultado espera Pablo cuando un visitante comprende un mensaje que descubre lo oculto de su corazón?",
+      "opcion_a": "Que reconozca la presencia de Dios y responda con convicción",
+      "opcion_b": "Que sea avergonzado públicamente por entretenimiento",
+      "opcion_c": "Que abandone toda posibilidad de preguntar",
+      "opcion_d": "Que sea obligado a incorporarse a la comunidad",
+      "correct_option": "A",
+      "correct_answer": "Que reconozca la presencia de Dios y responda con convicción",
+      "explanation": "El argumento de Pablo destaca que que reconozca la presencia de Dios y responda con convicción. En el contexto de señal y comprensión, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [
+        "Isaías 28:11-12"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0069",
+      "book": "1 Corintios",
+      "chapter": 14,
+      "verse_start": 26,
+      "verse_end": 33,
+      "reference": "1 Corintios 14:26-33",
+      "category": "NT_GENERAL",
+      "subcategory": "Orden y edificación",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué regla general aplica Pablo a las participaciones en la reunión?",
+      "opcion_a": "Todo debe orientarse a edificar y realizarse de manera ordenada",
+      "opcion_b": "Cada persona debe hablar al mismo tiempo",
+      "opcion_c": "El desorden demuestra mayor espiritualidad",
+      "opcion_d": "Solo una persona puede participar siempre",
+      "correct_option": "A",
+      "correct_answer": "Todo debe orientarse a edificar y realizarse de manera ordenada",
+      "explanation": "El argumento de Pablo destaca que todo debe orientarse a edificar y realizarse de manera ordenada. En el contexto de orden y edificación, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0070",
+      "book": "1 Corintios",
+      "chapter": 14,
+      "verse_start": 34,
+      "verse_end": 40,
+      "reference": "1 Corintios 14:34-40",
+      "category": "NT_GENERAL",
+      "subcategory": "Silencio, participación y orden",
+      "characters": [
+        "Pablo",
+        "mujeres",
+        "comunidad"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué marco ayuda a leer las instrucciones finales sobre hablar y guardar silencio en la reunión?",
+      "opcion_a": "El propósito general de orden y edificación junto con el hecho de que antes se menciona a mujeres que oran y profetizan",
+      "opcion_b": "Una prohibición de toda participación femenina en cualquier contexto",
+      "opcion_c": "La idea de que solo los varones poseen dones espirituales",
+      "opcion_d": "La eliminación de toda pregunta o aprendizaje en la comunidad",
+      "correct_option": "A",
+      "correct_answer": "El propósito general de orden y edificación junto con el hecho de que antes se menciona a mujeres que oran y profetizan",
+      "explanation": "Las instrucciones sobre hablar y guardar silencio están dentro de una sección cuyo objetivo repetido es orden y edificación, mientras la misma carta ya menciona a mujeres que oran y profetizan. El banco conserva esa tensión contextual y no fuerza una prohibición universal de toda participación femenina.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0071",
+      "book": "1 Corintios",
+      "chapter": 15,
+      "verse_start": 1,
+      "verse_end": 11,
+      "reference": "1 Corintios 15:1-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Evangelio y testigos",
+      "characters": [
+        "Pablo",
+        "Cefas",
+        "Jacobo",
+        "apóstoles"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hechos centrales resume Pablo al recordar el evangelio que había anunciado?",
+      "opcion_a": "Muerte de Cristo por los pecados, sepultura, resurrección y apariciones",
+      "opcion_b": "Fundación política de una nueva nación",
+      "opcion_c": "Construcción de un templo en Corinto",
+      "opcion_d": "Retiro definitivo de los apóstoles de la misión",
+      "correct_option": "A",
+      "correct_answer": "Muerte de Cristo por los pecados, sepultura, resurrección y apariciones",
+      "explanation": "El argumento de Pablo destaca que muerte de Cristo por los pecados, sepultura, resurrección y apariciones. En el contexto de evangelio y testigos, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0072",
+      "book": "1 Corintios",
+      "chapter": 15,
+      "verse_start": 12,
+      "verse_end": 19,
+      "reference": "1 Corintios 15:12-19",
+      "category": "NT_GENERAL",
+      "subcategory": "Necesidad de la resurrección",
+      "characters": [
+        "Pablo",
+        "Cristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué consecuencia extrae Pablo si se niega que los muertos resucitan?",
+      "opcion_a": "Quedaría vacía la proclamación de la resurrección de Cristo y la esperanza vinculada con ella",
+      "opcion_b": "La ética cristiana permanecería idéntica sin ninguna consecuencia",
+      "opcion_c": "La muerte dejaría de existir inmediatamente",
+      "opcion_d": "La comunidad tendría más motivos para dividirse",
+      "correct_option": "A",
+      "correct_answer": "Quedaría vacía la proclamación de la resurrección de Cristo y la esperanza vinculada con ella",
+      "explanation": "El argumento de Pablo destaca que quedaría vacía la proclamación de la resurrección de Cristo y la esperanza vinculada con ella. En el contexto de necesidad de la resurrección, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0073",
+      "book": "1 Corintios",
+      "chapter": 15,
+      "verse_start": 20,
+      "verse_end": 28,
+      "reference": "1 Corintios 15:20-28",
+      "category": "NT_GENERAL",
+      "subcategory": "Cristo primicias y consumación",
+      "characters": [
+        "Cristo",
+        "Adán"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué expresa la imagen de Cristo como primicias?",
+      "opcion_a": "Su resurrección inaugura y anticipa la resurrección de quienes le pertenecen",
+      "opcion_b": "Solo Cristo puede resucitar y nadie más",
+      "opcion_c": "La resurrección ya eliminó toda muerte presente",
+      "opcion_d": "La vida futura depende de pertenecer a una etnia",
+      "correct_option": "A",
+      "correct_answer": "Su resurrección inaugura y anticipa la resurrección de quienes le pertenecen",
+      "explanation": "El argumento de Pablo destaca que su resurrección inaugura y anticipa la resurrección de quienes le pertenecen. En el contexto de cristo primicias y consumación, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [
+        "Salmos 8:6"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0074",
+      "book": "1 Corintios",
+      "chapter": 15,
+      "verse_start": 29,
+      "verse_end": 34,
+      "reference": "1 Corintios 15:29-34",
+      "category": "NT_GENERAL",
+      "subcategory": "Prácticas y coherencia",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cautela es adecuada ante la referencia de Pablo a quienes se bautizan por los muertos?",
+      "opcion_a": "Reconocer que alude a una práctica conocida por sus lectores sin construir una doctrina detallada que el pasaje no explica",
+      "opcion_b": "Afirmar que Pablo establece allí un rito obligatorio universal",
+      "opcion_c": "Suponer que el texto describe exactamente una práctica moderna",
+      "opcion_d": "Ignorar que el sentido histórico de la expresión es debatido",
+      "correct_option": "A",
+      "correct_answer": "Reconocer que alude a una práctica conocida por sus lectores sin construir una doctrina detallada que el pasaje no explica",
+      "explanation": "Pablo menciona una práctica conocida por sus lectores pero no la explica con detalle. Por eso la pregunta reconoce la referencia sin convertirla en base para un rito obligatorio o una reconstrucción histórica segura.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0075",
+      "book": "1 Corintios",
+      "chapter": 15,
+      "verse_start": 35,
+      "verse_end": 58,
+      "reference": "1 Corintios 15:35-58",
+      "category": "NT_GENERAL",
+      "subcategory": "Cuerpo resucitado y victoria",
+      "characters": [
+        "Pablo",
+        "Cristo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo presenta la resurrección como transformación y victoria sobre la muerte, no como simple reanimación del cuerpo en su condición presente",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Verdadero corresponde al sentido del argumento de Pablo en el tema de cuerpo resucitado y victoria; el pasaje orienta la conducta comunitaria sin convertirla en una regla ajena a su contexto.",
+      "additional_references": [
+        "Isaías 25:8",
+        "Oseas 13:14"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0076",
+      "book": "1 Corintios",
+      "chapter": 16,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "1 Corintios 16:1-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Colecta para los santos",
+      "characters": [
+        "Pablo",
+        "comunidades"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué organización propone Pablo para la colecta destinada a creyentes necesitados?",
+      "opcion_a": "Apartar regularmente una cantidad según la prosperidad de cada persona para evitar improvisar al final",
+      "opcion_b": "Endeudarse para alcanzar una cuota idéntica",
+      "opcion_c": "Entregar públicamente todo lo que se posee",
+      "opcion_d": "Excluir de la comunidad a quien no pueda contribuir",
+      "correct_option": "A",
+      "correct_answer": "Apartar regularmente una cantidad según la prosperidad de cada persona para evitar improvisar al final",
+      "explanation": "Pablo propone una colecta planificada y proporcional a la prosperidad de cada persona. El texto no exige endeudarse, entregar recursos esenciales ni usar la ayuda como instrumento de presión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0077",
+      "book": "1 Corintios",
+      "chapter": 16,
+      "verse_start": 5,
+      "verse_end": 9,
+      "reference": "1 Corintios 16:5-9",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Planes de viaje y puerta abierta",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué muestra Pablo al describir sus planes de viaje y reconocer que pueden depender de la voluntad del Señor?",
+      "opcion_a": "Planificación realista combinada con apertura a cambios y circunstancias",
+      "opcion_b": "Certeza absoluta de que todos sus planes ocurrirán",
+      "opcion_c": "Rechazo de cualquier planificación",
+      "opcion_d": "Uso de señales privadas como calendario infalible",
+      "correct_option": "A",
+      "correct_answer": "Planificación realista combinada con apertura a cambios y circunstancias",
+      "explanation": "El argumento de Pablo destaca que planificación realista combinada con apertura a cambios y circunstancias. En el contexto de planes de viaje y puerta abierta, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0078",
+      "book": "1 Corintios",
+      "chapter": 16,
+      "verse_start": 10,
+      "verse_end": 12,
+      "reference": "1 Corintios 16:10-12",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Timoteo y Apolos",
+      "characters": [
+        "Timoteo",
+        "Apolos",
+        "Pablo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué diferencia aparece entre las instrucciones sobre Timoteo y la decisión de Apolos?",
+      "opcion_a": "Pablo pide recibir bien a Timoteo y reconoce que Apolos no quiso viajar en ese momento",
+      "opcion_b": "Pablo obliga a ambos a viajar",
+      "opcion_c": "Timoteo se niega a colaborar y Apolos obedece de inmediato",
+      "opcion_d": "Ambos son expulsados de la comunidad",
+      "correct_option": "A",
+      "correct_answer": "Pablo pide recibir bien a Timoteo y reconoce que Apolos no quiso viajar en ese momento",
+      "explanation": "El argumento de Pablo destaca que pablo pide recibir bien a Timoteo y reconoce que Apolos no quiso viajar en ese momento. En el contexto de timoteo y apolos, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0079",
+      "book": "1 Corintios",
+      "chapter": 16,
+      "verse_start": 13,
+      "verse_end": 18,
+      "reference": "1 Corintios 16:13-18",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Firmeza amor y Estéfanas",
+      "characters": [
+        "Estéfanas",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación de actitudes aparece al final junto con el reconocimiento de la casa de Estéfanas?",
+      "opcion_a": "Vigilancia, firmeza, valentía, amor y reconocimiento de quienes sirven",
+      "opcion_b": "Competencia por títulos y privilegios",
+      "opcion_c": "Aislamiento de quienes trabajan por otros",
+      "opcion_d": "Uso de autoridad sin rendición de cuentas",
+      "correct_option": "A",
+      "correct_answer": "Vigilancia, firmeza, valentía, amor y reconocimiento de quienes sirven",
+      "explanation": "El argumento de Pablo destaca que vigilancia, firmeza, valentía, amor y reconocimiento de quienes sirven. En el contexto de firmeza amor y estéfanas, las otras opciones añaden conclusiones que el texto no sostiene o desplazan su énfasis principal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1CO-0080",
+      "book": "1 Corintios",
+      "chapter": 16,
+      "verse_start": 19,
+      "verse_end": 24,
+      "reference": "1 Corintios 16:19-24",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Saludos y cierre",
+      "characters": [
+        "Aquila",
+        "Priscila",
+        "Pablo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el cierre muestra una red de comunidades y colaboradores conectados mediante saludos y hospitalidad",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Verdadero corresponde al sentido del argumento de Pablo en el tema de saludos y cierre; el pasaje orienta la conducta comunitaria sin convertirla en una regla ajena a su contexto.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}
