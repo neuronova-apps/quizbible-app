@@ -81,6 +81,7 @@ HAGGAI_PATH = Path(__file__).parent / "haggai-master-input.json"
 ZECHARIAH_PATH = Path(__file__).parent / "zechariah-master-input.json"
 MALACHI_PATH = Path(__file__).parent / "malachi-master-input.json"
 MATTHEW_PATH = Path(__file__).parent / "matthew-master-input.json"
+MARK_PATH = Path(__file__).parent / "mark-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -322,6 +323,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.matthew_questions = {q["id"]: q for q in (raw_mat.get("questions", []) if isinstance(raw_mat, dict) else raw_mat)}
         else:
             cls.matthew_questions = {}
+
+        if MARK_PATH.exists():
+            raw_mar = json.loads(MARK_PATH.read_text(encoding="utf-8"))
+            cls.mark_questions = {q["id"]: q for q in (raw_mar.get("questions", []) if isinstance(raw_mar, dict) else raw_mar)}
+        else:
+            cls.mark_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -3918,6 +3925,126 @@ class TestAuditorCanonical(unittest.TestCase):
         res_mc = evaluate_question(q_mc_invalid, verse_map, book_key="matthew")
         self.assertEqual(res_mc["controles_superados"]["control_distractores_invalidos"], "FAIL")
         self.assertEqual(res_mc["controles_superados"]["control_sin_ambiguedad"], "FAIL")
+
+    def get_mark_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.mark_questions, f"ID '{qid}' no encontrado en mark-master-input.json")
+        return copy.deepcopy(self.mark_questions[qid])
+
+    def test_detect_book_key_mark(self) -> None:
+        """Verifica detección de book_key para Marcos y sus variantes."""
+        spec_mar = {"questions": [{"id": "NQB-NT-MAR-0001", "book": "Marcos"}]}
+        self.assertEqual(detect_book_key(spec_mar), "mark")
+
+        spec_alias = {"questions": [{"id": "NQB-NT-MAR-0001", "book": "marcos"}]}
+        self.assertEqual(detect_book_key(spec_alias), "mark")
+
+        spec_en = {"questions": [{"id": "NQB-NT-MAR-0001", "book": "Mark"}]}
+        self.assertEqual(detect_book_key(spec_en), "mark")
+
+        spec_mc = {"questions": [{"id": "NQB-NT-MAR-0001", "book": "mc"}]}
+        self.assertEqual(detect_book_key(spec_mc), "mark")
+
+        spec_libro = {"questions": [{"id": "NQB-NT-MAR-0001", "book": "Evangelio de Marcos"}]}
+        self.assertEqual(detect_book_key(spec_libro), "mark")
+
+    def test_mark_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Marcos: 16 capítulos, 2 bloques."""
+        self.assertIn("mark", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["mark"]
+        self.assertEqual(cfg["canonical_name"], "Marcos")
+        self.assertEqual(cfg["api_name"], "Marcos")
+        self.assertEqual(cfg["total_chapters"], 16)
+        self.assertEqual(len(cfg["blocks"]), 2)
+        self.assertEqual(cfg["blocks"][0], (1, 8, "mark-01-08.json"))
+        self.assertEqual(cfg["blocks"][1], (9, 16, "mark-09-16.json"))
+        self.assertTrue({"marcos", "mark", "mc", "libro de marcos", "evangelio de marcos"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_mark(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Marcos (74 preguntas, 16/16 capítulos cubiertos, 67 MULTIPLE_CHOICE, 7 TRUE_FALSE, 9 con additional_refs, 12 totales)."""
+        if not self.mark_questions:
+            self.skipTest("mark-master-input.json no disponible")
+        self.assertEqual(len(self.mark_questions), 74)
+        chapter_counts = {}
+        category_counts = collections.Counter()
+        type_counts = collections.Counter()
+        difficulty_counts = collections.Counter()
+        questions_with_add_refs = 0
+        total_add_refs = 0
+        all_chars = []
+
+        expected_add_refs_map = {
+            "NQB-NT-MAR-0002": ["Malaquías 3:1", "Isaías 40:3"],
+            "NQB-NT-MAR-0009": ["1 Samuel 21:1-6"],
+            "NQB-NT-MAR-0029": ["Isaías 29:13"],
+            "NQB-NT-MAR-0049": ["Isaías 56:7", "Jeremías 7:11"],
+            "NQB-NT-MAR-0051": ["Salmos 118:22-23"],
+            "NQB-NT-MAR-0053": ["Deuteronomio 6:4-5", "Levítico 19:18"],
+            "NQB-NT-MAR-0054": ["Salmos 110:1"],
+            "NQB-NT-MAR-0063": ["Zacarías 13:7"],
+            "NQB-NT-MAR-0068": ["Salmos 22:1"],
+        }
+
+        for qid, q in self.mark_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 16, f"Capítulo {ch} fuera del rango 1..16 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+
+            q_type = q.get("question_type", "MULTIPLE_CHOICE")
+            type_counts[q_type] += 1
+
+            if q_type == "MULTIPLE_CHOICE":
+                for opt in ["opcion_a", "opcion_b", "opcion_c", "opcion_d"]:
+                    self.assertTrue(bool(str(q.get(opt, "")).strip()), f"Opción {opt} vacía en {qid}")
+            elif q_type == "TRUE_FALSE":
+                self.assertTrue(bool(str(q.get("opcion_a", "")).strip()), f"Opción A vacía en {qid}")
+                self.assertTrue(bool(str(q.get("opcion_b", "")).strip()), f"Opción B vacía en {qid}")
+                self.assertEqual(str(q.get("opcion_c", "")).strip(), "", f"Opción C no vacía en TRUE_FALSE {qid}")
+                self.assertEqual(str(q.get("opcion_d", "")).strip(), "", f"Opción D no vacía en TRUE_FALSE {qid}")
+
+            cat = q.get("category")
+            category_counts[cat] += 1
+            if cat == "PERSONAJES_BIBLICOS":
+                self.assertGreater(len(q.get("characters", [])), 0, f"Pregunta de personajes sin characters en {qid}")
+
+            diff = q.get("difficulty")
+            difficulty_counts[diff] += 1
+
+            all_chars.extend(q.get("characters", []))
+
+            add_refs = q.get("additional_references", [])
+            if len(add_refs) > 0:
+                questions_with_add_refs += 1
+                total_add_refs += len(add_refs)
+                self.assertIn(qid, expected_add_refs_map)
+                self.assertEqual(add_refs, expected_add_refs_map[qid])
+
+        expected_ch_dist = {
+            1: 5, 2: 4, 3: 4, 4: 5, 5: 5, 6: 5, 7: 4, 8: 5,
+            9: 4, 10: 5, 11: 4, 12: 5, 13: 4, 14: 6, 15: 5, 16: 4
+        }
+        self.assertEqual(chapter_counts, expected_ch_dist)
+        self.assertEqual(type_counts, {"MULTIPLE_CHOICE": 67, "TRUE_FALSE": 7})
+        self.assertEqual(difficulty_counts, {"Básico": 10, "Intermedio": 27, "Avanzado": 28, "Experto": 9})
+        self.assertEqual(category_counts, {
+            "NT_GENERAL": 16,
+            "PERSONAJES_BIBLICOS": 17,
+            "JESUS_PALABRAS": 22,
+            "JESUS_MILAGROS": 14,
+            "JESUS_PARABOLAS": 5
+        })
+        self.assertEqual(questions_with_add_refs, 9)
+        self.assertEqual(total_add_refs, 12)
 
 
 if __name__ == "__main__":

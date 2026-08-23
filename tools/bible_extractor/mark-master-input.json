@@ -1,0 +1,2317 @@
+{
+  "source": "Quiz Bible master bank - Marcos",
+  "version": "RVR1960",
+  "book": "Marcos",
+  "total_questions": 74,
+  "questions": [
+    {
+      "id": "NQB-NT-MAR-0001",
+      "book": "Marcos",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 1,
+      "reference": "Marcos 1:1",
+      "category": "NT_GENERAL",
+      "subcategory": "Apertura del evangelio",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Con qué identidad presenta Marcos desde el inicio a Jesús dentro de su anuncio?",
+      "opcion_a": "Como Jesucristo, Hijo de Dios",
+      "opcion_b": "Como un escriba de Jerusalén",
+      "opcion_c": "Como un sacerdote levítico",
+      "opcion_d": "Como un gobernador romano",
+      "correct_option": "A",
+      "correct_answer": "Como Jesucristo, Hijo de Dios",
+      "explanation": "La apertura de Marcos identifica desde el comienzo a Jesús como Cristo e Hijo de Dios. Esa presentación orienta la lectura del resto del relato hacia su identidad y misión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0002",
+      "book": "Marcos",
+      "chapter": 1,
+      "verse_start": 2,
+      "verse_end": 3,
+      "reference": "Marcos 1:2-3",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Preparación del camino",
+      "characters": [
+        "Juan el Bautista",
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función profética cumple Juan antes del comienzo público del ministerio de Jesús?",
+      "opcion_a": "Preparar el camino mediante un llamado al arrepentimiento",
+      "opcion_b": "Organizar una escuela de escribas",
+      "opcion_c": "Dirigir la administración del templo",
+      "opcion_d": "Reclutar soldados para una revuelta",
+      "correct_option": "A",
+      "correct_answer": "Preparar el camino mediante un llamado al arrepentimiento",
+      "explanation": "Marcos combina lenguaje profético para presentar a Juan como mensajero preparador. Su predicación y bautismo llaman al arrepentimiento y disponen al pueblo para la llegada del que viene después de él.",
+      "additional_references": [
+        "Malaquías 3:1",
+        "Isaías 40:3"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0003",
+      "book": "Marcos",
+      "chapter": 1,
+      "verse_start": 14,
+      "verse_end": 15,
+      "reference": "Marcos 1:14-15",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Inicio de la proclamación",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué respuesta pide Jesús al anunciar que el reino de Dios se ha acercado?",
+      "opcion_a": "Arrepentirse y creer en el evangelio",
+      "opcion_b": "Retirarse de toda vida comunitaria",
+      "opcion_c": "Esperar una señal política antes de actuar",
+      "opcion_d": "Buscar primero reconocimiento religioso",
+      "correct_option": "A",
+      "correct_answer": "Arrepentirse y creer en el evangelio",
+      "explanation": "La proclamación inicial une la cercanía del reino con una respuesta de arrepentimiento y fe. Marcos la presenta como el núcleo del anuncio público con el que comienza el ministerio de Jesús.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0004",
+      "book": "Marcos",
+      "chapter": 1,
+      "verse_start": 21,
+      "verse_end": 28,
+      "reference": "Marcos 1:21-28",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Autoridad en la sinagoga",
+      "characters": [
+        "Jesús",
+        "hombre con espíritu inmundo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué impresionó especialmente a quienes escucharon a Jesús en la sinagoga?",
+      "opcion_a": "Que enseñaba y actuaba con autoridad",
+      "opcion_b": "Que citaba únicamente opiniones de otros maestros",
+      "opcion_c": "Que evitaba responder cualquier pregunta",
+      "opcion_d": "Que pedía autorización romana para enseñar",
+      "correct_option": "A",
+      "correct_answer": "Que enseñaba y actuaba con autoridad",
+      "explanation": "La escena conecta la enseñanza de Jesús con una autoridad percibida como distinta a la de los escribas y con la liberación del hombre. El relato no convierte los espíritus en una explicación médica general de las enfermedades.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0005",
+      "book": "Marcos",
+      "chapter": 1,
+      "verse_start": 35,
+      "verse_end": 39,
+      "reference": "Marcos 1:35-39",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Oración y misión",
+      "characters": [
+        "Jesús",
+        "Simón",
+        "Andrés",
+        "Jacobo",
+        "Juan"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Jesús se retiró muy temprano a un lugar solitario para orar antes de continuar su misión por otras poblaciones",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "Marcos muestra a Jesús buscando un lugar apartado para orar y luego rechazando quedarse únicamente donde ya era popular. La secuencia relaciona oración, discernimiento y continuidad de la misión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0006",
+      "book": "Marcos",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 12,
+      "reference": "Marcos 2:1-12",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Paralítico y techo",
+      "characters": [
+        "Jesús",
+        "paralítico",
+        "amigos",
+        "escribas"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hicieron los amigos del paralítico cuando la multitud les impedía acercarlo directamente a Jesús?",
+      "opcion_a": "Abrieron el techo y lo bajaron hasta donde estaba Jesús",
+      "opcion_b": "Esperaron varios días fuera de la casa",
+      "opcion_c": "Pidieron a los escribas que lo curaran",
+      "opcion_d": "Lo llevaron de regreso sin intentar entrar",
+      "correct_option": "A",
+      "correct_answer": "Abrieron el techo y lo bajaron hasta donde estaba Jesús",
+      "explanation": "Marcos conserva el detalle de que los acompañantes abrieron una parte del techo y descendieron al hombre. La acción expresa su determinación por acercarlo a Jesús y distingue este enfoque de preguntas ya usadas sobre el perdón.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0007",
+      "book": "Marcos",
+      "chapter": 2,
+      "verse_start": 15,
+      "verse_end": 17,
+      "reference": "Marcos 2:15-17",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Mesa con cobradores y pecadores",
+      "characters": [
+        "Jesús",
+        "Leví",
+        "publicanos",
+        "escribas"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué comparación utiliza Jesús para explicar por qué comparte la mesa con personas consideradas pecadoras?",
+      "opcion_a": "Los enfermos necesitan médico más que los sanos",
+      "opcion_b": "Los viajeros necesitan mapas más que descanso",
+      "opcion_c": "Los ricos necesitan maestros más que los pobres",
+      "opcion_d": "Los jueces necesitan testigos más que acusados",
+      "correct_option": "A",
+      "correct_answer": "Los enfermos necesitan médico más que los sanos",
+      "explanation": "Ante la crítica por su compañía, Jesús usa la imagen del médico para explicar su acercamiento a quienes necesitan restauración. El dicho no reduce el valor de las personas a una etiqueta ni autoriza desprecio hacia ningún grupo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0008",
+      "book": "Marcos",
+      "chapter": 2,
+      "verse_start": 18,
+      "verse_end": 22,
+      "reference": "Marcos 2:18-22",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Vino nuevo y odres",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "fariseos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué idea comunica la comparación del vino nuevo con los odres?",
+      "opcion_a": "Que una realidad nueva no puede manejarse sin considerar la forma que la contiene",
+      "opcion_b": "Que toda tradición anterior carece de valor",
+      "opcion_c": "Que el vino es superior a cualquier alimento",
+      "opcion_d": "Que la vida espiritual depende de objetos nuevos",
+      "correct_option": "A",
+      "correct_answer": "Que una realidad nueva no puede manejarse sin considerar la forma que la contiene",
+      "explanation": "Jesús responde a una controversia sobre ayuno mediante imágenes de vestido y odres. Las comparaciones resaltan la tensión entre novedad y formas existentes sin convertir el pasaje en un rechazo indiscriminado de toda tradición.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0009",
+      "book": "Marcos",
+      "chapter": 2,
+      "verse_start": 23,
+      "verse_end": 28,
+      "reference": "Marcos 2:23-28",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Sábado y necesidad humana",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "fariseos",
+        "David"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio resume la respuesta de Jesús sobre la relación entre el sábado y las personas?",
+      "opcion_a": "El sábado fue hecho para beneficio humano y no la persona para el sábado",
+      "opcion_b": "El sábado debía eliminarse de inmediato",
+      "opcion_c": "Solo los dirigentes podían decidir sobre cualquier necesidad",
+      "opcion_d": "Las necesidades humanas nunca importan frente a una norma",
+      "correct_option": "A",
+      "correct_answer": "El sábado fue hecho para beneficio humano y no la persona para el sábado",
+      "explanation": "Marcos formula explícitamente que el sábado fue hecho para el ser humano. El argumento usa el episodio de David para defender una lectura de la norma que no ignore la necesidad y el propósito de Dios.",
+      "additional_references": [
+        "1 Samuel 21:1-6"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0010",
+      "book": "Marcos",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 6,
+      "reference": "Marcos 3:1-6",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Hombre de la mano seca",
+      "characters": [
+        "Jesús",
+        "hombre",
+        "fariseos",
+        "herodianos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué reacción de los opositores marca un aumento del conflicto después de la sanidad realizada en sábado?",
+      "opcion_a": "Comenzaron a planear con los herodianos cómo destruir a Jesús",
+      "opcion_b": "Pidieron públicamente convertirse en discípulos",
+      "opcion_c": "Abandonaron toda discusión sobre el sábado",
+      "opcion_d": "Solicitaron que Jesús dirigiera la sinagoga",
+      "correct_option": "A",
+      "correct_answer": "Comenzaron a planear con los herodianos cómo destruir a Jesús",
+      "explanation": "Marcos destaca que fariseos y herodianos, grupos distintos, pasan a conspirar contra Jesús. La pregunta se centra en la escalada narrativa y no en generalizaciones contra comunidades religiosas actuales.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0011",
+      "book": "Marcos",
+      "chapter": 3,
+      "verse_start": 13,
+      "verse_end": 19,
+      "reference": "Marcos 3:13-19",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Elección de los doce",
+      "characters": [
+        "Jesús",
+        "doce discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué doble propósito aparece al establecer Jesús el grupo de los doce?",
+      "opcion_a": "Que estuvieran con él y fueran enviados a predicar",
+      "opcion_b": "Que administraran impuestos y tierras",
+      "opcion_c": "Que reemplazaran a los sacerdotes del templo",
+      "opcion_d": "Que vivieran aislados de toda multitud",
+      "correct_option": "A",
+      "correct_answer": "Que estuvieran con él y fueran enviados a predicar",
+      "explanation": "La elección de los doce combina cercanía con Jesús y misión. Marcos señala además autoridad para enfrentar el mal, pero la base del grupo comienza con estar con Jesús y ser enviados.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0012",
+      "book": "Marcos",
+      "chapter": 3,
+      "verse_start": 17,
+      "verse_end": 17,
+      "reference": "Marcos 3:17",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Sobrenombre de discípulos",
+      "characters": [
+        "Jacobo",
+        "Juan",
+        "Jesús"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué sobrenombre recibe la pareja formada por Jacobo y Juan dentro de la lista de los doce?",
+      "opcion_a": "Boanerges, hijos del trueno",
+      "opcion_b": "Cefas, hijos de la roca",
+      "opcion_c": "Emanuel, hijos de la paz",
+      "opcion_d": "Tadeos, hijos del desierto",
+      "correct_option": "A",
+      "correct_answer": "Boanerges, hijos del trueno",
+      "explanation": "Marcos conserva el sobrenombre Boanerges para Jacobo y Juan y explica su sentido como hijos del trueno. Es un detalle distintivo del listado marcano y adecuado para una pregunta de precisión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0013",
+      "book": "Marcos",
+      "chapter": 3,
+      "verse_start": 31,
+      "verse_end": 35,
+      "reference": "Marcos 3:31-35",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Familia del reino",
+      "characters": [
+        "Jesús",
+        "madre",
+        "hermanos",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿A quiénes identifica Jesús como su familia al mirar a quienes estaban alrededor de él?",
+      "opcion_a": "A quienes hacen la voluntad de Dios",
+      "opcion_b": "Solo a quienes comparten su parentesco biológico",
+      "opcion_c": "Únicamente a los doce apóstoles",
+      "opcion_d": "A quienes ocupan cargos religiosos",
+      "correct_option": "A",
+      "correct_answer": "A quienes hacen la voluntad de Dios",
+      "explanation": "La respuesta de Jesús amplía el concepto de familia alrededor de la obediencia a Dios. No niega el valor de los vínculos familiares, sino que destaca una comunidad definida por la respuesta a la voluntad divina.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0014",
+      "book": "Marcos",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 9,
+      "reference": "Marcos 4:1-9",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Sembrador",
+      "characters": [
+        "Jesús",
+        "multitud"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué detalle del relato muestra que el mismo sembrador enfrenta resultados muy distintos sin cambiar la semilla?",
+      "opcion_a": "La semilla cae en varios tipos de terreno",
+      "opcion_b": "El sembrador cambia de semilla en cada intento",
+      "opcion_c": "Cada terreno recibe un cultivo diferente",
+      "opcion_d": "La cosecha depende del tamaño del campo",
+      "correct_option": "A",
+      "correct_answer": "La semilla cae en varios tipos de terreno",
+      "explanation": "Marcos presenta varios terrenos que reciben la misma siembra. La diferencia de resultados prepara la explicación sobre distintas respuestas al mensaje sin repetir la pregunta de Mateo sobre cuál terreno produce fruto.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0015",
+      "book": "Marcos",
+      "chapter": 4,
+      "verse_start": 21,
+      "verse_end": 25,
+      "reference": "Marcos 4:21-25",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Lámpara y medida",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio une las imágenes de la lámpara y de la medida en esta enseñanza?",
+      "opcion_a": "Lo oculto será manifestado y la manera de escuchar tiene consecuencias",
+      "opcion_b": "La luz debe permanecer siempre escondida",
+      "opcion_c": "La generosidad elimina toda responsabilidad",
+      "opcion_d": "Las medidas comerciales determinan la fe",
+      "correct_option": "A",
+      "correct_answer": "Lo oculto será manifestado y la manera de escuchar tiene consecuencias",
+      "explanation": "Las imágenes llaman a escuchar con atención y muestran que la revelación no está destinada a permanecer escondida. La medida funciona como advertencia sobre la responsabilidad con que se recibe lo oído.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0016",
+      "book": "Marcos",
+      "chapter": 4,
+      "verse_start": 26,
+      "verse_end": 29,
+      "reference": "Marcos 4:26-29",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Semilla que crece",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué aspecto del reino destaca la comparación de una semilla que crece mientras el agricultor duerme y se levanta?",
+      "opcion_a": "Un crecimiento que avanza más allá del control directo del sembrador",
+      "opcion_b": "Un crecimiento que depende de vigilar cada segundo",
+      "opcion_c": "La necesidad de arrancar la planta antes de madurar",
+      "opcion_d": "La obligación de explicar científicamente cada etapa",
+      "correct_option": "A",
+      "correct_answer": "Un crecimiento que avanza más allá del control directo del sembrador",
+      "explanation": "Esta parábola es característica de Marcos y describe un proceso de crecimiento que el agricultor no produce por control constante. La imagen enfatiza iniciativa y desarrollo del reino más que una técnica agrícola.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0017",
+      "book": "Marcos",
+      "chapter": 4,
+      "verse_start": 35,
+      "verse_end": 41,
+      "reference": "Marcos 4:35-41",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Tempestad y temor",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué detalle subraya el contraste entre el temor de los discípulos y la calma de Jesús antes de que la tormenta sea detenida?",
+      "opcion_a": "Jesús estaba dormido sobre un cabezal en la barca",
+      "opcion_b": "Jesús había abandonado la barca antes de la tormenta",
+      "opcion_c": "Los discípulos estaban dormidos mientras Jesús remaba",
+      "opcion_d": "La tormenta comenzó cuando todos estaban en tierra",
+      "correct_option": "A",
+      "correct_answer": "Jesús estaba dormido sobre un cabezal en la barca",
+      "explanation": "Marcos incluye el detalle concreto de Jesús dormido en la popa sobre un cabezal. El contraste intensifica la reacción de los discípulos y permite preguntar un rasgo distinto del resultado de la calma ya usado en Mateo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0018",
+      "book": "Marcos",
+      "chapter": 4,
+      "verse_start": 40,
+      "verse_end": 41,
+      "reference": "Marcos 4:40-41",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Temor y fe",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que después de calmar la tormenta Jesús cuestiona el temor de los discípulos y su falta de fe",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "Después de intervenir sobre la tormenta, Jesús dirige la atención al miedo y la fe de sus discípulos. El relato termina con ellos preguntándose quién es aquel a quien incluso el viento y el mar obedecen.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0019",
+      "book": "Marcos",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 20,
+      "reference": "Marcos 5:1-20",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Liberación en región gentil",
+      "characters": [
+        "Jesús",
+        "hombre",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué nombre colectivo responde el espíritu cuando Jesús pregunta su nombre en la escena de la región de los gerasenos?",
+      "opcion_a": "Legión",
+      "opcion_b": "César",
+      "opcion_c": "Herodes",
+      "opcion_d": "Boanerges",
+      "correct_option": "A",
+      "correct_answer": "Legión",
+      "explanation": "La respuesta utiliza el término Legión para expresar multiplicidad dentro del relato. Debe mantenerse como elemento narrativo y no trasladarse a diagnósticos médicos o psicológicos modernos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0020",
+      "book": "Marcos",
+      "chapter": 5,
+      "verse_start": 18,
+      "verse_end": 20,
+      "reference": "Marcos 5:18-20",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Testimonio del hombre restaurado",
+      "characters": [
+        "Jesús",
+        "hombre restaurado"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué misión recibe el hombre restaurado cuando pide acompañar a Jesús?",
+      "opcion_a": "Volver a su casa y contar lo que el Señor había hecho por él",
+      "opcion_b": "Abandonar a su familia para siempre",
+      "opcion_c": "Dirigir inmediatamente a los doce",
+      "opcion_d": "Viajar a Jerusalén para ocupar un cargo",
+      "correct_option": "A",
+      "correct_answer": "Volver a su casa y contar lo que el Señor había hecho por él",
+      "explanation": "Jesús no acepta que el hombre se una al grupo itinerante y, en cambio, le encomienda comunicar en su entorno la misericordia recibida. La misión comienza en su propia región.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0021",
+      "book": "Marcos",
+      "chapter": 5,
+      "verse_start": 21,
+      "verse_end": 34,
+      "reference": "Marcos 5:21-34",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Mujer con hemorragia",
+      "characters": [
+        "Jesús",
+        "mujer",
+        "multitud"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué acción realiza la mujer enferma convencida de que podía recibir ayuda sin interrumpir públicamente a Jesús?",
+      "opcion_a": "Toca su manto entre la multitud",
+      "opcion_b": "Se sube al techo de una casa",
+      "opcion_c": "Envía una carta por medio de los discípulos",
+      "opcion_d": "Espera a que Jesús entre en la sinagoga",
+      "correct_option": "A",
+      "correct_answer": "Toca su manto entre la multitud",
+      "explanation": "Marcos narra que la mujer se acerca por detrás y toca el manto de Jesús. La escena culmina en un encuentro personal que reconoce su fe y restauración, sin convertir la acción física en una técnica de sanidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0022",
+      "book": "Marcos",
+      "chapter": 5,
+      "verse_start": 35,
+      "verse_end": 43,
+      "reference": "Marcos 5:35-43",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Hija de Jairo",
+      "characters": [
+        "Jesús",
+        "Jairo",
+        "hija",
+        "Pedro",
+        "Jacobo",
+        "Juan"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué expresión aramea conserva Marcos cuando Jesús toma de la mano a la hija de Jairo?",
+      "opcion_a": "Talita cumi",
+      "opcion_b": "Eloi lama",
+      "opcion_c": "Abba Padre",
+      "opcion_d": "Hosanna",
+      "correct_option": "A",
+      "correct_answer": "Talita cumi",
+      "explanation": "Marcos conserva la expresión aramea y luego ofrece su sentido para el lector. Es un detalle distintivo del relato de la hija de Jairo y no requiere convertir la frase en una fórmula ritual.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0023",
+      "book": "Marcos",
+      "chapter": 5,
+      "verse_start": 36,
+      "verse_end": 36,
+      "reference": "Marcos 5:36",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Fe frente al miedo",
+      "characters": [
+        "Jesús",
+        "Jairo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué exhortación dirige Jesús a Jairo cuando llega la noticia de que su hija ha muerto?",
+      "opcion_a": "No temas, cree solamente",
+      "opcion_b": "Regresa a casa y abandona la esperanza",
+      "opcion_c": "Busca primero la aprobación de la multitud",
+      "opcion_d": "Espera una señal de los escribas",
+      "correct_option": "A",
+      "correct_answer": "No temas, cree solamente",
+      "explanation": "La frase aparece en el momento de mayor crisis del relato y orienta a Jairo hacia la confianza. No implica que toda pérdida pueda evitarse mediante una cantidad suficiente de fe ni culpabiliza a quien atraviesa duelo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0024",
+      "book": "Marcos",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 6,
+      "reference": "Marcos 6:1-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Rechazo en la tierra de origen",
+      "characters": [
+        "Jesús",
+        "habitantes de Nazaret"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué oficio asociado con Jesús mencionan sus paisanos al mostrar sorpresa por su enseñanza?",
+      "opcion_a": "Carpintero",
+      "opcion_b": "Pescador",
+      "opcion_c": "Sacerdote",
+      "opcion_d": "Recaudador de impuestos",
+      "correct_option": "A",
+      "correct_answer": "Carpintero",
+      "explanation": "Marcos registra que sus paisanos lo identifican como carpintero y relacionan su sorpresa con su familia conocida. El detalle refuerza el contraste entre familiaridad social y reconocimiento de su autoridad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0025",
+      "book": "Marcos",
+      "chapter": 6,
+      "verse_start": 7,
+      "verse_end": 13,
+      "reference": "Marcos 6:7-13",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Envío de los doce",
+      "characters": [
+        "Jesús",
+        "doce discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué objeto permite Marcos llevar a los doce como excepción dentro de las instrucciones de viaje?",
+      "opcion_a": "Un bordón",
+      "opcion_b": "Una segunda túnica",
+      "opcion_c": "Dinero en el cinto",
+      "opcion_d": "Una bolsa de provisiones",
+      "correct_option": "A",
+      "correct_answer": "Un bordón",
+      "explanation": "Marcos permite un bordón mientras restringe otros recursos de viaje. Es un detalle propio que ayuda a distinguir la formulación marcana sin convertir las instrucciones de una misión concreta en una norma universal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0026",
+      "book": "Marcos",
+      "chapter": 6,
+      "verse_start": 30,
+      "verse_end": 34,
+      "reference": "Marcos 6:30-34",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Regreso de los apóstoles",
+      "characters": [
+        "Jesús",
+        "apóstoles",
+        "multitud"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué propone Jesús a los apóstoles cuando regresan de su misión y hay tanta gente que ni siquiera pueden comer?",
+      "opcion_a": "Ir aparte a un lugar desierto y descansar un poco",
+      "opcion_b": "Comenzar inmediatamente otra gira sin pausa",
+      "opcion_c": "Separarse definitivamente de la multitud",
+      "opcion_d": "Volver a sus antiguos oficios",
+      "correct_option": "A",
+      "correct_answer": "Ir aparte a un lugar desierto y descansar un poco",
+      "explanation": "Marcos muestra a Jesús invitando al grupo a retirarse y descansar después de la misión. La multitud vuelve a alcanzarlos, pero la invitación inicial reconoce una necesidad humana de descanso.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0027",
+      "book": "Marcos",
+      "chapter": 6,
+      "verse_start": 39,
+      "verse_end": 44,
+      "reference": "Marcos 6:39-44",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Organización de la multitud",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "multitud"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué detalle visual utiliza Marcos para describir el lugar donde la multitud se acomodó antes de ser alimentada?",
+      "opcion_a": "Hierba verde",
+      "opcion_b": "Arena blanca",
+      "opcion_c": "Piedras negras",
+      "opcion_d": "Campos recién arados",
+      "correct_option": "A",
+      "correct_answer": "Hierba verde",
+      "explanation": "Marcos menciona hierba verde y grupos organizados antes de la distribución del alimento. La pregunta evita repetir la cantidad de panes y peces ya usada en Mateo y se concentra en un detalle narrativo propio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0028",
+      "book": "Marcos",
+      "chapter": 6,
+      "verse_start": 52,
+      "verse_end": 52,
+      "reference": "Marcos 6:52",
+      "category": "NT_GENERAL",
+      "subcategory": "Incomprensión de los discípulos",
+      "characters": [
+        "Discípulos",
+        "Jesús"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Con qué episodio anterior relaciona Marcos la falta de comprensión de los discípulos después de ver a Jesús sobre el mar?",
+      "opcion_a": "Con el episodio de los panes",
+      "opcion_b": "Con el bautismo de Juan",
+      "opcion_c": "Con la elección de los doce",
+      "opcion_d": "Con la parábola del sembrador",
+      "correct_option": "A",
+      "correct_answer": "Con el episodio de los panes",
+      "explanation": "Marcos comenta que no habían entendido lo de los panes y que su corazón estaba endurecido. Esa observación editorial conecta milagros distintos para mostrar una comprensión todavía incompleta de los discípulos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0029",
+      "book": "Marcos",
+      "chapter": 7,
+      "verse_start": 1,
+      "verse_end": 13,
+      "reference": "Marcos 7:1-13",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Tradición y Corbán",
+      "characters": [
+        "Jesús",
+        "fariseos",
+        "escribas"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ejemplo usa Jesús para mostrar cómo una práctica religiosa podía terminar anulando una obligación hacia los padres?",
+      "opcion_a": "La declaración de Corbán sobre bienes destinados a Dios",
+      "opcion_b": "El ayuno de cuarenta días",
+      "opcion_c": "La entrega de una moneda al César",
+      "opcion_d": "La compra de animales para sacrificio",
+      "correct_option": "A",
+      "correct_answer": "La declaración de Corbán sobre bienes destinados a Dios",
+      "explanation": "Jesús critica una forma de usar la declaración de Corbán para eludir la responsabilidad hacia los padres. El argumento denuncia una tradición aplicada de modo que contradice un deber moral básico.",
+      "additional_references": [
+        "Isaías 29:13"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0030",
+      "book": "Marcos",
+      "chapter": 7,
+      "verse_start": 24,
+      "verse_end": 30,
+      "reference": "Marcos 7:24-30",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Mujer sirofenicia",
+      "characters": [
+        "Jesús",
+        "mujer sirofenicia",
+        "hija"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo identifica Marcos el origen de la mujer que pide ayuda para su hija?",
+      "opcion_a": "Griega y sirofenicia de nación",
+      "opcion_b": "Judea y de familia sacerdotal",
+      "opcion_c": "Romana y de familia senatorial",
+      "opcion_d": "Samaritana y de linaje levítico",
+      "correct_option": "A",
+      "correct_answer": "Griega y sirofenicia de nación",
+      "explanation": "Marcos especifica que la mujer era griega, sirofenicia de nación. La escena muestra una petición persistente y una respuesta favorable sin usar su identidad étnica para establecer jerarquías actuales.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0031",
+      "book": "Marcos",
+      "chapter": 7,
+      "verse_start": 31,
+      "verse_end": 37,
+      "reference": "Marcos 7:31-37",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Hombre sordo y con dificultad para hablar",
+      "characters": [
+        "Jesús",
+        "hombre",
+        "multitud"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué expresión aramea conserva Marcos durante la sanidad del hombre con dificultad para oír y hablar?",
+      "opcion_a": "Efata",
+      "opcion_b": "Talita cumi",
+      "opcion_c": "Rabbuni",
+      "opcion_d": "Maranata",
+      "correct_option": "A",
+      "correct_answer": "Efata",
+      "explanation": "Marcos conserva Efata y explica su sentido como una orden de apertura. El relato debe entenderse como una sanidad dentro de la narrativa y no como una fórmula médica o ritual reproducible.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0032",
+      "book": "Marcos",
+      "chapter": 7,
+      "verse_start": 36,
+      "verse_end": 37,
+      "reference": "Marcos 7:36-37",
+      "category": "NT_GENERAL",
+      "subcategory": "Reacción de la multitud",
+      "characters": [
+        "Jesús",
+        "multitud"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que cuanto más pedía Jesús que no difundieran la noticia, más la proclamaba la gente",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "Marcos subraya una tensión recurrente entre las órdenes de silencio y la difusión creciente de la fama de Jesús. Este patrón contribuye al tema de identidad y reconocimiento progresivo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0033",
+      "book": "Marcos",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end": 10,
+      "reference": "Marcos 8:1-10",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Alimentación de cuatro mil",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "multitud"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cuántas canastas grandes de restos recoge el grupo después de la alimentación de la multitud en esta ocasión?",
+      "opcion_a": "Siete",
+      "opcion_b": "Doce",
+      "opcion_c": "Cinco",
+      "opcion_d": "Tres",
+      "correct_option": "A",
+      "correct_answer": "Siete",
+      "explanation": "Marcos distingue esta alimentación de la anterior mediante varios detalles, entre ellos siete canastas de restos. La pregunta evita repetir el contraste ya planteado en Mateo y se concentra en el resultado de este relato.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0034",
+      "book": "Marcos",
+      "chapter": 8,
+      "verse_start": 14,
+      "verse_end": 21,
+      "reference": "Marcos 8:14-21",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Levadura y memoria",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué malentendido de los discípulos provoca que Jesús recuerde las dos alimentaciones de multitudes?",
+      "opcion_a": "Piensan que habla de pan porque llevan muy poco alimento",
+      "opcion_b": "Creen que está prohibiendo toda comida con levadura",
+      "opcion_c": "Suponen que deben volver a pescar de inmediato",
+      "opcion_d": "Piensan que deben comprar pan para los fariseos",
+      "correct_option": "A",
+      "correct_answer": "Piensan que habla de pan porque llevan muy poco alimento",
+      "explanation": "La advertencia sobre la levadura de fariseos y Herodes es entendida por los discípulos como un problema de pan. Jesús responde recordando ambos milagros para cuestionar su falta de comprensión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0035",
+      "book": "Marcos",
+      "chapter": 8,
+      "verse_start": 22,
+      "verse_end": 26,
+      "reference": "Marcos 8:22-26",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Ciego de Betsaida",
+      "characters": [
+        "Jesús",
+        "hombre ciego"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué característica distingue esta sanidad de muchas otras narradas por Marcos?",
+      "opcion_a": "La recuperación de la vista ocurre en dos etapas",
+      "opcion_b": "El hombre es sanado sin encontrarse con Jesús",
+      "opcion_c": "La multitud realiza la sanidad",
+      "opcion_d": "El hombre recupera la vista antes de pedir ayuda",
+      "correct_option": "A",
+      "correct_answer": "La recuperación de la vista ocurre en dos etapas",
+      "explanation": "El hombre primero percibe de manera parcial y luego ve claramente después de una segunda intervención. El proceso gradual es un rasgo distintivo y puede funcionar narrativamente junto al tema de comprensión progresiva.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0036",
+      "book": "Marcos",
+      "chapter": 8,
+      "verse_start": 24,
+      "verse_end": 25,
+      "reference": "Marcos 8:24-25",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Visión gradual",
+      "characters": [
+        "Jesús",
+        "hombre ciego"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo describe inicialmente el hombre lo que ve antes de recuperar por completo la visión?",
+      "opcion_a": "Personas que le parecen árboles caminando",
+      "opcion_b": "Luces que le parecen estrellas cayendo",
+      "opcion_c": "Animales que le parecen montañas",
+      "opcion_d": "Sombras que le parecen barcos",
+      "correct_option": "A",
+      "correct_answer": "Personas que le parecen árboles caminando",
+      "explanation": "La descripción de personas como árboles que andan muestra que la primera recuperación todavía es parcial. Marcos conserva este detalle antes de narrar una visión clara.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0037",
+      "book": "Marcos",
+      "chapter": 8,
+      "verse_start": 34,
+      "verse_end": 38,
+      "reference": "Marcos 8:34-38",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Discipulado público",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "multitud"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Jesús llama no solo a los discípulos sino también a la multitud cuando enseña sobre negarse a sí mismo y seguirlo",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "Marcos especifica que Jesús convoca a la multitud junto con los discípulos antes de exponer el costo del seguimiento. La enseñanza no invita a buscar daño, sino que presenta la seriedad de una lealtad que puede tener costo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0038",
+      "book": "Marcos",
+      "chapter": 9,
+      "verse_start": 2,
+      "verse_end": 8,
+      "reference": "Marcos 9:2-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Transfiguración",
+      "characters": [
+        "Jesús",
+        "Pedro",
+        "Jacobo",
+        "Juan",
+        "Moisés",
+        "Elías"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué detalle de la ropa de Jesús utiliza Marcos para expresar la intensidad de la transfiguración?",
+      "opcion_a": "Se volvió extremadamente blanca, más de lo que un lavador podría blanquear",
+      "opcion_b": "Se volvió completamente negra",
+      "opcion_c": "Quedó cubierta de polvo del camino",
+      "opcion_d": "Cambió por una túnica sacerdotal",
+      "correct_option": "A",
+      "correct_answer": "Se volvió extremadamente blanca, más de lo que un lavador podría blanquear",
+      "explanation": "Marcos añade una comparación vívida sobre una blancura que ningún lavador en la tierra podría producir. El detalle aporta un enfoque distinto al de la identificación de Moisés y Elías ya usada en Mateo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0039",
+      "book": "Marcos",
+      "chapter": 9,
+      "verse_start": 14,
+      "verse_end": 29,
+      "reference": "Marcos 9:14-29",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Padre y muchacho",
+      "characters": [
+        "Jesús",
+        "padre",
+        "muchacho",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué petición expresa el padre al reconocer simultáneamente su fe y su dificultad para creer?",
+      "opcion_a": "Creo, ayuda mi incredulidad",
+      "opcion_b": "Aumenta mis riquezas para creer",
+      "opcion_c": "Dame una señal política y creeré",
+      "opcion_d": "Haz que nunca vuelva a sentir temor",
+      "correct_option": "A",
+      "correct_answer": "Creo, ayuda mi incredulidad",
+      "explanation": "La frase une confianza y fragilidad sin presentar la fe como una seguridad emocional perfecta. El padre pide ayuda precisamente dentro de una situación de sufrimiento y tensión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0040",
+      "book": "Marcos",
+      "chapter": 9,
+      "verse_start": 33,
+      "verse_end": 37,
+      "reference": "Marcos 9:33-37",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Grandeza y servicio",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "niño"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué criterio propone Jesús después de descubrir que los discípulos discutían sobre quién sería el mayor?",
+      "opcion_a": "Ser último y servidor de todos",
+      "opcion_b": "Asegurar primero una posición de autoridad",
+      "opcion_c": "Competir para demostrar superioridad",
+      "opcion_d": "Apartarse de toda responsabilidad",
+      "correct_option": "A",
+      "correct_answer": "Ser último y servidor de todos",
+      "explanation": "Jesús invierte la lógica de rango y usa a un niño como ejemplo de recepción. La grandeza se redefine mediante servicio y acogida, no dominio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0041",
+      "book": "Marcos",
+      "chapter": 9,
+      "verse_start": 38,
+      "verse_end": 41,
+      "reference": "Marcos 9:38-41",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Quien no está contra nosotros",
+      "characters": [
+        "Jesús",
+        "Juan",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio usa Jesús cuando Juan informa que intentaron impedir a alguien actuar en su nombre por no seguir al grupo?",
+      "opcion_a": "Quien no está contra nosotros, por nosotros está",
+      "opcion_b": "Solo los doce pueden realizar cualquier obra buena",
+      "opcion_c": "Todo extraño debe ser rechazado automáticamente",
+      "opcion_d": "Nadie fuera del grupo puede hablar de Jesús",
+      "correct_option": "A",
+      "correct_answer": "Quien no está contra nosotros, por nosotros está",
+      "explanation": "Jesús corrige una actitud excluyente del grupo y señala que alguien que obra en su nombre no debe ser impedido simplemente por no pertenecer al círculo inmediato de discípulos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0042",
+      "book": "Marcos",
+      "chapter": 10,
+      "verse_start": 13,
+      "verse_end": 16,
+      "reference": "Marcos 10:13-16",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Jesús y los niños",
+      "characters": [
+        "Jesús",
+        "niños",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué reacción emocional atribuye Marcos a Jesús cuando los discípulos intentan impedir que le acerquen niños?",
+      "opcion_a": "Se indignó",
+      "opcion_b": "Se mostró indiferente",
+      "opcion_c": "Se alegró de que los alejaran",
+      "opcion_d": "Abandonó el lugar sin responder",
+      "correct_option": "A",
+      "correct_answer": "Se indignó",
+      "explanation": "Marcos menciona expresamente que Jesús se indignó ante la acción de los discípulos. Luego recibe a los niños, los bendice y los usa para enseñar sobre recibir el reino.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0043",
+      "book": "Marcos",
+      "chapter": 10,
+      "verse_start": 17,
+      "verse_end": 22,
+      "reference": "Marcos 10:17-22",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Hombre rico",
+      "characters": [
+        "Jesús",
+        "hombre rico"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitud personal de Jesús menciona Marcos antes de plantear al hombre rico una exigencia difícil?",
+      "opcion_a": "Lo miró y lo amó",
+      "opcion_b": "Lo evitó deliberadamente",
+      "opcion_c": "Lo condenó antes de escucharlo",
+      "opcion_d": "Lo presentó como enemigo",
+      "correct_option": "A",
+      "correct_answer": "Lo miró y lo amó",
+      "explanation": "Marcos introduce el detalle de que Jesús lo miró y lo amó antes de confrontar su apego. La exigencia del relato aparece así dentro de una relación de interés y no de desprecio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0044",
+      "book": "Marcos",
+      "chapter": 10,
+      "verse_start": 32,
+      "verse_end": 34,
+      "reference": "Marcos 10:32-34",
+      "category": "NT_GENERAL",
+      "subcategory": "Camino a Jerusalén",
+      "characters": [
+        "Jesús",
+        "doce discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué reacción provoca en los discípulos el modo en que Jesús va delante de ellos camino a Jerusalén antes de anunciar nuevamente su muerte?",
+      "opcion_a": "Asombro y temor",
+      "opcion_b": "Celebración sin ninguna preocupación",
+      "opcion_c": "Indiferencia total",
+      "opcion_d": "Deseo de regresar a pescar",
+      "correct_option": "A",
+      "correct_answer": "Asombro y temor",
+      "explanation": "Marcos describe a Jesús avanzando delante mientras los discípulos están asombrados y quienes siguen tienen miedo. Ese tono prepara un anuncio detallado del sufrimiento próximo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0045",
+      "book": "Marcos",
+      "chapter": 10,
+      "verse_start": 35,
+      "verse_end": 45,
+      "reference": "Marcos 10:35-45",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Petición de Jacobo y Juan",
+      "characters": [
+        "Jesús",
+        "Jacobo",
+        "Juan",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Quiénes presentan directamente a Jesús la petición de ocupar lugares de honor en su gloria?",
+      "opcion_a": "Jacobo y Juan",
+      "opcion_b": "Pedro y Andrés",
+      "opcion_c": "Felipe y Bartolomé",
+      "opcion_d": "Mateo y Tomás",
+      "correct_option": "A",
+      "correct_answer": "Jacobo y Juan",
+      "explanation": "En Marcos la petición es formulada directamente por Jacobo y Juan. Jesús responde desplazando la discusión desde posiciones de honor hacia servicio y entrega.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0046",
+      "book": "Marcos",
+      "chapter": 10,
+      "verse_start": 46,
+      "verse_end": 52,
+      "reference": "Marcos 10:46-52",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Bartimeo",
+      "characters": [
+        "Jesús",
+        "Bartimeo",
+        "multitud"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo se llama el hombre ciego que clama a Jesús al salir de Jericó?",
+      "opcion_a": "Bartimeo",
+      "opcion_b": "Jairo",
+      "opcion_c": "Bartolomé",
+      "opcion_d": "Zaqueo",
+      "correct_option": "A",
+      "correct_answer": "Bartimeo",
+      "explanation": "Marcos conserva el nombre Bartimeo y lo identifica como hijo de Timeo. A pesar de que otros intentan callarlo, insiste, recibe la vista y sigue a Jesús por el camino.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0047",
+      "book": "Marcos",
+      "chapter": 11,
+      "verse_start": 1,
+      "verse_end": 10,
+      "reference": "Marcos 11:1-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Entrada en Jerusalén",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "multitud"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué condición específica debía cumplir el animal que los discípulos encontrarían para la entrada en Jerusalén?",
+      "opcion_a": "Que nadie lo hubiera montado todavía",
+      "opcion_b": "Que fuera propiedad de un sacerdote",
+      "opcion_c": "Que hubiera servido en una batalla",
+      "opcion_d": "Que hubiera nacido en Belén",
+      "correct_option": "A",
+      "correct_answer": "Que nadie lo hubiera montado todavía",
+      "explanation": "Marcos especifica que el pollino no había sido montado por nadie. La pregunta utiliza un detalle distinto de la especie del animal ya trabajada en Mateo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0048",
+      "book": "Marcos",
+      "chapter": 11,
+      "verse_start": 12,
+      "verse_end": 21,
+      "reference": "Marcos 11:12-21",
+      "category": "NT_GENERAL",
+      "subcategory": "Higuera y templo",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué estructura narrativa característica forma Marcos al colocar la acción en el templo entre dos escenas relacionadas con la higuera?",
+      "opcion_a": "Un episodio enmarcado por la higuera antes y después",
+      "opcion_b": "Dos relatos sin conexión temporal",
+      "opcion_c": "Una genealogía interrumpida por una parábola",
+      "opcion_d": "Una lista de milagros ordenados alfabéticamente",
+      "correct_option": "A",
+      "correct_answer": "Un episodio enmarcado por la higuera antes y después",
+      "explanation": "Marcos presenta la higuera, luego la acción en el templo y después vuelve a la higuera seca. La disposición permite leer ambos episodios en relación y es un rasgo útil para una pregunta de análisis narrativo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0049",
+      "book": "Marcos",
+      "chapter": 11,
+      "verse_start": 15,
+      "verse_end": 17,
+      "reference": "Marcos 11:15-17",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Templo y naciones",
+      "characters": [
+        "Jesús",
+        "comerciantes",
+        "pueblo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dimensión añade Marcos al propósito del templo cuando Jesús cita a los profetas?",
+      "opcion_a": "Debe ser casa de oración para todas las naciones",
+      "opcion_b": "Debe servir exclusivamente como mercado religioso",
+      "opcion_c": "Debe permanecer cerrado a todo extranjero",
+      "opcion_d": "Debe funcionar como sede militar",
+      "correct_option": "A",
+      "correct_answer": "Debe ser casa de oración para todas las naciones",
+      "explanation": "La cita combina el ideal de casa de oración para todas las naciones con la denuncia de una cueva de ladrones. El episodio critica una distorsión del propósito del templo y no autoriza violencia contra grupos modernos.",
+      "additional_references": [
+        "Isaías 56:7",
+        "Jeremías 7:11"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0050",
+      "book": "Marcos",
+      "chapter": 11,
+      "verse_start": 22,
+      "verse_end": 25,
+      "reference": "Marcos 11:22-25",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Fe, oración y perdón",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la enseñanza sobre la oración se vincula también con la disposición a perdonar",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "Marcos relaciona la confianza en Dios al orar con una actitud de perdón hacia otros. La enseñanza no convierte la oración en una técnica para obtener cualquier resultado deseado de forma automática.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0051",
+      "book": "Marcos",
+      "chapter": 12,
+      "verse_start": 1,
+      "verse_end": 12,
+      "reference": "Marcos 12:1-12",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Labradores malvados",
+      "characters": [
+        "Jesús",
+        "labradores",
+        "dueño",
+        "hijo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué patrón de conducta de los labradores conduce al punto culminante de la parábola?",
+      "opcion_a": "Rechazan y maltratan repetidamente a los enviados y finalmente al hijo",
+      "opcion_b": "Devuelven puntualmente toda la cosecha",
+      "opcion_c": "Abandonan la viña por falta de trabajo",
+      "opcion_d": "Piden al dueño instrucciones adicionales",
+      "correct_option": "A",
+      "correct_answer": "Rechazan y maltratan repetidamente a los enviados y finalmente al hijo",
+      "explanation": "La parábola presenta una escalada de rechazo a los enviados del dueño hasta llegar al hijo. Su sentido debe trabajarse dentro del conflicto narrativo y no convertirse en hostilidad contra un pueblo o religión completa.",
+      "additional_references": [
+        "Salmos 118:22-23"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0052",
+      "book": "Marcos",
+      "chapter": 12,
+      "verse_start": 18,
+      "verse_end": 27,
+      "reference": "Marcos 12:18-27",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Resurrección y saduceos",
+      "characters": [
+        "Jesús",
+        "saduceos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué error general señala Jesús en la pregunta hipotética de los saduceos sobre la resurrección?",
+      "opcion_a": "No comprender las Escrituras ni el poder de Dios",
+      "opcion_b": "Desconocer las leyes romanas de ciudadanía",
+      "opcion_c": "No saber calcular una herencia",
+      "opcion_d": "Ignorar las reglas del comercio",
+      "correct_option": "A",
+      "correct_answer": "No comprender las Escrituras ni el poder de Dios",
+      "explanation": "Jesús responde que el problema está en una comprensión insuficiente de las Escrituras y del poder de Dios. La controversia se dirige a una posición concreta sobre la resurrección y no a una condena general de personas judías.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0053",
+      "book": "Marcos",
+      "chapter": 12,
+      "verse_start": 28,
+      "verse_end": 34,
+      "reference": "Marcos 12:28-34",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Mandamiento principal",
+      "characters": [
+        "Jesús",
+        "escriba"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué evaluación positiva hace Jesús del escriba que reconoce la prioridad del amor a Dios y al prójimo sobre los sacrificios?",
+      "opcion_a": "Que no estaba lejos del reino de Dios",
+      "opcion_b": "Que debía abandonar Jerusalén",
+      "opcion_c": "Que había superado a todos los discípulos",
+      "opcion_d": "Que ya no necesitaba ninguna enseñanza",
+      "correct_option": "A",
+      "correct_answer": "Que no estaba lejos del reino de Dios",
+      "explanation": "A diferencia de otras controversias, Marcos muestra un intercambio respetuoso y una valoración positiva del escriba. El reconocimiento mutuo evita simplificar todas las relaciones de Jesús con los escribas como hostiles.",
+      "additional_references": [
+        "Deuteronomio 6:4-5",
+        "Levítico 19:18"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0054",
+      "book": "Marcos",
+      "chapter": 12,
+      "verse_start": 35,
+      "verse_end": 37,
+      "reference": "Marcos 12:35-37",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Mesías e hijo de David",
+      "characters": [
+        "Jesús",
+        "escribas",
+        "multitud"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dificultad plantea Jesús al relacionar el título hijo de David con una declaración en la que David llama Señor al Mesías?",
+      "opcion_a": "Que la identidad mesiánica no se agota en una relación genealógica simple",
+      "opcion_b": "Que David nunca existió",
+      "opcion_c": "Que el Mesías debía ser sacerdote levita",
+      "opcion_d": "Que ningún descendiente de David podía gobernar",
+      "correct_option": "A",
+      "correct_answer": "Que la identidad mesiánica no se agota en una relación genealógica simple",
+      "explanation": "Jesús usa un salmo para plantear una pregunta sobre cómo comprender la relación entre David y el Mesías. La escena abre una reflexión sobre identidad sin negar la tradición davídica.",
+      "additional_references": [
+        "Salmos 110:1"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0055",
+      "book": "Marcos",
+      "chapter": 12,
+      "verse_start": 41,
+      "verse_end": 44,
+      "reference": "Marcos 12:41-44",
+      "category": "NT_GENERAL",
+      "subcategory": "Ofrenda de la viuda",
+      "characters": [
+        "Jesús",
+        "viuda",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué considera Jesús que la viuda pobre dio más que quienes depositaban grandes cantidades?",
+      "opcion_a": "Porque dio desde su pobreza todo lo que tenía para vivir",
+      "opcion_b": "Porque su moneda tenía un valor secreto mayor",
+      "opcion_c": "Porque había prometido recibir una recompensa inmediata",
+      "opcion_d": "Porque los demás no habían dado ninguna moneda",
+      "correct_option": "A",
+      "correct_answer": "Porque dio desde su pobreza todo lo que tenía para vivir",
+      "explanation": "La valoración compara proporción y costo personal, no solo cantidad absoluta. El pasaje no debe utilizarse para presionar económicamente a personas vulnerables ni exigir que entreguen recursos indispensables para vivir.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0056",
+      "book": "Marcos",
+      "chapter": 13,
+      "verse_start": 1,
+      "verse_end": 8,
+      "reference": "Marcos 13:1-8",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Crisis y comienzo de dolores",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo caracteriza Jesús guerras, terremotos y hambres al inicio de este discurso?",
+      "opcion_a": "Como principio de dolores y no como señal suficiente para fijar el fin",
+      "opcion_b": "Como una fórmula exacta para calcular una fecha",
+      "opcion_c": "Como hechos exclusivos de una sola generación moderna",
+      "opcion_d": "Como instrucciones para participar en conflictos",
+      "correct_option": "A",
+      "correct_answer": "Como principio de dolores y no como señal suficiente para fijar el fin",
+      "explanation": "Marcos advierte que esos acontecimientos no deben tratarse como un calendario automático. El énfasis está en no dejarse engañar y perseverar, no en convertir cada crisis contemporánea en una equivalencia segura.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0057",
+      "book": "Marcos",
+      "chapter": 13,
+      "verse_start": 9,
+      "verse_end": 13,
+      "reference": "Marcos 13:9-13",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Testimonio bajo presión",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué apoyo promete el discurso a quienes deban dar testimonio bajo presión?",
+      "opcion_a": "El Espíritu Santo les dará lo que han de hablar",
+      "opcion_b": "Nunca enfrentarán oposición",
+      "opcion_c": "Siempre recibirán apoyo de las autoridades",
+      "opcion_d": "Podrán evitar toda dificultad si callan",
+      "correct_option": "A",
+      "correct_answer": "El Espíritu Santo les dará lo que han de hablar",
+      "explanation": "La enseñanza prepara a los discípulos para hostilidad y testimonio, prometiendo ayuda del Espíritu. No glorifica la persecución ni impide buscar protección cuando sea posible.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0058",
+      "book": "Marcos",
+      "chapter": 13,
+      "verse_start": 28,
+      "verse_end": 31,
+      "reference": "Marcos 13:28-31",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Higuera como señal estacional",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué enseña la comparación de la higuera cuando sus ramas se enternecen y brotan hojas?",
+      "opcion_a": "A reconocer cercanía mediante señales observables sin fijar una fecha secreta",
+      "opcion_b": "A calcular el fin mediante ciclos agrícolas exactos",
+      "opcion_c": "A considerar toda higuera un objeto profético permanente",
+      "opcion_d": "A ignorar cualquier señal de cambio",
+      "correct_option": "A",
+      "correct_answer": "A reconocer cercanía mediante señales observables sin fijar una fecha secreta",
+      "explanation": "La comparación usa una observación estacional cotidiana para hablar de reconocer cercanía. Debe leerse junto con la insistencia posterior en que el momento exacto no está disponible para cálculos humanos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0059",
+      "book": "Marcos",
+      "chapter": 13,
+      "verse_start": 33,
+      "verse_end": 37,
+      "reference": "Marcos 13:33-37",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Velar",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el cierre del discurso repite la orden de velar porque no se conoce el momento de la llegada",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "Marcos termina el discurso con una exhortación repetida a velar. El desconocimiento del momento desplaza la respuesta desde la especulación de fechas hacia la fidelidad y preparación.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0060",
+      "book": "Marcos",
+      "chapter": 14,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "Marcos 14:1-2",
+      "category": "NT_GENERAL",
+      "subcategory": "Plan de arresto",
+      "characters": [
+        "Principales sacerdotes",
+        "escribas",
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué preocupación hace que los dirigentes consideren inconveniente arrestar a Jesús durante la fiesta?",
+      "opcion_a": "Temen que se produzca un alboroto del pueblo",
+      "opcion_b": "Temen quedarse sin soldados romanos",
+      "opcion_c": "Temen perder una discusión escrita",
+      "opcion_d": "Temen que Jesús abandone Galilea",
+      "correct_option": "A",
+      "correct_answer": "Temen que se produzca un alboroto del pueblo",
+      "explanation": "Marcos muestra una planificación condicionada por la reacción popular. La escena describe decisiones de dirigentes concretos y no atribuye responsabilidad colectiva a los judíos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0061",
+      "book": "Marcos",
+      "chapter": 14,
+      "verse_start": 12,
+      "verse_end": 16,
+      "reference": "Marcos 14:12-16",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Preparación de la Pascua",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "hombre con cántaro"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué señal inusual debían seguir dos discípulos para localizar el lugar preparado para la cena?",
+      "opcion_a": "Un hombre que llevaba un cántaro de agua",
+      "opcion_b": "Una mujer con una lámpara encendida",
+      "opcion_c": "Un sacerdote vestido de blanco",
+      "opcion_d": "Un soldado junto a una puerta",
+      "correct_option": "A",
+      "correct_answer": "Un hombre que llevaba un cántaro de agua",
+      "explanation": "Los discípulos reciben una señal concreta para localizar la casa y el aposento preparado. El detalle es característico de la narración de Marcos y permite una pregunta de precisión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0062",
+      "book": "Marcos",
+      "chapter": 14,
+      "verse_start": 22,
+      "verse_end": 25,
+      "reference": "Marcos 14:22-25",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Cena y pacto",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Hacia qué expectativa futura dirige Jesús sus palabras después de compartir la copa?",
+      "opcion_a": "Beber nuevamente del fruto de la vid en el reino de Dios",
+      "opcion_b": "Volver de inmediato a Galilea para celebrar",
+      "opcion_c": "Construir un nuevo templo esa misma noche",
+      "opcion_d": "Establecer un gobierno político antes del amanecer",
+      "correct_option": "A",
+      "correct_answer": "Beber nuevamente del fruto de la vid en el reino de Dios",
+      "explanation": "La cena interpreta la muerte próxima y, al mismo tiempo, apunta hacia una esperanza futura asociada con el reino. La expectativa mantiene unidos sufrimiento y esperanza.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0063",
+      "book": "Marcos",
+      "chapter": 14,
+      "verse_start": 27,
+      "verse_end": 31,
+      "reference": "Marcos 14:27-31",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Pastor herido y dispersión",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "Pedro"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué imagen profética usa Jesús para anticipar la dispersión de sus discípulos?",
+      "opcion_a": "Herir al pastor y dispersarse las ovejas",
+      "opcion_b": "Secarse un río y caer sus puentes",
+      "opcion_c": "Apagarse una lámpara y perderse el aceite",
+      "opcion_d": "Cerrar una puerta y romperse la llave",
+      "correct_option": "A",
+      "correct_answer": "Herir al pastor y dispersarse las ovejas",
+      "explanation": "Jesús cita una imagen de Zacarías para anunciar que sus seguidores se dispersarán. El uso es interno al relato de la pasión y no autoriza violencia contra líderes o comunidades.",
+      "additional_references": [
+        "Zacarías 13:7"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0064",
+      "book": "Marcos",
+      "chapter": 14,
+      "verse_start": 51,
+      "verse_end": 52,
+      "reference": "Marcos 14:51-52",
+      "category": "NT_GENERAL",
+      "subcategory": "Joven que huye",
+      "characters": [
+        "Joven",
+        "arrestadores"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué detalle singular narra Marcos acerca de un joven durante el arresto de Jesús?",
+      "opcion_a": "Escapó dejando la sábana con la que estaba cubierto",
+      "opcion_b": "Se enfrentó armado a los guardias",
+      "opcion_c": "Fue detenido y llevado ante Pilato",
+      "opcion_d": "Ayudó a Jesús a escapar",
+      "correct_option": "A",
+      "correct_answer": "Escapó dejando la sábana con la que estaba cubierto",
+      "explanation": "Marcos incluye brevemente a un joven que huye cuando intentan sujetarlo, dejando la prenda que llevaba. El relato no identifica explícitamente quién era, por lo que no debe asignársele un nombre con certeza.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0065",
+      "book": "Marcos",
+      "chapter": 14,
+      "verse_start": 55,
+      "verse_end": 65,
+      "reference": "Marcos 14:55-65",
+      "category": "NT_GENERAL",
+      "subcategory": "Proceso ante el concilio",
+      "characters": [
+        "Jesús",
+        "sumo sacerdote",
+        "testigos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué problema aparece con los testimonios presentados contra Jesús durante el proceso?",
+      "opcion_a": "No concordaban entre sí",
+      "opcion_b": "Todos coincidían perfectamente desde el inicio",
+      "opcion_c": "Nadie quiso declarar",
+      "opcion_d": "Solo declararon soldados romanos",
+      "correct_option": "A",
+      "correct_answer": "No concordaban entre sí",
+      "explanation": "Marcos repite que los testimonios no concordaban, incluso cuando algunos mencionan el templo. La descripción forma parte de la crítica narrativa al proceso y no justifica hostilidad hacia instituciones religiosas actuales.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0066",
+      "book": "Marcos",
+      "chapter": 15,
+      "verse_start": 6,
+      "verse_end": 15,
+      "reference": "Marcos 15:6-15",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Barrabás y Pilato",
+      "characters": [
+        "Jesús",
+        "Pilato",
+        "Barrabás",
+        "multitud"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dato aporta Marcos sobre Barrabás además de que estaba preso?",
+      "opcion_a": "Había participado en una revuelta y cometido homicidio",
+      "opcion_b": "Era uno de los doce discípulos",
+      "opcion_c": "Era sacerdote del templo",
+      "opcion_d": "Había sido gobernador de Galilea",
+      "correct_option": "A",
+      "correct_answer": "Había participado en una revuelta y cometido homicidio",
+      "explanation": "Marcos caracteriza a Barrabás dentro de una revuelta en la que se había cometido homicidio. La pregunta se centra en un detalle narrativo distinto de la decisión final de Pilato ya usada en Mateo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0067",
+      "book": "Marcos",
+      "chapter": 15,
+      "verse_start": 21,
+      "verse_end": 21,
+      "reference": "Marcos 15:21",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Simón de Cirene",
+      "characters": [
+        "Simón de Cirene",
+        "Alejandro",
+        "Rufo",
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué relación familiar añade Marcos al identificar a Simón de Cirene?",
+      "opcion_a": "Lo llama padre de Alejandro y de Rufo",
+      "opcion_b": "Lo llama hermano de Pedro y Andrés",
+      "opcion_c": "Lo llama hijo de Nicodemo",
+      "opcion_d": "Lo llama esposo de María Magdalena",
+      "correct_option": "A",
+      "correct_answer": "Lo llama padre de Alejandro y de Rufo",
+      "explanation": "Marcos identifica a Simón de Cirene como padre de Alejandro y Rufo, un detalle que no aparece igual en todos los relatos de la pasión. No se debe inferir más información biográfica de la que el texto ofrece.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0068",
+      "book": "Marcos",
+      "chapter": 15,
+      "verse_start": 33,
+      "verse_end": 34,
+      "reference": "Marcos 15:33-34",
+      "category": "NT_GENERAL",
+      "subcategory": "Clamor desde la cruz",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué salmo está detrás del clamor de abandono pronunciado por Jesús en la cruz?",
+      "opcion_a": "El salmo que comienza con la pregunta por qué Dios lo ha desamparado",
+      "opcion_b": "El salmo sobre el pastor y los verdes pastos",
+      "opcion_c": "El salmo que celebra la creación de los cielos",
+      "opcion_d": "El salmo que describe la subida del arca",
+      "correct_option": "A",
+      "correct_answer": "El salmo que comienza con la pregunta por qué Dios lo ha desamparado",
+      "explanation": "Marcos conserva la expresión aramea y su traducción, que corresponde al inicio de un salmo de lamento. El uso conecta el sufrimiento de Jesús con una oración bíblica y no debe reducirse a una frase aislada.",
+      "additional_references": [
+        "Salmos 22:1"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0069",
+      "book": "Marcos",
+      "chapter": 15,
+      "verse_start": 39,
+      "verse_end": 39,
+      "reference": "Marcos 15:39",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Confesión del centurión",
+      "characters": [
+        "Jesús",
+        "centurión"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué confesión expresa el centurión al observar la manera en que muere Jesús?",
+      "opcion_a": "Verdaderamente este hombre era Hijo de Dios",
+      "opcion_b": "Verdaderamente este hombre era rey de Roma",
+      "opcion_c": "Verdaderamente este hombre era sacerdote levita",
+      "opcion_d": "Verdaderamente este hombre era Juan el Bautista",
+      "correct_option": "A",
+      "correct_answer": "Verdaderamente este hombre era Hijo de Dios",
+      "explanation": "La confesión del centurión retoma la identidad anunciada al comienzo del evangelio. Marcos coloca así una declaración significativa en boca de un observador gentil al pie de la cruz.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0070",
+      "book": "Marcos",
+      "chapter": 15,
+      "verse_start": 42,
+      "verse_end": 47,
+      "reference": "Marcos 15:42-47",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "José de Arimatea",
+      "characters": [
+        "José de Arimatea",
+        "Pilato",
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué rasgo destaca Marcos en José de Arimatea cuando solicita a Pilato el cuerpo de Jesús?",
+      "opcion_a": "Tuvo valor para presentarse ante Pilato",
+      "opcion_b": "Era miembro de los doce",
+      "opcion_c": "Había dirigido el arresto",
+      "opcion_d": "Era pariente de Herodes",
+      "correct_option": "A",
+      "correct_answer": "Tuvo valor para presentarse ante Pilato",
+      "explanation": "Marcos señala que José, miembro respetado del concilio y que esperaba el reino de Dios, se presentó con valentía ante Pilato. La pregunta usa un énfasis diferente de la mera identificación ya utilizada en Mateo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0071",
+      "book": "Marcos",
+      "chapter": 16,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Marcos 16:1-4",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Mujeres y sepulcro",
+      "characters": [
+        "María Magdalena",
+        "María madre de Jacobo",
+        "Salomé"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tercera mujer menciona Marcos junto a las dos Marías cuando van al sepulcro con especias?",
+      "opcion_a": "Salomé",
+      "opcion_b": "Marta",
+      "opcion_c": "Juana",
+      "opcion_d": "Elisabet",
+      "correct_option": "A",
+      "correct_answer": "Salomé",
+      "explanation": "Marcos nombra a María Magdalena, María madre de Jacobo y Salomé. Ellas van con especias y se preocupan por quién moverá la piedra antes de encontrarla removida.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0072",
+      "book": "Marcos",
+      "chapter": 16,
+      "verse_start": 5,
+      "verse_end": 8,
+      "reference": "Marcos 16:5-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Anuncio en el sepulcro",
+      "characters": [
+        "Mujeres",
+        "joven vestido de blanco",
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Hacia qué lugar debían dirigir a Pedro y a los demás discípulos según el mensaje recibido en el sepulcro?",
+      "opcion_a": "Galilea",
+      "opcion_b": "Belén",
+      "opcion_c": "Samaria",
+      "opcion_d": "Roma",
+      "correct_option": "A",
+      "correct_answer": "Galilea",
+      "explanation": "El mensajero anuncia que Jesús ha resucitado y recuerda que irá delante de sus discípulos a Galilea. Marcos menciona a Pedro de manera particular dentro del encargo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0073",
+      "book": "Marcos",
+      "chapter": 16,
+      "verse_start": 9,
+      "verse_end": 14,
+      "reference": "Marcos 16:9-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Final largo y respuesta de incredulidad",
+      "characters": [
+        "Jesús",
+        "María Magdalena",
+        "discípulos"
+      ],
+      "difficulty": "Experto",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el final largo incluido en RVR1960 describe inicialmente incredulidad ante algunos testimonios de la resurrección",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La RVR1960 incluye el final largo, donde se narran apariciones y reacciones de incredulidad antes de la comisión. Este bloque tiene una historia textual discutida en la tradición manuscrita, por lo que el banco debe conservar esa nota de trazabilidad sin ocultarla.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAR-0074",
+      "book": "Marcos",
+      "chapter": 16,
+      "verse_start": 19,
+      "verse_end": 20,
+      "reference": "Marcos 16:19-20",
+      "category": "NT_GENERAL",
+      "subcategory": "Cierre del final largo",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo resume el final largo la relación entre la predicación de los discípulos y la acción del Señor?",
+      "opcion_a": "El Señor trabajaba con ellos y confirmaba la palabra",
+      "opcion_b": "El Señor dejó de intervenir después de la ascensión",
+      "opcion_c": "Los discípulos suspendieron toda predicación",
+      "opcion_d": "La confirmación dependía únicamente de autoridades civiles",
+      "correct_option": "A",
+      "correct_answer": "El Señor trabajaba con ellos y confirmaba la palabra",
+      "explanation": "El cierre del final largo describe a los discípulos predicando y al Señor obrando con ellos. Como en el resto de este bloque, debe anotarse que su ubicación textual posee discusión manuscrita aunque esté presente en la RVR1960.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    }
+  ]
+}
