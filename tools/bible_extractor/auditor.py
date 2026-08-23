@@ -531,6 +531,22 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "en-gadi", "engadi", "en-eglaim", "eneglaim"
         },
     },
+    "daniel": {
+        "canonical_name": "Daniel",
+        "api_name": "Daniel",
+        "aliases": {
+            "daniel", "dan", "libro de daniel"
+        },
+        "total_chapters": 12,
+        "blocks": [
+            (1, 12, "daniel-01-12.json"),
+        ],
+        "default_output_dir": "build/audit/daniel",
+        "ambient_places": {
+            "babilonia", "caldea", "jerusalen", "jerusalén", "juda", "judá", "israel", "sion", "sión", "persia", "media", "grecia",
+            "susa", "elam", "rio ulai", "río ulai", "rio hidekel", "río hidekel", "egipto", "siria"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -630,6 +646,8 @@ BIBLE_PERSONAJES = {
     "baruc", "ebed-melec", "ebedmelec", "pasur", "recabitas",
     # Ezequiel
     "ezequiel",
+    # Daniel
+    "daniel", "sadrac", "mesac", "abed-nego", "abednego", "belsasar", "beltsasar", "aspenaz", "arioc", "gabriel", "miguel",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",

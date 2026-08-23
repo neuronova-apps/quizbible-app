@@ -4,6 +4,7 @@ on:
   push:
     branches: [rvr1960-audit, main, audit-genesis-full-rvr1960]
     paths:
+      - "tools/bible_extractor/daniel-master-input.json"
       - "tools/bible_extractor/ezekiel-master-input.json"
       - "tools/bible_extractor/lamentations-master-input.json"
       - "tools/bible_extractor/jeremiah-master-input.json"
@@ -38,6 +39,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - "tools/bible_extractor/daniel-master-input.json"
       - "tools/bible_extractor/ezekiel-master-input.json"
       - "tools/bible_extractor/lamentations-master-input.json"
       - "tools/bible_extractor/jeremiah-master-input.json"
@@ -74,7 +76,7 @@ on:
       input_file:
         description: "Ruta del archivo de entrada de preguntas"
         required: true
-        default: "tools/bible_extractor/ezekiel-master-input.json"
+        default: "tools/bible_extractor/daniel-master-input.json"
         type: string
 
 permissions:
@@ -103,7 +105,9 @@ jobs:
         run: |
           INPUT_FILE="${{ inputs.input_file || '' }}"
           if [ -z "$INPUT_FILE" ]; then
-            if [ -f "tools/bible_extractor/ezekiel-master-input.json" ]; then
+            if [ -f "tools/bible_extractor/daniel-master-input.json" ]; then
+              INPUT_FILE="tools/bible_extractor/daniel-master-input.json"
+            elif [ -f "tools/bible_extractor/ezekiel-master-input.json" ]; then
               INPUT_FILE="tools/bible_extractor/ezekiel-master-input.json"
             elif [ -f "tools/bible_extractor/lamentations-master-input.json" ]; then
               INPUT_FILE="tools/bible_extractor/lamentations-master-input.json"
@@ -163,7 +167,10 @@ jobs:
             fi
           fi
 
-          if [[ "$INPUT_FILE" == *"ezekiel"* ]] || [[ "$INPUT_FILE" == *"ezequiel"* ]]; then
+          if [[ "$INPUT_FILE" == *"daniel"* ]]; then
+            OUTPUT_DIR="build/audit/daniel"
+            ARTIFACT_NAME="auditoria-daniel-rvr1960-${{ github.run_number }}"
+          elif [[ "$INPUT_FILE" == *"ezekiel"* ]] || [[ "$INPUT_FILE" == *"ezequiel"* ]]; then
             OUTPUT_DIR="build/audit/ezekiel"
             ARTIFACT_NAME="auditoria-ezequiel-rvr1960-${{ github.run_number }}"
           elif [[ "$INPUT_FILE" == *"lamentations"* ]] || [[ "$INPUT_FILE" == *"lamentaciones"* ]]; then

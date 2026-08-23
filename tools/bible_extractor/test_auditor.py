@@ -28,6 +28,7 @@ realizando mutaciones controladas sobre copias profundas (deepcopy) para verific
 
 from __future__ import annotations
 
+import collections
 import copy
 import json
 import shutil
@@ -66,6 +67,7 @@ ISAIAH_PATH = Path(__file__).parent / "isaiah-master-input.json"
 JEREMIAH_PATH = Path(__file__).parent / "jeremiah-master-input.json"
 LAMENTATIONS_PATH = Path(__file__).parent / "lamentations-master-input.json"
 EZEKIEL_PATH = Path(__file__).parent / "ezekiel-master-input.json"
+DANIEL_PATH = Path(__file__).parent / "daniel-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -224,6 +226,12 @@ class TestAuditorCanonical(unittest.TestCase):
         else:
             cls.ezekiel_questions = {}
 
+        if DANIEL_PATH.exists():
+            raw_dan = json.loads(DANIEL_PATH.read_text(encoding="utf-8"))
+            cls.daniel_questions = {q["id"]: q for q in (raw_dan.get("questions", []) if isinstance(raw_dan, dict) else raw_dan)}
+        else:
+            cls.daniel_questions = {}
+
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
 
@@ -333,6 +341,10 @@ class TestAuditorCanonical(unittest.TestCase):
     def get_ezekiel_question(self, qid: str) -> dict:
         self.assertIn(qid, self.ezekiel_questions, f"ID '{qid}' no encontrado en ezekiel-master-input.json")
         return copy.deepcopy(self.ezekiel_questions[qid])
+
+    def get_daniel_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.daniel_questions, f"ID '{qid}' no encontrado en daniel-master-input.json")
+        return copy.deepcopy(self.daniel_questions[qid])
 
     # --- TEST GLOBAL DE CONSISTENCIA DE IDs Y REFERENCIAS ---
 
@@ -2581,6 +2593,84 @@ class TestAuditorCanonical(unittest.TestCase):
         self.assertEqual(len(chapters_seen), 48, f"Se esperaban 48 capítulos cubiertos, hallados {len(chapters_seen)}")
         self.assertEqual(personajes_count, 18, f"Se esperaban 18 preguntas de PERSONAJES_BIBLICOS, halladas {personajes_count}")
         self.assertEqual(general_count, 68, f"Se esperaban 68 preguntas de AT_GENERAL, halladas {general_count}")
+
+    # --- TESTS PARA DANIEL ---
+
+    def test_detect_book_key_daniel(self) -> None:
+        """Verifica la detección automática de clave para Daniel."""
+        spec_dan = {"questions": [{"id": "NQB-AT-DAN-0001", "book": "Daniel"}]}
+        self.assertEqual(detect_book_key(spec_dan), "daniel")
+
+        spec_alias = {"questions": [{"id": "NQB-AT-DAN-0001", "book": "daniel"}]}
+        self.assertEqual(detect_book_key(spec_alias), "daniel")
+
+        spec_libro = {"questions": [{"id": "NQB-AT-DAN-0001", "book": "Libro de Daniel"}]}
+        self.assertEqual(detect_book_key(spec_libro), "daniel")
+
+    def test_daniel_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Daniel: 12 capítulos, 1 bloque."""
+        self.assertIn("daniel", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["daniel"]
+        self.assertEqual(cfg["canonical_name"], "Daniel")
+        self.assertEqual(cfg["api_name"], "Daniel")
+        self.assertEqual(cfg["total_chapters"], 12)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertEqual(cfg["blocks"][0], (1, 12, "daniel-01-12.json"))
+        self.assertTrue({"daniel", "dan"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_daniel(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Daniel (50 preguntas, 12/12 capítulos cubiertos, distribución 5/6/5/4/4/5/5/4/5/2/3/2, 33 PERSONAJES_BIBLICOS, 17 AT_GENERAL, 0 additional_refs)."""
+        if not self.daniel_questions:
+            self.skipTest("daniel-master-input.json no disponible")
+        self.assertEqual(len(self.daniel_questions), 50)
+        chapter_counts = {}
+        personajes_count = 0
+        general_count = 0
+        all_chars = []
+        for qid, q in self.daniel_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 12, f"Capítulo {ch} fuera del rango 1..12 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+            self.assertEqual(q.get("question_type"), "MULTIPLE_CHOICE")
+            self.assertEqual(len(q.get("additional_references", [])), 0)
+
+            all_chars.extend(q.get("characters", []))
+
+            cat = q.get("category")
+            if cat == "PERSONAJES_BIBLICOS":
+                personajes_count += 1
+                self.assertGreater(len(q.get("characters", [])), 0, f"Pregunta de personajes sin characters en {qid}")
+            elif cat == "AT_GENERAL":
+                general_count += 1
+
+        self.assertEqual(chapter_counts, {1: 5, 2: 6, 3: 5, 4: 4, 5: 4, 6: 5, 7: 5, 8: 4, 9: 5, 10: 2, 11: 3, 12: 2})
+        self.assertEqual(personajes_count, 33, f"Se esperaban 33 preguntas de PERSONAJES_BIBLICOS, halladas {personajes_count}")
+        self.assertEqual(general_count, 17, f"Se esperaban 17 preguntas de AT_GENERAL, halladas {general_count}")
+
+        char_counts = collections.Counter(all_chars)
+        self.assertEqual(char_counts["Daniel"], 26)
+        self.assertEqual(char_counts["Ananías"], 6)
+        self.assertEqual(char_counts["Misael"], 6)
+        self.assertEqual(char_counts["Azarías"], 6)
+        self.assertEqual(char_counts["Nabucodonosor"], 10)
+        self.assertEqual(char_counts["Sadrac"], 4)
+        self.assertEqual(char_counts["Mesac"], 4)
+        self.assertEqual(char_counts["Abed-nego"], 4)
+        self.assertEqual(char_counts["Belsasar"], 4)
+        self.assertEqual(char_counts["Darío"], 4)
+        self.assertEqual(char_counts["Gabriel"], 2)
+        self.assertEqual(char_counts["Miguel"], 2)
 
 
 if __name__ == "__main__":
