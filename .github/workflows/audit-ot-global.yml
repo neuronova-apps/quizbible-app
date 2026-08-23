@@ -22,6 +22,9 @@ on:
 jobs:
   audit-ot-global:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .
+      PYTHONUNBUFFERED: "1"
 
     steps:
       - name: Checkout del repositorio

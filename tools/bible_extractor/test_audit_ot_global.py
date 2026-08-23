@@ -142,7 +142,7 @@ class TestAuditOTGlobal(unittest.TestCase):
                 "integridad-ids.json", "duplicados-exactos.json", "duplicados-normalizados.json",
                 "similitud-semantica.json", "referencias-adicionales.json", "personajes-global.json",
                 "modos-global.json", "auditorias-oficiales.json", "reconciliacion-artifacts.json",
-                "runtime-global-check.json", "REPORTE_GLOBAL_AT.md"
+                "evaluaciones.json", "runtime-global-check.json", "REPORTE_GLOBAL_AT.md"
             ]
             for ef in expected_files:
                 p = tmp_out / ef

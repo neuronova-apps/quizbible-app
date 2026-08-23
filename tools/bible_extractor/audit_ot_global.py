@@ -137,7 +137,7 @@ class GlobalOldTestamentAuditor:
                 continue
             
             raw_bytes = file_path.read_bytes()
-            real_sha = hashlib.sha256(raw_bytes).hexdigest()
+            real_sha = hashlib.sha256(raw_bytes.replace(b"\r\n", b"\n")).hexdigest()
             
             m_entry = manifest_by_key.get(key)
             if not m_entry:
