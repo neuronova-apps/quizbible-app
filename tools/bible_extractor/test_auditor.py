@@ -89,6 +89,7 @@ ACTS_PATH = Path(__file__).parent / "acts-master-input.json"
 ROMANS_PATH = Path(__file__).parent / "romans-master-input.json"
 CORINTHIANS1_PATH = Path(__file__).parent / "1corinthians-master-input.json"
 CORINTHIANS2_PATH = Path(__file__).parent / "2corinthians-master-input.json"
+GALATIANS_PATH = Path(__file__).parent / "galatians-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -372,6 +373,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.corinthians2_questions = {q["id"]: q for q in (raw_2co.get("questions", []) if isinstance(raw_2co, dict) else raw_2co)}
         else:
             cls.corinthians2_questions = {}
+
+        if GALATIANS_PATH.exists():
+            raw_gal = json.loads(GALATIANS_PATH.read_text(encoding="utf-8"))
+            cls.galatians_questions = {q["id"]: q for q in (raw_gal.get("questions", []) if isinstance(raw_gal, dict) else raw_gal)}
+        else:
+            cls.galatians_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -5028,6 +5035,125 @@ class TestAuditorCanonical(unittest.TestCase):
         if not self.corinthians2_questions:
             self.skipTest("2corinthians-master-input.json no disponible")
         for qid, q in self.corinthians2_questions.items():
+            cat = q.get("category")
+            self.assertIn(cat, {"NT_GENERAL", "PERSONAJES_BIBLICOS"})
+            self.assertNotIn(cat, {"JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"})
+            modes = q.get("eligible_modes", [])
+            self.assertIn("NT", modes)
+            self.assertIn("AMBOS", modes)
+            if cat == "PERSONAJES_BIBLICOS":
+                self.assertIn("PERSONAJES_NT", modes)
+                self.assertIn("PERSONAJES_AMBOS", modes)
+            if q.get("question_type") == "TRUE_FALSE":
+                self.assertIn("VERDADERO_FALSO_NT", modes)
+                self.assertIn("VERDADERO_FALSO_AMBOS", modes)
+
+    # --- PRUEBAS ESPECÍFICAS DE GÁLATAS ---
+
+    def get_galatians_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.galatians_questions, f"ID '{qid}' no encontrado en galatians-master-input.json")
+        return copy.deepcopy(self.galatians_questions[qid])
+
+    def test_detect_book_key_galatians(self) -> None:
+        """Verifica detección de book_key para Gálatas y sus variantes."""
+        spec_gal = {"questions": [{"id": "NQB-NT-GAL-0001", "book": "Gálatas"}]}
+        self.assertEqual(detect_book_key(spec_gal), "galatians")
+
+        spec_alias = {"questions": [{"id": "NQB-NT-GAL-0001", "book": "galatas"}]}
+        self.assertEqual(detect_book_key(spec_alias), "galatians")
+
+        spec_en = {"questions": [{"id": "NQB-NT-GAL-0001", "book": "Galatians"}]}
+        self.assertEqual(detect_book_key(spec_en), "galatians")
+
+        spec_gal_short = {"questions": [{"id": "NQB-NT-GAL-0001", "book": "gal"}]}
+        self.assertEqual(detect_book_key(spec_gal_short), "galatians")
+
+        spec_carta = {"questions": [{"id": "NQB-NT-GAL-0001", "book": "Carta a los Gálatas"}]}
+        self.assertEqual(detect_book_key(spec_carta), "galatians")
+
+    def test_galatians_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de Gálatas en BOOK_CONFIGS."""
+        self.assertIn("galatians", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["galatians"]
+        self.assertEqual(cfg["canonical_name"], "Gálatas")
+        self.assertEqual(cfg["api_name"], "Gálatas")
+        self.assertEqual(cfg["total_chapters"], 6)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("galatas", cfg["aliases"])
+        self.assertIn("gálatas", cfg["aliases"])
+        self.assertIn("galatians", cfg["aliases"])
+        self.assertIn("galacia", cfg["ambient_places"])
+        self.assertIn("arabia", cfg["ambient_places"])
+        self.assertIn("antioquia", cfg["ambient_places"])
+
+    def test_global_canonical_id_reference_integrity_galatians(self) -> None:
+        """Verifica consistencia de IDs y referencias en Gálatas."""
+        if not self.galatians_questions:
+            self.skipTest("galatians-master-input.json no disponible")
+        for qid, q in self.galatians_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_galatians_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de Gálatas."""
+        if not self.galatians_questions:
+            self.skipTest("galatians-master-input.json no disponible")
+        self.assertEqual(len(self.galatians_questions), 36)
+        
+        # 6 preguntas por capítulo
+        ch_counts = collections.Counter(q["chapter"] for q in self.galatians_questions.values())
+        self.assertEqual(len(ch_counts), 6)
+        for ch in range(1, 7):
+            self.assertEqual(ch_counts[ch], 6, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 6")
+
+        # Dificultad: Básico=8, Intermedio=12, Avanzado=13, Experto=3
+        diff_counts = collections.Counter(q["difficulty"] for q in self.galatians_questions.values())
+        self.assertEqual(diff_counts["Básico"], 8)
+        self.assertEqual(diff_counts["Intermedio"], 12)
+        self.assertEqual(diff_counts["Avanzado"], 13)
+        self.assertEqual(diff_counts["Experto"], 3)
+
+        # Tipos: 30 MC, 6 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.galatians_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 30)
+        self.assertEqual(type_counts["TRUE_FALSE"], 6)
+
+    def test_galatians_additional_references(self) -> None:
+        """Verifica las 7 preguntas con 10 referencias adicionales en Gálatas."""
+        if not self.galatians_questions:
+            self.skipTest("galatians-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-GAL-0010": ["Romanos 3:28"],
+            "NQB-NT-GAL-0014": ["Génesis 15:6"],
+            "NQB-NT-GAL-0015": ["Deuteronomio 27:26", "Habacuc 2:4", "Deuteronomio 21:23"],
+            "NQB-NT-GAL-0016": ["Génesis 12:7"],
+            "NQB-NT-GAL-0022": ["Génesis 16:1-16", "Génesis 21:1-21"],
+            "NQB-NT-GAL-0023": ["Génesis 21:1-12"],
+            "NQB-NT-GAL-0028": ["Levítico 19:18"]
+        }
+        found_add_refs = {}
+        for qid, q in self.galatians_questions.items():
+            refs = q.get("additional_references", [])
+            if refs:
+                found_add_refs[qid] = refs
+
+        self.assertEqual(len(found_add_refs), 7)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 10)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_galatians_modes_and_categories(self) -> None:
+        """Verifica la asignación de modos y categorías sin categorías de Jesús en Gálatas."""
+        if not self.galatians_questions:
+            self.skipTest("galatians-master-input.json no disponible")
+        for qid, q in self.galatians_questions.items():
             cat = q.get("category")
             self.assertIn(cat, {"NT_GENERAL", "PERSONAJES_BIBLICOS"})
             self.assertNotIn(cat, {"JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"})

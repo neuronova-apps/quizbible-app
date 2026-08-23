@@ -910,6 +910,24 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "judea", "jerusalen", "jerusalén", "asia"
         },
     },
+    "galatians": {
+        "canonical_name": "Gálatas",
+        "api_name": "Gálatas",
+        "aliases": {
+            "galatas", "gálatas", "galatians", "gal",
+            "carta a los galatas", "carta a los gálatas",
+            "epistola a los galatas", "epístola a los gálatas"
+        },
+        "total_chapters": 6,
+        "blocks": [
+            (1, 6, "galatians-01-06.json"),
+        ],
+        "default_output_dir": "build/audit/galatians",
+        "ambient_places": {
+            "galacia", "arabia", "damasco", "jerusalen", "jerusalén", "siria", "cilicia",
+            "antioquia", "antioquía", "judea", "sinaí", "sinai"
+        },
+    },
 }
 
 STOPWORDS = {

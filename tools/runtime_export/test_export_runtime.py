@@ -541,6 +541,22 @@ class TestRuntimeExport(unittest.TestCase):
             self.assertEqual(q["book"], "2 Corintios")
         self.assertTrue(validate_runtime_collection(collection))
 
+    def test_export_galatians_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de Gálatas al formato runtime."""
+        gal_path = REPO_ROOT / "tools" / "bible_extractor" / "galatians-master-input.json"
+        if not gal_path.exists():
+            self.skipTest("galatians-master-input.json no encontrado")
+        raw_gal = json.loads(gal_path.read_text(encoding="utf-8"))
+        gal_qs = raw_gal.get("questions", raw_gal)
+        status_map = {q["id"]: "VERIFIED" for q in gal_qs}
+
+        collection = export_canonical_data(gal_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 36)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Gálatas")
+        self.assertTrue(validate_runtime_collection(collection))
+
 
 if __name__ == "__main__":
     unittest.main()

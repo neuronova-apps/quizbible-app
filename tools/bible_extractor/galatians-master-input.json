@@ -1,0 +1,1109 @@
+{
+  "source": "Quiz Bible master bank - Gálatas",
+  "version": "RVR1960",
+  "book": "Gálatas",
+  "total_questions": 36,
+  "questions": [
+    {
+      "id": "NQB-NT-GAL-0001",
+      "book": "Gálatas",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Gálatas 1:1-5",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Llamado apostólico",
+      "characters": [
+        "Pablo",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿De quién afirma Pablo haber recibido su llamado apostólico?",
+      "opcion_a": "De Jesucristo y de Dios Padre",
+      "opcion_b": "De una asamblea política",
+      "opcion_c": "De un grupo de filósofos",
+      "opcion_d": "De autoridades romanas",
+      "correct_option": "A",
+      "correct_answer": "De Jesucristo y de Dios Padre",
+      "explanation": "Pablo presenta su apostolado como un llamado recibido de Dios y de Jesucristo, no como una credencial concedida por poder humano.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0002",
+      "book": "Gálatas",
+      "chapter": 1,
+      "verse_start": 6,
+      "verse_end": 9,
+      "reference": "Gálatas 1:6-9",
+      "category": "NT_GENERAL",
+      "subcategory": "Otro evangelio",
+      "characters": [
+        "Pablo",
+        "comunidades de Galacia"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo reacciona Pablo ante el cambio hacia un mensaje que altera el evangelio recibido?",
+      "opcion_a": "Lo considera una distorsión grave que no debe aceptarse",
+      "opcion_b": "Lo trata como una diferencia sin importancia",
+      "opcion_c": "Recomienda adoptar todas las versiones a la vez",
+      "opcion_d": "Afirma que cualquier mensaje religioso es equivalente",
+      "correct_option": "A",
+      "correct_answer": "Lo considera una distorsión grave que no debe aceptarse",
+      "explanation": "La advertencia protege el núcleo del evangelio frente a una alteración sustancial. El lenguaje fuerte del pasaje no autoriza hostigamiento o violencia contra quienes discrepan.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0003",
+      "book": "Gálatas",
+      "chapter": 1,
+      "verse_start": 10,
+      "verse_end": 10,
+      "reference": "Gálatas 1:10",
+      "category": "NT_GENERAL",
+      "subcategory": "Aprobación humana y servicio",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste plantea Pablo al hablar de agradar a las personas?",
+      "opcion_a": "Servir a Cristo no puede depender de buscar aprobación humana por encima de la fidelidad",
+      "opcion_b": "Toda opinión de otras personas debe ignorarse",
+      "opcion_c": "La cortesía siempre contradice la fe",
+      "opcion_d": "La comunidad no debe escuchar ninguna crítica",
+      "correct_option": "A",
+      "correct_answer": "Servir a Cristo no puede depender de buscar aprobación humana por encima de la fidelidad",
+      "explanation": "Pablo contrasta la fidelidad a Cristo con convertir la aprobación humana en criterio supremo. No condena la escucha responsable, la cortesía ni la rendición de cuentas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0004",
+      "book": "Gálatas",
+      "chapter": 1,
+      "verse_start": 11,
+      "verse_end": 17,
+      "reference": "Gálatas 1:11-17",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Origen del mensaje de Pablo",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué sostiene Pablo acerca del origen del evangelio que predicaba?",
+      "opcion_a": "Que no lo recibió como simple enseñanza humana, sino por revelación de Jesucristo",
+      "opcion_b": "Que lo aprendió exclusivamente de autoridades romanas",
+      "opcion_c": "Que lo inventó para ganar seguidores",
+      "opcion_d": "Que provenía de escuelas filosóficas griegas",
+      "correct_option": "A",
+      "correct_answer": "Que no lo recibió como simple enseñanza humana, sino por revelación de Jesucristo",
+      "explanation": "Pablo defiende la procedencia divina de su mensaje al narrar su llamado y cambio de rumbo. La afirmación pertenece a su testimonio apostólico y no elimina la importancia posterior de la comunidad y el discernimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0005",
+      "book": "Gálatas",
+      "chapter": 1,
+      "verse_start": 18,
+      "verse_end": 20,
+      "reference": "Gálatas 1:18-20",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Visita a Jerusalén",
+      "characters": [
+        "Pablo",
+        "Cefas",
+        "Jacobo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Con quiénes dice Pablo haber tenido contacto durante una visita temprana a Jerusalén?",
+      "opcion_a": "Con Cefas y con Jacobo, hermano del Señor",
+      "opcion_b": "Con Pilato y Herodes",
+      "opcion_c": "Con Felipe y el etíope",
+      "opcion_d": "Con Timoteo y Tito únicamente",
+      "correct_option": "A",
+      "correct_answer": "Con Cefas y con Jacobo, hermano del Señor",
+      "explanation": "Pablo menciona una visita en la que conoció a Cefas y vio a Jacobo. El dato ayuda a ubicar su relación con otros dirigentes sin convertirlo en una competencia de autoridad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0006",
+      "book": "Gálatas",
+      "chapter": 1,
+      "verse_start": 21,
+      "verse_end": 24,
+      "reference": "Gálatas 1:21-24",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Cambio de perseguidor a predicador",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que las comunidades escuchaban que quien antes perseguía la fe ahora la anunciaba",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El relato destaca un cambio radical en la trayectoria de Pablo y cómo las comunidades glorificaban a Dios por ello.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0007",
+      "book": "Gálatas",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Gálatas 2:1-5",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Tito y la circuncisión",
+      "characters": [
+        "Pablo",
+        "Tito",
+        "Bernabé"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ocurrió con Tito, compañero de Pablo, respecto de la circuncisión?",
+      "opcion_a": "No fue obligado a circuncidarse",
+      "opcion_b": "Fue nombrado sumo sacerdote",
+      "opcion_c": "Abandonó inmediatamente la misión",
+      "opcion_d": "Fue enviado a Roma como funcionario",
+      "correct_option": "A",
+      "correct_answer": "No fue obligado a circuncidarse",
+      "explanation": "Pablo presenta el caso de Tito dentro de su defensa de la libertad del evangelio para los gentiles. El pasaje no es una recomendación médica sobre circuncisión ni una descalificación del judaísmo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0008",
+      "book": "Gálatas",
+      "chapter": 2,
+      "verse_start": 6,
+      "verse_end": 10,
+      "reference": "Gálatas 2:6-10",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Reconocimiento de la misión",
+      "characters": [
+        "Pablo",
+        "Jacobo",
+        "Cefas",
+        "Juan",
+        "Bernabé"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué acuerdo práctico acompañó el reconocimiento de la misión de Pablo entre los gentiles?",
+      "opcion_a": "Que continuaran recordando a los pobres",
+      "opcion_b": "Que prohibieran toda ayuda material",
+      "opcion_c": "Que abandonaran el contacto con Jerusalén",
+      "opcion_d": "Que sustituyeran el evangelio por normas civiles",
+      "correct_option": "A",
+      "correct_answer": "Que continuaran recordando a los pobres",
+      "explanation": "El reconocimiento de distintas áreas de misión incluyó la preocupación por las personas pobres. La diversidad ministerial aparece acompañada de solidaridad, no de rivalidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0009",
+      "book": "Gálatas",
+      "chapter": 2,
+      "verse_start": 11,
+      "verse_end": 14,
+      "reference": "Gálatas 2:11-14",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Confrontación con Cefas",
+      "characters": [
+        "Pablo",
+        "Cefas",
+        "gentiles"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué problema motivó la confrontación pública de Pablo con Cefas?",
+      "opcion_a": "Su conducta dejó de ser coherente con la mesa compartida con creyentes gentiles por temor a ciertas presiones",
+      "opcion_b": "Cefas se negó a hablar griego",
+      "opcion_c": "Pablo quería reemplazarlo como gobernante civil",
+      "opcion_d": "Ambos discutían sobre una ruta de viaje",
+      "correct_option": "A",
+      "correct_answer": "Su conducta dejó de ser coherente con la mesa compartida con creyentes gentiles por temor a ciertas presiones",
+      "explanation": "Pablo cuestiona una conducta que, según su argumento, contradecía la verdad del evangelio al separar a creyentes gentiles. El episodio no autoriza hostilidad contra judíos ni convierte toda diferencia entre líderes en motivo de confrontación pública.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0010",
+      "book": "Gálatas",
+      "chapter": 2,
+      "verse_start": 15,
+      "verse_end": 16,
+      "reference": "Gálatas 2:15-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Justificación por la fe",
+      "characters": [
+        "Judíos",
+        "gentiles",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Dónde sitúa Pablo la base de la justificación en su argumento?",
+      "opcion_a": "En la fe en Jesucristo y no en las obras de la ley como medio de justificación",
+      "opcion_b": "En la superioridad étnica de un pueblo",
+      "opcion_c": "En el cumplimiento de cualquier costumbre cultural",
+      "opcion_d": "En el poder político de la comunidad",
+      "correct_option": "A",
+      "correct_answer": "En la fe en Jesucristo y no en las obras de la ley como medio de justificación",
+      "explanation": "Pablo contrasta la justificación por la fe con apoyarse en las obras de la ley para ser declarado justo. El argumento no convierte la ley o el judaísmo en algo intrínsecamente malo.",
+      "additional_references": [
+        "Romanos 3:28"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0011",
+      "book": "Gálatas",
+      "chapter": 2,
+      "verse_start": 17,
+      "verse_end": 20,
+      "reference": "Gálatas 2:17-20",
+      "category": "NT_GENERAL",
+      "subcategory": "Vida en Cristo",
+      "characters": [
+        "Pablo",
+        "Cristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué imagen usa Pablo para describir su nueva orientación de vida?",
+      "opcion_a": "Que ya no vive centrado en sí mismo, sino que Cristo vive en él",
+      "opcion_b": "Que perdió toda voluntad y responsabilidad personal",
+      "opcion_c": "Que dejó de pertenecer a una comunidad humana",
+      "opcion_d": "Que su cuerpo dejó de tener importancia",
+      "correct_option": "A",
+      "correct_answer": "Que ya no vive centrado en sí mismo, sino que Cristo vive en él",
+      "explanation": "La expresión comunica una identidad reorientada por la fe y el amor de Cristo. No implica anular la personalidad, despreciar el cuerpo ni renunciar a la responsabilidad personal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0012",
+      "book": "Gálatas",
+      "chapter": 2,
+      "verse_start": 21,
+      "verse_end": 21,
+      "reference": "Gálatas 2:21",
+      "category": "NT_GENERAL",
+      "subcategory": "Gracia y justicia",
+      "characters": [
+        "Cristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo concluye que, si la justicia pudiera obtenerse por la ley, la muerte de Cristo perdería su función en ese argumento",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera dentro del razonamiento de Pablo. Su propósito es defender la suficiencia de la gracia, no despreciar las Escrituras de Israel.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0013",
+      "book": "Gálatas",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Gálatas 3:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Recepción del Espíritu",
+      "characters": [
+        "Gálatas",
+        "Espíritu"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste utiliza Pablo al preguntar cómo recibieron el Espíritu?",
+      "opcion_a": "Entre las obras de la ley y el oír con fe",
+      "opcion_b": "Entre riqueza y pobreza",
+      "opcion_c": "Entre ciudades grandes y pequeñas",
+      "opcion_d": "Entre lenguas humanas distintas",
+      "correct_option": "A",
+      "correct_answer": "Entre las obras de la ley y el oír con fe",
+      "explanation": "Pablo recuerda la experiencia inicial de la comunidad para subrayar la fe y la acción del Espíritu. El contraste pertenece a su argumento sobre justificación y vida cristiana.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0014",
+      "book": "Gálatas",
+      "chapter": 3,
+      "verse_start": 6,
+      "verse_end": 9,
+      "reference": "Gálatas 3:6-9",
+      "category": "NT_GENERAL",
+      "subcategory": "Abraham y la fe",
+      "characters": [
+        "Abraham",
+        "naciones"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué aspecto de Abraham usa Pablo como ejemplo central?",
+      "opcion_a": "Que creyó a Dios y esa fe se relacionó con la justicia",
+      "opcion_b": "Que gobernó sobre todas las naciones",
+      "opcion_c": "Que nunca enfrentó dudas",
+      "opcion_d": "Que recibió la ley en el Sinaí",
+      "correct_option": "A",
+      "correct_answer": "Que creyó a Dios y esa fe se relacionó con la justicia",
+      "explanation": "Pablo toma la fe de Abraham como base para hablar de la bendición que alcanza a las naciones. No usa al patriarca para establecer superioridad étnica moderna.",
+      "additional_references": [
+        "Génesis 15:6"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0015",
+      "book": "Gálatas",
+      "chapter": 3,
+      "verse_start": 10,
+      "verse_end": 14,
+      "reference": "Gálatas 3:10-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Maldición, redención y promesa",
+      "characters": [
+        "Cristo",
+        "gentiles",
+        "Espíritu"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué finalidad atribuye Pablo a la obra de Cristo al hablar de la bendición de Abraham?",
+      "opcion_a": "Que la bendición alcanzara a los gentiles y se recibiera la promesa del Espíritu por la fe",
+      "opcion_b": "Que una nación dominara políticamente a las demás",
+      "opcion_c": "Que desapareciera toda obligación moral",
+      "opcion_d": "Que la riqueza material quedara garantizada",
+      "correct_option": "A",
+      "correct_answer": "Que la bendición alcanzara a los gentiles y se recibiera la promesa del Espíritu por la fe",
+      "explanation": "Pablo conecta redención, bendición a las naciones y recepción del Espíritu por la fe. Las citas sobre maldición pertenecen a su argumento bíblico y no autorizan maldecir personas o grupos actuales.",
+      "additional_references": [
+        "Deuteronomio 27:26",
+        "Habacuc 2:4",
+        "Deuteronomio 21:23"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0016",
+      "book": "Gálatas",
+      "chapter": 3,
+      "verse_start": 15,
+      "verse_end": 18,
+      "reference": "Gálatas 3:15-18",
+      "category": "NT_GENERAL",
+      "subcategory": "Promesa y ley",
+      "characters": [
+        "Abraham",
+        "descendencia",
+        "Dios"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué afirma Pablo sobre la relación entre la promesa anterior y la ley posterior?",
+      "opcion_a": "Que la ley posterior no anula la promesa previamente establecida por Dios",
+      "opcion_b": "Que la promesa dejó de tener cualquier valor",
+      "opcion_c": "Que la ley fue dada antes que Abraham",
+      "opcion_d": "Que ambas fueron decretos del Imperio romano",
+      "correct_option": "A",
+      "correct_answer": "Que la ley posterior no anula la promesa previamente establecida por Dios",
+      "explanation": "El argumento sostiene la prioridad de la promesa hecha a Abraham. La comparación no presenta la ley como inútil ni permite despreciar la tradición judía.",
+      "additional_references": [
+        "Génesis 12:7"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0017",
+      "book": "Gálatas",
+      "chapter": 3,
+      "verse_start": 19,
+      "verse_end": 25,
+      "reference": "Gálatas 3:19-25",
+      "category": "NT_GENERAL",
+      "subcategory": "Función temporal de la ley",
+      "characters": [
+        "Ley",
+        "Cristo",
+        "fe"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función pedagógica atribuye Pablo a la ley dentro de su razonamiento?",
+      "opcion_a": "Una función temporal que conduce hacia Cristo hasta la llegada de la fe en el argumento",
+      "opcion_b": "Un sistema destinado a justificar superioridad étnica",
+      "opcion_c": "Una norma civil obligatoria para todos los estados modernos",
+      "opcion_d": "Una enseñanza que careció siempre de propósito",
+      "correct_option": "A",
+      "correct_answer": "Una función temporal que conduce hacia Cristo hasta la llegada de la fe en el argumento",
+      "explanation": "Pablo describe una función histórica y pedagógica de la ley dentro de su argumento cristológico. Esto no equivale a declarar inútiles las Escrituras de Israel ni a imponer una teoría política moderna.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0018",
+      "book": "Gálatas",
+      "chapter": 3,
+      "verse_start": 26,
+      "verse_end": 29,
+      "reference": "Gálatas 3:26-29",
+      "category": "NT_GENERAL",
+      "subcategory": "Unidad en Cristo",
+      "characters": [
+        "Judíos",
+        "griegos",
+        "esclavos",
+        "libres",
+        "hombres",
+        "mujeres"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo presenta la pertenencia a Cristo como una unidad que atraviesa diferencias de origen, condición social y sexo",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. La unidad en Cristo niega que esas diferencias otorguen una jerarquía de acceso a la promesa, sin borrar la diversidad real de las personas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0019",
+      "book": "Gálatas",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 7,
+      "reference": "Gálatas 4:1-7",
+      "category": "NT_GENERAL",
+      "subcategory": "De esclavo a hijo y heredero",
+      "characters": [
+        "Dios",
+        "Cristo",
+        "Espíritu"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cambio de condición describe Pablo para quienes reciben la adopción?",
+      "opcion_a": "De esclavitud a condición de hijos y herederos por medio de Dios",
+      "opcion_b": "De ciudadanía común a nobleza política",
+      "opcion_c": "De responsabilidad personal a ausencia de decisiones",
+      "opcion_d": "De vida corporal a existencia puramente espiritual",
+      "correct_option": "A",
+      "correct_answer": "De esclavitud a condición de hijos y herederos por medio de Dios",
+      "explanation": "Pablo usa lenguaje familiar y jurídico para expresar adopción y herencia. La metáfora no idealiza la esclavitud histórica ni niega la dignidad de quienes la padecieron.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0020",
+      "book": "Gálatas",
+      "chapter": 4,
+      "verse_start": 8,
+      "verse_end": 11,
+      "reference": "Gálatas 4:8-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Regreso a antiguas esclavitudes",
+      "characters": [
+        "Gálatas"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué preocupación expresa Pablo cuando teme que la comunidad vuelva a antiguas formas de esclavitud religiosa?",
+      "opcion_a": "Que regresen a dependencias que contradigan la libertad recibida",
+      "opcion_b": "Que usen calendarios para organizar actividades",
+      "opcion_c": "Que celebren cualquier fecha familiar",
+      "opcion_d": "Que estudien la historia de otras religiones",
+      "correct_option": "A",
+      "correct_answer": "Que regresen a dependencias que contradigan la libertad recibida",
+      "explanation": "Pablo teme un retorno a una dependencia religiosa incompatible con su mensaje de libertad. Su referencia a días y tiempos no debe usarse para condenar de forma automática todo calendario, festividad o práctica cultural.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0021",
+      "book": "Gálatas",
+      "chapter": 4,
+      "verse_start": 12,
+      "verse_end": 20,
+      "reference": "Gálatas 4:12-20",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Relación pastoral con los gálatas",
+      "characters": [
+        "Pablo",
+        "gálatas"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué revela Pablo sobre su relación con los gálatas al recordar cómo lo recibieron?",
+      "opcion_a": "Una relación cercana que ahora le provoca preocupación por su formación espiritual",
+      "opcion_b": "Que nunca había tenido contacto personal con ellos",
+      "opcion_c": "Que solo le interesaban sus aportes económicos",
+      "opcion_d": "Que quería abandonar toda comunicación",
+      "correct_option": "A",
+      "correct_answer": "Una relación cercana que ahora le provoca preocupación por su formación espiritual",
+      "explanation": "Pablo recuerda afecto y hospitalidad, y expresa angustia pastoral por el rumbo de la comunidad. La intensidad emocional no justifica control, dependencia o manipulación espiritual.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0022",
+      "book": "Gálatas",
+      "chapter": 4,
+      "verse_start": 21,
+      "verse_end": 27,
+      "reference": "Gálatas 4:21-27",
+      "category": "NT_GENERAL",
+      "subcategory": "Alegoría de Agar y Sara",
+      "characters": [
+        "Agar",
+        "Sara",
+        "Abraham"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo utiliza Pablo las historias de dos mujeres en su argumento sobre los pactos?",
+      "opcion_a": "Como una alegoría para contrastar esclavitud y libertad dentro de su razonamiento",
+      "opcion_b": "Como prueba de inferioridad de una etnia moderna",
+      "opcion_c": "Como mandato para discriminar a descendientes de alguna región",
+      "opcion_d": "Como explicación biológica sobre las mujeres",
+      "correct_option": "A",
+      "correct_answer": "Como una alegoría para contrastar esclavitud y libertad dentro de su razonamiento",
+      "explanation": "Pablo declara un uso alegórico de las historias de Agar y Sara para desarrollar su contraste teológico. El pasaje no autoriza desprecio hacia mujeres, pueblos árabes, judíos, musulmanes ni ningún grupo contemporáneo.",
+      "additional_references": [
+        "Génesis 16:1-16",
+        "Génesis 21:1-21"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0023",
+      "book": "Gálatas",
+      "chapter": 4,
+      "verse_start": 28,
+      "verse_end": 31,
+      "reference": "Gálatas 4:28-31",
+      "category": "NT_GENERAL",
+      "subcategory": "Hijos de la promesa",
+      "characters": [
+        "Isaac",
+        "Agar",
+        "Sara"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Con qué identidad relaciona Pablo a sus destinatarios al concluir la alegoría?",
+      "opcion_a": "Con hijos de la promesa, comparados con Isaac",
+      "opcion_b": "Con gobernantes de Jerusalén",
+      "opcion_c": "Con descendientes biológicos obligatorios de Abraham",
+      "opcion_d": "Con personas superiores por origen étnico",
+      "correct_option": "A",
+      "correct_answer": "Con hijos de la promesa, comparados con Isaac",
+      "explanation": "La conclusión de Pablo usa a Isaac dentro de una comparación teológica sobre promesa y libertad. No establece jerarquías raciales o nacionales modernas.",
+      "additional_references": [
+        "Génesis 21:1-12"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0024",
+      "book": "Gálatas",
+      "chapter": 4,
+      "verse_start": 31,
+      "verse_end": 31,
+      "reference": "Gálatas 4:31",
+      "category": "NT_GENERAL",
+      "subcategory": "Libertad y esclavitud",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo concluye su comparación destacando una identidad vinculada con la libertad y no con la esclavitud",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera dentro de la metáfora paulina. La libertad aquí es teológica y ética; no minimiza la gravedad de la esclavitud histórica.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0025",
+      "book": "Gálatas",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 1,
+      "reference": "Gálatas 5:1",
+      "category": "NT_GENERAL",
+      "subcategory": "Permanecer en libertad",
+      "characters": [
+        "Cristo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué exhortación abre el llamado de Pablo a vivir en libertad?",
+      "opcion_a": "Permanecer firmes y no volver a someterse a un yugo de esclavitud",
+      "opcion_b": "Evitar toda responsabilidad comunitaria",
+      "opcion_c": "Despreciar cualquier norma moral",
+      "opcion_d": "Romper relaciones por cualquier desacuerdo",
+      "correct_option": "A",
+      "correct_answer": "Permanecer firmes y no volver a someterse a un yugo de esclavitud",
+      "explanation": "La libertad recibida debe conservarse sin regresar a formas de esclavitud. Pablo no presenta libertad como autonomía sin responsabilidad o permiso para dañar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0026",
+      "book": "Gálatas",
+      "chapter": 5,
+      "verse_start": 2,
+      "verse_end": 6,
+      "reference": "Gálatas 5:2-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Circuncisión, fe y amor",
+      "characters": [
+        "Cristo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué criterio destaca Pablo como decisivo frente a confiar en la circuncisión para justificarse?",
+      "opcion_a": "La fe que actúa por el amor",
+      "opcion_b": "La apariencia corporal",
+      "opcion_c": "La pertenencia étnica",
+      "opcion_d": "La presión del grupo",
+      "correct_option": "A",
+      "correct_answer": "La fe que actúa por el amor",
+      "explanation": "Pablo rechaza convertir la circuncisión en requisito justificante para los gentiles y destaca la fe que actúa por amor. El pasaje no es consejo médico ni motivo para avergonzar cuerpos o prácticas judías.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0027",
+      "book": "Gálatas",
+      "chapter": 5,
+      "verse_start": 7,
+      "verse_end": 12,
+      "reference": "Gálatas 5:7-12",
+      "category": "NT_GENERAL",
+      "subcategory": "Interferencia con la verdad",
+      "characters": [
+        "Comunidad",
+        "perturbadores"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué preocupación expresa Pablo al recordar que la comunidad había comenzado bien?",
+      "opcion_a": "Que alguna influencia los estaba apartando de obedecer a la verdad del evangelio",
+      "opcion_b": "Que habían dejado de competir por prestigio",
+      "opcion_c": "Que se negaban a participar en política imperial",
+      "opcion_d": "Que no querían aprender idiomas",
+      "correct_option": "A",
+      "correct_answer": "Que alguna influencia los estaba apartando de obedecer a la verdad del evangelio",
+      "explanation": "Pablo usa una imagen de carrera para señalar una interferencia doctrinal. Su retórica intensa no debe trasladarse a agresión física o humillación contra personas actuales.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0028",
+      "book": "Gálatas",
+      "chapter": 5,
+      "verse_start": 13,
+      "verse_end": 15,
+      "reference": "Gálatas 5:13-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Libertad para servir",
+      "characters": [
+        "Prójimo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo orienta Pablo el uso de la libertad?",
+      "opcion_a": "A servir unos a otros por amor",
+      "opcion_b": "A buscar ventaja personal sin límites",
+      "opcion_c": "A ignorar las necesidades del prójimo",
+      "opcion_d": "A dominar a quienes piensan diferente",
+      "correct_option": "A",
+      "correct_answer": "A servir unos a otros por amor",
+      "explanation": "La libertad cristiana se orienta al servicio amoroso y al cuidado del prójimo. La imagen de morder y devorar advierte contra la destrucción comunitaria y no autoriza violencia literal.",
+      "additional_references": [
+        "Levítico 19:18"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0029",
+      "book": "Gálatas",
+      "chapter": 5,
+      "verse_start": 16,
+      "verse_end": 21,
+      "reference": "Gálatas 5:16-21",
+      "category": "NT_GENERAL",
+      "subcategory": "Espíritu y deseos destructivos",
+      "characters": [
+        "Espíritu",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué propone Pablo como orientación frente a deseos que dañan la vida comunitaria?",
+      "opcion_a": "Caminar guiados por el Espíritu",
+      "opcion_b": "Negar que existan conflictos morales",
+      "opcion_c": "Someter a otros mediante fuerza",
+      "opcion_d": "Aislarse de toda relación humana",
+      "correct_option": "A",
+      "correct_answer": "Caminar guiados por el Espíritu",
+      "explanation": "Pablo contrasta la guía del Espíritu con conductas que destruyen la vida personal y comunitaria. La lista moral no autoriza acoso, vigilancia invasiva o violencia contra personas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0030",
+      "book": "Gálatas",
+      "chapter": 5,
+      "verse_start": 22,
+      "verse_end": 26,
+      "reference": "Gálatas 5:22-26",
+      "category": "NT_GENERAL",
+      "subcategory": "Fruto del Espíritu",
+      "characters": [
+        "Espíritu",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que amor, gozo, paz, paciencia, benignidad, bondad, fe, mansedumbre y templanza aparecen agrupados como fruto del Espíritu",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. La lista describe cualidades de vida y concluye con una advertencia contra la vanagloria, la provocación y la envidia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0031",
+      "book": "Gálatas",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 1,
+      "reference": "Gálatas 6:1",
+      "category": "NT_GENERAL",
+      "subcategory": "Restauración con mansedumbre",
+      "characters": [
+        "Comunidad",
+        "persona sorprendida en falta"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo indica Pablo que debe buscarse la restauración de una persona sorprendida en una falta?",
+      "opcion_a": "Con espíritu de mansedumbre y vigilancia sobre uno mismo",
+      "opcion_b": "Mediante humillación pública",
+      "opcion_c": "Con violencia física",
+      "opcion_d": "Negando toda posibilidad de límites o consecuencias",
+      "correct_option": "A",
+      "correct_answer": "Con espíritu de mansedumbre y vigilancia sobre uno mismo",
+      "explanation": "La restauración debe hacerse con mansedumbre y autovigilancia. Esto no elimina límites, protección de víctimas, rendición de cuentas o intervención legal cuando corresponda.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0032",
+      "book": "Gálatas",
+      "chapter": 6,
+      "verse_start": 2,
+      "verse_end": 5,
+      "reference": "Gálatas 6:2-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Cargas y responsabilidad",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo se combinan en el pasaje el cuidado mutuo y la responsabilidad personal?",
+      "opcion_a": "Se llama a llevar las cargas de otros y también a examinar la propia responsabilidad",
+      "opcion_b": "Se prohíbe ayudar a cualquier persona",
+      "opcion_c": "Se exige asumir indefinidamente todas las decisiones ajenas",
+      "opcion_d": "Se elimina toda responsabilidad individual",
+      "correct_option": "A",
+      "correct_answer": "Se llama a llevar las cargas de otros y también a examinar la propia responsabilidad",
+      "explanation": "Pablo reúne solidaridad y autoevaluación, usando términos que pueden referirse a cargas distintas. El texto no exige cargar con abuso, manipulación o responsabilidades que pertenecen a otra persona.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0033",
+      "book": "Gálatas",
+      "chapter": 6,
+      "verse_start": 6,
+      "verse_end": 10,
+      "reference": "Gálatas 6:6-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Compartir, sembrar y hacer bien",
+      "characters": [
+        "Comunidad",
+        "maestros"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué orientación práctica acompaña la imagen de sembrar y cosechar?",
+      "opcion_a": "Compartir el bien, perseverar y hacer el bien a todos",
+      "opcion_b": "Entregar dinero para garantizar riqueza futura",
+      "opcion_c": "Realizar inversiones arriesgadas como acto de fe",
+      "opcion_d": "Juzgar la pobreza como falta de espiritualidad",
+      "correct_option": "A",
+      "correct_answer": "Compartir el bien, perseverar y hacer el bien a todos",
+      "explanation": "La imagen de siembra y cosecha se vincula con perseverancia ética y hacer el bien. No es una fórmula de prosperidad, una promesa de retorno financiero ni una justificación para presionar donaciones.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0034",
+      "book": "Gálatas",
+      "chapter": 6,
+      "verse_start": 11,
+      "verse_end": 13,
+      "reference": "Gálatas 6:11-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Presión por la circuncisión",
+      "characters": [
+        "Circuncisión",
+        "perseguidores"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué motivación critica Pablo en quienes presionaban por una señal externa?",
+      "opcion_a": "Buscar una apariencia aceptable y evitar oposición relacionada con la cruz",
+      "opcion_b": "Promover atención médica preventiva",
+      "opcion_c": "Defender la libertad de conciencia",
+      "opcion_d": "Ayudar a personas necesitadas",
+      "correct_option": "A",
+      "correct_answer": "Buscar una apariencia aceptable y evitar oposición relacionada con la cruz",
+      "explanation": "Pablo critica el uso de la circuncisión como distintivo impuesto y como motivo de jactancia. El texto no condena la práctica judía en sí ni ofrece consejo médico sobre el procedimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0035",
+      "book": "Gálatas",
+      "chapter": 6,
+      "verse_start": 14,
+      "verse_end": 17,
+      "reference": "Gálatas 6:14-17",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Jactancia, nueva creación y marcas",
+      "characters": [
+        "Pablo",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿En qué dice Pablo que quiere centrar su motivo de orgullo?",
+      "opcion_a": "En la cruz de Jesucristo y en la nueva creación, no en prestigios externos",
+      "opcion_b": "En sus sufrimientos como medio para exigir obediencia",
+      "opcion_c": "En su origen étnico",
+      "opcion_d": "En su capacidad económica",
+      "correct_option": "A",
+      "correct_answer": "En la cruz de Jesucristo y en la nueva creación, no en prestigios externos",
+      "explanation": "Pablo contrapone la cruz y la nueva creación a la jactancia externa. Sus marcas de sufrimiento se entienden en su historia apostólica y no son una invitación a autolesionarse o buscar daño.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-GAL-0036",
+      "book": "Gálatas",
+      "chapter": 6,
+      "verse_start": 18,
+      "verse_end": 18,
+      "reference": "Gálatas 6:18",
+      "category": "NT_GENERAL",
+      "subcategory": "Bendición final",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la carta concluye con una bendición de gracia dirigida a la comunidad",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El cierre resume el tono pastoral de la carta con una bendición de gracia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}
