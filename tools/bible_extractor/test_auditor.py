@@ -80,6 +80,7 @@ ZEPHANIAH_PATH = Path(__file__).parent / "zephaniah-master-input.json"
 HAGGAI_PATH = Path(__file__).parent / "haggai-master-input.json"
 ZECHARIAH_PATH = Path(__file__).parent / "zechariah-master-input.json"
 MALACHI_PATH = Path(__file__).parent / "malachi-master-input.json"
+MATTHEW_PATH = Path(__file__).parent / "matthew-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -315,6 +316,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.malachi_questions = {q["id"]: q for q in (raw_mal.get("questions", []) if isinstance(raw_mal, dict) else raw_mal)}
         else:
             cls.malachi_questions = {}
+
+        if MATTHEW_PATH.exists():
+            raw_mat = json.loads(MATTHEW_PATH.read_text(encoding="utf-8"))
+            cls.matthew_questions = {q["id"]: q for q in (raw_mat.get("questions", []) if isinstance(raw_mat, dict) else raw_mat)}
+        else:
+            cls.matthew_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -3772,6 +3779,145 @@ class TestAuditorCanonical(unittest.TestCase):
         char_counts = collections.Counter(all_chars)
         self.assertEqual(char_counts["Malaquías"], 1)
         self.assertEqual(char_counts["Elías"], 1)
+
+    def get_matthew_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.matthew_questions, f"ID '{qid}' no encontrado en matthew-master-input.json")
+        return copy.deepcopy(self.matthew_questions[qid])
+
+    def test_detect_book_key_matthew(self) -> None:
+        """Verifica detección de book_key para Mateo y sus variantes."""
+        spec_mat = {"questions": [{"id": "NQB-NT-MAT-0001", "book": "Mateo"}]}
+        self.assertEqual(detect_book_key(spec_mat), "matthew")
+
+        spec_alias = {"questions": [{"id": "NQB-NT-MAT-0001", "book": "mateo"}]}
+        self.assertEqual(detect_book_key(spec_alias), "matthew")
+
+        spec_en = {"questions": [{"id": "NQB-NT-MAT-0001", "book": "Matthew"}]}
+        self.assertEqual(detect_book_key(spec_en), "matthew")
+
+        spec_libro = {"questions": [{"id": "NQB-NT-MAT-0001", "book": "Evangelio de Mateo"}]}
+        self.assertEqual(detect_book_key(spec_libro), "matthew")
+
+    def test_matthew_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Mateo: 28 capítulos, 3 bloques."""
+        self.assertIn("matthew", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["matthew"]
+        self.assertEqual(cfg["canonical_name"], "Mateo")
+        self.assertEqual(cfg["api_name"], "Mateo")
+        self.assertEqual(cfg["total_chapters"], 28)
+        self.assertEqual(len(cfg["blocks"]), 3)
+        self.assertEqual(cfg["blocks"][0], (1, 10, "matthew-01-10.json"))
+        self.assertEqual(cfg["blocks"][1], (11, 20, "matthew-11-20.json"))
+        self.assertEqual(cfg["blocks"][2], (21, 28, "matthew-21-28.json"))
+        self.assertTrue({"mateo", "matthew", "mt", "libro de mateo"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_matthew(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Mateo (92 preguntas, 28/28 capítulos cubiertos, 83 MULTIPLE_CHOICE, 9 TRUE_FALSE, 10 con additional_refs, 15 totales)."""
+        if not self.matthew_questions:
+            self.skipTest("matthew-master-input.json no disponible")
+        self.assertEqual(len(self.matthew_questions), 92)
+        chapter_counts = {}
+        category_counts = collections.Counter()
+        type_counts = collections.Counter()
+        difficulty_counts = collections.Counter()
+        questions_with_add_refs = 0
+        total_add_refs = 0
+        all_chars = []
+
+        for qid, q in self.matthew_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 28, f"Capítulo {ch} fuera del rango 1..28 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+
+            q_type = q.get("question_type", "MULTIPLE_CHOICE")
+            type_counts[q_type] += 1
+
+            if q_type == "MULTIPLE_CHOICE":
+                for opt in ["opcion_a", "opcion_b", "opcion_c", "opcion_d"]:
+                    self.assertTrue(bool(str(q.get(opt, "")).strip()), f"Opción {opt} vacía en {qid}")
+            elif q_type == "TRUE_FALSE":
+                self.assertTrue(bool(str(q.get("opcion_a", "")).strip()), f"Opción A vacía en {qid}")
+                self.assertTrue(bool(str(q.get("opcion_b", "")).strip()), f"Opción B vacía en {qid}")
+                self.assertEqual(str(q.get("opcion_c", "")).strip(), "", f"Opción C no vacía en TRUE_FALSE {qid}")
+                self.assertEqual(str(q.get("opcion_d", "")).strip(), "", f"Opción D no vacía en TRUE_FALSE {qid}")
+
+            cat = q.get("category")
+            category_counts[cat] += 1
+            if cat == "PERSONAJES_BIBLICOS":
+                self.assertGreater(len(q.get("characters", [])), 0, f"Pregunta de personajes sin characters en {qid}")
+
+            diff = q.get("difficulty")
+            difficulty_counts[diff] += 1
+
+            all_chars.extend(q.get("characters", []))
+
+            add_refs = q.get("additional_references", [])
+            if len(add_refs) > 0:
+                questions_with_add_refs += 1
+                total_add_refs += len(add_refs)
+
+        expected_ch_dist = {
+            1: 4, 2: 3, 3: 3, 4: 3, 5: 4, 6: 3, 7: 3, 8: 3, 9: 3, 10: 3,
+            11: 3, 12: 3, 13: 4, 14: 3, 15: 3, 16: 3, 17: 3, 18: 3, 19: 3, 20: 3,
+            21: 3, 22: 3, 23: 3, 24: 3, 25: 4, 26: 5, 27: 5, 28: 3
+        }
+        self.assertEqual(chapter_counts, expected_ch_dist)
+        self.assertEqual(type_counts, {"MULTIPLE_CHOICE": 83, "TRUE_FALSE": 9})
+        self.assertEqual(difficulty_counts, {"Básico": 27, "Intermedio": 35, "Avanzado": 25, "Experto": 5})
+        self.assertEqual(category_counts, {
+            "NT_GENERAL": 11,
+            "PERSONAJES_BIBLICOS": 20,
+            "JESUS_PALABRAS": 35,
+            "JESUS_MILAGROS": 14,
+            "JESUS_PARABOLAS": 12
+        })
+        self.assertEqual(questions_with_add_refs, 10)
+        self.assertEqual(total_add_refs, 15)
+
+    def test_true_false_auditor_type_aware(self) -> None:
+        """Verifica que el auditor trate TRUE_FALSE de manera type-aware (2 opciones válidas vs 4 opciones en MULTIPLE_CHOICE)."""
+        # 1. Pregunta TRUE_FALSE canónica de Mateo (2 opciones)
+        q_tf = {
+            "id": "NQB-NT-MAT-TEST-01",
+            "book": "Mateo",
+            "chapter": 1,
+            "verse_start": 23,
+            "verse_end": 23,
+            "reference": "Mateo 1:23",
+            "category": "NT_GENERAL",
+            "difficulty": "Básico",
+            "question_type": "TRUE_FALSE",
+            "question": "¿El nombre Emanuel significa 'Dios con nosotros'?",
+            "opcion_a": "Verdadero",
+            "opcion_b": "Falso",
+            "opcion_c": "",
+            "opcion_d": "",
+            "correct_option": "A",
+            "correct_answer": "Verdadero",
+            "explanation": "Mateo 1:23 declara que Emanuel traducido es: Dios con nosotros."
+        }
+        verse_map = {23: "He aquí, una virgen concebirá y dará a luz un hijo, Y llamarás su nombre Emanuel, que traducido es: Dios con nosotros."}
+        res_tf = evaluate_question(q_tf, verse_map, book_key="matthew")
+        self.assertEqual(res_tf["controles_superados"]["control_distractores_invalidos"], "PASS")
+        self.assertEqual(res_tf["controles_superados"]["control_sin_ambiguedad"], "PASS")
+
+        # 2. Mutación negativa: Pregunta MULTIPLE_CHOICE con opciones C y D vacías debe dar FAIL
+        q_mc_invalid = copy.deepcopy(q_tf)
+        q_mc_invalid["question_type"] = "MULTIPLE_CHOICE"
+        res_mc = evaluate_question(q_mc_invalid, verse_map, book_key="matthew")
+        self.assertEqual(res_mc["controles_superados"]["control_distractores_invalidos"], "FAIL")
+        self.assertEqual(res_mc["controles_superados"]["control_sin_ambiguedad"], "FAIL")
 
 
 if __name__ == "__main__":

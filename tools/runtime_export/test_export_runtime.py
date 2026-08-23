@@ -314,7 +314,7 @@ class TestRuntimeExport(unittest.TestCase):
         self.assertFalse(is_production_ready_rejected)
 
     def test_question_type_normalization_opcion_multiple(self) -> None:
-        """Verifica que normalize_question_type soporte genéricamente variantes de OPCION_MULTIPLE y rechace tipos desconocidos (Fail-Closed)."""
+        """Verifica que normalize_question_type soporte genéricamente variantes de OPCION_MULTIPLE y TRUE_FALSE y rechace tipos desconocidos (Fail-Closed)."""
         self.assertEqual(normalize_question_type("OPCION_MULTIPLE"), "MULTIPLE_CHOICE")
         self.assertEqual(normalize_question_type("opcion_multiple"), "MULTIPLE_CHOICE")
         self.assertEqual(normalize_question_type("opción múltiple"), "MULTIPLE_CHOICE")
@@ -323,11 +323,80 @@ class TestRuntimeExport(unittest.TestCase):
         self.assertEqual(normalize_question_type("seleccion multiple"), "MULTIPLE_CHOICE")
         self.assertEqual(normalize_question_type("mc"), "MULTIPLE_CHOICE")
 
+        # TRUE_FALSE
+        self.assertEqual(normalize_question_type("TRUE_FALSE"), "TRUE_FALSE")
+        self.assertEqual(normalize_question_type("true_false"), "TRUE_FALSE")
+        self.assertEqual(normalize_question_type("true false"), "TRUE_FALSE")
+        self.assertEqual(normalize_question_type("verdadero_falso"), "TRUE_FALSE")
+        self.assertEqual(normalize_question_type("verdadero falso"), "TRUE_FALSE")
+        self.assertEqual(normalize_question_type("tf"), "TRUE_FALSE")
+        self.assertEqual(normalize_question_type("vf"), "TRUE_FALSE")
+
         with self.assertRaises(ValueError):
             normalize_question_type("tipo_desconocido_invalido")
 
+    def test_true_false_export_contract(self) -> None:
+        """Verifica el contrato de exportación de TRUE_FALSE (exactamente 2 opciones A/B, sin C/D) y Fail-Closed."""
+        q_tf = {
+            "id": "NQB-NT-MAT-0004",
+            "book": "Mateo",
+            "chapter": 1,
+            "verse_start": 22,
+            "verse_end": 23,
+            "reference": "Mateo 1:22-23",
+            "category": "NT_GENERAL",
+            "difficulty": "Básico",
+            "question_type": "TRUE_FALSE",
+            "question": "¿El nacimiento virginal cumplió la profecía de Emanuel?",
+            "opcion_a": "Verdadero",
+            "opcion_b": "Falso",
+            "opcion_c": "",
+            "opcion_d": "",
+            "correct_option": "A",
+            "correct_answer": "Verdadero",
+            "explanation": "Mateo 1:22-23 declara el cumplimiento de la profecía de Emanuel.",
+            "eligible_modes": ["NT", "AMBOS", "VERDADERO_FALSO_NT", "VERDADERO_FALSO_AMBOS"],
+        }
+        res = export_question_to_runtime(q_tf, audit_status="VERIFIED")
+        self.assertEqual(res["questionType"], "TRUE_FALSE")
+        self.assertEqual(len(res["options"]), 2)
+        self.assertEqual([o["id"] for o in res["options"]], ["A", "B"])
+        self.assertEqual(res["correctOptionId"], "A")
+        self.assertEqual(res["testament"], "NT")
+
+        # Fallo si falta opción B
+        q_tf_bad = copy.deepcopy(q_tf)
+        q_tf_bad["opcion_b"] = ""
         with self.assertRaises(ValueError):
-            normalize_question_type("verdadero_falso_no_soportado")
+            export_question_to_runtime(q_tf_bad, audit_status="VERIFIED")
+
+        # Fallo si TRUE_FALSE tiene contenido en opción C
+        q_tf_bad_c = copy.deepcopy(q_tf)
+        q_tf_bad_c["opcion_c"] = "Distractor no permitido"
+        with self.assertRaises(ValueError):
+            export_question_to_runtime(q_tf_bad_c, audit_status="VERIFIED")
+
+        # Fallo si MULTIPLE_CHOICE carece de opción C o D
+        q_mc_bad = copy.deepcopy(q_tf)
+        q_mc_bad["question_type"] = "MULTIPLE_CHOICE"
+        with self.assertRaises(ValueError):
+            export_question_to_runtime(q_mc_bad, audit_status="VERIFIED")
+
+    def test_matthew_testament_nt_and_runtime_export(self) -> None:
+        """Verifica que las preguntas de Mateo produzcan testament=NT y validen contra el schema."""
+        mat_path = self.extractor_dir / "matthew-master-input.json"
+        if not mat_path.exists():
+            self.skipTest("matthew-master-input.json no disponible")
+        raw = json.loads(mat_path.read_text(encoding="utf-8"))
+        mat_qs = raw.get("questions", raw) if isinstance(raw, dict) else raw
+        status_map = {q["id"]: "VERIFIED" for q in mat_qs}
+
+        collection = export_canonical_data(mat_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 92)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Mateo")
+        self.assertTrue(validate_runtime_collection(collection))
 
 
 if __name__ == "__main__":

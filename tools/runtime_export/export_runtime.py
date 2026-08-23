@@ -103,6 +103,15 @@ def normalize_question_type(qtype_str: str) -> str:
         "opcion multiple",
     }:
         return "MULTIPLE_CHOICE"
+    if s_clean in {
+        "verdadero_falso",
+        "verdadero falso",
+        "true_false",
+        "true false",
+        "tf",
+        "vf",
+    }:
+        return "TRUE_FALSE"
     raise ValueError(f"Tipo de pregunta desconocido o no soportado: '{qtype_str}'. Fail-closed: exportación rechazada.")
 
 
@@ -253,14 +262,33 @@ def export_question_to_runtime(
     opcion_c = str(canonical_q.get("opcion_c", "")).strip()
     opcion_d = str(canonical_q.get("opcion_d", "")).strip()
 
-    options = [
-        {"id": "A", "text": opcion_a},
-        {"id": "B", "text": opcion_b},
-        {"id": "C", "text": opcion_c},
-        {"id": "D", "text": opcion_d},
-    ]
-
     correct_option_id = str(canonical_q.get("correct_option", "A")).strip().upper()
+
+    if question_type == "MULTIPLE_CHOICE":
+        if not opcion_a or not opcion_b or not opcion_c or not opcion_d:
+            raise ValueError(f"Pregunta '{qid}' (MULTIPLE_CHOICE) contiene opciones vacías. Fail-closed: exportación rechazada.")
+        options = [
+            {"id": "A", "text": opcion_a},
+            {"id": "B", "text": opcion_b},
+            {"id": "C", "text": opcion_c},
+            {"id": "D", "text": opcion_d},
+        ]
+        if correct_option_id not in {"A", "B", "C", "D"}:
+            raise ValueError(f"correctOptionId '{correct_option_id}' no pertenece a las opciones A/B/C/D en '{qid}'. Fail-closed.")
+    elif question_type == "TRUE_FALSE":
+        if not opcion_a or not opcion_b:
+            raise ValueError(f"Pregunta '{qid}' (TRUE_FALSE) carece de opción A o B. Fail-closed: exportación rechazada.")
+        if opcion_c or opcion_d:
+            raise ValueError(f"Pregunta '{qid}' (TRUE_FALSE) contiene opción C o D con contenido ('{opcion_c}', '{opcion_d}'). Fail-closed: exportación rechazada.")
+        options = [
+            {"id": "A", "text": opcion_a},
+            {"id": "B", "text": opcion_b},
+        ]
+        if correct_option_id not in {"A", "B"}:
+            raise ValueError(f"correctOptionId '{correct_option_id}' no pertenece a las opciones A/B en '{qid}'. Fail-closed.")
+    else:
+        raise ValueError(f"Tipo de pregunta no soportado '{question_type}' en '{qid}'. Fail-closed: exportación rechazada.")
+
     explanation = str(canonical_q.get("explanation", "")).strip()
     eligible_modes = [str(m).strip() for m in canonical_q.get("eligible_modes", ["AT", "AMBOS"])]
 
@@ -329,10 +357,23 @@ def validate_runtime_collection(
         if data.get("totalQuestions") != len(data["questions"]):
             raise ValueError("totalQuestions no coincide con el conteo de preguntas")
         for q in data["questions"]:
-            if len(q.get("options", [])) != 4:
-                raise ValueError(f"Pregunta {q.get('id')} no tiene 4 opciones")
-            if q.get("correctOptionId") != "A":
-                raise ValueError(f"correctOptionId canónico debe ser 'A' en {q.get('id')}")
+            q_type = q.get("questionType")
+            opts = q.get("options", [])
+            if q_type == "MULTIPLE_CHOICE":
+                if len(opts) != 4:
+                    raise ValueError(f"Pregunta {q.get('id')} (MULTIPLE_CHOICE) no tiene 4 opciones")
+                if q.get("correctOptionId") not in {"A", "B", "C", "D"}:
+                    raise ValueError(f"correctOptionId canónico debe ser A/B/C/D en {q.get('id')}")
+            elif q_type == "TRUE_FALSE":
+                if len(opts) != 2:
+                    raise ValueError(f"Pregunta {q.get('id')} (TRUE_FALSE) no tiene 2 opciones")
+                if q.get("correctOptionId") not in {"A", "B"}:
+                    raise ValueError(f"correctOptionId canónico debe ser A/B en {q.get('id')}")
+            else:
+                raise ValueError(f"questionType desconocido en {q.get('id')}: '{q_type}'")
+            for opt in opts:
+                if not opt.get("text") or not str(opt["text"]).strip():
+                    raise ValueError(f"Opción vacía en pregunta {q.get('id')}")
 
     assert_no_forbidden_keys(data, path="RuntimeCollection")
     return True

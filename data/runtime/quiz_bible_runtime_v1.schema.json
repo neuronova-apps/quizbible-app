@@ -40,7 +40,7 @@
     },
     "QuestionType": {
       "type": "string",
-      "enum": ["MULTIPLE_CHOICE"]
+      "enum": ["MULTIPLE_CHOICE", "TRUE_FALSE"]
     },
     "AuditStatus": {
       "type": "string",
@@ -143,7 +143,7 @@
         },
         "options": {
           "type": "array",
-          "minItems": 4,
+          "minItems": 2,
           "maxItems": 4,
           "items": {
             "$ref": "#/$defs/RuntimeOption"
@@ -173,7 +173,45 @@
         "humanReviewStatus": {
           "$ref": "#/$defs/HumanReviewStatus"
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "questionType": { "const": "MULTIPLE_CHOICE" }
+            }
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "minItems": 4,
+                "maxItems": 4
+              },
+              "correctOptionId": {
+                "enum": ["A", "B", "C", "D"]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "questionType": { "const": "TRUE_FALSE" }
+            }
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "correctOptionId": {
+                "enum": ["A", "B"]
+              }
+            }
+          }
+        }
+      ]
     }
   }
 }

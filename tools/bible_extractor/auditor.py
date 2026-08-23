@@ -749,6 +749,26 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "israel", "juda", "judá", "jerusalen", "jerusalén", "edom", "horeb", "templo", "casa"
         },
     },
+    "matthew": {
+        "canonical_name": "Mateo",
+        "api_name": "Mateo",
+        "aliases": {
+            "mateo", "matthew", "mt", "libro de mateo", "evangelio de mateo", "evangelio segun san mateo", "san mateo"
+        },
+        "total_chapters": 28,
+        "blocks": [
+            (1, 10, "matthew-01-10.json"),
+            (11, 20, "matthew-11-20.json"),
+            (21, 28, "matthew-21-28.json"),
+        ],
+        "default_output_dir": "build/audit/matthew",
+        "ambient_places": {
+            "belen", "belén", "judea", "jerusalen", "jerusalén", "egipto", "nazaret", "galilea", "jordan", "jordán",
+            "desierto", "capernaum", "capernaúm", "mar de galilea", "siria", "decapolis", "decápolis", "genesaret",
+            "tiro", "sidon", "sidón", "cesarea de filipo", "monte", "monte de los olivos", "betfage", "betania",
+            "getsemani", "getsemaní", "golgota", "gólgota", "arimatea", "templo", "casa", "sinagoga", "posada"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -874,6 +894,14 @@ BIBLE_PERSONAJES = {
     "zacarias", "zacarías", "berequias", "berequías", "ido", "iddó", "iddo", "satanas", "satanás", "serezer", "regem-melec", "regemmelec", "heldai", "tobias", "tobías", "jedaias", "jedaías", "hen",
     # Malaquías
     "malaquias", "malaquías", "elias", "elías",
+    # Mateo y Nuevo Testamento
+    "herodes", "herodías", "herodias", "pilato", "poncio pilato", "barrabas", "barrabás", "caifas", "caifás",
+    "anas", "anás", "jose", "josé", "maria", "maría", "maria magdalena", "maría magdalena", "salome", "salomé",
+    "juan el bautista", "juan bautista", "andres", "andrés", "jacobo", "felipe", "bartolome", "bartolomé",
+    "tomas", "tomás", "tadeo", "simon", "simón", "simon cananista", "simón cananista", "simon pedro", "simón pedro",
+    "judas", "judas iscariote", "iscariote", "zebedeo", "alfeo", "elisabet", "jairo", "bartimeo",
+    "lazaro", "lázaro", "marta", "cleofas", "cornelio", "saulo", "bernice", "agripa", "felix", "félix",
+    "gamaliel", "tito", "silas", "apolos", "aquila", "áquila", "priscila", "filemon", "filemón", "onesimo", "onésimo",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",
@@ -1609,6 +1637,8 @@ def evaluate_question(
     correct_opt = str(q.get("correct_option", "")).strip().upper()
     correct_ans = str(q.get("correct_answer", "")).strip()
     explanation = str(q.get("explanation", "")).strip()
+    q_type = str(q.get("question_type", "MULTIPLE_CHOICE")).strip().upper()
+    is_true_false = q_type in {"TRUE_FALSE", "VERDADERO_FALSO", "TF", "VF"}
 
     characters = q.get("characters", [])
     if isinstance(characters, str):
@@ -1761,7 +1791,8 @@ def evaluate_question(
 
     # 9. Control Distractores Inválidos
     distractor_conflicts: list[str] = []
-    for d_text in (opcion_b, opcion_c, opcion_d):
+    distractors_to_check = [opcion_b] if is_true_false else [opcion_b, opcion_c, opcion_d]
+    for d_text in distractors_to_check:
         d_norm = normalize(d_text)
         if not d_norm:
             distractor_conflicts.append("Distractor vacío")
@@ -1774,6 +1805,9 @@ def evaluate_question(
         opt_a_nums = extract_numbers(opcion_a, is_quantitative_context=has_count_context)
         if d_nums and opt_a_nums and set(d_nums) == passage_nums and set(opt_a_nums) != passage_nums:
             distractor_conflicts.append(f"Distractor con datos correctos frente a Opción A incorrecta: '{d_text}'")
+
+    if is_true_false and (opcion_c.strip() or opcion_d.strip()):
+        distractor_conflicts.append(f"Pregunta TRUE_FALSE contiene contenido en opcion_c u opcion_d ('{opcion_c}', '{opcion_d}')")
 
     if distractor_conflicts:
         controls["control_distractores_invalidos"] = "FAIL"
@@ -2007,7 +2041,8 @@ def evaluate_question(
         controls["control_rango_suficiente"] = "UNKNOWN"
 
     # 17. Control Sin Ambigüedad
-    unique_options = len({normalize(x) for x in (opcion_a, opcion_b, opcion_c, opcion_d) if x}) == 4
+    expected_unique = 2 if is_true_false else 4
+    unique_options = len({normalize(x) for x in (opcion_a, opcion_b, opcion_c, opcion_d) if x}) == expected_unique
     if not unique_options:
         controls["control_sin_ambiguedad"] = "FAIL"
         incidencias.append("Existen opciones duplicadas o ambiguas")

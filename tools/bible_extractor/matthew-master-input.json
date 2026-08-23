@@ -1,0 +1,2836 @@
+{
+  "source": "Quiz Bible master bank - Mateo",
+  "version": "RVR1960",
+  "book": "Mateo",
+  "total_questions": 92,
+  "questions": [
+    {
+      "id": "NQB-NT-MAT-0001",
+      "book": "Mateo",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 1,
+      "reference": "Mateo 1:1",
+      "category": "NT_GENERAL",
+      "subcategory": "Identidad mesiánica",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos figuras del pacto aparecen destacadas en la presentación genealógica de Jesús?",
+      "opcion_a": "David y Abraham",
+      "opcion_b": "Moisés y Aarón",
+      "opcion_c": "Elías y Eliseo",
+      "opcion_d": "Josué y Caleb",
+      "correct_option": "A",
+      "correct_answer": "David y Abraham",
+      "explanation": "La apertura presenta a Jesús dentro de la historia de Israel vinculándolo de manera destacada con David y Abraham. Esa formulación orienta al lector hacia las promesas reales y patriarcales asociadas con su identidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0002",
+      "book": "Mateo",
+      "chapter": 1,
+      "verse_start": 16,
+      "verse_end": 16,
+      "reference": "Mateo 1:16",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Genealogía y nacimiento",
+      "characters": [
+        "José",
+        "María",
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo queda descrita la relación de José con María dentro de la genealogía?",
+      "opcion_a": "Como esposo de María, de la cual nació Jesús",
+      "opcion_b": "Como hermano mayor de María",
+      "opcion_c": "Como sacerdote que presentó a Jesús",
+      "opcion_d": "Como primo de María",
+      "correct_option": "A",
+      "correct_answer": "Como esposo de María, de la cual nació Jesús",
+      "explanation": "La genealogía llega a José sin atribuirle la paternidad biológica de Jesús. Lo identifica como esposo de María y presenta a María como aquella de quien nació Jesús.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0003",
+      "book": "Mateo",
+      "chapter": 1,
+      "verse_start": 18,
+      "verse_end": 21,
+      "reference": "Mateo 1:18-21",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Anuncio a José",
+      "characters": [
+        "José",
+        "María",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué instrucción recibió José respecto del nombre del niño que esperaba María?",
+      "opcion_a": "Ponerle por nombre Jesús",
+      "opcion_b": "Ponerle por nombre Juan",
+      "opcion_c": "Ponerle por nombre Emanuel como único nombre personal",
+      "opcion_d": "Ponerle por nombre José",
+      "correct_option": "A",
+      "correct_answer": "Ponerle por nombre Jesús",
+      "explanation": "El mensajero celestial indicó a José que recibiera a María y llamara Jesús al niño. La explicación vincula ese nombre con la misión de salvar a su pueblo de sus pecados.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0004",
+      "book": "Mateo",
+      "chapter": 1,
+      "verse_start": 22,
+      "verse_end": 23,
+      "reference": "Mateo 1:22-23",
+      "category": "NT_GENERAL",
+      "subcategory": "Cumplimiento profético",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el nacimiento anunciado es presentado como cumplimiento de una profecía relacionada con Emanuel",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "El relato conecta el nacimiento con una profecía previa y explica el sentido de Emanuel como presencia de Dios con su pueblo. La referencia adicional permite rastrear ese vínculo en el Antiguo Testamento.",
+      "additional_references": [
+        "Isaías 7:14"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0005",
+      "book": "Mateo",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "Mateo 2:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Visita de los magos",
+      "characters": [
+        "Magos",
+        "Herodes",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿De dónde llegaron los visitantes que buscaban al recién nacido rey de los judíos?",
+      "opcion_a": "Del oriente",
+      "opcion_b": "De Egipto",
+      "opcion_c": "De Roma",
+      "opcion_d": "De Samaria",
+      "correct_option": "A",
+      "correct_answer": "Del oriente",
+      "explanation": "El relato sitúa a estos visitantes procedentes del oriente y los presenta buscando al niño identificado como rey de los judíos. Su llegada provoca inquietud en Herodes y en Jerusalén.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0006",
+      "book": "Mateo",
+      "chapter": 2,
+      "verse_start": 4,
+      "verse_end": 6,
+      "reference": "Mateo 2:4-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Nacimiento en Belén",
+      "characters": [
+        "Jesús",
+        "Herodes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué localidad señalaron los especialistas consultados por Herodes como lugar esperado para el nacimiento del gobernante?",
+      "opcion_a": "Belén de Judea",
+      "opcion_b": "Nazaret de Galilea",
+      "opcion_c": "Jerusalén",
+      "opcion_d": "Betania",
+      "correct_option": "A",
+      "correct_answer": "Belén de Judea",
+      "explanation": "Los principales sacerdotes y escribas respondieron a Herodes señalando Belén de Judea. El evangelio vincula esa respuesta con una profecía de Miqueas sobre un gobernante procedente de Belén.",
+      "additional_references": [
+        "Miqueas 5:2"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0007",
+      "book": "Mateo",
+      "chapter": 2,
+      "verse_start": 13,
+      "verse_end": 21,
+      "reference": "Mateo 2:13-21",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Huida y regreso",
+      "characters": [
+        "José",
+        "María",
+        "Jesús",
+        "Herodes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hizo José después de recibir la advertencia de que el niño estaba en peligro?",
+      "opcion_a": "Llevó al niño y a su madre a Egipto",
+      "opcion_b": "Se dirigió con ellos a Roma",
+      "opcion_c": "Entregó al niño a los sacerdotes",
+      "opcion_d": "Permaneció en Belén esperando a Herodes",
+      "correct_option": "A",
+      "correct_answer": "Llevó al niño y a su madre a Egipto",
+      "explanation": "José obedeció la advertencia recibida en sueños y salió con el niño y su madre hacia Egipto. Más adelante recibió nuevas instrucciones para regresar cuando había cesado la amenaza inmediata.",
+      "additional_references": [
+        "Oseas 11:1"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0008",
+      "book": "Mateo",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Mateo 3:1-4",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Juan el Bautista",
+      "characters": [
+        "Juan el Bautista"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actividad caracteriza el inicio del ministerio de Juan el Bautista?",
+      "opcion_a": "Predicar en el desierto de Judea llamando al arrepentimiento",
+      "opcion_b": "Servir como sacerdote en Jerusalén",
+      "opcion_c": "Enseñar filosofía en Cesarea",
+      "opcion_d": "Organizar un ejército en Galilea",
+      "correct_option": "A",
+      "correct_answer": "Predicar en el desierto de Judea llamando al arrepentimiento",
+      "explanation": "Juan aparece predicando en el desierto y llamando al arrepentimiento ante la cercanía del reino de los cielos. Su ministerio es relacionado con la voz que prepara el camino del Señor.",
+      "additional_references": [
+        "Isaías 40:3"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0009",
+      "book": "Mateo",
+      "chapter": 3,
+      "verse_start": 7,
+      "verse_end": 10,
+      "reference": "Mateo 3:7-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Arrepentimiento",
+      "characters": [
+        "Juan el Bautista"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué evidencia exigía Juan a quienes acudían confiando en su ascendencia religiosa?",
+      "opcion_a": "Frutos coherentes con el arrepentimiento",
+      "opcion_b": "Una genealogía escrita y certificada",
+      "opcion_c": "Una ofrenda monetaria extraordinaria",
+      "opcion_d": "Un cargo reconocido en el templo",
+      "correct_option": "A",
+      "correct_answer": "Frutos coherentes con el arrepentimiento",
+      "explanation": "Juan rechaza la seguridad basada únicamente en la descendencia y exige una conducta que corresponda con el arrepentimiento proclamado. El énfasis está en una respuesta visible y no en una identidad heredada como garantía automática.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0010",
+      "book": "Mateo",
+      "chapter": 3,
+      "verse_start": 13,
+      "verse_end": 17,
+      "reference": "Mateo 3:13-17",
+      "category": "NT_GENERAL",
+      "subcategory": "Bautismo de Jesús",
+      "characters": [
+        "Jesús",
+        "Juan el Bautista"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que durante el bautismo de Jesús se describe al Espíritu descendiendo y una voz del cielo identificándolo como Hijo amado",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La escena del bautismo reúne la presencia del Espíritu y una declaración celestial sobre Jesús. El pasaje funciona como una presentación pública de su identidad antes del inicio de su ministerio en Galilea.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0011",
+      "book": "Mateo",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 11,
+      "reference": "Mateo 4:1-11",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Tentación",
+      "characters": [
+        "Jesús",
+        "diablo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué recurso utilizó Jesús de manera repetida para responder a las tentaciones?",
+      "opcion_a": "La Escritura",
+      "opcion_b": "La fuerza física",
+      "opcion_c": "La ayuda de soldados",
+      "opcion_d": "El silencio absoluto",
+      "correct_option": "A",
+      "correct_answer": "La Escritura",
+      "explanation": "Jesús responde a cada tentación apelando a la Escritura y rechazando usar su identidad para obtener ventaja al margen de la voluntad de Dios. El episodio presenta obediencia y fidelidad en contraste con las propuestas del tentador.",
+      "additional_references": [
+        "Deuteronomio 8:3",
+        "Deuteronomio 6:16",
+        "Deuteronomio 6:13"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0012",
+      "book": "Mateo",
+      "chapter": 4,
+      "verse_start": 18,
+      "verse_end": 22,
+      "reference": "Mateo 4:18-22",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Llamamiento de discípulos",
+      "characters": [
+        "Pedro",
+        "Andrés",
+        "Jacobo",
+        "Juan",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hicieron Pedro y Andrés cuando Jesús los llamó mientras trabajaban como pescadores?",
+      "opcion_a": "Dejaron las redes y lo siguieron",
+      "opcion_b": "Pidieron primero una señal del cielo",
+      "opcion_c": "Se trasladaron a Jerusalén para consultar al templo",
+      "opcion_d": "Continuaron pescando y rechazaron el llamado",
+      "correct_option": "A",
+      "correct_answer": "Dejaron las redes y lo siguieron",
+      "explanation": "El relato destaca la respuesta inmediata de Pedro y Andrés al llamado de Jesús. Dejar las redes expresa el comienzo de una nueva orientación de vida como discípulos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0013",
+      "book": "Mateo",
+      "chapter": 4,
+      "verse_start": 23,
+      "verse_end": 25,
+      "reference": "Mateo 4:23-25",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Ministerio en Galilea",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el ministerio inicial de Jesús combina enseñanza, proclamación del reino y sanidades",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "El resumen de actividad en Galilea presenta tres dimensiones juntas: enseñanza, proclamación de las buenas noticias del reino y sanidad de diversas dolencias. Esa combinación anticipa el patrón narrativo de los capítulos siguientes.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0014",
+      "book": "Mateo",
+      "chapter": 5,
+      "verse_start": 3,
+      "verse_end": 12,
+      "reference": "Mateo 5:3-12",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Bienaventuranzas",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué clase de personas son declaradas bienaventuradas al comienzo del discurso de Jesús?",
+      "opcion_a": "Entre otras, los pobres en espíritu, los misericordiosos y los pacificadores",
+      "opcion_b": "Solo quienes poseen riqueza y autoridad",
+      "opcion_c": "Únicamente los dirigentes religiosos",
+      "opcion_d": "Exclusivamente quienes viven fuera de las ciudades",
+      "correct_option": "A",
+      "correct_answer": "Entre otras, los pobres en espíritu, los misericordiosos y los pacificadores",
+      "explanation": "Las bienaventuranzas describen varios grupos y actitudes asociados con el reino, como pobreza de espíritu, misericordia, limpieza de corazón y búsqueda de paz. No presentan el favor de Dios como privilegio exclusivo de estatus social o poder.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0015",
+      "book": "Mateo",
+      "chapter": 5,
+      "verse_start": 13,
+      "verse_end": 16,
+      "reference": "Mateo 5:13-16",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Sal y luz",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Para qué debe brillar la luz de los discípulos delante de otras personas?",
+      "opcion_a": "Para que sus buenas obras orienten la gloria hacia el Padre",
+      "opcion_b": "Para que reciban admiración como fin principal",
+      "opcion_c": "Para demostrar superioridad sobre otras comunidades",
+      "opcion_d": "Para evitar toda relación con la sociedad",
+      "correct_option": "A",
+      "correct_answer": "Para que sus buenas obras orienten la gloria hacia el Padre",
+      "explanation": "La imagen de la luz se conecta con obras visibles cuyo resultado esperado es que otros glorifiquen al Padre. El centro no es la autopromoción del discípulo sino el testimonio coherente.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0016",
+      "book": "Mateo",
+      "chapter": 5,
+      "verse_start": 17,
+      "verse_end": 20,
+      "reference": "Mateo 5:17-20",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Ley y cumplimiento",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo define Jesús su relación con la Ley y los Profetas?",
+      "opcion_a": "No vino a abolirlos sino a darles cumplimiento",
+      "opcion_b": "Vino a declarar que nunca tuvieron valor",
+      "opcion_c": "Vino a reemplazarlos por tradición oral",
+      "opcion_d": "Vino a limitar su importancia solo a los sacerdotes",
+      "correct_option": "A",
+      "correct_answer": "No vino a abolirlos sino a darles cumplimiento",
+      "explanation": "Jesús niega que su misión consista en abolir la Ley y los Profetas y la describe en términos de cumplimiento. El contexto exige una justicia que vaya más allá de la apariencia religiosa y alcance la obediencia real.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0017",
+      "book": "Mateo",
+      "chapter": 5,
+      "verse_start": 43,
+      "verse_end": 48,
+      "reference": "Mateo 5:43-48",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Amor a los enemigos",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué respuesta pide Jesús frente a quienes actúan como enemigos o perseguidores?",
+      "opcion_a": "Amarlos y orar por quienes persiguen",
+      "opcion_b": "Responder siempre con la misma hostilidad",
+      "opcion_c": "Ignorarlos como si no fueran personas",
+      "opcion_d": "Buscar una ventaja política sobre ellos",
+      "correct_option": "A",
+      "correct_answer": "Amarlos y orar por quienes persiguen",
+      "explanation": "La enseñanza amplía el amor más allá del círculo de afinidad y llama a orar por quienes persiguen. La finalidad es reflejar el carácter del Padre, no aprobar el daño ni renunciar a la justicia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0018",
+      "book": "Mateo",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 18,
+      "reference": "Mateo 6:1-18",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Prácticas religiosas",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué problema común señala Jesús al hablar de dar, orar y ayunar?",
+      "opcion_a": "Practicar la piedad principalmente para ser visto por otros",
+      "opcion_b": "Realizar esas prácticas en cualquier lugar",
+      "opcion_c": "Usar palabras sencillas al orar",
+      "opcion_d": "Compartir ayuda con personas necesitadas",
+      "correct_option": "A",
+      "correct_answer": "Practicar la piedad principalmente para ser visto por otros",
+      "explanation": "Jesús critica convertir prácticas religiosas legítimas en actuaciones destinadas a obtener reconocimiento humano. El contraste está entre buscar aprobación pública y actuar sinceramente delante del Padre.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0019",
+      "book": "Mateo",
+      "chapter": 6,
+      "verse_start": 9,
+      "verse_end": 13,
+      "reference": "Mateo 6:9-13",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Oración",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué prioridad aparece al inicio del modelo de oración enseñado por Jesús?",
+      "opcion_a": "La santificación del nombre de Dios y la venida de su reino",
+      "opcion_b": "La acumulación de bienes personales",
+      "opcion_c": "La derrota de adversarios políticos",
+      "opcion_d": "La obtención de prestigio religioso",
+      "correct_option": "A",
+      "correct_answer": "La santificación del nombre de Dios y la venida de su reino",
+      "explanation": "El modelo de oración comienza orientando la atención hacia Dios, su nombre, su reino y su voluntad. Después incorpora necesidades humanas como alimento, perdón y protección.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0020",
+      "book": "Mateo",
+      "chapter": 6,
+      "verse_start": 25,
+      "verse_end": 34,
+      "reference": "Mateo 6:25-34",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Confianza y prioridades",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué prioridad propone Jesús frente a la preocupación por las necesidades de la vida?",
+      "opcion_a": "Buscar primero el reino de Dios y su justicia",
+      "opcion_b": "Acumular provisiones sin límite",
+      "opcion_c": "Evitar toda responsabilidad cotidiana",
+      "opcion_d": "Depender exclusivamente de otras personas",
+      "correct_option": "A",
+      "correct_answer": "Buscar primero el reino de Dios y su justicia",
+      "explanation": "La enseñanza no niega las necesidades reales, sino que cuestiona la ansiedad dominadora y reordena prioridades. Buscar el reino y la justicia de Dios se presenta como orientación principal en medio de las necesidades ordinarias.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0021",
+      "book": "Mateo",
+      "chapter": 7,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Mateo 7:1-5",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Juicio y autocrítica",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué exige la imagen de la viga y la paja antes de corregir a otra persona?",
+      "opcion_a": "Examinar y corregir primero la propia falta",
+      "opcion_b": "Ignorar siempre las faltas ajenas",
+      "opcion_c": "Aceptar cualquier conducta sin discernimiento",
+      "opcion_d": "Condenar públicamente antes de escuchar",
+      "correct_option": "A",
+      "correct_answer": "Examinar y corregir primero la propia falta",
+      "explanation": "La comparación denuncia el juicio hipócrita y exige autocrítica antes de intentar ayudar a otro. No elimina todo discernimiento, pero sí rechaza una corrección que omite las propias fallas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0022",
+      "book": "Mateo",
+      "chapter": 7,
+      "verse_start": 12,
+      "verse_end": 12,
+      "reference": "Mateo 7:12",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Regla de oro",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio resume la manera de tratar a otras personas dentro de esta enseñanza?",
+      "opcion_a": "Tratar a los demás como uno quisiera ser tratado",
+      "opcion_b": "Tratar bien solo a quienes pertenecen al mismo grupo",
+      "opcion_c": "Responder a cada ofensa con una ofensa equivalente",
+      "opcion_d": "Priorizar siempre el beneficio personal",
+      "correct_option": "A",
+      "correct_answer": "Tratar a los demás como uno quisiera ser tratado",
+      "explanation": "Jesús formula un principio positivo de reciprocidad ética y lo vincula con la Ley y los Profetas. El énfasis está en actuar hacia los demás con la consideración que uno espera recibir.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0023",
+      "book": "Mateo",
+      "chapter": 7,
+      "verse_start": 24,
+      "verse_end": 27,
+      "reference": "Mateo 7:24-27",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Dos constructores",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué diferencia decisiva hay entre quien construye sobre roca y quien construye sobre arena?",
+      "opcion_a": "El primero oye y pone en práctica las palabras de Jesús",
+      "opcion_b": "El primero posee materiales más costosos",
+      "opcion_c": "El segundo nunca escucha ninguna enseñanza",
+      "opcion_d": "El segundo construye necesariamente en una ciudad",
+      "correct_option": "A",
+      "correct_answer": "El primero oye y pone en práctica las palabras de Jesús",
+      "explanation": "La comparación contrasta no solo escuchar, sino escuchar y practicar. La estabilidad de la casa representa la solidez de una vida que responde efectivamente a la enseñanza recibida.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0024",
+      "book": "Mateo",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Mateo 8:1-4",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Sanidad de un leproso",
+      "characters": [
+        "Jesús",
+        "hombre con lepra"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hizo Jesús cuando un hombre con lepra le pidió ser limpiado?",
+      "opcion_a": "Lo tocó y lo sanó",
+      "opcion_b": "Lo envió primero a Herodes",
+      "opcion_c": "Le pidió que buscara a un soldado romano",
+      "opcion_d": "Se negó a acercarse y continuó su camino",
+      "correct_option": "A",
+      "correct_answer": "Lo tocó y lo sanó",
+      "explanation": "Jesús responde a la petición del hombre con compasión y sanidad, y luego le indica presentarse al sacerdote conforme al procedimiento establecido. La escena combina restauración personal con atención al marco religioso de la época.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0025",
+      "book": "Mateo",
+      "chapter": 8,
+      "verse_start": 5,
+      "verse_end": 13,
+      "reference": "Mateo 8:5-13",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Fe del centurión",
+      "characters": [
+        "Jesús",
+        "centurión"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué aspecto de la actitud del centurión recibió una valoración especialmente positiva de Jesús?",
+      "opcion_a": "Su confianza en que la autoridad de Jesús bastaba aun a distancia",
+      "opcion_b": "Su rango militar por sí mismo",
+      "opcion_c": "Su ciudadanía romana",
+      "opcion_d": "Su capacidad para reunir una multitud",
+      "correct_option": "A",
+      "correct_answer": "Su confianza en que la autoridad de Jesús bastaba aun a distancia",
+      "explanation": "El centurión expresa que no se considera digno de recibir a Jesús en casa y confía en la eficacia de su palabra. Jesús destaca esa fe, no el rango social o militar del hombre.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0026",
+      "book": "Mateo",
+      "chapter": 8,
+      "verse_start": 23,
+      "verse_end": 27,
+      "reference": "Mateo 8:23-27",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Tempestad calmada",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ocurrió después de que Jesús reprendió al viento y al mar durante la tormenta?",
+      "opcion_a": "Se produjo una gran calma",
+      "opcion_b": "La barca se hundió",
+      "opcion_c": "Los discípulos abandonaron la embarcación",
+      "opcion_d": "La tormenta continuó sin cambio",
+      "correct_option": "A",
+      "correct_answer": "Se produjo una gran calma",
+      "explanation": "El episodio muestra a los discípulos atemorizados y a Jesús actuando sobre la tormenta hasta que llega la calma. La reacción posterior gira en torno a la identidad y autoridad de Jesús.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0027",
+      "book": "Mateo",
+      "chapter": 9,
+      "verse_start": 1,
+      "verse_end": 8,
+      "reference": "Mateo 9:1-8",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Paralítico perdonado y sanado",
+      "characters": [
+        "Jesús",
+        "paralítico"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué declaró Jesús al paralítico antes de ordenar que se levantara?",
+      "opcion_a": "Que sus pecados eran perdonados",
+      "opcion_b": "Que debía ir primero al templo",
+      "opcion_c": "Que su familia era responsable de su enfermedad",
+      "opcion_d": "Que debía convertirse en discípulo antes de recibir ayuda",
+      "correct_option": "A",
+      "correct_answer": "Que sus pecados eran perdonados",
+      "explanation": "Jesús comienza declarando perdón, lo que provoca cuestionamientos entre algunos escribas. La posterior sanidad funciona en el relato como señal de su autoridad para pronunciar ese perdón.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0028",
+      "book": "Mateo",
+      "chapter": 9,
+      "verse_start": 9,
+      "verse_end": 13,
+      "reference": "Mateo 9:9-13",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Llamamiento de Mateo",
+      "characters": [
+        "Mateo",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ocupación estaba ejerciendo Mateo cuando Jesús lo llamó?",
+      "opcion_a": "Cobrador de impuestos",
+      "opcion_b": "Pescador",
+      "opcion_c": "Sacerdote",
+      "opcion_d": "Soldado",
+      "correct_option": "A",
+      "correct_answer": "Cobrador de impuestos",
+      "explanation": "Mateo es presentado sentado en el lugar de recaudación cuando Jesús lo llama. Su respuesta inmediata da paso a una comida en la que Jesús explica su acercamiento a pecadores y marginados.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0029",
+      "book": "Mateo",
+      "chapter": 9,
+      "verse_start": 18,
+      "verse_end": 26,
+      "reference": "Mateo 9:18-26",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Sanidades entrelazadas",
+      "characters": [
+        "Jesús",
+        "mujer enferma",
+        "hija de un dirigente"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos situaciones de necesidad quedan entrelazadas en este episodio?",
+      "opcion_a": "La enfermedad prolongada de una mujer y la muerte de una muchacha",
+      "opcion_b": "La ceguera de dos soldados y una hambruna",
+      "opcion_c": "La lepra de un sacerdote y una tormenta",
+      "opcion_d": "La fiebre de un discípulo y un naufragio",
+      "correct_option": "A",
+      "correct_answer": "La enfermedad prolongada de una mujer y la muerte de una muchacha",
+      "explanation": "El relato intercala la petición por una muchacha con la intervención de una mujer que sufría desde hacía años. Ambas situaciones culminan mostrando la autoridad sanadora de Jesús y la importancia de la confianza puesta en él.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0030",
+      "book": "Mateo",
+      "chapter": 10,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Mateo 10:1-4",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Los doce",
+      "characters": [
+        "Jesús",
+        "doce discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué autoridad recibió el grupo de los doce antes de ser enviado?",
+      "opcion_a": "Autoridad sobre espíritus inmundos y para sanar enfermedades",
+      "opcion_b": "Autoridad para cobrar impuestos en todo Israel",
+      "opcion_c": "Autoridad para nombrar gobernadores romanos",
+      "opcion_d": "Autoridad para reemplazar el sacerdocio del templo",
+      "correct_option": "A",
+      "correct_answer": "Autoridad sobre espíritus inmundos y para sanar enfermedades",
+      "explanation": "Antes de enviarlos, Jesús concede a los doce autoridad vinculada con liberación y sanidad. El pasaje presenta esa autoridad como derivada de Jesús y orientada a la misión que les encomienda.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0031",
+      "book": "Mateo",
+      "chapter": 10,
+      "verse_start": 5,
+      "verse_end": 8,
+      "reference": "Mateo 10:5-8",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Misión de los doce",
+      "characters": [
+        "Jesús",
+        "doce discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Hacia qué grupo se dirige prioritariamente esta primera misión de los doce?",
+      "opcion_a": "A las ovejas perdidas de la casa de Israel",
+      "opcion_b": "A las autoridades de Roma",
+      "opcion_c": "A las colonias griegas del Mediterráneo",
+      "opcion_d": "Exclusivamente a los samaritanos",
+      "correct_option": "A",
+      "correct_answer": "A las ovejas perdidas de la casa de Israel",
+      "explanation": "En esta comisión concreta, Jesús delimita inicialmente el campo de misión hacia Israel y acompaña la proclamación del reino con acciones de sanidad y restauración. Esa delimitación pertenece al momento específico de esta misión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0032",
+      "book": "Mateo",
+      "chapter": 10,
+      "verse_start": 26,
+      "verse_end": 39,
+      "reference": "Mateo 10:26-39",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Fidelidad y costo del discipulado",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué prioridad coloca Jesús por encima incluso de los vínculos más cercanos cuando habla del costo del discipulado?",
+      "opcion_a": "La fidelidad a él",
+      "opcion_b": "La reputación familiar",
+      "opcion_c": "La seguridad económica",
+      "opcion_d": "La aprobación política",
+      "correct_option": "A",
+      "correct_answer": "La fidelidad a él",
+      "explanation": "La enseñanza subraya que seguir a Jesús puede generar conflictos de lealtad y exige una prioridad radical. No autoriza despreciar a la familia, sino que expresa la supremacía de la fidelidad a Jesús dentro del discipulado.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0033",
+      "book": "Mateo",
+      "chapter": 11,
+      "verse_start": 2,
+      "verse_end": 6,
+      "reference": "Mateo 11:2-6",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Pregunta de Juan",
+      "characters": [
+        "Juan el Bautista",
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pidió confirmar Juan el Bautista por medio de sus discípulos?",
+      "opcion_a": "Si Jesús era el que había de venir o si debían esperar a otro",
+      "opcion_b": "Si Jesús viajaría a Roma",
+      "opcion_c": "Si Jesús reemplazaría a Herodes ese año",
+      "opcion_d": "Si los doce serían sacerdotes",
+      "correct_option": "A",
+      "correct_answer": "Si Jesús era el que había de venir o si debían esperar a otro",
+      "explanation": "Desde la prisión, Juan envía discípulos con una pregunta sobre la identidad de Jesús. La respuesta de Jesús remite a lo que está ocurriendo en su ministerio y a señales de restauración que sus mensajeros podían observar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0034",
+      "book": "Mateo",
+      "chapter": 11,
+      "verse_start": 7,
+      "verse_end": 11,
+      "reference": "Mateo 11:7-11",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Testimonio sobre Juan",
+      "characters": [
+        "Jesús",
+        "Juan el Bautista"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo caracteriza Jesús la función de Juan el Bautista frente a la multitud?",
+      "opcion_a": "Como más que un profeta y mensajero preparador",
+      "opcion_b": "Como un gobernante militar",
+      "opcion_c": "Como fundador de una nueva dinastía",
+      "opcion_d": "Como escriba del templo",
+      "correct_option": "A",
+      "correct_answer": "Como más que un profeta y mensajero preparador",
+      "explanation": "Jesús rechaza una valoración superficial de Juan y lo sitúa como mensajero asociado con la preparación del camino. La referencia adicional conecta esa función con la expectativa profética del mensajero.",
+      "additional_references": [
+        "Malaquías 3:1"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0035",
+      "book": "Mateo",
+      "chapter": 11,
+      "verse_start": 28,
+      "verse_end": 30,
+      "reference": "Mateo 11:28-30",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Descanso en Jesús",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿A quiénes invita Jesús a acercarse para recibir descanso?",
+      "opcion_a": "A quienes están trabajados y cargados",
+      "opcion_b": "Solo a quienes no tienen ninguna dificultad",
+      "opcion_c": "Exclusivamente a dirigentes religiosos",
+      "opcion_d": "Únicamente a quienes poseen bienes",
+      "correct_option": "A",
+      "correct_answer": "A quienes están trabajados y cargados",
+      "explanation": "La invitación está dirigida a personas cansadas y cargadas, y se relaciona con aprender de Jesús y llevar su yugo. El descanso prometido no se presenta como ausencia automática de toda responsabilidad, sino como relación de discipulado bajo su guía.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0036",
+      "book": "Mateo",
+      "chapter": 12,
+      "verse_start": 1,
+      "verse_end": 8,
+      "reference": "Mateo 12:1-8",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Sábado y misericordia",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "fariseos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio usa Jesús para responder a la acusación contra sus discípulos por lo ocurrido en sábado?",
+      "opcion_a": "Que la misericordia y el propósito de la ley no deben reducirse a una aplicación ritualista",
+      "opcion_b": "Que el sábado nunca tuvo valor alguno",
+      "opcion_c": "Que cualquier norma puede ignorarse por conveniencia",
+      "opcion_d": "Que solo los sacerdotes pueden interpretar la Escritura",
+      "correct_option": "A",
+      "correct_answer": "Que la misericordia y el propósito de la ley no deben reducirse a una aplicación ritualista",
+      "explanation": "Jesús responde con ejemplos bíblicos y con una afirmación sobre misericordia, mostrando que la observancia no debe separarse del propósito de Dios. El argumento no desecha la Escritura, sino que cuestiona una lectura que condena sin comprender su intención.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0037",
+      "book": "Mateo",
+      "chapter": 12,
+      "verse_start": 9,
+      "verse_end": 14,
+      "reference": "Mateo 12:9-14",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Hombre de la mano seca",
+      "characters": [
+        "Jesús",
+        "hombre con la mano seca",
+        "fariseos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hizo Jesús con el hombre que tenía una mano incapacitada en medio de la discusión sobre el sábado?",
+      "opcion_a": "Lo sanó",
+      "opcion_b": "Lo expulsó de la sinagoga",
+      "opcion_c": "Lo envió a un médico romano",
+      "opcion_d": "Le pidió esperar hasta la semana siguiente",
+      "correct_option": "A",
+      "correct_answer": "Lo sanó",
+      "explanation": "Jesús plantea que hacer el bien es compatible con el propósito del sábado y sana al hombre. La reacción hostil de sus opositores muestra que el conflicto es tanto interpretativo como creciente en términos narrativos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0038",
+      "book": "Mateo",
+      "chapter": 12,
+      "verse_start": 22,
+      "verse_end": 32,
+      "reference": "Mateo 12:22-32",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Origen del poder de Jesús",
+      "characters": [
+        "Jesús",
+        "fariseos"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué error grave denuncia Jesús cuando algunos atribuyen deliberadamente su obra liberadora al poder del mal?",
+      "opcion_a": "Llamar obra del Espíritu a una acción demoníaca",
+      "opcion_b": "Confundir una parábola con un proverbio",
+      "opcion_c": "Olvidar una norma ceremonial",
+      "opcion_d": "No reconocer una genealogía",
+      "correct_option": "A",
+      "correct_answer": "Llamar obra del Espíritu a una acción demoníaca",
+      "explanation": "El conflicto surge porque ciertos opositores interpretan como demoníaca una obra que el relato presenta vinculada al Espíritu de Dios. Jesús advierte sobre la gravedad de una oposición consciente que invierte moralmente la fuente de esa obra.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0039",
+      "book": "Mateo",
+      "chapter": 13,
+      "verse_start": 3,
+      "verse_end": 9,
+      "reference": "Mateo 13:3-9",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Sembrador",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué elemento determina finalmente la diferencia de resultado entre las semillas de la parábola del sembrador?",
+      "opcion_a": "El tipo de terreno en el que cae la semilla",
+      "opcion_b": "El color de la semilla",
+      "opcion_c": "La edad del sembrador",
+      "opcion_d": "La estación política del país",
+      "correct_option": "A",
+      "correct_answer": "El tipo de terreno en el que cae la semilla",
+      "explanation": "La misma acción de sembrar produce resultados distintos según el terreno. La explicación posterior relaciona esos terrenos con diferentes maneras de recibir y responder a la palabra del reino.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0040",
+      "book": "Mateo",
+      "chapter": 13,
+      "verse_start": 18,
+      "verse_end": 23,
+      "reference": "Mateo 13:18-23",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Explicación del sembrador",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué caracteriza al terreno bueno en la explicación de la parábola del sembrador?",
+      "opcion_a": "Oír, comprender y producir fruto",
+      "opcion_b": "Escuchar sin entender y olvidar de inmediato",
+      "opcion_c": "Recibir con entusiasmo y abandonar ante la dificultad",
+      "opcion_d": "Permitir que las preocupaciones ahoguen el mensaje",
+      "correct_option": "A",
+      "correct_answer": "Oír, comprender y producir fruto",
+      "explanation": "Jesús interpreta el buen terreno como una recepción que llega a comprensión y fruto. El contraste con los otros terrenos muestra obstáculos como superficialidad, presión y preocupaciones que impiden una respuesta duradera.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0041",
+      "book": "Mateo",
+      "chapter": 13,
+      "verse_start": 24,
+      "verse_end": 30,
+      "reference": "Mateo 13:24-30",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Trigo y cizaña",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué el dueño ordena esperar antes de arrancar la cizaña?",
+      "opcion_a": "Para evitar que al arrancarla se dañe también el trigo",
+      "opcion_b": "Porque no puede distinguir ninguna planta",
+      "opcion_c": "Porque piensa vender la cizaña como alimento",
+      "opcion_d": "Porque abandona por completo el campo",
+      "correct_option": "A",
+      "correct_answer": "Para evitar que al arrancarla se dañe también el trigo",
+      "explanation": "La parábola presenta una coexistencia temporal y advierte contra una separación prematura que puede dañar lo valioso. La explicación posterior orienta la imagen hacia un juicio final que corresponde a Dios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0042",
+      "book": "Mateo",
+      "chapter": 13,
+      "verse_start": 31,
+      "verse_end": 33,
+      "reference": "Mateo 13:31-33",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Mostaza y levadura",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que las imágenes de la semilla de mostaza y la levadura presentan un comienzo pequeño capaz de producir un efecto amplio",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "Ambas comparaciones muestran una realidad que puede comenzar de manera poco impresionante y, sin embargo, extender su efecto. En el discurso funcionan como imágenes del reino y de su crecimiento o influencia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0043",
+      "book": "Mateo",
+      "chapter": 14,
+      "verse_start": 1,
+      "verse_end": 12,
+      "reference": "Mateo 14:1-12",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Muerte de Juan el Bautista",
+      "characters": [
+        "Herodes",
+        "Herodías",
+        "Juan el Bautista"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué conflicto llevó a Juan el Bautista a confrontar a Herodes?",
+      "opcion_a": "La relación de Herodes con la esposa de su hermano",
+      "opcion_b": "El cobro de impuestos romanos",
+      "opcion_c": "La construcción de una sinagoga",
+      "opcion_d": "La negativa de Herodes a viajar a Jerusalén",
+      "correct_option": "A",
+      "correct_answer": "La relación de Herodes con la esposa de su hermano",
+      "explanation": "Juan había denunciado la relación de Herodes con Herodías, lo que generó hostilidad y encarcelamiento. El relato termina con la muerte de Juan como consecuencia de una cadena de decisiones dentro de la corte.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0044",
+      "book": "Mateo",
+      "chapter": 14,
+      "verse_start": 13,
+      "verse_end": 21,
+      "reference": "Mateo 14:13-21",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Alimentación de cinco mil",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "multitud"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Con qué cantidad inicial de alimento trabajaron los discípulos antes de que la multitud fuera alimentada?",
+      "opcion_a": "Cinco panes y dos peces",
+      "opcion_b": "Siete panes y algunos peces",
+      "opcion_c": "Doce panes y cinco peces",
+      "opcion_d": "Un pan y un pez",
+      "correct_option": "A",
+      "correct_answer": "Cinco panes y dos peces",
+      "explanation": "Los discípulos señalan una provisión muy limitada frente al tamaño de la multitud. Jesús toma ese alimento, da gracias y lo distribuye de manera que todos comen y todavía quedan restos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0045",
+      "book": "Mateo",
+      "chapter": 14,
+      "verse_start": 22,
+      "verse_end": 33,
+      "reference": "Mateo 14:22-33",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Jesús camina sobre el agua",
+      "characters": [
+        "Jesús",
+        "Pedro",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué le ocurrió a Pedro después de comenzar a caminar hacia Jesús sobre el agua?",
+      "opcion_a": "Comenzó a hundirse cuando tuvo miedo",
+      "opcion_b": "Llegó a la orilla sin dificultad",
+      "opcion_c": "Regresó nadando antes de mirar a Jesús",
+      "opcion_d": "Permaneció flotando sin pedir ayuda",
+      "correct_option": "A",
+      "correct_answer": "Comenzó a hundirse cuando tuvo miedo",
+      "explanation": "Pedro responde al llamado de Jesús y comienza a caminar, pero el miedo ante el viento lo desestabiliza y pide ayuda. La escena combina fe, temor y la intervención inmediata de Jesús.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0046",
+      "book": "Mateo",
+      "chapter": 15,
+      "verse_start": 1,
+      "verse_end": 20,
+      "reference": "Mateo 15:1-20",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Pureza interior",
+      "characters": [
+        "Jesús",
+        "fariseos",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Dónde sitúa Jesús la fuente principal de aquello que contamina moralmente a una persona?",
+      "opcion_a": "En lo que procede del corazón",
+      "opcion_b": "En el tipo de alimento por sí mismo",
+      "opcion_c": "En la procedencia geográfica",
+      "opcion_d": "En el oficio de la familia",
+      "correct_option": "A",
+      "correct_answer": "En lo que procede del corazón",
+      "explanation": "Jesús desplaza el énfasis desde una discusión ritual hacia actitudes y acciones que proceden del interior, como malas intenciones y conductas dañinas. La enseñanza apunta a la dimensión moral del corazón más que a una clasificación automática de personas por prácticas externas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0047",
+      "book": "Mateo",
+      "chapter": 15,
+      "verse_start": 21,
+      "verse_end": 28,
+      "reference": "Mateo 15:21-28",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Mujer cananea",
+      "characters": [
+        "Jesús",
+        "mujer cananea",
+        "hija"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cualidad de la mujer cananea destaca Jesús antes de que su hija sea sanada?",
+      "opcion_a": "Su gran fe",
+      "opcion_b": "Su posición social",
+      "opcion_c": "Su conocimiento del templo",
+      "opcion_d": "Su ciudadanía judía",
+      "correct_option": "A",
+      "correct_answer": "Su gran fe",
+      "explanation": "La mujer persevera en su petición a pesar de una conversación difícil y expresa confianza en la misericordia de Jesús. El relato culmina con una valoración explícita de su fe y la sanidad de su hija.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0048",
+      "book": "Mateo",
+      "chapter": 15,
+      "verse_start": 32,
+      "verse_end": 39,
+      "reference": "Mateo 15:32-39",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Alimentación de cuatro mil",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "multitud"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué diferencia numérica distingue esta alimentación de la multitud de la anterior?",
+      "opcion_a": "Aquí se mencionan siete panes y cuatro mil hombres",
+      "opcion_b": "Aquí se mencionan cinco panes y cinco mil hombres",
+      "opcion_c": "Aquí no se menciona alimento alguno",
+      "opcion_d": "Aquí solo se alimenta a los doce discípulos",
+      "correct_option": "A",
+      "correct_answer": "Aquí se mencionan siete panes y cuatro mil hombres",
+      "explanation": "Este segundo relato menciona siete panes, algunos peces y una multitud de cuatro mil hombres, además de mujeres y niños. Los detalles lo distinguen de la alimentación anterior y muestran nuevamente la compasión de Jesús.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0049",
+      "book": "Mateo",
+      "chapter": 16,
+      "verse_start": 13,
+      "verse_end": 20,
+      "reference": "Mateo 16:13-20",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Confesión de Pedro",
+      "characters": [
+        "Pedro",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo respondió Pedro cuando Jesús preguntó a sus discípulos quién decían ellos que era?",
+      "opcion_a": "Lo reconoció como el Cristo, el Hijo del Dios viviente",
+      "opcion_b": "Lo identificó únicamente como un escriba",
+      "opcion_c": "Lo llamó Herodes redivivo",
+      "opcion_d": "Dijo que era un sacerdote de Jerusalén",
+      "correct_option": "A",
+      "correct_answer": "Lo reconoció como el Cristo, el Hijo del Dios viviente",
+      "explanation": "Pedro formula una confesión central sobre la identidad de Jesús. La respuesta de Jesús presenta esa comprensión como recibida de Dios y da a Pedro un papel significativo dentro del relato.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0050",
+      "book": "Mateo",
+      "chapter": 16,
+      "verse_start": 21,
+      "verse_end": 23,
+      "reference": "Mateo 16:21-23",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Primer anuncio de la pasión",
+      "characters": [
+        "Pedro",
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué reacción de Pedro recibió una reprensión severa después de que Jesús anunció su sufrimiento y muerte?",
+      "opcion_a": "Intentar apartarlo de ese camino",
+      "opcion_b": "Pedir permiso para ir a Jerusalén",
+      "opcion_c": "Reconocerlo como Mesías",
+      "opcion_d": "Llamar a los demás discípulos",
+      "correct_option": "A",
+      "correct_answer": "Intentar apartarlo de ese camino",
+      "explanation": "Pedro intenta rechazar la perspectiva del sufrimiento anunciado por Jesús. La reprensión muestra que una comprensión mesiánica que evita por completo el camino de la cruz puede oponerse al propósito que Jesús declara.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0051",
+      "book": "Mateo",
+      "chapter": 16,
+      "verse_start": 24,
+      "verse_end": 28,
+      "reference": "Mateo 16:24-28",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Costo del discipulado",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué imagen usa Jesús para describir el compromiso de quien quiere seguirlo?",
+      "opcion_a": "Negarse a sí mismo y tomar su cruz",
+      "opcion_b": "Buscar primero una posición de honor",
+      "opcion_c": "Evitar toda pérdida personal",
+      "opcion_d": "Construir un monumento religioso",
+      "correct_option": "A",
+      "correct_answer": "Negarse a sí mismo y tomar su cruz",
+      "explanation": "La enseñanza utiliza la imagen de tomar la cruz para describir una lealtad que puede implicar costo y renuncia. No es una invitación a buscar daño, sino una descripción de la seriedad del discipulado.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0052",
+      "book": "Mateo",
+      "chapter": 17,
+      "verse_start": 1,
+      "verse_end": 8,
+      "reference": "Mateo 17:1-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Transfiguración",
+      "characters": [
+        "Jesús",
+        "Pedro",
+        "Jacobo",
+        "Juan",
+        "Moisés",
+        "Elías"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos figuras del Antiguo Testamento aparecen conversando con Jesús durante la transfiguración?",
+      "opcion_a": "Moisés y Elías",
+      "opcion_b": "Abraham y David",
+      "opcion_c": "Josué y Samuel",
+      "opcion_d": "Isaías y Jeremías",
+      "correct_option": "A",
+      "correct_answer": "Moisés y Elías",
+      "explanation": "La escena coloca junto a Jesús a Moisés y Elías y culmina con una voz que dirige la atención de los discípulos hacia el Hijo. El episodio refuerza la identidad y autoridad de Jesús dentro de la narrativa.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0053",
+      "book": "Mateo",
+      "chapter": 17,
+      "verse_start": 14,
+      "verse_end": 20,
+      "reference": "Mateo 17:14-20",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Sanidad de un muchacho",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "padre",
+        "muchacho"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué problema reconoció Jesús en sus discípulos después de que no pudieron ayudar al muchacho llevado por su padre?",
+      "opcion_a": "Falta de fe",
+      "opcion_b": "Falta de dinero",
+      "opcion_c": "Falta de autorización romana",
+      "opcion_d": "Falta de parentesco con el muchacho",
+      "correct_option": "A",
+      "correct_answer": "Falta de fe",
+      "explanation": "Después de que los discípulos preguntan por su fracaso, Jesús dirige la explicación hacia la fe. El pasaje enfatiza dependencia de Dios y no presenta la fe como una técnica mecánica para controlar resultados.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0054",
+      "book": "Mateo",
+      "chapter": 17,
+      "verse_start": 24,
+      "verse_end": 27,
+      "reference": "Mateo 17:24-27",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Impuesto del templo",
+      "characters": [
+        "Jesús",
+        "Pedro"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo obtuvo Pedro la moneda indicada para cubrir el impuesto solicitado?",
+      "opcion_a": "La encontró en la boca de un pez",
+      "opcion_b": "La recibió de un centurión",
+      "opcion_c": "La tomó de la bolsa de Judas",
+      "opcion_d": "La obtuvo vendiendo una red",
+      "correct_option": "A",
+      "correct_answer": "La encontró en la boca de un pez",
+      "explanation": "El relato termina con una instrucción inusual a Pedro para hallar una moneda en un pez. La escena combina una discusión sobre libertad filial con la decisión de no crear un tropiezo innecesario.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0055",
+      "book": "Mateo",
+      "chapter": 18,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Mateo 18:1-5",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Grandeza y humildad",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "niño"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ejemplo colocó Jesús en medio de los discípulos cuando discutían sobre quién era mayor?",
+      "opcion_a": "Un niño",
+      "opcion_b": "Un soldado",
+      "opcion_c": "Un sacerdote",
+      "opcion_d": "Un comerciante",
+      "correct_option": "A",
+      "correct_answer": "Un niño",
+      "explanation": "Jesús usa a un niño para invertir las expectativas de grandeza y llama a una actitud de humildad. La escena cuestiona la búsqueda de rango como criterio central dentro de la comunidad de discípulos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0056",
+      "book": "Mateo",
+      "chapter": 18,
+      "verse_start": 12,
+      "verse_end": 14,
+      "reference": "Mateo 18:12-14",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Oveja perdida",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hace el pastor de la comparación cuando una de sus cien ovejas se extravía?",
+      "opcion_a": "Va en busca de la que se perdió",
+      "opcion_b": "Abandona definitivamente a la perdida",
+      "opcion_c": "Vende inmediatamente las noventa y nueve",
+      "opcion_d": "Espera sin moverse hasta que vuelva",
+      "correct_option": "A",
+      "correct_answer": "Va en busca de la que se perdió",
+      "explanation": "La imagen subraya el valor de quien se ha extraviado y la iniciativa de buscarlo. Jesús conecta la comparación con la voluntad del Padre respecto de los pequeños.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0057",
+      "book": "Mateo",
+      "chapter": 18,
+      "verse_start": 15,
+      "verse_end": 20,
+      "reference": "Mateo 18:15-20",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Reconciliación comunitaria",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cuál es el primer paso propuesto cuando un hermano peca contra otro?",
+      "opcion_a": "Hablar con él en privado",
+      "opcion_b": "Exponerlo inmediatamente ante toda la comunidad",
+      "opcion_c": "Acudir primero a la autoridad civil",
+      "opcion_d": "Romper toda relación sin diálogo",
+      "correct_option": "A",
+      "correct_answer": "Hablar con él en privado",
+      "explanation": "La enseñanza comienza con una conversación privada y luego contempla pasos adicionales si no hay escucha. La secuencia busca recuperación y responsabilidad, no humillación pública como primera respuesta.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0058",
+      "book": "Mateo",
+      "chapter": 19,
+      "verse_start": 3,
+      "verse_end": 9,
+      "reference": "Mateo 19:3-9",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Matrimonio y divorcio",
+      "characters": [
+        "Jesús",
+        "fariseos"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿A qué fundamento anterior remite Jesús al responder la pregunta sobre divorcio?",
+      "opcion_a": "Al propósito creador de Dios para la unión matrimonial",
+      "opcion_b": "A una costumbre romana reciente",
+      "opcion_c": "A una decisión de Herodes",
+      "opcion_d": "A una tradición comercial",
+      "correct_option": "A",
+      "correct_answer": "Al propósito creador de Dios para la unión matrimonial",
+      "explanation": "Jesús remite la discusión al relato de la creación y presenta la unión matrimonial como referencia fundamental. El pasaje debe leerse dentro de una controversia concreta y no usarse para justificar daño, coerción o permanencia obligada en situaciones de peligro.",
+      "additional_references": [
+        "Génesis 1:27",
+        "Génesis 2:24"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0059",
+      "book": "Mateo",
+      "chapter": 19,
+      "verse_start": 13,
+      "verse_end": 15,
+      "reference": "Mateo 19:13-15",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Jesús y los niños",
+      "characters": [
+        "Jesús",
+        "niños",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Jesús permitió que los niños se acercaran a él pese a que los discípulos intentaban impedirlo",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "Jesús corrige a quienes intentaban apartar a los niños y los recibe. La escena refuerza el valor de quienes podían ser considerados de menor estatus dentro de la sociedad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0060",
+      "book": "Mateo",
+      "chapter": 19,
+      "verse_start": 16,
+      "verse_end": 26,
+      "reference": "Mateo 19:16-26",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Joven rico",
+      "characters": [
+        "Jesús",
+        "joven rico",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué obstáculo quedó expuesto en el encuentro con el hombre que preguntó por la vida eterna?",
+      "opcion_a": "Su apego a las riquezas",
+      "opcion_b": "Su falta de ciudadanía romana",
+      "opcion_c": "Su desconocimiento del oficio de pescador",
+      "opcion_d": "Su deseo de ser sacerdote",
+      "correct_option": "A",
+      "correct_answer": "Su apego a las riquezas",
+      "explanation": "El hombre afirma haber guardado mandamientos, pero se entristece cuando Jesús confronta su relación con las posesiones. El episodio conduce a una enseñanza sobre la dificultad de confiar en la riqueza y la dependencia de Dios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0061",
+      "book": "Mateo",
+      "chapter": 20,
+      "verse_start": 1,
+      "verse_end": 16,
+      "reference": "Mateo 20:1-16",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Trabajadores de la viña",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué provoca la queja de los trabajadores contratados primero en la parábola de la viña?",
+      "opcion_a": "Que los últimos reciben el mismo pago acordado",
+      "opcion_b": "Que los últimos reciben menos de lo prometido",
+      "opcion_c": "Que el dueño cancela todo el trabajo",
+      "opcion_d": "Que nadie recibe remuneración",
+      "correct_option": "A",
+      "correct_answer": "Que los últimos reciben el mismo pago acordado",
+      "explanation": "Los primeros comparan su situación con la de quienes trabajaron menos tiempo y protestan por la igualdad del pago. La respuesta del dueño enfatiza que cumplió lo acordado y destaca su libertad para ser generoso.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0062",
+      "book": "Mateo",
+      "chapter": 20,
+      "verse_start": 20,
+      "verse_end": 28,
+      "reference": "Mateo 20:20-28",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Servicio y liderazgo",
+      "characters": [
+        "Jesús",
+        "madre de los hijos de Zebedeo",
+        "Jacobo",
+        "Juan"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué modelo de grandeza propone Jesús después de la petición de puestos de honor?",
+      "opcion_a": "Servir a los demás",
+      "opcion_b": "Ejercer dominio como los gobernantes de las naciones",
+      "opcion_c": "Buscar el primer puesto en toda reunión",
+      "opcion_d": "Evitar cualquier responsabilidad",
+      "correct_option": "A",
+      "correct_answer": "Servir a los demás",
+      "explanation": "Jesús contrasta el patrón de dominio con una grandeza expresada en servicio. La enseñanza se conecta con su propia misión, presentada como entrega en favor de otros.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0063",
+      "book": "Mateo",
+      "chapter": 20,
+      "verse_start": 29,
+      "verse_end": 34,
+      "reference": "Mateo 20:29-34",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Dos ciegos",
+      "characters": [
+        "Jesús",
+        "dos ciegos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hizo Jesús ante los dos hombres ciegos que insistían en pedir misericordia?",
+      "opcion_a": "Tuvo compasión y les devolvió la vista",
+      "opcion_b": "Los remitió a Herodes",
+      "opcion_c": "Les pidió que dejaran de hablar y se marchó",
+      "opcion_d": "Les ordenó pagar antes de ayudarlos",
+      "correct_option": "A",
+      "correct_answer": "Tuvo compasión y les devolvió la vista",
+      "explanation": "Aunque la multitud intenta callarlos, ellos perseveran. Jesús se detiene, escucha su petición y los sana, después de lo cual lo siguen.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0064",
+      "book": "Mateo",
+      "chapter": 21,
+      "verse_start": 1,
+      "verse_end": 11,
+      "reference": "Mateo 21:1-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Entrada en Jerusalén",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "multitud"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Sobre qué animal entra Jesús en Jerusalén en la escena presentada como cumplimiento profético?",
+      "opcion_a": "Sobre un asno y su cría en la escena preparada por los discípulos",
+      "opcion_b": "Sobre un caballo de guerra",
+      "opcion_c": "Sobre un camello",
+      "opcion_d": "Sobre una carreta militar",
+      "correct_option": "A",
+      "correct_answer": "Sobre un asno y su cría en la escena preparada por los discípulos",
+      "explanation": "La entrada se organiza deliberadamente con animales de carga y se vincula con una profecía sobre un rey humilde. La escena contrasta con una exhibición militar de poder.",
+      "additional_references": [
+        "Zacarías 9:9"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0065",
+      "book": "Mateo",
+      "chapter": 21,
+      "verse_start": 12,
+      "verse_end": 17,
+      "reference": "Mateo 21:12-17",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Purificación del templo",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué uso del templo denuncia Jesús al expulsar a quienes comerciaban allí?",
+      "opcion_a": "Convertir un lugar de oración en espacio asociado con explotación",
+      "opcion_b": "Permitir la lectura pública de la Escritura",
+      "opcion_c": "Recibir peregrinos de otras regiones",
+      "opcion_d": "Cantar durante las fiestas",
+      "correct_option": "A",
+      "correct_answer": "Convertir un lugar de oración en espacio asociado con explotación",
+      "explanation": "Jesús combina referencias proféticas para denunciar una distorsión del propósito del templo. La acción critica prácticas abusivas en ese espacio y no constituye una autorización general para agredir a comerciantes o grupos religiosos.",
+      "additional_references": [
+        "Isaías 56:7",
+        "Jeremías 7:11"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0066",
+      "book": "Mateo",
+      "chapter": 21,
+      "verse_start": 28,
+      "verse_end": 32,
+      "reference": "Mateo 21:28-32",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Dos hijos",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cuál de los dos hijos termina haciendo la voluntad del padre en la parábola?",
+      "opcion_a": "El que primero se niega pero después cambia y va",
+      "opcion_b": "El que promete ir pero no va",
+      "opcion_c": "Ambos por igual sin diferencia",
+      "opcion_d": "Ninguno de los dos recibe una instrucción",
+      "correct_option": "A",
+      "correct_answer": "El que primero se niega pero después cambia y va",
+      "explanation": "La parábola contrasta palabras y conducta. El hijo que inicialmente rechaza la petición termina obedeciendo, lo que permite a Jesús cuestionar una religiosidad de afirmaciones correctas sin respuesta real.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0067",
+      "book": "Mateo",
+      "chapter": 22,
+      "verse_start": 1,
+      "verse_end": 14,
+      "reference": "Mateo 22:1-14",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Banquete de bodas",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ocurre cuando los invitados iniciales rechazan repetidamente la invitación al banquete?",
+      "opcion_a": "La invitación se extiende a otras personas encontradas en los caminos",
+      "opcion_b": "El banquete se cancela definitivamente",
+      "opcion_c": "El rey entrega el reino a los invitados ausentes",
+      "opcion_d": "Se prohíbe toda nueva invitación",
+      "correct_option": "A",
+      "correct_answer": "La invitación se extiende a otras personas encontradas en los caminos",
+      "explanation": "La parábola presenta un rechazo persistente y luego una ampliación de la invitación. Su desarrollo combina apertura y responsabilidad, pues también incluye una escena que advierte contra participar sin responder adecuadamente al llamado.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0068",
+      "book": "Mateo",
+      "chapter": 22,
+      "verse_start": 15,
+      "verse_end": 22,
+      "reference": "Mateo 22:15-22",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Tributo al César",
+      "characters": [
+        "Jesús",
+        "fariseos",
+        "herodianos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo responde Jesús a la trampa sobre el pago del tributo al César?",
+      "opcion_a": "Distingue lo que corresponde al César de lo que corresponde a Dios",
+      "opcion_b": "Prohíbe todo impuesto sin excepción",
+      "opcion_c": "Ordena pagar únicamente al templo",
+      "opcion_d": "Evita responder y abandona el lugar",
+      "correct_option": "A",
+      "correct_answer": "Distingue lo que corresponde al César de lo que corresponde a Dios",
+      "explanation": "Jesús pide observar la moneda y formula una respuesta que evita la falsa alternativa propuesta por sus interlocutores. La frase reconoce obligaciones civiles sin reducir a Dios a una parte limitada de la vida.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0069",
+      "book": "Mateo",
+      "chapter": 22,
+      "verse_start": 34,
+      "verse_end": 40,
+      "reference": "Mateo 22:34-40",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Gran mandamiento",
+      "characters": [
+        "Jesús",
+        "intérprete de la ley"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos amores reúne Jesús al resumir los mandamientos principales?",
+      "opcion_a": "Amar a Dios y amar al prójimo",
+      "opcion_b": "Amar la riqueza y el poder",
+      "opcion_c": "Amar únicamente a la propia familia y nación",
+      "opcion_d": "Amar el conocimiento y el prestigio",
+      "correct_option": "A",
+      "correct_answer": "Amar a Dios y amar al prójimo",
+      "explanation": "Jesús une el amor total a Dios con el amor al prójimo y afirma que de estos dependen la Ley y los Profetas. La respuesta integra devoción y ética interpersonal.",
+      "additional_references": [
+        "Deuteronomio 6:5",
+        "Levítico 19:18"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0070",
+      "book": "Mateo",
+      "chapter": 23,
+      "verse_start": 1,
+      "verse_end": 12,
+      "reference": "Mateo 23:1-12",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Hipocresía y servicio",
+      "characters": [
+        "Jesús",
+        "escribas",
+        "fariseos",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contradicción denuncia Jesús en ciertos maestros religiosos?",
+      "opcion_a": "Dicen lo que debe hacerse pero no actúan de acuerdo con ello",
+      "opcion_b": "No conocen ninguna tradición",
+      "opcion_c": "Nunca hablan en público",
+      "opcion_d": "Rechazan toda forma de enseñanza",
+      "correct_option": "A",
+      "correct_answer": "Dicen lo que debe hacerse pero no actúan de acuerdo con ello",
+      "explanation": "Jesús distingue entre la función de enseñar y una práctica incoherente que busca cargas, reconocimiento y honor. Luego dirige a sus discípulos hacia humildad y servicio en lugar de autoexaltación.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0071",
+      "book": "Mateo",
+      "chapter": 23,
+      "verse_start": 13,
+      "verse_end": 36,
+      "reference": "Mateo 23:13-36",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Ayes contra la hipocresía",
+      "characters": [
+        "Jesús",
+        "escribas",
+        "fariseos"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué patrón se repite en las denuncias dirigidas a escribas y fariseos?",
+      "opcion_a": "La discrepancia entre apariencia religiosa y prácticas injustas o hipócritas",
+      "opcion_b": "La condena de toda forma de estudio bíblico",
+      "opcion_c": "La prohibición de enseñar en sinagogas",
+      "opcion_d": "La crítica de la agricultura como oficio",
+      "correct_option": "A",
+      "correct_answer": "La discrepancia entre apariencia religiosa y prácticas injustas o hipócritas",
+      "explanation": "Los ayes no atacan el estudio religioso en sí, sino formas de liderazgo que combinan apariencia piadosa con hipocresía, cargas injustas y descuido de asuntos centrales como justicia, misericordia y fidelidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0072",
+      "book": "Mateo",
+      "chapter": 23,
+      "verse_start": 37,
+      "verse_end": 39,
+      "reference": "Mateo 23:37-39",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Lamento por Jerusalén",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué deseo expresa Jesús al lamentarse por Jerusalén?",
+      "opcion_a": "Reunir y proteger a sus hijos como un ave protege a sus polluelos",
+      "opcion_b": "Abandonar para siempre toda relación con la ciudad",
+      "opcion_c": "Convertir la ciudad en capital romana",
+      "opcion_d": "Evitar que sus habitantes escuchen su mensaje",
+      "correct_option": "A",
+      "correct_answer": "Reunir y proteger a sus hijos como un ave protege a sus polluelos",
+      "explanation": "La imagen maternal del ave expresa deseo de protección y reunión, mientras el lamento reconoce la resistencia de la ciudad. El tono combina juicio y compasión, no hostilidad étnica hacia el pueblo judío.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0073",
+      "book": "Mateo",
+      "chapter": 24,
+      "verse_start": 1,
+      "verse_end": 14,
+      "reference": "Mateo 24:1-14",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Discurso escatológico",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué advertencia aparece repetidamente al inicio del discurso sobre crisis y señales?",
+      "opcion_a": "No dejarse engañar",
+      "opcion_b": "Fijar una fecha exacta para el fin",
+      "opcion_c": "Abandonar toda actividad cotidiana",
+      "opcion_d": "Identificar cada guerra moderna con una profecía específica",
+      "correct_option": "A",
+      "correct_answer": "No dejarse engañar",
+      "explanation": "Jesús advierte contra el engaño y menciona conflictos, persecuciones y otros acontecimientos sin convertirlos en un calendario simple. El pasaje exige vigilancia y fidelidad, no cálculos seguros sobre fechas o equivalencias automáticas con eventos contemporáneos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0074",
+      "book": "Mateo",
+      "chapter": 24,
+      "verse_start": 36,
+      "verse_end": 44,
+      "reference": "Mateo 24:36-44",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Vigilancia",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Jesús afirma que el día y la hora no son conocidos por los seres humanos y por eso llama a estar preparados",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La enseñanza rechaza la pretensión de conocer el momento exacto y orienta la respuesta hacia vigilancia y preparación. Esto impide usar el pasaje como base para fijar fechas seguras del fin.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0075",
+      "book": "Mateo",
+      "chapter": 24,
+      "verse_start": 45,
+      "verse_end": 51,
+      "reference": "Mateo 24:45-51",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Siervo fiel",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué caracteriza al siervo fiel en la comparación final de este bloque?",
+      "opcion_a": "Cumplir responsablemente su tarea mientras espera al señor",
+      "opcion_b": "Calcular con exactitud el día del regreso",
+      "opcion_c": "Abandonar su responsabilidad para observar señales",
+      "opcion_d": "Usar su autoridad para maltratar a otros",
+      "correct_option": "A",
+      "correct_answer": "Cumplir responsablemente su tarea mientras espera al señor",
+      "explanation": "La comparación desplaza la atención desde la especulación hacia la fidelidad cotidiana. El siervo es evaluado por el modo en que cumple su responsabilidad durante la ausencia del señor.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0076",
+      "book": "Mateo",
+      "chapter": 25,
+      "verse_start": 1,
+      "verse_end": 13,
+      "reference": "Mateo 25:1-13",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Diez vírgenes",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué diferencia práctica separa a las vírgenes prudentes de las insensatas?",
+      "opcion_a": "Las prudentes llevan provisión de aceite además de sus lámparas",
+      "opcion_b": "Las prudentes llegan después que todas las demás",
+      "opcion_c": "Las insensatas nunca reciben lámparas",
+      "opcion_d": "Las prudentes conocen de antemano la hora exacta",
+      "correct_option": "A",
+      "correct_answer": "Las prudentes llevan provisión de aceite además de sus lámparas",
+      "explanation": "La parábola destaca preparación sostenida ante una demora inesperada. No proporciona una fecha secreta, sino que llama a estar preparados porque el momento no está bajo control de los participantes.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0077",
+      "book": "Mateo",
+      "chapter": 25,
+      "verse_start": 14,
+      "verse_end": 30,
+      "reference": "Mateo 25:14-30",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Talentos",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué distingue a los dos siervos elogiados del siervo reprendido?",
+      "opcion_a": "Usan responsablemente lo que se les confió",
+      "opcion_b": "Reciben exactamente la misma cantidad",
+      "opcion_c": "Ocultan todo para evitar cualquier riesgo",
+      "opcion_d": "Se marchan sin rendir cuentas",
+      "correct_option": "A",
+      "correct_answer": "Usan responsablemente lo que se les confió",
+      "explanation": "Los siervos elogiados actúan con lo recibido y rinden cuentas de su administración. El tercero, dominado por una visión temerosa de su señor, entierra lo confiado y no lo pone en uso.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0078",
+      "book": "Mateo",
+      "chapter": 25,
+      "verse_start": 31,
+      "verse_end": 40,
+      "reference": "Mateo 25:31-40",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Juicio y misericordia",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tipo de acciones aparecen asociadas con recibir al Rey en la escena del juicio?",
+      "opcion_a": "Atender necesidades concretas de personas vulnerables",
+      "opcion_b": "Acumular conocimiento sin relación con otros",
+      "opcion_c": "Conseguir cargos religiosos",
+      "opcion_d": "Realizar viajes a lugares santos",
+      "correct_option": "A",
+      "correct_answer": "Atender necesidades concretas de personas vulnerables",
+      "explanation": "La escena menciona alimentar, dar de beber, recibir, vestir, acompañar y visitar. El punto conecta la relación con el Rey con el trato concreto dado a personas necesitadas, sin reducir el juicio a una sola obra aislada.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0079",
+      "book": "Mateo",
+      "chapter": 25,
+      "verse_start": 41,
+      "verse_end": 46,
+      "reference": "Mateo 25:41-46",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Responsabilidad ante el prójimo",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Experto",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que en la escena final la omisión de ayuda a personas necesitadas también es tratada como una cuestión moral seria",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "El contraste no se limita a acciones dañinas directas; también considera la ausencia de respuesta ante necesidades concretas. La escena presenta esa omisión como parte de la responsabilidad moral evaluada por el Rey.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0080",
+      "book": "Mateo",
+      "chapter": 26,
+      "verse_start": 6,
+      "verse_end": 13,
+      "reference": "Mateo 26:6-13",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Unción en Betania",
+      "characters": [
+        "Jesús",
+        "mujer",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo interpreta Jesús la acción de la mujer que derramó perfume costoso sobre él?",
+      "opcion_a": "Como una preparación relacionada con su sepultura",
+      "opcion_b": "Como un intento de comprar un cargo",
+      "opcion_c": "Como una señal para iniciar una revuelta",
+      "opcion_d": "Como una falta que debe ser castigada",
+      "correct_option": "A",
+      "correct_answer": "Como una preparación relacionada con su sepultura",
+      "explanation": "Ante la crítica por el costo del perfume, Jesús defiende a la mujer y vincula su acción con su próxima sepultura. El relato la presenta como una obra significativa en un momento decisivo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0081",
+      "book": "Mateo",
+      "chapter": 26,
+      "verse_start": 14,
+      "verse_end": 16,
+      "reference": "Mateo 26:14-16",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Acuerdo de Judas",
+      "characters": [
+        "Judas Iscariote",
+        "principales sacerdotes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hizo Judas Iscariote antes de buscar una oportunidad para entregar a Jesús?",
+      "opcion_a": "Acordó con los principales sacerdotes recibir dinero",
+      "opcion_b": "Avisó primero a Pilato de una invasión",
+      "opcion_c": "Pidió permiso a Pedro",
+      "opcion_d": "Renunció públicamente al grupo sin hablar con nadie",
+      "correct_option": "A",
+      "correct_answer": "Acordó con los principales sacerdotes recibir dinero",
+      "explanation": "Judas se dirige a los principales sacerdotes y acuerda una cantidad de dinero a cambio de entregar a Jesús. Desde entonces busca una oportunidad adecuada para hacerlo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0082",
+      "book": "Mateo",
+      "chapter": 26,
+      "verse_start": 26,
+      "verse_end": 29,
+      "reference": "Mateo 26:26-29",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Cena del Señor",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Con qué realidad relaciona Jesús la copa compartida durante la cena?",
+      "opcion_a": "Con su sangre del pacto derramada para perdón",
+      "opcion_b": "Con la coronación política de los doce",
+      "opcion_c": "Con una celebración de victoria militar",
+      "opcion_d": "Con un impuesto para el templo",
+      "correct_option": "A",
+      "correct_answer": "Con su sangre del pacto derramada para perdón",
+      "explanation": "Durante la cena, Jesús interpreta el pan y la copa en relación con su entrega próxima. La copa se asocia con el pacto y con el perdón, dando a la comida un significado ligado a su muerte.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0083",
+      "book": "Mateo",
+      "chapter": 26,
+      "verse_start": 36,
+      "verse_end": 46,
+      "reference": "Mateo 26:36-46",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Getsemaní",
+      "characters": [
+        "Jesús",
+        "Pedro",
+        "Jacobo",
+        "Juan"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tensión expresa la oración de Jesús en Getsemaní?",
+      "opcion_a": "El deseo de que pase la copa junto con la decisión de someterse a la voluntad del Padre",
+      "opcion_b": "El rechazo absoluto de cualquier obediencia",
+      "opcion_c": "La intención de huir a Egipto",
+      "opcion_d": "La petición de ser proclamado rey por la fuerza",
+      "correct_option": "A",
+      "correct_answer": "El deseo de que pase la copa junto con la decisión de someterse a la voluntad del Padre",
+      "explanation": "La oración muestra angustia real y, al mismo tiempo, una entrega consciente a la voluntad del Padre. El episodio evita presentar la obediencia de Jesús como ausencia de sufrimiento emocional.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0084",
+      "book": "Mateo",
+      "chapter": 26,
+      "verse_start": 69,
+      "verse_end": 75,
+      "reference": "Mateo 26:69-75",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Negaciones de Pedro",
+      "characters": [
+        "Pedro",
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué recordó Pedro después de negar repetidamente conocer a Jesús?",
+      "opcion_a": "La advertencia previa de Jesús sobre sus negaciones",
+      "opcion_b": "Una profecía de Herodes",
+      "opcion_c": "Una orden de Pilato",
+      "opcion_d": "Un mensaje de Juan el Bautista",
+      "correct_option": "A",
+      "correct_answer": "La advertencia previa de Jesús sobre sus negaciones",
+      "explanation": "El canto del gallo activa el recuerdo de la advertencia que Jesús había dado. Pedro reconoce lo ocurrido y reacciona con profundo pesar, cerrando el capítulo con el fracaso del discípulo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0085",
+      "book": "Mateo",
+      "chapter": 27,
+      "verse_start": 3,
+      "verse_end": 10,
+      "reference": "Mateo 27:3-10",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Remordimiento de Judas",
+      "characters": [
+        "Judas Iscariote",
+        "principales sacerdotes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hizo Judas después de ver que Jesús había sido condenado?",
+      "opcion_a": "Devolvió el dinero y reconoció que había entregado sangre inocente",
+      "opcion_b": "Pidió ser nombrado discípulo principal",
+      "opcion_c": "Se unió a los guardias para custodiar la tumba",
+      "opcion_d": "Fue a Galilea para buscar a Pedro",
+      "correct_option": "A",
+      "correct_answer": "Devolvió el dinero y reconoció que había entregado sangre inocente",
+      "explanation": "El relato describe remordimiento, devolución del dinero y una confesión de haber entregado sangre inocente. Su desenlace trágico debe tratarse como parte narrativa y no como modelo o instrucción para conductas autodestructivas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0086",
+      "book": "Mateo",
+      "chapter": 27,
+      "verse_start": 11,
+      "verse_end": 26,
+      "reference": "Mateo 27:11-26",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Jesús ante Pilato",
+      "characters": [
+        "Jesús",
+        "Pilato",
+        "Barrabás"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué decisión tomó Pilato respecto de Barrabás y Jesús bajo la presión de la multitud?",
+      "opcion_a": "Liberó a Barrabás y entregó a Jesús para ser crucificado",
+      "opcion_b": "Liberó a ambos",
+      "opcion_c": "Condenó a Barrabás y dejó libre a Jesús",
+      "opcion_d": "Envió a ambos a Herodes para un nuevo juicio",
+      "correct_option": "A",
+      "correct_answer": "Liberó a Barrabás y entregó a Jesús para ser crucificado",
+      "explanation": "El episodio presenta a Pilato interrogando a Jesús y ofreciendo una elección entre presos. Finalmente libera a Barrabás y entrega a Jesús para la crucifixión, dentro de un proceso marcado por presión y responsabilidad compartida de distintos actores.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0087",
+      "book": "Mateo",
+      "chapter": 27,
+      "verse_start": 27,
+      "verse_end": 44,
+      "reference": "Mateo 27:27-44",
+      "category": "NT_GENERAL",
+      "subcategory": "Crucifixión y burlas",
+      "characters": [
+        "Jesús",
+        "soldados",
+        "transeúntes",
+        "principales sacerdotes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tema se repite en las burlas dirigidas a Jesús durante la crucifixión?",
+      "opcion_a": "El cuestionamiento de su identidad y de su capacidad para salvar",
+      "opcion_b": "La discusión sobre impuestos romanos",
+      "opcion_c": "La genealogía de José",
+      "opcion_d": "La ubicación de Belén",
+      "correct_option": "A",
+      "correct_answer": "El cuestionamiento de su identidad y de su capacidad para salvar",
+      "explanation": "Las burlas giran alrededor de títulos y afirmaciones sobre Jesús, especialmente su relación con Dios y su capacidad de salvar. El relato presenta una ironía narrativa porque esas acusaciones aparecen precisamente mientras se desarrolla la entrega que el evangelio interpreta como salvadora.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0088",
+      "book": "Mateo",
+      "chapter": 27,
+      "verse_start": 45,
+      "verse_end": 54,
+      "reference": "Mateo 27:45-54",
+      "category": "NT_GENERAL",
+      "subcategory": "Muerte de Jesús",
+      "characters": [
+        "Jesús",
+        "centurión",
+        "testigos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que después de la muerte de Jesús el centurión y quienes estaban con él reaccionan reconociendo de manera extraordinaria su identidad",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "El relato vincula la muerte de Jesús con señales narrativas intensas y con la reacción de quienes custodiaban el lugar. El centurión y sus acompañantes expresan temor y una confesión sobre la identidad de Jesús.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0089",
+      "book": "Mateo",
+      "chapter": 27,
+      "verse_start": 57,
+      "verse_end": 61,
+      "reference": "Mateo 27:57-61",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Sepultura de Jesús",
+      "characters": [
+        "José de Arimatea",
+        "Jesús",
+        "María Magdalena",
+        "otra María"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Quién pidió a Pilato el cuerpo de Jesús y lo colocó en una tumba nueva?",
+      "opcion_a": "José de Arimatea",
+      "opcion_b": "Nicodemo",
+      "opcion_c": "Pedro",
+      "opcion_d": "Juan el Bautista",
+      "correct_option": "A",
+      "correct_answer": "José de Arimatea",
+      "explanation": "José de Arimatea es presentado como discípulo y solicita a Pilato el cuerpo de Jesús. Lo envuelve y lo coloca en una tumba nueva, mientras mujeres seguidoras observan el lugar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0090",
+      "book": "Mateo",
+      "chapter": 28,
+      "verse_start": 1,
+      "verse_end": 10,
+      "reference": "Mateo 28:1-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Resurrección",
+      "characters": [
+        "Jesús",
+        "María Magdalena",
+        "otra María",
+        "ángel"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué mensaje recibieron las mujeres al llegar a la tumba?",
+      "opcion_a": "Que Jesús había resucitado y debían comunicarlo a los discípulos",
+      "opcion_b": "Que el cuerpo había sido llevado a Roma",
+      "opcion_c": "Que debían cerrar de nuevo la tumba",
+      "opcion_d": "Que los discípulos habían sido arrestados",
+      "correct_option": "A",
+      "correct_answer": "Que Jesús había resucitado y debían comunicarlo a los discípulos",
+      "explanation": "Las mujeres encuentran la tumba abierta y reciben el anuncio de la resurrección junto con la instrucción de comunicarlo. Después, el propio Jesús se encuentra con ellas y confirma la dirección hacia Galilea.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0091",
+      "book": "Mateo",
+      "chapter": 28,
+      "verse_start": 11,
+      "verse_end": 15,
+      "reference": "Mateo 28:11-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Informe de los guardias",
+      "characters": [
+        "Guardias",
+        "principales sacerdotes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué versión fueron instruidos a difundir algunos guardias después de informar lo ocurrido?",
+      "opcion_a": "Que los discípulos habían robado el cuerpo mientras ellos dormían",
+      "opcion_b": "Que Jesús había sido trasladado por Pilato",
+      "opcion_c": "Que José de Arimatea había destruido la tumba",
+      "opcion_d": "Que nadie había sido sepultado allí",
+      "correct_option": "A",
+      "correct_answer": "Que los discípulos habían robado el cuerpo mientras ellos dormían",
+      "explanation": "El relato presenta una explicación alternativa promovida mediante dinero para contrarrestar el anuncio de la resurrección. Mateo la identifica como una versión difundida en oposición al testimonio de las mujeres y discípulos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-MAT-0092",
+      "book": "Mateo",
+      "chapter": 28,
+      "verse_start": 16,
+      "verse_end": 20,
+      "reference": "Mateo 28:16-20",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Gran comisión",
+      "characters": [
+        "Jesús",
+        "once discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la comisión final incluye hacer discípulos de todas las naciones, bautizar y enseñar a obedecer lo mandado por Jesús",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La escena final amplía explícitamente la misión hacia todas las naciones y combina hacer discípulos, bautizar y enseñar. También concluye con una promesa de la presencia continua de Jesús.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}

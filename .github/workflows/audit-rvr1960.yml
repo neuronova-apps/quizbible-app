@@ -4,6 +4,7 @@ on:
   push:
     branches: [rvr1960-audit, main, audit-genesis-full-rvr1960]
     paths:
+      - "tools/bible_extractor/matthew-master-input.json"
       - "tools/bible_extractor/malachi-master-input.json"
       - "tools/bible_extractor/zechariah-master-input.json"
       - "tools/bible_extractor/haggai-master-input.json"
@@ -51,6 +52,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - "tools/bible_extractor/matthew-master-input.json"
       - "tools/bible_extractor/malachi-master-input.json"
       - "tools/bible_extractor/zechariah-master-input.json"
       - "tools/bible_extractor/haggai-master-input.json"
@@ -100,7 +102,7 @@ on:
       input_file:
         description: "Ruta del archivo de entrada de preguntas"
         required: true
-        default: "tools/bible_extractor/malachi-master-input.json"
+        default: "tools/bible_extractor/matthew-master-input.json"
         type: string
 
 permissions:
@@ -129,7 +131,9 @@ jobs:
         run: |
           INPUT_FILE="${{ inputs.input_file || '' }}"
           if [ -z "$INPUT_FILE" ]; then
-            if [ -f "tools/bible_extractor/malachi-master-input.json" ]; then
+            if [ -f "tools/bible_extractor/matthew-master-input.json" ]; then
+              INPUT_FILE="tools/bible_extractor/matthew-master-input.json"
+            elif [ -f "tools/bible_extractor/malachi-master-input.json" ]; then
               INPUT_FILE="tools/bible_extractor/malachi-master-input.json"
             elif [ -f "tools/bible_extractor/zechariah-master-input.json" ]; then
               INPUT_FILE="tools/bible_extractor/zechariah-master-input.json"
@@ -215,7 +219,10 @@ jobs:
             fi
           fi
 
-          if [[ "$INPUT_FILE" == *"malachi"* ]] || [[ "$INPUT_FILE" == *"malaquias"* ]] || [[ "$INPUT_FILE" == *"malaquías"* ]]; then
+          if [[ "$INPUT_FILE" == *"matthew"* ]] || [[ "$INPUT_FILE" == *"mateo"* ]]; then
+            OUTPUT_DIR="build/audit/matthew"
+            ARTIFACT_NAME="auditoria-mateo-rvr1960-${{ github.run_number }}"
+          elif [[ "$INPUT_FILE" == *"malachi"* ]] || [[ "$INPUT_FILE" == *"malaquias"* ]] || [[ "$INPUT_FILE" == *"malaquías"* ]]; then
             OUTPUT_DIR="build/audit/malachi"
             ARTIFACT_NAME="auditoria-malaquias-rvr1960-${{ github.run_number }}"
           elif [[ "$INPUT_FILE" == *"zechariah"* ]] || [[ "$INPUT_FILE" == *"zacarias"* ]] || [[ "$INPUT_FILE" == *"zacarías"* ]]; then
