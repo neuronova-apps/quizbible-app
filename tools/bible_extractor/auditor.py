@@ -564,6 +564,23 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "siquem", "adma", "zeboim", "galad", "galaad", "peniel", "líbano", "libano"
         },
     },
+    "joel": {
+        "canonical_name": "Joel",
+        "api_name": "Joel",
+        "aliases": {
+            "joel", "jl", "libro de joel"
+        },
+        "total_chapters": 3,
+        "blocks": [
+            (1, 3, "joel-01-03.json"),
+        ],
+        "default_output_dir": "build/audit/joel",
+        "ambient_places": {
+            "sion", "sión", "jerusalen", "jerusalén", "juda", "judá", "israel", "valle de josafat", "josafat",
+            "valle de la decision", "valle de la decisión", "valle de sitim", "sitim", "tiro", "sidon", "sidón",
+            "filistea", "egipto", "edom"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -667,6 +684,8 @@ BIBLE_PERSONAJES = {
     "daniel", "sadrac", "mesac", "abed-nego", "abednego", "belsasar", "beltsasar", "aspenaz", "arioc", "gabriel", "miguel",
     # Oseas
     "oseas", "gomer", "jezreel", "lo-ruhama", "loruhama", "lo-ammi", "loammi", "diblaiam", "beeri",
+    # Joel
+    "joel", "petuel",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",
