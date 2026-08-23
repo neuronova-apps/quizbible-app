@@ -73,6 +73,7 @@ JOEL_PATH = Path(__file__).parent / "joel-master-input.json"
 AMOS_PATH = Path(__file__).parent / "amos-master-input.json"
 OBADIAH_PATH = Path(__file__).parent / "obadiah-master-input.json"
 JONAH_PATH = Path(__file__).parent / "jonah-master-input.json"
+MICAH_PATH = Path(__file__).parent / "micah-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -267,6 +268,12 @@ class TestAuditorCanonical(unittest.TestCase):
         else:
             cls.jonah_questions = {}
 
+        if MICAH_PATH.exists():
+            raw_mic = json.loads(MICAH_PATH.read_text(encoding="utf-8"))
+            cls.micah_questions = {q["id"]: q for q in (raw_mic.get("questions", []) if isinstance(raw_mic, dict) else raw_mic)}
+        else:
+            cls.micah_questions = {}
+
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
 
@@ -400,6 +407,10 @@ class TestAuditorCanonical(unittest.TestCase):
     def get_jonah_question(self, qid: str) -> dict:
         self.assertIn(qid, self.jonah_questions, f"ID '{qid}' no encontrado en jonah-master-input.json")
         return copy.deepcopy(self.jonah_questions[qid])
+
+    def get_micah_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.micah_questions, f"ID '{qid}' no encontrado en micah-master-input.json")
+        return copy.deepcopy(self.micah_questions[qid])
 
     # --- TEST GLOBAL DE CONSISTENCIA DE IDs Y REFERENCIAS ---
 
@@ -3128,6 +3139,87 @@ class TestAuditorCanonical(unittest.TestCase):
         self.assertEqual(char_counts["Capitán"], 1)
         self.assertEqual(char_counts["Rey de Nínive"], 3)
         self.assertEqual(char_counts["Ninivitas"], 1)
+
+    # --- TESTS PARA MIQUEAS ---
+
+    def test_detect_book_key_micah(self) -> None:
+        """Verifica la detección automática de clave para Miqueas."""
+        spec_mic = {"questions": [{"id": "NQB-AT-MIQ-0001", "book": "Miqueas"}]}
+        self.assertEqual(detect_book_key(spec_mic), "micah")
+
+        spec_alias = {"questions": [{"id": "NQB-AT-MIQ-0001", "book": "miqueas"}]}
+        self.assertEqual(detect_book_key(spec_alias), "micah")
+
+        spec_en = {"questions": [{"id": "NQB-AT-MIQ-0001", "book": "Micah"}]}
+        self.assertEqual(detect_book_key(spec_en), "micah")
+
+        spec_libro = {"questions": [{"id": "NQB-AT-MIQ-0001", "book": "Libro de Miqueas"}]}
+        self.assertEqual(detect_book_key(spec_libro), "micah")
+
+    def test_micah_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Miqueas: 7 capítulos, 1 bloque."""
+        self.assertIn("micah", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["micah"]
+        self.assertEqual(cfg["canonical_name"], "Miqueas")
+        self.assertEqual(cfg["api_name"], "Miqueas")
+        self.assertEqual(cfg["total_chapters"], 7)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertEqual(cfg["blocks"][0], (1, 7, "micah-01-07.json"))
+        self.assertTrue({"miqueas", "micah", "miq"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_micah(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Miqueas (48 preguntas, 7/7 capítulos cubiertos, distribución 6/7/7/8/7/7/6, 41 AT_GENERAL, 7 PERSONAJES_BIBLICOS, 3 con additional_refs, 4 totales)."""
+        if not self.micah_questions:
+            self.skipTest("micah-master-input.json no disponible")
+        self.assertEqual(len(self.micah_questions), 48)
+        chapter_counts = {}
+        personajes_count = 0
+        general_count = 0
+        all_chars = []
+        questions_with_add_refs = 0
+        total_add_refs = 0
+        for qid, q in self.micah_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 7, f"Capítulo {ch} fuera del rango 1..7 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+            self.assertEqual(q.get("question_type"), "MULTIPLE_CHOICE")
+
+            all_chars.extend(q.get("characters", []))
+
+            cat = q.get("category")
+            if cat == "PERSONAJES_BIBLICOS":
+                personajes_count += 1
+                self.assertGreater(len(q.get("characters", [])), 0, f"Pregunta de personajes sin characters en {qid}")
+            elif cat == "AT_GENERAL":
+                general_count += 1
+
+            add_refs = q.get("additional_references", [])
+            if len(add_refs) > 0:
+                questions_with_add_refs += 1
+                total_add_refs += len(add_refs)
+
+        expected_dist = {1: 6, 2: 7, 3: 7, 4: 8, 5: 7, 6: 7, 7: 6}
+        self.assertEqual(chapter_counts, expected_dist)
+        self.assertEqual(personajes_count, 7, f"Se esperaban 7 preguntas de PERSONAJES_BIBLICOS, halladas {personajes_count}")
+        self.assertEqual(general_count, 41, f"Se esperaban 41 preguntas de AT_GENERAL, halladas {general_count}")
+        self.assertEqual(questions_with_add_refs, 3, f"Se esperaban 3 preguntas con additional_references, halladas {questions_with_add_refs}")
+        self.assertEqual(total_add_refs, 4, f"Se esperaban 4 referencias adicionales en total, halladas {total_add_refs}")
+
+        char_counts = collections.Counter(all_chars)
+        self.assertEqual(char_counts["Miqueas"], 5)
+        self.assertEqual(char_counts["Gobernantes de Israel"], 1)
+        self.assertEqual(char_counts["Profetas"], 1)
 
 
 if __name__ == "__main__":

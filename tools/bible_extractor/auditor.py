@@ -632,6 +632,24 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "ninive", "nínive", "tarsis", "jope", "gat-hefer", "gathefer", "asiria", "mar", "mar grande"
         },
     },
+    "micah": {
+        "canonical_name": "Miqueas",
+        "api_name": "Miqueas",
+        "aliases": {
+            "miqueas", "micah", "miq", "libro de miqueas"
+        },
+        "total_chapters": 7,
+        "blocks": [
+            (1, 7, "micah-01-07.json"),
+        ],
+        "default_output_dir": "build/audit/micah",
+        "ambient_places": {
+            "samaria", "jerusalen", "jerusalén", "juda", "judá", "israel", "sion", "sión", "monte de sion", "monte de sión",
+            "gat", "afra", "safir", "zanan", "bet-esel", "betesel", "marot", "laquis", "moreses-gat", "moresesgat",
+            "aczib", "maresah", "adulam", "belen", "belén", "efrata", "éfrata", "asiria", "nimrod", "egipto", "moab",
+            "sitim", "gilgal", "galaad", "basan", "basán"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -743,6 +761,8 @@ BIBLE_PERSONAJES = {
     "abdias", "abdías",
     # Jonás
     "jonas", "jonás", "amitai", "amittai", "marineros", "capitan", "capitán", "rey de ninive", "rey de nínive", "ninivitas",
+    # Miqueas
+    "miqueas", "morastita", "jotam", "jotám", "acaz", "ezequias", "ezequías", "gobernantes de israel", "profetas", "balac", "balaam", "beor", "omri", "acab",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",
