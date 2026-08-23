@@ -581,6 +581,24 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "filistea", "egipto", "edom"
         },
     },
+    "amos": {
+        "canonical_name": "Amós",
+        "api_name": "Amos",
+        "aliases": {
+            "amos", "amós", "am", "libro de amos", "libro de amós"
+        },
+        "total_chapters": 9,
+        "blocks": [
+            (1, 9, "amos-01-09.json"),
+        ],
+        "default_output_dir": "build/audit/amos",
+        "ambient_places": {
+            "tecoa", "tecoah", "sion", "sión", "jerusalen", "jerusalén", "damasco", "gaza", "tiro", "edom", "temán", "teman",
+            "bosra", "amon", "amón", "raba", "rabá", "moab", "queriot", "juda", "judá", "israel", "asdod", "egipto",
+            "samaria", "betel", "bet-el", "guilgal", "gilgal", "beerseba", "beer-seba", "calne", "hamat", "gat",
+            "carmelo", "siria", "quenaan", "canan", "canaan", "caphtor", "caftor", "quir", "basán", "basan"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -686,6 +704,8 @@ BIBLE_PERSONAJES = {
     "oseas", "gomer", "jezreel", "lo-ruhama", "loruhama", "lo-ammi", "loammi", "diblaiam", "beeri",
     # Joel
     "joel", "petuel",
+    # Amós
+    "amos", "amós", "amasias", "amasías", "jeroboam", "uzias", "uzías", "joas", "joás",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",

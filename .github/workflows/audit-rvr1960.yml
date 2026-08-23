@@ -4,6 +4,7 @@ on:
   push:
     branches: [rvr1960-audit, main, audit-genesis-full-rvr1960]
     paths:
+      - "tools/bible_extractor/amos-master-input.json"
       - "tools/bible_extractor/joel-master-input.json"
       - "tools/bible_extractor/hosea-master-input.json"
       - "tools/bible_extractor/daniel-master-input.json"
@@ -41,6 +42,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - "tools/bible_extractor/amos-master-input.json"
       - "tools/bible_extractor/joel-master-input.json"
       - "tools/bible_extractor/hosea-master-input.json"
       - "tools/bible_extractor/daniel-master-input.json"
@@ -80,7 +82,7 @@ on:
       input_file:
         description: "Ruta del archivo de entrada de preguntas"
         required: true
-        default: "tools/bible_extractor/joel-master-input.json"
+        default: "tools/bible_extractor/amos-master-input.json"
         type: string
 
 permissions:
@@ -109,7 +111,9 @@ jobs:
         run: |
           INPUT_FILE="${{ inputs.input_file || '' }}"
           if [ -z "$INPUT_FILE" ]; then
-            if [ -f "tools/bible_extractor/joel-master-input.json" ]; then
+            if [ -f "tools/bible_extractor/amos-master-input.json" ]; then
+              INPUT_FILE="tools/bible_extractor/amos-master-input.json"
+            elif [ -f "tools/bible_extractor/joel-master-input.json" ]; then
               INPUT_FILE="tools/bible_extractor/joel-master-input.json"
             elif [ -f "tools/bible_extractor/hosea-master-input.json" ]; then
               INPUT_FILE="tools/bible_extractor/hosea-master-input.json"
@@ -175,7 +179,10 @@ jobs:
             fi
           fi
 
-          if [[ "$INPUT_FILE" == *"joel"* ]]; then
+          if [[ "$INPUT_FILE" == *"amos"* ]] || [[ "$INPUT_FILE" == *"amós"* ]]; then
+            OUTPUT_DIR="build/audit/amos"
+            ARTIFACT_NAME="auditoria-amos-rvr1960-${{ github.run_number }}"
+          elif [[ "$INPUT_FILE" == *"joel"* ]]; then
             OUTPUT_DIR="build/audit/joel"
             ARTIFACT_NAME="auditoria-joel-rvr1960-${{ github.run_number }}"
           elif [[ "$INPUT_FILE" == *"hosea"* ]] || [[ "$INPUT_FILE" == *"oseas"* ]]; then
