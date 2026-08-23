@@ -599,6 +599,24 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "carmelo", "siria", "quenaan", "canan", "canaan", "caphtor", "caftor", "quir", "basán", "basan"
         },
     },
+    "obadiah": {
+        "canonical_name": "Abdías",
+        "api_name": "Abdias",
+        "aliases": {
+            "abdias", "abdías", "obadiah", "ob", "libro de abdias", "libro de abdías"
+        },
+        "total_chapters": 1,
+        "blocks": [
+            (1, 1, "obadiah-01-01.json"),
+        ],
+        "default_output_dir": "build/audit/obadiah",
+        "ambient_places": {
+            "edom", "teman", "temán", "esau", "esaú", "monte de esau", "monte de esaú", "sion", "sión", "monte de sion",
+            "monte de sión", "jerusalen", "jerusalén", "juda", "judá", "israel", "jacob", "jose", "josé", "negev", "negeb",
+            "sefela", "filisteos", "efrain", "efraín", "samaria", "galaad", "benjamin", "benjamín", "fenicia", "sarepta",
+            "sefarad", "ciudades del sur"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -706,6 +724,8 @@ BIBLE_PERSONAJES = {
     "joel", "petuel",
     # Amós
     "amos", "amós", "amasias", "amasías", "jeroboam", "uzias", "uzías", "joas", "joás",
+    # Abdías
+    "abdias", "abdías",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",
