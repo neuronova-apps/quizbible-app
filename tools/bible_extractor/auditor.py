@@ -617,6 +617,21 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "sefarad", "ciudades del sur"
         },
     },
+    "jonah": {
+        "canonical_name": "Jonás",
+        "api_name": "Jonas",
+        "aliases": {
+            "jonas", "jonás", "jonah", "jon", "libro de jonas", "libro de jonás"
+        },
+        "total_chapters": 4,
+        "blocks": [
+            (1, 4, "jonah-01-04.json"),
+        ],
+        "default_output_dir": "build/audit/jonah",
+        "ambient_places": {
+            "ninive", "nínive", "tarsis", "jope", "gat-hefer", "gathefer", "asiria", "mar", "mar grande"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -726,6 +741,8 @@ BIBLE_PERSONAJES = {
     "amos", "amós", "amasias", "amasías", "jeroboam", "uzias", "uzías", "joas", "joás",
     # Abdías
     "abdias", "abdías",
+    # Jonás
+    "jonas", "jonás", "amitai", "amittai", "marineros", "capitan", "capitán", "rey de ninive", "rey de nínive", "ninivitas",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",

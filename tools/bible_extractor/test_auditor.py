@@ -72,6 +72,7 @@ HOSEA_PATH = Path(__file__).parent / "hosea-master-input.json"
 JOEL_PATH = Path(__file__).parent / "joel-master-input.json"
 AMOS_PATH = Path(__file__).parent / "amos-master-input.json"
 OBADIAH_PATH = Path(__file__).parent / "obadiah-master-input.json"
+JONAH_PATH = Path(__file__).parent / "jonah-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -260,6 +261,12 @@ class TestAuditorCanonical(unittest.TestCase):
         else:
             cls.obadiah_questions = {}
 
+        if JONAH_PATH.exists():
+            raw_jon = json.loads(JONAH_PATH.read_text(encoding="utf-8"))
+            cls.jonah_questions = {q["id"]: q for q in (raw_jon.get("questions", []) if isinstance(raw_jon, dict) else raw_jon)}
+        else:
+            cls.jonah_questions = {}
+
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
 
@@ -389,6 +396,10 @@ class TestAuditorCanonical(unittest.TestCase):
     def get_obadiah_question(self, qid: str) -> dict:
         self.assertIn(qid, self.obadiah_questions, f"ID '{qid}' no encontrado en obadiah-master-input.json")
         return copy.deepcopy(self.obadiah_questions[qid])
+
+    def get_jonah_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.jonah_questions, f"ID '{qid}' no encontrado en jonah-master-input.json")
+        return copy.deepcopy(self.jonah_questions[qid])
 
     # --- TEST GLOBAL DE CONSISTENCIA DE IDs Y REFERENCIAS ---
 
@@ -3034,6 +3045,89 @@ class TestAuditorCanonical(unittest.TestCase):
 
         char_counts = collections.Counter(all_chars)
         self.assertEqual(char_counts["Abdías"], 1)
+
+    # --- TESTS PARA JONÁS ---
+
+    def test_detect_book_key_jonah(self) -> None:
+        """Verifica la detección automática de clave para Jonás."""
+        spec_jon = {"questions": [{"id": "NQB-AT-JON-0001", "book": "Jonás"}]}
+        self.assertEqual(detect_book_key(spec_jon), "jonah")
+
+        spec_alias = {"questions": [{"id": "NQB-AT-JON-0001", "book": "jonas"}]}
+        self.assertEqual(detect_book_key(spec_alias), "jonah")
+
+        spec_en = {"questions": [{"id": "NQB-AT-JON-0001", "book": "Jonah"}]}
+        self.assertEqual(detect_book_key(spec_en), "jonah")
+
+        spec_libro = {"questions": [{"id": "NQB-AT-JON-0001", "book": "Libro de Jonás"}]}
+        self.assertEqual(detect_book_key(spec_libro), "jonah")
+
+    def test_jonah_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Jonás: 4 capítulos, 1 bloque."""
+        self.assertIn("jonah", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["jonah"]
+        self.assertEqual(cfg["canonical_name"], "Jonás")
+        self.assertEqual(cfg["api_name"], "Jonas")
+        self.assertEqual(cfg["total_chapters"], 4)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertEqual(cfg["blocks"][0], (1, 4, "jonah-01-04.json"))
+        self.assertTrue({"jonas", "jonás", "jonah", "jon"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_jonah(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Jonás (40 preguntas, 4/4 capítulos cubiertos, distribución 11/9/10/10, 13 AT_GENERAL, 27 PERSONAJES_BIBLICOS, 2 con additional_refs, 3 totales)."""
+        if not self.jonah_questions:
+            self.skipTest("jonah-master-input.json no disponible")
+        self.assertEqual(len(self.jonah_questions), 40)
+        chapter_counts = {}
+        personajes_count = 0
+        general_count = 0
+        all_chars = []
+        questions_with_add_refs = 0
+        total_add_refs = 0
+        for qid, q in self.jonah_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 4, f"Capítulo {ch} fuera del rango 1..4 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+            self.assertEqual(q.get("question_type"), "MULTIPLE_CHOICE")
+
+            all_chars.extend(q.get("characters", []))
+
+            cat = q.get("category")
+            if cat == "PERSONAJES_BIBLICOS":
+                personajes_count += 1
+                self.assertGreater(len(q.get("characters", [])), 0, f"Pregunta de personajes sin characters en {qid}")
+            elif cat == "AT_GENERAL":
+                general_count += 1
+
+            add_refs = q.get("additional_references", [])
+            if len(add_refs) > 0:
+                questions_with_add_refs += 1
+                total_add_refs += len(add_refs)
+
+        expected_dist = {1: 11, 2: 9, 3: 10, 4: 10}
+        self.assertEqual(chapter_counts, expected_dist)
+        self.assertEqual(personajes_count, 27, f"Se esperaban 27 preguntas de PERSONAJES_BIBLICOS, halladas {personajes_count}")
+        self.assertEqual(general_count, 13, f"Se esperaban 13 preguntas de AT_GENERAL, halladas {general_count}")
+        self.assertEqual(questions_with_add_refs, 2, f"Se esperaban 2 preguntas con additional_references, halladas {questions_with_add_refs}")
+        self.assertEqual(total_add_refs, 3, f"Se esperaban 3 referencias adicionales en total, halladas {total_add_refs}")
+
+        char_counts = collections.Counter(all_chars)
+        self.assertEqual(char_counts["Jonás"], 22)
+        self.assertEqual(char_counts["Marineros"], 6)
+        self.assertEqual(char_counts["Capitán"], 1)
+        self.assertEqual(char_counts["Rey de Nínive"], 3)
+        self.assertEqual(char_counts["Ninivitas"], 1)
 
 
 if __name__ == "__main__":
