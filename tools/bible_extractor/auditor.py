@@ -856,6 +856,24 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "sinagoga", "carcel", "cárcel", "mar", "mar adriatico", "mar adriático", "monte de los olivos", "cedron", "cedrón"
         },
     },
+    "romans": {
+        "canonical_name": "Romanos",
+        "api_name": "Romanos",
+        "aliases": {
+            "romanos", "romans", "rom", "carta a los romanos", "epistola a los romanos", "epístola a los romanos", "libro de romanos"
+        },
+        "total_chapters": 16,
+        "blocks": [
+            (1, 8, "romans-01-08.json"),
+            (9, 16, "romans-09-16.json"),
+        ],
+        "default_output_dir": "build/audit/romans",
+        "ambient_places": {
+            "roma", "espana", "españa", "jerusalen", "jerusalén", "judea", "macedonia", "acaya", "cencrea",
+            "ilirico", "ilírico", "sion", "sión", "sodoma", "gomorra", "egipto", "damasco", "sinai", "sinaí",
+            "grecia", "gentiles", "israel", "corinto"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -996,6 +1014,11 @@ BIBLE_PERSONAJES = {
     "lidia", "carcelero", "jason", "jasón", "dionisio", "damaris", "dámaris", "crispo", "sostenes", "sóstenes",
     "galion", "galión", "sceva", "esceva", "demetrio", "eutico", "tiquico", "tíquico", "trofimo", "trófimo",
     "claudio lisias", "drusila", "festo", "berenice", "tertulo", "tértulo", "julio", "publio",
+    "febe", "prisca", "epeneto", "andronico", "andrónico", "junias", "amplias", "urbano", "estaquis",
+    "apeles", "aristobulo", "aristóbulo", "herodion", "herodión", "narciso", "trifena", "trifosa",
+    "persida", "pérsida", "asincrito", "asíncrito", "flegonte", "hermes", "patrobas", "hermas",
+    "filologo", "filólogo", "julia", "nereo", "olimpas", "tercio", "gayo", "erasto", "cuarto",
+    "lucio", "sosipater", "sosípater", "adan", "adán", "cristo",
     "lazaro", "lázaro", "marta", "cleofas", "cornelio", "saulo", "bernice", "agripa", "felix", "félix",
     "gamaliel", "tito", "silas", "apolos", "aquila", "áquila", "priscila", "filemon", "filemón", "onesimo", "onésimo",
     # Otros comunes
@@ -1138,21 +1161,23 @@ def is_narrative_source_attribution(token: str, full_text: str, book_cfg: dict |
     norm_token = normalize(token).strip()
     text_norm = normalize(full_text)
 
-    # 1. Patrón: Nombre + verbo de atribución narrativa / relacional
-    # Ej: "lucas senala", "lucas menciona", "lucas relata", "mateo describe", "marcos registra", "lucas subraya"
+    # 1. Patrón: Nombre + verbo de atribución narrativa / epistolar / relacional
+    # Ej: "lucas senala", "pablo afirma", "pablo argumenta", "pablo concluye", "pablo exhorta", "pablo ensena"
     verb_pat = (
         r"\b" + re.escape(norm_token) + r"\s+"
         r"(?:senala|señala|menciona|relata|narra|describe|registra|presenta|indica|anade|añade|"
         r"observa|enfatiza|resalta|aclara|concluye|especifica|testifica|cuenta|"
-        r"recuerda|destaca|explica|subraya|afirma)\b"
+        r"recuerda|destaca|explica|subraya|afirma|argumenta|pregunta|exhorta|advierte|"
+        r"compara|contrasta|ensena|enseña|establece|declara|expone|escribe|saluda|recomienda)\b"
     )
     if re.search(verb_pat, text_norm):
         return True
 
     # 2. Patrón: Prefijo de fuente / narración + Nombre
-    # Ej: "segun lucas", "conforme a lucas", "de acuerdo con lucas", "como senala lucas", "como relata lucas"
+    # Ej: "segun lucas", "segun expone pablo", "conforme a lucas", "de acuerdo con lucas", "como senala lucas"
     source_prefix_pat = (
-        r"\b(?:segun|según|conforme\s+a|de\s+acuerdo\s+con|como\s+(?:senala|señala|relata|registra|menciona|narra|indica|describe|subraya|destaca|dice))\s+"
+        r"\b(?:(?:segun|según|como)\s+(?:senala|señala|relata|registra|menciona|narra|indica|describe|subraya|destaca|dice|argumenta|concluye|ensena|enseña|escribe|declara|advierte|expone|presenta)\s+|"
+        r"(?:segun|según|conforme\s+a|de\s+acuerdo\s+con)\s+)"
         + re.escape(norm_token) + r"\b"
     )
     if re.search(source_prefix_pat, text_norm):
@@ -1161,7 +1186,7 @@ def is_narrative_source_attribution(token: str, full_text: str, book_cfg: dict |
     # 3. Patrón: Expresión de documento / evangelio / relato + Nombre
     # Ej: "evangelio de lucas", "evangelio segun lucas", "relato de lucas", "narracion de lucas", "texto de lucas"
     doc_prefix_pat = (
-        r"\b(?:evangelio\s+(?:de|segun|según)|relato\s+de|narracion\s+de|narración\s+de|texto\s+de|libro\s+de|carta\s+de|epistola\s+de|epístola\s+de)\s+"
+        r"\b(?:evangelio\s+(?:de|segun|según)|relato\s+de|narracion\s+de|narración\s+de|texto\s+de|libro\s+de|carta\s+de|epistola\s+de|epístola\s+de|escrito\s+de|argumento\s+de)\s+"
         + re.escape(norm_token) + r"\b"
     )
     if re.search(doc_prefix_pat, text_norm):
@@ -1196,11 +1221,12 @@ def is_biblical_place_usage(token: str, full_text: str) -> bool:
             return True
 
     # 2. Patrones claros de sustantivo botánico / vegetal común
-    # Ej: "la rama", "una rama", "cada rama", "las ramas", "rama de la vid", "rama del arbol", "fruto de la rama"
+    # Ej: "la rama", "una rama", "cada rama", "las ramas", "rama de la vid", "rama del arbol", "fruto de la rama", "ramas del olivo"
     common_botanical_pattern = (
         r"\b(?:la|una|cada|esta|aquella|las|estas|otra|ninguna)\s+ramas?\b|"
-        r"\bramas?\s+(?:de|del|de\s+la|de\s+las|seca|secas|verde|verdes|unida|unidas|cortada|cortadas|injertada)\b|"
-        r"\b(?:fruto|hojas?|injerto|vid|arbol|olivo)\s+(?:de\s+la|de\s+las|de\s+una)?\s*ramas?\b"
+        r"\bramas?\s+(?:de|del|de\s+la|de\s+las|seca|secas|verde|verdes|unida|unidas|cortada|cortadas|injertada|injertadas|desgajada|desgajadas)\b|"
+        r"\b(?:fruto|hojas?|injerto|injertada|vid|arbol|olivo|raiz|olivo\s+silvestre)\s+(?:de\s+la|de\s+las|de\s+una)?\s*ramas?\b|"
+        r"\bramas?\s+del\s+olivo\b"
     )
     if re.search(common_botanical_pattern, text_norm):
         return False

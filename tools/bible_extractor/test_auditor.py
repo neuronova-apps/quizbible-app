@@ -86,6 +86,7 @@ MARK_PATH = Path(__file__).parent / "mark-master-input.json"
 LUKE_PATH = Path(__file__).parent / "luke-master-input.json"
 JOHN_PATH = Path(__file__).parent / "john-master-input.json"
 ACTS_PATH = Path(__file__).parent / "acts-master-input.json"
+ROMANS_PATH = Path(__file__).parent / "romans-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -351,6 +352,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.acts_questions = {q["id"]: q for q in (raw_act.get("questions", []) if isinstance(raw_act, dict) else raw_act)}
         else:
             cls.acts_questions = {}
+
+        if ROMANS_PATH.exists():
+            raw_rom = json.loads(ROMANS_PATH.read_text(encoding="utf-8"))
+            cls.romans_questions = {q["id"]: q for q in (raw_rom.get("questions", []) if isinstance(raw_rom, dict) else raw_rom)}
+        else:
+            cls.romans_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -4634,6 +4641,143 @@ class TestAuditorCanonical(unittest.TestCase):
             vmap_esteban, 51, ["Esteban"], book_key="acts", category="PERSONAJES_BIBLICOS"
         )
         self.assertTrue(res_esteban)
+
+    # --- PRUEBAS ESPECÍFICAS DE ROMANOS ---
+
+    def get_romans_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.romans_questions, f"ID '{qid}' no encontrado en romans-master-input.json")
+        return copy.deepcopy(self.romans_questions[qid])
+
+    def test_detect_book_key_romans(self) -> None:
+        """Verifica detección de book_key para Romanos y sus variantes."""
+        spec_rom = {"questions": [{"id": "NQB-NT-ROM-0001", "book": "Romanos"}]}
+        self.assertEqual(detect_book_key(spec_rom), "romans")
+
+        spec_alias = {"questions": [{"id": "NQB-NT-ROM-0001", "book": "romanos"}]}
+        self.assertEqual(detect_book_key(spec_alias), "romans")
+
+        spec_en = {"questions": [{"id": "NQB-NT-ROM-0001", "book": "Romans"}]}
+        self.assertEqual(detect_book_key(spec_en), "romans")
+
+        spec_rom_short = {"questions": [{"id": "NQB-NT-ROM-0001", "book": "rom"}]}
+        self.assertEqual(detect_book_key(spec_rom_short), "romans")
+
+        spec_carta = {"questions": [{"id": "NQB-NT-ROM-0001", "book": "Carta a los Romanos"}]}
+        self.assertEqual(detect_book_key(spec_carta), "romans")
+
+    def test_romans_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de Romanos en BOOK_CONFIGS."""
+        self.assertIn("romans", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["romans"]
+        self.assertEqual(cfg["canonical_name"], "Romanos")
+        self.assertEqual(cfg["api_name"], "Romanos")
+        self.assertEqual(cfg["total_chapters"], 16)
+        self.assertEqual(len(cfg["blocks"]), 2)
+        self.assertIn("romanos", cfg["aliases"])
+        self.assertIn("romans", cfg["aliases"])
+        self.assertIn("rom", cfg["aliases"])
+        self.assertIn("roma", cfg["ambient_places"])
+        self.assertIn("cencrea", cfg["ambient_places"])
+        self.assertIn("espana", cfg["ambient_places"])
+
+    def test_global_canonical_id_reference_integrity_romans(self) -> None:
+        """Verifica consistencia de IDs y referencias en Romanos."""
+        if not self.romans_questions:
+            self.skipTest("romans-master-input.json no disponible")
+        for qid, q in self.romans_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_romans_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de Romanos."""
+        if not self.romans_questions:
+            self.skipTest("romans-master-input.json no disponible")
+        self.assertEqual(len(self.romans_questions), 80)
+        
+        # 5 preguntas por capítulo
+        ch_counts = collections.Counter(q["chapter"] for q in self.romans_questions.values())
+        self.assertEqual(len(ch_counts), 16)
+        for ch in range(1, 17):
+            self.assertEqual(ch_counts[ch], 5, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 5")
+
+        # Dificultad: Básico=22, Intermedio=27, Avanzado=26, Experto=5
+        diff_counts = collections.Counter(q["difficulty"] for q in self.romans_questions.values())
+        self.assertEqual(diff_counts["Básico"], 22)
+        self.assertEqual(diff_counts["Intermedio"], 27)
+        self.assertEqual(diff_counts["Avanzado"], 26)
+        self.assertEqual(diff_counts["Experto"], 5)
+
+        # Tipos: 71 MC, 9 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.romans_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 71)
+        self.assertEqual(type_counts["TRUE_FALSE"], 9)
+
+    def test_romans_additional_references(self) -> None:
+        """Verifica las 13 preguntas con 21 referencias adicionales en Romanos."""
+        if not self.romans_questions:
+            self.skipTest("romans-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-ROM-0003": ["Habacuc 2:4"],
+            "NQB-NT-ROM-0011": ["Salmos 14:1-3", "Salmos 53:1-3"],
+            "NQB-NT-ROM-0016": ["Génesis 15:6"],
+            "NQB-NT-ROM-0018": ["Salmos 32:1-2"],
+            "NQB-NT-ROM-0040": ["Salmos 44:22"],
+            "NQB-NT-ROM-0045": ["Oseas 2:23", "Oseas 1:10", "Isaías 10:22-23", "Isaías 1:9"],
+            "NQB-NT-ROM-0048": ["Deuteronomio 30:12-14"],
+            "NQB-NT-ROM-0049": ["Joel 2:32"],
+            "NQB-NT-ROM-0050": ["Isaías 52:7", "Isaías 53:1"],
+            "NQB-NT-ROM-0052": ["1 Reyes 19:10-18"],
+            "NQB-NT-ROM-0054": ["Isaías 59:20-21"],
+            "NQB-NT-ROM-0060": ["Proverbios 25:21-22"],
+            "NQB-NT-ROM-0073": ["Salmos 18:49", "Deuteronomio 32:43", "Salmos 117:1", "Isaías 11:10"]
+        }
+        found_add_refs = {}
+        for qid, q in self.romans_questions.items():
+            refs = q.get("additional_references", [])
+            if refs:
+                found_add_refs[qid] = refs
+
+        self.assertEqual(len(found_add_refs), 13)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 21)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_romans_modes_and_categories(self) -> None:
+        """Verifica la asignación de modos y categorías sin categorías de Jesús en Romanos."""
+        if not self.romans_questions:
+            self.skipTest("romans-master-input.json no disponible")
+        for qid, q in self.romans_questions.items():
+            cat = q.get("category")
+            self.assertIn(cat, {"NT_GENERAL", "PERSONAJES_BIBLICOS"})
+            self.assertNotIn(cat, {"JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"})
+            modes = q.get("eligible_modes", [])
+            self.assertIn("NT", modes)
+            self.assertIn("AMBOS", modes)
+            if cat == "PERSONAJES_BIBLICOS":
+                self.assertIn("PERSONAJES_NT", modes)
+                self.assertIn("PERSONAJES_AMBOS", modes)
+            if q.get("question_type") == "TRUE_FALSE":
+                self.assertIn("VERDADERO_FALSO_NT", modes)
+                self.assertIn("VERDADERO_FALSO_AMBOS", modes)
+
+    def test_romans_olive_branches_homograph(self) -> None:
+        """Verifica que las ramas del olivo de Romanos 11 no se interpreten como la ciudad Ramá."""
+        self.assertFalse(is_biblical_place_usage("rama", "las ramas desgajadas del olivo"))
+        self.assertFalse(is_biblical_place_usage("rama", "las ramas del olivo silvestre fueron injertadas"))
+        self.assertFalse(is_biblical_place_usage("rama", "la raíz sostiene a las ramas"))
+
+    def test_romans_epistolary_attribution_pablo(self) -> None:
+        """Verifica que 'Pablo afirma/argumenta...' se reconozca como atribución epistolar."""
+        self.assertTrue(is_narrative_source_attribution("pablo", "Pablo argumenta que la fe precede a la circuncisión"))
+        self.assertTrue(is_narrative_source_attribution("pablo", "Pablo concluye que no hay condenación para los creyentes"))
+        self.assertTrue(is_narrative_source_attribution("pablo", "Según expone Pablo en la carta"))
 
 
 if __name__ == "__main__":

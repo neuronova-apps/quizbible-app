@@ -493,6 +493,22 @@ class TestRuntimeExport(unittest.TestCase):
             self.assertEqual(q["book"], "Hechos")
         self.assertTrue(validate_runtime_collection(collection))
 
+    def test_export_romans_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de Romanos al formato runtime."""
+        rom_path = REPO_ROOT / "tools" / "bible_extractor" / "romans-master-input.json"
+        if not rom_path.exists():
+            self.skipTest("romans-master-input.json no encontrado")
+        raw_rom = json.loads(rom_path.read_text(encoding="utf-8"))
+        rom_qs = raw_rom.get("questions", raw_rom)
+        status_map = {q["id"]: "VERIFIED" for q in rom_qs}
+
+        collection = export_canonical_data(rom_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 80)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Romanos")
+        self.assertTrue(validate_runtime_collection(collection))
+
 
 if __name__ == "__main__":
     unittest.main()

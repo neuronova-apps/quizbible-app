@@ -1,0 +1,2395 @@
+{
+  "source": "Quiz Bible master bank - Romanos",
+  "version": "RVR1960",
+  "book": "Romanos",
+  "total_questions": 80,
+  "questions": [
+    {
+      "id": "NQB-NT-ROM-0001",
+      "book": "Romanos",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 7,
+      "reference": "Romanos 1:1-7",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Identidad y llamado de Pablo",
+      "characters": [
+        "Pablo",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo se presenta Pablo al abrir la carta?",
+      "opcion_a": "Como siervo de Jesucristo y llamado a ser apóstol",
+      "opcion_b": "Como gobernador de una provincia",
+      "opcion_c": "Como sacerdote del templo",
+      "opcion_d": "Como discípulo que nunca había predicado",
+      "correct_option": "A",
+      "correct_answer": "Como siervo de Jesucristo y llamado a ser apóstol",
+      "explanation": "Pablo vincula su identidad con el servicio a Jesucristo y con un llamado apostólico orientado al evangelio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0002",
+      "book": "Romanos",
+      "chapter": 1,
+      "verse_start": 16,
+      "verse_end": 17,
+      "reference": "Romanos 1:16-17",
+      "category": "NT_GENERAL",
+      "subcategory": "Poder del evangelio",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué afirma Pablo acerca del evangelio frente a la salvación?",
+      "opcion_a": "Es poder de Dios para salvación de todo el que cree",
+      "opcion_b": "Solo sirve como código moral para Israel",
+      "opcion_c": "Garantiza prosperidad económica inmediata",
+      "opcion_d": "Sustituye toda responsabilidad ética",
+      "correct_option": "A",
+      "correct_answer": "Es poder de Dios para salvación de todo el que cree",
+      "explanation": "El evangelio es presentado como poder de Dios para salvación del creyente, con una apertura que incluye tanto al judío como al griego.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0003",
+      "book": "Romanos",
+      "chapter": 1,
+      "verse_start": 17,
+      "verse_end": 17,
+      "reference": "Romanos 1:17",
+      "category": "NT_GENERAL",
+      "subcategory": "Justicia y fe",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué relación establece Pablo entre la justicia de Dios y la fe?",
+      "opcion_a": "La justicia se revela por fe y conduce a una vida sostenida por la fe",
+      "opcion_b": "La justicia depende exclusivamente del linaje",
+      "opcion_c": "La fe elimina toda conducta responsable",
+      "opcion_d": "La justicia se obtiene por prestigio religioso",
+      "correct_option": "A",
+      "correct_answer": "La justicia se revela por fe y conduce a una vida sostenida por la fe",
+      "explanation": "Pablo conecta la revelación de la justicia de Dios con la fe. La cita profética refuerza la centralidad de una vida que confía en Dios.",
+      "additional_references": [
+        "Habacuc 2:4"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0004",
+      "book": "Romanos",
+      "chapter": 1,
+      "verse_start": 18,
+      "verse_end": 25,
+      "reference": "Romanos 1:18-25",
+      "category": "NT_GENERAL",
+      "subcategory": "Verdad, creación e idolatría",
+      "characters": [
+        "Humanidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué conducta describe Pablo como una distorsión central de la relación con Dios?",
+      "opcion_a": "Cambiar la gloria del Creador por la adoración de lo creado",
+      "opcion_b": "Estudiar cuidadosamente la creación",
+      "opcion_c": "Reconocer límites humanos",
+      "opcion_d": "Usar bienes materiales con gratitud",
+      "correct_option": "A",
+      "correct_answer": "Cambiar la gloria del Creador por la adoración de lo creado",
+      "explanation": "El argumento denuncia la sustitución del Creador por lo creado. No autoriza desprecio o violencia contra personas de otras convicciones.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0005",
+      "book": "Romanos",
+      "chapter": 1,
+      "verse_start": 21,
+      "verse_end": 25,
+      "reference": "Romanos 1:21-25",
+      "category": "NT_GENERAL",
+      "subcategory": "Intercambio idolátrico",
+      "characters": [
+        "Humanidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo describe como sabiduría auténtica sustituir al Creador por imágenes de seres creados",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Pablo presenta ese intercambio como una manifestación de insensatez e idolatría.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0006",
+      "book": "Romanos",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 11,
+      "reference": "Romanos 2:1-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Juicio e imparcialidad",
+      "characters": [
+        "Pablo",
+        "oyentes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio aplica Pablo a quien juzga a otros mientras practica conductas semejantes?",
+      "opcion_a": "Que también queda bajo evaluación y no puede presumir inmunidad",
+      "opcion_b": "Que obtiene autoridad automática para condenar",
+      "opcion_c": "Que su grupo religioso lo exime del juicio",
+      "opcion_d": "Que toda corrección moral queda prohibida",
+      "correct_option": "A",
+      "correct_answer": "Que también queda bajo evaluación y no puede presumir inmunidad",
+      "explanation": "Pablo dirige la crítica contra la doble medida y afirma la imparcialidad del juicio de Dios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0007",
+      "book": "Romanos",
+      "chapter": 2,
+      "verse_start": 12,
+      "verse_end": 16,
+      "reference": "Romanos 2:12-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Conciencia y ley",
+      "characters": [
+        "Gentiles"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función atribuye Pablo a la conciencia de personas que no poseen la ley escrita?",
+      "opcion_a": "Dar testimonio junto con pensamientos que acusan o defienden",
+      "opcion_b": "Sustituir siempre toda norma moral",
+      "opcion_c": "Garantizar que nunca se equivoquen",
+      "opcion_d": "Eliminar la necesidad de rendir cuentas",
+      "correct_option": "A",
+      "correct_answer": "Dar testimonio junto con pensamientos que acusan o defienden",
+      "explanation": "Pablo presenta la conciencia y los pensamientos como testigos internos dentro de su argumento sobre responsabilidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0008",
+      "book": "Romanos",
+      "chapter": 2,
+      "verse_start": 13,
+      "verse_end": 13,
+      "reference": "Romanos 2:13",
+      "category": "NT_GENERAL",
+      "subcategory": "Oír y hacer",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste establece Pablo respecto de la ley?",
+      "opcion_a": "No basta oírla; importa hacer lo que exige",
+      "opcion_b": "Solo importa memorizarla",
+      "opcion_c": "Cumplirla es irrelevante para toda conducta",
+      "opcion_d": "Escucharla garantiza superioridad",
+      "correct_option": "A",
+      "correct_answer": "No basta oírla; importa hacer lo que exige",
+      "explanation": "La carta contrapone la mera audición con la práctica, cuestionando la confianza en privilegios sin coherencia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0009",
+      "book": "Romanos",
+      "chapter": 2,
+      "verse_start": 25,
+      "verse_end": 29,
+      "reference": "Romanos 2:25-29",
+      "category": "NT_GENERAL",
+      "subcategory": "Circuncisión del corazón",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Dónde sitúa Pablo la transformación que verdaderamente busca destacar?",
+      "opcion_a": "En el corazón, por el Espíritu y no solo en una señal externa",
+      "opcion_b": "En la ciudadanía romana",
+      "opcion_c": "En una marca visible impuesta a todos",
+      "opcion_d": "En la posición económica de la persona",
+      "correct_option": "A",
+      "correct_answer": "En el corazón, por el Espíritu y no solo en una señal externa",
+      "explanation": "Pablo desplaza el énfasis desde una señal externa aislada hacia una realidad interior vinculada con el Espíritu.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0010",
+      "book": "Romanos",
+      "chapter": 2,
+      "verse_start": 17,
+      "verse_end": 24,
+      "reference": "Romanos 2:17-24",
+      "category": "NT_GENERAL",
+      "subcategory": "Coherencia del maestro",
+      "characters": [
+        "Pablo",
+        "interlocutor"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo aprueba enseñar principios correctos aunque quien los enseña practique lo contrario",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Pablo utiliza preguntas retóricas para denunciar la incoherencia entre enseñanza y conducta.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0011",
+      "book": "Romanos",
+      "chapter": 3,
+      "verse_start": 9,
+      "verse_end": 18,
+      "reference": "Romanos 3:9-18",
+      "category": "NT_GENERAL",
+      "subcategory": "Universalidad del pecado",
+      "characters": [
+        "Judíos",
+        "gentiles"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué conclusión alcanza Pablo al comparar la situación moral de judíos y gentiles?",
+      "opcion_a": "Que todos están bajo pecado",
+      "opcion_b": "Que un grupo carece totalmente de responsabilidad",
+      "opcion_c": "Que solo los gentiles necesitan gracia",
+      "opcion_d": "Que el origen étnico resuelve el problema humano",
+      "correct_option": "A",
+      "correct_answer": "Que todos están bajo pecado",
+      "explanation": "El argumento universaliza la necesidad humana y evita convertir el pecado en una etiqueta étnica contra un solo grupo.",
+      "additional_references": [
+        "Salmos 14:1-3",
+        "Salmos 53:1-3"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0012",
+      "book": "Romanos",
+      "chapter": 3,
+      "verse_start": 19,
+      "verse_end": 20,
+      "reference": "Romanos 3:19-20",
+      "category": "NT_GENERAL",
+      "subcategory": "Ley y conocimiento del pecado",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función asigna Pablo a la ley dentro de su argumento sobre justificación?",
+      "opcion_a": "Hace reconocer el pecado pero no ofrece base para jactarse ante Dios",
+      "opcion_b": "Convierte automáticamente a quien la posee en justo",
+      "opcion_c": "Elimina toda conciencia de pecado",
+      "opcion_d": "Sirve para demostrar superioridad nacional",
+      "correct_option": "A",
+      "correct_answer": "Hace reconocer el pecado pero no ofrece base para jactarse ante Dios",
+      "explanation": "La ley deja al mundo responsable y hace visible el pecado; Pablo niega que la posesión de la ley sea motivo de jactancia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0013",
+      "book": "Romanos",
+      "chapter": 3,
+      "verse_start": 21,
+      "verse_end": 26,
+      "reference": "Romanos 3:21-26",
+      "category": "NT_GENERAL",
+      "subcategory": "Justicia por la fe",
+      "characters": [
+        "Jesucristo",
+        "creyentes"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo describe Pablo la justicia de Dios que se manifiesta aparte de las obras de la ley?",
+      "opcion_a": "Como accesible por medio de la fe en Jesucristo",
+      "opcion_b": "Como recompensa por riqueza",
+      "opcion_c": "Como privilegio hereditario automático",
+      "opcion_d": "Como reconocimiento por fama pública",
+      "correct_option": "A",
+      "correct_answer": "Como accesible por medio de la fe en Jesucristo",
+      "explanation": "La justicia se presenta como don vinculado con Jesucristo y recibido por fe, no como mérito social.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0014",
+      "book": "Romanos",
+      "chapter": 3,
+      "verse_start": 23,
+      "verse_end": 24,
+      "reference": "Romanos 3:23-24",
+      "category": "NT_GENERAL",
+      "subcategory": "Pecado y gracia",
+      "characters": [
+        "Humanidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos realidades coloca Pablo juntas al hablar de la condición humana y la respuesta de Dios?",
+      "opcion_a": "Todos pecaron y son justificados gratuitamente por su gracia",
+      "opcion_b": "Todos son impecables y no necesitan gracia",
+      "opcion_c": "Solo algunos grupos pecan y otros se justifican solos",
+      "opcion_d": "La gracia se compra mediante obras",
+      "correct_option": "A",
+      "correct_answer": "Todos pecaron y son justificados gratuitamente por su gracia",
+      "explanation": "Pablo une la universalidad del pecado con la gratuidad de la justificación por gracia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0015",
+      "book": "Romanos",
+      "chapter": 3,
+      "verse_start": 27,
+      "verse_end": 31,
+      "reference": "Romanos 3:27-31",
+      "category": "NT_GENERAL",
+      "subcategory": "Boasting y un solo Dios",
+      "characters": [
+        "Judíos",
+        "gentiles"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué consecuencia extrae Pablo de la justificación por fe respecto de la jactancia?",
+      "opcion_a": "Queda excluida, y el mismo Dios justifica a judíos y gentiles por la fe",
+      "opcion_b": "Se reserva para quienes conocen más leyes",
+      "opcion_c": "Se convierte en deber religioso",
+      "opcion_d": "Depende de la nacionalidad",
+      "correct_option": "A",
+      "correct_answer": "Queda excluida, y el mismo Dios justifica a judíos y gentiles por la fe",
+      "explanation": "El argumento elimina la jactancia y afirma a un solo Dios para judíos y gentiles.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0016",
+      "book": "Romanos",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Romanos 4:1-5",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Abraham y la fe",
+      "characters": [
+        "Abraham",
+        "Dios"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué fue contado a Abraham como justicia según el argumento de Pablo?",
+      "opcion_a": "Su fe en Dios",
+      "opcion_b": "Su riqueza acumulada",
+      "opcion_c": "Su poder militar",
+      "opcion_d": "Su pertenencia a Roma",
+      "correct_option": "A",
+      "correct_answer": "Su fe en Dios",
+      "explanation": "Pablo recurre a Abraham para mostrar que la justicia fue acreditada en relación con la fe y no como salario por obras.",
+      "additional_references": [
+        "Génesis 15:6"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0017",
+      "book": "Romanos",
+      "chapter": 4,
+      "verse_start": 9,
+      "verse_end": 12,
+      "reference": "Romanos 4:9-12",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Abraham antes de la circuncisión",
+      "characters": [
+        "Abraham"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué destaca Pablo que Abraham recibió la justicia antes de ser circuncidado?",
+      "opcion_a": "Para mostrar que puede ser padre de creyentes circuncidados y no circuncidados",
+      "opcion_b": "Para negar que Abraham perteneciera a Israel",
+      "opcion_c": "Para afirmar que toda señal corporal es mala",
+      "opcion_d": "Para eliminar la historia del pacto",
+      "correct_option": "A",
+      "correct_answer": "Para mostrar que puede ser padre de creyentes circuncidados y no circuncidados",
+      "explanation": "El orden del relato permite a Pablo presentar a Abraham como padre de creyentes más allá de una sola condición ritual.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0018",
+      "book": "Romanos",
+      "chapter": 4,
+      "verse_start": 6,
+      "verse_end": 8,
+      "reference": "Romanos 4:6-8",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "David y el perdón",
+      "characters": [
+        "David"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué clase de bienaventuranza utiliza Pablo al citar a David?",
+      "opcion_a": "La del perdón y la no imputación del pecado",
+      "opcion_b": "La de obtener poder político",
+      "opcion_c": "La de acumular posesiones",
+      "opcion_d": "La de vencer militarmente a adversarios",
+      "correct_option": "A",
+      "correct_answer": "La del perdón y la no imputación del pecado",
+      "explanation": "Pablo incorpora a David para reforzar la dicha del perdón y de una justicia que no se describe como salario por obras.",
+      "additional_references": [
+        "Salmos 32:1-2"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0019",
+      "book": "Romanos",
+      "chapter": 4,
+      "verse_start": 13,
+      "verse_end": 17,
+      "reference": "Romanos 4:13-17",
+      "category": "NT_GENERAL",
+      "subcategory": "Promesa y fe",
+      "characters": [
+        "Abraham",
+        "descendencia"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué vincula Pablo la promesa con la fe en vez de hacerla depender de la ley?",
+      "opcion_a": "Para que descanse en la gracia y pueda ser firme para toda la descendencia de la fe",
+      "opcion_b": "Para hacerla depender del poder imperial",
+      "opcion_c": "Para restringirla a quienes tienen riqueza",
+      "opcion_d": "Para negar toda responsabilidad moral",
+      "correct_option": "A",
+      "correct_answer": "Para que descanse en la gracia y pueda ser firme para toda la descendencia de la fe",
+      "explanation": "Pablo conecta promesa, fe y gracia para ampliar el alcance del argumento más allá de la confianza en cumplimiento legal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0020",
+      "book": "Romanos",
+      "chapter": 4,
+      "verse_start": 18,
+      "verse_end": 22,
+      "reference": "Romanos 4:18-22",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Esperanza de Abraham",
+      "characters": [
+        "Abraham",
+        "Sara"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la fe de Abraham se presenta como negación de las dificultades reales de su situación",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Pablo menciona las limitaciones reales y, precisamente frente a ellas, describe la confianza de Abraham.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0021",
+      "book": "Romanos",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Romanos 5:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Paz y esperanza",
+      "characters": [
+        "Creyentes",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué resultado inicial relaciona Pablo con haber sido justificados por la fe?",
+      "opcion_a": "Paz con Dios por medio de Jesucristo",
+      "opcion_b": "Ausencia automática de todo sufrimiento",
+      "opcion_c": "Superioridad sobre otros pueblos",
+      "opcion_d": "Riqueza garantizada",
+      "correct_option": "A",
+      "correct_answer": "Paz con Dios por medio de Jesucristo",
+      "explanation": "La justificación se vincula con paz con Dios y acceso a la gracia, no con una promesa de vida sin dificultades.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0022",
+      "book": "Romanos",
+      "chapter": 5,
+      "verse_start": 3,
+      "verse_end": 5,
+      "reference": "Romanos 5:3-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Sufrimiento y esperanza",
+      "characters": [
+        "Creyentes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué secuencia presenta Pablo al hablar de las tribulaciones?",
+      "opcion_a": "Perseverancia, carácter probado y esperanza",
+      "opcion_b": "Ira, venganza y dominio",
+      "opcion_c": "Riqueza, prestigio y poder",
+      "opcion_d": "Silencio, aislamiento y resignación",
+      "correct_option": "A",
+      "correct_answer": "Perseverancia, carácter probado y esperanza",
+      "explanation": "Pablo describe una cadena de perseverancia, carácter probado y esperanza. No convierte el sufrimiento injusto en algo que deba buscarse o tolerarse sin protección.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0023",
+      "book": "Romanos",
+      "chapter": 5,
+      "verse_start": 6,
+      "verse_end": 11,
+      "reference": "Romanos 5:6-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Amor demostrado en Cristo",
+      "characters": [
+        "Jesucristo",
+        "pecadores"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿En qué condición humana sitúa Pablo la muerte de Cristo como demostración del amor de Dios?",
+      "opcion_a": "Cuando aún éramos pecadores",
+      "opcion_b": "Cuando ya habíamos alcanzado perfección",
+      "opcion_c": "Cuando todos poseíamos la ley",
+      "opcion_d": "Cuando la humanidad había dejado de necesitar reconciliación",
+      "correct_option": "A",
+      "correct_answer": "Cuando aún éramos pecadores",
+      "explanation": "La iniciativa divina se presenta antes del mérito humano, subrayando gracia y reconciliación.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0024",
+      "book": "Romanos",
+      "chapter": 5,
+      "verse_start": 12,
+      "verse_end": 19,
+      "reference": "Romanos 5:12-19",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Adán y Cristo",
+      "characters": [
+        "Adán",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste desarrolla Pablo entre Adán y Cristo?",
+      "opcion_a": "La transgresión introduce condenación y la obra de Cristo abre justificación y vida",
+      "opcion_b": "Ambos cumplen exactamente la misma función",
+      "opcion_c": "Adán ofrece salvación y Cristo introduce pecado",
+      "opcion_d": "El contraste se refiere solo a diferencias culturales",
+      "correct_option": "A",
+      "correct_answer": "La transgresión introduce condenación y la obra de Cristo abre justificación y vida",
+      "explanation": "Pablo construye una comparación representativa entre el efecto del pecado de Adán y la abundancia de gracia vinculada con Cristo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0025",
+      "book": "Romanos",
+      "chapter": 5,
+      "verse_start": 20,
+      "verse_end": 21,
+      "reference": "Romanos 5:20-21",
+      "category": "NT_GENERAL",
+      "subcategory": "Abundancia de la gracia",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué afirma Pablo sobre la relación entre el aumento del pecado y la gracia?",
+      "opcion_a": "Que la gracia sobreabunda y reina para vida por Jesucristo",
+      "opcion_b": "Que el pecado obliga a Dios a abandonar toda gracia",
+      "opcion_c": "Que la gracia convierte el pecado en algo deseable",
+      "opcion_d": "Que la ley deja de tener cualquier función histórica",
+      "correct_option": "A",
+      "correct_answer": "Que la gracia sobreabunda y reina para vida por Jesucristo",
+      "explanation": "La sobreabundancia de gracia no es una invitación a pecar; el argumento conduce hacia una vida nueva.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0026",
+      "book": "Romanos",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Romanos 6:1-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Bautismo y vida nueva",
+      "characters": [
+        "Creyentes",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué finalidad ética conecta Pablo con la unión con la muerte de Cristo?",
+      "opcion_a": "Andar en una vida nueva",
+      "opcion_b": "Permanecer deliberadamente en el pecado",
+      "opcion_c": "Obtener autoridad sobre otras personas",
+      "opcion_d": "Evitar toda responsabilidad comunitaria",
+      "correct_option": "A",
+      "correct_answer": "Andar en una vida nueva",
+      "explanation": "Pablo responde a la idea de continuar en pecado vinculando la unión con Cristo a una vida transformada.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0027",
+      "book": "Romanos",
+      "chapter": 6,
+      "verse_start": 5,
+      "verse_end": 11,
+      "reference": "Romanos 6:5-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Viejo ser y pecado",
+      "characters": [
+        "Creyentes",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué propósito atribuye Pablo a la crucifixión del viejo ser con Cristo?",
+      "opcion_a": "Que el cuerpo dominado por el pecado pierda su poder esclavizante",
+      "opcion_b": "Que desaparezca la personalidad humana",
+      "opcion_c": "Que el cuerpo físico sea considerado malo",
+      "opcion_d": "Que se elimine toda posibilidad de tentación",
+      "correct_option": "A",
+      "correct_answer": "Que el cuerpo dominado por el pecado pierda su poder esclavizante",
+      "explanation": "El lenguaje apunta a la ruptura del dominio del pecado, no al desprecio del cuerpo o de la identidad personal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0028",
+      "book": "Romanos",
+      "chapter": 6,
+      "verse_start": 11,
+      "verse_end": 14,
+      "reference": "Romanos 6:11-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Muertos al pecado y vivos para Dios",
+      "characters": [
+        "Creyentes"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo pide Pablo que los creyentes se consideren a sí mismos?",
+      "opcion_a": "Muertos al pecado y vivos para Dios en Cristo",
+      "opcion_b": "Incapaces de tomar decisiones morales",
+      "opcion_c": "Libres de toda obligación hacia otros",
+      "opcion_d": "Superiores a quienes aún luchan con el pecado",
+      "correct_option": "A",
+      "correct_answer": "Muertos al pecado y vivos para Dios en Cristo",
+      "explanation": "La nueva identidad se expresa como una orientación hacia Dios y una ruptura con el dominio del pecado.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0029",
+      "book": "Romanos",
+      "chapter": 6,
+      "verse_start": 12,
+      "verse_end": 19,
+      "reference": "Romanos 6:12-19",
+      "category": "NT_GENERAL",
+      "subcategory": "Presentar el cuerpo a Dios",
+      "characters": [
+        "Creyentes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué alternativa ofrece Pablo a presentar los miembros del cuerpo al pecado?",
+      "opcion_a": "Presentarlos a Dios como instrumentos de justicia",
+      "opcion_b": "Ignorar por completo el cuerpo",
+      "opcion_c": "Usarlos para dominar a otros",
+      "opcion_d": "Considerar que las acciones físicas carecen de importancia",
+      "correct_option": "A",
+      "correct_answer": "Presentarlos a Dios como instrumentos de justicia",
+      "explanation": "Pablo conecta la gracia con una entrega concreta de la vida y del cuerpo al servicio de la justicia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0030",
+      "book": "Romanos",
+      "chapter": 6,
+      "verse_start": 20,
+      "verse_end": 23,
+      "reference": "Romanos 6:20-23",
+      "category": "NT_GENERAL",
+      "subcategory": "Salario y regalo",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo presenta la vida eterna como salario merecido por el ser humano",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Pablo contrasta el salario del pecado con el don gratuito de Dios en Jesucristo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0031",
+      "book": "Romanos",
+      "chapter": 7,
+      "verse_start": 7,
+      "verse_end": 8,
+      "reference": "Romanos 7:7-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Ley y conocimiento del deseo",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo responde Pablo a la pregunta de si la ley misma es pecado?",
+      "opcion_a": "La niega y explica que la ley hace conocer el pecado",
+      "opcion_b": "La afirma sin matices",
+      "opcion_c": "Dice que toda norma moral debe eliminarse",
+      "opcion_d": "Sostiene que la ley solo produce virtud",
+      "correct_option": "A",
+      "correct_answer": "La niega y explica que la ley hace conocer el pecado",
+      "explanation": "Pablo distingue entre la ley y el pecado: la ley puede hacer visible el deseo pecaminoso sin ser identificada con él.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0032",
+      "book": "Romanos",
+      "chapter": 7,
+      "verse_start": 8,
+      "verse_end": 13,
+      "reference": "Romanos 7:8-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Pecado y mandamiento",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hace el pecado, según la explicación de Pablo, al aprovechar el mandamiento?",
+      "opcion_a": "Lo utiliza como ocasión para engañar y producir muerte",
+      "opcion_b": "Lo transforma automáticamente en salvación",
+      "opcion_c": "Elimina toda responsabilidad personal",
+      "opcion_d": "Convierte el mal en una virtud",
+      "correct_option": "A",
+      "correct_answer": "Lo utiliza como ocasión para engañar y producir muerte",
+      "explanation": "El problema se sitúa en el pecado que se aprovecha del mandamiento, no en una supuesta maldad intrínseca de la ley.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0033",
+      "book": "Romanos",
+      "chapter": 7,
+      "verse_start": 12,
+      "verse_end": 13,
+      "reference": "Romanos 7:12-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Carácter de la ley",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo califica Pablo la ley y el mandamiento?",
+      "opcion_a": "Santos, justos y buenos",
+      "opcion_b": "Inútiles y perversos",
+      "opcion_c": "Políticamente neutrales pero moralmente vacíos",
+      "opcion_d": "Exclusivamente temporales y sin valor",
+      "correct_option": "A",
+      "correct_answer": "Santos, justos y buenos",
+      "explanation": "Pablo protege explícitamente el carácter positivo de la ley mientras explica cómo el pecado produce muerte.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0034",
+      "book": "Romanos",
+      "chapter": 7,
+      "verse_start": 14,
+      "verse_end": 20,
+      "reference": "Romanos 7:14-20",
+      "category": "NT_GENERAL",
+      "subcategory": "Conflicto con el pecado",
+      "characters": [
+        "Pablo",
+        "ser humano"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tensión describe Pablo al hablar de hacer lo que no desea?",
+      "opcion_a": "Un conflicto entre el deseo de hacer el bien y el poder del pecado",
+      "opcion_b": "Una pérdida inevitable de toda responsabilidad",
+      "opcion_c": "Una enfermedad que diagnostica a todos los lectores",
+      "opcion_d": "Una autorización para justificar cualquier conducta",
+      "correct_option": "A",
+      "correct_answer": "Un conflicto entre el deseo de hacer el bien y el poder del pecado",
+      "explanation": "El pasaje dramatiza una lucha moral profunda. No debe convertirse en diagnóstico clínico ni en excusa para dañar a otros.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0035",
+      "book": "Romanos",
+      "chapter": 7,
+      "verse_start": 21,
+      "verse_end": 25,
+      "reference": "Romanos 7:21-25",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Clamor y liberación",
+      "characters": [
+        "Pablo",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Hacia quién dirige Pablo su agradecimiento cuando pregunta quién lo librará de esa condición?",
+      "opcion_a": "Hacia Dios por medio de Jesucristo",
+      "opcion_b": "Hacia el poder militar de Roma",
+      "opcion_c": "Hacia su propio esfuerzo aislado",
+      "opcion_d": "Hacia una élite religiosa",
+      "correct_option": "A",
+      "correct_answer": "Hacia Dios por medio de Jesucristo",
+      "explanation": "El clímax del argumento responde al clamor con gratitud a Dios por medio de Jesucristo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0036",
+      "book": "Romanos",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Romanos 8:1-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Sin condenación en Cristo",
+      "characters": [
+        "Creyentes",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué declaración abre el desarrollo sobre la vida en el Espíritu?",
+      "opcion_a": "No hay condenación para quienes están en Cristo Jesús",
+      "opcion_b": "Toda dificultad desaparece de inmediato",
+      "opcion_c": "Los creyentes dejan de necesitar discernimiento",
+      "opcion_d": "La ley civil deja de aplicarse",
+      "correct_option": "A",
+      "correct_answer": "No hay condenación para quienes están en Cristo Jesús",
+      "explanation": "Pablo abre con una declaración de no condenación vinculada con Cristo y con la acción liberadora del Espíritu.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0037",
+      "book": "Romanos",
+      "chapter": 8,
+      "verse_start": 5,
+      "verse_end": 11,
+      "reference": "Romanos 8:5-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Mente y Espíritu",
+      "characters": [
+        "Creyentes",
+        "Espíritu Santo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste establece Pablo entre la orientación de la carne y la del Espíritu?",
+      "opcion_a": "Una conduce a muerte y la otra a vida y paz",
+      "opcion_b": "Ambas producen exactamente el mismo resultado",
+      "opcion_c": "La del Espíritu elimina toda responsabilidad corporal",
+      "opcion_d": "La de la carne se refiere solo a alimentación",
+      "correct_option": "A",
+      "correct_answer": "Una conduce a muerte y la otra a vida y paz",
+      "explanation": "El contraste describe orientaciones de vida, no una condena del cuerpo físico como creación.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0038",
+      "book": "Romanos",
+      "chapter": 8,
+      "verse_start": 14,
+      "verse_end": 17,
+      "reference": "Romanos 8:14-17",
+      "category": "NT_GENERAL",
+      "subcategory": "Adopción y Espíritu",
+      "characters": [
+        "Creyentes",
+        "Espíritu Santo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué identidad relaciona Pablo con ser guiados por el Espíritu de Dios?",
+      "opcion_a": "Ser hijos de Dios y recibir un Espíritu de adopción",
+      "opcion_b": "Ser gobernantes civiles",
+      "opcion_c": "Ser inmunes a todo sufrimiento",
+      "opcion_d": "Ser superiores por origen étnico",
+      "correct_option": "A",
+      "correct_answer": "Ser hijos de Dios y recibir un Espíritu de adopción",
+      "explanation": "La imagen de adopción comunica pertenencia y relación filial con Dios, no jerarquía humana.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0039",
+      "book": "Romanos",
+      "chapter": 8,
+      "verse_start": 18,
+      "verse_end": 25,
+      "reference": "Romanos 8:18-25",
+      "category": "NT_GENERAL",
+      "subcategory": "Creación y esperanza",
+      "characters": [
+        "Creación",
+        "creyentes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo describe Pablo la situación de la creación mientras espera su liberación?",
+      "opcion_a": "Gime y espera junto con los creyentes una futura libertad",
+      "opcion_b": "Ya alcanzó plenamente su estado final",
+      "opcion_c": "Carece de relación con la redención",
+      "opcion_d": "Debe ser abandonada por considerarse mala",
+      "correct_option": "A",
+      "correct_answer": "Gime y espera junto con los creyentes una futura libertad",
+      "explanation": "Pablo usa la imagen del gemido para expresar sufrimiento presente y esperanza futura tanto en la creación como en los creyentes.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0040",
+      "book": "Romanos",
+      "chapter": 8,
+      "verse_start": 31,
+      "verse_end": 39,
+      "reference": "Romanos 8:31-39",
+      "category": "NT_GENERAL",
+      "subcategory": "Seguridad en el amor de Dios",
+      "characters": [
+        "Creyentes",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo considera que la adversidad puede separar definitivamente al creyente del amor de Dios en Cristo",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. El cierre del pasaje insiste en que ninguna de las realidades enumeradas puede separar del amor de Dios en Cristo.",
+      "additional_references": [
+        "Salmos 44:22"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0041",
+      "book": "Romanos",
+      "chapter": 9,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Romanos 9:1-5",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Dolor de Pablo por Israel",
+      "characters": [
+        "Pablo",
+        "Israel"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitud expresa Pablo al comenzar su reflexión sobre Israel?",
+      "opcion_a": "Gran tristeza y continuo dolor por sus compatriotas",
+      "opcion_b": "Desprecio por su propio pueblo",
+      "opcion_c": "Indiferencia completa",
+      "opcion_d": "Deseo de borrar la historia de Israel",
+      "correct_option": "A",
+      "correct_answer": "Gran tristeza y continuo dolor por sus compatriotas",
+      "explanation": "Pablo inicia esta sección con dolor y solidaridad, lo que impide leer el argumento como desprecio étnico hacia Israel.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0042",
+      "book": "Romanos",
+      "chapter": 9,
+      "verse_start": 4,
+      "verse_end": 5,
+      "reference": "Romanos 9:4-5",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Privilegios de Israel",
+      "characters": [
+        "Israel",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cuál de estas realidades incluye Pablo entre los dones asociados históricamente con Israel?",
+      "opcion_a": "Los pactos, la ley, el culto y las promesas",
+      "opcion_b": "El control permanente del Imperio romano",
+      "opcion_c": "La ausencia total de sufrimiento",
+      "opcion_d": "La superioridad moral automática de cada individuo",
+      "correct_option": "A",
+      "correct_answer": "Los pactos, la ley, el culto y las promesas",
+      "explanation": "Pablo enumera privilegios históricos y teológicos de Israel sin convertirlos en garantía automática sobre cada persona.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0043",
+      "book": "Romanos",
+      "chapter": 9,
+      "verse_start": 6,
+      "verse_end": 13,
+      "reference": "Romanos 9:6-13",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Promesa e Isaac",
+      "characters": [
+        "Abraham",
+        "Isaac",
+        "Jacob",
+        "Esaú"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué distinción introduce Pablo al hablar de la descendencia de Abraham?",
+      "opcion_a": "Distingue entre descendencia física y los hijos vinculados con la promesa",
+      "opcion_b": "Niega que Abraham tuviera descendencia real",
+      "opcion_c": "Afirma que el linaje físico carece de toda importancia histórica",
+      "opcion_d": "Sostiene que solo Roma hereda las promesas",
+      "correct_option": "A",
+      "correct_answer": "Distingue entre descendencia física y los hijos vinculados con la promesa",
+      "explanation": "Pablo usa las historias patriarcales para argumentar sobre promesa y propósito divino, no para legitimar jerarquías étnicas modernas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0044",
+      "book": "Romanos",
+      "chapter": 9,
+      "verse_start": 14,
+      "verse_end": 24,
+      "reference": "Romanos 9:14-24",
+      "category": "NT_GENERAL",
+      "subcategory": "Misericordia y libertad divina",
+      "characters": [
+        "Dios",
+        "humanidad"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué aspecto de Dios enfatiza Pablo mediante las imágenes de misericordia y del alfarero?",
+      "opcion_a": "La libertad de Dios para mostrar misericordia y realizar su propósito",
+      "opcion_b": "La autorización humana para tratar a otros como objetos",
+      "opcion_c": "La superioridad política de un pueblo",
+      "opcion_d": "La inutilidad de toda responsabilidad moral",
+      "correct_option": "A",
+      "correct_answer": "La libertad de Dios para mostrar misericordia y realizar su propósito",
+      "explanation": "El argumento resalta la soberanía y misericordia de Dios. La metáfora del alfarero no autoriza deshumanizar, manipular o abusar de personas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0045",
+      "book": "Romanos",
+      "chapter": 9,
+      "verse_start": 25,
+      "verse_end": 33,
+      "reference": "Romanos 9:25-33",
+      "category": "NT_GENERAL",
+      "subcategory": "Gentiles, remanente y fe",
+      "characters": [
+        "Gentiles",
+        "Israel"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste utiliza Pablo al cerrar esta parte del argumento?",
+      "opcion_a": "Gentiles alcanzan justicia por fe mientras Israel tropieza al perseguirla como si dependiera de obras",
+      "opcion_b": "Israel queda borrado definitivamente del propósito de Dios",
+      "opcion_c": "Los gentiles son superiores por naturaleza",
+      "opcion_d": "La fe elimina toda continuidad con las Escrituras",
+      "correct_option": "A",
+      "correct_answer": "Gentiles alcanzan justicia por fe mientras Israel tropieza al perseguirla como si dependiera de obras",
+      "explanation": "Pablo combina citas proféticas para explicar la inclusión de gentiles y la existencia de un remanente, sin concluir que Dios haya rechazado étnicamente a Israel.",
+      "additional_references": [
+        "Oseas 2:23",
+        "Oseas 1:10",
+        "Isaías 10:22-23",
+        "Isaías 1:9"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0046",
+      "book": "Romanos",
+      "chapter": 10,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Romanos 10:1-4",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Deseo de Pablo por Israel",
+      "characters": [
+        "Pablo",
+        "Israel",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué desea Pablo para Israel al iniciar esta sección?",
+      "opcion_a": "Su salvación",
+      "opcion_b": "Su desaparición como pueblo",
+      "opcion_c": "Su derrota militar",
+      "opcion_d": "Su aislamiento de los gentiles",
+      "correct_option": "A",
+      "correct_answer": "Su salvación",
+      "explanation": "Pablo expresa un deseo y oración por la salvación de Israel, lo que mantiene el tono pastoral del argumento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0047",
+      "book": "Romanos",
+      "chapter": 10,
+      "verse_start": 4,
+      "verse_end": 4,
+      "reference": "Romanos 10:4",
+      "category": "NT_GENERAL",
+      "subcategory": "Cristo y la ley",
+      "characters": [
+        "Jesucristo",
+        "creyentes"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función atribuye Pablo a Cristo en relación con la ley y la justicia?",
+      "opcion_a": "Lo presenta como meta o culminación de la ley para justicia de todo creyente",
+      "opcion_b": "Lo presenta como negación de toda Escritura previa",
+      "opcion_c": "Lo convierte en sustituto de toda ética",
+      "opcion_d": "Lo limita a una función política",
+      "correct_option": "A",
+      "correct_answer": "Lo presenta como meta o culminación de la ley para justicia de todo creyente",
+      "explanation": "La palabra usada puede expresar finalidad o culminación; el punto del pasaje es la justicia para quien cree, no el desprecio de la ley o de Israel.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0048",
+      "book": "Romanos",
+      "chapter": 10,
+      "verse_start": 6,
+      "verse_end": 10,
+      "reference": "Romanos 10:6-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Palabra cercana y confesión",
+      "characters": [
+        "Creyentes",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos dimensiones reúne Pablo al describir la respuesta de fe?",
+      "opcion_a": "Creer con el corazón y confesar con la boca a Jesús como Señor",
+      "opcion_b": "Acumular conocimiento y evitar toda confesión",
+      "opcion_c": "Pertenecer a un grupo étnico y poseer riqueza",
+      "opcion_d": "Viajar a Jerusalén y cumplir una hazaña imposible",
+      "correct_option": "A",
+      "correct_answer": "Creer con el corazón y confesar con la boca a Jesús como Señor",
+      "explanation": "Pablo adapta el lenguaje de una palabra cercana para destacar una respuesta accesible de fe y confesión.",
+      "additional_references": [
+        "Deuteronomio 30:12-14"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0049",
+      "book": "Romanos",
+      "chapter": 10,
+      "verse_start": 11,
+      "verse_end": 13,
+      "reference": "Romanos 10:11-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Un mismo Señor para todos",
+      "characters": [
+        "Judíos",
+        "griegos",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué afirma Pablo sobre quienes invocan al Señor?",
+      "opcion_a": "Todo el que invoque su nombre será salvo",
+      "opcion_b": "Solo un grupo étnico puede hacerlo",
+      "opcion_c": "La invocación sustituye toda confianza",
+      "opcion_d": "La salvación depende de ciudadanía romana",
+      "correct_option": "A",
+      "correct_answer": "Todo el que invoque su nombre será salvo",
+      "explanation": "Pablo elimina una distinción de acceso entre judío y griego y aplica una promesa profética a todos los que invocan al Señor.",
+      "additional_references": [
+        "Joel 2:32"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0050",
+      "book": "Romanos",
+      "chapter": 10,
+      "verse_start": 14,
+      "verse_end": 17,
+      "reference": "Romanos 10:14-17",
+      "category": "NT_GENERAL",
+      "subcategory": "Anuncio y escucha",
+      "characters": [
+        "Mensajeros",
+        "oyentes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cadena lógica utiliza Pablo para explicar la expansión del mensaje?",
+      "opcion_a": "Invocar requiere creer, creer requiere oír y oír requiere anuncio",
+      "opcion_b": "Oír elimina la necesidad de comprender",
+      "opcion_c": "Anunciar garantiza automáticamente aceptación",
+      "opcion_d": "Creer ocurre sin contacto alguno con el mensaje",
+      "correct_option": "A",
+      "correct_answer": "Invocar requiere creer, creer requiere oír y oír requiere anuncio",
+      "explanation": "La secuencia subraya la importancia del anuncio para que el mensaje pueda ser oído y respondido.",
+      "additional_references": [
+        "Isaías 52:7",
+        "Isaías 53:1"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0051",
+      "book": "Romanos",
+      "chapter": 11,
+      "verse_start": 1,
+      "verse_end": 6,
+      "reference": "Romanos 11:1-6",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Pablo e Israel",
+      "characters": [
+        "Pablo",
+        "Israel",
+        "Abraham",
+        "Benjamín"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué respuesta da Pablo a la pregunta de si Dios rechazó a su pueblo?",
+      "opcion_a": "La rechaza y se presenta a sí mismo como israelita",
+      "opcion_b": "La acepta sin reservas",
+      "opcion_c": "Afirma que Israel dejó de existir",
+      "opcion_d": "Dice que solo los gentiles pueden pertenecer a Dios",
+      "correct_option": "A",
+      "correct_answer": "La rechaza y se presenta a sí mismo como israelita",
+      "explanation": "Pablo niega explícitamente que Dios haya rechazado a su pueblo y usa su propia identidad israelita como parte del argumento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0052",
+      "book": "Romanos",
+      "chapter": 11,
+      "verse_start": 2,
+      "verse_end": 6,
+      "reference": "Romanos 11:2-6",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Elías y el remanente",
+      "characters": [
+        "Elías",
+        "Israel"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ejemplo utiliza Pablo para explicar la existencia de un remanente por gracia?",
+      "opcion_a": "La experiencia de Elías cuando creía estar solo",
+      "opcion_b": "La construcción del arca de Noé",
+      "opcion_c": "La conquista de Jericó",
+      "opcion_d": "La coronación de Saúl",
+      "correct_option": "A",
+      "correct_answer": "La experiencia de Elías cuando creía estar solo",
+      "explanation": "Pablo recuerda que en tiempos de Elías Dios preservó un remanente, y lo aplica a su argumento sobre gracia.",
+      "additional_references": [
+        "1 Reyes 19:10-18"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0053",
+      "book": "Romanos",
+      "chapter": 11,
+      "verse_start": 11,
+      "verse_end": 24,
+      "reference": "Romanos 11:11-24",
+      "category": "NT_GENERAL",
+      "subcategory": "Olivo e injerto",
+      "characters": [
+        "Israel",
+        "gentiles"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitud exige Pablo a las ramas provenientes de los gentiles dentro de la imagen del olivo?",
+      "opcion_a": "No jactarse sobre las otras ramas y permanecer en la fe",
+      "opcion_b": "Considerarse superiores por naturaleza",
+      "opcion_c": "Romper toda relación con la raíz",
+      "opcion_d": "Despreciar a quienes fueron desgajados",
+      "correct_option": "A",
+      "correct_answer": "No jactarse sobre las otras ramas y permanecer en la fe",
+      "explanation": "La imagen del olivo funciona como advertencia contra la arrogancia gentil y presupone dependencia de una raíz que no les pertenece por mérito propio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0054",
+      "book": "Romanos",
+      "chapter": 11,
+      "verse_start": 25,
+      "verse_end": 32,
+      "reference": "Romanos 11:25-32",
+      "category": "NT_GENERAL",
+      "subcategory": "Misterio sobre Israel y gentiles",
+      "characters": [
+        "Israel",
+        "gentiles"
+      ],
+      "difficulty": "Experto",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo ofrece un calendario fechado para calcular el momento exacto del cumplimiento de su esperanza respecto de Israel",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Pablo habla de un misterio y de una dinámica entre Israel y los gentiles, no proporciona un cronograma moderno para fijar fechas.",
+      "additional_references": [
+        "Isaías 59:20-21"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0055",
+      "book": "Romanos",
+      "chapter": 11,
+      "verse_start": 33,
+      "verse_end": 36,
+      "reference": "Romanos 11:33-36",
+      "category": "NT_GENERAL",
+      "subcategory": "Doxología",
+      "characters": [
+        "Dios"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo concluye Pablo su reflexión sobre los caminos de Dios?",
+      "opcion_a": "Con una doxología que reconoce la profundidad de su sabiduría y que todo procede de él",
+      "opcion_b": "Con una fórmula para dominar sus decisiones",
+      "opcion_c": "Con una cronología política detallada",
+      "opcion_d": "Con una declaración de que todo misterio ya fue agotado",
+      "correct_option": "A",
+      "correct_answer": "Con una doxología que reconoce la profundidad de su sabiduría y que todo procede de él",
+      "explanation": "La sección termina en adoración y reconocimiento de límites humanos ante la sabiduría de Dios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0056",
+      "book": "Romanos",
+      "chapter": 12,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "Romanos 12:1-2",
+      "category": "NT_GENERAL",
+      "subcategory": "Culto y transformación",
+      "characters": [
+        "Creyentes"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué respuesta pide Pablo ante las misericordias de Dios?",
+      "opcion_a": "Ofrecer la vida a Dios y ser transformados mediante la renovación de la mente",
+      "opcion_b": "Buscar prestigio religioso",
+      "opcion_c": "Copiar sin discernimiento los valores del entorno",
+      "opcion_d": "Retirarse de toda responsabilidad social",
+      "correct_option": "A",
+      "correct_answer": "Ofrecer la vida a Dios y ser transformados mediante la renovación de la mente",
+      "explanation": "El culto razonable se conecta con una vida entregada y una mente renovada, no con conformidad automática al entorno.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0057",
+      "book": "Romanos",
+      "chapter": 12,
+      "verse_start": 3,
+      "verse_end": 8,
+      "reference": "Romanos 12:3-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Cuerpo y dones",
+      "characters": [
+        "Comunidad",
+        "creyentes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio acompaña la diversidad de dones en la comunidad?",
+      "opcion_a": "Pensar con sobriedad y reconocer que muchos miembros forman un solo cuerpo",
+      "opcion_b": "Competir para demostrar superioridad",
+      "opcion_c": "Usar los dones para controlar a otros",
+      "opcion_d": "Considerar inútiles los dones menos visibles",
+      "correct_option": "A",
+      "correct_answer": "Pensar con sobriedad y reconocer que muchos miembros forman un solo cuerpo",
+      "explanation": "Pablo combina diversidad de funciones con humildad y pertenencia mutua.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0058",
+      "book": "Romanos",
+      "chapter": 12,
+      "verse_start": 9,
+      "verse_end": 13,
+      "reference": "Romanos 12:9-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Amor práctico",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué rasgo caracteriza el amor que Pablo pide a la comunidad?",
+      "opcion_a": "Que sea sincero y se exprese en honor, servicio y hospitalidad",
+      "opcion_b": "Que dependa del rango social",
+      "opcion_c": "Que se limite a palabras públicas",
+      "opcion_d": "Que evite toda ayuda concreta",
+      "correct_option": "A",
+      "correct_answer": "Que sea sincero y se exprese en honor, servicio y hospitalidad",
+      "explanation": "La exhortación reúne sinceridad, afecto, servicio, esperanza y hospitalidad en una ética comunitaria concreta.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0059",
+      "book": "Romanos",
+      "chapter": 12,
+      "verse_start": 14,
+      "verse_end": 19,
+      "reference": "Romanos 12:14-19",
+      "category": "NT_GENERAL",
+      "subcategory": "Respuesta a la hostilidad",
+      "characters": [
+        "Creyentes",
+        "perseguidores"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué conducta propone Pablo frente a persecución y mal recibido?",
+      "opcion_a": "Bendecir, procurar lo bueno y no tomar venganza personal",
+      "opcion_b": "Responder siempre con represalia",
+      "opcion_c": "Buscar humillar públicamente al agresor",
+      "opcion_d": "Negar que el daño exista",
+      "correct_option": "A",
+      "correct_answer": "Bendecir, procurar lo bueno y no tomar venganza personal",
+      "explanation": "Pablo rechaza la venganza personal y orienta hacia bendición y paz cuando sea posible. Esto no exige permanecer en situaciones abusivas sin buscar protección.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0060",
+      "book": "Romanos",
+      "chapter": 12,
+      "verse_start": 20,
+      "verse_end": 21,
+      "reference": "Romanos 12:20-21",
+      "category": "NT_GENERAL",
+      "subcategory": "Vencer el mal con el bien",
+      "characters": [
+        "Creyentes",
+        "enemigos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué acción concreta acompaña la exhortación a vencer el mal con el bien?",
+      "opcion_a": "Dar comida o bebida al enemigo que lo necesite",
+      "opcion_b": "Privarlo de ayuda básica",
+      "opcion_c": "Imitar su conducta dañina",
+      "opcion_d": "Buscar una represalia equivalente",
+      "correct_option": "A",
+      "correct_answer": "Dar comida o bebida al enemigo que lo necesite",
+      "explanation": "Pablo cita sabiduría bíblica para sustituir la represalia por acciones de bien hacia quien está en necesidad.",
+      "additional_references": [
+        "Proverbios 25:21-22"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0061",
+      "book": "Romanos",
+      "chapter": 13,
+      "verse_start": 1,
+      "verse_end": 7,
+      "reference": "Romanos 13:1-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Autoridades y orden civil",
+      "characters": [
+        "Creyentes",
+        "autoridades"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué idea básica presenta Pablo al hablar de las autoridades gobernantes?",
+      "opcion_a": "Que la autoridad civil cumple una función de orden bajo la soberanía de Dios",
+      "opcion_b": "Que toda decisión estatal es moralmente perfecta",
+      "opcion_c": "Que ningún gobernante puede actuar injustamente",
+      "opcion_d": "Que obedecer al Estado reemplaza la obediencia a Dios",
+      "correct_option": "A",
+      "correct_answer": "Que la autoridad civil cumple una función de orden bajo la soberanía de Dios",
+      "explanation": "Pablo describe una función de orden y responsabilidad civil. El pasaje no convierte en moralmente correcta toda acción de cualquier gobierno.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0062",
+      "book": "Romanos",
+      "chapter": 13,
+      "verse_start": 3,
+      "verse_end": 7,
+      "reference": "Romanos 13:3-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Función pública y responsabilidad",
+      "characters": [
+        "Autoridades",
+        "ciudadanos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el pasaje obliga a considerar justa cualquier acción realizada por una autoridad simplemente porque ocupa un cargo",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Pablo describe una función orientada al bien y al control del mal, no una aprobación automática de cada decisión de un gobernante.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0063",
+      "book": "Romanos",
+      "chapter": 13,
+      "verse_start": 6,
+      "verse_end": 7,
+      "reference": "Romanos 13:6-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Tributos y honor",
+      "characters": [
+        "Creyentes",
+        "autoridades"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué responsabilidades civiles menciona Pablo de manera explícita?",
+      "opcion_a": "Pagar tributos y dar respeto u honor según corresponda",
+      "opcion_b": "Negarse siempre a toda obligación fiscal",
+      "opcion_c": "Adorar a quien gobierna",
+      "opcion_d": "Abandonar toda participación comunitaria",
+      "correct_option": "A",
+      "correct_answer": "Pagar tributos y dar respeto u honor según corresponda",
+      "explanation": "Pablo menciona tributos, impuestos, respeto y honor dentro de su exhortación sobre responsabilidades públicas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0064",
+      "book": "Romanos",
+      "chapter": 13,
+      "verse_start": 8,
+      "verse_end": 10,
+      "reference": "Romanos 13:8-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Amor y cumplimiento",
+      "characters": [
+        "Creyentes",
+        "prójimo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué deuda dice Pablo que debe permanecer en la relación con los demás?",
+      "opcion_a": "Amarse unos a otros",
+      "opcion_b": "Competir por prestigio",
+      "opcion_c": "Buscar venganza",
+      "opcion_d": "Exigir sumisión personal",
+      "correct_option": "A",
+      "correct_answer": "Amarse unos a otros",
+      "explanation": "Pablo presenta el amor al prójimo como resumen ético que evita hacer daño al otro.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0065",
+      "book": "Romanos",
+      "chapter": 13,
+      "verse_start": 11,
+      "verse_end": 14,
+      "reference": "Romanos 13:11-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Despertar y revestirse de Cristo",
+      "characters": [
+        "Creyentes",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué imagen usa Pablo para llamar a una vida coherente ante la cercanía de la salvación?",
+      "opcion_a": "Despertar del sueño y revestirse del Señor Jesucristo",
+      "opcion_b": "Acumular provisiones de lujo",
+      "opcion_c": "Buscar aislamiento absoluto",
+      "opcion_d": "Adoptar una identidad militar",
+      "correct_option": "A",
+      "correct_answer": "Despertar del sueño y revestirse del Señor Jesucristo",
+      "explanation": "El lenguaje de despertar, dejar obras de oscuridad y revestirse de Cristo comunica vigilancia ética.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0066",
+      "book": "Romanos",
+      "chapter": 14,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Romanos 14:1-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Acoger sin contiendas",
+      "characters": [
+        "Comunidad",
+        "creyentes"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo pide Pablo recibir a quien tiene una fe débil respecto de asuntos discutibles?",
+      "opcion_a": "Acogerlo sin convertir las opiniones en motivo de contienda",
+      "opcion_b": "Expulsarlo de inmediato",
+      "opcion_c": "Ridiculizar su conciencia",
+      "opcion_d": "Obligarlo a adoptar todas las prácticas del grupo",
+      "correct_option": "A",
+      "correct_answer": "Acogerlo sin convertir las opiniones en motivo de contienda",
+      "explanation": "La exhortación busca una comunidad capaz de recibir diferencias de conciencia sin desprecio ni juicio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0067",
+      "book": "Romanos",
+      "chapter": 14,
+      "verse_start": 5,
+      "verse_end": 9,
+      "reference": "Romanos 14:5-9",
+      "category": "NT_GENERAL",
+      "subcategory": "Días y convicción",
+      "characters": [
+        "Creyentes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué criterio ofrece Pablo cuando unos valoran ciertos días de forma diferente a otros?",
+      "opcion_a": "Que cada uno actúe con convicción delante del Señor",
+      "opcion_b": "Que una parte humille a la otra",
+      "opcion_c": "Que todas las diferencias se resuelvan por fuerza",
+      "opcion_d": "Que ningún día pueda tener significado religioso",
+      "correct_option": "A",
+      "correct_answer": "Que cada uno actúe con convicción delante del Señor",
+      "explanation": "Pablo permite diversidad de práctica cuando se vive para el Señor y se evita juzgar al otro.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0068",
+      "book": "Romanos",
+      "chapter": 14,
+      "verse_start": 10,
+      "verse_end": 12,
+      "reference": "Romanos 14:10-12",
+      "category": "NT_GENERAL",
+      "subcategory": "Rendición de cuentas",
+      "characters": [
+        "Creyentes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué razón da Pablo para no despreciar ni juzgar al hermano?",
+      "opcion_a": "Cada persona dará cuenta de sí misma ante Dios",
+      "opcion_b": "Nadie responde por sus decisiones",
+      "opcion_c": "Solo los líderes serán evaluados",
+      "opcion_d": "La conducta nunca importa",
+      "correct_option": "A",
+      "correct_answer": "Cada persona dará cuenta de sí misma ante Dios",
+      "explanation": "La rendición de cuentas ante Dios desplaza la actitud de superioridad hacia una responsabilidad personal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0069",
+      "book": "Romanos",
+      "chapter": 14,
+      "verse_start": 13,
+      "verse_end": 18,
+      "reference": "Romanos 14:13-18",
+      "category": "NT_GENERAL",
+      "subcategory": "No poner tropiezo",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué prioridad establece Pablo cuando una práctica permitida puede herir la conciencia de otro?",
+      "opcion_a": "Evitar el tropiezo y buscar justicia, paz y gozo en el Espíritu",
+      "opcion_b": "Demostrar libertad aunque destruya al otro",
+      "opcion_c": "Convertir la comida en criterio principal del reino",
+      "opcion_d": "Usar la conciencia ajena para controlar toda decisión",
+      "correct_option": "A",
+      "correct_answer": "Evitar el tropiezo y buscar justicia, paz y gozo en el Espíritu",
+      "explanation": "La libertad se subordina al amor y a la edificación; el reino no se reduce a alimentos y bebidas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0070",
+      "book": "Romanos",
+      "chapter": 14,
+      "verse_start": 22,
+      "verse_end": 23,
+      "reference": "Romanos 14:22-23",
+      "category": "NT_GENERAL",
+      "subcategory": "Conciencia y fe",
+      "characters": [
+        "Creyentes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo anima a actuar contra la propia conciencia para demostrar libertad espiritual",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Pablo advierte contra actuar con condena interior y vincula la conducta con la convicción de fe.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0071",
+      "book": "Romanos",
+      "chapter": 15,
+      "verse_start": 1,
+      "verse_end": 6,
+      "reference": "Romanos 15:1-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Fortaleza y edificación",
+      "characters": [
+        "Fuertes",
+        "débiles"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué responsabilidad asigna Pablo a quienes se consideran fuertes?",
+      "opcion_a": "Soportar las debilidades de otros y buscar su edificación",
+      "opcion_b": "Usar su libertad para imponerse",
+      "opcion_c": "Evitar toda relación con los débiles",
+      "opcion_d": "Convertir la debilidad ajena en motivo de burla",
+      "correct_option": "A",
+      "correct_answer": "Soportar las debilidades de otros y buscar su edificación",
+      "explanation": "La fortaleza se redefine como capacidad de sostener y edificar, siguiendo el modelo de Cristo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0072",
+      "book": "Romanos",
+      "chapter": 15,
+      "verse_start": 4,
+      "verse_end": 6,
+      "reference": "Romanos 15:4-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Escrituras y esperanza",
+      "characters": [
+        "Creyentes"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Para qué dice Pablo que fueron escritas las Escrituras anteriores?",
+      "opcion_a": "Para instrucción, perseverancia, consuelo y esperanza",
+      "opcion_b": "Para curiosidad histórica sin aplicación",
+      "opcion_c": "Para justificar superioridad cultural",
+      "opcion_d": "Para eliminar la necesidad de comunidad",
+      "correct_option": "A",
+      "correct_answer": "Para instrucción, perseverancia, consuelo y esperanza",
+      "explanation": "Pablo atribuye a las Escrituras una función formativa que sostiene esperanza y perseverancia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0073",
+      "book": "Romanos",
+      "chapter": 15,
+      "verse_start": 7,
+      "verse_end": 13,
+      "reference": "Romanos 15:7-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Cristo, promesas y gentiles",
+      "characters": [
+        "Jesucristo",
+        "Israel",
+        "gentiles"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué doble propósito destaca Pablo en la obra de Cristo respecto de judíos y gentiles?",
+      "opcion_a": "Confirmar las promesas hechas a los patriarcas y abrir alabanza de los gentiles por la misericordia",
+      "opcion_b": "Eliminar la historia de Israel y reemplazarla por Roma",
+      "opcion_c": "Separar definitivamente a ambos grupos",
+      "opcion_d": "Garantizar prosperidad material universal",
+      "correct_option": "A",
+      "correct_answer": "Confirmar las promesas hechas a los patriarcas y abrir alabanza de los gentiles por la misericordia",
+      "explanation": "Pablo une fidelidad a las promesas hechas a Israel con la inclusión de los gentiles en la alabanza a Dios.",
+      "additional_references": [
+        "Salmos 18:49",
+        "Deuteronomio 32:43",
+        "Salmos 117:1",
+        "Isaías 11:10"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0074",
+      "book": "Romanos",
+      "chapter": 15,
+      "verse_start": 14,
+      "verse_end": 21,
+      "reference": "Romanos 15:14-21",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Misión de Pablo",
+      "characters": [
+        "Pablo",
+        "gentiles"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio guía la ambición misionera que Pablo describe?",
+      "opcion_a": "Anunciar a Cristo donde aún no había sido nombrado para no edificar sobre fundamento ajeno",
+      "opcion_b": "Buscar únicamente ciudades donde otros ya hicieron todo el trabajo",
+      "opcion_c": "Evitar a los gentiles",
+      "opcion_d": "Medir el éxito solo por reconocimiento público",
+      "correct_option": "A",
+      "correct_answer": "Anunciar a Cristo donde aún no había sido nombrado para no edificar sobre fundamento ajeno",
+      "explanation": "Pablo explica su estrategia misionera como apertura de nuevos campos de anuncio, no como competencia por prestigio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0075",
+      "book": "Romanos",
+      "chapter": 15,
+      "verse_start": 22,
+      "verse_end": 33,
+      "reference": "Romanos 15:22-33",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Planes de viaje y ayuda",
+      "characters": [
+        "Pablo",
+        "creyentes de Jerusalén",
+        "creyentes de Roma"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación de planes menciona Pablo hacia el final de su exposición?",
+      "opcion_a": "Llevar una ayuda a Jerusalén y luego viajar hacia Roma con la mirada puesta en España",
+      "opcion_b": "Abandonar definitivamente la misión entre gentiles",
+      "opcion_c": "Mudarse al desierto para vivir aislado",
+      "opcion_d": "Regresar a Tarso para dejar de predicar",
+      "correct_option": "A",
+      "correct_answer": "Llevar una ayuda a Jerusalén y luego viajar hacia Roma con la mirada puesta en España",
+      "explanation": "Pablo relaciona su viaje con una contribución para creyentes necesitados y con nuevos proyectos misioneros.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0076",
+      "book": "Romanos",
+      "chapter": 16,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "Romanos 16:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Febe y servicio",
+      "characters": [
+        "Febe",
+        "Pablo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo recomienda Pablo a Febe ante la comunidad?",
+      "opcion_a": "Como servidora de la iglesia en Cencrea y persona que ayudó a muchos, incluido él",
+      "opcion_b": "Como gobernadora de Roma",
+      "opcion_c": "Como integrante de la familia imperial",
+      "opcion_d": "Como adversaria de la misión",
+      "correct_option": "A",
+      "correct_answer": "Como servidora de la iglesia en Cencrea y persona que ayudó a muchos, incluido él",
+      "explanation": "Pablo la presenta con lenguaje de servicio comunitario y ayuda significativa. Las traducciones y reconstrucciones exactas de su cargo pueden variar, por lo que no se fuerza un título más allá del texto.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0077",
+      "book": "Romanos",
+      "chapter": 16,
+      "verse_start": 3,
+      "verse_end": 5,
+      "reference": "Romanos 16:3-5",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Priscila y Aquila",
+      "characters": [
+        "Priscila",
+        "Aquila",
+        "Pablo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué recuerda Pablo acerca de Priscila y Aquila?",
+      "opcion_a": "Que arriesgaron su vida por él y que una iglesia se reunía en su casa",
+      "opcion_b": "Que nunca colaboraron con su misión",
+      "opcion_c": "Que gobernaban una provincia romana",
+      "opcion_d": "Que rechazaban recibir creyentes en su hogar",
+      "correct_option": "A",
+      "correct_answer": "Que arriesgaron su vida por él y que una iglesia se reunía en su casa",
+      "explanation": "La pareja aparece como colaboradora destacada de Pablo y vinculada con una comunidad que se reunía en su casa.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0078",
+      "book": "Romanos",
+      "chapter": 16,
+      "verse_start": 5,
+      "verse_end": 16,
+      "reference": "Romanos 16:5-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Red de colaboradores",
+      "characters": [
+        "Iglesia en Roma"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué rasgo sobresale en la extensa lista de saludos personales?",
+      "opcion_a": "Una red diversa de hombres y mujeres reconocidos por su trabajo y relación con la comunidad",
+      "opcion_b": "Una comunidad formada por una sola familia",
+      "opcion_c": "La ausencia total de mujeres en tareas de servicio",
+      "opcion_d": "Un listado exclusivamente de funcionarios romanos",
+      "correct_option": "A",
+      "correct_answer": "Una red diversa de hombres y mujeres reconocidos por su trabajo y relación con la comunidad",
+      "explanation": "Los saludos muestran una red amplia y diversa de colaboradores, hogares y relaciones comunitarias.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0079",
+      "book": "Romanos",
+      "chapter": 16,
+      "verse_start": 17,
+      "verse_end": 20,
+      "reference": "Romanos 16:17-20",
+      "category": "NT_GENERAL",
+      "subcategory": "Divisiones y discernimiento",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pide Pablo frente a quienes generan divisiones contrarias a la enseñanza recibida?",
+      "opcion_a": "Discernirlos, apartarse de su influencia y permanecer sabios para el bien",
+      "opcion_b": "Responder con violencia física",
+      "opcion_c": "Aceptar cualquier enseñanza para evitar desacuerdos",
+      "opcion_d": "Convertir toda diferencia menor en ruptura",
+      "correct_option": "A",
+      "correct_answer": "Discernirlos, apartarse de su influencia y permanecer sabios para el bien",
+      "explanation": "La advertencia se dirige a divisiones y engaño que apartan de la enseñanza recibida; no autoriza violencia ni convierte toda discrepancia en enemistad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-ROM-0080",
+      "book": "Romanos",
+      "chapter": 16,
+      "verse_start": 25,
+      "verse_end": 27,
+      "reference": "Romanos 16:25-27",
+      "category": "NT_GENERAL",
+      "subcategory": "Doxología y misterio revelado",
+      "characters": [
+        "Dios",
+        "naciones"
+      ],
+      "difficulty": "Experto",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el cierre presenta el misterio del evangelio como algo destinado a permanecer oculto para todas las naciones",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. La doxología describe un misterio antes oculto pero ahora manifestado y dado a conocer a las naciones para la obediencia de la fe.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}
