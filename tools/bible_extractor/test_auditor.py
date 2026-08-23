@@ -39,7 +39,7 @@ from pathlib import Path
 from auditor import (
     evaluate_question, run_audit, extract_numbers, normalize, detect_book_key,
     token_matches_text, BOOK_CONFIGS, is_locative_or_collective_entity, resolve_implicit_speaker,
-    is_narrative_source_attribution
+    is_narrative_source_attribution, is_biblical_place_usage
 )
 
 GENESIS_PATH = Path(__file__).parent / "genesis-master-input.json"
@@ -4401,6 +4401,93 @@ class TestAuditorCanonical(unittest.TestCase):
 
         # 5. "el evangelio de Juan..." -> fuente documental
         self.assertTrue(is_narrative_source_attribution("juan", "En el evangelio de Juan encontramos siete señales"))
+
+    def test_is_biblical_place_usage_generic_cases(self) -> None:
+        """Verifica la distinción genérica entre topónimos bíblicos y homógrafos comunes (ej: Ramá vs rama)."""
+        # Caso A: Sustantivo botánico en metáfora ("La rama necesita permanecer unida a la vid") -> NO lugar
+        self.assertFalse(is_biblical_place_usage("rama", "La rama necesita permanecer unida a la vid"))
+
+        # Caso B: Sustantivo botánico cuantificado ("Cada rama lleva fruto") -> NO lugar
+        self.assertFalse(is_biblical_place_usage("rama", "Cada rama produce mejor si se cuida"))
+
+        # Caso C: Topónimo bíblico acentuado y locativo ("Samuel volvió a Ramá") -> SÍ lugar
+        self.assertTrue(is_biblical_place_usage("rama", "Samuel volvió a Ramá"))
+
+        # Caso D: Topónimo bíblico con prefijo locativo sin acento ("Fue a Rama") -> SÍ lugar
+        self.assertTrue(is_biblical_place_usage("rama", "Fue a Rama para consultar al vidente"))
+
+        # Caso E: Sustantivo común con complemento ("rama de un árbol") -> NO lugar
+        self.assertFalse(is_biblical_place_usage("rama", "Una rama de un árbol cayó al camino"))
+
+    def test_nqb_nt_jua_0070_homograph_resolved(self) -> None:
+        """Verifica que NQB-NT-JUA-0070 (vid y ramas) no falle en control_lugares por el término botánico 'rama'."""
+        if "NQB-NT-JUA-0070" not in self.john_questions:
+            self.skipTest("NQB-NT-JUA-0070 no disponible")
+        q = self.get_john_question("NQB-NT-JUA-0070")
+        vmap = {
+            1: "Yo soy la vid verdadera, y mi Padre es el labrador.",
+            2: "Todo pámpano que en mí no lleva fruto, lo quitará; y todo aquel que lleva fruto, lo limpiará, para que lleve más fruto.",
+            3: "Ya vosotros estáis limpios por la palabra que os he hablado.",
+            4: "Permaneced en mí, y yo en vosotros. Como el pámpano no puede llevar fruto por sí mismo, si no permanece en la vid, así tampoco vosotros, si no permanecéis en mí.",
+            5: "Yo soy la vid, vosotros los pámpanos; el que permanece en mí, y yo en él, éste lleva mucho fruto; porque separados de mí nada podéis hacer.",
+            6: "El que en mí no permanece, será echado fuera como pámpano, y se secará; y los recogen, y los echan en el fuego, y arden.",
+            7: "Si permanecéis en mí, y mis palabras permanecen en vosotros, pedid todo lo que queréis, y os será hecho.",
+            8: "En esto es glorificado mi Padre, en que llevéis mucho fruto, y seáis así mis discípulos."
+        }
+        res = evaluate_question(q, vmap, book_key="john")
+        self.assertEqual(res["controles_superados"]["control_lugares"], "NOT_APPLICABLE")
+        self.assertNotEqual(res["controles_superados"]["control_rango_suficiente"], "FAIL")
+        self.assertNotEqual(res["estado"], "REQUIERE_CORRECCION")
+        self.assertEqual(res["incidencias"], [])
+
+    def test_resolve_implicit_speaker_first_person_jesus_cases(self) -> None:
+        """Verifica la resolución contextual del referente de 1ª persona en discursos de Jesús."""
+        # Caso A: Categoría JESUS_PALABRAS con 'de mí' -> resuelve a Jesús
+        passage_a = "el dara testimonio acerca de mi"
+        vmap_a = {26: "él dará testimonio acerca de mí"}
+        self.assertTrue(resolve_implicit_speaker(
+            "jesus", passage_a, vmap_a, 26, ["Jesús", "discípulos"],
+            book_key="john", category="JESUS_PALABRAS"
+        ))
+
+        # Caso B: Texto con 'conmigo' -> resuelve a Jesús en discurso continuo
+        passage_b = "porque habeis estado conmigo desde el principio"
+        vmap_b = {27: "porque habéis estado conmigo desde el principio."}
+        self.assertTrue(resolve_implicit_speaker(
+            "jesus", passage_b, vmap_b, 27, ["Jesús", "discípulos"],
+            book_key="john", category="JESUS_PALABRAS"
+        ))
+
+        # Caso C: Pasaje con otro orador explícito -> NO resuelve a Jesús
+        passage_c = "pedro dijo no lo conozco ni se que dices"
+        vmap_c = {60: "Pedro dijo: No lo conozco ni sé qué dices."}
+        self.assertFalse(resolve_implicit_speaker(
+            "jesus", passage_c, vmap_c, 60, ["Pedro", "Jesús"],
+            book_key="john", category="NT_GENERAL"
+        ))
+
+        # Caso D: Categoría no JESUS_PALABRAS sin atribución discursiva
+        passage_d = "los soldados dijeron hagamos esto entre nosotros"
+        vmap_d = {24: "Los soldados dijeron: Hagamos esto entre nosotros."}
+        self.assertFalse(resolve_implicit_speaker(
+            "jesus", passage_d, vmap_d, 24, ["soldados"],
+            book_key="john", category="NT_GENERAL"
+        ))
+
+    def test_nqb_nt_jua_0073_implicit_speaker_resolved(self) -> None:
+        """Verifica que NQB-NT-JUA-0073 (Juan 15:26-27) resuelva 'Jesús' como referente de 1ª persona."""
+        if "NQB-NT-JUA-0073" not in self.john_questions:
+            self.skipTest("NQB-NT-JUA-0073 no disponible")
+        q = self.get_john_question("NQB-NT-JUA-0073")
+        vmap = {
+            26: "Pero cuando venga el Consolador, a quien yo os enviaré del Padre, el Espíritu de verdad, el cual procede del Padre, él dará testimonio acerca de mí;",
+            27: "y vosotros daréis testimonio también, porque habéis estado conmigo desde el principio."
+        }
+        res = evaluate_question(q, vmap, book_key="john")
+        self.assertEqual(res["controles_superados"]["control_nombres_propios"], "PASS")
+        self.assertNotEqual(res["controles_superados"]["control_rango_suficiente"], "FAIL")
+        self.assertNotEqual(res["estado"], "REQUIERE_CORRECCION")
+        self.assertEqual(res["incidencias"], [])
 
 
 if __name__ == "__main__":

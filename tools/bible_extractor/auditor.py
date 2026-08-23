@@ -1138,13 +1138,53 @@ def is_narrative_source_attribution(token: str, full_text: str, book_cfg: dict |
     return False
 
 
+def is_biblical_place_usage(token: str, full_text: str) -> bool:
+    """
+    Determina si un token que coincide con un topónimo de BIBLE_PLACES está siendo utilizado
+    como lugar geográfico real o como sustantivo común homógrafo (ej: 'la rama de la vid' vs ciudad 'Ramá').
+    """
+    norm_token = normalize(token).strip()
+
+    # Si no es un término homógrafo conocido, se acepta como lugar bíblico
+    if norm_token != "rama":
+        return True
+
+    text_norm = normalize(full_text)
+    raw_lower = full_text.lower()
+
+    # 1. Patrones claros de uso locativo / geográfico
+    # Ej: "en Rama", "a Ramá", "de Ramá", "desde Ramá", "hacia Ramá", "ciudad de Ramá", "tierra de Ramá"
+    locative_pattern = r"\b(?:en|a|de|desde|hacia|hasta|por|ciudad\s+de|tierra\s+de|monte\s+de|montes\s+de)\s+ram[aá]\b"
+    if re.search(locative_pattern, raw_lower):
+        return True
+
+    # Si aparece explícitamente acentuado como "Ramá" o "ramá" y no está precedido por determinantes botánicos
+    if "ramá" in raw_lower:
+        if not re.search(r"\b(?:la|una|cada|esta|aquella|las|estas|otra|ninguna)\s+ramá\b", raw_lower):
+            return True
+
+    # 2. Patrones claros de sustantivo botánico / vegetal común
+    # Ej: "la rama", "una rama", "cada rama", "las ramas", "rama de la vid", "rama del arbol", "fruto de la rama"
+    common_botanical_pattern = (
+        r"\b(?:la|una|cada|esta|aquella|las|estas|otra|ninguna)\s+ramas?\b|"
+        r"\bramas?\s+(?:de|del|de\s+la|de\s+las|seca|secas|verde|verdes|unida|unidas|cortada|cortadas|injertada)\b|"
+        r"\b(?:fruto|hojas?|injerto|vid|arbol|olivo)\s+(?:de\s+la|de\s+las|de\s+una)?\s*ramas?\b"
+    )
+    if re.search(common_botanical_pattern, text_norm):
+        return False
+
+    return False
+
+
 def resolve_implicit_speaker(
     entity_name: str,
     passage_norm: str,
     verse_map: dict[int, str],
     start_verse: int,
     characters: list[str],
-    book_key: str = ""
+    book_key: str = "",
+    category: str = "",
+    eligible_modes: list[str] | None = None
 ) -> bool:
     """Resuelve contextualmente si entity_name es el hablante/orador en primera persona del pasaje."""
     if not verse_map:
@@ -1152,12 +1192,17 @@ def resolve_implicit_speaker(
 
     passage_words = set(passage_norm.split())
     has_1st_person = bool(passage_words & FIRST_PERSON_DISCOURSE_MARKERS) or any(
-        m in passage_norm for m in ["dios nuestro", "dios mio", "nuestro dios"]
+        m in passage_norm for m in [
+            "dios nuestro", "dios mio", "nuestro dios", "de mi", "a mi", "conmigo",
+            "en mi", "por mi", "ante mi", "sobre mi", "hacia mi", "acerca de mi",
+            "enviado por mi", "cree en mi", "venid a mi"
+        ]
     )
     if not has_1st_person:
         return False
 
     norm_entity = normalize(entity_name).strip()
+    norm_chars = {normalize(c).strip() for c in (characters or [])}
 
     # 1. Comprobar versículos anteriores presentes en verse_map (hasta 20 versículos antes en el mismo capítulo)
     candidate_speakers = set()
@@ -1174,10 +1219,29 @@ def resolve_implicit_speaker(
 
     if candidate_speakers == {norm_entity}:
         return True
-    if len(candidate_speakers) > 1:
+    if len(candidate_speakers) > 1 and norm_entity not in candidate_speakers:
         return False
 
-    # 2. Narración autobiográfica del autor titular del libro (ej. Esdras en el libro de Esdras)
+    # 2. Continuidad discursiva en discursos y palabras de Jesús (Evangelios: Mateo, Marcos, Lucas, Juan)
+    # En discursos continuos largos (ej. Juan 14-16, Mateo 5-7, etc.), Jesús habla en primera persona
+    # sin repetir 'Jesús dijo' en cada segmento de versículos.
+    is_gospel_book = book_key in {"matthew", "mark", "luke", "john", "mateo", "marcos", "lucas", "juan"}
+    is_jesus_discourse = (
+        category == "JESUS_PALABRAS"
+        or (eligible_modes and "JESUS_PALABRAS" in eligible_modes)
+        or (norm_entity == "jesus" and ("jesus" in norm_chars or not characters))
+    )
+    if is_gospel_book and norm_entity == "jesus" and is_jesus_discourse:
+        # Verificar que no exista en el pasaje un orador explícito en conflicto (ej: 'Pedro dijo:', 'Pilato dijo:')
+        competing_speakers = set()
+        for p in BIBLE_PERSONAJES:
+            if p != "jesus" and p in passage_words:
+                if any(f"{p} {verb}" in passage_norm for verb in SPEECH_PRAYER_VERBS) or any(f"{verb} {p}" in passage_norm for verb in SPEECH_PRAYER_VERBS):
+                    competing_speakers.add(p)
+        if not competing_speakers:
+            return True
+
+    # 3. Narración autobiográfica del autor titular del libro (ej. Esdras en el libro de Esdras)
     # Solo aplicable cuando la entidad coincide con el autor titular del libro y no hay conflicto
     is_titular_author = (norm_entity == book_key or norm_entity in {"esdras", "nehemias"} and book_key in {"ezra", "nehemiah", "esdras"})
     if is_titular_author and not candidate_speakers:
@@ -2003,7 +2067,10 @@ def evaluate_question(
 
                 # Resolución de hablante implícito en 1ª persona
                 for n in missing_entities:
-                    if n not in context_resolved and resolve_implicit_speaker(n, passage_norm, verse_map, start, characters, book_key):
+                    if n not in context_resolved and resolve_implicit_speaker(
+                        n, passage_norm, verse_map, start, characters, book_key,
+                        category=str(q.get("category", "")).strip(), eligible_modes=q.get("eligible_modes")
+                    ):
                         context_resolved.append(n)
 
             unresolved = [n for n in missing_entities if n not in context_resolved]
@@ -2034,9 +2101,9 @@ def evaluate_question(
         controls["control_nombres_propios"] = "NOT_APPLICABLE"
 
     # 13. Control Lugares (con contextualización de marco geográfico ambiental e hidrográfico)
-    opt_a_toks = set(normalize(opcion_a).split())
-    prompt_toks = set(normalize(prompt).split())
-    detected_places = (opt_a_toks | prompt_toks) & BIBLE_PLACES
+    opt_a_toks = {w for w in normalize(opcion_a).split() if w in BIBLE_PLACES and is_biblical_place_usage(w, opcion_a)}
+    prompt_toks = {w for w in normalize(prompt).split() if w in BIBLE_PLACES and is_biblical_place_usage(w, prompt)}
+    detected_places = opt_a_toks | prompt_toks
     ambient_places = book_cfg.get("ambient_places", set())
 
     if not detected_places:
