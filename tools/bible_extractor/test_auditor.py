@@ -82,6 +82,7 @@ ZECHARIAH_PATH = Path(__file__).parent / "zechariah-master-input.json"
 MALACHI_PATH = Path(__file__).parent / "malachi-master-input.json"
 MATTHEW_PATH = Path(__file__).parent / "matthew-master-input.json"
 MARK_PATH = Path(__file__).parent / "mark-master-input.json"
+LUKE_PATH = Path(__file__).parent / "luke-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -329,6 +330,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.mark_questions = {q["id"]: q for q in (raw_mar.get("questions", []) if isinstance(raw_mar, dict) else raw_mar)}
         else:
             cls.mark_questions = {}
+
+        if LUKE_PATH.exists():
+            raw_luk = json.loads(LUKE_PATH.read_text(encoding="utf-8"))
+            cls.luke_questions = {q["id"]: q for q in (raw_luk.get("questions", []) if isinstance(raw_luk, dict) else raw_luk)}
+        else:
+            cls.luke_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -4042,6 +4049,124 @@ class TestAuditorCanonical(unittest.TestCase):
             "JESUS_PALABRAS": 22,
             "JESUS_MILAGROS": 14,
             "JESUS_PARABOLAS": 5
+        })
+        self.assertEqual(questions_with_add_refs, 9)
+        self.assertEqual(total_add_refs, 12)
+
+    def get_luke_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.luke_questions, f"ID '{qid}' no encontrado en luke-master-input.json")
+        return copy.deepcopy(self.luke_questions[qid])
+
+    def test_detect_book_key_luke(self) -> None:
+        """Verifica detección de book_key para Lucas y sus variantes."""
+        spec_luk = {"questions": [{"id": "NQB-NT-LUC-0001", "book": "Lucas"}]}
+        self.assertEqual(detect_book_key(spec_luk), "luke")
+
+        spec_alias = {"questions": [{"id": "NQB-NT-LUC-0001", "book": "lucas"}]}
+        self.assertEqual(detect_book_key(spec_alias), "luke")
+
+        spec_en = {"questions": [{"id": "NQB-NT-LUC-0001", "book": "Luke"}]}
+        self.assertEqual(detect_book_key(spec_en), "luke")
+
+        spec_lc = {"questions": [{"id": "NQB-NT-LUC-0001", "book": "lc"}]}
+        self.assertEqual(detect_book_key(spec_lc), "luke")
+
+        spec_libro = {"questions": [{"id": "NQB-NT-LUC-0001", "book": "Evangelio de Lucas"}]}
+        self.assertEqual(detect_book_key(spec_libro), "luke")
+
+    def test_luke_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Lucas: 24 capítulos, 3 bloques."""
+        self.assertIn("luke", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["luke"]
+        self.assertEqual(cfg["canonical_name"], "Lucas")
+        self.assertEqual(cfg["api_name"], "Lucas")
+        self.assertEqual(cfg["total_chapters"], 24)
+        self.assertEqual(len(cfg["blocks"]), 3)
+        self.assertEqual(cfg["blocks"][0], (1, 8, "luke-01-08.json"))
+        self.assertEqual(cfg["blocks"][1], (9, 16, "luke-09-16.json"))
+        self.assertEqual(cfg["blocks"][2], (17, 24, "luke-17-24.json"))
+        self.assertTrue({"lucas", "luke", "lc", "libro de lucas", "evangelio de lucas"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_luke(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Lucas (96 preguntas, 24/24 capítulos cubiertos, 4 por capítulo, 89 MULTIPLE_CHOICE, 7 TRUE_FALSE, 9 con additional_refs, 12 totales)."""
+        if not self.luke_questions:
+            self.skipTest("luke-master-input.json no disponible")
+        self.assertEqual(len(self.luke_questions), 96)
+        chapter_counts = {}
+        category_counts = collections.Counter()
+        type_counts = collections.Counter()
+        difficulty_counts = collections.Counter()
+        questions_with_add_refs = 0
+        total_add_refs = 0
+        all_chars = []
+
+        expected_add_refs_map = {
+            "NQB-NT-LUC-0004": ["1 Samuel 2:1-10"],
+            "NQB-NT-LUC-0007": ["Isaías 49:6"],
+            "NQB-NT-LUC-0013": ["Isaías 61:1-2"],
+            "NQB-NT-LUC-0014": ["1 Reyes 17:8-16", "2 Reyes 5:1-14"],
+            "NQB-NT-LUC-0043": ["Jonás 3:5-10", "1 Reyes 10:1-10"],
+            "NQB-NT-LUC-0076": ["Isaías 56:7", "Jeremías 7:11"],
+            "NQB-NT-LUC-0078": ["Salmos 118:22"],
+            "NQB-NT-LUC-0080": ["Éxodo 3:6"],
+            "NQB-NT-LUC-0094": ["Moisés y los profetas"],
+        }
+
+        for qid, q in self.luke_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 24, f"Capítulo {ch} fuera del rango 1..24 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+
+            q_type = q.get("question_type", "MULTIPLE_CHOICE")
+            type_counts[q_type] += 1
+
+            if q_type == "MULTIPLE_CHOICE":
+                for opt in ["opcion_a", "opcion_b", "opcion_c", "opcion_d"]:
+                    self.assertTrue(bool(str(q.get(opt, "")).strip()), f"Opción {opt} vacía en {qid}")
+            elif q_type == "TRUE_FALSE":
+                self.assertTrue(bool(str(q.get("opcion_a", "")).strip()), f"Opción A vacía en {qid}")
+                self.assertTrue(bool(str(q.get("opcion_b", "")).strip()), f"Opción B vacía en {qid}")
+                self.assertEqual(str(q.get("opcion_c", "")).strip(), "", f"Opción C no vacía en TRUE_FALSE {qid}")
+                self.assertEqual(str(q.get("opcion_d", "")).strip(), "", f"Opción D no vacía en TRUE_FALSE {qid}")
+
+            cat = q.get("category")
+            category_counts[cat] += 1
+            if cat == "PERSONAJES_BIBLICOS":
+                self.assertGreater(len(q.get("characters", [])), 0, f"Pregunta de personajes sin characters en {qid}")
+
+            diff = q.get("difficulty")
+            difficulty_counts[diff] += 1
+
+            all_chars.extend(q.get("characters", []))
+
+            add_refs = q.get("additional_references", [])
+            if len(add_refs) > 0:
+                questions_with_add_refs += 1
+                total_add_refs += len(add_refs)
+                self.assertIn(qid, expected_add_refs_map)
+                self.assertEqual(add_refs, expected_add_refs_map[qid])
+
+        expected_ch_dist = {i: 4 for i in range(1, 25)}
+        self.assertEqual(chapter_counts, expected_ch_dist)
+        self.assertEqual(type_counts, {"MULTIPLE_CHOICE": 89, "TRUE_FALSE": 7})
+        self.assertEqual(difficulty_counts, {"Básico": 24, "Intermedio": 35, "Avanzado": 32, "Experto": 5})
+        self.assertEqual(category_counts, {
+            "NT_GENERAL": 3,
+            "PERSONAJES_BIBLICOS": 33,
+            "JESUS_PALABRAS": 29,
+            "JESUS_MILAGROS": 11,
+            "JESUS_PARABOLAS": 20
         })
         self.assertEqual(questions_with_add_refs, 9)
         self.assertEqual(total_add_refs, 12)

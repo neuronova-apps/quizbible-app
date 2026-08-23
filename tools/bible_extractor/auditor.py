@@ -788,6 +788,27 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "getsemaní", "golgota", "gólgota", "arimatea", "templo", "casa", "sinagoga", "desierto", "mar", "pretorio"
         },
     },
+    "luke": {
+        "canonical_name": "Lucas",
+        "api_name": "Lucas",
+        "aliases": {
+            "lucas", "luke", "lc", "libro de lucas", "evangelio de lucas", "evangelio segun san lucas", "san lucas"
+        },
+        "total_chapters": 24,
+        "blocks": [
+            (1, 8, "luke-01-08.json"),
+            (9, 16, "luke-09-16.json"),
+            (17, 24, "luke-17-24.json"),
+        ],
+        "default_output_dir": "build/audit/luke",
+        "ambient_places": {
+            "judea", "jerusalen", "jerusalén", "galilea", "jordan", "jordán", "nazaret", "belen", "belén",
+            "capernaum", "capernaúm", "nain", "naín", "mar de galilea", "genesaret", "gadarenos", "decapolis",
+            "decápolis", "tiro", "sidon", "sidón", "betsaida", "samaria", "jerico", "jericó", "betfage",
+            "betania", "monte de los olivos", "emaus", "emaús", "getsemani", "getsemaní", "golgota", "gólgota",
+            "calvario", "arimatea", "templo", "casa", "sinagoga", "desierto", "mar", "pretorio", "posada", "siloe", "siloé"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -913,13 +934,15 @@ BIBLE_PERSONAJES = {
     "zacarias", "zacarías", "berequias", "berequías", "ido", "iddó", "iddo", "satanas", "satanás", "serezer", "regem-melec", "regemmelec", "heldai", "tobias", "tobías", "jedaias", "jedaías", "hen",
     # Malaquías
     "malaquias", "malaquías", "elias", "elías",
-    # Mateo, Marcos y Nuevo Testamento
+    # Mateo, Marcos, Lucas y Nuevo Testamento
     "herodes", "herodías", "herodias", "pilato", "poncio pilato", "barrabas", "barrabás", "caifas", "caifás",
     "anas", "anás", "jose", "josé", "maria", "maría", "maria magdalena", "maría magdalena", "salome", "salomé",
     "juan el bautista", "juan bautista", "andres", "andrés", "jacobo", "felipe", "bartolome", "bartolomé",
     "tomas", "tomás", "tadeo", "simon", "simón", "simon cananista", "simón cananista", "simon pedro", "simón pedro",
     "judas", "judas iscariote", "iscariote", "zebedeo", "alfeo", "elisabet", "jairo", "bartimeo",
     "alejandro", "rufo", "simon de cirene", "simon el leproso", "jose de arimatea", "boanerges",
+    "teofilo", "teófilo", "gabriel", "simeon", "simeón", "ana", "augusto", "cirenio", "tiberio", "lisanias",
+    "juana", "chuza", "susana", "zaqueo", "moises", "moisés",
     "lazaro", "lázaro", "marta", "cleofas", "cornelio", "saulo", "bernice", "agripa", "felix", "félix",
     "gamaliel", "tito", "silas", "apolos", "aquila", "áquila", "priscila", "filemon", "filemón", "onesimo", "onésimo",
     # Otros comunes

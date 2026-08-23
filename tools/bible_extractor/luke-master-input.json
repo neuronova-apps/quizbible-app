@@ -1,0 +1,2987 @@
+{
+  "source": "Quiz Bible master bank - Lucas",
+  "version": "RVR1960",
+  "book": "Lucas",
+  "total_questions": 96,
+  "questions": [
+    {
+      "id": "NQB-NT-LUC-0001",
+      "book": "Lucas",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Lucas 1:1-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Propósito de la obra",
+      "characters": [
+        "Teófilo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué propósito declara el autor al organizar cuidadosamente su relato?",
+      "opcion_a": "Ofrecer certeza mediante una exposición ordenada de los hechos",
+      "opcion_b": "Reemplazar todos los relatos anteriores",
+      "opcion_c": "Redactar únicamente una colección de proverbios",
+      "opcion_d": "Explicar la administración romana",
+      "correct_option": "A",
+      "correct_answer": "Ofrecer certeza mediante una exposición ordenada de los hechos",
+      "explanation": "El prólogo presenta una investigación y exposición ordenada dirigida a que el destinatario conozca con certeza lo enseñado. No afirma que los relatos previos carecieran de valor.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0002",
+      "book": "Lucas",
+      "chapter": 1,
+      "verse_start": 8,
+      "verse_end": 20,
+      "reference": "Lucas 1:8-20",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Anuncio a Zacarías",
+      "characters": [
+        "Zacarías",
+        "Gabriel"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué consecuencia acompañó la incredulidad de Zacarías ante el anuncio recibido?",
+      "opcion_a": "Quedó sin poder hablar hasta el cumplimiento de lo anunciado",
+      "opcion_b": "Fue expulsado definitivamente del sacerdocio",
+      "opcion_c": "Abandonó Jerusalén de inmediato",
+      "opcion_d": "Perdió toda memoria de la visión",
+      "correct_option": "A",
+      "correct_answer": "Quedó sin poder hablar hasta el cumplimiento de lo anunciado",
+      "explanation": "El relato vincula temporalmente la falta de habla de Zacarías con su duda frente al mensaje del ángel. La señal termina cuando llega el momento señalado.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0003",
+      "book": "Lucas",
+      "chapter": 1,
+      "verse_start": 26,
+      "verse_end": 38,
+      "reference": "Lucas 1:26-38",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Anuncio a María",
+      "characters": [
+        "María",
+        "Gabriel"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo responde María al anuncio después de preguntar cómo ocurriría?",
+      "opcion_a": "Se dispone como sierva del Señor para que se cumpla la palabra",
+      "opcion_b": "Exige una señal pública ante las autoridades",
+      "opcion_c": "Decide abandonar Nazaret para evitarlo",
+      "opcion_d": "Rechaza toda participación en lo anunciado",
+      "correct_option": "A",
+      "correct_answer": "Se dispone como sierva del Señor para que se cumpla la palabra",
+      "explanation": "María pregunta por el modo del cumplimiento y, tras la explicación, responde con disponibilidad. La escena enfatiza confianza y consentimiento ante el mensaje recibido.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0004",
+      "book": "Lucas",
+      "chapter": 1,
+      "verse_start": 46,
+      "verse_end": 55,
+      "reference": "Lucas 1:46-55",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Cántico de María",
+      "characters": [
+        "María"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el cántico de María presenta una inversión en la que poderosos son abatidos y humildes exaltados",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "El cántico celebra la acción de Dios a favor de humildes y necesitados y describe una inversión de posiciones. No funciona como consigna de violencia humana sino como alabanza teológica.",
+      "additional_references": [
+        "1 Samuel 2:1-10"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0005",
+      "book": "Lucas",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 7,
+      "reference": "Lucas 2:1-7",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Nacimiento de Jesús",
+      "characters": [
+        "María",
+        "José",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué detalle del nacimiento explica que el niño fuera acostado en un pesebre?",
+      "opcion_a": "No había lugar disponible para ellos en el alojamiento",
+      "opcion_b": "La familia había decidido vivir con pastores",
+      "opcion_c": "Era una norma romana para todos los recién nacidos",
+      "opcion_d": "El templo exigía que todo primogénito fuera puesto allí",
+      "correct_option": "A",
+      "correct_answer": "No había lugar disponible para ellos en el alojamiento",
+      "explanation": "Lucas relaciona el pesebre con la falta de lugar disponible para la familia. El detalle subraya la sencillez de las circunstancias del nacimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0006",
+      "book": "Lucas",
+      "chapter": 2,
+      "verse_start": 8,
+      "verse_end": 20,
+      "reference": "Lucas 2:8-20",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Anuncio a los pastores",
+      "characters": [
+        "Pastores",
+        "ángeles",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué señal concreta reciben los pastores para identificar al niño anunciado?",
+      "opcion_a": "Lo encontrarían envuelto en pañales y acostado en un pesebre",
+      "opcion_b": "Lo hallarían sentado en un trono de oro",
+      "opcion_c": "Estaría rodeado por soldados romanos",
+      "opcion_d": "Llevaría una corona sacerdotal",
+      "correct_option": "A",
+      "correct_answer": "Lo encontrarían envuelto en pañales y acostado en un pesebre",
+      "explanation": "La señal combina pañales y pesebre, conectando el anuncio celestial con una escena humilde y verificable para los pastores.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0007",
+      "book": "Lucas",
+      "chapter": 2,
+      "verse_start": 25,
+      "verse_end": 35,
+      "reference": "Lucas 2:25-35",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Simeón",
+      "characters": [
+        "Simeón",
+        "Jesús",
+        "María",
+        "José"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué reconoce Simeón al tomar al niño en sus brazos?",
+      "opcion_a": "La salvación preparada para todos los pueblos y gloria de Israel",
+      "opcion_b": "Un futuro rey militar que expulsaría inmediatamente a Roma",
+      "opcion_c": "Un sacerdote destinado a sustituir a Zacarías",
+      "opcion_d": "Un juez civil de Jerusalén",
+      "correct_option": "A",
+      "correct_answer": "La salvación preparada para todos los pueblos y gloria de Israel",
+      "explanation": "Simeón interpreta al niño dentro de una esperanza de salvación con alcance amplio y relación especial con Israel. Su canto combina universalidad y continuidad con las promesas de Dios.",
+      "additional_references": [
+        "Isaías 49:6"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0008",
+      "book": "Lucas",
+      "chapter": 2,
+      "verse_start": 41,
+      "verse_end": 52,
+      "reference": "Lucas 2:41-52",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Jesús en el templo",
+      "characters": [
+        "Jesús",
+        "María",
+        "José"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué destaca el relato cuando Jesús es hallado en el templo siendo aún joven?",
+      "opcion_a": "Escuchaba y preguntaba entre los maestros, causando admiración por su entendimiento",
+      "opcion_b": "Dirigía sacrificios como sacerdote",
+      "opcion_c": "Había sido nombrado jefe de la sinagoga",
+      "opcion_d": "Estaba organizando una revuelta política",
+      "correct_option": "A",
+      "correct_answer": "Escuchaba y preguntaba entre los maestros, causando admiración por su entendimiento",
+      "explanation": "La escena presenta a Jesús dialogando con los maestros y sorprendiendo por su comprensión. Después vuelve con sus padres y continúa creciendo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0009",
+      "book": "Lucas",
+      "chapter": 3,
+      "verse_start": 7,
+      "verse_end": 14,
+      "reference": "Lucas 3:7-14",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Predicación ética de Juan",
+      "characters": [
+        "Juan el Bautista",
+        "multitudes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tipo de cambio pide Juan cuando distintos grupos preguntan qué deben hacer?",
+      "opcion_a": "Acciones concretas de justicia, generosidad y abandono del abuso",
+      "opcion_b": "Solo adoptar una nueva forma de vestir",
+      "opcion_c": "Retirarse de toda actividad laboral",
+      "opcion_d": "Viajar todos a Jerusalén de forma permanente",
+      "correct_option": "A",
+      "correct_answer": "Acciones concretas de justicia, generosidad y abandono del abuso",
+      "explanation": "Juan conecta el arrepentimiento con conductas observables como compartir, cobrar justamente y evitar extorsión. El cambio no queda reducido a una declaración verbal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0010",
+      "book": "Lucas",
+      "chapter": 3,
+      "verse_start": 19,
+      "verse_end": 20,
+      "reference": "Lucas 3:19-20",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Reprensión a Herodes",
+      "characters": [
+        "Juan el Bautista",
+        "Herodes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué muestra la prisión de Juan respecto de su ministerio profético?",
+      "opcion_a": "Que también confrontó públicamente conductas indebidas del gobernante",
+      "opcion_b": "Que aceptó un cargo administrativo de Herodes",
+      "opcion_c": "Que dejó de predicar por decisión propia",
+      "opcion_d": "Que fue encarcelado por negarse a bautizar",
+      "correct_option": "A",
+      "correct_answer": "Que también confrontó públicamente conductas indebidas del gobernante",
+      "explanation": "Lucas presenta a Juan reprendiendo a Herodes por sus acciones y añade el encarcelamiento como una nueva maldad del gobernante. La crítica se dirige a conductas concretas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0011",
+      "book": "Lucas",
+      "chapter": 3,
+      "verse_start": 21,
+      "verse_end": 22,
+      "reference": "Lucas 3:21-22",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Bautismo y oración",
+      "characters": [
+        "Jesús",
+        "Espíritu Santo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Lucas menciona a Jesús orando cuando el cielo se abre tras su bautismo",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "Lucas añade explícitamente la oración de Jesús en la escena del bautismo. La apertura del cielo, el Espíritu y la voz divina se sitúan en ese marco.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0012",
+      "book": "Lucas",
+      "chapter": 3,
+      "verse_start": 23,
+      "verse_end": 38,
+      "reference": "Lucas 3:23-38",
+      "category": "NT_GENERAL",
+      "subcategory": "Genealogía universal",
+      "characters": [
+        "Jesús",
+        "Adán"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Hasta qué figura lleva Lucas la genealogía de Jesús en su recorrido retrospectivo?",
+      "opcion_a": "Hasta Adán",
+      "opcion_b": "Solo hasta David",
+      "opcion_c": "Hasta Moisés",
+      "opcion_d": "Solo hasta Abraham",
+      "correct_option": "A",
+      "correct_answer": "Hasta Adán",
+      "explanation": "A diferencia de una genealogía que se detiene en Abraham, Lucas retrocede hasta Adán. Ese alcance contribuye al horizonte universal de su relato.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0013",
+      "book": "Lucas",
+      "chapter": 4,
+      "verse_start": 16,
+      "verse_end": 21,
+      "reference": "Lucas 4:16-21",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Lectura en Nazaret",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué afirma Jesús después de leer el pasaje profético en la sinagoga de Nazaret?",
+      "opcion_a": "Que esa Escritura se ha cumplido al oírla sus presentes",
+      "opcion_b": "Que el pasaje no tenía relación con su misión",
+      "opcion_c": "Que únicamente se cumpliría después de varias generaciones",
+      "opcion_d": "Que debía ser retirado del rollo",
+      "correct_option": "A",
+      "correct_answer": "Que esa Escritura se ha cumplido al oírla sus presentes",
+      "explanation": "Jesús vincula el texto leído con su misión presente. La escena funciona como una presentación programática de buenas noticias, libertad y restauración.",
+      "additional_references": [
+        "Isaías 61:1-2"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0014",
+      "book": "Lucas",
+      "chapter": 4,
+      "verse_start": 23,
+      "verse_end": 27,
+      "reference": "Lucas 4:23-27",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Elías y Eliseo",
+      "characters": [
+        "Jesús",
+        "Elías",
+        "Eliseo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función tienen los ejemplos de una viuda extranjera y un sirio en la respuesta de Jesús en Nazaret?",
+      "opcion_a": "Mostrar que la acción de Dios no queda limitada por las expectativas locales",
+      "opcion_b": "Demostrar que Israel nunca recibió profetas",
+      "opcion_c": "Enseñar que toda enfermedad procede de extranjería",
+      "opcion_d": "Justificar rechazo étnico hacia otros pueblos",
+      "correct_option": "A",
+      "correct_answer": "Mostrar que la acción de Dios no queda limitada por las expectativas locales",
+      "explanation": "Jesús recuerda episodios de Elías y Eliseo donde la ayuda divina alcanza a personas fuera de Israel. El argumento desafía una expectativa localista, no promueve hostilidad étnica.",
+      "additional_references": [
+        "1 Reyes 17:8-16",
+        "2 Reyes 5:1-14"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0015",
+      "book": "Lucas",
+      "chapter": 4,
+      "verse_start": 31,
+      "verse_end": 37,
+      "reference": "Lucas 4:31-37",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Autoridad en Capernaum",
+      "characters": [
+        "Jesús",
+        "hombre con espíritu inmundo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué reacción provoca en la gente la liberación ocurrida en la sinagoga?",
+      "opcion_a": "Asombro por la autoridad con que Jesús manda y es obedecido",
+      "opcion_b": "Decisión de nombrarlo gobernador romano",
+      "opcion_c": "Rechazo porque no había ningún cambio visible",
+      "opcion_d": "Convicción de que había usado fuerza militar",
+      "correct_option": "A",
+      "correct_answer": "Asombro por la autoridad con que Jesús manda y es obedecido",
+      "explanation": "La multitud interpreta el episodio en términos de autoridad de la palabra de Jesús. El relato teológico no debe convertirse en equivalencia entre posesión y diagnósticos médicos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0016",
+      "book": "Lucas",
+      "chapter": 4,
+      "verse_start": 42,
+      "verse_end": 44,
+      "reference": "Lucas 4:42-44",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Prioridad de la misión",
+      "characters": [
+        "Jesús",
+        "multitudes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué Jesús dice que debe anunciar el reino de Dios también en otras ciudades?",
+      "opcion_a": "Porque para eso ha sido enviado",
+      "opcion_b": "Porque Capernaum le prohibió volver",
+      "opcion_c": "Porque debía cobrar impuestos en cada ciudad",
+      "opcion_d": "Porque buscaba formar un ejército regional",
+      "correct_option": "A",
+      "correct_answer": "Porque para eso ha sido enviado",
+      "explanation": "Jesús explica su desplazamiento mediante el propósito de anunciar el reino en más lugares. La misión no queda restringida a una sola localidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0017",
+      "book": "Lucas",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 11,
+      "reference": "Lucas 5:1-11",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Pesca abundante y llamado",
+      "characters": [
+        "Simón Pedro",
+        "Jacobo",
+        "Juan",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué reacción tiene Simón después de la pesca extraordinaria?",
+      "opcion_a": "Reconoce su condición pecadora ante Jesús",
+      "opcion_b": "Pide vender inmediatamente la barca",
+      "opcion_c": "Acusa a sus compañeros de engaño",
+      "opcion_d": "Decide abandonar toda relación con Jesús",
+      "correct_option": "A",
+      "correct_answer": "Reconoce su condición pecadora ante Jesús",
+      "explanation": "La abundancia conduce a Simón a una reacción de temor y conciencia personal. Jesús responde llamándolo a una nueva misión en vez de rechazarlo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0018",
+      "book": "Lucas",
+      "chapter": 5,
+      "verse_start": 12,
+      "verse_end": 16,
+      "reference": "Lucas 5:12-16",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Sanidad y retiro",
+      "characters": [
+        "Jesús",
+        "hombre enfermo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hábito de Jesús subraya Lucas mientras aumenta su fama por las sanidades?",
+      "opcion_a": "Se retiraba a lugares apartados para orar",
+      "opcion_b": "Dejaba de relacionarse con toda multitud",
+      "opcion_c": "Se instalaba permanentemente en el templo",
+      "opcion_d": "Pedía que nadie recibiera atención médica",
+      "correct_option": "A",
+      "correct_answer": "Se retiraba a lugares apartados para orar",
+      "explanation": "Lucas combina el crecimiento de la fama con retiros de Jesús para orar. El detalle evita presentar la actividad pública como incompatible con momentos de recogimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0019",
+      "book": "Lucas",
+      "chapter": 5,
+      "verse_start": 17,
+      "verse_end": 26,
+      "reference": "Lucas 5:17-26",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Paralítico descendido",
+      "characters": [
+        "Jesús",
+        "paralítico",
+        "amigos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué aspecto provoca primero el razonamiento crítico de escribas y fariseos antes de la sanidad visible?",
+      "opcion_a": "La declaración de perdón dirigida al hombre",
+      "opcion_b": "La forma en que fue abierto el techo",
+      "opcion_c": "La procedencia de los amigos",
+      "opcion_d": "El horario de la reunión",
+      "correct_option": "A",
+      "correct_answer": "La declaración de perdón dirigida al hombre",
+      "explanation": "La controversia comienza por la autoridad implicada en declarar perdón. La sanidad posterior funciona dentro del relato como signo visible relacionado con esa autoridad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0020",
+      "book": "Lucas",
+      "chapter": 5,
+      "verse_start": 27,
+      "verse_end": 32,
+      "reference": "Lucas 5:27-32",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Llamamiento de Leví",
+      "characters": [
+        "Leví",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hace Leví después de ser llamado por Jesús?",
+      "opcion_a": "Deja su puesto, lo sigue y luego ofrece un gran banquete",
+      "opcion_b": "Se convierte en sacerdote del templo",
+      "opcion_c": "Regresa a cobrar impuestos con mayor tasa",
+      "opcion_d": "Viaja a Roma para denunciar a Jesús",
+      "correct_option": "A",
+      "correct_answer": "Deja su puesto, lo sigue y luego ofrece un gran banquete",
+      "explanation": "Lucas presenta una respuesta inmediata seguida de una comida amplia en la que participan otros cobradores y personas. La escena abre una controversia sobre con quién se relaciona Jesús.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0021",
+      "book": "Lucas",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Lucas 6:1-5",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Señor del sábado",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué identidad invoca Jesús al cerrar la controversia por las espigas arrancadas en sábado?",
+      "opcion_a": "El Hijo del Hombre como señor del sábado",
+      "opcion_b": "El sumo sacerdote como dueño de toda cosecha",
+      "opcion_c": "El gobernador como creador de la ley",
+      "opcion_d": "El escriba principal como juez de Galilea",
+      "correct_option": "A",
+      "correct_answer": "El Hijo del Hombre como señor del sábado",
+      "explanation": "Jesús concluye la controversia con una afirmación sobre la autoridad del Hijo del Hombre respecto del sábado. El argumento no elimina el contexto judío de la práctica.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0022",
+      "book": "Lucas",
+      "chapter": 6,
+      "verse_start": 12,
+      "verse_end": 16,
+      "reference": "Lucas 6:12-16",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Elección de los doce",
+      "characters": [
+        "Jesús",
+        "doce apóstoles"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Lucas sitúa una noche de oración antes de que Jesús escoja a los doce",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La narración conecta la elección de los doce con una noche dedicada a la oración. Es un énfasis característico de Lucas sobre decisiones importantes.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0023",
+      "book": "Lucas",
+      "chapter": 6,
+      "verse_start": 20,
+      "verse_end": 26,
+      "reference": "Lucas 6:20-26",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Bienaventuranzas y ayes",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste añade Lucas inmediatamente después de sus bienaventuranzas?",
+      "opcion_a": "Una serie de ayes dirigidos a situaciones de suficiencia presente",
+      "opcion_b": "Una lista de cargos sacerdotales",
+      "opcion_c": "Un catálogo de leyes romanas",
+      "opcion_d": "Una genealogía de los discípulos",
+      "correct_option": "A",
+      "correct_answer": "Una serie de ayes dirigidos a situaciones de suficiencia presente",
+      "explanation": "Lucas yuxtapone bienaventuranzas con ayes y crea un fuerte contraste entre necesidad, esperanza y autosuficiencia. No convierte la pobreza o riqueza en una explicación moral simplista de cada individuo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0024",
+      "book": "Lucas",
+      "chapter": 6,
+      "verse_start": 27,
+      "verse_end": 36,
+      "reference": "Lucas 6:27-36",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Amor a enemigos",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué fundamento ofrece Jesús para una conducta misericordiosa hacia quienes no corresponden bien?",
+      "opcion_a": "Imitar la misericordia del Padre",
+      "opcion_b": "Esperar siempre una recompensa económica inmediata",
+      "opcion_c": "Evitar toda búsqueda de protección frente al daño",
+      "opcion_d": "Eliminar toda diferencia entre justicia y abuso",
+      "correct_option": "A",
+      "correct_answer": "Imitar la misericordia del Padre",
+      "explanation": "La enseñanza apela al carácter misericordioso de Dios y a una generosidad que supera la reciprocidad. No exige permanecer en peligro ni renunciar a mecanismos legítimos de protección.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0025",
+      "book": "Lucas",
+      "chapter": 7,
+      "verse_start": 1,
+      "verse_end": 10,
+      "reference": "Lucas 7:1-10",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Centurión y siervo",
+      "characters": [
+        "Centurión",
+        "ancianos judíos",
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué mediación inicial utiliza el centurión para pedir ayuda para su siervo?",
+      "opcion_a": "Envía ancianos de los judíos a presentar su solicitud",
+      "opcion_b": "Acude primero ante Pilato",
+      "opcion_c": "Manda soldados para obligar a Jesús",
+      "opcion_d": "Envía sacerdotes desde Roma",
+      "correct_option": "A",
+      "correct_answer": "Envía ancianos de los judíos a presentar su solicitud",
+      "explanation": "Lucas menciona primero a ancianos judíos que interceden por el centurión y describen su buena relación con la comunidad. El relato muestra cooperación, no hostilidad étnica.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0026",
+      "book": "Lucas",
+      "chapter": 7,
+      "verse_start": 11,
+      "verse_end": 17,
+      "reference": "Lucas 7:11-17",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Viuda de Naín",
+      "characters": [
+        "Jesús",
+        "viuda",
+        "hijo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué circunstancia aumenta la vulnerabilidad de la mujer a quien Jesús encuentra en Naín?",
+      "opcion_a": "Era viuda y el fallecido era su único hijo",
+      "opcion_b": "Era una gobernadora expulsada de Roma",
+      "opcion_c": "Había perdido toda su propiedad en una guerra",
+      "opcion_d": "Era sacerdotisa del templo",
+      "correct_option": "A",
+      "correct_answer": "Era viuda y el fallecido era su único hijo",
+      "explanation": "Lucas destaca que la mujer era viuda y perdía a su único hijo, una situación de especial vulnerabilidad social. Jesús actúa movido por compasión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0027",
+      "book": "Lucas",
+      "chapter": 7,
+      "verse_start": 18,
+      "verse_end": 23,
+      "reference": "Lucas 7:18-23",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Mensajeros de Juan",
+      "characters": [
+        "Juan el Bautista",
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo responde Jesús a la pregunta enviada por Juan acerca de su identidad?",
+      "opcion_a": "Remite a lo que los mensajeros han visto y oído en sus obras y anuncio",
+      "opcion_b": "Envía un documento firmado por el gobernador",
+      "opcion_c": "Se niega a dar cualquier respuesta",
+      "opcion_d": "Ordena que Juan sea liberado por la fuerza",
+      "correct_option": "A",
+      "correct_answer": "Remite a lo que los mensajeros han visto y oído en sus obras y anuncio",
+      "explanation": "La respuesta se apoya en hechos observables y en el anuncio de buenas noticias. Así sitúa la identidad de Jesús en la actividad que los enviados pueden reportar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0028",
+      "book": "Lucas",
+      "chapter": 7,
+      "verse_start": 36,
+      "verse_end": 50,
+      "reference": "Lucas 7:36-50",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Mujer que unge a Jesús",
+      "characters": [
+        "Jesús",
+        "mujer",
+        "Simón fariseo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste central establece Jesús entre la mujer y el anfitrión durante la comida?",
+      "opcion_a": "La abundancia de gestos de amor de ella frente a omisiones de hospitalidad del anfitrión",
+      "opcion_b": "La riqueza de ella frente a la pobreza del anfitrión",
+      "opcion_c": "La ciudadanía romana de ella frente al origen judío del anfitrión",
+      "opcion_d": "La educación sacerdotal de ella frente a la ignorancia del anfitrión",
+      "correct_option": "A",
+      "correct_answer": "La abundancia de gestos de amor de ella frente a omisiones de hospitalidad del anfitrión",
+      "explanation": "Jesús compara acciones concretas de hospitalidad y amor, no identidades étnicas o sociales. La escena vincula perdón, fe y gratitud sin reducir a la mujer a su pasado.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0029",
+      "book": "Lucas",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end": 3,
+      "reference": "Lucas 8:1-3",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Mujeres que sostienen el ministerio",
+      "characters": [
+        "María Magdalena",
+        "Juana",
+        "Susana",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué participación de varias mujeres destaca Lucas al describir la itinerancia de Jesús?",
+      "opcion_a": "Contribuían con sus bienes al sostenimiento del grupo",
+      "opcion_b": "Eran excluidas de todo contacto con los discípulos",
+      "opcion_c": "Dirigían una unidad militar de protección",
+      "opcion_d": "Administraban impuestos para Herodes",
+      "correct_option": "A",
+      "correct_answer": "Contribuían con sus bienes al sostenimiento del grupo",
+      "explanation": "Lucas nombra a varias mujeres y señala que apoyaban al grupo con sus recursos. El detalle reconoce participación concreta y agencia económica.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0030",
+      "book": "Lucas",
+      "chapter": 8,
+      "verse_start": 4,
+      "verse_end": 15,
+      "reference": "Lucas 8:4-15",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Sembrador y escucha",
+      "characters": [
+        "Jesús",
+        "multitudes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué característica distingue a la buena tierra en la explicación de la parábola?",
+      "opcion_a": "Retener la palabra con corazón bueno y dar fruto con perseverancia",
+      "opcion_b": "Oír una vez y olvidar inmediatamente",
+      "opcion_c": "Evitar toda dificultad material",
+      "opcion_d": "Conocer de antemano cada resultado futuro",
+      "correct_option": "A",
+      "correct_answer": "Retener la palabra con corazón bueno y dar fruto con perseverancia",
+      "explanation": "La explicación de Lucas vincula la buena tierra con oír, retener y perseverar hasta dar fruto. El énfasis está en una recepción sostenida.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0031",
+      "book": "Lucas",
+      "chapter": 8,
+      "verse_start": 22,
+      "verse_end": 25,
+      "reference": "Lucas 8:22-25",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Tormenta en el lago",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pregunta dirige Jesús a sus discípulos después de calmar la tormenta?",
+      "opcion_a": "Dónde está su fe",
+      "opcion_b": "Quién de ellos sabe navegar mejor",
+      "opcion_c": "Por qué no llevaron más alimento",
+      "opcion_d": "Quién debe abandonar la barca",
+      "correct_option": "A",
+      "correct_answer": "Dónde está su fe",
+      "explanation": "Tras la calma, Lucas presenta una pregunta sobre la fe de los discípulos. El episodio conduce del peligro a una reflexión sobre confianza e identidad de Jesús.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0032",
+      "book": "Lucas",
+      "chapter": 8,
+      "verse_start": 43,
+      "verse_end": 48,
+      "reference": "Lucas 8:43-48",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Mujer que toca a Jesús",
+      "characters": [
+        "Jesús",
+        "mujer enferma"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hace Jesús después de que la mujer reconoce públicamente por qué lo había tocado?",
+      "opcion_a": "La despide afirmando que su fe la ha salvado y que vaya en paz",
+      "opcion_b": "La acusa de haberlo contaminado",
+      "opcion_c": "Le exige pagar por la sanidad",
+      "opcion_d": "La envía a prisión",
+      "correct_option": "A",
+      "correct_answer": "La despide afirmando que su fe la ha salvado y que vaya en paz",
+      "explanation": "La mujer explica ante todos lo sucedido y Jesús responde con una palabra de afirmación y paz. El relato no debe usarse para culpabilizar a quienes no reciben una sanidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0033",
+      "book": "Lucas",
+      "chapter": 9,
+      "verse_start": 1,
+      "verse_end": 6,
+      "reference": "Lucas 9:1-6",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Misión de los doce",
+      "characters": [
+        "Jesús",
+        "doce apóstoles"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos tareas resume Lucas al describir la misión de los doce?",
+      "opcion_a": "Proclamar el reino de Dios y sanar",
+      "opcion_b": "Cobrar tributos y organizar censos",
+      "opcion_c": "Defender ciudades y formar alianzas",
+      "opcion_d": "Construir templos y elegir sacerdotes",
+      "correct_option": "A",
+      "correct_answer": "Proclamar el reino de Dios y sanar",
+      "explanation": "La misión combina proclamación y atención a personas enfermas. No se presenta como empresa política o militar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0034",
+      "book": "Lucas",
+      "chapter": 9,
+      "verse_start": 18,
+      "verse_end": 22,
+      "reference": "Lucas 9:18-22",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Confesión de Pedro",
+      "characters": [
+        "Pedro",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo responde Pedro cuando Jesús pregunta quién dicen ellos que es?",
+      "opcion_a": "El Cristo de Dios",
+      "opcion_b": "El escriba de Nazaret",
+      "opcion_c": "El profeta Jeremías reencarnado",
+      "opcion_d": "El gobernador de Galilea",
+      "correct_option": "A",
+      "correct_answer": "El Cristo de Dios",
+      "explanation": "Pedro identifica a Jesús como el Cristo de Dios. Lucas enlaza la confesión con el anuncio posterior del sufrimiento y la resurrección.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0035",
+      "book": "Lucas",
+      "chapter": 9,
+      "verse_start": 28,
+      "verse_end": 36,
+      "reference": "Lucas 9:28-36",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Transfiguración y éxodo",
+      "characters": [
+        "Jesús",
+        "Moisés",
+        "Elías"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿De qué tema hablan Moisés y Elías con Jesús durante la transfiguración según Lucas?",
+      "opcion_a": "De su partida que iba a cumplir en Jerusalén",
+      "opcion_b": "De un plan para gobernar Galilea",
+      "opcion_c": "De la construcción de un nuevo templo",
+      "opcion_d": "De la sucesión de Herodes",
+      "correct_option": "A",
+      "correct_answer": "De su partida que iba a cumplir en Jerusalén",
+      "explanation": "Lucas usa un término asociado con salida o éxodo para referirse a lo que Jesús cumpliría en Jerusalén. El detalle integra sufrimiento, misión y cumplimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0036",
+      "book": "Lucas",
+      "chapter": 9,
+      "verse_start": 51,
+      "verse_end": 56,
+      "reference": "Lucas 9:51-56",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Rechazo samaritano",
+      "characters": [
+        "Jesús",
+        "Jacobo",
+        "Juan",
+        "samaritanos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo responde Jesús cuando sus discípulos quieren reaccionar severamente ante una aldea samaritana que no los recibe?",
+      "opcion_a": "Los reprende y continúan hacia otra aldea",
+      "opcion_b": "Aprueba destruir la aldea",
+      "opcion_c": "Ordena una represalia económica",
+      "opcion_d": "Declara enemigos permanentes a todos los samaritanos",
+      "correct_option": "A",
+      "correct_answer": "Los reprende y continúan hacia otra aldea",
+      "explanation": "El relato frena una respuesta destructiva frente al rechazo. No autoriza hostilidad hacia samaritanos ni hacia ningún grupo actual.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0037",
+      "book": "Lucas",
+      "chapter": 10,
+      "verse_start": 1,
+      "verse_end": 12,
+      "reference": "Lucas 10:1-12",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Envío de los setenta",
+      "characters": [
+        "Jesús",
+        "setenta enviados"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué imagen usa Jesús para explicar la necesidad de más trabajadores en la misión?",
+      "opcion_a": "Una mies abundante con pocos obreros",
+      "opcion_b": "Un ejército sin suficientes armas",
+      "opcion_c": "Un palacio sin guardianes",
+      "opcion_d": "Un mercado sin compradores",
+      "correct_option": "A",
+      "correct_answer": "Una mies abundante con pocos obreros",
+      "explanation": "La imagen de la cosecha presenta una tarea abundante y la necesidad de trabajadores. La respuesta indicada es pedir al Señor de la mies que envíe obreros.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0038",
+      "book": "Lucas",
+      "chapter": 10,
+      "verse_start": 17,
+      "verse_end": 20,
+      "reference": "Lucas 10:17-20",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Alegría de los enviados",
+      "characters": [
+        "Jesús",
+        "setenta enviados"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Jesús orienta a sus enviados a alegrarse sobre todo porque sus nombres están escritos en los cielos",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "Aunque los enviados celebran la autoridad experimentada, Jesús reorienta el motivo principal de alegría hacia su pertenencia ante Dios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0039",
+      "book": "Lucas",
+      "chapter": 10,
+      "verse_start": 25,
+      "verse_end": 37,
+      "reference": "Lucas 10:25-37",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Buen samaritano",
+      "characters": [
+        "Jesús",
+        "intérprete de la ley",
+        "samaritano"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué criterio redefine la pregunta sobre quién es el prójimo al final de la parábola?",
+      "opcion_a": "Hacerse prójimo mediante misericordia concreta",
+      "opcion_b": "Pertenecer al mismo grupo étnico",
+      "opcion_c": "Vivir en la misma ciudad",
+      "opcion_d": "Compartir exactamente la misma ocupación",
+      "correct_option": "A",
+      "correct_answer": "Hacerse prójimo mediante misericordia concreta",
+      "explanation": "Jesús desplaza el foco desde delimitar quién merece ayuda hacia actuar con misericordia. La parábola desafía barreras identitarias, no legitima estereotipos sobre sacerdotes, levitas o samaritanos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0040",
+      "book": "Lucas",
+      "chapter": 10,
+      "verse_start": 38,
+      "verse_end": 42,
+      "reference": "Lucas 10:38-42",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Marta y María",
+      "characters": [
+        "Marta",
+        "María",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste aparece entre las dos hermanas durante la visita de Jesús?",
+      "opcion_a": "Una está absorbida por muchas tareas y la otra escucha sentada a sus pies",
+      "opcion_b": "Una estudia la ley y la otra rechaza toda enseñanza",
+      "opcion_c": "Una es romana y la otra samaritana",
+      "opcion_d": "Una gobierna la casa y la otra el templo",
+      "correct_option": "A",
+      "correct_answer": "Una está absorbida por muchas tareas y la otra escucha sentada a sus pies",
+      "explanation": "Lucas contrapone preocupación por múltiples tareas con la atención concentrada a la palabra de Jesús. El texto no desprecia el servicio doméstico ni el trabajo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0041",
+      "book": "Lucas",
+      "chapter": 11,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Lucas 11:1-4",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Oración enseñada",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué petición socialmente concreta aparece junto con las peticiones sobre el nombre y el reino de Dios?",
+      "opcion_a": "Recibir cada día el pan necesario",
+      "opcion_b": "Obtener riqueza ilimitada",
+      "opcion_c": "Dominar políticamente a otras naciones",
+      "opcion_d": "Evitar todo trabajo cotidiano",
+      "correct_option": "A",
+      "correct_answer": "Recibir cada día el pan necesario",
+      "explanation": "La oración reúne la honra a Dios con necesidades humanas ordinarias, perdón y protección. El pan diario expresa dependencia, no una promesa de lujo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0042",
+      "book": "Lucas",
+      "chapter": 11,
+      "verse_start": 5,
+      "verse_end": 13,
+      "reference": "Lucas 11:5-13",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Amigo a medianoche",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué aspecto de la petición insistente usa Jesús para animar a perseverar en la oración?",
+      "opcion_a": "La persistencia del que pide hasta recibir lo necesario",
+      "opcion_b": "La amenaza física al amigo",
+      "opcion_c": "La capacidad de comprar el favor divino",
+      "opcion_d": "La superioridad social del solicitante",
+      "correct_option": "A",
+      "correct_answer": "La persistencia del que pide hasta recibir lo necesario",
+      "explanation": "La pequeña escena del amigo a medianoche conduce a pedir, buscar y llamar. No presenta la oración como manipulación o compra de la voluntad divina.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0043",
+      "book": "Lucas",
+      "chapter": 11,
+      "verse_start": 29,
+      "verse_end": 32,
+      "reference": "Lucas 11:29-32",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Señal de Jonás",
+      "characters": [
+        "Jesús",
+        "Jonás",
+        "reina del Sur"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función cumplen Nínive y la reina del Sur en la advertencia de Jesús?",
+      "opcion_a": "Actúan como ejemplos de respuesta que dejan en evidencia a quienes no responden",
+      "opcion_b": "Justifican una condena étnica permanente",
+      "opcion_c": "Predicen fronteras políticas modernas",
+      "opcion_d": "Indican que solo extranjeros pueden arrepentirse",
+      "correct_option": "A",
+      "correct_answer": "Actúan como ejemplos de respuesta que dejan en evidencia a quienes no responden",
+      "explanation": "Los ejemplos comparativos cuestionan la falta de respuesta de la generación oyente. No establecen superioridad étnica ni equivalencias con pueblos actuales.",
+      "additional_references": [
+        "Jonás 3:5-10",
+        "1 Reyes 10:1-10"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0044",
+      "book": "Lucas",
+      "chapter": 11,
+      "verse_start": 37,
+      "verse_end": 44,
+      "reference": "Lucas 11:37-44",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Crítica a prácticas externas",
+      "characters": [
+        "Jesús",
+        "fariseos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué desequilibrio denuncia Jesús al hablar de diezmos minuciosos y asuntos más importantes?",
+      "opcion_a": "Cuidar detalles externos mientras se descuidan justicia y amor de Dios",
+      "opcion_b": "Dar cualquier ayuda económica a otros",
+      "opcion_c": "Estudiar con demasiada seriedad las Escrituras",
+      "opcion_d": "Participar en comidas comunitarias",
+      "correct_option": "A",
+      "correct_answer": "Cuidar detalles externos mientras se descuidan justicia y amor de Dios",
+      "explanation": "La crítica se dirige a una religiosidad que mantiene detalles mientras descuida justicia y amor. No se generaliza a todos los fariseos ni al judaísmo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0045",
+      "book": "Lucas",
+      "chapter": 12,
+      "verse_start": 1,
+      "verse_end": 3,
+      "reference": "Lucas 12:1-3",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Hipocresía como levadura",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué realidad compara Jesús con la levadura al advertir a sus discípulos?",
+      "opcion_a": "La hipocresía",
+      "opcion_b": "La pobreza",
+      "opcion_c": "La enfermedad",
+      "opcion_d": "La educación",
+      "correct_option": "A",
+      "correct_answer": "La hipocresía",
+      "explanation": "La imagen advierte sobre una influencia que puede extenderse de forma interna. La crítica se dirige a la incoherencia, no a la identidad de un grupo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0046",
+      "book": "Lucas",
+      "chapter": 12,
+      "verse_start": 13,
+      "verse_end": 21,
+      "reference": "Lucas 12:13-21",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Rico insensato",
+      "characters": [
+        "Jesús",
+        "hombre rico"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué error central ilustra el hombre que amplía sus graneros sin considerar su propia fragilidad?",
+      "opcion_a": "Acumular para sí sin ser rico para con Dios",
+      "opcion_b": "Construir almacenes demasiado pequeños",
+      "opcion_c": "Compartir parte de su cosecha",
+      "opcion_d": "Trabajar en agricultura",
+      "correct_option": "A",
+      "correct_answer": "Acumular para sí sin ser rico para con Dios",
+      "explanation": "La parábola cuestiona la seguridad absoluta depositada en la acumulación ante la incertidumbre de la vida. No condena la planificación prudente ni la agricultura.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0047",
+      "book": "Lucas",
+      "chapter": 12,
+      "verse_start": 22,
+      "verse_end": 31,
+      "reference": "Lucas 12:22-31",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Ansiedad y provisión",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ejemplos de la creación usa Jesús para relativizar la preocupación excesiva por alimento y vestido?",
+      "opcion_a": "Cuervos y lirios",
+      "opcion_b": "Leones y cedros",
+      "opcion_c": "Caballos y olivos",
+      "opcion_d": "Peces y viñedos",
+      "correct_option": "A",
+      "correct_answer": "Cuervos y lirios",
+      "explanation": "Lucas menciona cuervos y lirios para orientar la confianza hacia Dios. La enseñanza no implica ignorar necesidades reales, atención médica, trabajo o planificación responsable.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0048",
+      "book": "Lucas",
+      "chapter": 12,
+      "verse_start": 35,
+      "verse_end": 48,
+      "reference": "Lucas 12:35-48",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Siervos vigilantes",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio de responsabilidad aparece al final de la enseñanza sobre administradores y vigilancia?",
+      "opcion_a": "A quien mucho se le confía, más se le exige",
+      "opcion_b": "Toda autoridad queda libre de rendir cuentas",
+      "opcion_c": "La ignorancia siempre recibe la misma responsabilidad",
+      "opcion_d": "La riqueza elimina toda obligación",
+      "correct_option": "A",
+      "correct_answer": "A quien mucho se le confía, más se le exige",
+      "explanation": "La enseñanza gradúa responsabilidad según conocimiento y encargo recibido. La vigilancia se presenta como fidelidad, no como cronograma para calcular fechas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0049",
+      "book": "Lucas",
+      "chapter": 13,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Lucas 13:1-5",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Tragedias y arrepentimiento",
+      "characters": [
+        "Jesús",
+        "galileos",
+        "víctimas de Siloé"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué interpretación rechaza Jesús al mencionar dos tragedias conocidas?",
+      "opcion_a": "Que las víctimas fueran necesariamente peores pecadoras que los demás",
+      "opcion_b": "Que las tragedias habían ocurrido realmente",
+      "opcion_c": "Que Jerusalén tenía una torre",
+      "opcion_d": "Que Pilato ejercía poder político",
+      "correct_option": "A",
+      "correct_answer": "Que las víctimas fueran necesariamente peores pecadoras que los demás",
+      "explanation": "Jesús rechaza usar el sufrimiento de víctimas como prueba de mayor culpa personal y dirige la atención al arrepentimiento de todos. El pasaje no autoriza culpar a víctimas de desastres.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0050",
+      "book": "Lucas",
+      "chapter": 13,
+      "verse_start": 6,
+      "verse_end": 9,
+      "reference": "Lucas 13:6-9",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Higuera estéril",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué elemento introduce esperanza antes de cortar la higuera que no había dado fruto?",
+      "opcion_a": "Un período adicional de cuidado antes de una decisión final",
+      "opcion_b": "Una orden de destruir todo el huerto",
+      "opcion_c": "La sustitución inmediata por una vid",
+      "opcion_d": "La prohibición de volver a cultivar",
+      "correct_option": "A",
+      "correct_answer": "Un período adicional de cuidado antes de una decisión final",
+      "explanation": "El viñador pide tiempo para cavar y abonar antes de evaluar de nuevo. La parábola combina urgencia y paciencia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0051",
+      "book": "Lucas",
+      "chapter": 13,
+      "verse_start": 10,
+      "verse_end": 17,
+      "reference": "Lucas 13:10-17",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Mujer encorvada",
+      "characters": [
+        "Jesús",
+        "mujer",
+        "principal de la sinagoga"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué argumento usa Jesús para defender la liberación de la mujer en sábado?",
+      "opcion_a": "Si se atiende a animales en sábado, con mayor razón era apropiado liberar a una hija de Abraham",
+      "opcion_b": "La mujer había pagado una tasa especial",
+      "opcion_c": "El sábado había sido abolido oficialmente por Roma",
+      "opcion_d": "La sinagoga no tenía autoridad alguna",
+      "correct_option": "A",
+      "correct_answer": "Si se atiende a animales en sábado, con mayor razón era apropiado liberar a una hija de Abraham",
+      "explanation": "Jesús razona desde prácticas aceptadas de cuidado hacia el valor de liberar a una persona. La referencia a su condición debe tratarse con respeto y no como culpa moral.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0052",
+      "book": "Lucas",
+      "chapter": 13,
+      "verse_start": 22,
+      "verse_end": 30,
+      "reference": "Lucas 13:22-30",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Puerta estrecha",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué advertencia acompaña la imagen de esforzarse por entrar por la puerta estrecha?",
+      "opcion_a": "La cercanía externa no sustituye una respuesta auténtica al llamado",
+      "opcion_b": "La salvación depende de pertenecer a una etnia concreta",
+      "opcion_c": "La puerta representa un lugar geográfico identificable hoy",
+      "opcion_d": "Solo quienes tienen riqueza pueden entrar",
+      "correct_option": "A",
+      "correct_answer": "La cercanía externa no sustituye una respuesta auténtica al llamado",
+      "explanation": "La enseñanza cuestiona la falsa seguridad basada en proximidad o familiaridad. También anticipa un horizonte en el que personas de muchos lugares participan del reino.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0053",
+      "book": "Lucas",
+      "chapter": 14,
+      "verse_start": 1,
+      "verse_end": 6,
+      "reference": "Lucas 14:1-6",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Sanidad en sábado",
+      "characters": [
+        "Jesús",
+        "hombre enfermo",
+        "intérpretes de la ley"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pregunta ética plantea Jesús antes y después de sanar al hombre durante una comida en sábado?",
+      "opcion_a": "Si es lícito sanar en sábado",
+      "opcion_b": "Si es lícito cobrar impuestos",
+      "opcion_c": "Si es lícito viajar a Roma",
+      "opcion_d": "Si es lícito poseer una casa",
+      "correct_option": "A",
+      "correct_answer": "Si es lícito sanar en sábado",
+      "explanation": "La escena formula directamente la cuestión del bien realizado en sábado. Jesús apoya su acción comparándola con responder a una necesidad inmediata.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0054",
+      "book": "Lucas",
+      "chapter": 14,
+      "verse_start": 7,
+      "verse_end": 11,
+      "reference": "Lucas 14:7-11",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Lugar en el banquete",
+      "characters": [
+        "Jesús",
+        "invitados"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitud enseña la pequeña parábola sobre escoger lugares en un banquete?",
+      "opcion_a": "No buscar de entrada el puesto más honorífico",
+      "opcion_b": "Exigir siempre el primer lugar",
+      "opcion_c": "Evitar toda comida comunitaria",
+      "opcion_d": "Sentarse únicamente junto a personas ricas",
+      "correct_option": "A",
+      "correct_answer": "No buscar de entrada el puesto más honorífico",
+      "explanation": "La parábola cuestiona la autoexaltación y culmina con el principio de humillación y exaltación. No es un manual rígido de protocolo social.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0055",
+      "book": "Lucas",
+      "chapter": 14,
+      "verse_start": 15,
+      "verse_end": 24,
+      "reference": "Lucas 14:15-24",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Gran cena",
+      "characters": [
+        "Jesús",
+        "invitados"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ocurre cuando los invitados inicialmente convocados comienzan a excusarse?",
+      "opcion_a": "La invitación se amplía a personas pobres y marginadas de la ciudad",
+      "opcion_b": "La cena se cancela definitivamente",
+      "opcion_c": "El anfitrión destruye toda la ciudad de inmediato",
+      "opcion_d": "Solo se invita a familiares cercanos",
+      "correct_option": "A",
+      "correct_answer": "La invitación se amplía a personas pobres y marginadas de la ciudad",
+      "explanation": "La parábola describe una ampliación inesperada de la mesa tras el rechazo de los primeros invitados. La inclusión de personas vulnerables no las reduce a objetos de caridad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0056",
+      "book": "Lucas",
+      "chapter": 14,
+      "verse_start": 25,
+      "verse_end": 33,
+      "reference": "Lucas 14:25-33",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Costo del discipulado",
+      "characters": [
+        "Jesús",
+        "multitudes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función tienen los ejemplos de una torre y un rey que evalúa una guerra?",
+      "opcion_a": "Ilustrar la necesidad de considerar seriamente el costo antes de emprender algo",
+      "opcion_b": "Dar instrucciones técnicas de construcción y combate",
+      "opcion_c": "Promover conquistas militares",
+      "opcion_d": "Enseñar a evitar toda planificación",
+      "correct_option": "A",
+      "correct_answer": "Ilustrar la necesidad de considerar seriamente el costo antes de emprender algo",
+      "explanation": "Los dos ejemplos funcionan como analogías de evaluación y compromiso. No deben leerse como instrucciones operativas de guerra.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0057",
+      "book": "Lucas",
+      "chapter": 15,
+      "verse_start": 1,
+      "verse_end": 7,
+      "reference": "Lucas 15:1-7",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Oveja perdida",
+      "characters": [
+        "Jesús",
+        "publicanos",
+        "pecadores",
+        "fariseos",
+        "escribas"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué emoción domina el cierre de la parábola de la oveja recuperada?",
+      "opcion_a": "Alegría por encontrar lo que estaba perdido",
+      "opcion_b": "Vergüenza por haber buscado",
+      "opcion_c": "Enojo contra las otras ovejas",
+      "opcion_d": "Indiferencia ante el regreso",
+      "correct_option": "A",
+      "correct_answer": "Alegría por encontrar lo que estaba perdido",
+      "explanation": "La parábola responde a críticas por recibir a pecadores y subraya alegría por la recuperación. No presenta a personas como de menor valor.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0058",
+      "book": "Lucas",
+      "chapter": 15,
+      "verse_start": 8,
+      "verse_end": 10,
+      "reference": "Lucas 15:8-10",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Moneda perdida",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la mujer enciende una lámpara y busca cuidadosamente hasta hallar la moneda perdida",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La búsqueda es deliberada y persistente y culmina en una invitación a alegrarse. Jesús conecta esa alegría con el arrepentimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0059",
+      "book": "Lucas",
+      "chapter": 15,
+      "verse_start": 11,
+      "verse_end": 24,
+      "reference": "Lucas 15:11-24",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Hijo menor que regresa",
+      "characters": [
+        "Jesús",
+        "padre",
+        "hijo menor"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hace el padre cuando ve regresar al hijo que había malgastado la herencia?",
+      "opcion_a": "Corre a recibirlo y restaura públicamente su lugar en la familia",
+      "opcion_b": "Le exige trabajar años antes de hablarle",
+      "opcion_c": "Lo entrega a las autoridades civiles",
+      "opcion_d": "Finge no reconocerlo",
+      "correct_option": "A",
+      "correct_answer": "Corre a recibirlo y restaura públicamente su lugar en la familia",
+      "explanation": "El padre responde con compasión y una restauración visible. La parábola no niega la gravedad de las decisiones del hijo, pero enfatiza la recepción del que vuelve.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0060",
+      "book": "Lucas",
+      "chapter": 15,
+      "verse_start": 25,
+      "verse_end": 32,
+      "reference": "Lucas 15:25-32",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Hermano mayor",
+      "characters": [
+        "Jesús",
+        "padre",
+        "hijo mayor"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dificultad muestra el hermano mayor ante el regreso del menor?",
+      "opcion_a": "Le cuesta compartir la alegría por la restauración de su hermano",
+      "opcion_b": "Desconoce quién es su padre",
+      "opcion_c": "Quiere entregar su propia herencia al hermano",
+      "opcion_d": "Se alegra antes que todos y organiza la fiesta",
+      "correct_option": "A",
+      "correct_answer": "Le cuesta compartir la alegría por la restauración de su hermano",
+      "explanation": "El cierre deja abierta la respuesta del hermano mayor y expone resentimiento frente a la misericordia. El padre reafirma tanto la cercanía del mayor como la razón para celebrar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0061",
+      "book": "Lucas",
+      "chapter": 16,
+      "verse_start": 1,
+      "verse_end": 9,
+      "reference": "Lucas 16:1-9",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Administrador astuto",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué aspecto del administrador injusto es el punto explícitamente elogiado en la parábola?",
+      "opcion_a": "La astucia con que actuó ante su crisis, no su deshonestidad",
+      "opcion_b": "El fraude como modelo moral completo",
+      "opcion_c": "La apropiación de bienes ajenos",
+      "opcion_d": "La mentira como virtud permanente",
+      "correct_option": "A",
+      "correct_answer": "La astucia con que actuó ante su crisis, no su deshonestidad",
+      "explanation": "El relato distingue entre la injusticia del personaje y la previsión con que responde a su situación. La parábola no legitima fraude ni corrupción.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0062",
+      "book": "Lucas",
+      "chapter": 16,
+      "verse_start": 10,
+      "verse_end": 13,
+      "reference": "Lucas 16:10-13",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Fidelidad y dinero",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio vincula Jesús con la fidelidad en cosas pequeñas y grandes?",
+      "opcion_a": "La conducta en lo pequeño revela confiabilidad para mayores encargos",
+      "opcion_b": "La riqueza demuestra automáticamente fidelidad espiritual",
+      "opcion_c": "Solo los pobres pueden ser fieles",
+      "opcion_d": "La administración económica no tiene ninguna dimensión moral",
+      "correct_option": "A",
+      "correct_answer": "La conducta en lo pequeño revela confiabilidad para mayores encargos",
+      "explanation": "Jesús relaciona fidelidad y confiabilidad a través de distintos niveles de responsabilidad. También advierte contra convertir el dinero en señor.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0063",
+      "book": "Lucas",
+      "chapter": 16,
+      "verse_start": 19,
+      "verse_end": 31,
+      "reference": "Lucas 16:19-31",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Rico y Lázaro",
+      "characters": [
+        "Jesús",
+        "hombre rico",
+        "Lázaro",
+        "Abraham"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste se invierte radicalmente entre el rico y Lázaro después de la muerte?",
+      "opcion_a": "El que vivía en abundancia queda en angustia y el necesitado recibe consuelo",
+      "opcion_b": "Ambos conservan exactamente la misma situación",
+      "opcion_c": "Lázaro se convierte en gobernante romano",
+      "opcion_d": "El rico recibe más riqueza por haberla acumulado",
+      "correct_option": "A",
+      "correct_answer": "El que vivía en abundancia queda en angustia y el necesitado recibe consuelo",
+      "explanation": "La historia invierte las condiciones de los dos personajes y pone en primer plano la indiferencia ante el necesitado. No debe usarse para describir con precisión técnica la geografía del más allá.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0064",
+      "book": "Lucas",
+      "chapter": 16,
+      "verse_start": 29,
+      "verse_end": 31,
+      "reference": "Lucas 16:29-31",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Moisés y los profetas",
+      "characters": [
+        "Abraham",
+        "hombre rico"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué afirma el cierre del relato sobre la suficiencia de escuchar a Moisés y los profetas?",
+      "opcion_a": "Que rechazar ese testimonio revela una resistencia que ni una señal extraordinaria garantiza superar",
+      "opcion_b": "Que las Escrituras dejan de tener toda utilidad",
+      "opcion_c": "Que solo una aparición física puede producir fe",
+      "opcion_d": "Que los profetas fueron desconocidos para Israel",
+      "correct_option": "A",
+      "correct_answer": "Que rechazar ese testimonio revela una resistencia que ni una señal extraordinaria garantiza superar",
+      "explanation": "El final sitúa la responsabilidad en responder al testimonio ya disponible. La afirmación cuestiona una demanda de señales que evita escuchar la revelación recibida.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0065",
+      "book": "Lucas",
+      "chapter": 17,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Lucas 17:1-4",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Ofensas y perdón",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación exige Jesús al tratar una falta cometida por un hermano?",
+      "opcion_a": "Reprender la falta y perdonar cuando hay arrepentimiento",
+      "opcion_b": "Ignorar siempre cualquier daño",
+      "opcion_c": "Vengarse antes de escuchar",
+      "opcion_d": "Perdonar solo una vez en la vida",
+      "correct_option": "A",
+      "correct_answer": "Reprender la falta y perdonar cuando hay arrepentimiento",
+      "explanation": "La enseñanza combina confrontación y disposición repetida al perdón. No obliga a omitir límites, protección o justicia frente a abuso.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0066",
+      "book": "Lucas",
+      "chapter": 17,
+      "verse_start": 5,
+      "verse_end": 6,
+      "reference": "Lucas 17:5-6",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Fe como grano de mostaza",
+      "characters": [
+        "Jesús",
+        "apóstoles"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué responde Jesús cuando los apóstoles le piden que aumente su fe?",
+      "opcion_a": "Usa la imagen de una fe como grano de mostaza capaz de producir un resultado sorprendente",
+      "opcion_b": "Les entrega una escala numérica de fe",
+      "opcion_c": "Les dice que la fe depende de riqueza",
+      "opcion_d": "Les ordena dejar de orar",
+      "correct_option": "A",
+      "correct_answer": "Usa la imagen de una fe como grano de mostaza capaz de producir un resultado sorprendente",
+      "explanation": "La respuesta usa una imagen hiperbólica para destacar la potencia de una confianza genuina. No es una fórmula para controlar físicamente la naturaleza.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0067",
+      "book": "Lucas",
+      "chapter": 17,
+      "verse_start": 7,
+      "verse_end": 10,
+      "reference": "Lucas 17:7-10",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Siervos y deber",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitud busca formar la breve comparación del siervo que cumple su deber?",
+      "opcion_a": "Humildad que no convierte el servicio en motivo de superioridad",
+      "opcion_b": "Desprecio hacia las personas que sirven",
+      "opcion_c": "Aceptación de explotación laboral moderna",
+      "opcion_d": "Negación de toda gratitud",
+      "correct_option": "A",
+      "correct_answer": "Humildad que no convierte el servicio en motivo de superioridad",
+      "explanation": "La comparación apunta a la humildad del discípulo ante Dios. No constituye una justificación de esclavitud o abuso laboral contemporáneo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0068",
+      "book": "Lucas",
+      "chapter": 17,
+      "verse_start": 11,
+      "verse_end": 19,
+      "reference": "Lucas 17:11-19",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Diez leprosos",
+      "characters": [
+        "Jesús",
+        "diez hombres",
+        "samaritano"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué distingue al único hombre que regresa después de verse limpio?",
+      "opcion_a": "Vuelve agradeciendo a Dios, y Lucas señala que era samaritano",
+      "opcion_b": "Era el único que había pedido ayuda",
+      "opcion_c": "Era sacerdote del templo",
+      "opcion_d": "Se negó a presentarse ante los sacerdotes",
+      "correct_option": "A",
+      "correct_answer": "Vuelve agradeciendo a Dios, y Lucas señala que era samaritano",
+      "explanation": "Los diez experimentan la limpieza, pero uno vuelve para glorificar a Dios y agradecer. Lucas subraya que ese hombre era samaritano, desafiando prejuicios sobre quién responde con gratitud.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0069",
+      "book": "Lucas",
+      "chapter": 18,
+      "verse_start": 1,
+      "verse_end": 8,
+      "reference": "Lucas 18:1-8",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Viuda persistente",
+      "characters": [
+        "Jesús",
+        "viuda",
+        "juez"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Para qué introduce Lucas la parábola de la viuda y el juez injusto?",
+      "opcion_a": "Para enseñar a orar siempre sin desanimarse",
+      "opcion_b": "Para justificar jueces corruptos",
+      "opcion_c": "Para enseñar técnicas de litigio",
+      "opcion_d": "Para prometer que toda petición recibe exactamente el resultado pedido",
+      "correct_option": "A",
+      "correct_answer": "Para enseñar a orar siempre sin desanimarse",
+      "explanation": "Lucas declara el propósito antes de la parábola: perseverar en la oración. La comparación no presenta al juez injusto como modelo del carácter de Dios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0070",
+      "book": "Lucas",
+      "chapter": 18,
+      "verse_start": 9,
+      "verse_end": 14,
+      "reference": "Lucas 18:9-14",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Fariseo y publicano",
+      "characters": [
+        "Jesús",
+        "fariseo",
+        "publicano"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué diferencia fundamental aparece entre las dos oraciones del relato?",
+      "opcion_a": "Uno se exalta comparándose y el otro pide misericordia reconociendo su pecado",
+      "opcion_b": "Ambos piden riqueza",
+      "opcion_c": "Ambos condenan a otras personas por igual",
+      "opcion_d": "El publicano presume de sus obras",
+      "correct_option": "A",
+      "correct_answer": "Uno se exalta comparándose y el otro pide misericordia reconociendo su pecado",
+      "explanation": "La parábola se dirige a quienes confían en su propia justicia y menosprecian a otros. La crítica recae en la autosuficiencia del personaje, no en una condena general de los fariseos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0071",
+      "book": "Lucas",
+      "chapter": 18,
+      "verse_start": 15,
+      "verse_end": 17,
+      "reference": "Lucas 18:15-17",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Niños y reino",
+      "characters": [
+        "Jesús",
+        "niños",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hace Jesús cuando los discípulos intentan impedir que acerquen a los niños?",
+      "opcion_a": "Los llama y afirma que el reino pertenece a quienes lo reciben como un niño",
+      "opcion_b": "Aprueba mantenerlos lejos",
+      "opcion_c": "Ordena que solo entren adultos",
+      "opcion_d": "Declara que los niños no pueden participar de ninguna bendición",
+      "correct_option": "A",
+      "correct_answer": "Los llama y afirma que el reino pertenece a quienes lo reciben como un niño",
+      "explanation": "Jesús revierte la exclusión y pone a los niños como referencia para recibir el reino. La escena afirma su dignidad y acceso.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0072",
+      "book": "Lucas",
+      "chapter": 18,
+      "verse_start": 35,
+      "verse_end": 43,
+      "reference": "Lucas 18:35-43",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Ciego cerca de Jericó",
+      "characters": [
+        "Jesús",
+        "hombre ciego"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hace el hombre cuando la multitud intenta callarlo?",
+      "opcion_a": "Clama aún más fuerte pidiendo misericordia",
+      "opcion_b": "Se marcha en silencio",
+      "opcion_c": "Ataca a quienes lo reprenden",
+      "opcion_d": "Decide no acercarse a Jesús",
+      "correct_option": "A",
+      "correct_answer": "Clama aún más fuerte pidiendo misericordia",
+      "explanation": "La presión social no detiene su petición y Jesús ordena que lo acerquen. El relato destaca escucha y restauración, no culpa por discapacidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0073",
+      "book": "Lucas",
+      "chapter": 19,
+      "verse_start": 1,
+      "verse_end": 10,
+      "reference": "Lucas 19:1-10",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Zaqueo",
+      "characters": [
+        "Zaqueo",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cambio económico anuncia Zaqueo al recibir a Jesús?",
+      "opcion_a": "Dar a los pobres y restituir multiplicado si había defraudado a alguien",
+      "opcion_b": "Cobrar tasas más altas para financiar el templo",
+      "opcion_c": "Abandonar toda devolución de deudas",
+      "opcion_d": "Entregar sus bienes únicamente a funcionarios romanos",
+      "correct_option": "A",
+      "correct_answer": "Dar a los pobres y restituir multiplicado si había defraudado a alguien",
+      "explanation": "Zaqueo responde con generosidad y reparación frente a posibles fraudes. La escena conecta salvación con una transformación que afecta relaciones económicas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0074",
+      "book": "Lucas",
+      "chapter": 19,
+      "verse_start": 11,
+      "verse_end": 27,
+      "reference": "Lucas 19:11-27",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Minas y responsabilidad",
+      "characters": [
+        "Jesús",
+        "siervos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué aspecto diferencia al siervo que conserva la mina sin trabajar con ella?",
+      "opcion_a": "Su temor y una visión negativa del señor lo llevan a no asumir el encargo",
+      "opcion_b": "Había perdido la mina en un robo",
+      "opcion_c": "Nunca recibió ningún encargo",
+      "opcion_d": "Fue el único que duplicó lo recibido",
+      "correct_option": "A",
+      "correct_answer": "Su temor y una visión negativa del señor lo llevan a no asumir el encargo",
+      "explanation": "La parábola examina cómo se responde a un encargo durante una ausencia. No debe convertirse en un modelo de inversión financiera obligatoria ni de sistemas políticos modernos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0075",
+      "book": "Lucas",
+      "chapter": 19,
+      "verse_start": 41,
+      "verse_end": 44,
+      "reference": "Lucas 19:41-44",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Llanto sobre Jerusalén",
+      "characters": [
+        "Jesús",
+        "Jerusalén"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué emoción muestra Jesús al acercarse y contemplar Jerusalén?",
+      "opcion_a": "Llora por la ciudad",
+      "opcion_b": "Celebra su futura destrucción",
+      "opcion_c": "Muestra indiferencia",
+      "opcion_d": "Se burla de sus habitantes",
+      "correct_option": "A",
+      "correct_answer": "Llora por la ciudad",
+      "explanation": "Lucas presenta a Jesús llorando antes de anunciar consecuencias graves. El lamento impide leer el juicio como celebración del sufrimiento de la población.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0076",
+      "book": "Lucas",
+      "chapter": 19,
+      "verse_start": 45,
+      "verse_end": 48,
+      "reference": "Lucas 19:45-48",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Templo y enseñanza",
+      "characters": [
+        "Jesús",
+        "comerciantes",
+        "pueblo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actividad cotidiana de Jesús en el templo sigue a la expulsión de quienes comerciaban allí?",
+      "opcion_a": "Enseñaba cada día",
+      "opcion_b": "Organizaba una guardia armada",
+      "opcion_c": "Cobraba tributos del santuario",
+      "opcion_d": "Cerraba el lugar al público",
+      "correct_option": "A",
+      "correct_answer": "Enseñaba cada día",
+      "explanation": "Lucas enlaza la acción profética con una presencia diaria de enseñanza. El episodio no autoriza violencia moderna contra comerciantes o comunidades religiosas.",
+      "additional_references": [
+        "Isaías 56:7",
+        "Jeremías 7:11"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0077",
+      "book": "Lucas",
+      "chapter": 20,
+      "verse_start": 1,
+      "verse_end": 8,
+      "reference": "Lucas 20:1-8",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Pregunta sobre autoridad",
+      "characters": [
+        "Jesús",
+        "principales sacerdotes",
+        "escribas"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué los interlocutores evitan responder de manera directa acerca del origen del bautismo de Juan?",
+      "opcion_a": "Calculan que cualquiera de las dos respuestas los comprometería ante Jesús o el pueblo",
+      "opcion_b": "Desconocían por completo quién era Juan",
+      "opcion_c": "Habían olvidado el idioma de la pregunta",
+      "opcion_d": "No podían hablar durante el sábado",
+      "correct_option": "A",
+      "correct_answer": "Calculan que cualquiera de las dos respuestas los comprometería ante Jesús o el pueblo",
+      "explanation": "El relato expone un razonamiento estratégico condicionado por consecuencias públicas. Jesús responde entonces que tampoco declarará el origen de su autoridad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0078",
+      "book": "Lucas",
+      "chapter": 20,
+      "verse_start": 9,
+      "verse_end": 18,
+      "reference": "Lucas 20:9-18",
+      "category": "JESUS_PARABOLAS",
+      "subcategory": "Labradores malvados",
+      "characters": [
+        "Jesús",
+        "labradores",
+        "hijo del dueño"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué escalada caracteriza la conducta de los labradores frente a los enviados del dueño?",
+      "opcion_a": "Maltratan repetidamente a los enviados y finalmente matan al hijo",
+      "opcion_b": "Aceptan a cada enviado y entregan el fruto",
+      "opcion_c": "Ignoran al hijo pero respetan a todos los siervos",
+      "opcion_d": "Abandonan voluntariamente la viña antes de recibir mensajes",
+      "correct_option": "A",
+      "correct_answer": "Maltratan repetidamente a los enviados y finalmente matan al hijo",
+      "explanation": "La parábola presenta una secuencia creciente de rechazo. Debe interpretarse dentro de la controversia narrativa sin convertirla en acusación colectiva contra un pueblo.",
+      "additional_references": [
+        "Salmos 118:22"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PARABOLAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0079",
+      "book": "Lucas",
+      "chapter": 20,
+      "verse_start": 20,
+      "verse_end": 26,
+      "reference": "Lucas 20:20-26",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Tributo y trampa",
+      "characters": [
+        "Jesús",
+        "espías"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué estrategia intentan usar quienes preguntan por el tributo al poder romano?",
+      "opcion_a": "Atraparlo en una declaración que pueda comprometerlo ante la autoridad",
+      "opcion_b": "Aprender de buena fe cómo llevar las cuentas",
+      "opcion_c": "Solicitar una reducción legal de impuestos",
+      "opcion_d": "Proponer una colecta para los pobres",
+      "correct_option": "A",
+      "correct_answer": "Atraparlo en una declaración que pueda comprometerlo ante la autoridad",
+      "explanation": "Lucas identifica a los interrogadores como espías que buscan una base para entregarlo al gobernador. La respuesta de Jesús evita la trampa.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0080",
+      "book": "Lucas",
+      "chapter": 20,
+      "verse_start": 27,
+      "verse_end": 40,
+      "reference": "Lucas 20:27-40",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Saduceos y resurrección",
+      "characters": [
+        "Jesús",
+        "saduceos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué figura del Pentateuco usa Jesús para argumentar que los muertos resucitan?",
+      "opcion_a": "Moisés en el relato de la zarza",
+      "opcion_b": "Noé durante el diluvio",
+      "opcion_c": "José en Egipto",
+      "opcion_d": "Josué al cruzar el Jordán",
+      "correct_option": "A",
+      "correct_answer": "Moisés en el relato de la zarza",
+      "explanation": "Jesús apela a cómo Moisés presenta a Dios en relación con Abraham, Isaac y Jacob. La discusión se mantiene dentro de un debate judío del siglo I.",
+      "additional_references": [
+        "Éxodo 3:6"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0081",
+      "book": "Lucas",
+      "chapter": 21,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Lucas 21:1-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Ofrenda de la viuda",
+      "characters": [
+        "Jesús",
+        "viuda"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué Jesús considera significativa la pequeña ofrenda de la viuda?",
+      "opcion_a": "Porque provenía de su pobreza y representaba todo su sustento disponible",
+      "opcion_b": "Porque era la cantidad mayor del tesoro",
+      "opcion_c": "Porque la mujer era funcionaria del templo",
+      "opcion_d": "Porque recibiría una recompensa financiera garantizada",
+      "correct_option": "A",
+      "correct_answer": "Porque provenía de su pobreza y representaba todo su sustento disponible",
+      "explanation": "El contraste se basa en proporción y costo para la persona, no en monto absoluto. El pasaje no debe utilizarse para presionar económicamente a personas vulnerables.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0082",
+      "book": "Lucas",
+      "chapter": 21,
+      "verse_start": 5,
+      "verse_end": 9,
+      "reference": "Lucas 21:5-9",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Templo y primeras señales",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué advertencia da Jesús cuando oyen hablar de guerras y perturbaciones?",
+      "opcion_a": "No dejarse aterrorizar ni concluir que el fin llega inmediatamente",
+      "opcion_b": "Fijar una fecha exacta del fin",
+      "opcion_c": "Identificar una nación moderna como enemigo final",
+      "opcion_d": "Prepararse para atacar Jerusalén",
+      "correct_option": "A",
+      "correct_answer": "No dejarse aterrorizar ni concluir que el fin llega inmediatamente",
+      "explanation": "Jesús afirma que ciertos acontecimientos deben suceder, pero el fin no es inmediato. Esto bloquea el uso del pasaje como calendario automático de noticias actuales.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0083",
+      "book": "Lucas",
+      "chapter": 21,
+      "verse_start": 12,
+      "verse_end": 19,
+      "reference": "Lucas 21:12-19",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Persecución y testimonio",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué oportunidad inesperada puede surgir de ser llevados ante autoridades según la enseñanza?",
+      "opcion_a": "Dar testimonio",
+      "opcion_b": "Obtener riqueza",
+      "opcion_c": "Evitar para siempre cualquier conflicto",
+      "opcion_d": "Recibir un cargo político",
+      "correct_option": "A",
+      "correct_answer": "Dar testimonio",
+      "explanation": "Lucas presenta la comparecencia ante autoridades como ocasión de testimonio y promete ayuda para responder. No anima a buscar persecución deliberadamente.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0084",
+      "book": "Lucas",
+      "chapter": 21,
+      "verse_start": 34,
+      "verse_end": 36,
+      "reference": "Lucas 21:34-36",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Vigilancia",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la vigilancia final incluye cuidar que excesos y preocupaciones de la vida no emboten el corazón",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La vigilancia de Lucas tiene una dimensión ética y espiritual cotidiana. No se reduce a descifrar fechas o acontecimientos geopolíticos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0085",
+      "book": "Lucas",
+      "chapter": 22,
+      "verse_start": 3,
+      "verse_end": 6,
+      "reference": "Lucas 22:3-6",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Acuerdo de Judas",
+      "characters": [
+        "Judas Iscariote",
+        "principales sacerdotes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué busca Judas después de acordar entregar a Jesús?",
+      "opcion_a": "Una oportunidad para hacerlo sin presencia de la multitud",
+      "opcion_b": "Una batalla pública en el templo",
+      "opcion_c": "Una audiencia formal ante el Senado romano",
+      "opcion_d": "Un viaje conjunto a Galilea",
+      "correct_option": "A",
+      "correct_answer": "Una oportunidad para hacerlo sin presencia de la multitud",
+      "explanation": "Lucas describe una búsqueda de ocasión favorable lejos de la multitud. El relato no debe usarse para estigmatizar a ningún grupo étnico o religioso.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0086",
+      "book": "Lucas",
+      "chapter": 22,
+      "verse_start": 24,
+      "verse_end": 27,
+      "reference": "Lucas 22:24-27",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Grandeza como servicio",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo redefine Jesús la grandeza cuando surge una discusión entre sus discípulos?",
+      "opcion_a": "El mayor debe comportarse como el que sirve",
+      "opcion_b": "El mayor debe exigir privilegios visibles",
+      "opcion_c": "La grandeza depende de riqueza",
+      "opcion_d": "El liderazgo requiere dominar por fuerza",
+      "correct_option": "A",
+      "correct_answer": "El mayor debe comportarse como el que sirve",
+      "explanation": "Jesús contrasta el estilo de los gobernantes con una comunidad donde el líder sirve. La autoridad queda vinculada al servicio, no a dominación.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0087",
+      "book": "Lucas",
+      "chapter": 22,
+      "verse_start": 31,
+      "verse_end": 34,
+      "reference": "Lucas 22:31-34",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Advertencia a Simón",
+      "characters": [
+        "Jesús",
+        "Simón Pedro"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué encargo recibe Simón para después de volver tras su caída?",
+      "opcion_a": "Fortalecer a sus hermanos",
+      "opcion_b": "Abandonar definitivamente al grupo",
+      "opcion_c": "Ocultar lo ocurrido a todos",
+      "opcion_d": "Reemplazar a los demás apóstoles",
+      "correct_option": "A",
+      "correct_answer": "Fortalecer a sus hermanos",
+      "explanation": "Jesús anuncia la prueba y la negación, pero también habla de haber orado por Simón y le da una tarea posterior. El fracaso no aparece como palabra final sobre su futuro.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0088",
+      "book": "Lucas",
+      "chapter": 22,
+      "verse_start": 49,
+      "verse_end": 51,
+      "reference": "Lucas 22:49-51",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Oreja del siervo",
+      "characters": [
+        "Jesús",
+        "siervo del sumo sacerdote",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hace Jesús con el hombre herido durante su arresto?",
+      "opcion_a": "Toca su oreja y lo sana",
+      "opcion_b": "Ordena continuar la pelea",
+      "opcion_c": "Lo abandona sin intervenir",
+      "opcion_d": "Pide que lo lleven a prisión",
+      "correct_option": "A",
+      "correct_answer": "Toca su oreja y lo sana",
+      "explanation": "Lucas es el único sinóptico que explicita la sanidad de la herida durante el arresto. La escena limita la escalada de violencia en lugar de promoverla.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0089",
+      "book": "Lucas",
+      "chapter": 23,
+      "verse_start": 6,
+      "verse_end": 12,
+      "reference": "Lucas 23:6-12",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Jesús ante Herodes",
+      "characters": [
+        "Jesús",
+        "Herodes",
+        "Pilato"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cambio de relación entre dos gobernantes menciona Lucas después del envío de Jesús de uno al otro?",
+      "opcion_a": "Herodes y Pilato se hicieron amigos aquel día",
+      "opcion_b": "Ambos fueron destituidos inmediatamente",
+      "opcion_c": "Comenzaron una guerra entre sí",
+      "opcion_d": "Dejaron de ejercer cualquier autoridad",
+      "correct_option": "A",
+      "correct_answer": "Herodes y Pilato se hicieron amigos aquel día",
+      "explanation": "Lucas observa que Herodes y Pilato, antes enemistados, se hicieron amigos ese día. El detalle pertenece a la dinámica política del proceso narrado.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0090",
+      "book": "Lucas",
+      "chapter": 23,
+      "verse_start": 27,
+      "verse_end": 31,
+      "reference": "Lucas 23:27-31",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Mujeres de Jerusalén",
+      "characters": [
+        "Jesús",
+        "mujeres de Jerusalén"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Hacia dónde redirige Jesús el llanto de las mujeres que lo siguen camino a la ejecución?",
+      "opcion_a": "Hacia ellas mismas y sus hijos ante una crisis futura",
+      "opcion_b": "Hacia una celebración inmediata",
+      "opcion_c": "Hacia los soldados romanos únicamente",
+      "opcion_d": "Hacia los discípulos que huyeron",
+      "correct_option": "A",
+      "correct_answer": "Hacia ellas mismas y sus hijos ante una crisis futura",
+      "explanation": "Jesús responde al lamento anunciando tiempos de sufrimiento para la ciudad y sus habitantes. No es una culpa dirigida a las mujeres, sino una advertencia profética.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0091",
+      "book": "Lucas",
+      "chapter": 23,
+      "verse_start": 39,
+      "verse_end": 43,
+      "reference": "Lucas 23:39-43",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Criminal que apela a Jesús",
+      "characters": [
+        "Jesús",
+        "criminales crucificados"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué distingue la respuesta del criminal que se dirige favorablemente a Jesús?",
+      "opcion_a": "Reconoce su propia culpa y pide ser recordado en el reino",
+      "opcion_b": "Afirma ser completamente inocente y exige liberación",
+      "opcion_c": "Insulta a Jesús junto con el otro",
+      "opcion_d": "Pide una recompensa económica",
+      "correct_option": "A",
+      "correct_answer": "Reconoce su propia culpa y pide ser recordado en el reino",
+      "explanation": "Lucas contrasta dos reacciones y destaca la petición humilde de uno de los condenados. Jesús responde con una promesa de comunión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0092",
+      "book": "Lucas",
+      "chapter": 23,
+      "verse_start": 44,
+      "verse_end": 47,
+      "reference": "Lucas 23:44-47",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Reacción del centurión",
+      "characters": [
+        "Centurión",
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué conclusión expresa el centurión al ver lo ocurrido en la muerte de Jesús?",
+      "opcion_a": "Glorifica a Dios y reconoce que aquel hombre era justo",
+      "opcion_b": "Afirma que Jesús era un criminal común",
+      "opcion_c": "Ordena una segunda ejecución",
+      "opcion_d": "Niega que haya ocurrido algo notable",
+      "correct_option": "A",
+      "correct_answer": "Glorifica a Dios y reconoce que aquel hombre era justo",
+      "explanation": "Lucas formula la reacción del centurión en términos de justicia o inocencia de Jesús. El detalle contribuye al énfasis lucano en su inocencia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0093",
+      "book": "Lucas",
+      "chapter": 24,
+      "verse_start": 1,
+      "verse_end": 12,
+      "reference": "Lucas 24:1-12",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Mujeres y tumba vacía",
+      "characters": [
+        "María Magdalena",
+        "Juana",
+        "María madre de Jacobo",
+        "apóstoles"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo reciben inicialmente los apóstoles el anuncio de las mujeres sobre la tumba y el mensaje recibido?",
+      "opcion_a": "Les parece una locura y no les creen",
+      "opcion_b": "Lo aceptan todos sin ninguna duda",
+      "opcion_c": "Ordenan celebrar una fiesta pública",
+      "opcion_d": "Se marchan de inmediato a Roma",
+      "correct_option": "A",
+      "correct_answer": "Les parece una locura y no les creen",
+      "explanation": "Lucas registra incredulidad inicial ante el testimonio de las mujeres, aunque Pedro va a comprobar la tumba. La escena no desacredita a las mujeres; muestra que fueron portadoras tempranas del anuncio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0094",
+      "book": "Lucas",
+      "chapter": 24,
+      "verse_start": 13,
+      "verse_end": 27,
+      "reference": "Lucas 24:13-27",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Camino a Emaús",
+      "characters": [
+        "Jesús",
+        "Cleofas",
+        "otro discípulo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hace el desconocido caminante para reinterpretar la decepción de los discípulos de Emaús?",
+      "opcion_a": "Explica desde Moisés y los profetas lo referente al Mesías",
+      "opcion_b": "Les revela una estrategia política secreta",
+      "opcion_c": "Les ordena volver a pescar",
+      "opcion_d": "Les asegura que Jerusalén no sufrió ningún conflicto",
+      "correct_option": "A",
+      "correct_answer": "Explica desde Moisés y los profetas lo referente al Mesías",
+      "explanation": "Jesús, aún no reconocido, relee con ellos las Escrituras para integrar sufrimiento y gloria. El relato presenta una interpretación bíblica progresiva.",
+      "additional_references": [
+        "Moisés y los profetas"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0095",
+      "book": "Lucas",
+      "chapter": 24,
+      "verse_start": 28,
+      "verse_end": 35,
+      "reference": "Lucas 24:28-35",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Reconocimiento en Emaús",
+      "characters": [
+        "Jesús",
+        "Cleofas",
+        "otro discípulo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿En qué momento reconocen los discípulos de Emaús a Jesús?",
+      "opcion_a": "Al partir el pan después de sentarse a la mesa",
+      "opcion_b": "Al verlo por primera vez en el camino",
+      "opcion_c": "Cuando llegan a Jerusalén al día siguiente",
+      "opcion_d": "Al escuchar a Pedro antes del viaje",
+      "correct_option": "A",
+      "correct_answer": "Al partir el pan después de sentarse a la mesa",
+      "explanation": "La identidad se hace clara en el gesto de partir el pan, tras lo cual Jesús desaparece de su vista. Ellos recuerdan también cómo ardía su corazón al escuchar la explicación.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-LUC-0096",
+      "book": "Lucas",
+      "chapter": 24,
+      "verse_start": 50,
+      "verse_end": 53,
+      "reference": "Lucas 24:50-53",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Ascensión y cierre",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el Evangelio termina con los discípulos regresando con gran gozo y permaneciendo en el templo alabando a Dios",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "El cierre combina la ascensión con una respuesta de adoración, alegría y permanencia en Jerusalén. Ese final prepara narrativamente la continuación en Hechos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}

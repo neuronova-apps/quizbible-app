@@ -414,6 +414,22 @@ class TestRuntimeExport(unittest.TestCase):
             self.assertEqual(q["book"], "Marcos")
         self.assertTrue(validate_runtime_collection(collection))
 
+    def test_luke_testament_nt_and_runtime_export(self) -> None:
+        """Verifica que las preguntas de Lucas produzcan testament=NT y validen contra el schema."""
+        luk_path = self.extractor_dir / "luke-master-input.json"
+        if not luk_path.exists():
+            self.skipTest("luke-master-input.json no disponible")
+        raw = json.loads(luk_path.read_text(encoding="utf-8"))
+        luk_qs = raw.get("questions", raw) if isinstance(raw, dict) else raw
+        status_map = {q["id"]: "VERIFIED" for q in luk_qs}
+
+        collection = export_canonical_data(luk_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 96)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Lucas")
+        self.assertTrue(validate_runtime_collection(collection))
+
 
 if __name__ == "__main__":
     unittest.main()
