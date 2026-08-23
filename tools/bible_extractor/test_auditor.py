@@ -79,6 +79,7 @@ HABAKKUK_PATH = Path(__file__).parent / "habakkuk-master-input.json"
 ZEPHANIAH_PATH = Path(__file__).parent / "zephaniah-master-input.json"
 HAGGAI_PATH = Path(__file__).parent / "haggai-master-input.json"
 ZECHARIAH_PATH = Path(__file__).parent / "zechariah-master-input.json"
+MALACHI_PATH = Path(__file__).parent / "malachi-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -309,6 +310,12 @@ class TestAuditorCanonical(unittest.TestCase):
         else:
             cls.zechariah_questions = {}
 
+        if MALACHI_PATH.exists():
+            raw_mal = json.loads(MALACHI_PATH.read_text(encoding="utf-8"))
+            cls.malachi_questions = {q["id"]: q for q in (raw_mal.get("questions", []) if isinstance(raw_mal, dict) else raw_mal)}
+        else:
+            cls.malachi_questions = {}
+
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
 
@@ -466,6 +473,10 @@ class TestAuditorCanonical(unittest.TestCase):
     def get_zechariah_question(self, qid: str) -> dict:
         self.assertIn(qid, self.zechariah_questions, f"ID '{qid}' no encontrado en zechariah-master-input.json")
         return copy.deepcopy(self.zechariah_questions[qid])
+
+    def get_malachi_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.malachi_questions, f"ID '{qid}' no encontrado en malachi-master-input.json")
+        return copy.deepcopy(self.malachi_questions[qid])
 
     # --- TEST GLOBAL DE CONSISTENCIA DE IDs Y REFERENCIAS ---
 
@@ -3681,6 +3692,86 @@ class TestAuditorCanonical(unittest.TestCase):
         self.assertEqual(char_counts["ángel de Jehová"], 1)
         self.assertEqual(char_counts["Zorobabel"], 2)
         self.assertEqual(char_counts["enviados de Bet-el"], 1)
+
+    # --- TESTS PARA MALAQUÍAS ---
+
+    def test_detect_book_key_malachi(self) -> None:
+        """Verifica la detección automática de clave para Malaquías."""
+        spec_mal = {"questions": [{"id": "NQB-AT-MAL-0001", "book": "Malaquías"}]}
+        self.assertEqual(detect_book_key(spec_mal), "malachi")
+
+        spec_alias = {"questions": [{"id": "NQB-AT-MAL-0001", "book": "malaquias"}]}
+        self.assertEqual(detect_book_key(spec_alias), "malachi")
+
+        spec_en = {"questions": [{"id": "NQB-AT-MAL-0001", "book": "Malachi"}]}
+        self.assertEqual(detect_book_key(spec_en), "malachi")
+
+        spec_libro = {"questions": [{"id": "NQB-AT-MAL-0001", "book": "Libro de Malaquías"}]}
+        self.assertEqual(detect_book_key(spec_libro), "malachi")
+
+    def test_malachi_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Malaquías: 4 capítulos, 1 bloque."""
+        self.assertIn("malachi", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["malachi"]
+        self.assertEqual(cfg["canonical_name"], "Malaquías")
+        self.assertEqual(cfg["api_name"], "Malaquias")
+        self.assertEqual(cfg["total_chapters"], 4)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertEqual(cfg["blocks"][0], (1, 4, "malachi-01-04.json"))
+        self.assertTrue({"malaquias", "malaquías", "malachi", "mal"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_malachi(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Malaquías (44 preguntas, 4/4 capítulos cubiertos, distribución 10/12/15/7, 42 AT_GENERAL, 2 PERSONAJES_BIBLICOS, 4 con additional_refs, 6 totales)."""
+        if not self.malachi_questions:
+            self.skipTest("malachi-master-input.json no disponible")
+        self.assertEqual(len(self.malachi_questions), 44)
+        chapter_counts = {}
+        personajes_count = 0
+        general_count = 0
+        all_chars = []
+        questions_with_add_refs = 0
+        total_add_refs = 0
+        for qid, q in self.malachi_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 4, f"Capítulo {ch} fuera del rango 1..4 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+            self.assertEqual(q.get("question_type"), "MULTIPLE_CHOICE")
+
+            all_chars.extend(q.get("characters", []))
+
+            cat = q.get("category")
+            if cat == "PERSONAJES_BIBLICOS":
+                personajes_count += 1
+                self.assertGreater(len(q.get("characters", [])), 0, f"Pregunta de personajes sin characters en {qid}")
+            elif cat == "AT_GENERAL":
+                general_count += 1
+
+            add_refs = q.get("additional_references", [])
+            if len(add_refs) > 0:
+                questions_with_add_refs += 1
+                total_add_refs += len(add_refs)
+
+        expected_dist = {1: 10, 2: 12, 3: 15, 4: 7}
+        self.assertEqual(chapter_counts, expected_dist)
+        self.assertEqual(personajes_count, 2, f"Se esperaban 2 preguntas de PERSONAJES_BIBLICOS, halladas {personajes_count}")
+        self.assertEqual(general_count, 42, f"Se esperaban 42 preguntas de AT_GENERAL, halladas {general_count}")
+        self.assertEqual(questions_with_add_refs, 4, f"Se esperaban 4 preguntas con additional_references, halladas {questions_with_add_refs}")
+        self.assertEqual(total_add_refs, 6, f"Se esperaban 6 referencias adicionales en total, halladas {total_add_refs}")
+
+        char_counts = collections.Counter(all_chars)
+        self.assertEqual(char_counts["Malaquías"], 1)
+        self.assertEqual(char_counts["Elías"], 1)
 
 
 if __name__ == "__main__":

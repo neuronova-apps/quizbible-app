@@ -734,6 +734,21 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "asiria", "egipto", "bet-el", "betel", "mar", "eufrates", "éufrates", "geba", "rimon", "rimón"
         },
     },
+    "malachi": {
+        "canonical_name": "Malaquías",
+        "api_name": "Malaquias",
+        "aliases": {
+            "malaquias", "malaquías", "malachi", "mal", "libro de malaquias", "libro de malaquías"
+        },
+        "total_chapters": 4,
+        "blocks": [
+            (1, 4, "malachi-01-04.json"),
+        ],
+        "default_output_dir": "build/audit/malachi",
+        "ambient_places": {
+            "israel", "juda", "judá", "jerusalen", "jerusalén", "edom", "horeb", "templo", "casa"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -857,6 +872,8 @@ BIBLE_PERSONAJES = {
     "hageo", "haggai", "dario", "darío", "salatiel", "sealtiel", "josadac", "jehozadac", "zorobabel", "josue", "josué",
     # Zacarías
     "zacarias", "zacarías", "berequias", "berequías", "ido", "iddó", "iddo", "satanas", "satanás", "serezer", "regem-melec", "regemmelec", "heldai", "tobias", "tobías", "jedaias", "jedaías", "hen",
+    # Malaquías
+    "malaquias", "malaquías", "elias", "elías",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",
