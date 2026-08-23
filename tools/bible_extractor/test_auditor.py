@@ -65,6 +65,7 @@ SONG_OF_SONGS_PATH = Path(__file__).parent / "song-of-songs-master-input.json"
 ISAIAH_PATH = Path(__file__).parent / "isaiah-master-input.json"
 JEREMIAH_PATH = Path(__file__).parent / "jeremiah-master-input.json"
 LAMENTATIONS_PATH = Path(__file__).parent / "lamentations-master-input.json"
+EZEKIEL_PATH = Path(__file__).parent / "ezekiel-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -217,6 +218,12 @@ class TestAuditorCanonical(unittest.TestCase):
         else:
             cls.lamentations_questions = {}
 
+        if EZEKIEL_PATH.exists():
+            raw_eze = json.loads(EZEKIEL_PATH.read_text(encoding="utf-8"))
+            cls.ezekiel_questions = {q["id"]: q for q in (raw_eze.get("questions", []) if isinstance(raw_eze, dict) else raw_eze)}
+        else:
+            cls.ezekiel_questions = {}
+
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
 
@@ -322,6 +329,10 @@ class TestAuditorCanonical(unittest.TestCase):
     def get_lamentations_question(self, qid: str) -> dict:
         self.assertIn(qid, self.lamentations_questions, f"ID '{qid}' no encontrado en lamentations-master-input.json")
         return copy.deepcopy(self.lamentations_questions[qid])
+
+    def get_ezekiel_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.ezekiel_questions, f"ID '{qid}' no encontrado en ezekiel-master-input.json")
+        return copy.deepcopy(self.ezekiel_questions[qid])
 
     # --- TEST GLOBAL DE CONSISTENCIA DE IDs Y REFERENCIAS ---
 
@@ -2505,6 +2516,71 @@ class TestAuditorCanonical(unittest.TestCase):
             self.assertEqual(len(q.get("characters", [])), 0)
 
         self.assertEqual(chapter_counts, {1: 7, 2: 6, 3: 10, 4: 6, 5: 6})
+
+    # --- TESTS PARA EZEQUIEL ---
+
+    def test_detect_book_key_ezekiel(self) -> None:
+        """Verifica la detección automática de clave para Ezequiel."""
+        spec_eze = {"questions": [{"id": "NQB-AT-EZE-0001", "book": "Ezequiel"}]}
+        self.assertEqual(detect_book_key(spec_eze), "ezekiel")
+
+        spec_alias = {"questions": [{"id": "NQB-AT-EZE-0001", "book": "ezequiel"}]}
+        self.assertEqual(detect_book_key(spec_alias), "ezekiel")
+
+        spec_en = {"questions": [{"id": "NQB-AT-EZE-0001", "book": "Ezekiel"}]}
+        self.assertEqual(detect_book_key(spec_en), "ezekiel")
+
+        spec_libro = {"questions": [{"id": "NQB-AT-EZE-0001", "book": "Libro de Ezequiel"}]}
+        self.assertEqual(detect_book_key(spec_libro), "ezekiel")
+
+    def test_ezekiel_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Ezequiel: 48 capítulos, 5 bloques."""
+        self.assertIn("ezekiel", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["ezekiel"]
+        self.assertEqual(cfg["canonical_name"], "Ezequiel")
+        self.assertEqual(cfg["api_name"], "Ezequiel")
+        self.assertEqual(cfg["total_chapters"], 48)
+        self.assertEqual(len(cfg["blocks"]), 5)
+        self.assertEqual(cfg["blocks"][0], (1, 10, "ezekiel-01-10.json"))
+        self.assertEqual(cfg["blocks"][4], (41, 48, "ezekiel-41-48.json"))
+        self.assertTrue({"ezequiel", "ezekiel"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_ezekiel(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Ezequiel (86 preguntas, 48/48 capítulos cubiertos, 18 PERSONAJES_BIBLICOS, 68 AT_GENERAL, 0 additional_refs)."""
+        if not self.ezekiel_questions:
+            self.skipTest("ezekiel-master-input.json no disponible")
+        self.assertEqual(len(self.ezekiel_questions), 86)
+        chapters_seen = set()
+        personajes_count = 0
+        general_count = 0
+        for qid, q in self.ezekiel_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 48, f"Capítulo {ch} fuera del rango 1..48 en {qid}")
+            chapters_seen.add(ch)
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+            self.assertEqual(q.get("question_type"), "MULTIPLE_CHOICE")
+            self.assertEqual(len(q.get("additional_references", [])), 0)
+
+            cat = q.get("category")
+            if cat == "PERSONAJES_BIBLICOS":
+                personajes_count += 1
+                self.assertEqual(q.get("characters"), ["Ezequiel"])
+            elif cat == "AT_GENERAL":
+                general_count += 1
+
+        self.assertEqual(len(chapters_seen), 48, f"Se esperaban 48 capítulos cubiertos, hallados {len(chapters_seen)}")
+        self.assertEqual(personajes_count, 18, f"Se esperaban 18 preguntas de PERSONAJES_BIBLICOS, halladas {personajes_count}")
+        self.assertEqual(general_count, 68, f"Se esperaban 68 preguntas de AT_GENERAL, halladas {general_count}")
 
 
 if __name__ == "__main__":

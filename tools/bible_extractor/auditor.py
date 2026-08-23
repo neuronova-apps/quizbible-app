@@ -509,6 +509,28 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "jerusalen", "jerusalén", "juda", "judá", "israel", "sion", "sión", "edom", "uz", "egipto", "asiria"
         },
     },
+    "ezekiel": {
+        "canonical_name": "Ezequiel",
+        "api_name": "Ezequiel",
+        "aliases": {
+            "ezequiel", "ezekiel", "ez", "ezeq", "libro de ezequiel"
+        },
+        "total_chapters": 48,
+        "blocks": [
+            (1, 10, "ezekiel-01-10.json"),
+            (11, 20, "ezekiel-11-20.json"),
+            (21, 30, "ezekiel-21-30.json"),
+            (31, 40, "ezekiel-31-40.json"),
+            (41, 48, "ezekiel-41-48.json"),
+        ],
+        "default_output_dir": "build/audit/ezekiel",
+        "ambient_places": {
+            "jerusalen", "jerusalén", "juda", "judá", "israel", "sion", "sión", "babilonia", "caldea", "quebar", "rio quebar", "río quebar",
+            "tel-abib", "telabib", "egipto", "asiria", "tiro", "sidon", "sidón", "edom", "moab", "amon", "amón", "filistea",
+            "gog", "magog", "mesec", "tubal", "persia", "cus", "fut", "gomer", "togarma", "damasco", "seir", "samaria", "sodoma",
+            "en-gadi", "engadi", "en-eglaim", "eneglaim"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -606,6 +628,8 @@ BIBLE_PERSONAJES = {
     "sebna", "merodac-baladan", "merodac-baladán", "merodacbaladan", "merodac",
     # Jeremías
     "baruc", "ebed-melec", "ebedmelec", "pasur", "recabitas",
+    # Ezequiel
+    "ezequiel",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",
