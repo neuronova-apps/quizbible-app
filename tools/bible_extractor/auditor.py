@@ -700,6 +700,21 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "canaan", "canaán", "sodoma", "gomorra", "mactes", "mactés", "puerta del pescado", "segundo barrio"
         },
     },
+    "haggai": {
+        "canonical_name": "Hageo",
+        "api_name": "Hageo",
+        "aliases": {
+            "hageo", "haggai", "hag", "libro de hageo"
+        },
+        "total_chapters": 2,
+        "blocks": [
+            (1, 2, "haggai-01-02.json"),
+        ],
+        "default_output_dir": "build/audit/haggai",
+        "ambient_places": {
+            "juda", "judá", "jerusalen", "jerusalén", "monte", "egipto", "casa", "templo"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -819,6 +834,8 @@ BIBLE_PERSONAJES = {
     "habacuc", "habakkuk",
     # Sofonías
     "sofonias", "sofonías", "josias", "josías", "cusi", "gedalias", "gedalías", "amarias", "amarías",
+    # Hageo
+    "hageo", "haggai", "dario", "darío", "salatiel", "sealtiel", "josadac", "jehozadac", "zorobabel", "josue", "josué",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",

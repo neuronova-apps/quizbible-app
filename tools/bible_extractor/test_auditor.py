@@ -77,6 +77,7 @@ MICAH_PATH = Path(__file__).parent / "micah-master-input.json"
 NAHUM_PATH = Path(__file__).parent / "nahum-master-input.json"
 HABAKKUK_PATH = Path(__file__).parent / "habakkuk-master-input.json"
 ZEPHANIAH_PATH = Path(__file__).parent / "zephaniah-master-input.json"
+HAGGAI_PATH = Path(__file__).parent / "haggai-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -295,6 +296,12 @@ class TestAuditorCanonical(unittest.TestCase):
         else:
             cls.zephaniah_questions = {}
 
+        if HAGGAI_PATH.exists():
+            raw_hag = json.loads(HAGGAI_PATH.read_text(encoding="utf-8"))
+            cls.haggai_questions = {q["id"]: q for q in (raw_hag.get("questions", []) if isinstance(raw_hag, dict) else raw_hag)}
+        else:
+            cls.haggai_questions = {}
+
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
 
@@ -444,6 +451,10 @@ class TestAuditorCanonical(unittest.TestCase):
     def get_zephaniah_question(self, qid: str) -> dict:
         self.assertIn(qid, self.zephaniah_questions, f"ID '{qid}' no encontrado en zephaniah-master-input.json")
         return copy.deepcopy(self.zephaniah_questions[qid])
+
+    def get_haggai_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.haggai_questions, f"ID '{qid}' no encontrado en haggai-master-input.json")
+        return copy.deepcopy(self.haggai_questions[qid])
 
     # --- TEST GLOBAL DE CONSISTENCIA DE IDs Y REFERENCIAS ---
 
@@ -3491,6 +3502,88 @@ class TestAuditorCanonical(unittest.TestCase):
         char_counts = collections.Counter(all_chars)
         self.assertEqual(char_counts["Sofonías"], 2)
         self.assertEqual(char_counts["Josías"], 1)
+
+    # --- TESTS PARA HAGEO ---
+
+    def test_detect_book_key_haggai(self) -> None:
+        """Verifica la detección automática de clave para Hageo."""
+        spec_hag = {"questions": [{"id": "NQB-AT-HAG-0001", "book": "Hageo"}]}
+        self.assertEqual(detect_book_key(spec_hag), "haggai")
+
+        spec_alias = {"questions": [{"id": "NQB-AT-HAG-0001", "book": "hageo"}]}
+        self.assertEqual(detect_book_key(spec_alias), "haggai")
+
+        spec_en = {"questions": [{"id": "NQB-AT-HAG-0001", "book": "Haggai"}]}
+        self.assertEqual(detect_book_key(spec_en), "haggai")
+
+        spec_libro = {"questions": [{"id": "NQB-AT-HAG-0001", "book": "Libro de Hageo"}]}
+        self.assertEqual(detect_book_key(spec_libro), "haggai")
+
+    def test_haggai_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Hageo: 2 capítulos, 1 bloque."""
+        self.assertIn("haggai", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["haggai"]
+        self.assertEqual(cfg["canonical_name"], "Hageo")
+        self.assertEqual(cfg["api_name"], "Hageo")
+        self.assertEqual(cfg["total_chapters"], 2)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertEqual(cfg["blocks"][0], (1, 2, "haggai-01-02.json"))
+        self.assertTrue({"hageo", "haggai", "hag"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_haggai(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Hageo (34 preguntas, 2/2 capítulos cubiertos, distribución 14/20, 28 AT_GENERAL, 6 PERSONAJES_BIBLICOS, 1 con additional_refs, 1 total)."""
+        if not self.haggai_questions:
+            self.skipTest("haggai-master-input.json no disponible")
+        self.assertEqual(len(self.haggai_questions), 34)
+        chapter_counts = {}
+        personajes_count = 0
+        general_count = 0
+        all_chars = []
+        questions_with_add_refs = 0
+        total_add_refs = 0
+        for qid, q in self.haggai_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 2, f"Capítulo {ch} fuera del rango 1..2 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+            self.assertEqual(q.get("question_type"), "MULTIPLE_CHOICE")
+
+            all_chars.extend(q.get("characters", []))
+
+            cat = q.get("category")
+            if cat == "PERSONAJES_BIBLICOS":
+                personajes_count += 1
+                self.assertGreater(len(q.get("characters", [])), 0, f"Pregunta de personajes sin characters en {qid}")
+            elif cat == "AT_GENERAL":
+                general_count += 1
+
+            add_refs = q.get("additional_references", [])
+            if len(add_refs) > 0:
+                questions_with_add_refs += 1
+                total_add_refs += len(add_refs)
+
+        expected_dist = {1: 14, 2: 20}
+        self.assertEqual(chapter_counts, expected_dist)
+        self.assertEqual(personajes_count, 6, f"Se esperaban 6 preguntas de PERSONAJES_BIBLICOS, halladas {personajes_count}")
+        self.assertEqual(general_count, 28, f"Se esperaban 28 preguntas de AT_GENERAL, halladas {general_count}")
+        self.assertEqual(questions_with_add_refs, 1, f"Se esperaba 1 pregunta con additional_references, halladas {questions_with_add_refs}")
+        self.assertEqual(total_add_refs, 1, f"Se esperaba 1 referencia adicional en total, halladas {total_add_refs}")
+
+        char_counts = collections.Counter(all_chars)
+        self.assertEqual(char_counts["Hageo"], 4)
+        self.assertEqual(char_counts["Zorobabel"], 5)
+        self.assertEqual(char_counts["Josué"], 4)
+        self.assertEqual(char_counts["remanente"], 3)
 
 
 if __name__ == "__main__":
