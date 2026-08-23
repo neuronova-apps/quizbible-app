@@ -39,7 +39,8 @@ from pathlib import Path
 from auditor import (
     evaluate_question, run_audit, extract_numbers, normalize, detect_book_key,
     token_matches_text, BOOK_CONFIGS, is_locative_or_collective_entity, resolve_implicit_speaker,
-    is_narrative_source_attribution, is_biblical_place_usage
+    is_narrative_source_attribution, is_biblical_place_usage, is_biblical_person_usage,
+    BIBLICAL_PERSON_ALIASES, person_token_matches_text
 )
 
 GENESIS_PATH = Path(__file__).parent / "genesis-master-input.json"
@@ -5166,6 +5167,65 @@ class TestAuditorCanonical(unittest.TestCase):
             if q.get("question_type") == "TRUE_FALSE":
                 self.assertIn("VERDADERO_FALSO_NT", modes)
                 self.assertIn("VERDADERO_FALSO_AMBOS", modes)
+
+    def test_biblical_person_aliases_cefas_pedro(self) -> None:
+        """Verifica la resolución simétrica de alias Cefas <-> Pedro y la no equivalencia automática de Simón."""
+        # 1. Cefas en entidad, Pedro en pasaje -> MATCH TRUE
+        self.assertTrue(person_token_matches_text("cefas", "despues de tres anos subi a jerusalen para ver a pedro"))
+        self.assertTrue(person_token_matches_text("Cefas", "fui a visitar a Pedro"))
+
+        # 2. Pedro en entidad, Cefas en pasaje -> MATCH TRUE
+        self.assertTrue(person_token_matches_text("pedro", "cuando cefas vino a antioquia le resisti cara a cara"))
+        self.assertTrue(person_token_matches_text("Pedro", "se reunio con Cefas"))
+
+        # 3. Simon aislado NO debe mapear automaticamente a Pedro
+        self.assertFalse(person_token_matches_text("simon", "entonces pedro tomo la palabra"))
+        self.assertFalse(person_token_matches_text("pedro", "entonces simon el mago respondio"))
+
+    def test_is_biblical_person_usage_mesa(self) -> None:
+        """Verifica distinción entre el rey Mesa de Moab y sustantivos comunes como 'mesa compartida'."""
+        # Sustantivo común -> False (NO PERSONA)
+        self.assertFalse(is_biblical_person_usage("mesa", "la mesa compartida con gentiles"))
+        self.assertFalse(is_biblical_person_usage("mesa", "su conducta no era coherente con la mesa compartida"))
+        self.assertFalse(is_biblical_person_usage("mesa", "se sentaron a una mesa con los discipulos"))
+        self.assertFalse(is_biblical_person_usage("mesa", "comer a la mesa con ellos"))
+        self.assertFalse(is_biblical_person_usage("mesa", "estando sentados a la mesa"))
+        self.assertFalse(is_biblical_person_usage("mesa", "la mesa del Señor"))
+
+        # Personaje bíblico real -> True (PERSONA)
+        self.assertTrue(is_biblical_person_usage("mesa", "Mesa rey de Moab era pastor de ovejas"))
+        self.assertTrue(is_biblical_person_usage("mesa", "entonces el rey Mesa tributaba al rey de Israel"))
+        self.assertTrue(is_biblical_person_usage("mesa", "Mesa, rey de Moab"))
+
+    def test_galatians_0005_and_0009_evaluations_no_fail(self) -> None:
+        """Verifica que GAL-0005 (Cefas/Pedro) y GAL-0009 (mesa compartida) no produzcan FAIL."""
+        if not self.galatians_questions:
+            self.skipTest("galatians-master-input.json no disponible")
+
+        # Mock passage text de RVR1960 para Gal 1:18-20 (usa 'Pedro')
+        gal1_verses = {
+            18: "Después, pasados tres años, subí a Jerusalén para ver a Pedro, y permanecí con él quince días;",
+            19: "pero no vi a ningún otro de los apóstoles, sino a Jacobo el hermano del Señor.",
+            20: "En esto que os escribo, he aquí delante de Dios que no miento."
+        }
+        q5 = self.get_galatians_question("NQB-NT-GAL-0005")
+        res5 = evaluate_question(q5, gal1_verses, book_key="galatians")
+        self.assertNotEqual(res5["controles_superados"].get("control_nombres_propios"), "FAIL")
+        self.assertNotEqual(res5["controles_superados"].get("control_rango_suficiente"), "FAIL")
+        self.assertIn(res5["estado"], {"VERIFICADO", "NO_CONCLUYENTE"})
+
+        # Mock passage text de RVR1960 para Gal 2:11-14 (usa 'Pedro' y 'comía con los gentiles')
+        gal2_verses = {
+            11: "Pero cuando Pedro vino a Antioquía, le resistí cara a cara, porque era de condenar.",
+            12: "Pues antes que viniesen algunos de parte de Jacobo, comía con los gentiles; pero después que vinieron, se retraía y se apartaba, porque tenía miedo de los de la circuncisión.",
+            13: "Y en su simulación participaban también los otros judíos, de tal manera que aun Bernabé fue también arrastrado por la hipocresía de ellos.",
+            14: "Pero cuando vi que no andaban rectamente conforme a la verdad del evangelio, dije a Pedro delante de todos: Si tú, siendo judío, vives como los gentiles y no como judío, ¿por qué obligas a los gentiles a judaizar?"
+        }
+        q9 = self.get_galatians_question("NQB-NT-GAL-0009")
+        res9 = evaluate_question(q9, gal2_verses, book_key="galatians")
+        self.assertNotEqual(res9["controles_superados"].get("control_nombres_propios"), "FAIL")
+        self.assertNotEqual(res9["controles_superados"].get("control_rango_suficiente"), "FAIL")
+        self.assertIn(res9["estado"], {"VERIFICADO", "NO_CONCLUYENTE"})
 
 
 if __name__ == "__main__":

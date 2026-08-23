@@ -1290,6 +1290,46 @@ def is_biblical_place_usage(token: str, full_text: str) -> bool:
     return False
 
 
+def is_biblical_person_usage(token: str, full_text: str) -> bool:
+    """
+    Determina si un token que coincide con una entrada de BIBLE_PERSONAJES está siendo utilizado
+    como personaje bíblico real o como sustantivo/verbo común homógrafo (ej: 'la mesa compartida' vs rey 'Mesa').
+    """
+    norm_token = normalize(token).strip()
+
+    if norm_token != "mesa":
+        return True
+
+    text_norm = normalize(full_text)
+    raw_lower = full_text.lower()
+
+    # 1. Patrones claros de uso como personaje bíblico real (Rey Mesa de Moab)
+    # Ej: "Mesa rey de Moab", "rey Mesa", "el rey Mesa", "Mesa, rey"
+    person_pattern = (
+        r"\b(?:el\s+)?rey\s+mesa\b|"
+        r"\bmesa\s*,?\s*(?:rey\s+de\s+moab|el\s+moabita|moabita)\b"
+    )
+    if re.search(person_pattern, raw_lower):
+        return True
+
+    # 2. Patrones claros de sustantivo común (mesa como mueble o acto de compartir comida)
+    # Ej: "la mesa", "una mesa", "mesa compartida", "a la mesa", "en la mesa", "sentados a la mesa", "comer a la mesa"
+    common_noun_pattern = (
+        r"\b(?:la|una|esta|aquella|las|estas|cada|toda|otra|de\s+la|a\s+la|en\s+la|de\s+una|a\s+una|en\s+una)\s+mesas?\b|"
+        r"\bmesas?\s+(?:compartida|comun|puesta|servida|del\s+senor|de\s+los\s+senores|de\s+los\s+cambistas|de\s+dinero)\b|"
+        r"\b(?:sentar\w*|sentad\w*|com\w*|serv\w*|reclin\w*|particip\w*|acerc\w*)\s+(?:a\s+la|a\s+una|en\s+la|en\s+una)?\s*mesas?\b|"
+        r"\bmesas?\s+con\s+(?:otras\s+personas|creyentes|gentiles|judios|discipulos)\b"
+    )
+    if re.search(common_noun_pattern, text_norm):
+        return False
+
+    # Si aparece "mesa" en minúscula en el texto sin contexto de rey Mesa
+    if "mesa" in raw_lower:
+        return False
+
+    return True
+
+
 def resolve_implicit_speaker(
     entity_name: str,
     passage_norm: str,
@@ -1664,6 +1704,31 @@ def token_matches_text(token: str, text_norm: str) -> bool:
         return True
     if len(token) > 3 and (token + "es") in text_norm:
         return True
+    return False
+
+
+BIBLICAL_PERSON_ALIASES: dict[str, set[str]] = {
+    "cefas": {"pedro"},
+    "pedro": {"cefas"},
+}
+
+
+def person_token_matches_text(entity: str, passage_norm: str) -> bool:
+    """
+    Comprueba si una entidad/personaje bíblico coincide con el texto normalizado,
+    probando coincidencia directa o sus alias canónicos seguros (ej: Cefas <-> Pedro).
+    Nota: No mapea 'simon' aislado automáticamente a Pedro.
+    """
+    if not entity or not passage_norm:
+        return False
+    norm_e = normalize(entity).strip()
+    norm_p = normalize(passage_norm)
+    if token_matches_text(norm_e, norm_p):
+        return True
+    aliases = BIBLICAL_PERSON_ALIASES.get(norm_e, set())
+    for alias in aliases:
+        if token_matches_text(alias, norm_p):
+            return True
     return False
 
 
@@ -2153,7 +2218,7 @@ def evaluate_question(
     # 12. Control Nombres Propios
     entities_in_opt_a = set()
     for word in normalize(opcion_a).split():
-        if word in BIBLE_PERSONAJES:
+        if word in BIBLE_PERSONAJES and is_biblical_person_usage(word, opcion_a):
             if is_locative_or_collective_entity(word, opcion_a, characters):
                 continue
             if is_narrative_source_attribution(word, opcion_a, book_cfg):
@@ -2162,7 +2227,7 @@ def evaluate_question(
 
     entities_in_prompt = set()
     for word in normalize(prompt).split():
-        if word in BIBLE_PERSONAJES:
+        if word in BIBLE_PERSONAJES and is_biblical_person_usage(word, prompt):
             if is_locative_or_collective_entity(word, prompt, characters):
                 continue
             if is_narrative_source_attribution(word, prompt, book_cfg):
@@ -2172,7 +2237,7 @@ def evaluate_question(
     if entities_in_opt_a:
         missing_entities = [
             n for n in entities_in_opt_a
-            if not token_matches_text(n, passage_norm) and n not in entities_in_prompt
+            if not person_token_matches_text(n, passage_norm) and n not in entities_in_prompt
         ]
         if not missing_entities:
             controls["control_nombres_propios"] = "PASS"
@@ -2193,7 +2258,7 @@ def evaluate_question(
                 has_anaphora = any(m in passage_norm for m in ANAPHORIC_MARKERS)
                 if has_anaphora:
                     for n in missing_entities:
-                        if n in full_ch_norm and (not characters or any(n == normalize(c) for c in characters)):
+                        if person_token_matches_text(n, full_ch_norm) and (not characters or any(n == normalize(c) for c in characters)):
                             context_resolved.append(n)
 
                 # Resolución de hablante implícito en 1ª persona
@@ -2213,7 +2278,7 @@ def evaluate_question(
     elif entities_in_prompt:
         matching_prompt_ent = [
             n for n in entities_in_prompt
-            if token_matches_text(n, passage_norm)
+            if person_token_matches_text(n, passage_norm)
         ]
         if matching_prompt_ent:
             controls["control_nombres_propios"] = "PASS"
@@ -2222,7 +2287,7 @@ def evaluate_question(
     elif characters:
         matching_chars = [
             c for c in characters
-            if token_matches_text(normalize(c), passage_norm)
+            if person_token_matches_text(normalize(c), passage_norm)
         ]
         if matching_chars:
             controls["control_nombres_propios"] = "PASS"
@@ -2286,7 +2351,7 @@ def evaluate_question(
                 resolved = True
                 for n in missing_opt_nums:
                     if n in {2, 3}:
-                        chars_in_passage = [c for c in characters if token_matches_text(normalize(c), passage_norm)]
+                        chars_in_passage = [c for c in characters if person_token_matches_text(normalize(c), passage_norm)]
                         if len(chars_in_passage) >= n:
                             continue
                     resolved = False
