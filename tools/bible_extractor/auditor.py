@@ -494,6 +494,21 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "damasco", "hazor", "cedar", "elam"
         },
     },
+    "lamentations": {
+        "canonical_name": "Lamentaciones",
+        "api_name": "Lamentaciones",
+        "aliases": {
+            "lamentaciones", "lamentations", "lam", "libro de lamentaciones", "libro de las lamentaciones"
+        },
+        "total_chapters": 5,
+        "blocks": [
+            (1, 5, "lamentations-01-05.json"),
+        ],
+        "default_output_dir": "build/audit/lamentations",
+        "ambient_places": {
+            "jerusalen", "jerusalén", "juda", "judá", "israel", "sion", "sión", "edom", "uz", "egipto", "asiria"
+        },
+    },
 }
 
 STOPWORDS = {

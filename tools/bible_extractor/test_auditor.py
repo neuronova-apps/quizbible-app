@@ -64,6 +64,7 @@ ECCLESIASTES_PATH = Path(__file__).parent / "ecclesiastes-master-input.json"
 SONG_OF_SONGS_PATH = Path(__file__).parent / "song-of-songs-master-input.json"
 ISAIAH_PATH = Path(__file__).parent / "isaiah-master-input.json"
 JEREMIAH_PATH = Path(__file__).parent / "jeremiah-master-input.json"
+LAMENTATIONS_PATH = Path(__file__).parent / "lamentations-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -210,6 +211,12 @@ class TestAuditorCanonical(unittest.TestCase):
         else:
             cls.jeremiah_questions = {}
 
+        if LAMENTATIONS_PATH.exists():
+            raw_lam = json.loads(LAMENTATIONS_PATH.read_text(encoding="utf-8"))
+            cls.lamentations_questions = {q["id"]: q for q in (raw_lam.get("questions", []) if isinstance(raw_lam, dict) else raw_lam)}
+        else:
+            cls.lamentations_questions = {}
+
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
 
@@ -311,6 +318,10 @@ class TestAuditorCanonical(unittest.TestCase):
     def get_jeremiah_question(self, qid: str) -> dict:
         self.assertIn(qid, self.jeremiah_questions, f"ID '{qid}' no encontrado en jeremiah-master-input.json")
         return copy.deepcopy(self.jeremiah_questions[qid])
+
+    def get_lamentations_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.lamentations_questions, f"ID '{qid}' no encontrado en lamentations-master-input.json")
+        return copy.deepcopy(self.lamentations_questions[qid])
 
     # --- TEST GLOBAL DE CONSISTENCIA DE IDs Y REFERENCIAS ---
 
@@ -2436,6 +2447,64 @@ class TestAuditorCanonical(unittest.TestCase):
         self.assertEqual(len(chapters_seen), 52, f"Se esperaban 52 capítulos cubiertos, hallados {len(chapters_seen)}")
         self.assertEqual(questions_with_add_refs, 4, f"Se esperaban 4 preguntas con additional_references, halladas {questions_with_add_refs}")
         self.assertEqual(total_add_refs, 8, f"Se esperaban 8 referencias adicionales en total, halladas {total_add_refs}")
+
+    # --- TESTS PARA LAMENTACIONES ---
+
+    def test_detect_book_key_lamentations(self) -> None:
+        """Verifica la detección automática de clave para Lamentaciones."""
+        spec_lam = {"questions": [{"id": "NQB-AT-LAM-0001", "book": "Lamentaciones"}]}
+        self.assertEqual(detect_book_key(spec_lam), "lamentations")
+
+        spec_alias = {"questions": [{"id": "NQB-AT-LAM-0001", "book": "lamentaciones"}]}
+        self.assertEqual(detect_book_key(spec_alias), "lamentations")
+
+        spec_en = {"questions": [{"id": "NQB-AT-LAM-0001", "book": "Lamentations"}]}
+        self.assertEqual(detect_book_key(spec_en), "lamentations")
+
+        spec_libro = {"questions": [{"id": "NQB-AT-LAM-0001", "book": "Libro de Lamentaciones"}]}
+        self.assertEqual(detect_book_key(spec_libro), "lamentations")
+
+        spec_las = {"questions": [{"id": "NQB-AT-LAM-0001", "book": "Libro de las Lamentaciones"}]}
+        self.assertEqual(detect_book_key(spec_las), "lamentations")
+
+    def test_lamentations_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Lamentaciones: 5 capítulos, 1 bloque."""
+        self.assertIn("lamentations", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["lamentations"]
+        self.assertEqual(cfg["canonical_name"], "Lamentaciones")
+        self.assertEqual(cfg["api_name"], "Lamentaciones")
+        self.assertEqual(cfg["total_chapters"], 5)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertEqual(cfg["blocks"][0], (1, 5, "lamentations-01-05.json"))
+        self.assertTrue({"lamentaciones", "lamentations"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_lamentations(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Lamentaciones (35 preguntas, 5/5 capítulos cubiertos, distribución 7/6/10/6/6, 0 additional_refs, 0 characters)."""
+        if not self.lamentations_questions:
+            self.skipTest("lamentations-master-input.json no disponible")
+        self.assertEqual(len(self.lamentations_questions), 35)
+        chapter_counts = {}
+        for qid, q in self.lamentations_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 5, f"Capítulo {ch} fuera del rango 1..5 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+            self.assertEqual(q.get("question_type"), "MULTIPLE_CHOICE")
+            self.assertEqual(q.get("category"), "AT_GENERAL")
+            self.assertEqual(len(q.get("additional_references", [])), 0)
+            self.assertEqual(len(q.get("characters", [])), 0)
+
+        self.assertEqual(chapter_counts, {1: 7, 2: 6, 3: 10, 4: 6, 5: 6})
 
 
 if __name__ == "__main__":
