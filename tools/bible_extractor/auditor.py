@@ -650,6 +650,23 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "sitim", "gilgal", "galaad", "basan", "basán"
         },
     },
+    "nahum": {
+        "canonical_name": "Nahúm",
+        "api_name": "Nahum",
+        "aliases": {
+            "nahum", "nahúm", "nah", "libro de nahum", "libro de nahúm"
+        },
+        "total_chapters": 3,
+        "blocks": [
+            (1, 3, "nahum-01-03.json"),
+        ],
+        "default_output_dir": "build/audit/nahum",
+        "ambient_places": {
+            "ninive", "nínive", "asiria", "juda", "judá", "israel", "elcos", "basan", "basán", "carmelo",
+            "libano", "líbano", "no-amon", "no-amón", "noamon", "tebas", "etiopia", "etiopía", "egipto",
+            "fut", "libia", "rio", "río", "tigris", "eufrates", "éufrates"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -763,6 +780,8 @@ BIBLE_PERSONAJES = {
     "jonas", "jonás", "amitai", "amittai", "marineros", "capitan", "capitán", "rey de ninive", "rey de nínive", "ninivitas",
     # Miqueas
     "miqueas", "morastita", "jotam", "jotám", "acaz", "ezequias", "ezequías", "gobernantes de israel", "profetas", "balac", "balaam", "beor", "omri", "acab",
+    # Nahúm
+    "nahum", "nahúm", "elcesita",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",

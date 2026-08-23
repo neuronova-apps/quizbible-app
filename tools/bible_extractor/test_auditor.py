@@ -74,6 +74,7 @@ AMOS_PATH = Path(__file__).parent / "amos-master-input.json"
 OBADIAH_PATH = Path(__file__).parent / "obadiah-master-input.json"
 JONAH_PATH = Path(__file__).parent / "jonah-master-input.json"
 MICAH_PATH = Path(__file__).parent / "micah-master-input.json"
+NAHUM_PATH = Path(__file__).parent / "nahum-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -274,6 +275,12 @@ class TestAuditorCanonical(unittest.TestCase):
         else:
             cls.micah_questions = {}
 
+        if NAHUM_PATH.exists():
+            raw_nah = json.loads(NAHUM_PATH.read_text(encoding="utf-8"))
+            cls.nahum_questions = {q["id"]: q for q in (raw_nah.get("questions", []) if isinstance(raw_nah, dict) else raw_nah)}
+        else:
+            cls.nahum_questions = {}
+
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
 
@@ -411,6 +418,10 @@ class TestAuditorCanonical(unittest.TestCase):
     def get_micah_question(self, qid: str) -> dict:
         self.assertIn(qid, self.micah_questions, f"ID '{qid}' no encontrado en micah-master-input.json")
         return copy.deepcopy(self.micah_questions[qid])
+
+    def get_nahum_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.nahum_questions, f"ID '{qid}' no encontrado en nahum-master-input.json")
+        return copy.deepcopy(self.nahum_questions[qid])
 
     # --- TEST GLOBAL DE CONSISTENCIA DE IDs Y REFERENCIAS ---
 
@@ -3220,6 +3231,85 @@ class TestAuditorCanonical(unittest.TestCase):
         self.assertEqual(char_counts["Miqueas"], 5)
         self.assertEqual(char_counts["Gobernantes de Israel"], 1)
         self.assertEqual(char_counts["Profetas"], 1)
+
+    # --- TESTS PARA NAHÚM ---
+
+    def test_detect_book_key_nahum(self) -> None:
+        """Verifica la detección automática de clave para Nahúm."""
+        spec_nah = {"questions": [{"id": "NQB-AT-NAH-0001", "book": "Nahúm"}]}
+        self.assertEqual(detect_book_key(spec_nah), "nahum")
+
+        spec_alias = {"questions": [{"id": "NQB-AT-NAH-0001", "book": "nahum"}]}
+        self.assertEqual(detect_book_key(spec_alias), "nahum")
+
+        spec_en = {"questions": [{"id": "NQB-AT-NAH-0001", "book": "Nahum"}]}
+        self.assertEqual(detect_book_key(spec_en), "nahum")
+
+        spec_libro = {"questions": [{"id": "NQB-AT-NAH-0001", "book": "Libro de Nahúm"}]}
+        self.assertEqual(detect_book_key(spec_libro), "nahum")
+
+    def test_nahum_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Nahúm: 3 capítulos, 1 bloque."""
+        self.assertIn("nahum", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["nahum"]
+        self.assertEqual(cfg["canonical_name"], "Nahúm")
+        self.assertEqual(cfg["api_name"], "Nahum")
+        self.assertEqual(cfg["total_chapters"], 3)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertEqual(cfg["blocks"][0], (1, 3, "nahum-01-03.json"))
+        self.assertTrue({"nahum", "nahúm", "nah"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_nahum(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Nahúm (34 preguntas, 3/3 capítulos cubiertos, distribución 12/11/11, 33 AT_GENERAL, 1 PERSONAJES_BIBLICOS, 1 con additional_refs, 1 total)."""
+        if not self.nahum_questions:
+            self.skipTest("nahum-master-input.json no disponible")
+        self.assertEqual(len(self.nahum_questions), 34)
+        chapter_counts = {}
+        personajes_count = 0
+        general_count = 0
+        all_chars = []
+        questions_with_add_refs = 0
+        total_add_refs = 0
+        for qid, q in self.nahum_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 3, f"Capítulo {ch} fuera del rango 1..3 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+            self.assertEqual(q.get("question_type"), "MULTIPLE_CHOICE")
+
+            all_chars.extend(q.get("characters", []))
+
+            cat = q.get("category")
+            if cat == "PERSONAJES_BIBLICOS":
+                personajes_count += 1
+                self.assertGreater(len(q.get("characters", [])), 0, f"Pregunta de personajes sin characters en {qid}")
+            elif cat == "AT_GENERAL":
+                general_count += 1
+
+            add_refs = q.get("additional_references", [])
+            if len(add_refs) > 0:
+                questions_with_add_refs += 1
+                total_add_refs += len(add_refs)
+
+        expected_dist = {1: 12, 2: 11, 3: 11}
+        self.assertEqual(chapter_counts, expected_dist)
+        self.assertEqual(personajes_count, 1, f"Se esperaba 1 pregunta de PERSONAJES_BIBLICOS, halladas {personajes_count}")
+        self.assertEqual(general_count, 33, f"Se esperaban 33 preguntas de AT_GENERAL, halladas {general_count}")
+        self.assertEqual(questions_with_add_refs, 1, f"Se esperaba 1 pregunta con additional_references, halladas {questions_with_add_refs}")
+        self.assertEqual(total_add_refs, 1, f"Se esperaba 1 referencia adicional en total, halladas {total_add_refs}")
+
+        char_counts = collections.Counter(all_chars)
+        self.assertEqual(char_counts["Nahúm"], 1)
 
 
 if __name__ == "__main__":
