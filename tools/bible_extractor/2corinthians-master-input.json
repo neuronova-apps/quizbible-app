@@ -1,0 +1,1980 @@
+{
+  "source": "Quiz Bible master bank - 2 Corintios",
+  "version": "RVR1960",
+  "book": "2 Corintios",
+  "total_questions": 65,
+  "questions": [
+    {
+      "id": "NQB-NT-2CO-0001",
+      "book": "2 Corintios",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "2 Corintios 1:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Saludo apostólico",
+      "characters": [
+        "Pablo",
+        "Timoteo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Quiénes aparecen como remitentes al inicio de la carta?",
+      "opcion_a": "Pablo y Timoteo",
+      "opcion_b": "Pedro y Juan",
+      "opcion_c": "Bernabé y Marcos",
+      "opcion_d": "Santiago y Judas",
+      "correct_option": "A",
+      "correct_answer": "Pablo y Timoteo",
+      "explanation": "La carta se abre identificando a Pablo y a Timoteo como remitentes. La pregunta se centra en la presentación epistolar, no en establecer jerarquías permanentes.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0002",
+      "book": "2 Corintios",
+      "chapter": 1,
+      "verse_start": 3,
+      "verse_end": 7,
+      "reference": "2 Corintios 1:3-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Consuelo en la aflicción",
+      "characters": [
+        "Dios",
+        "creyentes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Para qué presenta Pablo el consuelo recibido de Dios como algo que también alcanza a otros?",
+      "opcion_a": "Para poder consolar a quienes atraviesan aflicciones",
+      "opcion_b": "Para negar que el dolor sea real",
+      "opcion_c": "Para afirmar que toda crisis termina de inmediato",
+      "opcion_d": "Para exigir silencio a quien sufre",
+      "correct_option": "A",
+      "correct_answer": "Para poder consolar a quienes atraviesan aflicciones",
+      "explanation": "Pablo vincula el consuelo recibido con la capacidad de acompañar a otros. El pasaje no minimiza el sufrimiento ni promete una solución instantánea.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0003",
+      "book": "2 Corintios",
+      "chapter": 1,
+      "verse_start": 8,
+      "verse_end": 11,
+      "reference": "2 Corintios 1:8-11",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Aflicción en Asia",
+      "characters": [
+        "Pablo",
+        "compañeros",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué aprendizaje destaca Pablo al recordar una situación que superó sus propias fuerzas?",
+      "opcion_a": "Depender de Dios y valorar también la oración de la comunidad",
+      "opcion_b": "Confiar únicamente en su resistencia personal",
+      "opcion_c": "Evitar pedir ayuda a otros",
+      "opcion_d": "Interpretar toda dificultad como castigo",
+      "correct_option": "A",
+      "correct_answer": "Depender de Dios y valorar también la oración de la comunidad",
+      "explanation": "Pablo describe una presión extrema que le hizo depender de Dios y agradece la participación de otros mediante la oración. No convierte toda aflicción en castigo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0004",
+      "book": "2 Corintios",
+      "chapter": 1,
+      "verse_start": 12,
+      "verse_end": 14,
+      "reference": "2 Corintios 1:12-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Conciencia e integridad",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo presenta su conducta hacia la comunidad como basada en sinceridad y gracia, no en astucia humana",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Pablo apela a una conciencia de conducta sincera y dependiente de la gracia, no a manipulación.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0005",
+      "book": "2 Corintios",
+      "chapter": 1,
+      "verse_start": 21,
+      "verse_end": 22,
+      "reference": "2 Corintios 1:21-22",
+      "category": "NT_GENERAL",
+      "subcategory": "Sello y garantía del Espíritu",
+      "characters": [
+        "Dios",
+        "Cristo",
+        "Espíritu"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué imagen utiliza Pablo para expresar la seguridad de la obra de Dios en los creyentes?",
+      "opcion_a": "Un sello y una garantía del Espíritu",
+      "opcion_b": "Una marca de poder político",
+      "opcion_c": "Un contrato de riqueza material",
+      "opcion_d": "Una inmunidad frente a toda enfermedad",
+      "correct_option": "A",
+      "correct_answer": "Un sello y una garantía del Espíritu",
+      "explanation": "El lenguaje de sello y garantía expresa pertenencia y anticipo de lo que Dios hará. No promete prosperidad, salud perfecta ni poder político.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0006",
+      "book": "2 Corintios",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "2 Corintios 2:1-4",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Motivo de una carta dolorosa",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué motivo declara Pablo al explicar una comunicación escrita con mucha angustia?",
+      "opcion_a": "Que conocieran el abundante amor que les tenía",
+      "opcion_b": "Que sintieran vergüenza pública permanente",
+      "opcion_c": "Que abandonaran toda relación con él",
+      "opcion_d": "Que aceptaran cualquier decisión sin discernimiento",
+      "correct_option": "A",
+      "correct_answer": "Que conocieran el abundante amor que les tenía",
+      "explanation": "Pablo afirma que escribió con angustia y lágrimas para expresar su amor. La corrección no se presenta como humillación permanente.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0007",
+      "book": "2 Corintios",
+      "chapter": 2,
+      "verse_start": 5,
+      "verse_end": 11,
+      "reference": "2 Corintios 2:5-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Perdón y restauración",
+      "characters": [
+        "Comunidad",
+        "persona disciplinada"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué respuesta recomienda Pablo cuando una corrección comunitaria ya ha producido suficiente efecto?",
+      "opcion_a": "Perdonar, consolar y reafirmar el amor",
+      "opcion_b": "Mantener al ofensor aislado indefinidamente",
+      "opcion_c": "Exhibir públicamente su falta",
+      "opcion_d": "Negar toda posibilidad de restauración",
+      "correct_option": "A",
+      "correct_answer": "Perdonar, consolar y reafirmar el amor",
+      "explanation": "Pablo teme que una persona sea consumida por demasiada tristeza y pide perdón, consuelo y reafirmación de amor. Esto favorece restauración, no humillación.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0008",
+      "book": "2 Corintios",
+      "chapter": 2,
+      "verse_start": 12,
+      "verse_end": 13,
+      "reference": "2 Corintios 2:12-13",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Inquietud por Tito",
+      "characters": [
+        "Pablo",
+        "Tito"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hizo Pablo al no encontrar a Tito donde esperaba verlo?",
+      "opcion_a": "Se despidió y partió hacia Macedonia",
+      "opcion_b": "Regresó inmediatamente a Jerusalén",
+      "opcion_c": "Abandonó para siempre su misión",
+      "opcion_d": "Decidió no volver a comunicarse con él",
+      "correct_option": "A",
+      "correct_answer": "Se despidió y partió hacia Macedonia",
+      "explanation": "Pablo relata que su inquietud aumentó al no hallar a Tito y continuó hacia Macedonia. El detalle muestra su preocupación concreta por la relación y las noticias.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0009",
+      "book": "2 Corintios",
+      "chapter": 2,
+      "verse_start": 14,
+      "verse_end": 16,
+      "reference": "2 Corintios 2:14-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Fragancia de Cristo",
+      "characters": [
+        "Creyentes",
+        "oyentes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué expresa la metáfora de una fragancia que se difunde por medio del ministerio?",
+      "opcion_a": "La manifestación del conocimiento de Cristo con efectos distintos entre los oyentes",
+      "opcion_b": "Una técnica literal de culto basada en perfumes",
+      "opcion_c": "La superioridad social de los mensajeros",
+      "opcion_d": "Una garantía de aceptación universal",
+      "correct_option": "A",
+      "correct_answer": "La manifestación del conocimiento de Cristo con efectos distintos entre los oyentes",
+      "explanation": "La metáfora describe la difusión del conocimiento de Cristo y respuestas distintas. No es una instrucción ritual sobre perfumes ni una promesa de aceptación universal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0010",
+      "book": "2 Corintios",
+      "chapter": 2,
+      "verse_start": 17,
+      "verse_end": 17,
+      "reference": "2 Corintios 2:17",
+      "category": "NT_GENERAL",
+      "subcategory": "Integridad al comunicar",
+      "characters": [
+        "Pablo",
+        "ministros"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo rechaza tratar la palabra de Dios como una mercancía manipulada para beneficio propio",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Pablo contrasta su ministerio sincero delante de Dios con la comercialización interesada del mensaje.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0011",
+      "book": "2 Corintios",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 3,
+      "reference": "2 Corintios 3:1-3",
+      "category": "NT_GENERAL",
+      "subcategory": "Cartas de recomendación",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué utiliza Pablo como evidencia viva de su labor en lugar de depender solo de cartas externas de recomendación?",
+      "opcion_a": "La propia comunidad transformada",
+      "opcion_b": "Una lista de títulos honoríficos",
+      "opcion_c": "Una autorización imperial",
+      "opcion_d": "Un registro de propiedades",
+      "correct_option": "A",
+      "correct_answer": "La propia comunidad transformada",
+      "explanation": "Pablo llama a los creyentes su carta conocida y leída. La imagen destaca una comunidad transformada como fruto del ministerio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0012",
+      "book": "2 Corintios",
+      "chapter": 3,
+      "verse_start": 4,
+      "verse_end": 6,
+      "reference": "2 Corintios 3:4-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Suficiencia y nuevo pacto",
+      "characters": [
+        "Dios",
+        "ministros"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿De dónde dice Pablo que proviene la suficiencia para el ministerio del nuevo pacto?",
+      "opcion_a": "De Dios, no de la capacidad autosuficiente del ministro",
+      "opcion_b": "Del prestigio social del mensajero",
+      "opcion_c": "De una formación que vuelve infalible al líder",
+      "opcion_d": "Del control de la comunidad",
+      "correct_option": "A",
+      "correct_answer": "De Dios, no de la capacidad autosuficiente del ministro",
+      "explanation": "Pablo atribuye la suficiencia a Dios. El contraste entre letra y Espíritu pertenece a su argumento sobre el nuevo pacto y no autoriza desprecio por las Escrituras.",
+      "additional_references": [
+        "Jeremías 31:31-34"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0013",
+      "book": "2 Corintios",
+      "chapter": 3,
+      "verse_start": 7,
+      "verse_end": 11,
+      "reference": "2 Corintios 3:7-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Gloria y ministerios",
+      "characters": [
+        "Moisés",
+        "Israel"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste desarrolla Pablo al comparar una gloria pasajera con una gloria mayor?",
+      "opcion_a": "El ministerio asociado al Espíritu y la justicia supera en gloria al que condena",
+      "opcion_b": "El Antiguo Testamento carece de todo valor",
+      "opcion_c": "Moisés actuó sin autorización divina",
+      "opcion_d": "Israel es presentado como étnicamente inferior",
+      "correct_option": "A",
+      "correct_answer": "El ministerio asociado al Espíritu y la justicia supera en gloria al que condena",
+      "explanation": "Pablo construye un contraste dentro de la historia del pacto y la gloria divina. No convierte el pasaje en desprecio del judaísmo ni en negación del valor de las Escrituras.",
+      "additional_references": [
+        "Éxodo 34:29-35"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0014",
+      "book": "2 Corintios",
+      "chapter": 3,
+      "verse_start": 12,
+      "verse_end": 16,
+      "reference": "2 Corintios 3:12-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Velo y libertad",
+      "characters": [
+        "Moisés",
+        "comunidad",
+        "Espíritu"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ocurre, según la imagen de Pablo, cuando una persona se vuelve al Señor?",
+      "opcion_a": "El velo es quitado y se habla de libertad donde está el Espíritu",
+      "opcion_b": "Desaparece toda responsabilidad moral",
+      "opcion_c": "Se vuelve innecesario discernir",
+      "opcion_d": "Se obtiene dominio sobre otras personas",
+      "correct_option": "A",
+      "correct_answer": "El velo es quitado y se habla de libertad donde está el Espíritu",
+      "explanation": "Pablo usa la imagen del velo para describir comprensión y transformación en relación con el Señor. La libertad del Espíritu no equivale a ausencia de responsabilidad ni dominio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0015",
+      "book": "2 Corintios",
+      "chapter": 3,
+      "verse_start": 18,
+      "verse_end": 18,
+      "reference": "2 Corintios 3:18",
+      "category": "NT_GENERAL",
+      "subcategory": "Transformación",
+      "characters": [
+        "Creyentes",
+        "Señor"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo describe a los creyentes como transformados progresivamente al contemplar la gloria del Señor",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El lenguaje señala transformación de gloria en gloria por la acción del Señor, no perfección instantánea.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0016",
+      "book": "2 Corintios",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "2 Corintios 4:1-2",
+      "category": "NT_GENERAL",
+      "subcategory": "Ministerio sin engaño",
+      "characters": [
+        "Pablo",
+        "ministros"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué prácticas afirma Pablo haber renunciado al ejercer el ministerio?",
+      "opcion_a": "Lo oculto y vergonzoso, la astucia y la adulteración del mensaje",
+      "opcion_b": "Toda explicación pública del evangelio",
+      "opcion_c": "La rendición de cuentas",
+      "opcion_d": "La colaboración con otras personas",
+      "correct_option": "A",
+      "correct_answer": "Lo oculto y vergonzoso, la astucia y la adulteración del mensaje",
+      "explanation": "Pablo rechaza métodos engañosos y afirma manifestar la verdad. El texto no legitima manipulación religiosa.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0017",
+      "book": "2 Corintios",
+      "chapter": 4,
+      "verse_start": 5,
+      "verse_end": 7,
+      "reference": "2 Corintios 4:5-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Tesoro en vasos de barro",
+      "characters": [
+        "Cristo",
+        "ministros"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué comunica la imagen de un tesoro contenido en recipientes frágiles?",
+      "opcion_a": "Que el poder extraordinario procede de Dios y no del mensajero",
+      "opcion_b": "Que la fragilidad humana debe ocultarse",
+      "opcion_c": "Que el líder espiritual es invulnerable",
+      "opcion_d": "Que el sufrimiento prueba inferioridad moral",
+      "correct_option": "A",
+      "correct_answer": "Que el poder extraordinario procede de Dios y no del mensajero",
+      "explanation": "La imagen subraya que el poder pertenece a Dios mientras los mensajeros siguen siendo frágiles. No exige ocultar vulnerabilidad ni glorifica el daño.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0018",
+      "book": "2 Corintios",
+      "chapter": 4,
+      "verse_start": 8,
+      "verse_end": 12,
+      "reference": "2 Corintios 4:8-12",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Afligidos pero no abandonados",
+      "characters": [
+        "Pablo",
+        "compañeros"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo describe aflicción y persecución reales, pero niega que eso signifique abandono total por parte de Dios",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Pablo reconoce presión, perplejidad y persecución sin presentarlas como ausencia definitiva de Dios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0019",
+      "book": "2 Corintios",
+      "chapter": 4,
+      "verse_start": 13,
+      "verse_end": 15,
+      "reference": "2 Corintios 4:13-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Fe y resurrección",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué esperanza sostiene el anuncio de Pablo en medio de la fragilidad?",
+      "opcion_a": "Que quien resucitó a Jesús también levantará a los creyentes",
+      "opcion_b": "Que ningún creyente enfrentará muerte física",
+      "opcion_c": "Que toda pérdida material será compensada de inmediato",
+      "opcion_d": "Que la fe elimina toda incertidumbre emocional",
+      "correct_option": "A",
+      "correct_answer": "Que quien resucitó a Jesús también levantará a los creyentes",
+      "explanation": "Pablo conecta su testimonio con la esperanza de resurrección. No promete evitar la muerte física ni una compensación material inmediata.",
+      "additional_references": [
+        "Salmos 116:10"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0020",
+      "book": "2 Corintios",
+      "chapter": 4,
+      "verse_start": 16,
+      "verse_end": 18,
+      "reference": "2 Corintios 4:16-18",
+      "category": "NT_GENERAL",
+      "subcategory": "Lo visible y lo eterno",
+      "characters": [
+        "Creyentes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste utiliza Pablo para animar a no desmayar?",
+      "opcion_a": "El desgaste exterior frente a una renovación interior y lo temporal frente a lo eterno",
+      "opcion_b": "La negación del cuerpo frente a la superioridad de la mente",
+      "opcion_c": "La riqueza presente frente a una riqueza garantizada",
+      "opcion_d": "La ausencia de dolor frente a una vida fácil",
+      "correct_option": "A",
+      "correct_answer": "El desgaste exterior frente a una renovación interior y lo temporal frente a lo eterno",
+      "explanation": "Pablo reconoce desgaste exterior y aflicción mientras orienta la esperanza hacia lo eterno. No desprecia el cuerpo ni niega el dolor.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0021",
+      "book": "2 Corintios",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "2 Corintios 5:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Morada futura y garantía",
+      "characters": [
+        "Creyentes",
+        "Espíritu"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué expresa la imagen de una morada futura preparada por Dios?",
+      "opcion_a": "Esperanza de una existencia dada por Dios más allá de la fragilidad presente",
+      "opcion_b": "Desprecio por toda vida corporal",
+      "opcion_c": "Deseo de autolesionarse para llegar antes",
+      "opcion_d": "Garantía de no sufrir enfermedad",
+      "correct_option": "A",
+      "correct_answer": "Esperanza de una existencia dada por Dios más allá de la fragilidad presente",
+      "explanation": "La metáfora expresa esperanza ante la mortalidad y anhelo de plenitud. No justifica autolesión ni desprecio por la vida corporal presente.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0022",
+      "book": "2 Corintios",
+      "chapter": 5,
+      "verse_start": 6,
+      "verse_end": 10,
+      "reference": "2 Corintios 5:6-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Vivir por fe y rendir cuentas",
+      "characters": [
+        "Creyentes",
+        "Cristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos ideas mantiene juntas Pablo al hablar de vivir por fe?",
+      "opcion_a": "Confianza en el Señor y responsabilidad ante el tribunal de Cristo",
+      "opcion_b": "Fe y ausencia de responsabilidad",
+      "opcion_c": "Esperanza y permiso para dañar",
+      "opcion_d": "Seguridad y superioridad sobre otros",
+      "correct_option": "A",
+      "correct_answer": "Confianza en el Señor y responsabilidad ante el tribunal de Cristo",
+      "explanation": "Pablo une confianza con responsabilidad por la propia conducta. La fe no elimina la rendición de cuentas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0023",
+      "book": "2 Corintios",
+      "chapter": 5,
+      "verse_start": 11,
+      "verse_end": 15,
+      "reference": "2 Corintios 5:11-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Amor de Cristo y nueva orientación",
+      "characters": [
+        "Cristo",
+        "creyentes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué efecto atribuye Pablo al amor de Cristo en la manera de vivir?",
+      "opcion_a": "Orienta a no vivir centrados solo en sí mismos sino para quien murió y resucitó",
+      "opcion_b": "Elimina toda decisión personal",
+      "opcion_c": "Obliga a tolerar abuso interpersonal",
+      "opcion_d": "Garantiza éxito social",
+      "correct_option": "A",
+      "correct_answer": "Orienta a no vivir centrados solo en sí mismos sino para quien murió y resucitó",
+      "explanation": "Pablo describe una reorientación de la vida hacia Cristo. El pasaje no autoriza control sobre otra persona ni exige permanecer en abuso.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0024",
+      "book": "2 Corintios",
+      "chapter": 5,
+      "verse_start": 16,
+      "verse_end": 17,
+      "reference": "2 Corintios 5:16-17",
+      "category": "NT_GENERAL",
+      "subcategory": "Nueva creación",
+      "characters": [
+        "Creyentes",
+        "Cristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo presenta estar en Cristo como una realidad de nueva creación",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. La nueva creación describe una identidad y renovación vinculadas a Cristo, no una negación de la historia personal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0025",
+      "book": "2 Corintios",
+      "chapter": 5,
+      "verse_start": 18,
+      "verse_end": 21,
+      "reference": "2 Corintios 5:18-21",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Ministerio de reconciliación",
+      "characters": [
+        "Pablo",
+        "Cristo",
+        "Dios"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué encargo recibe Pablo dentro de su explicación de la reconciliación realizada por Dios en Cristo?",
+      "opcion_a": "Ser embajador de un mensaje de reconciliación",
+      "opcion_b": "Imponer reconciliación sin consentimiento a toda relación dañina",
+      "opcion_c": "Ejercer poder político sobre las naciones",
+      "opcion_d": "Declarar innecesaria toda reparación entre personas",
+      "correct_option": "A",
+      "correct_answer": "Ser embajador de un mensaje de reconciliación",
+      "explanation": "Pablo presenta un ministerio de reconciliación con Dios. La reconciliación teológica no obliga a una víctima a reanudar una relación insegura ni elimina la necesidad de justicia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0026",
+      "book": "2 Corintios",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "2 Corintios 6:1-2",
+      "category": "NT_GENERAL",
+      "subcategory": "Gracia recibida con propósito",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué exhortación acompaña el anuncio del tiempo favorable y de salvación?",
+      "opcion_a": "No recibir en vano la gracia de Dios",
+      "opcion_b": "Posponer toda respuesta hasta una señal extraordinaria",
+      "opcion_c": "Medir la fe por el éxito económico",
+      "opcion_d": "Evitar cualquier examen personal",
+      "correct_option": "A",
+      "correct_answer": "No recibir en vano la gracia de Dios",
+      "explanation": "Pablo llama a responder de manera coherente a la gracia recibida. No convierte el pasaje en calendario profético ni en medida económica de la fe.",
+      "additional_references": [
+        "Isaías 49:8"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0027",
+      "book": "2 Corintios",
+      "chapter": 6,
+      "verse_start": 3,
+      "verse_end": 10,
+      "reference": "2 Corintios 6:3-10",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Credenciales en la adversidad",
+      "characters": [
+        "Pablo",
+        "compañeros"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo presenta Pablo la autenticidad del ministerio en medio de múltiples dificultades?",
+      "opcion_a": "Mediante perseverancia, integridad y servicio a pesar de las pruebas",
+      "opcion_b": "Como prueba de que el sufrimiento debe buscarse",
+      "opcion_c": "Como permiso para ignorar límites de seguridad",
+      "opcion_d": "Como señal de que un líder nunca necesita ayuda",
+      "correct_option": "A",
+      "correct_answer": "Mediante perseverancia, integridad y servicio a pesar de las pruebas",
+      "explanation": "Pablo enumera sufrimientos junto con virtudes y perseverancia. No recomienda buscar daño ni romantiza situaciones abusivas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0028",
+      "book": "2 Corintios",
+      "chapter": 6,
+      "verse_start": 11,
+      "verse_end": 13,
+      "reference": "2 Corintios 6:11-13",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Corazón abierto",
+      "characters": [
+        "Pablo",
+        "corintios"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pide Pablo a los corintios después de afirmar que les ha abierto su corazón?",
+      "opcion_a": "Que correspondan con una apertura semejante",
+      "opcion_b": "Que suspendan todo discernimiento",
+      "opcion_c": "Que acepten cualquier orden sin preguntas",
+      "opcion_d": "Que se aíslen de otras comunidades",
+      "correct_option": "A",
+      "correct_answer": "Que correspondan con una apertura semejante",
+      "explanation": "Pablo usa lenguaje relacional y pide reciprocidad afectiva. No reclama control absoluto sobre la comunidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0029",
+      "book": "2 Corintios",
+      "chapter": 6,
+      "verse_start": 14,
+      "verse_end": 16,
+      "reference": "2 Corintios 6:14-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Asociaciones e identidad",
+      "characters": [
+        "Creyentes"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio busca proteger la exhortación a no formar un yugo incompatible?",
+      "opcion_a": "La coherencia de la fidelidad a Dios en asociaciones que comprometerían esa fidelidad",
+      "opcion_b": "El aislamiento social de toda persona no creyente",
+      "opcion_c": "La prohibición universal de trabajar con personas diferentes",
+      "opcion_d": "El control de amistades y parejas mediante coerción",
+      "correct_option": "A",
+      "correct_answer": "La coherencia de la fidelidad a Dios en asociaciones que comprometerían esa fidelidad",
+      "explanation": "El pasaje usa contrastes cultuales y de lealtad para proteger fidelidad a Dios. No debe convertirse en herramienta de aislamiento coercitivo o control interpersonal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0030",
+      "book": "2 Corintios",
+      "chapter": 6,
+      "verse_start": 16,
+      "verse_end": 18,
+      "reference": "2 Corintios 6:16-18",
+      "category": "NT_GENERAL",
+      "subcategory": "Templo del Dios viviente",
+      "characters": [
+        "Dios",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué promesa acompaña la imagen de la comunidad como templo del Dios viviente?",
+      "opcion_a": "Presencia y relación de pacto de Dios con su pueblo",
+      "opcion_b": "Superioridad étnica sobre otros pueblos",
+      "opcion_c": "Inmunidad ante toda enfermedad",
+      "opcion_d": "Autoridad para destruir objetos religiosos ajenos",
+      "correct_option": "A",
+      "correct_answer": "Presencia y relación de pacto de Dios con su pueblo",
+      "explanation": "Pablo reúne lenguaje de presencia y pacto para describir la relación con Dios. No autoriza hostigamiento religioso ni superioridad étnica.",
+      "additional_references": [
+        "Levítico 26:12",
+        "Ezequiel 37:27"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0031",
+      "book": "2 Corintios",
+      "chapter": 7,
+      "verse_start": 2,
+      "verse_end": 4,
+      "reference": "2 Corintios 7:2-4",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Confianza de Pablo en la comunidad",
+      "characters": [
+        "Pablo",
+        "corintios"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué expresa Pablo al pedir espacio en el corazón de la comunidad?",
+      "opcion_a": "Afecto, confianza y disposición a compartir vida y dificultades",
+      "opcion_b": "Exigencia de obediencia ciega",
+      "opcion_c": "Derecho a controlar sus bienes",
+      "opcion_d": "Prohibición de cuestionar sus decisiones",
+      "correct_option": "A",
+      "correct_answer": "Afecto, confianza y disposición a compartir vida y dificultades",
+      "explanation": "Pablo combina defensa de su conducta con afecto y confianza. La relación no se formula como control absoluto.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0032",
+      "book": "2 Corintios",
+      "chapter": 7,
+      "verse_start": 5,
+      "verse_end": 7,
+      "reference": "2 Corintios 7:5-7",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Consuelo por la llegada de Tito",
+      "characters": [
+        "Pablo",
+        "Tito",
+        "corintios"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué noticia trajo Tito que consoló a Pablo en Macedonia?",
+      "opcion_a": "El anhelo, tristeza y afecto de los corintios hacia él",
+      "opcion_b": "La decisión de cerrar la comunidad",
+      "opcion_c": "Una autorización del gobierno romano",
+      "opcion_d": "El abandono definitivo de la relación",
+      "correct_option": "A",
+      "correct_answer": "El anhelo, tristeza y afecto de los corintios hacia él",
+      "explanation": "Tito comunica a Pablo una respuesta emocional y relacional de los corintios que produce consuelo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0033",
+      "book": "2 Corintios",
+      "chapter": 7,
+      "verse_start": 8,
+      "verse_end": 10,
+      "reference": "2 Corintios 7:8-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Tristeza y arrepentimiento",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué diferencia establece Pablo entre una tristeza que produce arrepentimiento y otra que conduce a muerte?",
+      "opcion_a": "Distingue por sus frutos y orientación, no por negar el dolor emocional",
+      "opcion_b": "Afirma que toda tristeza es falta de fe",
+      "opcion_c": "Prohíbe pedir ayuda ante sufrimiento psicológico",
+      "opcion_d": "Identifica automáticamente depresión con pecado",
+      "correct_option": "A",
+      "correct_answer": "Distingue por sus frutos y orientación, no por negar el dolor emocional",
+      "explanation": "Pablo distingue efectos morales y espirituales de distintos tipos de tristeza dentro de una situación concreta. No ofrece un diagnóstico clínico ni estigmatiza la salud mental.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0034",
+      "book": "2 Corintios",
+      "chapter": 7,
+      "verse_start": 11,
+      "verse_end": 12,
+      "reference": "2 Corintios 7:11-12",
+      "category": "NT_GENERAL",
+      "subcategory": "Frutos de la respuesta comunitaria",
+      "characters": [
+        "Corintios"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo considera positiva la diligencia mostrada por la comunidad al afrontar seriamente el problema que había señalado",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Pablo observa diligencia y respuesta seria como frutos de la corrección.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0035",
+      "book": "2 Corintios",
+      "chapter": 7,
+      "verse_start": 13,
+      "verse_end": 16,
+      "reference": "2 Corintios 7:13-16",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Tito y la confianza restaurada",
+      "characters": [
+        "Tito",
+        "Pablo",
+        "corintios"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué efecto tuvo en Tito la forma en que fue recibido por la comunidad?",
+      "opcion_a": "Su afecto hacia ellos aumentó al recordar su acogida",
+      "opcion_b": "Decidió no volver a verlos",
+      "opcion_c": "Concluyó que no había posibilidad de relación",
+      "opcion_d": "Exigió reconocimiento público",
+      "correct_option": "A",
+      "correct_answer": "Su afecto hacia ellos aumentó al recordar su acogida",
+      "explanation": "Pablo señala que Tito recuerda con afecto la recepción que tuvo. El cierre del bloque enfatiza confianza y restauración.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0036",
+      "book": "2 Corintios",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "2 Corintios 8:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Generosidad de Macedonia",
+      "characters": [
+        "Iglesias de Macedonia"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué sorprende a Pablo de la generosidad de las iglesias de Macedonia?",
+      "opcion_a": "Que en medio de aflicción y pobreza dieron voluntariamente con abundante disposición",
+      "opcion_b": "Que entregaron dinero por obligación legal",
+      "opcion_c": "Que solo dieron después de enriquecerse",
+      "opcion_d": "Que descuidaron sus necesidades básicas por presión apostólica",
+      "correct_option": "A",
+      "correct_answer": "Que en medio de aflicción y pobreza dieron voluntariamente con abundante disposición",
+      "explanation": "Pablo destaca una disposición voluntaria y generosa en condiciones difíciles. El pasaje no autoriza presionar a personas vulnerables a entregar recursos esenciales.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0037",
+      "book": "2 Corintios",
+      "chapter": 8,
+      "verse_start": 6,
+      "verse_end": 9,
+      "reference": "2 Corintios 8:6-9",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Tito y la gracia de dar",
+      "characters": [
+        "Tito",
+        "Pablo",
+        "Cristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué encargo recibe Tito dentro del proyecto de ayuda?",
+      "opcion_a": "Completar entre los corintios la obra de generosidad ya iniciada",
+      "opcion_b": "Cobrar una cuota obligatoria a cada familia",
+      "opcion_c": "Administrar sanciones contra quien no pudiera dar",
+      "opcion_d": "Garantizar riqueza futura a los donantes",
+      "correct_option": "A",
+      "correct_answer": "Completar entre los corintios la obra de generosidad ya iniciada",
+      "explanation": "Tito participa en completar una iniciativa de generosidad. Pablo apela al ejemplo de Cristo, pero no impone coerción financiera ni promesas de enriquecimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0038",
+      "book": "2 Corintios",
+      "chapter": 8,
+      "verse_start": 10,
+      "verse_end": 12,
+      "reference": "2 Corintios 8:10-12",
+      "category": "NT_GENERAL",
+      "subcategory": "Dar según lo que se tiene",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué criterio establece Pablo para que una ofrenda sea aceptable?",
+      "opcion_a": "La disposición conforme a lo que una persona tiene",
+      "opcion_b": "Endeudarse para demostrar mayor fe",
+      "opcion_c": "Superar siempre la cantidad dada por otros",
+      "opcion_d": "Entregar hasta quedar sin recursos indispensables",
+      "correct_option": "A",
+      "correct_answer": "La disposición conforme a lo que una persona tiene",
+      "explanation": "Pablo afirma que la disposición es aceptable según lo que se tiene, no según lo que no se tiene. Esto excluye convertir la colecta en presión para endeudarse.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0039",
+      "book": "2 Corintios",
+      "chapter": 8,
+      "verse_start": 13,
+      "verse_end": 15,
+      "reference": "2 Corintios 8:13-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Igualdad y alivio",
+      "characters": [
+        "Comunidades"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué objetivo expresa Pablo al hablar de equilibrio entre abundancia y necesidad?",
+      "opcion_a": "Que haya alivio y una forma de igualdad, no carga desigual sobre unos pocos",
+      "opcion_b": "Que todos posean exactamente la misma cantidad de bienes",
+      "opcion_c": "Que una comunidad quede empobrecida para enriquecer a otra",
+      "opcion_d": "Que desaparezca toda propiedad personal",
+      "correct_option": "A",
+      "correct_answer": "Que haya alivio y una forma de igualdad, no carga desigual sobre unos pocos",
+      "explanation": "Pablo busca aliviar necesidad sin cargar injustamente a unos. Su argumento usa el principio de suficiencia compartida, no una fórmula económica total.",
+      "additional_references": [
+        "Éxodo 16:18"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0040",
+      "book": "2 Corintios",
+      "chapter": 8,
+      "verse_start": 16,
+      "verse_end": 24,
+      "reference": "2 Corintios 8:16-24",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Administración transparente",
+      "characters": [
+        "Tito",
+        "hermanos enviados"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo toma medidas para que la administración de la ofrenda sea honorable tanto delante del Señor como delante de las personas",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Pablo evita que una ayuda abundante sea administrada sin controles y procura transparencia pública.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0041",
+      "book": "2 Corintios",
+      "chapter": 9,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "2 Corintios 9:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Preparación de la colecta",
+      "characters": [
+        "Corintios",
+        "macedonios"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué envía Pablo colaboradores antes de su llegada en relación con la ofrenda prometida?",
+      "opcion_a": "Para que esté preparada como acto voluntario y no como exigencia improvisada",
+      "opcion_b": "Para confiscar bienes si faltaba dinero",
+      "opcion_c": "Para publicar una lista de quienes dieran menos",
+      "opcion_d": "Para reemplazar toda decisión personal",
+      "correct_option": "A",
+      "correct_answer": "Para que esté preparada como acto voluntario y no como exigencia improvisada",
+      "explanation": "Pablo quiere que la ofrenda esté preparada como generosidad y no como imposición. La planificación busca evitar presión de última hora.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0042",
+      "book": "2 Corintios",
+      "chapter": 9,
+      "verse_start": 6,
+      "verse_end": 7,
+      "reference": "2 Corintios 9:6-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Sembrar y dar con alegría",
+      "characters": [
+        "Creyentes"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitud destaca Pablo al hablar de dar?",
+      "opcion_a": "Decidir de corazón, sin tristeza ni obligación",
+      "opcion_b": "Dar por miedo a una sanción espiritual",
+      "opcion_c": "Competir para superar públicamente a otros",
+      "opcion_d": "Esperar una ganancia financiera garantizada",
+      "correct_option": "A",
+      "correct_answer": "Decidir de corazón, sin tristeza ni obligación",
+      "explanation": "Pablo excluye tristeza y obligación y valora una decisión voluntaria. El lenguaje de siembra y cosecha no funciona como contrato de enriquecimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0043",
+      "book": "2 Corintios",
+      "chapter": 9,
+      "verse_start": 8,
+      "verse_end": 11,
+      "reference": "2 Corintios 9:8-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Suficiencia para buenas obras",
+      "characters": [
+        "Dios",
+        "creyentes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Con qué propósito describe Pablo la suficiencia que Dios puede conceder?",
+      "opcion_a": "Para abundar en buenas obras y generosidad",
+      "opcion_b": "Para garantizar lujo personal ilimitado",
+      "opcion_c": "Para demostrar superioridad sobre personas pobres",
+      "opcion_d": "Para evitar toda planificación responsable",
+      "correct_option": "A",
+      "correct_answer": "Para abundar en buenas obras y generosidad",
+      "explanation": "La suficiencia se orienta a buenas obras y generosidad. No se presenta como promesa de lujo ni como medida del valor espiritual.",
+      "additional_references": [
+        "Salmos 112:9"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0044",
+      "book": "2 Corintios",
+      "chapter": 9,
+      "verse_start": 12,
+      "verse_end": 14,
+      "reference": "2 Corintios 9:12-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Efecto comunitario de la ayuda",
+      "characters": [
+        "Donantes",
+        "receptores"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué efectos atribuye Pablo al servicio de ayuda material?",
+      "opcion_a": "Suplir necesidades y producir agradecimiento a Dios",
+      "opcion_b": "Crear dependencia obligatoria hacia los donantes",
+      "opcion_c": "Comprar autoridad sobre quienes reciben",
+      "opcion_d": "Eliminar toda diferencia entre comunidades",
+      "correct_option": "A",
+      "correct_answer": "Suplir necesidades y producir agradecimiento a Dios",
+      "explanation": "Pablo conecta la ayuda con necesidades reales, gratitud y comunión. No convierte la generosidad en instrumento de control.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0045",
+      "book": "2 Corintios",
+      "chapter": 9,
+      "verse_start": 15,
+      "verse_end": 15,
+      "reference": "2 Corintios 9:15",
+      "category": "NT_GENERAL",
+      "subcategory": "Don de Dios",
+      "characters": [
+        "Dios"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el bloque sobre generosidad termina con agradecimiento a Dios por su don inefable",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Pablo cierra el argumento desplazando la atención de la autosuficiencia humana hacia la gratitud a Dios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0046",
+      "book": "2 Corintios",
+      "chapter": 10,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "2 Corintios 10:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Mansedumbre y autoridad",
+      "characters": [
+        "Pablo",
+        "Cristo",
+        "corintios"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿A qué cualidades de Cristo apela Pablo al iniciar su defensa frente a críticas sobre su manera de actuar?",
+      "opcion_a": "Mansedumbre y ternura",
+      "opcion_b": "Violencia y dominio",
+      "opcion_c": "Prestigio económico y poder político",
+      "opcion_d": "Severidad sin límites",
+      "correct_option": "A",
+      "correct_answer": "Mansedumbre y ternura",
+      "explanation": "Pablo apela a mansedumbre y benignidad mientras aborda críticas a su autoridad. La defensa no legitima intimidación.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0047",
+      "book": "2 Corintios",
+      "chapter": 10,
+      "verse_start": 3,
+      "verse_end": 5,
+      "reference": "2 Corintios 10:3-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Armas de la lucha",
+      "characters": [
+        "Creyentes"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo debe entenderse la imagen de destruir argumentos y llevar pensamientos cautivos?",
+      "opcion_a": "Como lenguaje espiritual y argumentativo, no como autorización para coerción física o mental",
+      "opcion_b": "Como permiso para imponer ideas por fuerza",
+      "opcion_c": "Como técnica para controlar la mente de otra persona",
+      "opcion_d": "Como mandato de destruir instituciones civiles",
+      "correct_option": "A",
+      "correct_answer": "Como lenguaje espiritual y argumentativo, no como autorización para coerción física o mental",
+      "explanation": "Pablo describe una contienda espiritual y argumentativa. La metáfora no autoriza violencia, manipulación psicológica ni coerción sobre otras personas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0048",
+      "book": "2 Corintios",
+      "chapter": 10,
+      "verse_start": 7,
+      "verse_end": 11,
+      "reference": "2 Corintios 10:7-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Apariencia y autoridad",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué propósito declara Pablo para la autoridad recibida?",
+      "opcion_a": "Edificar a la comunidad y no destruirla",
+      "opcion_b": "Evitar toda rendición de cuentas",
+      "opcion_c": "Asegurar obediencia mediante miedo",
+      "opcion_d": "Obtener privilegios personales",
+      "correct_option": "A",
+      "correct_answer": "Edificar a la comunidad y no destruirla",
+      "explanation": "Pablo define su autoridad por la edificación. Esto ofrece un criterio contrario al uso destructivo o abusivo del liderazgo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0049",
+      "book": "2 Corintios",
+      "chapter": 10,
+      "verse_start": 12,
+      "verse_end": 16,
+      "reference": "2 Corintios 10:12-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Comparaciones y límites",
+      "characters": [
+        "Pablo",
+        "otros ministros"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué critica Pablo de quienes se miden y comparan únicamente entre sí?",
+      "opcion_a": "Que ese criterio puede carecer de entendimiento y exceder límites legítimos",
+      "opcion_b": "Que toda comparación de datos es inmoral",
+      "opcion_c": "Que nadie debe evaluar ningún ministerio",
+      "opcion_d": "Que solo la fama determina el valor",
+      "correct_option": "A",
+      "correct_answer": "Que ese criterio puede carecer de entendimiento y exceder límites legítimos",
+      "explanation": "Pablo cuestiona una autoevaluación circular y una jactancia fuera de límites. No prohíbe toda evaluación responsable.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0050",
+      "book": "2 Corintios",
+      "chapter": 10,
+      "verse_start": 17,
+      "verse_end": 18,
+      "reference": "2 Corintios 10:17-18",
+      "category": "NT_GENERAL",
+      "subcategory": "Jactancia en el Señor",
+      "characters": [
+        "Creyentes"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo concluye que la aprobación decisiva no proviene de recomendarse a uno mismo sino del Señor",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Pablo relativiza la autopromoción y sitúa la aprobación final en el Señor.",
+      "additional_references": [
+        "Jeremías 9:24"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0051",
+      "book": "2 Corintios",
+      "chapter": 11,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "2 Corintios 11:1-4",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Celo pastoral de Pablo",
+      "characters": [
+        "Pablo",
+        "comunidad",
+        "Cristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué temor expresa Pablo al comparar a la comunidad con una prometida para Cristo?",
+      "opcion_a": "Que sea apartada de una devoción sincera por el engaño",
+      "opcion_b": "Que pierda prestigio político",
+      "opcion_c": "Que deje de financiar sus viajes",
+      "opcion_d": "Que no acepte todas sus opiniones personales",
+      "correct_option": "A",
+      "correct_answer": "Que sea apartada de una devoción sincera por el engaño",
+      "explanation": "Pablo expresa preocupación por el engaño que desvía de Cristo. Su metáfora relacional no autoriza posesividad ni control coercitivo.",
+      "additional_references": [
+        "Génesis 3:1-5"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0052",
+      "book": "2 Corintios",
+      "chapter": 11,
+      "verse_start": 5,
+      "verse_end": 15,
+      "reference": "2 Corintios 11:5-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Falsos apóstoles y discernimiento",
+      "characters": [
+        "Comunidad",
+        "falsos apóstoles"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué criterio general impulsa Pablo frente a personas que se presentan como enviados de Cristo pero actúan engañosamente?",
+      "opcion_a": "Discernir su conducta y no dejarse impresionar solo por apariencia o títulos",
+      "opcion_b": "Aceptar toda autoridad religiosa autoproclamada",
+      "opcion_c": "Juzgar únicamente por carisma personal",
+      "opcion_d": "Evitar examinar enseñanzas para mantener la paz",
+      "correct_option": "A",
+      "correct_answer": "Discernir su conducta y no dejarse impresionar solo por apariencia o títulos",
+      "explanation": "Pablo denuncia a quienes se disfrazan de apóstoles de Cristo. El énfasis favorece discernimiento y responsabilidad, no obediencia ciega.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0053",
+      "book": "2 Corintios",
+      "chapter": 11,
+      "verse_start": 16,
+      "verse_end": 21,
+      "reference": "2 Corintios 11:16-21",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Jactancia paradójica",
+      "characters": [
+        "Pablo",
+        "opositores"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo adopta de manera irónica el lenguaje de la jactancia para confrontar criterios de prestigio usados por sus opositores",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Pablo usa una estrategia retórica irónica para desmontar valores de prestigio, no para promover arrogancia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0054",
+      "book": "2 Corintios",
+      "chapter": 11,
+      "verse_start": 22,
+      "verse_end": 29,
+      "reference": "2 Corintios 11:22-29",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Sufrimientos de Pablo",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pretende mostrar Pablo al enumerar trabajos, peligros y sufrimientos?",
+      "opcion_a": "Que su servicio apostólico no depende de una imagen de éxito cómodo o invulnerable",
+      "opcion_b": "Que los líderes deben buscar deliberadamente daño físico",
+      "opcion_c": "Que sufrir más otorga autoridad automática",
+      "opcion_d": "Que la prudencia y la seguridad son falta de fe",
+      "correct_option": "A",
+      "correct_answer": "Que su servicio apostólico no depende de una imagen de éxito cómodo o invulnerable",
+      "explanation": "Pablo responde a la competencia de prestigio mostrando el costo real de su servicio. No convierte el sufrimiento en requisito que deba buscarse ni en licencia de autoridad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0055",
+      "book": "2 Corintios",
+      "chapter": 11,
+      "verse_start": 30,
+      "verse_end": 33,
+      "reference": "2 Corintios 11:30-33",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Debilidad y escape",
+      "characters": [
+        "Pablo",
+        "gobernador de Damasco"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué episodio utiliza Pablo al cerrar su jactancia en debilidades?",
+      "opcion_a": "Su escape de Damasco al ser bajado por una abertura en el muro",
+      "opcion_b": "Una entrada triunfal en Roma",
+      "opcion_c": "Una coronación pública",
+      "opcion_d": "Un rescate militar encabezado por sus seguidores",
+      "correct_option": "A",
+      "correct_answer": "Su escape de Damasco al ser bajado por una abertura en el muro",
+      "explanation": "Pablo recuerda una huida vulnerable de Damasco. El ejemplo encaja con su inversión de los criterios de prestigio y fortaleza.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0056",
+      "book": "2 Corintios",
+      "chapter": 12,
+      "verse_start": 1,
+      "verse_end": 6,
+      "reference": "2 Corintios 12:1-6",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Visiones y tercer cielo",
+      "characters": [
+        "Pablo",
+        "un hombre en Cristo"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué narra Pablo una experiencia extraordinaria de forma indirecta y con reservas?",
+      "opcion_a": "Para evitar convertir la experiencia espiritual en motivo simple de exaltación personal",
+      "opcion_b": "Para enseñar una técnica reproducible de viaje al cielo",
+      "opcion_c": "Para identificar con certeza cada detalle que él mismo deja sin definir",
+      "opcion_d": "Para exigir que todos tengan la misma visión",
+      "correct_option": "A",
+      "correct_answer": "Para evitar convertir la experiencia espiritual en motivo simple de exaltación personal",
+      "explanation": "Pablo habla de un hombre en Cristo y reconoce límites sobre cómo ocurrió la experiencia. El pasaje no ofrece una técnica ni exige experiencias idénticas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0057",
+      "book": "2 Corintios",
+      "chapter": 12,
+      "verse_start": 7,
+      "verse_end": 10,
+      "reference": "2 Corintios 12:7-10",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Aguijón y gracia suficiente",
+      "characters": [
+        "Pablo",
+        "Señor"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué respuesta recibe Pablo cuando pide que le sea quitado su aguijón?",
+      "opcion_a": "Que la gracia del Señor le basta y su poder se perfecciona en la debilidad",
+      "opcion_b": "Que toda enfermedad siempre desaparecerá inmediatamente",
+      "opcion_c": "Que deje de pedir ayuda",
+      "opcion_d": "Que su sufrimiento demuestra falta de fe",
+      "correct_option": "A",
+      "correct_answer": "Que la gracia del Señor le basta y su poder se perfecciona en la debilidad",
+      "explanation": "Pablo recibe una respuesta centrada en gracia y poder en la debilidad. El texto no permite diagnosticar con certeza qué era el aguijón ni negar atención médica o apoyo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0058",
+      "book": "2 Corintios",
+      "chapter": 12,
+      "verse_start": 11,
+      "verse_end": 13,
+      "reference": "2 Corintios 12:11-13",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Señales apostólicas",
+      "characters": [
+        "Pablo",
+        "corintios"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combina Pablo al defender que su ministerio entre los corintios tuvo marcas apostólicas?",
+      "opcion_a": "Perseverancia junto con señales y obras poderosas",
+      "opcion_b": "Solo fama pública",
+      "opcion_c": "Ausencia total de debilidad",
+      "opcion_d": "Control económico de la comunidad",
+      "correct_option": "A",
+      "correct_answer": "Perseverancia junto con señales y obras poderosas",
+      "explanation": "Pablo recuerda paciencia y señales en medio de su defensa apostólica. No las presenta como instrumento para dominar económicamente a la comunidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0059",
+      "book": "2 Corintios",
+      "chapter": 12,
+      "verse_start": 14,
+      "verse_end": 18,
+      "reference": "2 Corintios 12:14-18",
+      "category": "NT_GENERAL",
+      "subcategory": "No ser carga y transparencia",
+      "characters": [
+        "Pablo",
+        "Tito",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué aclara Pablo al explicar que no busca convertirse en carga económica para los corintios?",
+      "opcion_a": "Que busca a las personas y su bien, no sus bienes",
+      "opcion_b": "Que todo apoyo económico a ministros es incorrecto",
+      "opcion_c": "Que los creyentes nunca deben compartir recursos",
+      "opcion_d": "Que Tito actuó sin rendición de cuentas",
+      "correct_option": "A",
+      "correct_answer": "Que busca a las personas y su bien, no sus bienes",
+      "explanation": "Pablo insiste en que su interés principal son las personas y apela a la conducta de Tito como evidencia. No formula una prohibición universal del apoyo ministerial.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0060",
+      "book": "2 Corintios",
+      "chapter": 12,
+      "verse_start": 19,
+      "verse_end": 21,
+      "reference": "2 Corintios 12:19-21",
+      "category": "NT_GENERAL",
+      "subcategory": "Edificación y temor pastoral",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo afirma hablar delante de Dios con la finalidad de edificar a la comunidad, aunque teme encontrar conflictos no resueltos",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Pablo relaciona su defensa con edificación y expresa temor por posibles rivalidades y desórdenes.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0061",
+      "book": "2 Corintios",
+      "chapter": 13,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "2 Corintios 13:1-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Confirmación y debilidad",
+      "characters": [
+        "Cristo",
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste utiliza Pablo al hablar de Cristo crucificado y del poder de Dios?",
+      "opcion_a": "Debilidad asociada a la crucifixión y vida por el poder de Dios",
+      "opcion_b": "Fracaso definitivo de Cristo y éxito humano",
+      "opcion_c": "Rechazo de toda vulnerabilidad",
+      "opcion_d": "Superioridad física como criterio espiritual",
+      "correct_option": "A",
+      "correct_answer": "Debilidad asociada a la crucifixión y vida por el poder de Dios",
+      "explanation": "Pablo mantiene juntos debilidad y poder en la lógica de la cruz. El contraste no convierte la fuerza física en medida de espiritualidad.",
+      "additional_references": [
+        "Deuteronomio 19:15"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0062",
+      "book": "2 Corintios",
+      "chapter": 13,
+      "verse_start": 5,
+      "verse_end": 6,
+      "reference": "2 Corintios 13:5-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Autoexamen",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pide Pablo a sus lectores respecto de su propia fe?",
+      "opcion_a": "Examinarse y ponerse a prueba a sí mismos",
+      "opcion_b": "Compararse solo con otras comunidades",
+      "opcion_c": "Depender únicamente de la evaluación de un líder",
+      "opcion_d": "Evitar cualquier reflexión crítica",
+      "correct_option": "A",
+      "correct_answer": "Examinarse y ponerse a prueba a sí mismos",
+      "explanation": "Pablo dirige el examen hacia la propia comunidad. El autoexamen no elimina la gracia ni autoriza escrutinio abusivo de otras personas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0063",
+      "book": "2 Corintios",
+      "chapter": 13,
+      "verse_start": 7,
+      "verse_end": 10,
+      "reference": "2 Corintios 13:7-10",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Autoridad para edificar",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo quiere Pablo usar la autoridad que el Señor le ha dado?",
+      "opcion_a": "Para edificar y no para destruir",
+      "opcion_b": "Para castigar sin límites",
+      "opcion_c": "Para impedir toda crítica",
+      "opcion_d": "Para controlar decisiones privadas ajenas al conflicto",
+      "correct_option": "A",
+      "correct_answer": "Para edificar y no para destruir",
+      "explanation": "Pablo vuelve a definir su autoridad por la edificación. El criterio excluye usar liderazgo espiritual como justificación de daño o control arbitrario.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0064",
+      "book": "2 Corintios",
+      "chapter": 13,
+      "verse_start": 11,
+      "verse_end": 12,
+      "reference": "2 Corintios 13:11-12",
+      "category": "NT_GENERAL",
+      "subcategory": "Restauración, paz y afecto",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué conjunto de exhortaciones aparece cerca del cierre de la carta?",
+      "opcion_a": "Buscar restauración, consuelo, unidad y paz",
+      "opcion_b": "Romper todo vínculo por diferencias menores",
+      "opcion_c": "Competir por reconocimiento",
+      "opcion_d": "Evitar cualquier muestra de afecto comunitario",
+      "correct_option": "A",
+      "correct_answer": "Buscar restauración, consuelo, unidad y paz",
+      "explanation": "El cierre llama a restauración, ánimo, unidad y paz. Estas exhortaciones no significan tolerar abuso o eliminar límites necesarios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2CO-0065",
+      "book": "2 Corintios",
+      "chapter": 13,
+      "verse_start": 13,
+      "verse_end": 14,
+      "reference": "2 Corintios 13:13-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Bendición final",
+      "characters": [
+        "Dios",
+        "Jesucristo",
+        "Espíritu Santo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la bendición final reúne la gracia de Jesucristo, el amor de Dios y la comunión del Espíritu Santo",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. La fórmula final reúne gracia, amor y comunión en una bendición dirigida a toda la comunidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}

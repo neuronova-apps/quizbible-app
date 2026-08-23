@@ -88,6 +88,7 @@ JOHN_PATH = Path(__file__).parent / "john-master-input.json"
 ACTS_PATH = Path(__file__).parent / "acts-master-input.json"
 ROMANS_PATH = Path(__file__).parent / "romans-master-input.json"
 CORINTHIANS1_PATH = Path(__file__).parent / "1corinthians-master-input.json"
+CORINTHIANS2_PATH = Path(__file__).parent / "2corinthians-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -365,6 +366,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.corinthians1_questions = {q["id"]: q for q in (raw_1co.get("questions", []) if isinstance(raw_1co, dict) else raw_1co)}
         else:
             cls.corinthians1_questions = {}
+
+        if CORINTHIANS2_PATH.exists():
+            raw_2co = json.loads(CORINTHIANS2_PATH.read_text(encoding="utf-8"))
+            cls.corinthians2_questions = {q["id"]: q for q in (raw_2co.get("questions", []) if isinstance(raw_2co, dict) else raw_2co)}
+        else:
+            cls.corinthians2_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -4899,6 +4906,128 @@ class TestAuditorCanonical(unittest.TestCase):
         if not self.corinthians1_questions:
             self.skipTest("1corinthians-master-input.json no disponible")
         for qid, q in self.corinthians1_questions.items():
+            cat = q.get("category")
+            self.assertIn(cat, {"NT_GENERAL", "PERSONAJES_BIBLICOS"})
+            self.assertNotIn(cat, {"JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"})
+            modes = q.get("eligible_modes", [])
+            self.assertIn("NT", modes)
+            self.assertIn("AMBOS", modes)
+            if cat == "PERSONAJES_BIBLICOS":
+                self.assertIn("PERSONAJES_NT", modes)
+                self.assertIn("PERSONAJES_AMBOS", modes)
+            if q.get("question_type") == "TRUE_FALSE":
+                self.assertIn("VERDADERO_FALSO_NT", modes)
+                self.assertIn("VERDADERO_FALSO_AMBOS", modes)
+
+    # --- PRUEBAS ESPECÍFICAS DE 2 CORINTIOS ---
+
+    def get_2corinthians_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.corinthians2_questions, f"ID '{qid}' no encontrado en 2corinthians-master-input.json")
+        return copy.deepcopy(self.corinthians2_questions[qid])
+
+    def test_detect_book_key_2corinthians(self) -> None:
+        """Verifica detección de book_key para 2 Corintios y sus variantes."""
+        spec_2co = {"questions": [{"id": "NQB-NT-2CO-0001", "book": "2 Corintios"}]}
+        self.assertEqual(detect_book_key(spec_2co), "2corinthians")
+
+        spec_alias = {"questions": [{"id": "NQB-NT-2CO-0001", "book": "2corintios"}]}
+        self.assertEqual(detect_book_key(spec_alias), "2corinthians")
+
+        spec_en = {"questions": [{"id": "NQB-NT-2CO-0001", "book": "2 Corinthians"}]}
+        self.assertEqual(detect_book_key(spec_en), "2corinthians")
+
+        spec_2co_short = {"questions": [{"id": "NQB-NT-2CO-0001", "book": "2 cor"}]}
+        self.assertEqual(detect_book_key(spec_2co_short), "2corinthians")
+
+        spec_carta = {"questions": [{"id": "NQB-NT-2CO-0001", "book": "Segunda Carta a los Corintios"}]}
+        self.assertEqual(detect_book_key(spec_carta), "2corinthians")
+
+    def test_2corinthians_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de 2 Corintios en BOOK_CONFIGS."""
+        self.assertIn("2corinthians", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["2corinthians"]
+        self.assertEqual(cfg["canonical_name"], "2 Corintios")
+        self.assertEqual(cfg["api_name"], "2 Corintios")
+        self.assertEqual(cfg["total_chapters"], 13)
+        self.assertEqual(len(cfg["blocks"]), 2)
+        self.assertIn("2 corintios", cfg["aliases"])
+        self.assertIn("2corintios", cfg["aliases"])
+        self.assertIn("2 corinthians", cfg["aliases"])
+        self.assertIn("corinto", cfg["ambient_places"])
+        self.assertIn("damasco", cfg["ambient_places"])
+        self.assertIn("macedonia", cfg["ambient_places"])
+
+    def test_global_canonical_id_reference_integrity_2corinthians(self) -> None:
+        """Verifica consistencia de IDs y referencias en 2 Corintios."""
+        if not self.corinthians2_questions:
+            self.skipTest("2corinthians-master-input.json no disponible")
+        for qid, q in self.corinthians2_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_2corinthians_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de 2 Corintios."""
+        if not self.corinthians2_questions:
+            self.skipTest("2corinthians-master-input.json no disponible")
+        self.assertEqual(len(self.corinthians2_questions), 65)
+        
+        # 5 preguntas por capítulo
+        ch_counts = collections.Counter(q["chapter"] for q in self.corinthians2_questions.values())
+        self.assertEqual(len(ch_counts), 13)
+        for ch in range(1, 14):
+            self.assertEqual(ch_counts[ch], 5, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 5")
+
+        # Dificultad: Básico=13, Intermedio=21, Avanzado=25, Experto=6
+        diff_counts = collections.Counter(q["difficulty"] for q in self.corinthians2_questions.values())
+        self.assertEqual(diff_counts["Básico"], 13)
+        self.assertEqual(diff_counts["Intermedio"], 21)
+        self.assertEqual(diff_counts["Avanzado"], 25)
+        self.assertEqual(diff_counts["Experto"], 6)
+
+        # Tipos: 53 MC, 12 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.corinthians2_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 53)
+        self.assertEqual(type_counts["TRUE_FALSE"], 12)
+
+    def test_2corinthians_additional_references(self) -> None:
+        """Verifica las 10 preguntas con 11 referencias adicionales en 2 Corintios."""
+        if not self.corinthians2_questions:
+            self.skipTest("2corinthians-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-2CO-0012": ["Jeremías 31:31-34"],
+            "NQB-NT-2CO-0013": ["Éxodo 34:29-35"],
+            "NQB-NT-2CO-0019": ["Salmos 116:10"],
+            "NQB-NT-2CO-0026": ["Isaías 49:8"],
+            "NQB-NT-2CO-0030": ["Levítico 26:12", "Ezequiel 37:27"],
+            "NQB-NT-2CO-0039": ["Éxodo 16:18"],
+            "NQB-NT-2CO-0043": ["Salmos 112:9"],
+            "NQB-NT-2CO-0050": ["Jeremías 9:24"],
+            "NQB-NT-2CO-0051": ["Génesis 3:1-5"],
+            "NQB-NT-2CO-0061": ["Deuteronomio 19:15"]
+        }
+        found_add_refs = {}
+        for qid, q in self.corinthians2_questions.items():
+            refs = q.get("additional_references", [])
+            if refs:
+                found_add_refs[qid] = refs
+
+        self.assertEqual(len(found_add_refs), 10)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 11)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_2corinthians_modes_and_categories(self) -> None:
+        """Verifica la asignación de modos y categorías sin categorías de Jesús en 2 Corintios."""
+        if not self.corinthians2_questions:
+            self.skipTest("2corinthians-master-input.json no disponible")
+        for qid, q in self.corinthians2_questions.items():
             cat = q.get("category")
             self.assertIn(cat, {"NT_GENERAL", "PERSONAJES_BIBLICOS"})
             self.assertNotIn(cat, {"JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"})

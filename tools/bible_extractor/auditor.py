@@ -892,6 +892,24 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "asia", "troas", "tróade", "filipos", "atenas", "cencrea", "roma", "desierto", "mar rojo"
         },
     },
+    "2corinthians": {
+        "canonical_name": "2 Corintios",
+        "api_name": "2 Corintios",
+        "aliases": {
+            "2 corintios", "2corintios", "2 corinthians", "2corinthians", "2 cor", "2cor",
+            "segunda corintios", "segunda de corintios", "segunda carta a los corintios", "ii corintios"
+        },
+        "total_chapters": 13,
+        "blocks": [
+            (1, 7, "2corinthians-01-07.json"),
+            (8, 13, "2corinthians-08-13.json"),
+        ],
+        "default_output_dir": "build/audit/2corinthians",
+        "ambient_places": {
+            "corinto", "macedonia", "acaya", "troas", "tróade", "damasco", "efeso", "éfeso",
+            "judea", "jerusalen", "jerusalén", "asia"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -1038,6 +1056,7 @@ BIBLE_PERSONAJES = {
     "filologo", "filólogo", "julia", "nereo", "olimpas", "tercio", "gayo", "erasto", "cuarto",
     "lucio", "sosipater", "sosípater", "adan", "adán", "cristo",
     "cefas", "estefanas", "estéfanas", "cloe", "fortunato", "acaico",
+    "silvano", "eva", "aretas", "belial", "satanas", "satanás", "abrahan", "abrahán",
     "lazaro", "lázaro", "marta", "cleofas", "cornelio", "saulo", "bernice", "agripa", "felix", "félix",
     "gamaliel", "tito", "silas", "apolos", "aquila", "áquila", "priscila", "filemon", "filemón", "onesimo", "onésimo",
     # Otros comunes
