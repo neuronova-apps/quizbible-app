@@ -85,6 +85,7 @@ MATTHEW_PATH = Path(__file__).parent / "matthew-master-input.json"
 MARK_PATH = Path(__file__).parent / "mark-master-input.json"
 LUKE_PATH = Path(__file__).parent / "luke-master-input.json"
 JOHN_PATH = Path(__file__).parent / "john-master-input.json"
+ACTS_PATH = Path(__file__).parent / "acts-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -344,6 +345,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.john_questions = {q["id"]: q for q in (raw_joh.get("questions", []) if isinstance(raw_joh, dict) else raw_joh)}
         else:
             cls.john_questions = {}
+
+        if ACTS_PATH.exists():
+            raw_act = json.loads(ACTS_PATH.read_text(encoding="utf-8"))
+            cls.acts_questions = {q["id"]: q for q in (raw_act.get("questions", []) if isinstance(raw_act, dict) else raw_act)}
+        else:
+            cls.acts_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -4488,6 +4495,145 @@ class TestAuditorCanonical(unittest.TestCase):
         self.assertNotEqual(res["controles_superados"]["control_rango_suficiente"], "FAIL")
         self.assertNotEqual(res["estado"], "REQUIERE_CORRECCION")
         self.assertEqual(res["incidencias"], [])
+
+    # --- PRUEBAS ESPECÍFICAS DE HECHOS ---
+
+    def get_acts_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.acts_questions, f"ID '{qid}' no encontrado en acts-master-input.json")
+        return copy.deepcopy(self.acts_questions[qid])
+
+    def test_detect_book_key_acts(self) -> None:
+        """Verifica detección de book_key para Hechos y sus variantes."""
+        spec_act = {"questions": [{"id": "NQB-NT-HEC-0001", "book": "Hechos"}]}
+        self.assertEqual(detect_book_key(spec_act), "acts")
+
+        spec_alias = {"questions": [{"id": "NQB-NT-HEC-0001", "book": "hechos"}]}
+        self.assertEqual(detect_book_key(spec_alias), "acts")
+
+        spec_en = {"questions": [{"id": "NQB-NT-HEC-0001", "book": "Acts"}]}
+        self.assertEqual(detect_book_key(spec_en), "acts")
+
+        spec_hch = {"questions": [{"id": "NQB-NT-HEC-0001", "book": "hch"}]}
+        self.assertEqual(detect_book_key(spec_hch), "acts")
+
+        spec_libro = {"questions": [{"id": "NQB-NT-HEC-0001", "book": "Hechos de los Apóstoles"}]}
+        self.assertEqual(detect_book_key(spec_libro), "acts")
+
+    def test_acts_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de Hechos en BOOK_CONFIGS."""
+        self.assertIn("acts", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["acts"]
+        self.assertEqual(cfg["canonical_name"], "Hechos")
+        self.assertEqual(cfg["api_name"], "Hechos")
+        self.assertEqual(cfg["total_chapters"], 28)
+        self.assertEqual(len(cfg["blocks"]), 3)
+        self.assertIn("hechos", cfg["aliases"])
+        self.assertIn("acts", cfg["aliases"])
+        self.assertIn("hch", cfg["aliases"])
+        self.assertIn("jerusalen", cfg["ambient_places"])
+        self.assertIn("antioquia", cfg["ambient_places"])
+        self.assertIn("roma", cfg["ambient_places"])
+
+    def test_global_canonical_id_reference_integrity_acts(self) -> None:
+        """Verifica consistencia de IDs y referencias en Hechos."""
+        if not self.acts_questions:
+            self.skipTest("acts-master-input.json no disponible")
+        for qid, q in self.acts_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_acts_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de Hechos."""
+        if not self.acts_questions:
+            self.skipTest("acts-master-input.json no disponible")
+        self.assertEqual(len(self.acts_questions), 112)
+        
+        # 4 preguntas por capítulo
+        ch_counts = collections.Counter(q["chapter"] for q in self.acts_questions.values())
+        self.assertEqual(len(ch_counts), 28)
+        for ch in range(1, 29):
+            self.assertEqual(ch_counts[ch], 4, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 4")
+
+        # Dificultad: Básico=26, Intermedio=52, Avanzado=26, Experto=8
+        diff_counts = collections.Counter(q["difficulty"] for q in self.acts_questions.values())
+        self.assertEqual(diff_counts["Básico"], 26)
+        self.assertEqual(diff_counts["Intermedio"], 52)
+        self.assertEqual(diff_counts["Avanzado"], 26)
+        self.assertEqual(diff_counts["Experto"], 8)
+
+        # Tipos: 103 MC, 9 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.acts_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 103)
+        self.assertEqual(type_counts["TRUE_FALSE"], 9)
+
+    def test_acts_additional_references(self) -> None:
+        """Verifica las 11 preguntas con 14 referencias adicionales en Hechos."""
+        if not self.acts_questions:
+            self.skipTest("acts-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-HEC-0004": ["Salmos 69:25", "Salmos 109:8"],
+            "NQB-NT-HEC-0006": ["Joel 2:28-32"],
+            "NQB-NT-HEC-0012": ["Deuteronomio 18:15-19"],
+            "NQB-NT-HEC-0013": ["Salmos 118:22"],
+            "NQB-NT-HEC-0026": ["Éxodo 2:14"],
+            "NQB-NT-HEC-0027": ["Isaías 66:1-2"],
+            "NQB-NT-HEC-0031": ["Isaías 53:7-8"],
+            "NQB-NT-HEC-0051": ["Salmos 2:7", "Isaías 55:3", "Salmos 16:10"],
+            "NQB-NT-HEC-0059": ["Amós 9:11-12"],
+            "NQB-NT-HEC-0068": ["Isaías 42:5"],
+            "NQB-NT-HEC-0112": ["Isaías 6:9-10"]
+        }
+        found_add_refs = {}
+        for qid, q in self.acts_questions.items():
+            refs = q.get("additional_references", [])
+            if refs:
+                found_add_refs[qid] = refs
+
+        self.assertEqual(len(found_add_refs), 11)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 14)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_acts_modes_and_categories(self) -> None:
+        """Verifica la asignación de modos y categorías sin categorías de Jesús en Hechos."""
+        if not self.acts_questions:
+            self.skipTest("acts-master-input.json no disponible")
+        for qid, q in self.acts_questions.items():
+            cat = q.get("category")
+            self.assertIn(cat, {"NT_GENERAL", "PERSONAJES_BIBLICOS"})
+            self.assertNotIn(cat, {"JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"})
+            modes = q.get("eligible_modes", [])
+            self.assertIn("NT", modes)
+            self.assertIn("AMBOS", modes)
+            if cat == "PERSONAJES_BIBLICOS":
+                self.assertIn("PERSONAJES_NT", modes)
+                self.assertIn("PERSONAJES_AMBOS", modes)
+            if q.get("question_type") == "TRUE_FALSE":
+                self.assertIn("VERDADERO_FALSO_NT", modes)
+                self.assertIn("VERDADERO_FALSO_AMBOS", modes)
+
+    def test_acts_implicit_speaker_speech_resolution(self) -> None:
+        """Verifica resolución retrospectiva del orador en discursos apostólicos de Hechos."""
+        # Discurso de Esteban en Hechos 7
+        vmap_esteban = {
+            2: "Y Esteban dijo: Varones hermanos y padres, oíd: El Dios de la gloria apareció a nuestro padre Abraham...",
+            44: "Tuvieron nuestros padres el tabernáculo del testimonio en el desierto...",
+            51: "¡Duros de cerviz, e incircuncisos de corazón y de oídos! Vosotros resistís siempre al Espíritu Santo; como vuestros padres, así también vosotros.",
+            52: "¿A cuál de los profetas no persiguieron vuestros padres? Y mataron a los que anunciaron de antemano la venida del Justo, de quien vosotros ahora habéis sido entregadores y matadores;",
+            53: "vosotros que recibisteis la ley por disposición de ángeles, y no la guardasteis."
+        }
+        res_esteban = resolve_implicit_speaker(
+            "esteban", "tuvieron nuestros padres el tabernaculo del testimonio y nos dieron la ley",
+            vmap_esteban, 51, ["Esteban"], book_key="acts", category="PERSONAJES_BIBLICOS"
+        )
+        self.assertTrue(res_esteban)
 
 
 if __name__ == "__main__":

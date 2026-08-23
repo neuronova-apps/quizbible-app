@@ -829,6 +829,33 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "desierto", "pretorio", "gabbata", "gábata", "enon", "enón", "salim"
         },
     },
+    "acts": {
+        "canonical_name": "Hechos",
+        "api_name": "Hechos",
+        "aliases": {
+            "hechos", "acts", "hch", "libro de hechos", "hechos de los apostoles", "hechos de los apóstoles", "los hechos"
+        },
+        "total_chapters": 28,
+        "blocks": [
+            (1, 9, "acts-01-09.json"),
+            (10, 19, "acts-10-19.json"),
+            (20, 28, "acts-20-28.json"),
+        ],
+        "default_output_dir": "build/audit/acts",
+        "ambient_places": {
+            "jerusalen", "jerusalén", "judea", "samaria", "galilea", "antioquia", "antioquía", "damasco", "tarso",
+            "cesarea", "jope", "lida", "saron", "sarón", "chipre", "salamina", "pafos", "perge", "panfilia", "panfília",
+            "pisidia", "antioquia de pisidia", "iconio", "listra", "derbe", "licaonia", "galacia", "frigia", "misia",
+            "troas", "tróade", "samotracia", "neapolis", "neápolis", "filipos", "anfipolis", "anfípolis", "apolonia",
+            "tesalonica", "tesalónica", "berea", "atenas", "corinto", "cencrea", "efeso", "éfeso", "macedonia",
+            "acaya", "mileto", "rodas", "patara", "fenicia", "tiro", "ptolemaida", "ason", "asón", "mitilene",
+            "quio", "quío", "samos", "trogilio", "cos", "creta", "buenos puertos", "lasea", "fenice", "clauda",
+            "cauda", "adramitio", "alejandria", "alejandría", "sirte", "malta", "melita", "siracusa", "regio",
+            "puteoli", "foro de apio", "tres tabernas", "roma", "italia", "espana", "españa", "cilicia", "egipto",
+            "cirene", "asia", "bitinia", "ponto", "capadocia", "areopago", "areópago", "pretorio", "templo",
+            "sinagoga", "carcel", "cárcel", "mar", "mar adriatico", "mar adriático", "monte de los olivos", "cedron", "cedrón"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -954,7 +981,7 @@ BIBLE_PERSONAJES = {
     "zacarias", "zacarías", "berequias", "berequías", "ido", "iddó", "iddo", "satanas", "satanás", "serezer", "regem-melec", "regemmelec", "heldai", "tobias", "tobías", "jedaias", "jedaías", "hen",
     # Malaquías
     "malaquias", "malaquías", "elias", "elías",
-    # Mateo, Marcos, Lucas, Juan y Nuevo Testamento
+    # Mateo, Marcos, Lucas, Juan, Hechos y Nuevo Testamento
     "herodes", "herodías", "herodias", "pilato", "poncio pilato", "barrabas", "barrabás", "caifas", "caifás",
     "anas", "anás", "jose", "josé", "maria", "maría", "maria magdalena", "maría magdalena", "salome", "salomé",
     "juan el bautista", "juan bautista", "andres", "andrés", "jacobo", "felipe", "bartolome", "bartolomé",
@@ -964,6 +991,11 @@ BIBLE_PERSONAJES = {
     "teofilo", "teófilo", "gabriel", "simeon", "simeón", "ana", "augusto", "cirenio", "tiberio", "lisanias",
     "juana", "chuza", "susana", "zaqueo", "moises", "moisés",
     "nicodemo", "natanael", "malco",
+    "matias", "matías", "bernabe", "bernabé", "ananias", "ananías", "safira", "tabita", "dorcas",
+    "agabo", "roda", "juan marcos", "sergio paulo", "elimas", "barjesus", "barjesús",
+    "lidia", "carcelero", "jason", "jasón", "dionisio", "damaris", "dámaris", "crispo", "sostenes", "sóstenes",
+    "galion", "galión", "sceva", "esceva", "demetrio", "eutico", "tiquico", "tíquico", "trofimo", "trófimo",
+    "claudio lisias", "drusila", "festo", "berenice", "tertulo", "tértulo", "julio", "publio",
     "lazaro", "lázaro", "marta", "cleofas", "cornelio", "saulo", "bernice", "agripa", "felix", "félix",
     "gamaliel", "tito", "silas", "apolos", "aquila", "áquila", "priscila", "filemon", "filemón", "onesimo", "onésimo",
     # Otros comunes
@@ -1204,18 +1236,35 @@ def resolve_implicit_speaker(
     norm_entity = normalize(entity_name).strip()
     norm_chars = {normalize(c).strip() for c in (characters or [])}
 
-    # 1. Comprobar versículos anteriores presentes en verse_map (hasta 20 versículos antes en el mismo capítulo)
+    # 1. Comprobar versículos anteriores presentes en verse_map desde el inicio del capítulo
+    # Busca retrospectivamente el orador explícito más reciente introducido en el capítulo
     candidate_speakers = set()
-    for v_num in range(max(1, start_verse - 20), start_verse):
+    for v_num in range(start_verse - 1, 0, -1):
         if v_num not in verse_map:
             continue
         v_norm = normalize(verse_map[v_num])
         v_words = set(v_norm.split())
 
+        speakers_in_v = set()
         for p in BIBLE_PERSONAJES:
             if p in v_words:
-                if any(verb in v_words for verb in SPEECH_PRAYER_VERBS) or "diciendo" in v_words or "oracion" in v_words:
-                    candidate_speakers.add(p)
+                speech_patterns = (
+                    [f"{p} {v}" for v in SPEECH_PRAYER_VERBS] +
+                    [f"{v} {p}" for v in SPEECH_PRAYER_VERBS] +
+                    [
+                        f"{p} les dijo", f"{p} le dijo", f"{p} pues dijo", f"{p} entonces dijo",
+                        f"{p} respondiendo", f"{p} diciendo", f"{p} extendiendo la mano",
+                        f"{p} comenzo su defensa", f"{p} comenzo a hablar", f"{p} tomo la palabra"
+                    ]
+                )
+                if any(pat in v_norm for pat in speech_patterns):
+                    speakers_in_v.add(p)
+                elif any(verb in v_words for verb in SPEECH_PRAYER_VERBS) or "diciendo" in v_words or "oracion" in v_words or "defensa" in v_words:
+                    if norm_chars and p in norm_chars:
+                        speakers_in_v.add(p)
+        if speakers_in_v:
+            candidate_speakers = speakers_in_v
+            break
 
     if candidate_speakers == {norm_entity}:
         return True

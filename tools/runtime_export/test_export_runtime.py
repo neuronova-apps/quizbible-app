@@ -477,6 +477,22 @@ class TestRuntimeExport(unittest.TestCase):
         correct_text = next(opt["text"] for opt in res["options"] if opt["id"] == res["correctOptionId"])
         self.assertEqual(correct_text, "Falso")
 
+    def test_export_acts_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de Hechos al formato runtime."""
+        act_path = REPO_ROOT / "tools" / "bible_extractor" / "acts-master-input.json"
+        if not act_path.exists():
+            self.skipTest("acts-master-input.json no encontrado")
+        raw_act = json.loads(act_path.read_text(encoding="utf-8"))
+        act_qs = raw_act.get("questions", raw_act)
+        status_map = {q["id"]: "VERIFIED" for q in act_qs}
+
+        collection = export_canonical_data(act_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 112)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Hechos")
+        self.assertTrue(validate_runtime_collection(collection))
+
 
 if __name__ == "__main__":
     unittest.main()
