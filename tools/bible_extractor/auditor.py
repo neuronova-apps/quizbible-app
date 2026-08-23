@@ -547,6 +547,23 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "susa", "elam", "rio ulai", "río ulai", "rio hidekel", "río hidekel", "egipto", "siria"
         },
     },
+    "hosea": {
+        "canonical_name": "Oseas",
+        "api_name": "Oseas",
+        "aliases": {
+            "oseas", "hosea", "os", "libro de oseas"
+        },
+        "total_chapters": 14,
+        "blocks": [
+            (1, 14, "hosea-01-14.json"),
+        ],
+        "default_output_dir": "build/audit/hosea",
+        "ambient_places": {
+            "israel", "efrain", "efraín", "juda", "judá", "jerusalen", "jerusalén", "jezreel", "bet-aven", "betaven", "guilgal", "gilgal",
+            "mizpa", "tabor", "gabaa", "rama", "ramá", "samaria", "asiria", "egipto", "betel", "bet-el", "valle de acor", "acor",
+            "siquem", "adma", "zeboim", "galad", "galaad", "peniel", "líbano", "libano"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -648,6 +665,8 @@ BIBLE_PERSONAJES = {
     "ezequiel",
     # Daniel
     "daniel", "sadrac", "mesac", "abed-nego", "abednego", "belsasar", "beltsasar", "aspenaz", "arioc", "gabriel", "miguel",
+    # Oseas
+    "oseas", "gomer", "jezreel", "lo-ruhama", "loruhama", "lo-ammi", "loammi", "diblaiam", "beeri",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",

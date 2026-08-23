@@ -68,6 +68,7 @@ JEREMIAH_PATH = Path(__file__).parent / "jeremiah-master-input.json"
 LAMENTATIONS_PATH = Path(__file__).parent / "lamentations-master-input.json"
 EZEKIEL_PATH = Path(__file__).parent / "ezekiel-master-input.json"
 DANIEL_PATH = Path(__file__).parent / "daniel-master-input.json"
+HOSEA_PATH = Path(__file__).parent / "hosea-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -232,6 +233,12 @@ class TestAuditorCanonical(unittest.TestCase):
         else:
             cls.daniel_questions = {}
 
+        if HOSEA_PATH.exists():
+            raw_hos = json.loads(HOSEA_PATH.read_text(encoding="utf-8"))
+            cls.hosea_questions = {q["id"]: q for q in (raw_hos.get("questions", []) if isinstance(raw_hos, dict) else raw_hos)}
+        else:
+            cls.hosea_questions = {}
+
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
 
@@ -345,6 +352,10 @@ class TestAuditorCanonical(unittest.TestCase):
     def get_daniel_question(self, qid: str) -> dict:
         self.assertIn(qid, self.daniel_questions, f"ID '{qid}' no encontrado en daniel-master-input.json")
         return copy.deepcopy(self.daniel_questions[qid])
+
+    def get_hosea_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.hosea_questions, f"ID '{qid}' no encontrado en hosea-master-input.json")
+        return copy.deepcopy(self.hosea_questions[qid])
 
     # --- TEST GLOBAL DE CONSISTENCIA DE IDs Y REFERENCIAS ---
 
@@ -2671,6 +2682,89 @@ class TestAuditorCanonical(unittest.TestCase):
         self.assertEqual(char_counts["Darío"], 4)
         self.assertEqual(char_counts["Gabriel"], 2)
         self.assertEqual(char_counts["Miguel"], 2)
+
+    # --- TESTS PARA OSEAS ---
+
+    def test_detect_book_key_hosea(self) -> None:
+        """Verifica la detección automática de clave para Oseas."""
+        spec_hos = {"questions": [{"id": "NQB-AT-OSE-0001", "book": "Oseas"}]}
+        self.assertEqual(detect_book_key(spec_hos), "hosea")
+
+        spec_alias = {"questions": [{"id": "NQB-AT-OSE-0001", "book": "oseas"}]}
+        self.assertEqual(detect_book_key(spec_alias), "hosea")
+
+        spec_en = {"questions": [{"id": "NQB-AT-OSE-0001", "book": "Hosea"}]}
+        self.assertEqual(detect_book_key(spec_en), "hosea")
+
+        spec_libro = {"questions": [{"id": "NQB-AT-OSE-0001", "book": "Libro de Oseas"}]}
+        self.assertEqual(detect_book_key(spec_libro), "hosea")
+
+    def test_hosea_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Oseas: 14 capítulos, 1 bloque."""
+        self.assertIn("hosea", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["hosea"]
+        self.assertEqual(cfg["canonical_name"], "Oseas")
+        self.assertEqual(cfg["api_name"], "Oseas")
+        self.assertEqual(cfg["total_chapters"], 14)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertEqual(cfg["blocks"][0], (1, 14, "hosea-01-14.json"))
+        self.assertTrue({"oseas", "hosea", "os"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_hosea(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Oseas (50 preguntas, 14/14 capítulos cubiertos, distribución exacta, 42 AT_GENERAL, 8 PERSONAJES_BIBLICOS, 4 con additional_refs, 7 totales)."""
+        if not self.hosea_questions:
+            self.skipTest("hosea-master-input.json no disponible")
+        self.assertEqual(len(self.hosea_questions), 50)
+        chapter_counts = {}
+        personajes_count = 0
+        general_count = 0
+        all_chars = []
+        questions_with_add_refs = 0
+        total_add_refs = 0
+        for qid, q in self.hosea_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 14, f"Capítulo {ch} fuera del rango 1..14 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+            self.assertEqual(q.get("question_type"), "MULTIPLE_CHOICE")
+
+            all_chars.extend(q.get("characters", []))
+
+            cat = q.get("category")
+            if cat == "PERSONAJES_BIBLICOS":
+                personajes_count += 1
+                self.assertGreater(len(q.get("characters", [])), 0, f"Pregunta de personajes sin characters en {qid}")
+            elif cat == "AT_GENERAL":
+                general_count += 1
+
+            add_refs = q.get("additional_references", [])
+            if len(add_refs) > 0:
+                questions_with_add_refs += 1
+                total_add_refs += len(add_refs)
+
+        expected_dist = {1: 5, 2: 5, 3: 4, 4: 4, 5: 3, 6: 4, 7: 3, 8: 3, 9: 3, 10: 3, 11: 4, 12: 3, 13: 3, 14: 3}
+        self.assertEqual(chapter_counts, expected_dist)
+        self.assertEqual(personajes_count, 8, f"Se esperaban 8 preguntas de PERSONAJES_BIBLICOS, halladas {personajes_count}")
+        self.assertEqual(general_count, 42, f"Se esperaban 42 preguntas de AT_GENERAL, halladas {general_count}")
+        self.assertEqual(questions_with_add_refs, 4, f"Se esperaban 4 preguntas con additional_references, halladas {questions_with_add_refs}")
+        self.assertEqual(total_add_refs, 7, f"Se esperaban 7 referencias adicionales en total, halladas {total_add_refs}")
+
+        char_counts = collections.Counter(all_chars)
+        self.assertEqual(char_counts["Oseas"], 8)
+        self.assertEqual(char_counts["Gomer"], 1)
+        self.assertEqual(char_counts["Jezreel"], 1)
+        self.assertEqual(char_counts["Lo-ruhama"], 1)
+        self.assertEqual(char_counts["Lo-ammi"], 1)
 
 
 if __name__ == "__main__":
