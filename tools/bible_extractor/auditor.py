@@ -809,6 +809,26 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "calvario", "arimatea", "templo", "casa", "sinagoga", "desierto", "mar", "pretorio", "posada", "siloe", "siloé"
         },
     },
+    "john": {
+        "canonical_name": "Juan",
+        "api_name": "Juan",
+        "aliases": {
+            "juan", "john", "jn", "libro de juan", "evangelio de juan", "evangelio segun san juan", "san juan"
+        },
+        "total_chapters": 21,
+        "blocks": [
+            (1, 10, "john-01-10.json"),
+            (11, 21, "john-11-21.json"),
+        ],
+        "default_output_dir": "build/audit/john",
+        "ambient_places": {
+            "judea", "jerusalen", "jerusalén", "galilea", "jordan", "jordán", "betania", "cana", "caná",
+            "capernaum", "capernaúm", "samaria", "sicar", "siloe", "siloé", "betesda", "tiberias",
+            "mar de tiberias", "mar de galilea", "mar", "efrain", "efraín", "cedron", "cedrón", "getsemani",
+            "getsemaní", "huerto", "golgota", "gólgota", "calvario", "arimatea", "templo", "casa", "sinagoga",
+            "desierto", "pretorio", "gabbata", "gábata", "enon", "enón", "salim"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -934,7 +954,7 @@ BIBLE_PERSONAJES = {
     "zacarias", "zacarías", "berequias", "berequías", "ido", "iddó", "iddo", "satanas", "satanás", "serezer", "regem-melec", "regemmelec", "heldai", "tobias", "tobías", "jedaias", "jedaías", "hen",
     # Malaquías
     "malaquias", "malaquías", "elias", "elías",
-    # Mateo, Marcos, Lucas y Nuevo Testamento
+    # Mateo, Marcos, Lucas, Juan y Nuevo Testamento
     "herodes", "herodías", "herodias", "pilato", "poncio pilato", "barrabas", "barrabás", "caifas", "caifás",
     "anas", "anás", "jose", "josé", "maria", "maría", "maria magdalena", "maría magdalena", "salome", "salomé",
     "juan el bautista", "juan bautista", "andres", "andrés", "jacobo", "felipe", "bartolome", "bartolomé",
@@ -943,6 +963,7 @@ BIBLE_PERSONAJES = {
     "alejandro", "rufo", "simon de cirene", "simon el leproso", "jose de arimatea", "boanerges",
     "teofilo", "teófilo", "gabriel", "simeon", "simeón", "ana", "augusto", "cirenio", "tiberio", "lisanias",
     "juana", "chuza", "susana", "zaqueo", "moises", "moisés",
+    "nicodemo", "natanael", "malco",
     "lazaro", "lázaro", "marta", "cleofas", "cornelio", "saulo", "bernice", "agripa", "felix", "félix",
     "gamaliel", "tito", "silas", "apolos", "aquila", "áquila", "priscila", "filemon", "filemón", "onesimo", "onésimo",
     # Otros comunes

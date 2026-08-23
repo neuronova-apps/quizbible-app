@@ -430,6 +430,53 @@ class TestRuntimeExport(unittest.TestCase):
             self.assertEqual(q["book"], "Lucas")
         self.assertTrue(validate_runtime_collection(collection))
 
+    def test_john_testament_nt_and_runtime_export(self) -> None:
+        """Verifica que las preguntas de Juan produzcan testament=NT y validen contra el schema."""
+        joh_path = self.extractor_dir / "john-master-input.json"
+        if not joh_path.exists():
+            self.skipTest("john-master-input.json no disponible")
+        raw = json.loads(joh_path.read_text(encoding="utf-8"))
+        joh_qs = raw.get("questions", raw) if isinstance(raw, dict) else raw
+        status_map = {q["id"]: "VERIFIED" for q in joh_qs}
+
+        collection = export_canonical_data(joh_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 100)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Juan")
+        self.assertTrue(validate_runtime_collection(collection))
+
+    def test_true_false_inverted_options_runtime_export(self) -> None:
+        """Verifica que TRUE_FALSE con opcion_a='Falso' y opcion_b='Verdadero' se exporte preservando el texto de A y B."""
+        q_tf = {
+            "id": "NQB-NT-JUA-0009",
+            "book": "Juan",
+            "chapter": 2,
+            "verse_start": 1,
+            "verse_end": 12,
+            "reference": "Juan 2:1-12",
+            "category": "JESUS_MILAGROS",
+            "difficulty": "Básico",
+            "question_type": "TRUE_FALSE",
+            "question": "¿El primer milagro de Jesús fue la multiplicación de los panes?",
+            "opcion_a": "Falso",
+            "opcion_b": "Verdadero",
+            "opcion_c": "",
+            "opcion_d": "",
+            "correct_option": "A",
+            "correct_answer": "Falso",
+            "explanation": "El primer milagro fue convertir agua en vino en Caná."
+        }
+        res = export_question_to_runtime(q_tf, audit_status="VERIFIED")
+        self.assertEqual(res["questionType"], "TRUE_FALSE")
+        self.assertEqual(len(res["options"]), 2)
+        self.assertEqual(res["options"][0], {"id": "A", "text": "Falso"})
+        self.assertEqual(res["options"][1], {"id": "B", "text": "Verdadero"})
+        self.assertEqual(res["correctOptionId"], "A")
+        # Verificar que la opción A contiene el texto esperado "Falso"
+        correct_text = next(opt["text"] for opt in res["options"] if opt["id"] == res["correctOptionId"])
+        self.assertEqual(correct_text, "Falso")
+
 
 if __name__ == "__main__":
     unittest.main()

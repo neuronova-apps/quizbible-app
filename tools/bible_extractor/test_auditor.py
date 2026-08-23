@@ -84,6 +84,7 @@ MALACHI_PATH = Path(__file__).parent / "malachi-master-input.json"
 MATTHEW_PATH = Path(__file__).parent / "matthew-master-input.json"
 MARK_PATH = Path(__file__).parent / "mark-master-input.json"
 LUKE_PATH = Path(__file__).parent / "luke-master-input.json"
+JOHN_PATH = Path(__file__).parent / "john-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -337,6 +338,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.luke_questions = {q["id"]: q for q in (raw_luk.get("questions", []) if isinstance(raw_luk, dict) else raw_luk)}
         else:
             cls.luke_questions = {}
+
+        if JOHN_PATH.exists():
+            raw_joh = json.loads(JOHN_PATH.read_text(encoding="utf-8"))
+            cls.john_questions = {q["id"]: q for q in (raw_joh.get("questions", []) if isinstance(raw_joh, dict) else raw_joh)}
+        else:
+            cls.john_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -4220,6 +4227,180 @@ class TestAuditorCanonical(unittest.TestCase):
         self.assertEqual(res["controles_superados"]["control_rango_suficiente"], "PASS")
         self.assertEqual(res["estado"], "VERIFICADO")
         self.assertEqual(res["incidencias"], [])
+
+    def get_john_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.john_questions, f"ID '{qid}' no encontrado en john-master-input.json")
+        return copy.deepcopy(self.john_questions[qid])
+
+    def test_detect_book_key_john(self) -> None:
+        """Verifica detección de book_key para Juan y sus variantes."""
+        spec_joh = {"questions": [{"id": "NQB-NT-JUA-0001", "book": "Juan"}]}
+        self.assertEqual(detect_book_key(spec_joh), "john")
+
+        spec_alias = {"questions": [{"id": "NQB-NT-JUA-0001", "book": "juan"}]}
+        self.assertEqual(detect_book_key(spec_alias), "john")
+
+        spec_en = {"questions": [{"id": "NQB-NT-JUA-0001", "book": "John"}]}
+        self.assertEqual(detect_book_key(spec_en), "john")
+
+        spec_jn = {"questions": [{"id": "NQB-NT-JUA-0001", "book": "jn"}]}
+        self.assertEqual(detect_book_key(spec_jn), "john")
+
+        spec_libro = {"questions": [{"id": "NQB-NT-JUA-0001", "book": "Evangelio de Juan"}]}
+        self.assertEqual(detect_book_key(spec_libro), "john")
+
+    def test_john_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Juan: 21 capítulos, 2 bloques."""
+        self.assertIn("john", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["john"]
+        self.assertEqual(cfg["canonical_name"], "Juan")
+        self.assertEqual(cfg["api_name"], "Juan")
+        self.assertEqual(cfg["total_chapters"], 21)
+        self.assertEqual(len(cfg["blocks"]), 2)
+        self.assertEqual(cfg["blocks"][0], (1, 10, "john-01-10.json"))
+        self.assertEqual(cfg["blocks"][1], (11, 21, "john-11-21.json"))
+        self.assertTrue({"juan", "john", "jn", "libro de juan", "evangelio de juan"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_john(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Juan (100 preguntas, 21/21 capítulos cubiertos, 92 MULTIPLE_CHOICE, 8 TRUE_FALSE, 10 con additional_refs, 16 totales)."""
+        if not self.john_questions:
+            self.skipTest("john-master-input.json no disponible")
+        self.assertEqual(len(self.john_questions), 100)
+        chapter_counts = {}
+        category_counts = collections.Counter()
+        type_counts = collections.Counter()
+        difficulty_counts = collections.Counter()
+        questions_with_add_refs = 0
+        total_add_refs = 0
+        all_chars = []
+
+        expected_add_refs_map = {
+            "NQB-NT-JUA-0007": ["Salmos 69:9"],
+            "NQB-NT-JUA-0011": ["Números 21:8-9"],
+            "NQB-NT-JUA-0026": ["Éxodo 16:4-15"],
+            "NQB-NT-JUA-0047": ["Salmos 82:6"],
+            "NQB-NT-JUA-0056": ["Zacarías 9:9", "Salmos 118:25-26"],
+            "NQB-NT-JUA-0059": ["Isaías 53:1", "Isaías 6:10"],
+            "NQB-NT-JUA-0061": ["Salmos 41:9"],
+            "NQB-NT-JUA-0072": ["Salmos 35:19", "Salmos 69:4"],
+            "NQB-NT-JUA-0087": ["Salmos 22:18"],
+            "NQB-NT-JUA-0089": ["Éxodo 12:46", "Números 9:12", "Salmos 34:20", "Zacarías 12:10"],
+        }
+
+        for qid, q in self.john_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 21, f"Capítulo {ch} fuera del rango 1..21 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            corr_opt = q.get("correct_option")
+            corr_ans = q.get("correct_answer")
+            if corr_opt == "A":
+                self.assertEqual(corr_ans, q.get("opcion_a"))
+            elif corr_opt == "B":
+                self.assertEqual(corr_ans, q.get("opcion_b"))
+
+            q_type = q.get("question_type", "MULTIPLE_CHOICE")
+            type_counts[q_type] += 1
+
+            if q_type == "MULTIPLE_CHOICE":
+                self.assertEqual(corr_opt, "A")
+                for opt in ["opcion_a", "opcion_b", "opcion_c", "opcion_d"]:
+                    self.assertTrue(bool(str(q.get(opt, "")).strip()), f"Opción {opt} vacía en {qid}")
+            elif q_type == "TRUE_FALSE":
+                self.assertTrue(bool(str(q.get("opcion_a", "")).strip()), f"Opción A vacía en {qid}")
+                self.assertTrue(bool(str(q.get("opcion_b", "")).strip()), f"Opción B vacía en {qid}")
+                self.assertEqual(str(q.get("opcion_c", "")).strip(), "", f"Opción C no vacía en TRUE_FALSE {qid}")
+                self.assertEqual(str(q.get("opcion_d", "")).strip(), "", f"Opción D no vacía en TRUE_FALSE {qid}")
+
+            cat = q.get("category")
+            category_counts[cat] += 1
+            if cat == "PERSONAJES_BIBLICOS":
+                self.assertGreater(len(q.get("characters", [])), 0, f"Pregunta de personajes sin characters en {qid}")
+
+            diff = q.get("difficulty")
+            difficulty_counts[diff] += 1
+
+            all_chars.extend(q.get("characters", []))
+
+            add_refs = q.get("additional_references", [])
+            if len(add_refs) > 0:
+                questions_with_add_refs += 1
+                total_add_refs += len(add_refs)
+                self.assertIn(qid, expected_add_refs_map)
+                self.assertEqual(add_refs, expected_add_refs_map[qid])
+
+        expected_ch_dist = {
+            1: 5, 2: 4, 3: 5, 4: 5, 5: 4, 6: 6, 7: 4, 8: 6, 9: 4, 10: 5,
+            11: 6, 12: 5, 13: 5, 14: 5, 15: 4, 16: 4, 17: 4, 18: 4, 19: 5, 20: 5, 21: 5
+        }
+        self.assertEqual(chapter_counts, expected_ch_dist)
+        self.assertEqual(type_counts, {"MULTIPLE_CHOICE": 92, "TRUE_FALSE": 8})
+        self.assertEqual(difficulty_counts, {"Básico": 23, "Intermedio": 39, "Avanzado": 29, "Experto": 9})
+        self.assertEqual(dict(category_counts), {
+            "NT_GENERAL": 7,
+            "PERSONAJES_BIBLICOS": 35,
+            "JESUS_PALABRAS": 50,
+            "JESUS_MILAGROS": 8
+        })
+        self.assertEqual(category_counts.get("JESUS_PARABOLAS", 0), 0)
+        self.assertEqual(questions_with_add_refs, 10)
+        self.assertEqual(total_add_refs, 16)
+
+    def test_true_false_inverted_options_order(self) -> None:
+        """Verifica que TRUE_FALSE con opcion_a='Falso' y opcion_b='Verdadero' funcione correctamente sin forzar A='Verdadero'."""
+        q_tf_inv = {
+            "id": "NQB-NT-JUA-TEST-TF",
+            "book": "Juan",
+            "chapter": 10,
+            "verse_start": 40,
+            "verse_end": 42,
+            "reference": "Juan 10:40-42",
+            "category": "NT_GENERAL",
+            "difficulty": "Intermedio",
+            "question_type": "TRUE_FALSE",
+            "question": "Indica si es verdadero o falso que Juan realizó más señales milagrosas que Jesús",
+            "opcion_a": "Falso",
+            "opcion_b": "Verdadero",
+            "opcion_c": "",
+            "opcion_d": "",
+            "correct_option": "A",
+            "correct_answer": "Falso",
+            "explanation": "Juan no hizo señales según el texto."
+        }
+        verse_map = {
+            40: "Y se fue de nuevo al otro lado del Jordán, al lugar donde primero había estado bautizando Juan; y se quedó allí.",
+            41: "Y muchos venían a él, y decían: Juan, a la verdad, ninguna señal hizo; pero todo lo que Juan dijo de éste, era verdad.",
+            42: "Y muchos creyeron en él allí."
+        }
+        res = evaluate_question(q_tf_inv, verse_map, book_key="john")
+        self.assertEqual(res["controles_superados"]["control_distractores_invalidos"], "PASS")
+        self.assertEqual(res["controles_superados"]["control_sin_ambiguedad"], "PASS")
+        self.assertEqual(res["controles_superados"]["control_nombres_propios"], "PASS")
+
+    def test_is_narrative_source_attribution_john_specific(self) -> None:
+        """Verifica los casos específicos de Juan: atribución narrativa vs Juan el Bautista participante."""
+        # 1. "Juan narra que..." -> atribución
+        self.assertTrue(is_narrative_source_attribution("juan", "Juan narra que Jesús llegó a Samaria"))
+
+        # 2. "Juan explica que..." -> atribución
+        self.assertTrue(is_narrative_source_attribution("juan", "Juan explica que esto sucedió en Betania"))
+
+        # 3. "Juan no hizo señales..." (Juan el Bautista participante) -> NO es atribución narrativa
+        self.assertFalse(is_narrative_source_attribution("juan", "Juan no hizo señales según decían los testigos"))
+
+        # 4. "Juan el Bautista..." -> personaje
+        self.assertFalse(is_narrative_source_attribution("juan", "Juan el Bautista dio testimonio del Cordero de Dios"))
+
+        # 5. "el evangelio de Juan..." -> fuente documental
+        self.assertTrue(is_narrative_source_attribution("juan", "En el evangelio de Juan encontramos siete señales"))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,3121 @@
+{
+  "source": "Quiz Bible master bank - Juan",
+  "version": "RVR1960",
+  "book": "Juan",
+  "total_questions": 100,
+  "questions": [
+    {
+      "id": "NQB-NT-JUA-0001",
+      "book": "Juan",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Juan 1:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Prólogo e identidad del Verbo",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo presenta la apertura del evangelio la relación del Verbo con Dios y con la creación?",
+      "opcion_a": "El Verbo estaba con Dios, era Dios y participó en la creación",
+      "opcion_b": "El Verbo comenzó a existir después de la creación",
+      "opcion_c": "El Verbo era solo un mensajero humano",
+      "opcion_d": "El Verbo aparece como una criatura angelical",
+      "correct_option": "A",
+      "correct_answer": "El Verbo estaba con Dios, era Dios y participó en la creación",
+      "explanation": "El prólogo sitúa al Verbo antes de todas las cosas y lo relaciona directamente con Dios y con la creación. La formulación sostiene la identidad elevada de Jesús sin reducir el pasaje a una explicación filosófica ajena al texto.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0002",
+      "book": "Juan",
+      "chapter": 1,
+      "verse_start": 6,
+      "verse_end": 8,
+      "reference": "Juan 1:6-8",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Testimonio de Juan",
+      "characters": [
+        "Juan el Bautista",
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función cumple Juan en relación con la luz que aparece en el relato?",
+      "opcion_a": "Dar testimonio de la luz para que otros crean",
+      "opcion_b": "Reemplazar a la luz",
+      "opcion_c": "Ocultar la identidad de Jesús",
+      "opcion_d": "Fundar una dinastía sacerdotal",
+      "correct_option": "A",
+      "correct_answer": "Dar testimonio de la luz para que otros crean",
+      "explanation": "Juan es presentado como testigo y no como la luz misma. Su función es orientar a otros hacia aquel de quien da testimonio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0003",
+      "book": "Juan",
+      "chapter": 1,
+      "verse_start": 14,
+      "verse_end": 18,
+      "reference": "Juan 1:14-18",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Encarnación y revelación",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué afirma el prólogo que ocurrió con el Verbo al entrar en la historia humana?",
+      "opcion_a": "Se hizo carne y habitó entre los seres humanos",
+      "opcion_b": "Se convirtió únicamente en una visión",
+      "opcion_c": "Abandonó toda relación con Dios",
+      "opcion_d": "Permaneció inaccesible y sin contacto humano",
+      "correct_option": "A",
+      "correct_answer": "Se hizo carne y habitó entre los seres humanos",
+      "explanation": "El prólogo afirma que el Verbo se hizo carne y habitó entre nosotros. La frase subraya una entrada real en la condición humana y no una apariencia distante.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0004",
+      "book": "Juan",
+      "chapter": 1,
+      "verse_start": 29,
+      "verse_end": 34,
+      "reference": "Juan 1:29-34",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Testimonio sobre Jesús",
+      "characters": [
+        "Juan el Bautista",
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Con qué imagen identifica Juan a Jesús al verlo acercarse?",
+      "opcion_a": "Como el Cordero de Dios que quita el pecado del mundo",
+      "opcion_b": "Como un sacerdote del templo",
+      "opcion_c": "Como un rey militar de Roma",
+      "opcion_d": "Como un escriba de Jerusalén",
+      "correct_option": "A",
+      "correct_answer": "Como el Cordero de Dios que quita el pecado del mundo",
+      "explanation": "Juan utiliza la imagen del Cordero de Dios para interpretar la misión de Jesús. El título conecta su identidad con el problema del pecado sin autorizar lecturas violentas contra personas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0005",
+      "book": "Juan",
+      "chapter": 1,
+      "verse_start": 45,
+      "verse_end": 51,
+      "reference": "Juan 1:45-51",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Encuentro con Natanael",
+      "characters": [
+        "Felipe",
+        "Natanael",
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cambio ocurre en Natanael después de su encuentro con Jesús?",
+      "opcion_a": "Pasa de la duda inicial a confesar una identidad elevada de Jesús",
+      "opcion_b": "Decide denunciar a Felipe ante las autoridades",
+      "opcion_c": "Se niega a volver a hablar con Jesús",
+      "opcion_d": "Pide ser nombrado sacerdote",
+      "correct_option": "A",
+      "correct_answer": "Pasa de la duda inicial a confesar una identidad elevada de Jesús",
+      "explanation": "Natanael comienza con una objeción sobre Nazaret, pero el encuentro lo lleva a reconocer a Jesús de manera mucho más profunda. El relato valora un proceso de duda, encuentro y confesión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0006",
+      "book": "Juan",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 11,
+      "reference": "Juan 2:1-11",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Señal en Caná",
+      "characters": [
+        "Jesús",
+        "María",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué transformación constituye la primera señal narrada en una boda?",
+      "opcion_a": "El agua se convierte en vino",
+      "opcion_b": "El pan se convierte en aceite",
+      "opcion_c": "Una tormenta se detiene",
+      "opcion_d": "Una higuera vuelve a florecer",
+      "correct_option": "A",
+      "correct_answer": "El agua se convierte en vino",
+      "explanation": "La señal ocurre en una boda y transforma agua en vino. El evangelio la presenta como manifestación de la gloria de Jesús y como motivo para que sus discípulos crean.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0007",
+      "book": "Juan",
+      "chapter": 2,
+      "verse_start": 13,
+      "verse_end": 17,
+      "reference": "Juan 2:13-17",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Templo y celo",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué preocupación expresa Jesús al intervenir en el área del templo?",
+      "opcion_a": "Que la casa de su Padre no sea convertida en un mercado",
+      "opcion_b": "Que el templo sea transformado en una fortaleza militar",
+      "opcion_c": "Que se elimine toda forma de ofrenda bíblica",
+      "opcion_d": "Que nadie vuelva a reunirse allí",
+      "correct_option": "A",
+      "correct_answer": "Que la casa de su Padre no sea convertida en un mercado",
+      "explanation": "La acción denuncia el uso del espacio sagrado como mercado en esa escena concreta. No funciona como autorización para agredir a comerciantes o personas religiosas en contextos actuales.",
+      "additional_references": [
+        "Salmos 69:9"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0008",
+      "book": "Juan",
+      "chapter": 2,
+      "verse_start": 18,
+      "verse_end": 22,
+      "reference": "Juan 2:18-22",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Templo como cuerpo",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿A qué realidad aplica el narrador la expresión de Jesús sobre levantar el templo después de ser destruido?",
+      "opcion_a": "Al cuerpo de Jesús",
+      "opcion_b": "A una muralla de Jerusalén",
+      "opcion_c": "A un palacio de Herodes",
+      "opcion_d": "A una sinagoga de Galilea",
+      "correct_option": "A",
+      "correct_answer": "Al cuerpo de Jesús",
+      "explanation": "El narrador explica que Jesús hablaba del templo de su cuerpo. Los discípulos comprenden plenamente esa relación después de la resurrección.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0009",
+      "book": "Juan",
+      "chapter": 2,
+      "verse_start": 23,
+      "verse_end": 25,
+      "reference": "Juan 2:23-25",
+      "category": "NT_GENERAL",
+      "subcategory": "Fe basada en señales",
+      "characters": [
+        "Jesús",
+        "multitudes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el evangelio presenta toda reacción producida por señales como prueba automática de discipulado maduro",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "El evangelio introduce cautela: Jesús conoce lo que hay en las personas y no equipara toda reacción ante señales con discipulado maduro. Por eso la afirmación es falsa.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0010",
+      "book": "Juan",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 8,
+      "reference": "Juan 3:1-8",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Nicodemo y nuevo nacimiento",
+      "characters": [
+        "Nicodemo",
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dificultad muestra Nicodemo cuando Jesús habla de nacer de nuevo o de arriba?",
+      "opcion_a": "Interpreta inicialmente la expresión de manera física y literal",
+      "opcion_b": "Piensa que Jesús habla de un viaje a Roma",
+      "opcion_c": "Supone que se trata de cambiar de oficio",
+      "opcion_d": "Cree que se refiere a aprender otra lengua",
+      "correct_option": "A",
+      "correct_answer": "Interpreta inicialmente la expresión de manera física y literal",
+      "explanation": "Nicodemo entiende primero la expresión en sentido físico, mientras Jesús orienta la conversación hacia una realidad producida por el Espíritu. El diálogo usa la incomprensión para profundizar el significado.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0011",
+      "book": "Juan",
+      "chapter": 3,
+      "verse_start": 14,
+      "verse_end": 17,
+      "reference": "Juan 3:14-17",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Serpiente levantada y amor de Dios",
+      "characters": [
+        "Jesús",
+        "Nicodemo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué propósito atribuye el discurso al envío del Hijo al mundo?",
+      "opcion_a": "Salvar y ofrecer vida, no condenar al mundo como finalidad principal",
+      "opcion_b": "Organizar un gobierno político inmediato",
+      "opcion_c": "Eliminar toda dificultad material de los creyentes",
+      "opcion_d": "Separar a Israel de todas las naciones",
+      "correct_option": "A",
+      "correct_answer": "Salvar y ofrecer vida, no condenar al mundo como finalidad principal",
+      "explanation": "El discurso vincula el envío del Hijo con el amor de Dios y la salvación. La comparación con la serpiente levantada remite a una escena antigua de vida recibida en medio de peligro.",
+      "additional_references": [
+        "Números 21:8-9"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0012",
+      "book": "Juan",
+      "chapter": 3,
+      "verse_start": 19,
+      "verse_end": 21,
+      "reference": "Juan 3:19-21",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Luz y obras",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste se establece entre quien evita la luz y quien viene a ella?",
+      "opcion_a": "Uno teme que sus obras sean expuestas y el otro actúa de acuerdo con la verdad",
+      "opcion_b": "Uno pertenece a una nación y el otro a otra",
+      "opcion_c": "Uno es rico y el otro necesariamente pobre",
+      "opcion_d": "Uno conoce griego y el otro solo arameo",
+      "correct_option": "A",
+      "correct_answer": "Uno teme que sus obras sean expuestas y el otro actúa de acuerdo con la verdad",
+      "explanation": "La imagen de luz y oscuridad se relaciona con la respuesta moral a la verdad. No funciona como clasificación étnica, económica o cultural de las personas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0013",
+      "book": "Juan",
+      "chapter": 3,
+      "verse_start": 25,
+      "verse_end": 30,
+      "reference": "Juan 3:25-30",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Juan y el esposo",
+      "characters": [
+        "Juan el Bautista",
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo describe Juan su propia posición cuando sus discípulos observan que otros acuden a Jesús?",
+      "opcion_a": "Se alegra como amigo del esposo y acepta que Jesús crezca mientras él mengua",
+      "opcion_b": "Declara que debe competir por más seguidores",
+      "opcion_c": "Pide que Jesús abandone Judea",
+      "opcion_d": "Afirma que ambos deben recibir exactamente la misma atención",
+      "correct_option": "A",
+      "correct_answer": "Se alegra como amigo del esposo y acepta que Jesús crezca mientras él mengua",
+      "explanation": "Juan no responde con rivalidad, sino con alegría y reconocimiento de la prioridad de Jesús. Su frase sobre crecer y menguar expresa la orientación de su misión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0014",
+      "book": "Juan",
+      "chapter": 3,
+      "verse_start": 31,
+      "verse_end": 36,
+      "reference": "Juan 3:31-36",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "El que viene de arriba",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste sostiene el cierre del discurso entre el que viene de arriba y el testimonio meramente terrenal?",
+      "opcion_a": "El que viene de arriba tiene una autoridad y testimonio que trascienden la perspectiva terrenal",
+      "opcion_b": "Todo conocimiento terrenal carece de cualquier valor",
+      "opcion_c": "Solo los ángeles pueden comunicar verdad",
+      "opcion_d": "Ningún ser humano puede recibir el testimonio",
+      "correct_option": "A",
+      "correct_answer": "El que viene de arriba tiene una autoridad y testimonio que trascienden la perspectiva terrenal",
+      "explanation": "El pasaje eleva el origen y autoridad del enviado de Dios. No exige despreciar el conocimiento humano ni niega la capacidad de recibir y responder al testimonio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0015",
+      "book": "Juan",
+      "chapter": 4,
+      "verse_start": 7,
+      "verse_end": 15,
+      "reference": "Juan 4:7-15",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Mujer samaritana y agua viva",
+      "characters": [
+        "Jesús",
+        "mujer samaritana"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué provoca inicialmente sorpresa en la mujer durante su conversación junto al pozo?",
+      "opcion_a": "Que un judío le pida de beber siendo ella samaritana",
+      "opcion_b": "Que Jesús no conozca la existencia del pozo",
+      "opcion_c": "Que los discípulos estén en Jerusalén",
+      "opcion_d": "Que el agua del pozo esté prohibida para viajeros",
+      "correct_option": "A",
+      "correct_answer": "Que un judío le pida de beber siendo ella samaritana",
+      "explanation": "La sorpresa refleja una frontera social y religiosa real entre judíos y samaritanos en el relato. La conversación cruza esa frontera sin convertir a ninguno de los pueblos en una categoría moral inferior.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0016",
+      "book": "Juan",
+      "chapter": 4,
+      "verse_start": 21,
+      "verse_end": 24,
+      "reference": "Juan 4:21-24",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Adoración en espíritu y verdad",
+      "characters": [
+        "Jesús",
+        "mujer samaritana"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cambio de enfoque plantea Jesús cuando la conversación gira hacia el lugar correcto de adoración?",
+      "opcion_a": "La adoración verdadera se define por espíritu y verdad, no por competir únicamente entre dos montes",
+      "opcion_b": "La adoración queda limitada para siempre a un solo edificio",
+      "opcion_c": "La geografía deja de tener cualquier significado histórico",
+      "opcion_d": "Solo una etnia puede dirigirse a Dios",
+      "correct_option": "A",
+      "correct_answer": "La adoración verdadera se define por espíritu y verdad, no por competir únicamente entre dos montes",
+      "explanation": "Jesús desplaza la discusión desde una rivalidad exclusiva de lugares hacia la calidad de la adoración. El pasaje no niega la historia de los lugares ni justifica desprecio hacia comunidades religiosas actuales.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0017",
+      "book": "Juan",
+      "chapter": 4,
+      "verse_start": 25,
+      "verse_end": 26,
+      "reference": "Juan 4:25-26",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Revelación mesiánica",
+      "characters": [
+        "Jesús",
+        "mujer samaritana"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hace Jesús cuando la mujer expresa su esperanza en la llegada del Mesías?",
+      "opcion_a": "Se identifica abiertamente como aquel que habla con ella",
+      "opcion_b": "Evita responder y abandona el lugar",
+      "opcion_c": "Le dice que el Mesías ya murió",
+      "opcion_d": "Afirma que Juan el Bautista es el Mesías",
+      "correct_option": "A",
+      "correct_answer": "Se identifica abiertamente como aquel que habla con ella",
+      "explanation": "La conversación culmina con una revelación directa de identidad. Es uno de los encuentros personales más claros del evangelio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0018",
+      "book": "Juan",
+      "chapter": 4,
+      "verse_start": 31,
+      "verse_end": 38,
+      "reference": "Juan 4:31-38",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Cosecha y misión",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Jesús usa la imagen de una cosecha ya preparada para enseñar sobre la misión",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "Jesús habla de campos listos para la cosecha como imagen de una obra misionera ya preparada. La comparación no autoriza tratar a las personas como objetos de conquista.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0019",
+      "book": "Juan",
+      "chapter": 4,
+      "verse_start": 46,
+      "verse_end": 54,
+      "reference": "Juan 4:46-54",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Hijo del oficial",
+      "characters": [
+        "Jesús",
+        "oficial real",
+        "hijo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué rasgo destaca en la curación del hijo de un oficial?",
+      "opcion_a": "La recuperación ocurre a distancia después de la palabra de Jesús",
+      "opcion_b": "Jesús viaja inmediatamente hasta la casa y realiza una cirugía",
+      "opcion_c": "El muchacho es trasladado al templo",
+      "opcion_d": "El oficial compra un remedio de los discípulos",
+      "correct_option": "A",
+      "correct_answer": "La recuperación ocurre a distancia después de la palabra de Jesús",
+      "explanation": "El relato subraya que la palabra de Jesús precede a la confirmación de la recuperación. Como narración de una señal, no sustituye evaluación ni atención médica en situaciones actuales.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0020",
+      "book": "Juan",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 9,
+      "reference": "Juan 5:1-9",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Sanidad junto al estanque",
+      "characters": [
+        "Jesús",
+        "hombre enfermo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué instrucción recibe el hombre que llevaba mucho tiempo enfermo después de que Jesús se dirige a él?",
+      "opcion_a": "Levantarse, tomar su lecho y andar",
+      "opcion_b": "Permanecer inmóvil durante cuarenta días",
+      "opcion_c": "Viajar a Galilea antes de moverse",
+      "opcion_d": "Entregar dinero a los sacerdotes",
+      "correct_option": "A",
+      "correct_answer": "Levantarse, tomar su lecho y andar",
+      "explanation": "La escena presenta una recuperación inmediata ordenada por Jesús. La RVR1960 incluye además una explicación tradicional sobre el movimiento del agua cuya historia manuscrita debe conservarse como nota textual.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0021",
+      "book": "Juan",
+      "chapter": 5,
+      "verse_start": 16,
+      "verse_end": 18,
+      "reference": "Juan 5:16-18",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Obra en sábado y relación con el Padre",
+      "characters": [
+        "Jesús",
+        "opositores"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué aspecto intensifica la controversia después de la sanidad realizada en sábado?",
+      "opcion_a": "Jesús habla de Dios como su Padre de una manera entendida como igualdad con Dios",
+      "opcion_b": "Jesús anuncia que abandonará toda actividad en sábado",
+      "opcion_c": "Los discípulos destruyen una sinagoga",
+      "opcion_d": "El hombre sanado exige un cargo religioso",
+      "correct_option": "A",
+      "correct_answer": "Jesús habla de Dios como su Padre de una manera entendida como igualdad con Dios",
+      "explanation": "La controversia no se limita al sábado, sino que se amplía por la manera en que Jesús habla de su relación con el Padre. El relato presenta el conflicto entre actores concretos y no como condena general del judaísmo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0022",
+      "book": "Juan",
+      "chapter": 5,
+      "verse_start": 19,
+      "verse_end": 29,
+      "reference": "Juan 5:19-29",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Autoridad del Hijo",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos funciones atribuye el discurso al Hijo en relación con la vida y el juicio?",
+      "opcion_a": "Dar vida y ejercer juicio conforme a la autoridad recibida del Padre",
+      "opcion_b": "Controlar impuestos y fronteras imperiales",
+      "opcion_c": "Dirigir sacrificios levíticos y censos",
+      "opcion_d": "Administrar únicamente la pesca de Galilea",
+      "correct_option": "A",
+      "correct_answer": "Dar vida y ejercer juicio conforme a la autoridad recibida del Padre",
+      "explanation": "El discurso vincula al Hijo con la obra vivificadora y judicial del Padre. Se trata de una afirmación cristológica, no de una autorización para que seguidores individuales juzguen coercitivamente a otros.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0023",
+      "book": "Juan",
+      "chapter": 5,
+      "verse_start": 31,
+      "verse_end": 47,
+      "reference": "Juan 5:31-47",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Testimonios sobre Jesús",
+      "characters": [
+        "Jesús",
+        "Juan",
+        "Moisés"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué conjunto de testimonios menciona Jesús para mostrar que su identidad no descansa en una afirmación aislada sobre sí mismo?",
+      "opcion_a": "Juan, sus obras, el Padre y las Escrituras asociadas con Moisés",
+      "opcion_b": "Pilato, Herodes, César y los soldados",
+      "opcion_c": "Solo la opinión de sus hermanos",
+      "opcion_d": "Únicamente la reacción de las multitudes",
+      "correct_option": "A",
+      "correct_answer": "Juan, sus obras, el Padre y las Escrituras asociadas con Moisés",
+      "explanation": "El discurso reúne diversos testigos que convergen en la identidad y misión de Jesús. La referencia a Moisés forma parte de una argumentación dentro de las Escrituras de Israel y no autoriza desprecio hacia lectores judíos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0024",
+      "book": "Juan",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 13,
+      "reference": "Juan 6:1-13",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Alimentación de la multitud",
+      "characters": [
+        "Jesús",
+        "Felipe",
+        "Andrés",
+        "muchacho",
+        "multitud"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué recurso concreto aporta un muchacho antes de que la multitud sea alimentada?",
+      "opcion_a": "Cinco panes de cebada y dos peces",
+      "opcion_b": "Siete panes de trigo y un cordero",
+      "opcion_c": "Doce panes y doce peces",
+      "opcion_d": "Una cesta de higos y aceite",
+      "correct_option": "A",
+      "correct_answer": "Cinco panes de cebada y dos peces",
+      "explanation": "Juan destaca que un muchacho dispone de cinco panes de cebada y dos peces. La señal multiplica un recurso pequeño hasta alimentar a la multitud.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0025",
+      "book": "Juan",
+      "chapter": 6,
+      "verse_start": 16,
+      "verse_end": 21,
+      "reference": "Juan 6:16-21",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Jesús sobre el mar",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ocurre mientras los discípulos cruzan el mar con fuerte viento?",
+      "opcion_a": "Ven a Jesús caminando sobre el mar y acercándose a la barca",
+      "opcion_b": "La barca se transforma en otra embarcación",
+      "opcion_c": "Un ángel conduce el timón",
+      "opcion_d": "Los discípulos regresan a pie por la orilla",
+      "correct_option": "A",
+      "correct_answer": "Ven a Jesús caminando sobre el mar y acercándose a la barca",
+      "explanation": "La escena presenta a Jesús acercándose sobre el mar y diciendo a los discípulos que no teman. El relato funciona como señal de identidad y autoridad, no como instrucción para imitar físicamente el acto.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0026",
+      "book": "Juan",
+      "chapter": 6,
+      "verse_start": 26,
+      "verse_end": 35,
+      "reference": "Juan 6:26-35",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Pan de vida",
+      "characters": [
+        "Jesús",
+        "multitud"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo reorienta Jesús a quienes lo buscan después de haber comido?",
+      "opcion_a": "Les señala un alimento que permanece para vida eterna y se presenta como pan de vida",
+      "opcion_b": "Les ordena almacenar pan para varios años",
+      "opcion_c": "Les prohíbe volver a comer alimentos ordinarios",
+      "opcion_d": "Les manda fundar una panadería comunitaria",
+      "correct_option": "A",
+      "correct_answer": "Les señala un alimento que permanece para vida eterna y se presenta como pan de vida",
+      "explanation": "Jesús contrasta la satisfacción inmediata con el alimento que permanece para vida eterna y se identifica como pan de vida. La imagen es teológica y no una pauta dietética.",
+      "additional_references": [
+        "Éxodo 16:4-15"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0027",
+      "book": "Juan",
+      "chapter": 6,
+      "verse_start": 48,
+      "verse_end": 58,
+      "reference": "Juan 6:48-58",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Carne, sangre y vida",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función cumple el lenguaje de comer la carne y beber la sangre del Hijo del Hombre dentro del discurso?",
+      "opcion_a": "Expresar una participación radical en la vida que Jesús ofrece",
+      "opcion_b": "Dar instrucciones de canibalismo literal",
+      "opcion_c": "Establecer una dieta médica obligatoria",
+      "opcion_d": "Describir una práctica militar antigua",
+      "correct_option": "A",
+      "correct_answer": "Expresar una participación radical en la vida que Jesús ofrece",
+      "explanation": "El lenguaje es deliberadamente intenso y vincula la vida con recibir a Jesús de manera profunda. Las tradiciones cristianas interpretan su relación sacramental de formas distintas, por lo que el banco no impone una única explicación confesional.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0028",
+      "book": "Juan",
+      "chapter": 6,
+      "verse_start": 60,
+      "verse_end": 66,
+      "reference": "Juan 6:60-66",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Discípulos que se retiran",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ocurre con muchos discípulos después de considerar difícil la enseñanza que han escuchado?",
+      "opcion_a": "Dejan de andar con Jesús",
+      "opcion_b": "Son nombrados líderes de las doce tribus",
+      "opcion_c": "Viajan inmediatamente a Roma",
+      "opcion_d": "Piden que Jesús repita la multiplicación",
+      "correct_option": "A",
+      "correct_answer": "Dejan de andar con Jesús",
+      "explanation": "El evangelio reconoce una reacción de rechazo entre personas que hasta entonces seguían a Jesús. El discipulado aparece como una decisión real y no como adhesión automática.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0029",
+      "book": "Juan",
+      "chapter": 6,
+      "verse_start": 67,
+      "verse_end": 71,
+      "reference": "Juan 6:67-71",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Confesión de Pedro y mención de Judas",
+      "characters": [
+        "Jesús",
+        "Pedro",
+        "Judas",
+        "los doce"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué responde Pedro cuando Jesús pregunta a los doce si también quieren irse?",
+      "opcion_a": "Afirma que Jesús tiene palabras de vida eterna",
+      "opcion_b": "Pide regresar a su oficio sin hablar más",
+      "opcion_c": "Dice que Juan el Bautista tiene mayor autoridad",
+      "opcion_d": "Propone elegir otro maestro",
+      "correct_option": "A",
+      "correct_answer": "Afirma que Jesús tiene palabras de vida eterna",
+      "explanation": "Pedro responde que no ve otro destino equivalente porque reconoce en Jesús palabras de vida eterna. El cierre añade una nota de tensión al mencionar que uno de los doce lo entregaría.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0030",
+      "book": "Juan",
+      "chapter": 7,
+      "verse_start": 1,
+      "verse_end": 9,
+      "reference": "Juan 7:1-9",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Hermanos de Jesús",
+      "characters": [
+        "Jesús",
+        "hermanos de Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste muestra el relato entre la propuesta de los hermanos de Jesús y la respuesta que él les da?",
+      "opcion_a": "Ellos buscan una manifestación pública y Jesús afirma que su tiempo aún no ha llegado",
+      "opcion_b": "Ellos le piden ocultarse y Jesús exige publicidad inmediata",
+      "opcion_c": "Ellos creen plenamente y Jesús niega conocerlos",
+      "opcion_d": "Ellos le ordenan ir a Roma y Jesús acepta",
+      "correct_option": "A",
+      "correct_answer": "Ellos buscan una manifestación pública y Jesús afirma que su tiempo aún no ha llegado",
+      "explanation": "Los hermanos sugieren una exposición pública de sus obras, pero el narrador señala que aún no creen en él. Jesús responde desde la conciencia de su propio tiempo y misión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0031",
+      "book": "Juan",
+      "chapter": 7,
+      "verse_start": 14,
+      "verse_end": 18,
+      "reference": "Juan 7:14-18",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Origen de la enseñanza",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué criterio ofrece Jesús para discernir el origen de su enseñanza?",
+      "opcion_a": "Quien quiera hacer la voluntad de Dios podrá reconocer si la enseñanza procede de Dios",
+      "opcion_b": "La enseñanza es verdadera solo si obtiene apoyo político",
+      "opcion_c": "Basta con que sea popular entre la multitud",
+      "opcion_d": "Su validez depende del lugar donde se pronuncia",
+      "correct_option": "A",
+      "correct_answer": "Quien quiera hacer la voluntad de Dios podrá reconocer si la enseñanza procede de Dios",
+      "explanation": "Jesús relaciona discernimiento y disposición a hacer la voluntad de Dios. No convierte popularidad, poder político o geografía en criterio de verdad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0032",
+      "book": "Juan",
+      "chapter": 7,
+      "verse_start": 37,
+      "verse_end": 39,
+      "reference": "Juan 7:37-39",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Agua viva y Espíritu",
+      "characters": [
+        "Jesús",
+        "creyentes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el narrador relaciona las corrientes de agua viva con el Espíritu que recibirían los creyentes",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "El propio narrador interpreta el agua viva en relación con el Espíritu. Por eso la afirmación es verdadera y no debe leerse como predicción hidráulica.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0033",
+      "book": "Juan",
+      "chapter": 7,
+      "verse_start": 45,
+      "verse_end": 52,
+      "reference": "Juan 7:45-52",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Nicodemo y procedimiento justo",
+      "characters": [
+        "Nicodemo",
+        "principales sacerdotes",
+        "fariseos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio plantea Nicodemo cuando otros dirigentes desean condenar a Jesús?",
+      "opcion_a": "Que la ley no juzga a una persona sin escucharla y conocer lo que ha hecho",
+      "opcion_b": "Que toda acusación debe aceptarse sin investigación",
+      "opcion_c": "Que solo los romanos pueden escuchar testigos",
+      "opcion_d": "Que la opinión de la mayoría reemplaza cualquier procedimiento",
+      "correct_option": "A",
+      "correct_answer": "Que la ley no juzga a una persona sin escucharla y conocer lo que ha hecho",
+      "explanation": "Nicodemo introduce una objeción procedimental antes de juzgar a alguien. La escena muestra diversidad interna entre dirigentes judíos y evita tratarlos como un bloque uniforme.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0034",
+      "book": "Juan",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end": 11,
+      "reference": "Juan 8:1-11",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Mujer acusada y respuesta de Jesús",
+      "characters": [
+        "Jesús",
+        "mujer acusada",
+        "escribas",
+        "fariseos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación caracteriza la respuesta de Jesús hacia la mujer llevada ante él por sus acusadores?",
+      "opcion_a": "Evita la condena inmediata y la llama a dejar el pecado",
+      "opcion_b": "Aprueba que la multitud la castigue sin examen",
+      "opcion_c": "Ignora por completo la dimensión moral de la situación",
+      "opcion_d": "La obliga a convertirse en discípula de un acusador",
+      "correct_option": "A",
+      "correct_answer": "Evita la condena inmediata y la llama a dejar el pecado",
+      "explanation": "La escena combina protección frente a una condena instrumentalizada con un llamado a una vida distinta. La RVR1960 incluye este relato, aunque su ubicación posee una historia manuscrita discutida que debe conservarse en la auditoría.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0035",
+      "book": "Juan",
+      "chapter": 8,
+      "verse_start": 12,
+      "verse_end": 20,
+      "reference": "Juan 8:12-20",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Luz del mundo y testimonio",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué promete Jesús a quien lo sigue cuando se presenta como la luz del mundo?",
+      "opcion_a": "No andar en tinieblas, sino tener la luz de la vida",
+      "opcion_b": "No experimentar nunca cansancio físico",
+      "opcion_c": "Recibir riqueza inmediata",
+      "opcion_d": "Conocer automáticamente todos los secretos humanos",
+      "correct_option": "A",
+      "correct_answer": "No andar en tinieblas, sino tener la luz de la vida",
+      "explanation": "La imagen de la luz expresa orientación y vida vinculadas con seguir a Jesús. No es una garantía de ausencia de dificultades materiales o emocionales.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0036",
+      "book": "Juan",
+      "chapter": 8,
+      "verse_start": 21,
+      "verse_end": 30,
+      "reference": "Juan 8:21-30",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Procedencia y levantamiento del Hijo",
+      "characters": [
+        "Jesús",
+        "interlocutores"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué afirma Jesús que permitirá reconocer algo decisivo acerca de su identidad?",
+      "opcion_a": "Que cuando el Hijo del Hombre sea levantado comprenderán quién es y que actúa según el Padre",
+      "opcion_b": "Que una victoria militar probará su identidad",
+      "opcion_c": "Que un cargo sacerdotal lo confirmará",
+      "opcion_d": "Que una elección política lo legitimará",
+      "correct_option": "A",
+      "correct_answer": "Que cuando el Hijo del Hombre sea levantado comprenderán quién es y que actúa según el Padre",
+      "explanation": "El discurso relaciona el ser levantado con el reconocimiento de la identidad y obediencia de Jesús al Padre. En Juan, esta expresión anticipa la cruz y su significado, no una exaltación política.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0037",
+      "book": "Juan",
+      "chapter": 8,
+      "verse_start": 31,
+      "verse_end": 36,
+      "reference": "Juan 8:31-36",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Verdad y libertad",
+      "characters": [
+        "Jesús",
+        "creyentes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué relación establece Jesús entre permanecer en su palabra, conocer la verdad y ser libre?",
+      "opcion_a": "El discipulado perseverante conduce al conocimiento de la verdad que libera",
+      "opcion_b": "La libertad depende únicamente de cambiar de gobierno",
+      "opcion_c": "La verdad se alcanza evitando toda comunidad",
+      "opcion_d": "La libertad significa no tener responsabilidades morales",
+      "correct_option": "A",
+      "correct_answer": "El discipulado perseverante conduce al conocimiento de la verdad que libera",
+      "explanation": "La libertad del pasaje se vincula con verdad, discipulado y liberación del pecado. No debe reducirse a un eslogan político desconectado del contexto.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0038",
+      "book": "Juan",
+      "chapter": 8,
+      "verse_start": 39,
+      "verse_end": 47,
+      "reference": "Juan 8:39-47",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Paternidad espiritual y conducta",
+      "characters": [
+        "Jesús",
+        "interlocutores"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué criterio usa Jesús para cuestionar una apelación meramente genealógica a Abraham como padre?",
+      "opcion_a": "La conducta debe corresponder a las obras y disposición asociadas con Abraham",
+      "opcion_b": "La genealogía nunca tiene importancia en ningún contexto",
+      "opcion_c": "Solo la riqueza demuestra parentesco espiritual",
+      "opcion_d": "La pertenencia étnica determina automáticamente el carácter moral",
+      "correct_option": "A",
+      "correct_answer": "La conducta debe corresponder a las obras y disposición asociadas con Abraham",
+      "explanation": "El argumento confronta una contradicción entre una reivindicación de filiación y la conducta presente. No autoriza convertir a descendientes de Abraham ni al pueblo judío en una categoría moral negativa.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0039",
+      "book": "Juan",
+      "chapter": 8,
+      "verse_start": 48,
+      "verse_end": 59,
+      "reference": "Juan 8:48-59",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Existencia anterior a Abraham",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué afirmación de Jesús provoca una reacción extrema al final de la discusión sobre Abraham?",
+      "opcion_a": "Declara una existencia anterior a Abraham con una expresión de identidad extraordinaria",
+      "opcion_b": "Dice que Abraham nunca existió",
+      "opcion_c": "Afirma que él mismo construyó el templo de Salomón",
+      "opcion_d": "Declara que es mayor que el Padre",
+      "correct_option": "A",
+      "correct_answer": "Declara una existencia anterior a Abraham con una expresión de identidad extraordinaria",
+      "explanation": "Jesús formula su relación temporal e identitaria de manera que excede una simple precedencia cronológica humana. El pasaje es central para la cristología del evangelio y debe explicarse sin usarlo para hostigar a interlocutores judíos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0040",
+      "book": "Juan",
+      "chapter": 9,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Juan 9:1-5",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Ceguera de nacimiento y culpa",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "hombre ciego"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué corrige Jesús cuando sus discípulos preguntan quién pecó para que un hombre naciera ciego?",
+      "opcion_a": "Rechaza atribuir automáticamente su condición al pecado personal de él o de sus padres",
+      "opcion_b": "Confirma que toda discapacidad es castigo directo",
+      "opcion_c": "Afirma que sus padres deben ser expulsados",
+      "opcion_d": "Dice que no existe ninguna dimensión espiritual en la vida humana",
+      "correct_option": "A",
+      "correct_answer": "Rechaza atribuir automáticamente su condición al pecado personal de él o de sus padres",
+      "explanation": "Jesús rechaza el esquema que convierte la discapacidad del hombre en prueba automática de culpa personal o familiar. El pasaje no justifica culpabilizar a personas con discapacidad por su condición.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0041",
+      "book": "Juan",
+      "chapter": 9,
+      "verse_start": 6,
+      "verse_end": 12,
+      "reference": "Juan 9:6-12",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Sanidad del hombre ciego",
+      "characters": [
+        "Jesús",
+        "hombre ciego"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿A qué estanque es enviado el hombre después de que Jesús pone lodo sobre sus ojos?",
+      "opcion_a": "Siloé",
+      "opcion_b": "Betesda",
+      "opcion_c": "Gabaón",
+      "opcion_d": "Cedrón",
+      "correct_option": "A",
+      "correct_answer": "Siloé",
+      "explanation": "El hombre es enviado a lavarse en Siloé y regresa viendo. La narración describe una señal concreta y no prescribe el uso de lodo o saliva como tratamiento médico.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0042",
+      "book": "Juan",
+      "chapter": 9,
+      "verse_start": 18,
+      "verse_end": 23,
+      "reference": "Juan 9:18-23",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Padres del hombre sanado",
+      "characters": [
+        "Padres",
+        "hombre sanado",
+        "autoridades"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué los padres del hombre sanado responden con cautela sobre cómo llegó a ver?",
+      "opcion_a": "Temen ser expulsados de la sinagoga si confiesan a Jesús como el Cristo",
+      "opcion_b": "No reconocen a su propio hijo",
+      "opcion_c": "Quieren recibir una recompensa económica",
+      "opcion_d": "Han olvidado cómo nació",
+      "correct_option": "A",
+      "correct_answer": "Temen ser expulsados de la sinagoga si confiesan a Jesús como el Cristo",
+      "explanation": "El narrador explica su cautela por temor a consecuencias comunitarias. La escena debe leerse dentro de tensiones del relato y no como justificación para excluir o perseguir comunidades religiosas actuales.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0043",
+      "book": "Juan",
+      "chapter": 9,
+      "verse_start": 35,
+      "verse_end": 41,
+      "reference": "Juan 9:35-41",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Confesión y ceguera espiritual",
+      "characters": [
+        "Jesús",
+        "hombre sanado",
+        "fariseos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste final construye el relato entre el hombre que recibió la vista y quienes aseguran ver?",
+      "opcion_a": "El hombre avanza hacia la fe mientras la autosuficiencia puede revelar ceguera espiritual",
+      "opcion_b": "La discapacidad física demuestra siempre falta de fe",
+      "opcion_c": "Todo fariseo es descrito como incapaz de creer",
+      "opcion_d": "La visión física garantiza automáticamente comprensión espiritual",
+      "correct_option": "A",
+      "correct_answer": "El hombre avanza hacia la fe mientras la autosuficiencia puede revelar ceguera espiritual",
+      "explanation": "El capítulo transforma el tema de la vista en una reflexión sobre reconocimiento espiritual. No equipara discapacidad con inferioridad moral ni generaliza la crítica a todos los fariseos o judíos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0044",
+      "book": "Juan",
+      "chapter": 10,
+      "verse_start": 1,
+      "verse_end": 10,
+      "reference": "Juan 10:1-10",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Puerta y pastor",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos imágenes usa Jesús para describir su relación con las ovejas y el acceso a la vida?",
+      "opcion_a": "La puerta y el pastor",
+      "opcion_b": "La espada y el trono",
+      "opcion_c": "El templo y el altar",
+      "opcion_d": "El juez y el soldado",
+      "correct_option": "A",
+      "correct_answer": "La puerta y el pastor",
+      "explanation": "Jesús utiliza las imágenes de puerta y pastor para hablar de acceso, cuidado y vida abundante. Son metáforas pastoriles, no instrucciones sobre control autoritario de personas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0045",
+      "book": "Juan",
+      "chapter": 10,
+      "verse_start": 11,
+      "verse_end": 18,
+      "reference": "Juan 10:11-18",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Buen pastor",
+      "characters": [
+        "Jesús"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué distingue al buen pastor del asalariado cuando aparece el peligro?",
+      "opcion_a": "El buen pastor da su vida por las ovejas",
+      "opcion_b": "El buen pastor abandona primero el rebaño",
+      "opcion_c": "El asalariado conoce mejor a cada oveja",
+      "opcion_d": "El buen pastor vende el rebaño",
+      "correct_option": "A",
+      "correct_answer": "El buen pastor da su vida por las ovejas",
+      "explanation": "La imagen destaca la entrega del buen pastor frente al abandono del asalariado. La comparación define el liderazgo por cuidado y sacrificio, no por dominio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0046",
+      "book": "Juan",
+      "chapter": 10,
+      "verse_start": 22,
+      "verse_end": 30,
+      "reference": "Juan 10:22-30",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Seguridad de las ovejas",
+      "characters": [
+        "Jesús",
+        "creyentes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué relación describe Jesús entre sus ovejas y su voz?",
+      "opcion_a": "Ellas oyen su voz, él las conoce y lo siguen",
+      "opcion_b": "Ellas obedecen a cualquier voz religiosa",
+      "opcion_c": "Solo lo siguen si reciben beneficios materiales",
+      "opcion_d": "No necesitan conocer al pastor",
+      "correct_option": "A",
+      "correct_answer": "Ellas oyen su voz, él las conoce y lo siguen",
+      "explanation": "El pasaje une escucha, conocimiento y seguimiento. La seguridad expresada se fundamenta en la acción del Hijo y del Padre, no en coerción ejercida por líderes humanos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0047",
+      "book": "Juan",
+      "chapter": 10,
+      "verse_start": 31,
+      "verse_end": 39,
+      "reference": "Juan 10:31-39",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Respuesta a acusación de blasfemia",
+      "characters": [
+        "Jesús",
+        "interlocutores"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué texto de las Escrituras cita Jesús al responder a una acusación de blasfemia?",
+      "opcion_a": "Un salmo que utiliza el término dioses para ciertos destinatarios humanos",
+      "opcion_b": "El relato del diluvio",
+      "opcion_c": "La genealogía de David",
+      "opcion_d": "La visión de Ezequiel sobre el templo",
+      "correct_option": "A",
+      "correct_answer": "Un salmo que utiliza el término dioses para ciertos destinatarios humanos",
+      "explanation": "Jesús apela a un salmo para mostrar que el uso del lenguaje debe leerse dentro de las propias Escrituras. El argumento no convierte a seres humanos en dioses ni resuelve por sí solo toda la cristología del pasaje.",
+      "additional_references": [
+        "Salmos 82:6"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0048",
+      "book": "Juan",
+      "chapter": 10,
+      "verse_start": 40,
+      "verse_end": 42,
+      "reference": "Juan 10:40-42",
+      "category": "NT_GENERAL",
+      "subcategory": "Retiro al otro lado del Jordán",
+      "characters": [
+        "Jesús",
+        "Juan el Bautista",
+        "creyentes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Juan es recordado por haber realizado más señales que Jesús",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "El relato dice expresamente que Juan no hizo señales, pero que su testimonio sobre Jesús era verdadero. Por eso la afirmación es falsa.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0049",
+      "book": "Juan",
+      "chapter": 11,
+      "verse_start": 1,
+      "verse_end": 6,
+      "reference": "Juan 11:1-6",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Enfermedad de Lázaro",
+      "characters": [
+        "Jesús",
+        "Lázaro",
+        "Marta",
+        "María"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué hace Jesús después de recibir noticia de que Lázaro está enfermo?",
+      "opcion_a": "Permanece todavía dos días donde estaba antes de ir",
+      "opcion_b": "Viaja inmediatamente sin decir nada",
+      "opcion_c": "Envía a los discípulos y nunca va",
+      "opcion_d": "Ordena trasladar a Lázaro a Galilea",
+      "correct_option": "A",
+      "correct_answer": "Permanece todavía dos días donde estaba antes de ir",
+      "explanation": "La demora forma parte de la construcción teológica del relato y no indica indiferencia hacia la familia. No debe utilizarse para afirmar que toda demora frente al sufrimiento tiene una explicación idéntica.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0050",
+      "book": "Juan",
+      "chapter": 11,
+      "verse_start": 11,
+      "verse_end": 16,
+      "reference": "Juan 11:11-16",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Tomás ante el regreso a Judea",
+      "characters": [
+        "Jesús",
+        "Tomás",
+        "discípulos",
+        "Lázaro"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué expresa Tomás cuando Jesús decide volver a Judea pese al peligro?",
+      "opcion_a": "Propone ir también para morir con él",
+      "opcion_b": "Se ofrece a denunciar a Jesús",
+      "opcion_c": "Exige abandonar definitivamente el grupo",
+      "opcion_d": "Pide regresar solo a Galilea",
+      "correct_option": "A",
+      "correct_answer": "Propone ir también para morir con él",
+      "explanation": "Tomás aparece dispuesto a acompañar a Jesús aun interpretando el viaje como peligroso. El detalle añade complejidad al personaje antes de su aparición posterior en el relato.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0051",
+      "book": "Juan",
+      "chapter": 11,
+      "verse_start": 20,
+      "verse_end": 27,
+      "reference": "Juan 11:20-27",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Marta y la resurrección",
+      "characters": [
+        "Jesús",
+        "Marta",
+        "Lázaro"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué confesión hace Marta después de dialogar con Jesús sobre resurrección y vida?",
+      "opcion_a": "Que Jesús es el Cristo, el Hijo de Dios que había de venir al mundo",
+      "opcion_b": "Que Jesús es únicamente un maestro de la ley",
+      "opcion_c": "Que Lázaro nunca murió",
+      "opcion_d": "Que la resurrección ya no tendrá lugar",
+      "correct_option": "A",
+      "correct_answer": "Que Jesús es el Cristo, el Hijo de Dios que había de venir al mundo",
+      "explanation": "Marta responde al discurso de Jesús con una confesión explícita sobre su identidad. El relato la presenta como interlocutora teológica y no solo como personaje doméstico.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0052",
+      "book": "Juan",
+      "chapter": 11,
+      "verse_start": 32,
+      "verse_end": 37,
+      "reference": "Juan 11:32-37",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Jesús llora",
+      "characters": [
+        "Jesús",
+        "María",
+        "judíos presentes"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Jesús llora ante la muerte de Lázaro",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "El evangelio presenta a Jesús conmovido y llorando ante la pérdida. La escena muestra que la fe no exige negar el dolor.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0053",
+      "book": "Juan",
+      "chapter": 11,
+      "verse_start": 38,
+      "verse_end": 44,
+      "reference": "Juan 11:38-44",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Lázaro sale del sepulcro",
+      "characters": [
+        "Jesús",
+        "Lázaro",
+        "Marta",
+        "María"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué orden recibe la comunidad después de que Lázaro sale con las vendas funerarias?",
+      "opcion_a": "Desatarlo y dejarlo ir",
+      "opcion_b": "Volver a cerrarlo en el sepulcro",
+      "opcion_c": "Trasladarlo al templo para interrogarlo",
+      "opcion_d": "Mantenerlo aislado durante un año",
+      "correct_option": "A",
+      "correct_answer": "Desatarlo y dejarlo ir",
+      "explanation": "La señal culmina no solo con la salida de Lázaro, sino con una instrucción a otros para quitar las ataduras. El relato presenta una resurrección concreta y no una técnica reproducible por los lectores.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0054",
+      "book": "Juan",
+      "chapter": 11,
+      "verse_start": 45,
+      "verse_end": 53,
+      "reference": "Juan 11:45-53",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Consejo y declaración de Caifás",
+      "characters": [
+        "Caifás",
+        "consejo",
+        "Jesús"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué argumento político formula Caifás durante la deliberación sobre Jesús?",
+      "opcion_a": "Que conviene que un hombre muera por el pueblo antes que toda la nación perezca",
+      "opcion_b": "Que Jesús debe ser nombrado sumo sacerdote",
+      "opcion_c": "Que Roma entregará inmediatamente la independencia",
+      "opcion_d": "Que el consejo debe abandonar Jerusalén",
+      "correct_option": "A",
+      "correct_answer": "Que conviene que un hombre muera por el pueblo antes que toda la nación perezca",
+      "explanation": "Caifás formula un cálculo político para proteger al pueblo de una reacción romana, mientras el narrador le atribuye además una dimensión profética involuntaria. La escena no justifica sacrificar personas por conveniencia política.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0055",
+      "book": "Juan",
+      "chapter": 12,
+      "verse_start": 1,
+      "verse_end": 8,
+      "reference": "Juan 12:1-8",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "María unge a Jesús",
+      "characters": [
+        "Jesús",
+        "María",
+        "Marta",
+        "Lázaro",
+        "Judas"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué gesto realiza María durante una cena en Betania?",
+      "opcion_a": "Unge los pies de Jesús con perfume y los seca con sus cabellos",
+      "opcion_b": "Corona a Lázaro como rey",
+      "opcion_c": "Entrega una espada a Pedro",
+      "opcion_d": "Quema el perfume delante de la casa",
+      "correct_option": "A",
+      "correct_answer": "Unge los pies de Jesús con perfume y los seca con sus cabellos",
+      "explanation": "María realiza un acto costoso de devoción hacia Jesús. El relato lo relaciona con su sepultura próxima, sin convertir el gasto extraordinario en obligación económica para los creyentes.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0056",
+      "book": "Juan",
+      "chapter": 12,
+      "verse_start": 12,
+      "verse_end": 16,
+      "reference": "Juan 12:12-16",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Entrada en Jerusalén",
+      "characters": [
+        "Jesús",
+        "multitud",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué detalle profético asocia el evangelio con la entrada de Jesús en Jerusalén?",
+      "opcion_a": "El rey llega sentado sobre un asnillo",
+      "opcion_b": "El rey entra sobre un caballo de guerra",
+      "opcion_c": "El rey llega en un carro romano",
+      "opcion_d": "El rey aparece acompañado por un ejército",
+      "correct_option": "A",
+      "correct_answer": "El rey llega sentado sobre un asnillo",
+      "explanation": "El evangelio conecta la entrada de Jesús con la imagen de un rey humilde montado en un asnillo. La escena no funciona como reivindicación territorial moderna.",
+      "additional_references": [
+        "Zacarías 9:9",
+        "Salmos 118:25-26"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0057",
+      "book": "Juan",
+      "chapter": 12,
+      "verse_start": 20,
+      "verse_end": 26,
+      "reference": "Juan 12:20-26",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Grano de trigo y servicio",
+      "characters": [
+        "Jesús",
+        "griegos",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué imagen utiliza Jesús al hablar de muerte, fruto y discipulado después de que unos griegos quieren verlo?",
+      "opcion_a": "Un grano de trigo que muere y produce mucho fruto",
+      "opcion_b": "Una torre que domina una ciudad",
+      "opcion_c": "Una espada que divide un ejército",
+      "opcion_d": "Una moneda que aumenta por interés",
+      "correct_option": "A",
+      "correct_answer": "Un grano de trigo que muere y produce mucho fruto",
+      "explanation": "El grano de trigo expresa el camino de entrega que conduce a fruto y enmarca el llamado a seguir y servir a Jesús. No es una invitación a buscar daño o muerte de manera irresponsable.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0058",
+      "book": "Juan",
+      "chapter": 12,
+      "verse_start": 27,
+      "verse_end": 33,
+      "reference": "Juan 12:27-33",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Hora, gloria y voz del cielo",
+      "characters": [
+        "Jesús",
+        "multitud"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo interpreta el narrador la expresión de Jesús acerca de ser levantado de la tierra?",
+      "opcion_a": "Como indicación del tipo de muerte que iba a sufrir",
+      "opcion_b": "Como anuncio de una coronación militar",
+      "opcion_c": "Como ascenso inmediato a un cargo político",
+      "opcion_d": "Como referencia a subir una montaña",
+      "correct_option": "A",
+      "correct_answer": "Como indicación del tipo de muerte que iba a sufrir",
+      "explanation": "Juan explica que ser levantado anticipa la muerte de Jesús y a la vez se integra en el lenguaje de glorificación del evangelio. La cruz no se presenta como espectáculo de violencia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0059",
+      "book": "Juan",
+      "chapter": 12,
+      "verse_start": 37,
+      "verse_end": 43,
+      "reference": "Juan 12:37-43",
+      "category": "NT_GENERAL",
+      "subcategory": "Incredulidad y profecía",
+      "characters": [
+        "Jesús",
+        "Isaías",
+        "dirigentes"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tensión muestra el narrador al hablar de personas que reconocen algo acerca de Jesús pero temen confesarlo?",
+      "opcion_a": "Algunos dirigentes creen, pero valoran más la aprobación humana que la de Dios",
+      "opcion_b": "Todos los dirigentes rechazan a Jesús por el mismo motivo",
+      "opcion_c": "Ningún testigo observa señales",
+      "opcion_d": "La fe solo aparece fuera de Israel",
+      "correct_option": "A",
+      "correct_answer": "Algunos dirigentes creen, pero valoran más la aprobación humana que la de Dios",
+      "explanation": "Juan reconoce diversidad entre los dirigentes y señala el conflicto entre convicción y temor a las consecuencias sociales. Las referencias a Isaías interpretan la incredulidad sin autorizar una condena étnica del pueblo judío.",
+      "additional_references": [
+        "Isaías 53:1",
+        "Isaías 6:10"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0060",
+      "book": "Juan",
+      "chapter": 13,
+      "verse_start": 1,
+      "verse_end": 17,
+      "reference": "Juan 13:1-17",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Lavamiento de pies",
+      "characters": [
+        "Jesús",
+        "Pedro",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué modelo de liderazgo explica Jesús después de lavar los pies de sus discípulos?",
+      "opcion_a": "El maestro sirve y sus seguidores deben aprender a servirse unos a otros",
+      "opcion_b": "El líder evita toda tarea considerada humilde",
+      "opcion_c": "La autoridad se demuestra mediante privilegios",
+      "opcion_d": "El servicio solo corresponde a personas sin responsabilidad",
+      "correct_option": "A",
+      "correct_answer": "El maestro sirve y sus seguidores deben aprender a servirse unos a otros",
+      "explanation": "El lavamiento transforma un gesto de servicio en enseñanza sobre la relación entre Maestro y discípulos. No exige tolerar abuso, sino renunciar a una autoridad basada en superioridad y desprecio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0061",
+      "book": "Juan",
+      "chapter": 13,
+      "verse_start": 18,
+      "verse_end": 30,
+      "reference": "Juan 13:18-30",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Anuncio de la traición",
+      "characters": [
+        "Jesús",
+        "Judas",
+        "discípulo amado",
+        "Pedro"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué señal privada utiliza Jesús para identificar al discípulo relacionado con la traición?",
+      "opcion_a": "Da un bocado mojado a Judas",
+      "opcion_b": "Le entrega una espada",
+      "opcion_c": "Lo sienta en un trono",
+      "opcion_d": "Le pide leer un rollo",
+      "correct_option": "A",
+      "correct_answer": "Da un bocado mojado a Judas",
+      "explanation": "En la cena, Jesús identifica a Judas mediante el bocado que entrega. El narrador sitúa la decisión de Judas dentro del drama de la pasión sin convertir su identidad en base para culpar a un pueblo.",
+      "additional_references": [
+        "Salmos 41:9"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0062",
+      "book": "Juan",
+      "chapter": 13,
+      "verse_start": 31,
+      "verse_end": 35,
+      "reference": "Juan 13:31-35",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Mandamiento nuevo",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué rasgo debe identificar públicamente a los discípulos según el mandamiento nuevo?",
+      "opcion_a": "El amor mutuo según el modelo de Jesús",
+      "opcion_b": "La posesión de riqueza",
+      "opcion_c": "El control político de la sociedad",
+      "opcion_d": "La pertenencia a una sola nación",
+      "correct_option": "A",
+      "correct_answer": "El amor mutuo según el modelo de Jesús",
+      "explanation": "Jesús sitúa el amor mutuo como señal visible del discipulado. La medida del amor se relaciona con su propio modo de amar y no con poder social o identidad nacional.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0063",
+      "book": "Juan",
+      "chapter": 13,
+      "verse_start": 36,
+      "verse_end": 38,
+      "reference": "Juan 13:36-38",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Pedro y la negación anunciada",
+      "characters": [
+        "Jesús",
+        "Pedro"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste aparece entre la promesa de Pedro y la predicción de Jesús?",
+      "opcion_a": "Pedro dice que dará su vida, pero Jesús anuncia que lo negará antes del canto del gallo",
+      "opcion_b": "Pedro anuncia que huirá y Jesús dice que nunca lo hará",
+      "opcion_c": "Pedro niega conocer a Jesús antes de hablar con él",
+      "opcion_d": "Jesús prohíbe a Pedro seguirlo para siempre",
+      "correct_option": "A",
+      "correct_answer": "Pedro dice que dará su vida, pero Jesús anuncia que lo negará antes del canto del gallo",
+      "explanation": "Pedro expresa lealtad extrema, pero Jesús anticipa una falla cercana. El relato no termina la historia de Pedro en esa falla, como mostrará el cierre del evangelio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0064",
+      "book": "Juan",
+      "chapter": 13,
+      "verse_start": 21,
+      "verse_end": 25,
+      "reference": "Juan 13:21-25",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Reacción de los discípulos ante la traición",
+      "characters": [
+        "Jesús",
+        "discípulos",
+        "Pedro",
+        "discípulo amado"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo reaccionan inicialmente los discípulos cuando Jesús afirma que uno de ellos lo entregará?",
+      "opcion_a": "Se miran entre sí sin saber de quién habla",
+      "opcion_b": "Todos señalan de inmediato a Judas",
+      "opcion_c": "Abandonan la cena juntos",
+      "opcion_d": "Deciden arrestar a un desconocido",
+      "correct_option": "A",
+      "correct_answer": "Se miran entre sí sin saber de quién habla",
+      "explanation": "La escena presenta desconcierto real entre los discípulos antes de la identificación privada. El relato no sugiere que todos conocieran de antemano quién sería el traidor.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0065",
+      "book": "Juan",
+      "chapter": 14,
+      "verse_start": 1,
+      "verse_end": 6,
+      "reference": "Juan 14:1-6",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Camino, verdad y vida",
+      "characters": [
+        "Jesús",
+        "Tomás"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo responde Jesús a la incertidumbre de Tomás sobre el camino?",
+      "opcion_a": "Se presenta como el camino, la verdad y la vida",
+      "opcion_b": "Le entrega un mapa de Judea",
+      "opcion_c": "Le dice que todos los caminos son equivalentes dentro del discurso",
+      "opcion_d": "Le ordena consultar a Pilato",
+      "correct_option": "A",
+      "correct_answer": "Se presenta como el camino, la verdad y la vida",
+      "explanation": "Jesús responde a la pregunta de Tomás con una afirmación centrada en su propia persona. Es una declaración cristológica, no una autorización para tratar con desprecio a personas de otras convicciones.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0066",
+      "book": "Juan",
+      "chapter": 14,
+      "verse_start": 7,
+      "verse_end": 11,
+      "reference": "Juan 14:7-11",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Jesús y el Padre",
+      "characters": [
+        "Jesús",
+        "Felipe",
+        "Padre"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué enseña Jesús a Felipe cuando este pide que les muestre al Padre?",
+      "opcion_a": "Conocer y ver a Jesús está profundamente relacionado con conocer al Padre",
+      "opcion_b": "El Padre carece de relación con Jesús",
+      "opcion_c": "Felipe debe viajar a otro país para encontrar al Padre",
+      "opcion_d": "Solo los sacerdotes pueden conocer al Padre",
+      "correct_option": "A",
+      "correct_answer": "Conocer y ver a Jesús está profundamente relacionado con conocer al Padre",
+      "explanation": "El diálogo une la revelación del Padre con la persona y las obras de Jesús. La afirmación pertenece al marco cristológico del evangelio y no es una descripción física de Dios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0067",
+      "book": "Juan",
+      "chapter": 14,
+      "verse_start": 12,
+      "verse_end": 14,
+      "reference": "Juan 14:12-14",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Pedir en el nombre de Jesús",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué finalidad menciona Jesús al hablar de responder peticiones hechas en su nombre?",
+      "opcion_a": "Que el Padre sea glorificado en el Hijo",
+      "opcion_b": "Que toda petición material sea concedida sin excepción",
+      "opcion_c": "Que el creyente controle el futuro",
+      "opcion_d": "Que desaparezca la necesidad de discernimiento",
+      "correct_option": "A",
+      "correct_answer": "Que el Padre sea glorificado en el Hijo",
+      "explanation": "Pedir en el nombre de Jesús se sitúa dentro de su misión y de la gloria del Padre. No funciona como fórmula automática que garantice cualquier deseo o resultado.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0068",
+      "book": "Juan",
+      "chapter": 14,
+      "verse_start": 15,
+      "verse_end": 26,
+      "reference": "Juan 14:15-26",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Consolador y enseñanza",
+      "characters": [
+        "Jesús",
+        "Espíritu Santo",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué funciones atribuye Jesús al Consolador que el Padre enviará?",
+      "opcion_a": "Enseñar y recordar a los discípulos lo que Jesús les ha dicho",
+      "opcion_b": "Reemplazar a Jesús como gobernante político",
+      "opcion_c": "Eliminar toda necesidad de aprendizaje",
+      "opcion_d": "Dar información secreta para enriquecerse",
+      "correct_option": "A",
+      "correct_answer": "Enseñar y recordar a los discípulos lo que Jesús les ha dicho",
+      "explanation": "El Consolador es presentado como maestro y recordador de la enseñanza de Jesús. El pasaje no convierte cualquier impulso subjetivo en revelación incuestionable.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0069",
+      "book": "Juan",
+      "chapter": 14,
+      "verse_start": 27,
+      "verse_end": 31,
+      "reference": "Juan 14:27-31",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Paz distinta a la del mundo",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la paz prometida por Jesús equivale a una vida sin conflictos ni dificultades",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "Jesús distingue su paz de la manera en que el mundo la da y habla en un contexto de pérdida y oposición. La afirmación es falsa porque esa paz no significa ausencia total de dificultades.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0070",
+      "book": "Juan",
+      "chapter": 15,
+      "verse_start": 1,
+      "verse_end": 8,
+      "reference": "Juan 15:1-8",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Vid y ramas",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué relación expresa la imagen de la vid y las ramas respecto del fruto?",
+      "opcion_a": "La rama necesita permanecer unida a la vid para llevar fruto",
+      "opcion_b": "Cada rama produce mejor si se separa",
+      "opcion_c": "El fruto depende únicamente del tamaño visible de la rama",
+      "opcion_d": "La vid representa un poder político",
+      "correct_option": "A",
+      "correct_answer": "La rama necesita permanecer unida a la vid para llevar fruto",
+      "explanation": "La imagen enfatiza dependencia y permanencia en Jesús. El fruto surge de esa relación y no de autosuficiencia espiritual.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0071",
+      "book": "Juan",
+      "chapter": 15,
+      "verse_start": 9,
+      "verse_end": 17,
+      "reference": "Juan 15:9-17",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Permanecer en el amor",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué mandamiento vuelve a ocupar el centro cuando Jesús habla de permanecer en su amor?",
+      "opcion_a": "Amarse unos a otros",
+      "opcion_b": "Acumular bienes para demostrar bendición",
+      "opcion_c": "Evitar todo contacto con el mundo",
+      "opcion_d": "Competir por el primer lugar",
+      "correct_option": "A",
+      "correct_answer": "Amarse unos a otros",
+      "explanation": "El discurso relaciona permanecer en el amor de Jesús con guardar sus mandamientos y amar a otros. La amistad con Jesús no se convierte en privilegio para dominar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0072",
+      "book": "Juan",
+      "chapter": 15,
+      "verse_start": 18,
+      "verse_end": 25,
+      "reference": "Juan 15:18-25",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Oposición del mundo",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué advertencia ofrece Jesús a los discípulos acerca de la hostilidad que pueden enfrentar?",
+      "opcion_a": "No deben sorprenderse si el mundo los aborrece como antes aborreció a Jesús",
+      "opcion_b": "Toda oposición demuestra automáticamente que siempre tienen razón",
+      "opcion_c": "Deben responder con violencia a cualquier crítica",
+      "opcion_d": "Nunca volverán a sufrir rechazo",
+      "correct_option": "A",
+      "correct_answer": "No deben sorprenderse si el mundo los aborrece como antes aborreció a Jesús",
+      "explanation": "Jesús prepara a los discípulos para oposición ligada a su identificación con él. El pasaje no convierte toda crítica en persecución ni autoriza represalias.",
+      "additional_references": [
+        "Salmos 35:19",
+        "Salmos 69:4"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0073",
+      "book": "Juan",
+      "chapter": 15,
+      "verse_start": 26,
+      "verse_end": 27,
+      "reference": "Juan 15:26-27",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Testimonio del Espíritu y discípulos",
+      "characters": [
+        "Jesús",
+        "Espíritu Santo",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos testimonios aparecen unidos al final de la enseñanza sobre la oposición?",
+      "opcion_a": "El del Espíritu acerca de Jesús y el de los discípulos que estuvieron con él",
+      "opcion_b": "El de César y Pilato",
+      "opcion_c": "El de los comerciantes y soldados",
+      "opcion_d": "El de dos reyes extranjeros",
+      "correct_option": "A",
+      "correct_answer": "El del Espíritu acerca de Jesús y el de los discípulos que estuvieron con él",
+      "explanation": "Jesús presenta el testimonio del Espíritu junto con el de los discípulos que lo acompañaron desde el principio. La misión se describe como testimonio, no como imposición coercitiva.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0074",
+      "book": "Juan",
+      "chapter": 16,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Juan 16:1-4",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Persecución y error religioso",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué paradoja advierte Jesús sobre algunas personas que perseguirán a sus seguidores?",
+      "opcion_a": "Pueden creer que al hacerlo rinden servicio a Dios",
+      "opcion_b": "Saben con certeza que actúan bien porque usan violencia",
+      "opcion_c": "Toda persona religiosa perseguirá necesariamente a otros",
+      "opcion_d": "La persecución es una obligación del discípulo",
+      "correct_option": "A",
+      "correct_answer": "Pueden creer que al hacerlo rinden servicio a Dios",
+      "explanation": "Jesús advierte que la convicción religiosa puede acompañar acciones gravemente equivocadas. El pasaje funciona como advertencia contra confundir celo con fidelidad, no como acusación contra toda religión.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0075",
+      "book": "Juan",
+      "chapter": 16,
+      "verse_start": 5,
+      "verse_end": 15,
+      "reference": "Juan 16:5-15",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Obra del Espíritu de verdad",
+      "characters": [
+        "Jesús",
+        "Espíritu Santo",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función futura atribuye Jesús al Espíritu de verdad respecto de los discípulos?",
+      "opcion_a": "Guiarlos a toda la verdad y glorificar a Jesús",
+      "opcion_b": "Reemplazar todas las palabras de Jesús por mensajes contradictorios",
+      "opcion_c": "Dar poder político sobre las naciones",
+      "opcion_d": "Evitar que vuelvan a necesitar discernimiento",
+      "correct_option": "A",
+      "correct_answer": "Guiarlos a toda la verdad y glorificar a Jesús",
+      "explanation": "El Espíritu guía, comunica lo recibido y glorifica a Jesús dentro del discurso de despedida. Esa guía no convierte cualquier afirmación personal en verdad infalible.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0076",
+      "book": "Juan",
+      "chapter": 16,
+      "verse_start": 16,
+      "verse_end": 24,
+      "reference": "Juan 16:16-24",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Tristeza convertida en gozo",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué comparación utiliza Jesús para explicar una tristeza que puede transformarse en gozo?",
+      "opcion_a": "La angustia de una mujer que da a luz y luego se alegra por el nacimiento",
+      "opcion_b": "La pérdida de una guerra y una revancha posterior",
+      "opcion_c": "La caída de un edificio",
+      "opcion_d": "La siembra que nunca produce fruto",
+      "correct_option": "A",
+      "correct_answer": "La angustia de una mujer que da a luz y luego se alegra por el nacimiento",
+      "explanation": "Jesús usa el parto como comparación de una aflicción intensa que da paso a alegría. La imagen no minimiza el dolor físico ni enseña que todo sufrimiento humano tenga automáticamente un desenlace feliz inmediato.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0077",
+      "book": "Juan",
+      "chapter": 16,
+      "verse_start": 25,
+      "verse_end": 33,
+      "reference": "Juan 16:25-33",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Paz en medio de aflicción",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación realista ofrece Jesús al cerrar este discurso?",
+      "opcion_a": "En el mundo habrá aflicción, pero en él pueden tener paz y ánimo",
+      "opcion_b": "La fe elimina toda dificultad futura",
+      "opcion_c": "La paz depende de evitar a todas las personas",
+      "opcion_d": "La victoria significa ausencia de sufrimiento",
+      "correct_option": "A",
+      "correct_answer": "En el mundo habrá aflicción, pero en él pueden tener paz y ánimo",
+      "explanation": "Jesús no oculta la aflicción que enfrentarán los discípulos, pero la coloca junto a paz y confianza en su victoria. El texto no promete inmunidad frente a problemas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0078",
+      "book": "Juan",
+      "chapter": 17,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Juan 17:1-5",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Vida eterna y gloria",
+      "characters": [
+        "Jesús",
+        "Padre"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo define la oración la vida eterna en términos de relación y conocimiento?",
+      "opcion_a": "Conocer al único Dios verdadero y a Jesucristo enviado por él",
+      "opcion_b": "Vivir físicamente para siempre sin relación con Dios",
+      "opcion_c": "Poseer conocimiento secreto sobre todas las ciencias",
+      "opcion_d": "Alcanzar una posición política elevada",
+      "correct_option": "A",
+      "correct_answer": "Conocer al único Dios verdadero y a Jesucristo enviado por él",
+      "explanation": "La vida eterna se expresa como conocimiento relacional de Dios y de Jesucristo. El énfasis no está en acumulación de información ni en poder social.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0079",
+      "book": "Juan",
+      "chapter": 17,
+      "verse_start": 6,
+      "verse_end": 19,
+      "reference": "Juan 17:6-19",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Oración por los discípulos",
+      "characters": [
+        "Jesús",
+        "Padre",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pide Jesús respecto de sus discípulos mientras permanecen en el mundo?",
+      "opcion_a": "Que sean guardados y santificados en la verdad",
+      "opcion_b": "Que sean retirados inmediatamente de toda sociedad",
+      "opcion_c": "Que nunca vuelvan a experimentar oposición",
+      "opcion_d": "Que gobiernen por la fuerza",
+      "correct_option": "A",
+      "correct_answer": "Que sean guardados y santificados en la verdad",
+      "explanation": "Jesús no pide sacar a los discípulos del mundo, sino guardarlos del mal y santificarlos en la verdad. Esto enmarca la misión como presencia fiel, no como aislamiento total.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0080",
+      "book": "Juan",
+      "chapter": 17,
+      "verse_start": 20,
+      "verse_end": 23,
+      "reference": "Juan 17:20-23",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Oración por futuros creyentes",
+      "characters": [
+        "Jesús",
+        "futuros creyentes"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué petición destaca Jesús al orar por quienes creerán por medio del mensaje de sus primeros discípulos?",
+      "opcion_a": "Que sean uno",
+      "opcion_b": "Que todos tengan la misma cultura",
+      "opcion_c": "Que hablen una sola lengua humana",
+      "opcion_d": "Que vivan en una única ciudad",
+      "correct_option": "A",
+      "correct_answer": "Que sean uno",
+      "explanation": "La oración por la unidad apunta a una comunión que refleje la relación entre Padre e Hijo. No exige uniformidad cultural, política o lingüística.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0081",
+      "book": "Juan",
+      "chapter": 17,
+      "verse_start": 24,
+      "verse_end": 26,
+      "reference": "Juan 17:24-26",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Gloria y amor",
+      "characters": [
+        "Jesús",
+        "Padre",
+        "creyentes"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué horizonte final aparece en la oración de Jesús respecto de quienes el Padre le ha dado?",
+      "opcion_a": "Que estén con él, contemplen su gloria y participen del amor con que es amado",
+      "opcion_b": "Que todos ocupen cargos religiosos",
+      "opcion_c": "Que dominen a otras comunidades",
+      "opcion_d": "Que eviten toda relación con el mundo creado",
+      "correct_option": "A",
+      "correct_answer": "Que estén con él, contemplen su gloria y participen del amor con que es amado",
+      "explanation": "El cierre de la oración mira hacia comunión, gloria y amor. La finalidad no es estatus institucional ni dominio sobre otras personas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0082",
+      "book": "Juan",
+      "chapter": 18,
+      "verse_start": 1,
+      "verse_end": 9,
+      "reference": "Juan 18:1-9",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Arresto y autoidentificación de Jesús",
+      "characters": [
+        "Jesús",
+        "Judas",
+        "guardia",
+        "discípulos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que quienes llegan a arrestar a Jesús retroceden y caen a tierra cuando él se identifica",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "Juan narra que el grupo retrocede y cae a tierra cuando Jesús se identifica. El detalle subraya su iniciativa y autoridad dentro del relato.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0083",
+      "book": "Juan",
+      "chapter": 18,
+      "verse_start": 10,
+      "verse_end": 11,
+      "reference": "Juan 18:10-11",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Espada de Pedro y Malco",
+      "characters": [
+        "Jesús",
+        "Pedro",
+        "Malco"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo responde Jesús cuando Pedro hiere al siervo del sumo sacerdote?",
+      "opcion_a": "Le ordena guardar la espada y acepta la copa que el Padre le ha dado",
+      "opcion_b": "Le pide continuar atacando",
+      "opcion_c": "Lo felicita por defenderlo",
+      "opcion_d": "Ordena a todos armarse",
+      "correct_option": "A",
+      "correct_answer": "Le ordena guardar la espada y acepta la copa que el Padre le ha dado",
+      "explanation": "Jesús detiene la acción de Pedro y enmarca su arresto dentro de la copa que ha aceptado. La escena no autoriza violencia religiosa en defensa de Jesús.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0084",
+      "book": "Juan",
+      "chapter": 18,
+      "verse_start": 19,
+      "verse_end": 24,
+      "reference": "Juan 18:19-24",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Interrogatorio ante Anás",
+      "characters": [
+        "Jesús",
+        "Anás",
+        "alguacil"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué respuesta da Jesús cuando un alguacil lo golpea por la manera en que contesta?",
+      "opcion_a": "Pide que se demuestre lo malo de sus palabras o se reconozca que habló bien",
+      "opcion_b": "Ordena a sus discípulos vengarlo",
+      "opcion_c": "Confiesa un delito inexistente",
+      "opcion_d": "Se niega a volver a hablar con cualquiera",
+      "correct_option": "A",
+      "correct_answer": "Pide que se demuestre lo malo de sus palabras o se reconozca que habló bien",
+      "explanation": "Jesús responde al golpe apelando a la verdad y a la responsabilidad de justificar la acusación. El episodio se describe sin recrearse en la violencia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0085",
+      "book": "Juan",
+      "chapter": 18,
+      "verse_start": 28,
+      "verse_end": 38,
+      "reference": "Juan 18:28-38",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Reino y verdad ante Pilato",
+      "characters": [
+        "Jesús",
+        "Pilato"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo caracteriza Jesús su reino al responder a Pilato?",
+      "opcion_a": "Su reino no procede de este mundo como los reinos que se sostienen por combate",
+      "opcion_b": "Su reino depende del ejército romano",
+      "opcion_c": "Su reino existe solo en Galilea",
+      "opcion_d": "Su reino exige una revuelta armada inmediata",
+      "correct_option": "A",
+      "correct_answer": "Su reino no procede de este mundo como los reinos que se sostienen por combate",
+      "explanation": "Jesús distingue su reino de una fuente de poder político sostenida por combate. La frase no significa que su enseñanza carezca de implicaciones para la vida pública, pero rechaza reducir su reinado a conquista armada.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0086",
+      "book": "Juan",
+      "chapter": 19,
+      "verse_start": 8,
+      "verse_end": 11,
+      "reference": "Juan 19:8-11",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Autoridad de Pilato",
+      "characters": [
+        "Jesús",
+        "Pilato"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué le dice Jesús a Pilato acerca de la autoridad que este afirma tener sobre él?",
+      "opcion_a": "No tendría autoridad alguna si no le hubiera sido dada de arriba",
+      "opcion_b": "Su autoridad es ilimitada y divina por naturaleza",
+      "opcion_c": "Carece completamente de responsabilidad por sus decisiones",
+      "opcion_d": "La autoridad romana es eterna",
+      "correct_option": "A",
+      "correct_answer": "No tendría autoridad alguna si no le hubiera sido dada de arriba",
+      "explanation": "Jesús relativiza el poder de Pilato al situarlo bajo una autoridad superior. Esto no absuelve a Pilato de responsabilidad ni convierte todo poder político en aprobación divina automática.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0087",
+      "book": "Juan",
+      "chapter": 19,
+      "verse_start": 17,
+      "verse_end": 24,
+      "reference": "Juan 19:17-24",
+      "category": "NT_GENERAL",
+      "subcategory": "Crucifixión, inscripción y vestidos",
+      "characters": [
+        "Jesús",
+        "soldados",
+        "Pilato"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué detalle conecta el reparto de la ropa de Jesús con una referencia de los Salmos?",
+      "opcion_a": "Los soldados echan suertes sobre una prenda que no quieren dividir",
+      "opcion_b": "Los soldados entregan toda la ropa a María",
+      "opcion_c": "Pilato compra la túnica",
+      "opcion_d": "La ropa es quemada antes de la crucifixión",
+      "correct_option": "A",
+      "correct_answer": "Los soldados echan suertes sobre una prenda que no quieren dividir",
+      "explanation": "Juan relaciona el reparto de las prendas con lenguaje de los Salmos. La escena se mantiene de forma no gráfica y la referencia sirve para trazabilidad literaria.",
+      "additional_references": [
+        "Salmos 22:18"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0088",
+      "book": "Juan",
+      "chapter": 19,
+      "verse_start": 25,
+      "verse_end": 27,
+      "reference": "Juan 19:25-27",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Madre de Jesús y discípulo amado",
+      "characters": [
+        "Jesús",
+        "madre de Jesús",
+        "discípulo amado"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué nueva responsabilidad establece Jesús entre su madre y el discípulo amado mientras están junto a la cruz?",
+      "opcion_a": "Los encomienda mutuamente como familia",
+      "opcion_b": "Les ordena abandonar Jerusalén para siempre",
+      "opcion_c": "Nombra al discípulo sacerdote",
+      "opcion_d": "Pide a su madre que dirija a los soldados",
+      "correct_option": "A",
+      "correct_answer": "Los encomienda mutuamente como familia",
+      "explanation": "En medio de la pasión, Jesús atiende la relación entre su madre y el discípulo amado. El gesto muestra cuidado y pertenencia sin exigir una única estructura familiar para todos los creyentes.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0089",
+      "book": "Juan",
+      "chapter": 19,
+      "verse_start": 28,
+      "verse_end": 37,
+      "reference": "Juan 19:28-37",
+      "category": "NT_GENERAL",
+      "subcategory": "Muerte de Jesús y cumplimiento",
+      "characters": [
+        "Jesús",
+        "soldados"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué conjunto de detalles utiliza el narrador para subrayar cumplimiento y testimonio después de la muerte de Jesús?",
+      "opcion_a": "No le quiebran las piernas y uno de los soldados atraviesa su costado",
+      "opcion_b": "El cuerpo desaparece antes de ser verificado",
+      "opcion_c": "Los soldados abandonan el lugar sin observar nada",
+      "opcion_d": "Pilato prohíbe cualquier sepultura",
+      "correct_option": "A",
+      "correct_answer": "No le quiebran las piernas y uno de los soldados atraviesa su costado",
+      "explanation": "Juan vincula los detalles del cuerpo de Jesús con referencias escriturales y con el testimonio de quien vio. La descripción debe mantenerse sobria y no convertirse en recreación gráfica de daño.",
+      "additional_references": [
+        "Éxodo 12:46",
+        "Números 9:12",
+        "Salmos 34:20",
+        "Zacarías 12:10"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0090",
+      "book": "Juan",
+      "chapter": 19,
+      "verse_start": 38,
+      "verse_end": 42,
+      "reference": "Juan 19:38-42",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Sepultura de Jesús",
+      "characters": [
+        "José de Arimatea",
+        "Nicodemo",
+        "Jesús"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos personajes participan de manera destacada en preparar el cuerpo de Jesús para la sepultura?",
+      "opcion_a": "José de Arimatea y Nicodemo",
+      "opcion_b": "Pedro y Andrés",
+      "opcion_c": "Felipe y Natanael",
+      "opcion_d": "Herodes y Pilato",
+      "correct_option": "A",
+      "correct_answer": "José de Arimatea y Nicodemo",
+      "explanation": "José de Arimatea recibe permiso para llevar el cuerpo y Nicodemo aporta una gran cantidad de aromas. Dos personajes previamente discretos aparecen participando públicamente en la sepultura.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0091",
+      "book": "Juan",
+      "chapter": 20,
+      "verse_start": 1,
+      "verse_end": 10,
+      "reference": "Juan 20:1-10",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Tumba vacía y primeros testigos",
+      "characters": [
+        "María Magdalena",
+        "Pedro",
+        "discípulo amado"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué diferencia señala el relato entre la llegada de Pedro y la del otro discípulo a la tumba?",
+      "opcion_a": "El otro discípulo llega primero, pero Pedro entra primero",
+      "opcion_b": "Pedro llega y entra primero en todo sentido",
+      "opcion_c": "María entra antes que ambos y permanece dentro",
+      "opcion_d": "Ninguno de los discípulos llega a la tumba",
+      "correct_option": "A",
+      "correct_answer": "El otro discípulo llega primero, pero Pedro entra primero",
+      "explanation": "Juan conserva detalles sobre orden de llegada y entrada que distinguen a los dos discípulos. La observación de los lienzos prepara el desarrollo de la fe en la resurrección.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0092",
+      "book": "Juan",
+      "chapter": 20,
+      "verse_start": 11,
+      "verse_end": 18,
+      "reference": "Juan 20:11-18",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "María Magdalena reconoce a Jesús",
+      "characters": [
+        "Jesús",
+        "María Magdalena"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué momento cambia la percepción de María Magdalena, que inicialmente piensa que habla con el jardinero?",
+      "opcion_a": "Jesús la llama por su nombre",
+      "opcion_b": "Jesús le muestra una moneda",
+      "opcion_c": "Pedro le explica quién es",
+      "opcion_d": "Un ángel la toma de la mano",
+      "correct_option": "A",
+      "correct_answer": "Jesús la llama por su nombre",
+      "explanation": "El reconocimiento ocurre cuando Jesús pronuncia el nombre de María. La escena presenta a una mujer como testigo y mensajera de la resurrección.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0093",
+      "book": "Juan",
+      "chapter": 20,
+      "verse_start": 19,
+      "verse_end": 23,
+      "reference": "Juan 20:19-23",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Paz, envío y Espíritu",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué secuencia acompaña la aparición de Jesús a los discípulos reunidos?",
+      "opcion_a": "Les da paz, los envía y sopla sobre ellos al hablar del Espíritu Santo",
+      "opcion_b": "Les entrega armas y planes militares",
+      "opcion_c": "Les ordena abandonar toda misión",
+      "opcion_d": "Les exige construir un palacio",
+      "correct_option": "A",
+      "correct_answer": "Les da paz, los envía y sopla sobre ellos al hablar del Espíritu Santo",
+      "explanation": "La aparición combina paz, comisión y don del Espíritu. El envío no se formula como conquista coercitiva, sino como continuación de la misión recibida del Padre.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0094",
+      "book": "Juan",
+      "chapter": 20,
+      "verse_start": 24,
+      "verse_end": 29,
+      "reference": "Juan 20:24-29",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Tomás y la fe",
+      "characters": [
+        "Jesús",
+        "Tomás",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ocurre cuando Tomás, que no había estado en la aparición anterior, se encuentra después con Jesús?",
+      "opcion_a": "Pasa de exigir evidencia a confesar a Jesús como Señor y Dios",
+      "opcion_b": "Se niega incluso a mirar a Jesús",
+      "opcion_c": "Abandona definitivamente a los discípulos",
+      "opcion_d": "Pide convertirse en sacerdote",
+      "correct_option": "A",
+      "correct_answer": "Pasa de exigir evidencia a confesar a Jesús como Señor y Dios",
+      "explanation": "Tomás no es presentado simplemente como caricatura de incredulidad; su duda desemboca en una de las confesiones más fuertes del evangelio. Jesús también pronuncia una bienaventuranza para quienes creerán sin haber visto de la misma manera.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0095",
+      "book": "Juan",
+      "chapter": 20,
+      "verse_start": 30,
+      "verse_end": 31,
+      "reference": "Juan 20:30-31",
+      "category": "NT_GENERAL",
+      "subcategory": "Propósito de las señales escritas",
+      "characters": [
+        "Jesús",
+        "lectores"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué propósito declara el autor para la selección de señales que ha escrito?",
+      "opcion_a": "Que los lectores crean en Jesús y tengan vida en su nombre",
+      "opcion_b": "Registrar absolutamente todo lo que Jesús hizo",
+      "opcion_c": "Proporcionar una cronología política de Roma",
+      "opcion_d": "Crear un manual de medicina",
+      "correct_option": "A",
+      "correct_answer": "Que los lectores crean en Jesús y tengan vida en su nombre",
+      "explanation": "El evangelio reconoce que selecciona señales con un propósito de fe y vida. Esto ayuda a entender que la obra es narrativa y teológica, no una lista exhaustiva de todos los hechos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0096",
+      "book": "Juan",
+      "chapter": 21,
+      "verse_start": 1,
+      "verse_end": 11,
+      "reference": "Juan 21:1-11",
+      "category": "JESUS_MILAGROS",
+      "subcategory": "Pesca junto al mar",
+      "characters": [
+        "Jesús",
+        "Pedro",
+        "Tomás",
+        "Natanael",
+        "discípulos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué detalle numérico conserva el relato sobre la pesca abundante después de seguir la indicación de Jesús?",
+      "opcion_a": "Ciento cincuenta y tres peces grandes",
+      "opcion_b": "Doce peces",
+      "opcion_c": "Setenta peces pequeños",
+      "opcion_d": "Mil peces exactamente",
+      "correct_option": "A",
+      "correct_answer": "Ciento cincuenta y tres peces grandes",
+      "explanation": "Juan conserva el número de ciento cincuenta y tres peces grandes y señala que la red no se rompió. El texto no explica un simbolismo obligatorio para ese número, por lo que el banco evita imponer especulaciones.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_MILAGROS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0097",
+      "book": "Juan",
+      "chapter": 21,
+      "verse_start": 9,
+      "verse_end": 14,
+      "reference": "Juan 21:9-14",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Desayuno junto al fuego",
+      "characters": [
+        "Jesús",
+        "discípulos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué encuentran los discípulos preparado en tierra cuando llegan después de la pesca?",
+      "opcion_a": "Brasas, pescado y pan",
+      "opcion_b": "Un altar con incienso",
+      "opcion_c": "Una mesa con vino únicamente",
+      "opcion_d": "Una cesta de monedas",
+      "correct_option": "A",
+      "correct_answer": "Brasas, pescado y pan",
+      "explanation": "Jesús recibe a los discípulos con un desayuno sencillo de pan y pescado junto a unas brasas. La escena combina resurrección, hospitalidad y vida cotidiana.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0098",
+      "book": "Juan",
+      "chapter": 21,
+      "verse_start": 15,
+      "verse_end": 17,
+      "reference": "Juan 21:15-17",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Restauración y encargo de Pedro",
+      "characters": [
+        "Jesús",
+        "Pedro"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué encargo repite Jesús a Pedro mientras le pregunta tres veces por su amor?",
+      "opcion_a": "Cuidar y alimentar a sus ovejas",
+      "opcion_b": "Abandonar para siempre a los demás discípulos",
+      "opcion_c": "Organizar un ejército",
+      "opcion_d": "Construir un templo nuevo",
+      "correct_option": "A",
+      "correct_answer": "Cuidar y alimentar a sus ovejas",
+      "explanation": "Las tres preguntas se acompañan de encargos pastorales hacia las ovejas de Jesús. El liderazgo que surge del diálogo se orienta al cuidado, no al control o privilegio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0099",
+      "book": "Juan",
+      "chapter": 21,
+      "verse_start": 18,
+      "verse_end": 19,
+      "reference": "Juan 21:18-19",
+      "category": "JESUS_PALABRAS",
+      "subcategory": "Futuro de Pedro y seguimiento",
+      "characters": [
+        "Jesús",
+        "Pedro"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Jesús concluye su anuncio sobre el futuro de Pedro ordenándole buscar una posición de autoridad",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La instrucción directa es seguir a Jesús, no buscar una posición de autoridad. La afirmación es falsa.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "JESUS_PALABRAS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUA-0100",
+      "book": "Juan",
+      "chapter": 21,
+      "verse_start": 20,
+      "verse_end": 25,
+      "reference": "Juan 21:20-25",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Discípulo amado, rumor y testimonio",
+      "characters": [
+        "Jesús",
+        "Pedro",
+        "discípulo amado"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué corrección hace el evangelio respecto de un rumor sobre el discípulo amado?",
+      "opcion_a": "Jesús no afirmó que aquel discípulo no moriría, sino que planteó una condición hipotética",
+      "opcion_b": "Jesús prometió explícitamente que viviría para siempre en la tierra",
+      "opcion_c": "Pedro anunció la muerte inmediata del discípulo",
+      "opcion_d": "El autor confirma que el rumor era una profecía exacta",
+      "correct_option": "A",
+      "correct_answer": "Jesús no afirmó que aquel discípulo no moriría, sino que planteó una condición hipotética",
+      "explanation": "El cierre distingue cuidadosamente entre lo que Jesús dijo y una inferencia que circuló entre los hermanos. Es un ejemplo interno de cómo un rumor puede surgir al convertir una frase condicional en afirmación absoluta.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    }
+  ]
+}
