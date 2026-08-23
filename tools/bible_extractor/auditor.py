@@ -683,6 +683,23 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "monte de parán", "cusan", "cusán", "madian", "madián", "libano", "líbano", "mar", "abismo"
         },
     },
+    "zephaniah": {
+        "canonical_name": "Sofonías",
+        "api_name": "Sofonias",
+        "aliases": {
+            "sofonias", "sofonías", "zephaniah", "sof", "libro de sofonias", "libro de sofonías"
+        },
+        "total_chapters": 3,
+        "blocks": [
+            (1, 3, "zephaniah-01-03.json"),
+        ],
+        "default_output_dir": "build/audit/zephaniah",
+        "ambient_places": {
+            "juda", "judá", "jerusalen", "jerusalén", "filistea", "moab", "amon", "amón", "cus", "etiopia", "etiopía",
+            "asiria", "ninive", "nínive", "gaza", "ascalon", "ascalón", "asdod", "ecron", "ecrón", "quereteos",
+            "canaan", "canaán", "sodoma", "gomorra", "mactes", "mactés", "puerta del pescado", "segundo barrio"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -800,6 +817,8 @@ BIBLE_PERSONAJES = {
     "nahum", "nahúm", "elcesita",
     # Habacuc
     "habacuc", "habakkuk",
+    # Sofonías
+    "sofonias", "sofonías", "josias", "josías", "cusi", "gedalias", "gedalías", "amarias", "amarías",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",

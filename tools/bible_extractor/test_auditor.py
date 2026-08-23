@@ -76,6 +76,7 @@ JONAH_PATH = Path(__file__).parent / "jonah-master-input.json"
 MICAH_PATH = Path(__file__).parent / "micah-master-input.json"
 NAHUM_PATH = Path(__file__).parent / "nahum-master-input.json"
 HABAKKUK_PATH = Path(__file__).parent / "habakkuk-master-input.json"
+ZEPHANIAH_PATH = Path(__file__).parent / "zephaniah-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -288,6 +289,12 @@ class TestAuditorCanonical(unittest.TestCase):
         else:
             cls.habakkuk_questions = {}
 
+        if ZEPHANIAH_PATH.exists():
+            raw_zep = json.loads(ZEPHANIAH_PATH.read_text(encoding="utf-8"))
+            cls.zephaniah_questions = {q["id"]: q for q in (raw_zep.get("questions", []) if isinstance(raw_zep, dict) else raw_zep)}
+        else:
+            cls.zephaniah_questions = {}
+
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
 
@@ -433,6 +440,10 @@ class TestAuditorCanonical(unittest.TestCase):
     def get_habakkuk_question(self, qid: str) -> dict:
         self.assertIn(qid, self.habakkuk_questions, f"ID '{qid}' no encontrado en habakkuk-master-input.json")
         return copy.deepcopy(self.habakkuk_questions[qid])
+
+    def get_zephaniah_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.zephaniah_questions, f"ID '{qid}' no encontrado en zephaniah-master-input.json")
+        return copy.deepcopy(self.zephaniah_questions[qid])
 
     # --- TEST GLOBAL DE CONSISTENCIA DE IDs Y REFERENCIAS ---
 
@@ -3400,6 +3411,86 @@ class TestAuditorCanonical(unittest.TestCase):
 
         char_counts = collections.Counter(all_chars)
         self.assertEqual(char_counts["Habacuc"], 7)
+
+    # --- TESTS PARA SOFONÍAS ---
+
+    def test_detect_book_key_zephaniah(self) -> None:
+        """Verifica la detección automática de clave para Sofonías."""
+        spec_zep = {"questions": [{"id": "NQB-AT-SOF-0001", "book": "Sofonías"}]}
+        self.assertEqual(detect_book_key(spec_zep), "zephaniah")
+
+        spec_alias = {"questions": [{"id": "NQB-AT-SOF-0001", "book": "sofonias"}]}
+        self.assertEqual(detect_book_key(spec_alias), "zephaniah")
+
+        spec_en = {"questions": [{"id": "NQB-AT-SOF-0001", "book": "Zephaniah"}]}
+        self.assertEqual(detect_book_key(spec_en), "zephaniah")
+
+        spec_libro = {"questions": [{"id": "NQB-AT-SOF-0001", "book": "Libro de Sofonías"}]}
+        self.assertEqual(detect_book_key(spec_libro), "zephaniah")
+
+    def test_zephaniah_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Sofonías: 3 capítulos, 1 bloque."""
+        self.assertIn("zephaniah", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["zephaniah"]
+        self.assertEqual(cfg["canonical_name"], "Sofonías")
+        self.assertEqual(cfg["api_name"], "Sofonias")
+        self.assertEqual(cfg["total_chapters"], 3)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertEqual(cfg["blocks"][0], (1, 3, "zephaniah-01-03.json"))
+        self.assertTrue({"sofonias", "sofonías", "zephaniah", "sof"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_zephaniah(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Sofonías (38 preguntas, 3/3 capítulos cubiertos, distribución 14/11/13, 36 AT_GENERAL, 2 PERSONAJES_BIBLICOS, 0 con additional_refs, 0 totales)."""
+        if not self.zephaniah_questions:
+            self.skipTest("zephaniah-master-input.json no disponible")
+        self.assertEqual(len(self.zephaniah_questions), 38)
+        chapter_counts = {}
+        personajes_count = 0
+        general_count = 0
+        all_chars = []
+        questions_with_add_refs = 0
+        total_add_refs = 0
+        for qid, q in self.zephaniah_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 3, f"Capítulo {ch} fuera del rango 1..3 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+            self.assertEqual(q.get("question_type"), "MULTIPLE_CHOICE")
+
+            all_chars.extend(q.get("characters", []))
+
+            cat = q.get("category")
+            if cat == "PERSONAJES_BIBLICOS":
+                personajes_count += 1
+                self.assertGreater(len(q.get("characters", [])), 0, f"Pregunta de personajes sin characters en {qid}")
+            elif cat == "AT_GENERAL":
+                general_count += 1
+
+            add_refs = q.get("additional_references", [])
+            if len(add_refs) > 0:
+                questions_with_add_refs += 1
+                total_add_refs += len(add_refs)
+
+        expected_dist = {1: 14, 2: 11, 3: 13}
+        self.assertEqual(chapter_counts, expected_dist)
+        self.assertEqual(personajes_count, 2, f"Se esperaban 2 preguntas de PERSONAJES_BIBLICOS, halladas {personajes_count}")
+        self.assertEqual(general_count, 36, f"Se esperaban 36 preguntas de AT_GENERAL, halladas {general_count}")
+        self.assertEqual(questions_with_add_refs, 0, f"Se esperaban 0 preguntas con additional_references, halladas {questions_with_add_refs}")
+        self.assertEqual(total_add_refs, 0, f"Se esperaban 0 referencias adicionales en total, halladas {total_add_refs}")
+
+        char_counts = collections.Counter(all_chars)
+        self.assertEqual(char_counts["Sofonías"], 2)
+        self.assertEqual(char_counts["Josías"], 1)
 
 
 if __name__ == "__main__":
