@@ -38,7 +38,8 @@ from pathlib import Path
 
 from auditor import (
     evaluate_question, run_audit, extract_numbers, normalize, detect_book_key,
-    token_matches_text, BOOK_CONFIGS, is_locative_or_collective_entity, resolve_implicit_speaker
+    token_matches_text, BOOK_CONFIGS, is_locative_or_collective_entity, resolve_implicit_speaker,
+    is_narrative_source_attribution
 )
 
 GENESIS_PATH = Path(__file__).parent / "genesis-master-input.json"
@@ -4170,6 +4171,55 @@ class TestAuditorCanonical(unittest.TestCase):
         })
         self.assertEqual(questions_with_add_refs, 9)
         self.assertEqual(total_add_refs, 12)
+
+    def test_is_narrative_source_attribution_generic_cases(self) -> None:
+        """Verifica la distinción genérica entre personajes participantes y atribuciones narrativas/fuentes."""
+        # Caso 1: Atribución del narrador en opción A ("Lucas señala...")
+        text_case1 = "Vuelve agradeciendo a Dios, y Lucas señala que era samaritano"
+        self.assertTrue(is_narrative_source_attribution("lucas", text_case1))
+
+        # Caso 2: Personaje bíblico participante real ("Lucas acompañó a Pablo") -> NO es atribución
+        text_case2 = "Lucas acompañó a Pablo en sus viajes misioneros"
+        self.assertFalse(is_narrative_source_attribution("lucas", text_case2))
+
+        # Caso 3: Prefijo de fuente ("según Lucas...")
+        text_case3 = "La ofrenda fue destacada según Lucas como un acto de fe"
+        self.assertTrue(is_narrative_source_attribution("lucas", text_case3))
+
+        # Caso 4: Generalización a otros libros y narradores ("Marcos relata...", "Mateo menciona...", "Juan presenta...")
+        self.assertTrue(is_narrative_source_attribution("marcos", "Marcos relata la curación del ciego"))
+        self.assertTrue(is_narrative_source_attribution("mateo", "Mateo menciona la genealogía"))
+        self.assertTrue(is_narrative_source_attribution("juan", "Juan presenta el discurso del pan de vida"))
+        self.assertTrue(is_narrative_source_attribution("lucas", "En el relato de Lucas sobre el buen samaritano"))
+        self.assertTrue(is_narrative_source_attribution("lucas", "Como subraya Lucas en su evangelio"))
+
+        # Caso 5: Nombre de libro/personaje sin patrón de atribución -> NO queda excluido
+        self.assertFalse(is_narrative_source_attribution("samuel", "Samuel habló al pueblo con firmeza"))
+        self.assertFalse(is_narrative_source_attribution("david", "David derrotó a Goliat en el valle"))
+
+    def test_nqb_nt_luc_0068_narrative_attribution_resolved(self) -> None:
+        """Verifica que NQB-NT-LUC-0068 no falle en control_nombres_propios ni control_rango_suficiente."""
+        if "NQB-NT-LUC-0068" not in self.luke_questions:
+            self.skipTest("NQB-NT-LUC-0068 no disponible en luke-master-input.json")
+
+        q = self.get_luke_question("NQB-NT-LUC-0068")
+        verse_map = {
+            11: "Yendo Jesús a Jerusalén, pasaba entre Samaria y Galilea.",
+            12: "Y al entrar en una aldea, le salieron al encuentro diez hombres leprosos, los cuales se pararon de lejos",
+            13: "y alzaron la voz, diciendo: ¡Jesús, Maestro, ten misericordia de nosotros!",
+            14: "Cuando él los vio, les dijo: Id, mostraos a los sacerdotes. Y aconteció que mientras iban, fueron limpiados.",
+            15: "Entonces uno de ellos, viendo que había sido sanado, volvió, glorificando a Dios a gran voz,",
+            16: "y se postró rostro en tierra a sus pies, dándole gracias; y éste era samaritano.",
+            17: "Respondiendo Jesús, dijo: ¿No son diez los que fueron limpiados? Y los nueve, ¿dónde están?",
+            18: "¿No hubo quien volviese y diese gloria a Dios sino este extranjero?",
+            19: "Y le dijo: Levántate, vete; tu fe te ha salvado."
+        }
+
+        res = evaluate_question(q, verse_map, book_key="luke")
+        self.assertEqual(res["controles_superados"]["control_nombres_propios"], "PASS")
+        self.assertEqual(res["controles_superados"]["control_rango_suficiente"], "PASS")
+        self.assertEqual(res["estado"], "VERIFICADO")
+        self.assertEqual(res["incidencias"], [])
 
 
 if __name__ == "__main__":

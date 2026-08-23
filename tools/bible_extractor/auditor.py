@@ -1076,6 +1076,47 @@ def is_locative_or_collective_entity(token: str, full_text: str, declared_charac
     return False
 
 
+def is_narrative_source_attribution(token: str, full_text: str, book_cfg: dict | None = None) -> bool:
+    """
+    Determina genéricamente si un nombre propio coincide con una atribución narrativa / fuente documental
+    (ej: 'Lucas señala...', 'según Lucas...', 'el evangelio de Lucas...') y NO con un personaje participante
+    dentro del pasaje bíblico.
+    """
+    norm_token = normalize(token).strip()
+    text_norm = normalize(full_text)
+
+    # 1. Patrón: Nombre + verbo de atribución narrativa / relacional
+    # Ej: "lucas senala", "lucas menciona", "lucas relata", "mateo describe", "marcos registra", "lucas subraya"
+    verb_pat = (
+        r"\b" + re.escape(norm_token) + r"\s+"
+        r"(?:senala|señala|menciona|relata|narra|describe|registra|presenta|indica|anade|añade|"
+        r"observa|enfatiza|resalta|aclara|concluye|especifica|testifica|cuenta|"
+        r"recuerda|destaca|explica|subraya|afirma)\b"
+    )
+    if re.search(verb_pat, text_norm):
+        return True
+
+    # 2. Patrón: Prefijo de fuente / narración + Nombre
+    # Ej: "segun lucas", "conforme a lucas", "de acuerdo con lucas", "como senala lucas", "como relata lucas"
+    source_prefix_pat = (
+        r"\b(?:segun|según|conforme\s+a|de\s+acuerdo\s+con|como\s+(?:senala|señala|relata|registra|menciona|narra|indica|describe|subraya|destaca|dice))\s+"
+        + re.escape(norm_token) + r"\b"
+    )
+    if re.search(source_prefix_pat, text_norm):
+        return True
+
+    # 3. Patrón: Expresión de documento / evangelio / relato + Nombre
+    # Ej: "evangelio de lucas", "evangelio segun lucas", "relato de lucas", "narracion de lucas", "texto de lucas"
+    doc_prefix_pat = (
+        r"\b(?:evangelio\s+(?:de|segun|según)|relato\s+de|narracion\s+de|narración\s+de|texto\s+de|libro\s+de|carta\s+de|epistola\s+de|epístola\s+de)\s+"
+        + re.escape(norm_token) + r"\b"
+    )
+    if re.search(doc_prefix_pat, text_norm):
+        return True
+
+    return False
+
+
 def resolve_implicit_speaker(
     entity_name: str,
     passage_norm: str,
@@ -1899,12 +1940,16 @@ def evaluate_question(
         if word in BIBLE_PERSONAJES:
             if is_locative_or_collective_entity(word, opcion_a, characters):
                 continue
+            if is_narrative_source_attribution(word, opcion_a, book_cfg):
+                continue
             entities_in_opt_a.add(word)
 
     entities_in_prompt = set()
     for word in normalize(prompt).split():
         if word in BIBLE_PERSONAJES:
             if is_locative_or_collective_entity(word, prompt, characters):
+                continue
+            if is_narrative_source_attribution(word, prompt, book_cfg):
                 continue
             entities_in_prompt.add(word)
 
