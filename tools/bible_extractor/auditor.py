@@ -667,6 +667,22 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "fut", "libia", "rio", "río", "tigris", "eufrates", "éufrates"
         },
     },
+    "habakkuk": {
+        "canonical_name": "Habacuc",
+        "api_name": "Habacuc",
+        "aliases": {
+            "habacuc", "habakkuk", "hab", "libro de habacuc"
+        },
+        "total_chapters": 3,
+        "blocks": [
+            (1, 3, "habakkuk-01-03.json"),
+        ],
+        "default_output_dir": "build/audit/habakkuk",
+        "ambient_places": {
+            "caldeos", "caldea", "juda", "judá", "israel", "teman", "temán", "paran", "parán", "monte de paran",
+            "monte de parán", "cusan", "cusán", "madian", "madián", "libano", "líbano", "mar", "abismo"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -782,6 +798,8 @@ BIBLE_PERSONAJES = {
     "miqueas", "morastita", "jotam", "jotám", "acaz", "ezequias", "ezequías", "gobernantes de israel", "profetas", "balac", "balaam", "beor", "omri", "acab",
     # Nahúm
     "nahum", "nahúm", "elcesita",
+    # Habacuc
+    "habacuc", "habakkuk",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",

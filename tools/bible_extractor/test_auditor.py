@@ -75,6 +75,7 @@ OBADIAH_PATH = Path(__file__).parent / "obadiah-master-input.json"
 JONAH_PATH = Path(__file__).parent / "jonah-master-input.json"
 MICAH_PATH = Path(__file__).parent / "micah-master-input.json"
 NAHUM_PATH = Path(__file__).parent / "nahum-master-input.json"
+HABAKKUK_PATH = Path(__file__).parent / "habakkuk-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -281,6 +282,12 @@ class TestAuditorCanonical(unittest.TestCase):
         else:
             cls.nahum_questions = {}
 
+        if HABAKKUK_PATH.exists():
+            raw_hab = json.loads(HABAKKUK_PATH.read_text(encoding="utf-8"))
+            cls.habakkuk_questions = {q["id"]: q for q in (raw_hab.get("questions", []) if isinstance(raw_hab, dict) else raw_hab)}
+        else:
+            cls.habakkuk_questions = {}
+
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
 
@@ -422,6 +429,10 @@ class TestAuditorCanonical(unittest.TestCase):
     def get_nahum_question(self, qid: str) -> dict:
         self.assertIn(qid, self.nahum_questions, f"ID '{qid}' no encontrado en nahum-master-input.json")
         return copy.deepcopy(self.nahum_questions[qid])
+
+    def get_habakkuk_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.habakkuk_questions, f"ID '{qid}' no encontrado en habakkuk-master-input.json")
+        return copy.deepcopy(self.habakkuk_questions[qid])
 
     # --- TEST GLOBAL DE CONSISTENCIA DE IDs Y REFERENCIAS ---
 
@@ -3310,6 +3321,85 @@ class TestAuditorCanonical(unittest.TestCase):
 
         char_counts = collections.Counter(all_chars)
         self.assertEqual(char_counts["Nahúm"], 1)
+
+    # --- TESTS PARA HABACUC ---
+
+    def test_detect_book_key_habakkuk(self) -> None:
+        """Verifica la detección automática de clave para Habacuc."""
+        spec_hab = {"questions": [{"id": "NQB-AT-HAB-0001", "book": "Habacuc"}]}
+        self.assertEqual(detect_book_key(spec_hab), "habakkuk")
+
+        spec_alias = {"questions": [{"id": "NQB-AT-HAB-0001", "book": "habacuc"}]}
+        self.assertEqual(detect_book_key(spec_alias), "habakkuk")
+
+        spec_en = {"questions": [{"id": "NQB-AT-HAB-0001", "book": "Habakkuk"}]}
+        self.assertEqual(detect_book_key(spec_en), "habakkuk")
+
+        spec_libro = {"questions": [{"id": "NQB-AT-HAB-0001", "book": "Libro de Habacuc"}]}
+        self.assertEqual(detect_book_key(spec_libro), "habakkuk")
+
+    def test_habakkuk_book_config_and_aliases(self) -> None:
+        """Verifica configuración canónica de Habacuc: 3 capítulos, 1 bloque."""
+        self.assertIn("habakkuk", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["habakkuk"]
+        self.assertEqual(cfg["canonical_name"], "Habacuc")
+        self.assertEqual(cfg["api_name"], "Habacuc")
+        self.assertEqual(cfg["total_chapters"], 3)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertEqual(cfg["blocks"][0], (1, 3, "habakkuk-01-03.json"))
+        self.assertTrue({"habacuc", "habakkuk", "hab"}.issubset(cfg["aliases"]))
+
+    def test_global_canonical_id_reference_integrity_habakkuk(self) -> None:
+        """Verifica consistencia de IDs, referencias y metadatos en Habacuc (36 preguntas, 3/3 capítulos cubiertos, distribución 12/13/11, 29 AT_GENERAL, 7 PERSONAJES_BIBLICOS, 2 con additional_refs, 4 totales)."""
+        if not self.habakkuk_questions:
+            self.skipTest("habakkuk-master-input.json no disponible")
+        self.assertEqual(len(self.habakkuk_questions), 36)
+        chapter_counts = {}
+        personajes_count = 0
+        general_count = 0
+        all_chars = []
+        questions_with_add_refs = 0
+        total_add_refs = 0
+        for qid, q in self.habakkuk_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            self.assertIsNotNone(ch)
+            self.assertTrue(1 <= ch <= 3, f"Capítulo {ch} fuera del rango 1..3 en {qid}")
+            chapter_counts[ch] = chapter_counts.get(ch, 0) + 1
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+            self.assertEqual(q.get("correct_option"), "A")
+            self.assertEqual(q.get("correct_answer"), q.get("opcion_a"))
+            self.assertEqual(q.get("question_type"), "MULTIPLE_CHOICE")
+
+            all_chars.extend(q.get("characters", []))
+
+            cat = q.get("category")
+            if cat == "PERSONAJES_BIBLICOS":
+                personajes_count += 1
+                self.assertGreater(len(q.get("characters", [])), 0, f"Pregunta de personajes sin characters en {qid}")
+            elif cat == "AT_GENERAL":
+                general_count += 1
+
+            add_refs = q.get("additional_references", [])
+            if len(add_refs) > 0:
+                questions_with_add_refs += 1
+                total_add_refs += len(add_refs)
+
+        expected_dist = {1: 12, 2: 13, 3: 11}
+        self.assertEqual(chapter_counts, expected_dist)
+        self.assertEqual(personajes_count, 7, f"Se esperaban 7 preguntas de PERSONAJES_BIBLICOS, halladas {personajes_count}")
+        self.assertEqual(general_count, 29, f"Se esperaban 29 preguntas de AT_GENERAL, halladas {general_count}")
+        self.assertEqual(questions_with_add_refs, 2, f"Se esperaban 2 preguntas con additional_references, halladas {questions_with_add_refs}")
+        self.assertEqual(total_add_refs, 4, f"Se esperaban 4 referencias adicionales en total, halladas {total_add_refs}")
+
+        char_counts = collections.Counter(all_chars)
+        self.assertEqual(char_counts["Habacuc"], 7)
 
 
 if __name__ == "__main__":

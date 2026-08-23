@@ -4,6 +4,7 @@ on:
   push:
     branches: [rvr1960-audit, main, audit-genesis-full-rvr1960]
     paths:
+      - "tools/bible_extractor/habakkuk-master-input.json"
       - "tools/bible_extractor/nahum-master-input.json"
       - "tools/bible_extractor/micah-master-input.json"
       - "tools/bible_extractor/jonah-master-input.json"
@@ -46,6 +47,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - "tools/bible_extractor/habakkuk-master-input.json"
       - "tools/bible_extractor/nahum-master-input.json"
       - "tools/bible_extractor/micah-master-input.json"
       - "tools/bible_extractor/jonah-master-input.json"
@@ -90,7 +92,7 @@ on:
       input_file:
         description: "Ruta del archivo de entrada de preguntas"
         required: true
-        default: "tools/bible_extractor/nahum-master-input.json"
+        default: "tools/bible_extractor/habakkuk-master-input.json"
         type: string
 
 permissions:
@@ -119,7 +121,9 @@ jobs:
         run: |
           INPUT_FILE="${{ inputs.input_file || '' }}"
           if [ -z "$INPUT_FILE" ]; then
-            if [ -f "tools/bible_extractor/nahum-master-input.json" ]; then
+            if [ -f "tools/bible_extractor/habakkuk-master-input.json" ]; then
+              INPUT_FILE="tools/bible_extractor/habakkuk-master-input.json"
+            elif [ -f "tools/bible_extractor/nahum-master-input.json" ]; then
               INPUT_FILE="tools/bible_extractor/nahum-master-input.json"
             elif [ -f "tools/bible_extractor/micah-master-input.json" ]; then
               INPUT_FILE="tools/bible_extractor/micah-master-input.json"
@@ -195,7 +199,10 @@ jobs:
             fi
           fi
 
-          if [[ "$INPUT_FILE" == *"nahum"* ]] || [[ "$INPUT_FILE" == *"nahúm"* ]]; then
+          if [[ "$INPUT_FILE" == *"habakkuk"* ]] || [[ "$INPUT_FILE" == *"habacuc"* ]]; then
+            OUTPUT_DIR="build/audit/habakkuk"
+            ARTIFACT_NAME="auditoria-habacuc-rvr1960-${{ github.run_number }}"
+          elif [[ "$INPUT_FILE" == *"nahum"* ]] || [[ "$INPUT_FILE" == *"nahúm"* ]]; then
             OUTPUT_DIR="build/audit/nahum"
             ARTIFACT_NAME="auditoria-nahum-rvr1960-${{ github.run_number }}"
           elif [[ "$INPUT_FILE" == *"micah"* ]] || [[ "$INPUT_FILE" == *"miqueas"* ]]; then
