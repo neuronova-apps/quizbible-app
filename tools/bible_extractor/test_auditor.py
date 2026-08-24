@@ -108,6 +108,7 @@ JOHN1_PATH = Path(__file__).parent / "1john-master-input.json"
 JOHN2_PATH = Path(__file__).parent / "2john-master-input.json"
 JOHN3_PATH = Path(__file__).parent / "3john-master-input.json"
 JUDE_PATH = Path(__file__).parent / "jude-master-input.json"
+REVELATION_PATH = Path(__file__).parent / "revelation-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -499,6 +500,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.jude_questions = {q["id"]: q for q in (raw_jud.get("questions", []) if isinstance(raw_jud, dict) else raw_jud)}
         else:
             cls.jude_questions = {}
+
+        if REVELATION_PATH.exists():
+            raw_rev = json.loads(REVELATION_PATH.read_text(encoding="utf-8"))
+            cls.revelation_questions = {q["id"]: q for q in (raw_rev.get("questions", []) if isinstance(raw_rev, dict) else raw_rev)}
+        else:
+            cls.revelation_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -8916,6 +8923,220 @@ class TestAuditorCanonical(unittest.TestCase):
             for pq in prior_questions:
                 self.assertNotIn(pq["question"].strip(), jud_texts,
                                  f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y Judas")
+
+    # --- PRUEBAS ESPECÍFICAS DE APOCALIPSIS ---
+
+    def get_revelation_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.revelation_questions, f"ID '{qid}' no encontrado en revelation-master-input.json")
+        return copy.deepcopy(self.revelation_questions[qid])
+
+    def test_detect_book_key_revelation(self) -> None:
+        """Verifica detección de book_key para Apocalipsis y sus variantes."""
+        for alias in ["Apocalipsis", "apocalipsis", "Revelation", "revelation", "Rev", "rev", "Apoc", "apoc", "Apo", "apo", "Apocalipsis de Juan", "Revelacion", "Revelación"]:
+            spec = {"questions": [{"id": "NQB-NT-APO-0001", "book": alias}]}
+            self.assertEqual(detect_book_key(spec), "revelation",
+                             f"detect_book_key failed for alias: {alias}")
+
+    def test_revelation_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de Apocalipsis en BOOK_CONFIGS."""
+        self.assertIn("revelation", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["revelation"]
+        self.assertEqual(cfg["canonical_name"], "Apocalipsis")
+        self.assertEqual(cfg["api_name"], "Apocalipsis")
+        self.assertEqual(cfg["total_chapters"], 22)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("apocalipsis", cfg["aliases"])
+        self.assertIn("revelation", cfg["aliases"])
+        self.assertIn("rev", cfg["aliases"])
+        self.assertIn("apoc", cfg["aliases"])
+        self.assertIn("apo", cfg["aliases"])
+
+    def test_revelation_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de Apocalipsis."""
+        if not self.revelation_questions:
+            self.skipTest("revelation-master-input.json no disponible")
+        self.assertEqual(len(self.revelation_questions), 66)
+
+        # 22 capítulos, exactamente 3 preguntas cada uno
+        ch_counts = collections.Counter(q["chapter"] for q in self.revelation_questions.values())
+        self.assertEqual(len(ch_counts), 22)
+        for ch in range(1, 23):
+            self.assertEqual(ch_counts[ch], 3, f"Capítulo {ch} debe tener 3 preguntas, tiene {ch_counts[ch]}")
+
+        # IDs: NQB-NT-APO-0001 a NQB-NT-APO-0066
+        ids = sorted(self.revelation_questions.keys())
+        self.assertEqual(ids[0], "NQB-NT-APO-0001")
+        self.assertEqual(ids[-1], "NQB-NT-APO-0066")
+        self.assertEqual(len(set(ids)), 66)
+
+        # Dificultad: Básico=14, Intermedio=25, Avanzado=20, Experto=7
+        diff_counts = collections.Counter(q["difficulty"] for q in self.revelation_questions.values())
+        self.assertEqual(diff_counts["Básico"], 14)
+        self.assertEqual(diff_counts["Intermedio"], 25)
+        self.assertEqual(diff_counts["Avanzado"], 20)
+        self.assertEqual(diff_counts["Experto"], 7)
+
+        # Tipos: 58 MC, 8 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.revelation_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 58)
+        self.assertEqual(type_counts["TRUE_FALSE"], 8)
+
+        tf_ids = sorted(q["id"] for q in self.revelation_questions.values() if q.get("question_type") == "TRUE_FALSE")
+        expected_tf = [
+            "NQB-NT-APO-0003", "NQB-NT-APO-0011", "NQB-NT-APO-0015", "NQB-NT-APO-0024",
+            "NQB-NT-APO-0027", "NQB-NT-APO-0045", "NQB-NT-APO-0054", "NQB-NT-APO-0063"
+        ]
+        self.assertEqual(tf_ids, expected_tf)
+
+    def test_revelation_categories_and_characters(self) -> None:
+        """Verifica categorías y personajes de Apocalipsis."""
+        if not self.revelation_questions:
+            self.skipTest("revelation-master-input.json no disponible")
+        cat_counts = collections.Counter(q["category"] for q in self.revelation_questions.values())
+        self.assertEqual(cat_counts["NT_GENERAL"], 53)
+        self.assertEqual(cat_counts["JESUS_PALABRAS"], 8)
+        self.assertEqual(cat_counts["PERSONAJES_BIBLICOS"], 5)
+
+        jp_ids = sorted(q["id"] for q in self.revelation_questions.values() if q["category"] == "JESUS_PALABRAS")
+        self.assertEqual(jp_ids, [
+            "NQB-NT-APO-0003", "NQB-NT-APO-0004", "NQB-NT-APO-0005", "NQB-NT-APO-0006",
+            "NQB-NT-APO-0007", "NQB-NT-APO-0008", "NQB-NT-APO-0009", "NQB-NT-APO-0066"
+        ])
+
+        pb_qs = {q["id"]: q for q in self.revelation_questions.values() if q["category"] == "PERSONAJES_BIBLICOS"}
+        self.assertEqual(set(pb_qs.keys()), {
+            "NQB-NT-APO-0001", "NQB-NT-APO-0002", "NQB-NT-APO-0030", "NQB-NT-APO-0035", "NQB-NT-APO-0056"
+        })
+        self.assertEqual(pb_qs["NQB-NT-APO-0001"]["characters"], ["Juan"])
+        self.assertEqual(pb_qs["NQB-NT-APO-0002"]["characters"], ["Jesucristo", "Juan"])
+        self.assertEqual(pb_qs["NQB-NT-APO-0030"]["characters"], ["Juan"])
+        self.assertEqual(set(pb_qs["NQB-NT-APO-0035"]["characters"]), {"Miguel", "dragón"})
+        self.assertEqual(pb_qs["NQB-NT-APO-0056"]["characters"], ["Jesucristo"])
+
+    def test_revelation_additional_references(self) -> None:
+        """Verifica las 8 preguntas con 12 referencias en Apocalipsis."""
+        if not self.revelation_questions:
+            self.skipTest("revelation-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-APO-0001": ["Apocalipsis 1:9"],
+            "NQB-NT-APO-0006": ["Números 25:1-3", "Números 31:16"],
+            "NQB-NT-APO-0012": ["Génesis 1:1"],
+            "NQB-NT-APO-0013": ["Génesis 49:9-10", "Isaías 11:1"],
+            "NQB-NT-APO-0030": ["Ezequiel 3:1-3"],
+            "NQB-NT-APO-0035": ["Daniel 10:13", "Judas 1:9"],
+            "NQB-NT-APO-0043": ["Éxodo 15:1"],
+            "NQB-NT-APO-0064": ["Génesis 2:9", "Ezequiel 47:12"],
+        }
+        found_add_refs = {
+            qid: q["additional_references"]
+            for qid, q in self.revelation_questions.items()
+            if q.get("additional_references")
+        }
+        self.assertEqual(len(found_add_refs), 8)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 12)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_revelation_modes(self) -> None:
+        """Verifica la asignación de modos en Apocalipsis."""
+        if not self.revelation_questions:
+            self.skipTest("revelation-master-input.json no disponible")
+        mode_counts = collections.defaultdict(int)
+        for q in self.revelation_questions.values():
+            for m in q.get("eligible_modes", []):
+                mode_counts[m] += 1
+        self.assertEqual(mode_counts["NT"], 66)
+        self.assertEqual(mode_counts["AMBOS"], 66)
+        self.assertEqual(mode_counts["JESUS_PALABRAS"], 8)
+        self.assertEqual(mode_counts["PERSONAJES_NT"], 5)
+        self.assertEqual(mode_counts["PERSONAJES_AMBOS"], 5)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_NT"], 8)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_AMBOS"], 8)
+
+    def test_revelation_id_reference_integrity(self) -> None:
+        """Verifica consistencia de IDs y referencias en Apocalipsis."""
+        if not self.revelation_questions:
+            self.skipTest("revelation-master-input.json no disponible")
+        for qid, q in self.revelation_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_revelation_true_false_neutral_semantics(self) -> None:
+        """Verifica semántica neutral de TRUE_FALSE en Apocalipsis en las 8 preguntas."""
+        if not self.revelation_questions:
+            self.skipTest("revelation-master-input.json no disponible")
+        expected_semantics = {
+            "NQB-NT-APO-0003": ("verdadero", "falso", "A", "verdadero"),
+            "NQB-NT-APO-0011": ("verdadero", "falso", "A", "verdadero"),
+            "NQB-NT-APO-0015": ("verdadero", "falso", "A", "verdadero"),
+            "NQB-NT-APO-0024": ("verdadero", "falso", "A", "verdadero"),
+            "NQB-NT-APO-0027": ("falso", "verdadero", "A", "falso"),
+            "NQB-NT-APO-0045": ("verdadero", "falso", "A", "verdadero"),
+            "NQB-NT-APO-0054": ("verdadero", "falso", "A", "verdadero"),
+            "NQB-NT-APO-0063": ("falso", "verdadero", "A", "falso"),
+        }
+        for qid, (exp_a, exp_b, exp_opt, exp_ans) in expected_semantics.items():
+            q = self.get_revelation_question(qid)
+            self.assertEqual(q["opcion_a"].strip().lower(), exp_a, f"{qid} opcion_a")
+            self.assertEqual(q["opcion_b"].strip().lower(), exp_b, f"{qid} opcion_b")
+            self.assertEqual(q["correct_option"], exp_opt, f"{qid} correct_option")
+            self.assertEqual(q["correct_answer"].strip().lower(), exp_ans, f"{qid} correct_answer")
+
+    def test_revelation_no_duplicates_within(self) -> None:
+        """Verifica que no haya preguntas duplicadas internamente en Apocalipsis."""
+        if not self.revelation_questions:
+            self.skipTest("revelation-master-input.json no disponible")
+        questions_texts = [q["question"].strip() for q in self.revelation_questions.values()]
+        self.assertEqual(len(questions_texts), len(set(questions_texts)), "Duplicados detectados internamente")
+
+    def test_revelation_no_duplicates_cross_nt(self) -> None:
+        """Verifica que no haya preguntas duplicadas entre Apocalipsis y los 26 libros NT anteriores."""
+        if not self.revelation_questions:
+            self.skipTest("revelation-master-input.json no disponible")
+        apo_texts = {q["question"].strip() for q in self.revelation_questions.values()}
+        prior_nt = [
+            PHILIPPIANS_PATH.parent / "matthew-master-input.json",
+            PHILIPPIANS_PATH.parent / "mark-master-input.json",
+            PHILIPPIANS_PATH.parent / "luke-master-input.json",
+            PHILIPPIANS_PATH.parent / "john-master-input.json",
+            PHILIPPIANS_PATH.parent / "acts-master-input.json",
+            PHILIPPIANS_PATH.parent / "romans-master-input.json",
+            PHILIPPIANS_PATH.parent / "1corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "galatians-master-input.json",
+            PHILIPPIANS_PATH.parent / "ephesians-master-input.json",
+            PHILIPPIANS_PATH.parent / "philippians-master-input.json",
+            PHILIPPIANS_PATH.parent / "colossians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "2timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "titus-master-input.json",
+            PHILIPPIANS_PATH.parent / "philemon-master-input.json",
+            PHILIPPIANS_PATH.parent / "hebrews-master-input.json",
+            PHILIPPIANS_PATH.parent / "james-master-input.json",
+            PHILIPPIANS_PATH.parent / "1peter-master-input.json",
+            PHILIPPIANS_PATH.parent / "2peter-master-input.json",
+            PHILIPPIANS_PATH.parent / "1john-master-input.json",
+            PHILIPPIANS_PATH.parent / "2john-master-input.json",
+            PHILIPPIANS_PATH.parent / "3john-master-input.json",
+            PHILIPPIANS_PATH.parent / "jude-master-input.json",
+        ]
+        for prior_path in prior_nt:
+            if not prior_path.exists():
+                continue
+            prior_data = json.loads(prior_path.read_text(encoding="utf-8"))
+            prior_questions = prior_data.get("questions", []) if isinstance(prior_data, dict) else prior_data
+            for pq in prior_questions:
+                self.assertNotIn(pq["question"].strip(), apo_texts,
+                                 f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y Apocalipsis")
 
 
 if __name__ == "__main__":

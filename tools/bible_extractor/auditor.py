@@ -1197,6 +1197,20 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
         "default_output_dir": "build/audit/jude",
         "ambient_places": set(),
     },
+    "revelation": {
+        "canonical_name": "Apocalipsis",
+        "api_name": "Apocalipsis",
+        "aliases": {
+            "apocalipsis", "revelation", "rev", "apoc", "apo",
+            "apocalipsis de juan", "revelacion", "revelación"
+        },
+        "total_chapters": 22,
+        "blocks": [
+            (1, 22, "revelation-01-22.json"),
+        ],
+        "default_output_dir": "build/audit/revelation",
+        "ambient_places": set(),
+    },
 }
 
 STOPWORDS = {
@@ -1343,7 +1357,7 @@ BIBLE_PERSONAJES = {
     "filologo", "filólogo", "julia", "nereo", "olimpas", "tercio", "gayo", "erasto", "cuarto",
     "lucio", "sosipater", "sosípater", "adan", "adán", "cristo",
     "cefas", "estefanas", "estéfanas", "cloe", "fortunato", "acaico",
-    "silvano", "eva", "aretas", "belial", "satanas", "satanás", "abrahan", "abrahán",
+    "silvano", "eva", "aretas", "belial", "satanas", "satanás", "dragon", "dragón", "abrahan", "abrahán",
     "lazaro", "lázaro", "marta", "cleofas", "cornelio", "saulo", "bernice", "agripa", "felix", "félix",
     "gamaliel", "tito", "silas", "apolos", "aquila", "áquila", "priscila", "filemon", "filemón", "onesimo", "onésimo",
     "epafrodito", "evodia", "sintique", "síntique", "clemente",
