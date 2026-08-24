@@ -1,0 +1,73 @@
+name: Auditoría Global de la Biblia Protestante
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - audit-genesis-full-rvr1960
+    paths:
+      - 'tools/bible_extractor/audit_bible_global.py'
+      - 'tools/bible_extractor/test_audit_bible_global.py'
+      - 'tools/bible_extractor/bible-global-manifest-v1.json'
+      - 'tools/bible_extractor/bible-global-audit-status-map-v1.json'
+      - '.github/workflows/audit-bible-global.yml'
+  pull_request:
+    branches:
+      - audit-genesis-full-rvr1960
+    paths:
+      - 'tools/bible_extractor/audit_bible_global.py'
+      - 'tools/bible_extractor/test_audit_bible_global.py'
+      - 'tools/bible_extractor/bible-global-manifest-v1.json'
+      - 'tools/bible_extractor/bible-global-audit-status-map-v1.json'
+      - '.github/workflows/audit-bible-global.yml'
+
+jobs:
+  audit-bible-global:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install requests flake8 mypy pytest beautifulsoup4
+
+      - name: Ejecutar verificación de calidad web y SEO
+        run: python scripts/quality_check.py
+
+      - name: Ejecutar batería de pruebas de auditor individual
+        run: python tools/bible_extractor/test_auditor.py
+
+      - name: Ejecutar batería de pruebas de auditor global AT
+        run: python tools/bible_extractor/test_audit_ot_global.py
+
+      - name: Ejecutar batería de pruebas de auditor global NT
+        run: python tools/bible_extractor/test_audit_nt_global.py
+
+      - name: Ejecutar batería de pruebas de auditor global Biblia (66 libros)
+        run: python tools/bible_extractor/test_audit_bible_global.py
+
+      - name: Ejecutar batería de pruebas de exportación runtime
+        run: python tools/runtime_export/test_export_runtime.py
+
+      - name: Ejecutar Auditoría Transversal de la Biblia Protestante (66 libros)
+        run: python tools/bible_extractor/audit_bible_global.py --output-dir build/audit/bible-global
+
+      - name: Subir artefacto de auditoría transversal
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-global-biblia-rvr1960-${{ github.run_number }}
+          path: build/audit/bible-global/
+          if-no-files-found: error
+          retention-days: 90
