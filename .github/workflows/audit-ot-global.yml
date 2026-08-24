@@ -9,6 +9,7 @@ on:
       - 'tools/bible_extractor/audit_ot_global.py'
       - 'tools/bible_extractor/test_audit_ot_global.py'
       - 'tools/bible_extractor/ot-global-manifest-v1.json'
+      - 'tools/bible_extractor/ot-global-audit-status-map-v1.json'
       - '.github/workflows/audit-ot-global.yml'
   pull_request:
     branches:
@@ -17,6 +18,7 @@ on:
       - 'tools/bible_extractor/audit_ot_global.py'
       - 'tools/bible_extractor/test_audit_ot_global.py'
       - 'tools/bible_extractor/ot-global-manifest-v1.json'
+      - 'tools/bible_extractor/ot-global-audit-status-map-v1.json'
       - '.github/workflows/audit-ot-global.yml'
 
 jobs:
