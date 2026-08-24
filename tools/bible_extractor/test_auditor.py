@@ -100,6 +100,7 @@ TIMOTHY1_PATH = Path(__file__).parent / "1timothy-master-input.json"
 TIMOTHY2_PATH = Path(__file__).parent / "2timothy-master-input.json"
 TITUS_PATH = Path(__file__).parent / "titus-master-input.json"
 PHILEMON_PATH = Path(__file__).parent / "philemon-master-input.json"
+HEBREWS_PATH = Path(__file__).parent / "hebrews-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -443,6 +444,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.philemon_questions = {q["id"]: q for q in (raw_flm.get("questions", []) if isinstance(raw_flm, dict) else raw_flm)}
         else:
             cls.philemon_questions = {}
+
+        if HEBREWS_PATH.exists():
+            raw_heb = json.loads(HEBREWS_PATH.read_text(encoding="utf-8"))
+            cls.hebrews_questions = {q["id"]: q for q in (raw_heb.get("questions", []) if isinstance(raw_heb, dict) else raw_heb)}
+        else:
+            cls.hebrews_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -6919,6 +6926,220 @@ class TestAuditorCanonical(unittest.TestCase):
             for pq in prior_questions:
                 self.assertNotIn(pq["question"].strip(), flm_texts,
                                  f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y Filemón")
+
+    # --- PRUEBAS ESPECÍFICAS DE HEBREOS ---
+
+    def get_hebrews_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.hebrews_questions, f"ID '{qid}' no encontrado en hebrews-master-input.json")
+        return copy.deepcopy(self.hebrews_questions[qid])
+
+    def test_detect_book_key_hebrews(self) -> None:
+        """Verifica detección de book_key para Hebreos y sus variantes."""
+        for alias in ["Hebreos", "hebreos", "Hebrews", "hebrews", "heb", "Epístola a los Hebreos", "Carta a los Hebreos"]:
+            spec = {"questions": [{"id": "NQB-NT-HEB-0001", "book": alias}]}
+            self.assertEqual(detect_book_key(spec), "hebrews",
+                             f"detect_book_key failed for alias: {alias}")
+
+    def test_hebrews_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de Hebreos en BOOK_CONFIGS."""
+        self.assertIn("hebrews", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["hebrews"]
+        self.assertEqual(cfg["canonical_name"], "Hebreos")
+        self.assertEqual(cfg["api_name"], "Hebreos")
+        self.assertEqual(cfg["total_chapters"], 13)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("hebreos", cfg["aliases"])
+        self.assertIn("hebrews", cfg["aliases"])
+        self.assertIn("heb", cfg["aliases"])
+        self.assertIn("salem", cfg["ambient_places"])
+        self.assertIn("sinai", cfg["ambient_places"])
+        self.assertIn("sion", cfg["ambient_places"])
+        self.assertIn("italia", cfg["ambient_places"])
+
+    def test_hebrews_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de Hebreos."""
+        if not self.hebrews_questions:
+            self.skipTest("hebrews-master-input.json no disponible")
+        self.assertEqual(len(self.hebrews_questions), 78)
+
+        # 6 preguntas en cada uno de los 13 capítulos
+        ch_counts = collections.Counter(q["chapter"] for q in self.hebrews_questions.values())
+        self.assertEqual(len(ch_counts), 13)
+        for ch in range(1, 14):
+            self.assertEqual(ch_counts[ch], 6, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 6")
+
+        # IDs: NQB-NT-HEB-0001 a NQB-NT-HEB-0078
+        ids = sorted(self.hebrews_questions.keys())
+        self.assertEqual(ids[0], "NQB-NT-HEB-0001")
+        self.assertEqual(ids[-1], "NQB-NT-HEB-0078")
+        self.assertEqual(len(set(ids)), 78)
+
+        # Dificultad: Básico=22, Intermedio=26, Avanzado=22, Experto=8
+        diff_counts = collections.Counter(q["difficulty"] for q in self.hebrews_questions.values())
+        self.assertEqual(diff_counts["Básico"], 22)
+        self.assertEqual(diff_counts["Intermedio"], 26)
+        self.assertEqual(diff_counts["Avanzado"], 22)
+        self.assertEqual(diff_counts["Experto"], 8)
+
+        # Tipos: 65 MC, 13 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.hebrews_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 65)
+        self.assertEqual(type_counts["TRUE_FALSE"], 13)
+
+        tf_ids = sorted(q["id"] for q in self.hebrews_questions.values() if q.get("question_type") == "TRUE_FALSE")
+        expected_tf = sorted([f"NQB-NT-HEB-{i:04d}" for i in range(6, 79, 6)])
+        self.assertEqual(tf_ids, expected_tf)
+
+    def test_hebrews_categories(self) -> None:
+        """Verifica categorías sin categorías de Evangelios en Hebreos."""
+        if not self.hebrews_questions:
+            self.skipTest("hebrews-master-input.json no disponible")
+        cat_counts = collections.Counter(q["category"] for q in self.hebrews_questions.values())
+        self.assertEqual(cat_counts["NT_GENERAL"], 64)
+        self.assertEqual(cat_counts["PERSONAJES_BIBLICOS"], 14)
+        for forbidden in ["JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"]:
+            self.assertEqual(cat_counts.get(forbidden, 0), 0, f"Categoría no permitida: {forbidden}")
+
+    def test_hebrews_additional_references(self) -> None:
+        """Verifica las 12 preguntas con 14 referencias individuales en Hebreos."""
+        if not self.hebrews_questions:
+            self.skipTest("hebrews-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-HEB-0003": ["Salmos 2:7", "2 Samuel 7:14"],
+            "NQB-NT-HEB-0014": ["Salmos 95:7-11"],
+            "NQB-NT-HEB-0016": ["Números 14:1-35"],
+            "NQB-NT-HEB-0026": ["Salmos 110:4"],
+            "NQB-NT-HEB-0034": ["Génesis 22:16-18"],
+            "NQB-NT-HEB-0037": ["Génesis 14:18-20"],
+            "NQB-NT-HEB-0044": ["Jeremías 31:31-34"],
+            "NQB-NT-HEB-0050": ["Levítico 16:1-34"],
+            "NQB-NT-HEB-0063": ["Génesis 12:1-4", "Génesis 21:1-3"],
+            "NQB-NT-HEB-0064": ["Éxodo 2:11-15"],
+            "NQB-NT-HEB-0065": ["Josué 2:1-21"],
+            "NQB-NT-HEB-0069": ["Génesis 25:29-34"],
+        }
+        found_add_refs = {
+            qid: q["additional_references"]
+            for qid, q in self.hebrews_questions.items()
+            if q.get("additional_references")
+        }
+        self.assertEqual(len(found_add_refs), 12)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 14)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_hebrews_modes(self) -> None:
+        """Verifica la asignación de modos en Hebreos."""
+        if not self.hebrews_questions:
+            self.skipTest("hebrews-master-input.json no disponible")
+        mode_counts = collections.defaultdict(int)
+        for q in self.hebrews_questions.values():
+            for m in q.get("eligible_modes", []):
+                mode_counts[m] += 1
+        self.assertEqual(mode_counts["NT"], 78)
+        self.assertEqual(mode_counts["AMBOS"], 78)
+        self.assertEqual(mode_counts["PERSONAJES_NT"], 14)
+        self.assertEqual(mode_counts["PERSONAJES_AMBOS"], 14)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_NT"], 13)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_AMBOS"], 13)
+
+    def test_hebrews_id_reference_integrity(self) -> None:
+        """Verifica consistencia de IDs y referencias en Hebreos."""
+        if not self.hebrews_questions:
+            self.skipTest("hebrews-master-input.json no disponible")
+        for qid, q in self.hebrews_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_hebrews_true_false_neutral_semantics(self) -> None:
+        """Verifica semántica neutral de TRUE_FALSE: primeros 12 A=Falso/correct=A, HEB0078 A=Verdadero/correct=A."""
+        if not self.hebrews_questions:
+            self.skipTest("hebrews-master-input.json no disponible")
+        tf_ids = [f"NQB-NT-HEB-{i:04d}" for i in range(6, 79, 6)]
+        for qid in tf_ids[:12]:
+            q = self.get_hebrews_question(qid)
+            self.assertEqual(q["opcion_a"].strip().lower(), "falso", f"{qid}: opcion_a debe ser Falso")
+            self.assertEqual(q["opcion_b"].strip().lower(), "verdadero", f"{qid}: opcion_b debe ser Verdadero")
+            self.assertEqual(q["correct_option"], "A", f"{qid}: correct_option debe ser A")
+            self.assertEqual(q["correct_answer"].strip().lower(), "falso", f"{qid}: correct_answer debe ser Falso")
+
+        # HEB0078: A=Verdadero, B=Falso, correct_option=A, correct_answer=Verdadero
+        q78 = self.get_hebrews_question("NQB-NT-HEB-0078")
+        self.assertEqual(q78["opcion_a"].strip().lower(), "verdadero", "HEB0078: opcion_a debe ser Verdadero")
+        self.assertEqual(q78["opcion_b"].strip().lower(), "falso", "HEB0078: opcion_b debe ser Falso")
+        self.assertEqual(q78["correct_option"], "A", "HEB0078: correct_option debe ser A")
+        self.assertEqual(q78["correct_answer"].strip().lower(), "verdadero", "HEB0078: correct_answer debe ser Verdadero")
+
+    def test_hebrews_author_not_attributed_to_paul(self) -> None:
+        """Verifica que Hebreos no se trate como epístola paulina ni atribuya autoría a Pablo."""
+        if not self.hebrews_questions:
+            self.skipTest("hebrews-master-input.json no disponible")
+        # resolve_implicit_speaker no debe resolver Pablo en Hebreos
+        from auditor import resolve_implicit_speaker
+        verse_map = {1: "Dios, habiendo hablado muchas veces y de muchas maneras en otro tiempo a los padres por los profetas,"}
+        resolved = resolve_implicit_speaker("pablo", "dios habiendo hablado...", verse_map, 1, [], book_key="hebrews")
+        self.assertFalse(resolved, "Pablo no debe ser resuelto como orador implícito en Hebreos")
+
+    def test_hebrews_characters_and_places(self) -> None:
+        """Verifica que personajes y lugares de Hebreos estén en sus lexicons."""
+        from auditor import BIBLE_PERSONAJES, BIBLE_PLACES
+        expected_chars = [
+            "moises", "josue", "abraham", "melquisedec", "abel", "enoc", "noe",
+            "sara", "isaac", "jacob", "jose", "rahab", "gedeon", "barac", "sanson",
+            "jefte", "david", "samuel", "esau", "timoteo", "aaron"
+        ]
+        for p in expected_chars:
+            self.assertIn(p, BIBLE_PERSONAJES, f"Falta personaje: {p}")
+        for l in ["salem", "sinai", "sion", "italia", "roma"]:
+            self.assertIn(l, BIBLE_PLACES, f"Falta lugar: {l}")
+
+    def test_hebrews_no_duplicates_within(self) -> None:
+        """Verifica que no haya preguntas duplicadas internamente en Hebreos."""
+        if not self.hebrews_questions:
+            self.skipTest("hebrews-master-input.json no disponible")
+        questions_texts = [q["question"].strip() for q in self.hebrews_questions.values()]
+        self.assertEqual(len(questions_texts), len(set(questions_texts)), "Duplicados detectados internamente")
+
+    def test_hebrews_no_duplicates_cross_nt(self) -> None:
+        """Verifica que no haya preguntas duplicadas entre Hebreos y los 18 libros NT anteriores."""
+        if not self.hebrews_questions:
+            self.skipTest("hebrews-master-input.json no disponible")
+        heb_texts = {q["question"].strip() for q in self.hebrews_questions.values()}
+        prior_nt = [
+            PHILIPPIANS_PATH.parent / "matthew-master-input.json",
+            PHILIPPIANS_PATH.parent / "mark-master-input.json",
+            PHILIPPIANS_PATH.parent / "luke-master-input.json",
+            PHILIPPIANS_PATH.parent / "john-master-input.json",
+            PHILIPPIANS_PATH.parent / "acts-master-input.json",
+            PHILIPPIANS_PATH.parent / "romans-master-input.json",
+            PHILIPPIANS_PATH.parent / "1corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "galatians-master-input.json",
+            PHILIPPIANS_PATH.parent / "ephesians-master-input.json",
+            PHILIPPIANS_PATH.parent / "philippians-master-input.json",
+            PHILIPPIANS_PATH.parent / "colossians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "2timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "titus-master-input.json",
+            PHILIPPIANS_PATH.parent / "philemon-master-input.json",
+        ]
+        for prior_path in prior_nt:
+            if not prior_path.exists():
+                continue
+            prior_data = json.loads(prior_path.read_text(encoding="utf-8"))
+            prior_questions = prior_data.get("questions", []) if isinstance(prior_data, dict) else prior_data
+            for pq in prior_questions:
+                self.assertNotIn(pq["question"].strip(), heb_texts,
+                                 f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y Hebreos")
 
 
 if __name__ == "__main__":

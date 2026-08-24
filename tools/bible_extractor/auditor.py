@@ -1079,6 +1079,23 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "roma", "colosas"
         },
     },
+    "hebrews": {
+        "canonical_name": "Hebreos",
+        "api_name": "Hebreos",
+        "aliases": {
+            "hebreos", "hebrews", "heb",
+            "epistola a los hebreos", "epístola a los hebreos",
+            "carta a los hebreos"
+        },
+        "total_chapters": 13,
+        "blocks": [
+            (1, 13, "hebrews-01-13.json"),
+        ],
+        "default_output_dir": "build/audit/hebrews",
+        "ambient_places": {
+            "salem", "sinai", "sinaí", "sion", "sión", "roma", "italia", "jerusalen", "jerusalén"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -1286,7 +1303,7 @@ BIBLE_PLACES = {
     "tesalonica", "tesalónica", "berea", "atenas", "corinto", "macedonia", "filipos",
     "efeso", "éfeso", "roma", "mileto", "troas", "tróade", "troade",
     "antioquia", "antioquía", "iconio", "listra", "galacia", "dalmacia",
-    "creta", "nicopolis", "nicópolis",
+    "creta", "nicopolis", "nicópolis", "italia",
 }
 
 # Raíces de parentesco y lemas
