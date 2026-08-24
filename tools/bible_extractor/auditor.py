@@ -1141,6 +1141,20 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
         "default_output_dir": "build/audit/2peter",
         "ambient_places": set(),
     },
+    "1john": {
+        "canonical_name": "1 Juan",
+        "api_name": "1 Juan",
+        "aliases": {
+            "1 juan", "1juan", "1 john", "1john", "1jn", "1 jn",
+            "primera de juan", "primera carta de juan", "1ª juan", "1ra juan"
+        },
+        "total_chapters": 5,
+        "blocks": [
+            (1, 5, "1john-01-05.json"),
+        ],
+        "default_output_dir": "build/audit/1john",
+        "ambient_places": set(),
+    },
 }
 
 STOPWORDS = {
@@ -1295,7 +1309,7 @@ BIBLE_PERSONAJES = {
     "loida", "eunice", "figelo", "hermogenes", "hermógenes", "onesiforo", "onesíforo", "fileto", "janes", "jambres",
     "crescente", "carpo", "pudente", "lino", "claudia", "artemas", "zenas", "apia",
     # Otros comunes
-    "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
+    "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "jesucristo", "mateo", "marcos",
     "lucas", "esteban", "timoteo", "santiago",
 }
 

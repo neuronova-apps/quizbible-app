@@ -104,6 +104,7 @@ HEBREWS_PATH = Path(__file__).parent / "hebrews-master-input.json"
 JAMES_PATH = Path(__file__).parent / "james-master-input.json"
 PETER1_PATH = Path(__file__).parent / "1peter-master-input.json"
 PETER2_PATH = Path(__file__).parent / "2peter-master-input.json"
+JOHN1_PATH = Path(__file__).parent / "1john-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -471,6 +472,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.peter2_questions = {q["id"]: q for q in (raw_2pe.get("questions", []) if isinstance(raw_2pe, dict) else raw_2pe)}
         else:
             cls.peter2_questions = {}
+
+        if JOHN1_PATH.exists():
+            raw_1jn = json.loads(JOHN1_PATH.read_text(encoding="utf-8"))
+            cls.john1_questions = {q["id"]: q for q in (raw_1jn.get("questions", []) if isinstance(raw_1jn, dict) else raw_1jn)}
+        else:
+            cls.john1_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -8000,6 +8007,224 @@ class TestAuditorCanonical(unittest.TestCase):
             for pq in prior_questions:
                 self.assertNotIn(pq["question"].strip(), pe2_texts,
                                  f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y 2 Pedro")
+
+    # --- PRUEBAS ESPECÍFICAS DE 1 JUAN ---
+
+    def get_1john_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.john1_questions, f"ID '{qid}' no encontrado en 1john-master-input.json")
+        return copy.deepcopy(self.john1_questions[qid])
+
+    def test_detect_book_key_1john(self) -> None:
+        """Verifica detección de book_key para 1 Juan y sus variantes."""
+        for alias in ["1 Juan", "1juan", "1 John", "1john", "1jn", "1 jn", "Primera de Juan", "Primera carta de Juan", "1ª Juan", "1ra Juan"]:
+            spec = {"questions": [{"id": "NQB-NT-1JN-0001", "book": alias}]}
+            self.assertEqual(detect_book_key(spec), "1john",
+                             f"detect_book_key failed for alias: {alias}")
+
+    def test_1john_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de 1 Juan en BOOK_CONFIGS."""
+        self.assertIn("1john", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["1john"]
+        self.assertEqual(cfg["canonical_name"], "1 Juan")
+        self.assertEqual(cfg["api_name"], "1 Juan")
+        self.assertEqual(cfg["total_chapters"], 5)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("1 juan", cfg["aliases"])
+        self.assertIn("1juan", cfg["aliases"])
+        self.assertIn("1jn", cfg["aliases"])
+        self.assertIn("1 jn", cfg["aliases"])
+
+    def test_1john_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de 1 Juan."""
+        if not self.john1_questions:
+            self.skipTest("1john-master-input.json no disponible")
+        self.assertEqual(len(self.john1_questions), 30)
+
+        # 6 preguntas en cada uno de los 5 capítulos
+        ch_counts = collections.Counter(q["chapter"] for q in self.john1_questions.values())
+        self.assertEqual(len(ch_counts), 5)
+        for ch in range(1, 6):
+            self.assertEqual(ch_counts[ch], 6, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 6")
+
+        # IDs: NQB-NT-1JN-0001 a NQB-NT-1JN-0030
+        ids = sorted(self.john1_questions.keys())
+        self.assertEqual(ids[0], "NQB-NT-1JN-0001")
+        self.assertEqual(ids[-1], "NQB-NT-1JN-0030")
+        self.assertEqual(len(set(ids)), 30)
+
+        # Dificultad: Básico=6, Intermedio=10, Avanzado=9, Experto=5
+        diff_counts = collections.Counter(q["difficulty"] for q in self.john1_questions.values())
+        self.assertEqual(diff_counts["Básico"], 6)
+        self.assertEqual(diff_counts["Intermedio"], 10)
+        self.assertEqual(diff_counts["Avanzado"], 9)
+        self.assertEqual(diff_counts["Experto"], 5)
+
+        # Tipos: 25 MC, 5 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.john1_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 25)
+        self.assertEqual(type_counts["TRUE_FALSE"], 5)
+
+        tf_ids = sorted(q["id"] for q in self.john1_questions.values() if q.get("question_type") == "TRUE_FALSE")
+        expected_tf = sorted([f"NQB-NT-1JN-{i:04d}" for i in [6, 12, 18, 24, 30]])
+        self.assertEqual(tf_ids, expected_tf)
+
+    def test_1john_categories_and_characters(self) -> None:
+        """Verifica categorías y personajes específicos de 1 Juan."""
+        if not self.john1_questions:
+            self.skipTest("1john-master-input.json no disponible")
+        cat_counts = collections.Counter(q["category"] for q in self.john1_questions.values())
+        self.assertEqual(cat_counts["NT_GENERAL"], 26)
+        self.assertEqual(cat_counts["PERSONAJES_BIBLICOS"], 4)
+        for forbidden in ["JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"]:
+            self.assertEqual(cat_counts.get(forbidden, 0), 0, f"Categoría no permitida: {forbidden}")
+
+        pb_qs = {q["id"]: q for q in self.john1_questions.values() if q["category"] == "PERSONAJES_BIBLICOS"}
+        self.assertEqual(set(pb_qs.keys()), {"NQB-NT-1JN-0004", "NQB-NT-1JN-0007", "NQB-NT-1JN-0015", "NQB-NT-1JN-0027"})
+        self.assertEqual(pb_qs["NQB-NT-1JN-0004"]["characters"], ["Jesucristo"])
+        self.assertEqual(pb_qs["NQB-NT-1JN-0007"]["characters"], ["Jesucristo"])
+        self.assertEqual(pb_qs["NQB-NT-1JN-0015"]["characters"], ["Caín"])
+        self.assertEqual(pb_qs["NQB-NT-1JN-0027"]["characters"], ["Jesucristo"])
+        # Rango exacto de 1JN0027 debe ser 5:6-12
+        self.assertEqual(pb_qs["NQB-NT-1JN-0027"]["verse_start"], 6)
+        self.assertEqual(pb_qs["NQB-NT-1JN-0027"]["verse_end"], 12)
+
+    def test_1john_additional_references(self) -> None:
+        """Verifica las 13 preguntas con 13 referencias individuales en 1 Juan."""
+        if not self.john1_questions:
+            self.skipTest("1john-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-1JN-0001": ["Juan 1:1-4"],
+            "NQB-NT-1JN-0003": ["Salmos 32:5"],
+            "NQB-NT-1JN-0004": ["Mateo 26:28"],
+            "NQB-NT-1JN-0007": ["Hebreos 4:14-16"],
+            "NQB-NT-1JN-0009": ["Juan 13:34-35"],
+            "NQB-NT-1JN-0013": ["Juan 1:12"],
+            "NQB-NT-1JN-0015": ["Génesis 4:1-8"],
+            "NQB-NT-1JN-0016": ["Juan 15:13"],
+            "NQB-NT-1JN-0018": ["Santiago 2:15-16"],
+            "NQB-NT-1JN-0019": ["1 Tesalonicenses 5:20-21"],
+            "NQB-NT-1JN-0021": ["Juan 3:16"],
+            "NQB-NT-1JN-0027": ["Juan 3:36"],
+            "NQB-NT-1JN-0028": ["Mateo 6:10"],
+        }
+        found_add_refs = {
+            qid: q["additional_references"]
+            for qid, q in self.john1_questions.items()
+            if q.get("additional_references")
+        }
+        self.assertEqual(len(found_add_refs), 13)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 13)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_1john_modes(self) -> None:
+        """Verifica la asignación de modos en 1 Juan."""
+        if not self.john1_questions:
+            self.skipTest("1john-master-input.json no disponible")
+        mode_counts = collections.defaultdict(int)
+        for q in self.john1_questions.values():
+            for m in q.get("eligible_modes", []):
+                mode_counts[m] += 1
+        self.assertEqual(mode_counts["NT"], 30)
+        self.assertEqual(mode_counts["AMBOS"], 30)
+        self.assertEqual(mode_counts["PERSONAJES_NT"], 4)
+        self.assertEqual(mode_counts["PERSONAJES_AMBOS"], 4)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_NT"], 5)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_AMBOS"], 5)
+
+    def test_1john_id_reference_integrity(self) -> None:
+        """Verifica consistencia de IDs y referencias en 1 Juan."""
+        if not self.john1_questions:
+            self.skipTest("1john-master-input.json no disponible")
+        for qid, q in self.john1_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_1john_true_false_neutral_semantics(self) -> None:
+        """Verifica semántica neutral de TRUE_FALSE: 1JN0030 A=Verdadero/correct=A, otros 4 A=Falso/correct=A."""
+        if not self.john1_questions:
+            self.skipTest("1john-master-input.json no disponible")
+        for qid in ["NQB-NT-1JN-0006", "NQB-NT-1JN-0012", "NQB-NT-1JN-0018", "NQB-NT-1JN-0024"]:
+            q = self.get_1john_question(qid)
+            self.assertEqual(q["opcion_a"].strip().lower(), "falso", f"{qid}: opcion_a debe ser Falso")
+            self.assertEqual(q["opcion_b"].strip().lower(), "verdadero", f"{qid}: opcion_b debe ser Verdadero")
+            self.assertEqual(q["correct_option"], "A", f"{qid}: correct_option debe ser A")
+            self.assertEqual(q["correct_answer"].strip().lower(), "falso", f"{qid}: correct_answer debe ser Falso")
+
+        # 1JN0030: A=Verdadero, B=Falso, correct_option=A, correct_answer=Verdadero
+        q30 = self.get_1john_question("NQB-NT-1JN-0030")
+        self.assertEqual(q30["opcion_a"].strip().lower(), "verdadero", "1JN0030: opcion_a debe ser Verdadero")
+        self.assertEqual(q30["opcion_b"].strip().lower(), "falso", "1JN0030: opcion_b debe ser Falso")
+        self.assertEqual(q30["correct_option"], "A", "1JN0030: correct_option debe ser A")
+        self.assertEqual(q30["correct_answer"].strip().lower(), "verdadero", "1JN0030: correct_answer debe ser Verdadero")
+
+    def test_1john_characters_and_no_forced_speaker(self) -> None:
+        """Verifica entidades bíblicas de 1 Juan y que no se fuerce speaker=Juan sin evidencia."""
+        from auditor import BIBLE_PERSONAJES, resolve_implicit_speaker
+        self.assertIn("cain", BIBLE_PERSONAJES)
+        self.assertIn("jesucristo", BIBLE_PERSONAJES)
+
+        verse_map = {
+            1: "Lo que era desde el principio, lo que hemos oído, lo que hemos visto con nuestros ojos...",
+            2: "(porque la vida fue manifestada, y la hemos visto, y testificamos...)",
+            3: "lo que hemos visto y oído, eso os anunciamos..."
+        }
+        passage_norm = "lo que era desde el principio lo que hemos oido lo que hemos visto con nuestros ojos"
+        # 1 Juan no nombra al autor Juan en el texto, por lo que no debe resolverse como Juan arbitrariamente
+        resolved_juan = resolve_implicit_speaker("juan", passage_norm, verse_map, 1, ["Juan"], book_key="1john")
+        self.assertFalse(resolved_juan, "No debe resolverse 'Juan' como hablante implícito en 1 Juan sin mención en el texto")
+
+    def test_1john_no_duplicates_within(self) -> None:
+        """Verifica que no haya preguntas duplicadas internamente en 1 Juan."""
+        if not self.john1_questions:
+            self.skipTest("1john-master-input.json no disponible")
+        questions_texts = [q["question"].strip() for q in self.john1_questions.values()]
+        self.assertEqual(len(questions_texts), len(set(questions_texts)), "Duplicados detectados internamente")
+
+    def test_1john_no_duplicates_cross_nt(self) -> None:
+        """Verifica que no haya preguntas duplicadas entre 1 Juan y los 22 libros NT anteriores."""
+        if not self.john1_questions:
+            self.skipTest("1john-master-input.json no disponible")
+        jn1_texts = {q["question"].strip() for q in self.john1_questions.values()}
+        prior_nt = [
+            PHILIPPIANS_PATH.parent / "matthew-master-input.json",
+            PHILIPPIANS_PATH.parent / "mark-master-input.json",
+            PHILIPPIANS_PATH.parent / "luke-master-input.json",
+            PHILIPPIANS_PATH.parent / "john-master-input.json",
+            PHILIPPIANS_PATH.parent / "acts-master-input.json",
+            PHILIPPIANS_PATH.parent / "romans-master-input.json",
+            PHILIPPIANS_PATH.parent / "1corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "galatians-master-input.json",
+            PHILIPPIANS_PATH.parent / "ephesians-master-input.json",
+            PHILIPPIANS_PATH.parent / "philippians-master-input.json",
+            PHILIPPIANS_PATH.parent / "colossians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "2timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "titus-master-input.json",
+            PHILIPPIANS_PATH.parent / "philemon-master-input.json",
+            PHILIPPIANS_PATH.parent / "hebrews-master-input.json",
+            PHILIPPIANS_PATH.parent / "james-master-input.json",
+            PHILIPPIANS_PATH.parent / "1peter-master-input.json",
+            PHILIPPIANS_PATH.parent / "2peter-master-input.json",
+        ]
+        for prior_path in prior_nt:
+            if not prior_path.exists():
+                continue
+            prior_data = json.loads(prior_path.read_text(encoding="utf-8"))
+            prior_questions = prior_data.get("questions", []) if isinstance(prior_data, dict) else prior_data
+            for pq in prior_questions:
+                self.assertNotIn(pq["question"].strip(), jn1_texts,
+                                 f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y 1 Juan")
 
 
 if __name__ == "__main__":
