@@ -1619,6 +1619,71 @@ def resolve_implicit_speaker(
 
     return False
 
+
+def is_contextual_title_usage(
+    stem: str,
+    text_norm: str,
+    verse_map: dict[int, str],
+    start_verse: int,
+    characters: list[str] | None = None,
+    category: str = "",
+    eligible_modes: list[str] | None = None
+) -> bool:
+    """
+    Determina si un término de parentesco (como 'Hijo') se utiliza como título cristológico/teológico
+    cuyo anclaje y sujeto fueron establecidos previamente en el mismo capítulo (verse_map).
+    """
+    if stem != "hij" or not verse_map or start_verse <= 1:
+        return False
+
+    text_words = set(text_norm.split())
+    # 1. El texto debe contener alguna forma de 'hijo'
+    if not any(w in text_words for w in ["hijo", "hijos"]):
+        return False
+
+    # 2. NO debe ser una afirmación de parentesco humano/genealógico específico no sustentado (ej. 'hijo de David', 'hijo de Saul')
+    if re.search(r"\bhijo de (?!dios\b)[a-z]+", text_norm):
+        return False
+
+    # 3. Verificar si se usa como título cristológico / designación ("el hijo", "al hijo", "del hijo", "un hijo", etc.)
+    has_title_pattern = bool(re.search(r"\b(?:el|al|del|un|su|este)\s+hijo\b|\bhijo\b", text_norm))
+    if not has_title_pattern:
+        return False
+
+    # 4. Compatibilidad cristológica en personajes o contexto
+    norm_chars = {normalize(c).strip() for c in (characters or [])}
+    has_christological_context = bool(
+        norm_chars & {"jesus", "jesucristo", "cristo", "dios"}
+        or "jesucristo" in text_words
+        or "jesus" in text_words
+        or "cristo" in text_words
+        or "creacion" in text_words
+        or "padre" in text_words
+        or "dios" in text_words
+    )
+
+    # 5. Búsqueda retrospectiva de anclaje contextual en verse_map (mismo capítulo)
+    found_anchor = False
+    for v_num in range(start_verse - 1, 0, -1):
+        if v_num not in verse_map:
+            continue
+        v_norm = normalize(verse_map[v_num])
+        v_words = set(v_norm.split())
+
+        # Anclaje explícito del título 'Hijo' en el discurso anterior
+        if any(pat in v_norm for pat in ["del hijo", "al hijo", "el hijo", "mi hijo", "su hijo", "un hijo"]):
+            found_anchor = True
+            break
+        if "hijo" in v_words and any(w in v_words for w in ["dios", "padre", "dice", "dijo", "hablo", "hablado"]):
+            found_anchor = True
+            break
+
+    if found_anchor and has_christological_context:
+        return True
+
+    return False
+
+
 # Equivalencias semánticas y de dimensiones
 SYNONYMS = {
     "longitud": "largo",
@@ -2207,6 +2272,11 @@ def evaluate_question(
     if isinstance(additional_refs, str):
         additional_refs = [r.strip() for r in additional_refs.split(";") if r.strip()]
 
+    category = str(q.get("category", "")).strip()
+    eligible_modes = q.get("eligible_modes", [])
+    if isinstance(eligible_modes, str):
+        eligible_modes = [m.strip() for m in eligible_modes.split(";") if m.strip()]
+
     controls: dict[str, str] = {}
     incidencias: list[str] = []
     correcciones_sugeridas: list[dict[str, Any]] = []
@@ -2576,6 +2646,8 @@ def evaluate_question(
             words = KINSHIP_STEMS[stem]
             if not any(w in passage_norm.split() for w in words):
                 if is_comparative and stem in {"padr", "hij"} and any(w in passage_norm.split() for w in ["hombre", "hijo", "hija", "padre", "madre"]):
+                    continue
+                if is_contextual_title_usage(stem, all_text_norm, verse_map, start, characters, category, eligible_modes):
                     continue
                 missing_stems.append(stem)
 

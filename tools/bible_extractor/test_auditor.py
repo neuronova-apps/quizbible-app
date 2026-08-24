@@ -7141,6 +7141,122 @@ class TestAuditorCanonical(unittest.TestCase):
                 self.assertNotIn(pq["question"].strip(), heb_texts,
                                  f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y Hebreos")
 
+    def test_hebrews_contextual_title_heb0005(self) -> None:
+        """Verifica que NQB-NT-HEB-0005 resuelva 'Hijo' contextualmente sin marcar FAIL ni REQUIERE_CORRECCION."""
+        if not self.hebrews_questions:
+            self.skipTest("hebrews-master-input.json no disponible")
+        q5 = self.get_hebrews_question("NQB-NT-HEB-0005")
+        heb1_verses = {
+            1: "Dios, habiendo hablado muchas veces y de muchas maneras en otro tiempo a los padres por los profetas,",
+            2: "en estos postreros días nos ha hablado por el Hijo, a quien constituyó heredero de todo, y por quien asimismo hizo el universo;",
+            3: "el cual, siendo el resplandor de su gloria, y la imagen misma de su sustancia, y quien sustenta todas las cosas con la palabra de su poder, habiendo efectuado la purificación de nuestros pecados por medio de sí mismo, se sentó a la diestra de la Majestad en las alturas,",
+            4: "hecho tanto superior a los ángeles, cuanto heredó más excelente nombre que ellos.",
+            5: "Porque ¿a cuál de los ángeles dijo jamás: Mi Hijo eres tú, Yo te he engendrado hoy, y otra vez: Yo seré a él Padre, Y él me será a mí hijo?",
+            6: "Y otra vez, cuando introduce al Primogénito en el mundo, dice: Adórenle todos los ángeles de Dios.",
+            7: "Ciertamente de los ángeles dice: El que hace a sus ángeles espíritus, Y a sus ministros llama de fuego.",
+            8: "Mas del Hijo dice: Tu trono, oh Dios, por el siglo del siglo; Cetro de equidad es el cetro de tu reino.",
+            9: "Has amado la justicia, y aborrecido la maldad, Por lo cual te ungió Dios, el Dios tuyo, Con óleo de alegría más que a tus compañeros.",
+            10: "Y: Tú, oh Señor, en el principio fundaste la tierra, Y los cielos son obra de tus manos.",
+            11: "Ellos perecerán, mas tú permaneces; Y todos ellos se envejecerán como una vestidura,",
+            12: "Y como un vestido los envolverás, y serán mudados; Pero tú eres el mismo, Y tus años no acabarán.",
+            13: "Pues, ¿a cuál de los ángeles dijo jamás: Siéntate a mi diestra, Hasta que ponga a tus enemigos por estrado de tus pies?",
+            14: "¿No son todos espíritus ministradores, enviados para servicio a favor de los que serán herederos de la salvación?"
+        }
+        res = evaluate_question(q5, heb1_verses, book_key="hebrews")
+        self.assertNotEqual(res["controles_superados"]["control_relaciones_personajes"], "FAIL",
+                            f"control_relaciones_personajes no debe ser FAIL: {res.get('incidencias')}")
+        self.assertNotEqual(res["estado"], "REQUIERE_CORRECCION",
+                            f"NQB-NT-HEB-0005 no debe ser REQUIERE_CORRECCION: {res.get('incidencias')}")
+
+    def test_contextual_title_usage_generic_positive(self) -> None:
+        """Verifica que un uso de 'Hijo' como título cristológico con anclaje previo resuelva positivamente."""
+        from auditor import is_contextual_title_usage
+        verse_map = {
+            1: "Dios nos ha hablado por el Hijo...",
+            8: "Mas del Hijo dice: Tu trono, oh Dios...",
+            10: "Tú, oh Señor, en el principio fundaste la tierra...",
+            11: "Ellos perecerán, mas tú permaneces...",
+            12: "Pero tú eres el mismo...",
+        }
+        text_norm = "la creacion puede cambiar pero al hijo se le atribuye permanencia"
+        res = is_contextual_title_usage(
+            stem="hij",
+            text_norm=text_norm,
+            verse_map=verse_map,
+            start_verse=10,
+            characters=["Jesucristo"],
+            category="NT_GENERAL",
+            eligible_modes=["NT", "AMBOS"]
+        )
+        self.assertTrue(res, "Debe resolver título cristológico con anclaje en v8")
+
+    def test_contextual_title_usage_negative_kinship(self) -> None:
+        """Verifica que una afirmación familiar real no respaldada siga fallando (regresión negativa obligatoria)."""
+        from auditor import is_contextual_title_usage
+        verse_map = {
+            1: "Palabras de la historia...",
+            5: "Y vinieron los mensajeros...",
+            6: "Y vieron la ciudad...",
+        }
+        text_norm = "salomon era hijo de saul"
+        res = is_contextual_title_usage(
+            stem="hij",
+            text_norm=text_norm,
+            verse_map=verse_map,
+            start_verse=5,
+            characters=["Salomón", "Saúl"],
+            category="PERSONAJES_BIBLICOS",
+            eligible_modes=["NT"]
+        )
+        self.assertFalse(res, "No debe otorgar título a una relación de parentesco humana falsa")
+
+        # Comprobar que evaluate_question marque FAIL en control_relaciones_personajes
+        fake_q = {
+            "id": "TEST-KIN-FAIL",
+            "book": "Génesis",
+            "chapter": 1,
+            "verse_start": 5,
+            "verse_end": 6,
+            "reference": "Génesis 1:5-6",
+            "category": "PERSONAJES_BIBLICOS",
+            "characters": ["Salomón"],
+            "difficulty": "Básico",
+            "question_type": "MULTIPLE_CHOICE",
+            "question": "¿Quién era hijo de Saúl?",
+            "opcion_a": "Salomón era hijo de Saúl",
+            "opcion_b": "David",
+            "opcion_c": "Jonatán",
+            "opcion_d": "Samuel",
+            "correct_option": "A",
+            "correct_answer": "Salomón era hijo de Saúl",
+            "explanation": "Afirmación de prueba",
+            "additional_references": [],
+            "eligible_modes": ["NT"]
+        }
+        eval_res = evaluate_question(fake_q, verse_map, book_key="genesis")
+        self.assertEqual(eval_res["controles_superados"]["control_relaciones_personajes"], "FAIL")
+        self.assertEqual(eval_res["estado"], "REQUIERE_CORRECCION")
+
+    def test_contextual_title_usage_no_anchor(self) -> None:
+        """Verifica que 'Hijo' sin anclaje previo en el capítulo no otorgue título contextual."""
+        from auditor import is_contextual_title_usage
+        verse_map = {
+            10: "Tú, oh Señor, en el principio fundaste la tierra...",
+            11: "Ellos perecerán, mas tú permaneces...",
+            12: "Pero tú eres el mismo...",
+        }
+        text_norm = "al hijo se le atribuye permanencia"
+        res = is_contextual_title_usage(
+            stem="hij",
+            text_norm=text_norm,
+            verse_map=verse_map,
+            start_verse=10,
+            characters=["Jesucristo"],
+            category="NT_GENERAL",
+            eligible_modes=["NT"]
+        )
+        self.assertFalse(res, "Sin versículos anteriores con anclaje, no debe conceder título")
+
 
 if __name__ == "__main__":
     unittest.main()
