@@ -1111,6 +1111,22 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
         "default_output_dir": "build/audit/james",
         "ambient_places": set(),
     },
+    "1peter": {
+        "canonical_name": "1 Pedro",
+        "api_name": "1 Pedro",
+        "aliases": {
+            "1 pedro", "1pedro", "1 peter", "1peter", "1 pe", "1pe",
+            "primera de pedro", "primera carta de pedro", "1ª pedro", "1ra pedro"
+        },
+        "total_chapters": 5,
+        "blocks": [
+            (1, 5, "1peter-01-05.json"),
+        ],
+        "default_output_dir": "build/audit/1peter",
+        "ambient_places": {
+            "ponto", "galacia", "capadocia", "asia", "bitinia", "babilonia"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -1319,6 +1335,7 @@ BIBLE_PLACES = {
     "efeso", "éfeso", "roma", "mileto", "troas", "tróade", "troade",
     "antioquia", "antioquía", "iconio", "listra", "galacia", "dalmacia",
     "creta", "nicopolis", "nicópolis", "italia",
+    "ponto", "capadocia", "asia", "bitinia",
 }
 
 # Raíces de parentesco y lemas
@@ -1669,6 +1686,20 @@ def resolve_implicit_speaker(
         competing_speakers = set()
         for p in BIBLE_PERSONAJES:
             if p != "santiago" and p in passage_words:
+                if any(f"{p} {verb}" in passage_norm for verb in SPEECH_PRAYER_VERBS) or any(f"{verb} {p}" in passage_norm for verb in SPEECH_PRAYER_VERBS):
+                    competing_speakers.add(p)
+        if not competing_speakers:
+            return True
+
+    # 6. Autor epistolar general (Pedro en 1 Pedro / 2 Pedro)
+    is_peter_epistle = book_key in {
+        "1peter", "1pedro", "1pe", "2peter", "2pedro", "2pe",
+        "primera de pedro", "segunda de pedro", "1 pedro", "2 pedro"
+    }
+    if is_peter_epistle and norm_entity == "pedro":
+        competing_speakers = set()
+        for p in BIBLE_PERSONAJES:
+            if p != "pedro" and p in passage_words:
                 if any(f"{p} {verb}" in passage_norm for verb in SPEECH_PRAYER_VERBS) or any(f"{verb} {p}" in passage_norm for verb in SPEECH_PRAYER_VERBS):
                     competing_speakers.add(p)
         if not competing_speakers:

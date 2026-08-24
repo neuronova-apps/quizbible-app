@@ -1040,6 +1040,36 @@ class TestRuntimeExport(unittest.TestCase):
             self.assertEqual(len(q["options"]), 4)
             self.assertEqual([o["id"] for o in q["options"]], ["A", "B", "C", "D"])
 
+    def test_export_1peter_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de 1 Pedro al formato runtime."""
+        pe1_path = REPO_ROOT / "tools" / "bible_extractor" / "1peter-master-input.json"
+        if not pe1_path.exists():
+            self.skipTest("1peter-master-input.json no encontrado")
+        raw_pe1 = json.loads(pe1_path.read_text(encoding="utf-8"))
+        pe1_qs = raw_pe1.get("questions", raw_pe1)
+        status_map = {q["id"]: "VERIFIED" for q in pe1_qs}
+
+        collection = export_canonical_data(pe1_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 30)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "1 Pedro")
+        self.assertTrue(validate_runtime_collection(collection))
+
+        # Verify TF questions have exactly 2 options A/B
+        tf_qs = [q for q in collection["questions"] if q["questionType"] == "TRUE_FALSE"]
+        self.assertEqual(len(tf_qs), 5)
+        for q in tf_qs:
+            self.assertEqual(len(q["options"]), 2)
+            self.assertEqual([o["id"] for o in q["options"]], ["A", "B"])
+
+        # Verify MC questions have exactly 4 options A/B/C/D
+        mc_qs = [q for q in collection["questions"] if q["questionType"] == "MULTIPLE_CHOICE"]
+        self.assertEqual(len(mc_qs), 25)
+        for q in mc_qs:
+            self.assertEqual(len(q["options"]), 4)
+            self.assertEqual([o["id"] for o in q["options"]], ["A", "B", "C", "D"])
+
 
 if __name__ == "__main__":
     unittest.main()
