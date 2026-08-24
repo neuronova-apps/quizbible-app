@@ -1012,6 +1012,23 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "filipos", "judea", "jerusalen", "jerusalén", "roma"
         },
     },
+    "1timothy": {
+        "canonical_name": "1 Timoteo",
+        "api_name": "1Timoteo",
+        "aliases": {
+            "1 timoteo", "1timoteo", "1 timothy", "1timothy",
+            "1 tim", "1ti", "primera de timoteo",
+            "primera carta a timoteo"
+        },
+        "total_chapters": 6,
+        "blocks": [
+            (1, 6, "1timothy-01-06.json"),
+        ],
+        "default_output_dir": "build/audit/1timothy",
+        "ambient_places": {
+            "efeso", "éfeso", "macedonia", "roma"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -1162,7 +1179,7 @@ BIBLE_PERSONAJES = {
     "lazaro", "lázaro", "marta", "cleofas", "cornelio", "saulo", "bernice", "agripa", "felix", "félix",
     "gamaliel", "tito", "silas", "apolos", "aquila", "áquila", "priscila", "filemon", "filemón", "onesimo", "onésimo",
     "epafrodito", "evodia", "sintique", "síntique", "clemente",
-    "aristarco", "arquipo", "demas", "epafras", "ninfa", "justo",
+    "aristarco", "arquipo", "demas", "epafras", "ninfa", "justo", "himeneo",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",
@@ -1215,6 +1232,7 @@ BIBLE_PLACES = {
     # Nuevo Testamento
     "colosas", "laodicea", "hierapolis", "hierápolis",
     "tesalonica", "tesalónica", "berea", "atenas", "corinto", "macedonia", "filipos",
+    "efeso", "éfeso",
 }
 
 # Raíces de parentesco y lemas

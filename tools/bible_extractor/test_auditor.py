@@ -96,6 +96,7 @@ PHILIPPIANS_PATH = Path(__file__).parent / "philippians-master-input.json"
 COLOSSIANS_PATH = Path(__file__).parent / "colossians-master-input.json"
 THESSALONIANS1_PATH = Path(__file__).parent / "1thessalonians-master-input.json"
 THESSALONIANS2_PATH = Path(__file__).parent / "2thessalonians-master-input.json"
+TIMOTHY1_PATH = Path(__file__).parent / "1timothy-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -415,6 +416,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.thessalonians2_questions = {q["id"]: q for q in (raw_2ts.get("questions", []) if isinstance(raw_2ts, dict) else raw_2ts)}
         else:
             cls.thessalonians2_questions = {}
+
+        if TIMOTHY1_PATH.exists():
+            raw_1ti = json.loads(TIMOTHY1_PATH.read_text(encoding="utf-8"))
+            cls.timothy1_questions = {q["id"]: q for q in (raw_1ti.get("questions", []) if isinstance(raw_1ti, dict) else raw_1ti)}
+        else:
+            cls.timothy1_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -6117,6 +6124,204 @@ class TestAuditorCanonical(unittest.TestCase):
             for pq in prior_questions:
                 self.assertNotIn(pq["question"].strip(), ts_texts,
                                  f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y 2 Tesalonicenses")
+
+    # --- PRUEBAS ESPECÍFICAS DE 1 TIMOTEO ---
+
+    def get_timothy1_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.timothy1_questions, f"ID '{qid}' no encontrado en 1timothy-master-input.json")
+        return copy.deepcopy(self.timothy1_questions[qid])
+
+    def test_detect_book_key_1timothy(self) -> None:
+        """Verifica detección de book_key para 1 Timoteo y sus variantes."""
+        for alias in ["1 Timoteo", "1timoteo", "1 Timothy", "1timothy",
+                       "1 tim", "1ti", "Primera de Timoteo", "Primera carta a Timoteo"]:
+            spec = {"questions": [{"id": "NQB-NT-1TI-0001", "book": alias}]}
+            self.assertEqual(detect_book_key(spec), "1timothy",
+                             f"detect_book_key failed for alias: {alias}")
+
+    def test_1timothy_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de 1 Timoteo en BOOK_CONFIGS."""
+        self.assertIn("1timothy", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["1timothy"]
+        self.assertEqual(cfg["canonical_name"], "1 Timoteo")
+        self.assertEqual(cfg["api_name"], "1Timoteo")
+        self.assertEqual(cfg["total_chapters"], 6)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("1 timoteo", cfg["aliases"])
+        self.assertIn("1timothy", cfg["aliases"])
+        self.assertIn("1ti", cfg["aliases"])
+        self.assertIn("efeso", cfg["ambient_places"])
+        self.assertIn("macedonia", cfg["ambient_places"])
+
+    def test_1timothy_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de 1 Timoteo."""
+        if not self.timothy1_questions:
+            self.skipTest("1timothy-master-input.json no disponible")
+        self.assertEqual(len(self.timothy1_questions), 36)
+
+        # 6 preguntas por capítulo (6 capítulos)
+        ch_counts = collections.Counter(q["chapter"] for q in self.timothy1_questions.values())
+        self.assertEqual(len(ch_counts), 6)
+        for ch in range(1, 7):
+            self.assertEqual(ch_counts[ch], 6, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 6")
+
+        # IDs: NQB-NT-1TI-0001 a NQB-NT-1TI-0036
+        ids = sorted(self.timothy1_questions.keys())
+        self.assertEqual(ids[0], "NQB-NT-1TI-0001")
+        self.assertEqual(ids[-1], "NQB-NT-1TI-0036")
+        self.assertEqual(len(set(ids)), 36)
+
+        # Dificultad: Básico=11, Intermedio=12, Avanzado=10, Experto=3
+        diff_counts = collections.Counter(q["difficulty"] for q in self.timothy1_questions.values())
+        self.assertEqual(diff_counts["Básico"], 11)
+        self.assertEqual(diff_counts["Intermedio"], 12)
+        self.assertEqual(diff_counts["Avanzado"], 10)
+        self.assertEqual(diff_counts["Experto"], 3)
+
+        # Tipos: 30 MC, 6 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.timothy1_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 30)
+        self.assertEqual(type_counts["TRUE_FALSE"], 6)
+
+        tf_ids = sorted(q["id"] for q in self.timothy1_questions.values() if q.get("question_type") == "TRUE_FALSE")
+        expected_tf = sorted(["NQB-NT-1TI-0006", "NQB-NT-1TI-0012", "NQB-NT-1TI-0018", "NQB-NT-1TI-0024", "NQB-NT-1TI-0030", "NQB-NT-1TI-0036"])
+        self.assertEqual(tf_ids, expected_tf)
+
+    def test_1timothy_categories(self) -> None:
+        """Verifica categorías sin categorías de Evangelios en 1 Timoteo."""
+        if not self.timothy1_questions:
+            self.skipTest("1timothy-master-input.json no disponible")
+        cat_counts = collections.Counter(q["category"] for q in self.timothy1_questions.values())
+        self.assertEqual(cat_counts["NT_GENERAL"], 28)
+        self.assertEqual(cat_counts["PERSONAJES_BIBLICOS"], 8)
+        for forbidden in ["JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"]:
+            self.assertEqual(cat_counts.get(forbidden, 0), 0, f"Categoría no permitida: {forbidden}")
+
+    def test_1timothy_additional_references(self) -> None:
+        """Verifica las 9 preguntas con 10 referencias individuales en 1 Timoteo."""
+        if not self.timothy1_questions:
+            self.skipTest("1timothy-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-1TI-0002": ["Hechos 20:29-31"],
+            "NQB-NT-1TI-0005": ["Hechos 9:1-19"],
+            "NQB-NT-1TI-0013": ["Tito 1:5-9"],
+            "NQB-NT-1TI-0019": ["Colosenses 2:16-23"],
+            "NQB-NT-1TI-0022": ["2 Timoteo 1:5-7"],
+            "NQB-NT-1TI-0028": ["Deuteronomio 19:15", "Lucas 10:7"],
+            "NQB-NT-1TI-0031": ["Filemón 1:15-16"],
+            "NQB-NT-1TI-0033": ["Hebreos 13:5"],
+            "NQB-NT-1TI-0035": ["Mateo 6:19-21"],
+        }
+        found_add_refs = {
+            qid: q["additional_references"]
+            for qid, q in self.timothy1_questions.items()
+            if q.get("additional_references")
+        }
+        self.assertEqual(len(found_add_refs), 9)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 10)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_1timothy_modes(self) -> None:
+        """Verifica la asignación de modos en 1 Timoteo."""
+        if not self.timothy1_questions:
+            self.skipTest("1timothy-master-input.json no disponible")
+        mode_counts = collections.defaultdict(int)
+        for q in self.timothy1_questions.values():
+            for m in q.get("eligible_modes", []):
+                mode_counts[m] += 1
+        self.assertEqual(mode_counts["NT"], 36)
+        self.assertEqual(mode_counts["AMBOS"], 36)
+        self.assertEqual(mode_counts["PERSONAJES_NT"], 8)
+        self.assertEqual(mode_counts["PERSONAJES_AMBOS"], 8)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_NT"], 6)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_AMBOS"], 6)
+
+    def test_1timothy_id_reference_integrity(self) -> None:
+        """Verifica consistencia de IDs y referencias en 1 Timoteo."""
+        if not self.timothy1_questions:
+            self.skipTest("1timothy-master-input.json no disponible")
+        for qid, q in self.timothy1_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_1timothy_true_false_0036_neutral_semantics(self) -> None:
+        """Verifica que NQB-NT-1TI-0036 opere con semántica neutral (A=Falso, B=Verdadero, correct=A)."""
+        if not self.timothy1_questions:
+            self.skipTest("1timothy-master-input.json no disponible")
+        q36 = self.get_timothy1_question("NQB-NT-1TI-0036")
+        self.assertEqual(q36["opcion_a"].strip().lower(), "falso")
+        self.assertEqual(q36["opcion_b"].strip().lower(), "verdadero")
+        self.assertEqual(q36["correct_option"], "A")
+        self.assertEqual(q36["correct_answer"].strip().lower(), "falso")
+
+    def test_1timothy_epistle_epistolary_resolution(self) -> None:
+        """Verifica que Pablo y Timoteo se resuelvan en 1 Timoteo."""
+        if not self.timothy1_questions:
+            self.skipTest("1timothy-master-input.json no disponible")
+
+        # 1 Timoteo 1:3-4 — Pablo pide a Timoteo quedarse en Éfeso
+        ti1_3_4 = {
+            3: "Como te rogué que te quedases en Éfeso, cuando fui a Macedonia, para que mandases a algunos que no enseñen diferente doctrina,",
+            4: "ni presten atención a fábulas y genealogías interminables, que acarrean disputas más bien que edificación de Dios que es por fe, así te encargo ahora."
+        }
+        q2 = self.timothy1_questions.get("NQB-NT-1TI-0002")
+        if q2:
+            res = evaluate_question(q2, ti1_3_4, book_key="1timothy")
+            self.assertNotEqual(res["estado"], "REQUIERE_CORRECCION",
+                                f"Q NQB-NT-1TI-0002 no debe ser REQUIERE_CORRECCION: {res.get('motivos_correccion')}")
+
+    def test_1timothy_characters_and_places(self) -> None:
+        """Verifica que himeneo esté en BIBLE_PERSONAJES y efeso en BIBLE_PLACES."""
+        from auditor import BIBLE_PERSONAJES, BIBLE_PLACES
+        self.assertIn("himeneo", BIBLE_PERSONAJES)
+        self.assertIn("pablo", BIBLE_PERSONAJES)
+        self.assertIn("timoteo", BIBLE_PERSONAJES)
+        self.assertIn("efeso", BIBLE_PLACES)
+
+    def test_1timothy_no_duplicates_within(self) -> None:
+        """Verifica que no haya preguntas duplicadas internamente en 1 Timoteo."""
+        if not self.timothy1_questions:
+            self.skipTest("1timothy-master-input.json no disponible")
+        questions_texts = [q["question"].strip() for q in self.timothy1_questions.values()]
+        self.assertEqual(len(questions_texts), len(set(questions_texts)), "Duplicados detectados internamente")
+
+    def test_1timothy_no_duplicates_cross_nt(self) -> None:
+        """Verifica que no haya preguntas duplicadas entre 1 Timoteo y los 14 libros NT anteriores."""
+        if not self.timothy1_questions:
+            self.skipTest("1timothy-master-input.json no disponible")
+        ti_texts = {q["question"].strip() for q in self.timothy1_questions.values()}
+        prior_nt = [
+            PHILIPPIANS_PATH.parent / "matthew-master-input.json",
+            PHILIPPIANS_PATH.parent / "mark-master-input.json",
+            PHILIPPIANS_PATH.parent / "luke-master-input.json",
+            PHILIPPIANS_PATH.parent / "john-master-input.json",
+            PHILIPPIANS_PATH.parent / "acts-master-input.json",
+            PHILIPPIANS_PATH.parent / "romans-master-input.json",
+            PHILIPPIANS_PATH.parent / "1corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "galatians-master-input.json",
+            PHILIPPIANS_PATH.parent / "ephesians-master-input.json",
+            PHILIPPIANS_PATH.parent / "philippians-master-input.json",
+            PHILIPPIANS_PATH.parent / "colossians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2thessalonians-master-input.json",
+        ]
+        for prior_path in prior_nt:
+            if not prior_path.exists():
+                continue
+            prior_data = json.loads(prior_path.read_text(encoding="utf-8"))
+            prior_questions = prior_data.get("questions", []) if isinstance(prior_data, dict) else prior_data
+            for pq in prior_questions:
+                self.assertNotIn(pq["question"].strip(), ti_texts,
+                                 f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y 1 Timoteo")
 
 
 if __name__ == "__main__":

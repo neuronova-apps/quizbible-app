@@ -1,0 +1,1116 @@
+{
+  "source": "Quiz Bible master bank - 1 Timoteo",
+  "version": "RVR1960",
+  "book": "1 Timoteo",
+  "total_questions": 36,
+  "questions": [
+    {
+      "id": "NQB-NT-1TI-0001",
+      "book": "1 Timoteo",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "1 Timoteo 1:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Saludo y relación pastoral",
+      "characters": [
+        "Pablo",
+        "Timoteo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo presenta Pablo a Timoteo en el saludo inicial?",
+      "opcion_a": "Como verdadero hijo en la fe",
+      "opcion_b": "Como gobernador de una provincia",
+      "opcion_c": "Como sacerdote del templo",
+      "opcion_d": "Como autor de la carta",
+      "correct_option": "A",
+      "correct_answer": "Como verdadero hijo en la fe",
+      "explanation": "El saludo identifica a Pablo como remitente y a Timoteo como su verdadero hijo en la fe. La relación es pastoral y formativa, no política.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0002",
+      "book": "1 Timoteo",
+      "chapter": 1,
+      "verse_start": 3,
+      "verse_end": 4,
+      "reference": "1 Timoteo 1:3-4",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Encargo en Éfeso",
+      "characters": [
+        "Pablo",
+        "Timoteo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Para qué pidió Pablo a Timoteo que permaneciera en Éfeso?",
+      "opcion_a": "Para impedir enseñanzas diferentes y discusiones especulativas",
+      "opcion_b": "Para organizar una campaña política",
+      "opcion_c": "Para abandonar a la comunidad",
+      "opcion_d": "Para sustituir el evangelio por genealogías",
+      "correct_option": "A",
+      "correct_answer": "Para impedir enseñanzas diferentes y discusiones especulativas",
+      "explanation": "Pablo encarga a Timoteo frenar doctrinas diferentes y especulaciones que no edifican. El objetivo es proteger la enseñanza y la vida comunitaria.",
+      "additional_references": [
+        "Hechos 20:29-31"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0003",
+      "book": "1 Timoteo",
+      "chapter": 1,
+      "verse_start": 5,
+      "verse_end": 7,
+      "reference": "1 Timoteo 1:5-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Propósito de la instrucción",
+      "characters": [
+        "Pablo",
+        "maestros",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué propósito positivo atribuye Pablo al mandamiento que está dando?",
+      "opcion_a": "Amor nacido de corazón limpio, buena conciencia y fe sincera",
+      "opcion_b": "Miedo constante a cometer errores",
+      "opcion_c": "Prestigio de quienes hablan con seguridad",
+      "opcion_d": "Debates interminables sobre términos",
+      "correct_option": "A",
+      "correct_answer": "Amor nacido de corazón limpio, buena conciencia y fe sincera",
+      "explanation": "El pasaje dirige la instrucción hacia un amor que nace de una conciencia y fe íntegras, contrastándolo con discusiones vacías.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0004",
+      "book": "1 Timoteo",
+      "chapter": 1,
+      "verse_start": 8,
+      "verse_end": 11,
+      "reference": "1 Timoteo 1:8-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Uso legítimo de la ley",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué equilibrio sostiene Pablo al hablar de la ley?",
+      "opcion_a": "Que la ley es buena cuando se usa legítimamente y en coherencia con la sana enseñanza",
+      "opcion_b": "Que toda ley es inútil en cualquier circunstancia",
+      "opcion_c": "Que conocer normas basta para transformar a una persona",
+      "opcion_d": "Que la ley autoriza a castigar por cuenta propia",
+      "correct_option": "A",
+      "correct_answer": "Que la ley es buena cuando se usa legítimamente y en coherencia con la sana enseñanza",
+      "explanation": "Pablo afirma que la ley es buena si se usa legítimamente y la sitúa en relación con conductas contrarias a la sana doctrina. No legitima venganza ni legalismo autosuficiente.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0005",
+      "book": "1 Timoteo",
+      "chapter": 1,
+      "verse_start": 12,
+      "verse_end": 16,
+      "reference": "1 Timoteo 1:12-16",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Misericordia recibida por Pablo",
+      "characters": [
+        "Pablo",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función da Pablo a su propia historia de misericordia?",
+      "opcion_a": "Mostrar la paciencia de Cristo como ejemplo para quienes llegarían a creer",
+      "opcion_b": "Probar que sus errores pasados no tuvieron importancia",
+      "opcion_c": "Presentarse como superior a los demás apóstoles",
+      "opcion_d": "Enseñar que toda conducta previa carece de consecuencias",
+      "correct_option": "A",
+      "correct_answer": "Mostrar la paciencia de Cristo como ejemplo para quienes llegarían a creer",
+      "explanation": "Pablo recuerda su pasado y la misericordia recibida para destacar la paciencia de Cristo y ofrecer esperanza a otros, no para minimizar el daño ni presumir superioridad.",
+      "additional_references": [
+        "Hechos 9:1-19"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0006",
+      "book": "1 Timoteo",
+      "chapter": 1,
+      "verse_start": 15,
+      "verse_end": 16,
+      "reference": "1 Timoteo 1:15-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Cristo y los pecadores",
+      "characters": [
+        "Pablo",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo presenta la venida de Cristo para salvar a pecadores y su propia experiencia como ejemplo de misericordia",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Pablo resume el propósito salvador de Cristo y conecta su propia historia con la paciencia y misericordia recibidas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0007",
+      "book": "1 Timoteo",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "1 Timoteo 2:1-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Oración por todas las personas",
+      "characters": [
+        "Comunidad",
+        "gobernantes",
+        "Dios"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por quiénes pide Pablo que se hagan oraciones, peticiones y acciones de gracias?",
+      "opcion_a": "Por todas las personas, incluyendo autoridades y gobernantes",
+      "opcion_b": "Solo por quienes pertenecen a la comunidad",
+      "opcion_c": "Únicamente por gobernantes favorables",
+      "opcion_d": "Solo por quienes nunca causan dificultades",
+      "correct_option": "A",
+      "correct_answer": "Por todas las personas, incluyendo autoridades y gobernantes",
+      "explanation": "La exhortación amplía la oración a todas las personas e incluye a quienes ejercen autoridad, con el horizonte de una vida tranquila y digna.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0008",
+      "book": "1 Timoteo",
+      "chapter": 2,
+      "verse_start": 5,
+      "verse_end": 6,
+      "reference": "1 Timoteo 2:5-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Un Dios y un mediador",
+      "characters": [
+        "Dios",
+        "Jesucristo",
+        "humanidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué afirmación central acompaña el deseo de salvación y conocimiento de la verdad?",
+      "opcion_a": "Hay un solo Dios y un solo mediador entre Dios y los seres humanos, Jesucristo hombre",
+      "opcion_b": "Existen mediadores distintos para cada pueblo",
+      "opcion_c": "La salvación depende del rango social",
+      "opcion_d": "Solo una élite puede acercarse a Dios",
+      "correct_option": "A",
+      "correct_answer": "Hay un solo Dios y un solo mediador entre Dios y los seres humanos, Jesucristo hombre",
+      "explanation": "El pasaje afirma la unicidad de Dios y de Cristo como mediador, vinculándola con su entrega en favor de todos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0009",
+      "book": "1 Timoteo",
+      "chapter": 2,
+      "verse_start": 7,
+      "verse_end": 7,
+      "reference": "1 Timoteo 2:7",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Servicio apostólico de Pablo",
+      "characters": [
+        "Pablo",
+        "gentiles"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo describe Pablo la tarea para la que fue constituido respecto de los gentiles?",
+      "opcion_a": "Como predicador, apóstol y maestro en fe y verdad",
+      "opcion_b": "Como gobernante civil de las naciones",
+      "opcion_c": "Como comandante de una fuerza religiosa",
+      "opcion_d": "Como sacerdote encargado de sacrificios del templo",
+      "correct_option": "A",
+      "correct_answer": "Como predicador, apóstol y maestro en fe y verdad",
+      "explanation": "Pablo describe su misión de anuncio y enseñanza dirigida a los gentiles. El texto no le atribuye gobierno civil ni poder coercitivo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0010",
+      "book": "1 Timoteo",
+      "chapter": 2,
+      "verse_start": 8,
+      "verse_end": 10,
+      "reference": "1 Timoteo 2:8-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Oración, conducta y modestia",
+      "characters": [
+        "Hombres",
+        "mujeres",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué enfoque conserva mejor las exhortaciones sobre oración, conducta y presentación personal?",
+      "opcion_a": "Priorizar una vida piadosa y buenas obras sin convertir la apariencia en instrumento de humillación o control",
+      "opcion_b": "Medir la fe exclusivamente por la ropa utilizada",
+      "opcion_c": "Autorizar a otros a controlar coercitivamente el cuerpo y la vestimenta",
+      "opcion_d": "Considerar que la apariencia externa sustituye la conducta",
+      "correct_option": "A",
+      "correct_answer": "Priorizar una vida piadosa y buenas obras sin convertir la apariencia en instrumento de humillación o control",
+      "explanation": "El pasaje contrasta ostentación con piedad y buenas obras. Su aplicación no debe transformarse en humillación, coerción o vigilancia abusiva de la apariencia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0011",
+      "book": "1 Timoteo",
+      "chapter": 2,
+      "verse_start": 11,
+      "verse_end": 15,
+      "reference": "1 Timoteo 2:11-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Mujeres, aprendizaje y enseñanza",
+      "characters": [
+        "Mujer",
+        "Adán",
+        "Eva"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cautela es necesaria al interpretar las instrucciones sobre aprendizaje, enseñanza y autoridad de las mujeres?",
+      "opcion_a": "No convertir un pasaje debatido en justificación de inferioridad, abuso o negación del acceso de las mujeres al aprendizaje",
+      "opcion_b": "Afirmar que toda mujer es intelectualmente inferior al varón",
+      "opcion_c": "Usar el texto para tolerar violencia o silenciamiento ante abusos",
+      "opcion_d": "Concluir que las mujeres no deben recibir educación bíblica",
+      "correct_option": "A",
+      "correct_answer": "No convertir un pasaje debatido en justificación de inferioridad, abuso o negación del acceso de las mujeres al aprendizaje",
+      "explanation": "El pasaje incluye explícitamente que la mujer aprenda y contiene instrucciones cuya aplicación eclesial ha sido interpretada de formas distintas. No justifica inferioridad, abuso ni negación de educación.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0012",
+      "book": "1 Timoteo",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "1 Timoteo 2:1-2",
+      "category": "NT_GENERAL",
+      "subcategory": "Oración por autoridades",
+      "characters": [
+        "Comunidad",
+        "gobernantes"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la exhortación a orar incluye a reyes y autoridades con el deseo de una vida tranquila y respetable",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Pablo incluye expresamente a quienes ejercen autoridad y conecta esa oración con una vida pacífica y digna.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0013",
+      "book": "1 Timoteo",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 7,
+      "reference": "1 Timoteo 3:1-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Responsables de supervisión",
+      "characters": [
+        "Supervisores",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué rasgo general domina la lista de requisitos para quien aspira a supervisar la comunidad?",
+      "opcion_a": "Una vida íntegra, responsable y de buen testimonio",
+      "opcion_b": "Capacidad para imponer miedo",
+      "opcion_c": "Riqueza suficiente para financiar a otros",
+      "opcion_d": "Prestigio político ante la ciudad",
+      "correct_option": "A",
+      "correct_answer": "Una vida íntegra, responsable y de buen testimonio",
+      "explanation": "La lista enfatiza carácter, autocontrol, hospitalidad, capacidad de enseñar, buena gestión y reputación. No coloca riqueza o poder coercitivo como fundamento.",
+      "additional_references": [
+        "Tito 1:5-9"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0014",
+      "book": "1 Timoteo",
+      "chapter": 3,
+      "verse_start": 2,
+      "verse_end": 3,
+      "reference": "1 Timoteo 3:2-3",
+      "category": "NT_GENERAL",
+      "subcategory": "Carácter no violento",
+      "characters": [
+        "Supervisor",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación contradice directamente el perfil de liderazgo descrito?",
+      "opcion_a": "Violencia, pendencia y amor al dinero",
+      "opcion_b": "Amabilidad y dominio propio",
+      "opcion_c": "Hospitalidad y sobriedad",
+      "opcion_d": "Capacidad de enseñar con buen testimonio",
+      "correct_option": "A",
+      "correct_answer": "Violencia, pendencia y amor al dinero",
+      "explanation": "El texto excluye violencia, pendencia y apego al dinero, y favorece sobriedad, amabilidad y autocontrol. El liderazgo no legitima intimidación.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0015",
+      "book": "1 Timoteo",
+      "chapter": 3,
+      "verse_start": 4,
+      "verse_end": 7,
+      "reference": "1 Timoteo 3:4-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Hogar, madurez y reputación",
+      "characters": [
+        "Supervisor",
+        "familia",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué se mencionan el cuidado del propio hogar, la madurez y la reputación externa?",
+      "opcion_a": "Porque la responsabilidad cotidiana y el buen testimonio forman parte de la aptitud para cuidar a la comunidad",
+      "opcion_b": "Porque la familia concede autoridad absoluta sobre otras personas",
+      "opcion_c": "Porque un dirigente nunca puede cometer errores",
+      "opcion_d": "Porque la reputación pública reemplaza el carácter",
+      "correct_option": "A",
+      "correct_answer": "Porque la responsabilidad cotidiana y el buen testimonio forman parte de la aptitud para cuidar a la comunidad",
+      "explanation": "El pasaje relaciona capacidad de cuidado, madurez y buen testimonio con la responsabilidad comunitaria; no concede autoridad absoluta ni perfección.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0016",
+      "book": "1 Timoteo",
+      "chapter": 3,
+      "verse_start": 8,
+      "verse_end": 13,
+      "reference": "1 Timoteo 3:8-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Servicio de diáconos",
+      "characters": [
+        "Diáconos",
+        "familias",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cualidades aparecen en la evaluación de quienes sirven como diáconos?",
+      "opcion_a": "Dignidad, sinceridad, dominio propio, fidelidad y una vida probada",
+      "opcion_b": "Ambición económica y capacidad de intimidar",
+      "opcion_c": "Popularidad sin examen previo",
+      "opcion_d": "Libertad para actuar sin rendición de cuentas",
+      "correct_option": "A",
+      "correct_answer": "Dignidad, sinceridad, dominio propio, fidelidad y una vida probada",
+      "explanation": "La sección exige carácter digno, sinceridad, dominio propio, fidelidad y prueba previa. El servicio se vincula con confianza, no con abuso de poder.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0017",
+      "book": "1 Timoteo",
+      "chapter": 3,
+      "verse_start": 14,
+      "verse_end": 15,
+      "reference": "1 Timoteo 3:14-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Casa de Dios y verdad",
+      "characters": [
+        "Pablo",
+        "Timoteo",
+        "iglesia"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué propósito declara Pablo al explicar por qué escribe estas instrucciones?",
+      "opcion_a": "Que se sepa cómo conducirse en la casa de Dios, presentada como iglesia del Dios vivo y columna y baluarte de la verdad",
+      "opcion_b": "Que Timoteo establezca un gobierno civil",
+      "opcion_c": "Que la comunidad controle legalmente a quienes están fuera",
+      "opcion_d": "Que una persona individual sea tratada como fuente infalible de verdad",
+      "correct_option": "A",
+      "correct_answer": "Que se sepa cómo conducirse en la casa de Dios, presentada como iglesia del Dios vivo y columna y baluarte de la verdad",
+      "explanation": "Pablo escribe para orientar la conducta dentro de la comunidad de Dios. La imagen de columna y baluarte describe la responsabilidad eclesial respecto de la verdad, no infalibilidad personal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0018",
+      "book": "1 Timoteo",
+      "chapter": 3,
+      "verse_start": 16,
+      "verse_end": 16,
+      "reference": "1 Timoteo 3:16",
+      "category": "NT_GENERAL",
+      "subcategory": "Misterio de la piedad",
+      "characters": [
+        "Jesucristo",
+        "Espíritu",
+        "ángeles",
+        "naciones"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el himno citado relaciona a Cristo con manifestación en carne, proclamación entre naciones y gloria",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. La sección resume de forma confesional la manifestación, proclamación, fe y gloria asociadas a Cristo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0019",
+      "book": "1 Timoteo",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "1 Timoteo 4:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Enseñanzas ascéticas y creación",
+      "characters": [
+        "Comunidad",
+        "Dios"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué error denuncia Pablo al mencionar prohibiciones de casarse y de ciertos alimentos?",
+      "opcion_a": "Convertir prohibiciones humanas en espiritualidad cuando lo creado por Dios puede recibirse con gratitud",
+      "opcion_b": "Valorar el matrimonio y la alimentación responsable",
+      "opcion_c": "Practicar cualquier forma de disciplina personal",
+      "opcion_d": "Dar gracias a Dios por los alimentos",
+      "correct_option": "A",
+      "correct_answer": "Convertir prohibiciones humanas en espiritualidad cuando lo creado por Dios puede recibirse con gratitud",
+      "explanation": "Pablo critica enseñanzas que prohíben matrimonio y alimentos como requisito espiritual y afirma la bondad de la creación recibida con gratitud.",
+      "additional_references": [
+        "Colosenses 2:16-23"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0020",
+      "book": "1 Timoteo",
+      "chapter": 4,
+      "verse_start": 4,
+      "verse_end": 5,
+      "reference": "1 Timoteo 4:4-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Creación y gratitud",
+      "characters": [
+        "Comunidad",
+        "Dios"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitud acompaña la afirmación de que lo creado por Dios es bueno?",
+      "opcion_a": "Recibirlo con acción de gracias en lugar de rechazarlo como impuro por principio",
+      "opcion_b": "Consumir cualquier cosa sin prudencia",
+      "opcion_c": "Ignorar toda consideración de salud",
+      "opcion_d": "Convertir el alimento en medida de superioridad espiritual",
+      "correct_option": "A",
+      "correct_answer": "Recibirlo con acción de gracias en lugar de rechazarlo como impuro por principio",
+      "explanation": "El texto vincula la bondad de la creación con gratitud y santificación por la palabra y la oración. No elimina prudencia, salud o responsabilidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0021",
+      "book": "1 Timoteo",
+      "chapter": 4,
+      "verse_start": 6,
+      "verse_end": 10,
+      "reference": "1 Timoteo 4:6-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Ejercicio y piedad",
+      "characters": [
+        "Timoteo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cautela evita distorsionar la comparación entre ejercicio corporal y piedad?",
+      "opcion_a": "Reconocer que se compara su alcance sin presentar el cuidado físico como inútil o contrario a la fe",
+      "opcion_b": "Concluir que el ejercicio físico no tiene ningún valor",
+      "opcion_c": "Afirmar que atender la salud demuestra poca espiritualidad",
+      "opcion_d": "Sustituir tratamiento médico por prácticas religiosas",
+      "correct_option": "A",
+      "correct_answer": "Reconocer que se compara su alcance sin presentar el cuidado físico como inútil o contrario a la fe",
+      "explanation": "El pasaje atribuye algún provecho al ejercicio corporal y un alcance mayor a la piedad. No enseña a despreciar la salud, el ejercicio o la atención médica.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0022",
+      "book": "1 Timoteo",
+      "chapter": 4,
+      "verse_start": 11,
+      "verse_end": 12,
+      "reference": "1 Timoteo 4:11-12",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Juventud y ejemplo de Timoteo",
+      "characters": [
+        "Timoteo",
+        "creyentes"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo debía responder Timoteo al riesgo de ser menospreciado por su juventud?",
+      "opcion_a": "Siendo ejemplo en palabra, conducta, amor, fe y pureza",
+      "opcion_b": "Exigiendo respeto por la fuerza",
+      "opcion_c": "Ocultando su edad",
+      "opcion_d": "Evitando toda responsabilidad pública",
+      "correct_option": "A",
+      "correct_answer": "Siendo ejemplo en palabra, conducta, amor, fe y pureza",
+      "explanation": "Pablo no manda a Timoteo imponer respeto, sino dar un ejemplo coherente en distintas áreas de su vida.",
+      "additional_references": [
+        "2 Timoteo 1:5-7"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0023",
+      "book": "1 Timoteo",
+      "chapter": 4,
+      "verse_start": 13,
+      "verse_end": 16,
+      "reference": "1 Timoteo 4:13-16",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Lectura, enseñanza y cuidado personal",
+      "characters": [
+        "Timoteo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tareas debía atender Timoteo con perseverancia?",
+      "opcion_a": "Lectura pública, exhortación, enseñanza y cuidado de su propia vida y doctrina",
+      "opcion_b": "Control político de la ciudad",
+      "opcion_c": "Acumulación de recursos personales",
+      "opcion_d": "Evitar que la comunidad examine su enseñanza",
+      "correct_option": "A",
+      "correct_answer": "Lectura pública, exhortación, enseñanza y cuidado de su propia vida y doctrina",
+      "explanation": "La exhortación combina lectura, enseñanza, práctica perseverante y vigilancia de la propia vida y doctrina. El liderazgo incluye responsabilidad sobre uno mismo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0024",
+      "book": "1 Timoteo",
+      "chapter": 4,
+      "verse_start": 12,
+      "verse_end": 12,
+      "reference": "1 Timoteo 4:12",
+      "category": "NT_GENERAL",
+      "subcategory": "Ejemplo pese a la juventud",
+      "characters": [
+        "Timoteo",
+        "creyentes"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo pide que la juventud de Timoteo no sea motivo de menosprecio y que él responda siendo ejemplo",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. La respuesta propuesta a su juventud es una conducta ejemplar, no coerción ni exigencia de reconocimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0025",
+      "book": "1 Timoteo",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "1 Timoteo 5:1-2",
+      "category": "NT_GENERAL",
+      "subcategory": "Trato intergeneracional",
+      "characters": [
+        "Hombres",
+        "mujeres",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio orienta la corrección y el trato entre personas de distintas edades?",
+      "opcion_a": "Tratar a mayores y jóvenes con respeto familiar y a las mujeres jóvenes con toda pureza",
+      "opcion_b": "Humillar públicamente a quien sea mayor",
+      "opcion_c": "Usar la edad para negar dignidad",
+      "opcion_d": "Tratar a las personas jóvenes como inferiores",
+      "correct_option": "A",
+      "correct_answer": "Tratar a mayores y jóvenes con respeto familiar y a las mujeres jóvenes con toda pureza",
+      "explanation": "Pablo emplea lenguaje familiar para promover respeto y pureza en las relaciones. La corrección no se presenta como licencia para humillar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0026",
+      "book": "1 Timoteo",
+      "chapter": 5,
+      "verse_start": 3,
+      "verse_end": 8,
+      "reference": "1 Timoteo 5:3-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Viudas y responsabilidad familiar",
+      "characters": [
+        "Viudas",
+        "familias",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué equilibrio aparece en el cuidado de las viudas?",
+      "opcion_a": "Honrar a quienes están realmente solas y reconocer primero la responsabilidad de familiares capaces de cuidar",
+      "opcion_b": "Abandonar a toda viuda a su propia suerte",
+      "opcion_c": "Cargar siempre a la comunidad aunque exista apoyo familiar responsable",
+      "opcion_d": "Medir la dignidad de una viuda por su riqueza",
+      "correct_option": "A",
+      "correct_answer": "Honrar a quienes están realmente solas y reconocer primero la responsabilidad de familiares capaces de cuidar",
+      "explanation": "La sección busca cuidado real de viudas vulnerables y responsabilidad familiar cuando existe capacidad para asumirla. No reduce la dignidad a recursos económicos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0027",
+      "book": "1 Timoteo",
+      "chapter": 5,
+      "verse_start": 9,
+      "verse_end": 16,
+      "reference": "1 Timoteo 5:9-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Registro y apoyo de viudas",
+      "characters": [
+        "Viudas",
+        "familias",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cautela es necesaria al aplicar los criterios de apoyo comunitario a las viudas?",
+      "opcion_a": "No convertir criterios administrativos de aquella comunidad en desprecio hacia viudas jóvenes o mujeres que necesitan ayuda",
+      "opcion_b": "Considerar menos valiosa a toda viuda joven",
+      "opcion_c": "Negar ayuda de emergencia por no cumplir una lista completa",
+      "opcion_d": "Usar la edad como autorización para humillar",
+      "correct_option": "A",
+      "correct_answer": "No convertir criterios administrativos de aquella comunidad en desprecio hacia viudas jóvenes o mujeres que necesitan ayuda",
+      "explanation": "El texto organiza responsabilidades y una lista comunitaria concreta. No justifica desprecio, abandono de personas vulnerables ni negación automática de ayuda urgente.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0028",
+      "book": "1 Timoteo",
+      "chapter": 5,
+      "verse_start": 17,
+      "verse_end": 20,
+      "reference": "1 Timoteo 5:17-20",
+      "category": "NT_GENERAL",
+      "subcategory": "Ancianos, honor y acusaciones",
+      "characters": [
+        "Ancianos",
+        "testigos",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué equilibrio se establece al hablar de ancianos que sirven y de acusaciones contra ellos?",
+      "opcion_a": "Reconocer el buen servicio y exigir evidencia suficiente cuando se presentan acusaciones",
+      "opcion_b": "Considerar intocable a cualquier dirigente",
+      "opcion_c": "Aceptar todo rumor como prueba",
+      "opcion_d": "Ocultar faltas graves para proteger la reputación institucional",
+      "correct_option": "A",
+      "correct_answer": "Reconocer el buen servicio y exigir evidencia suficiente cuando se presentan acusaciones",
+      "explanation": "La sección combina honor con un estándar de testigos para las acusaciones. No convierte a líderes en intocables ni obliga a encubrir conductas graves.",
+      "additional_references": [
+        "Deuteronomio 19:15",
+        "Lucas 10:7"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0029",
+      "book": "1 Timoteo",
+      "chapter": 5,
+      "verse_start": 21,
+      "verse_end": 23,
+      "reference": "1 Timoteo 5:21-23",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Imparcialidad y consejo personal",
+      "characters": [
+        "Pablo",
+        "Timoteo"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cautela debe acompañar el consejo personal de usar un poco de vino por el estómago y frecuentes enfermedades?",
+      "opcion_a": "Tratarlo como una recomendación particular del contexto y no como receta médica universal ni permiso para el exceso",
+      "opcion_b": "Usarlo como obligación médica para toda persona creyente",
+      "opcion_c": "Concluir que el alcohol sustituye cualquier tratamiento profesional",
+      "opcion_d": "Presentar el consumo excesivo como práctica espiritual",
+      "correct_option": "A",
+      "correct_answer": "Tratarlo como una recomendación particular del contexto y no como receta médica universal ni permiso para el exceso",
+      "explanation": "Pablo da a Timoteo un consejo personal relacionado con dolencias frecuentes. No constituye una prescripción universal ni reemplaza evaluación o tratamiento sanitario.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0030",
+      "book": "1 Timoteo",
+      "chapter": 5,
+      "verse_start": 24,
+      "verse_end": 25,
+      "reference": "1 Timoteo 5:24-25",
+      "category": "NT_GENERAL",
+      "subcategory": "Obras visibles y ocultas",
+      "characters": [
+        "Personas",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo señala que algunas faltas y buenas obras son evidentes de inmediato mientras otras se conocen después",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El cierre advierte que no todo se hace visible al mismo tiempo, lo que refuerza la necesidad de prudencia antes de juzgar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0031",
+      "book": "1 Timoteo",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "1 Timoteo 6:1-2",
+      "category": "NT_GENERAL",
+      "subcategory": "Esclavitud en contexto antiguo",
+      "characters": [
+        "Siervos",
+        "amos",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cautela es indispensable al leer las instrucciones dirigidas a siervos bajo yugo y a sus amos?",
+      "opcion_a": "Reconocer el contexto de esclavitud antigua sin convertirlo en aprobación de esclavitud, trata o explotación moderna",
+      "opcion_b": "Usar el pasaje para defender trabajo forzado actual",
+      "opcion_c": "Negar derechos básicos a personas sometidas",
+      "opcion_d": "Presentar la esclavitud como ideal social cristiano",
+      "correct_option": "A",
+      "correct_answer": "Reconocer el contexto de esclavitud antigua sin convertirlo en aprobación de esclavitud, trata o explotación moderna",
+      "explanation": "La carta se dirige a personas dentro de una estructura esclavista antigua. Su existencia en el texto no autoriza esclavitud moderna, trata, servidumbre forzada ni explotación.",
+      "additional_references": [
+        "Filemón 1:15-16"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0032",
+      "book": "1 Timoteo",
+      "chapter": 6,
+      "verse_start": 3,
+      "verse_end": 5,
+      "reference": "1 Timoteo 6:3-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Falsas enseñanzas y ganancia",
+      "characters": [
+        "Maestros",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación caracteriza a la enseñanza problemática descrita por Pablo?",
+      "opcion_a": "Alejarse de las sanas palabras, producir disputas y tratar la piedad como fuente de ganancia",
+      "opcion_b": "Servir con humildad y contentamiento",
+      "opcion_c": "Evitar controversias inútiles",
+      "opcion_d": "Buscar el bien de la comunidad",
+      "correct_option": "A",
+      "correct_answer": "Alejarse de las sanas palabras, producir disputas y tratar la piedad como fuente de ganancia",
+      "explanation": "Pablo vincula la desviación doctrinal con orgullo, disputas y deseo de obtener beneficio económico de la piedad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0033",
+      "book": "1 Timoteo",
+      "chapter": 6,
+      "verse_start": 6,
+      "verse_end": 10,
+      "reference": "1 Timoteo 6:6-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Contentamiento y amor al dinero",
+      "characters": [
+        "Comunidad",
+        "personas"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué relación establece Pablo entre piedad, contentamiento y riqueza?",
+      "opcion_a": "La piedad con contentamiento es gran ganancia y el amor al dinero puede conducir a muchos males",
+      "opcion_b": "La riqueza demuestra automáticamente la aprobación de Dios",
+      "opcion_c": "La pobreza demuestra falta de fe",
+      "opcion_d": "Poseer recursos es en sí mismo el origen de todo mal",
+      "correct_option": "A",
+      "correct_answer": "La piedad con contentamiento es gran ganancia y el amor al dinero puede conducir a muchos males",
+      "explanation": "Pablo distingue el dinero del amor desordenado por él y valora el contentamiento. No enseña que poseer recursos sea en sí mismo malo ni que pobreza o riqueza midan la fe.",
+      "additional_references": [
+        "Hebreos 13:5"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0034",
+      "book": "1 Timoteo",
+      "chapter": 6,
+      "verse_start": 11,
+      "verse_end": 16,
+      "reference": "1 Timoteo 6:11-16",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Encargo final a Timoteo",
+      "characters": [
+        "Timoteo",
+        "Jesucristo",
+        "Dios"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué camino propone Pablo a Timoteo después de advertir sobre el amor al dinero?",
+      "opcion_a": "Huir de esas cosas y seguir justicia, piedad, fe, amor, paciencia y mansedumbre",
+      "opcion_b": "Buscar riqueza para demostrar éxito ministerial",
+      "opcion_c": "Responder violentamente a quienes discrepan",
+      "opcion_d": "Retirarse de toda responsabilidad comunitaria",
+      "correct_option": "A",
+      "correct_answer": "Huir de esas cosas y seguir justicia, piedad, fe, amor, paciencia y mansedumbre",
+      "explanation": "Pablo dirige a Timoteo hacia virtudes concretas y perseverancia en la fe. El lenguaje de combate es espiritual y no autoriza violencia física.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0035",
+      "book": "1 Timoteo",
+      "chapter": 6,
+      "verse_start": 17,
+      "verse_end": 19,
+      "reference": "1 Timoteo 6:17-19",
+      "category": "NT_GENERAL",
+      "subcategory": "Responsabilidad de quienes tienen riqueza",
+      "characters": [
+        "Personas ricas",
+        "Dios",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué orientación reciben quienes poseen recursos materiales?",
+      "opcion_a": "No ser arrogantes ni poner su esperanza en las riquezas, sino hacer el bien y ser generosos",
+      "opcion_b": "Considerar la riqueza una prueba segura de superioridad espiritual",
+      "opcion_c": "Entregar todos sus bienes bajo coerción de un líder",
+      "opcion_d": "Usar la generosidad como inversión con retorno financiero garantizado",
+      "correct_option": "A",
+      "correct_answer": "No ser arrogantes ni poner su esperanza en las riquezas, sino hacer el bien y ser generosos",
+      "explanation": "La exhortación desplaza la confianza de la riqueza hacia Dios y llama a buenas obras y generosidad. No sustenta coerción, superioridad ni promesas de prosperidad.",
+      "additional_references": [
+        "Mateo 6:19-21"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TI-0036",
+      "book": "1 Timoteo",
+      "chapter": 6,
+      "verse_start": 20,
+      "verse_end": 21,
+      "reference": "1 Timoteo 6:20-21",
+      "category": "NT_GENERAL",
+      "subcategory": "Guardar el depósito y discernir",
+      "characters": [
+        "Timoteo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo ordena a Timoteo aceptar sin examen cualquier idea que se presente como conocimiento",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. El cierre pide guardar lo confiado y apartarse de conversaciones vacías y contradicciones de lo que falsamente se llama conocimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}
