@@ -573,6 +573,22 @@ class TestRuntimeExport(unittest.TestCase):
             self.assertEqual(q["book"], "Efesios")
         self.assertTrue(validate_runtime_collection(collection))
 
+    def test_export_philippians_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de Filipenses al formato runtime."""
+        fil_path = REPO_ROOT / "tools" / "bible_extractor" / "philippians-master-input.json"
+        if not fil_path.exists():
+            self.skipTest("philippians-master-input.json no encontrado")
+        raw_fil = json.loads(fil_path.read_text(encoding="utf-8"))
+        fil_qs = raw_fil.get("questions", raw_fil)
+        status_map = {q["id"]: "VERIFIED" for q in fil_qs}
+
+        collection = export_canonical_data(fil_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 24)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Filipenses")
+        self.assertTrue(validate_runtime_collection(collection))
+
 
 if __name__ == "__main__":
     unittest.main()

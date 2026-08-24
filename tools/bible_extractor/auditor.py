@@ -944,6 +944,22 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "efeso", "éfeso", "roma", "jerusalen", "jerusalén", "israel", "sion", "sión"
         },
     },
+    "philippians": {
+        "canonical_name": "Filipenses",
+        "api_name": "Filipenses",
+        "aliases": {
+            "filipenses", "philippians", "fil",
+            "carta a los filipenses", "epistola a los filipenses", "epístola a los filipenses"
+        },
+        "total_chapters": 4,
+        "blocks": [
+            (1, 4, "philippians-01-04.json"),
+        ],
+        "default_output_dir": "build/audit/philippians",
+        "ambient_places": {
+            "filipos", "macedonia", "roma", "jerusalen", "jerusalén", "cesarea", "cesarea marítima"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -1093,6 +1109,7 @@ BIBLE_PERSONAJES = {
     "silvano", "eva", "aretas", "belial", "satanas", "satanás", "abrahan", "abrahán",
     "lazaro", "lázaro", "marta", "cleofas", "cornelio", "saulo", "bernice", "agripa", "felix", "félix",
     "gamaliel", "tito", "silas", "apolos", "aquila", "áquila", "priscila", "filemon", "filemón", "onesimo", "onésimo",
+    "epafrodito", "evodia", "sintique", "síntique", "clemente",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",

@@ -92,6 +92,7 @@ CORINTHIANS1_PATH = Path(__file__).parent / "1corinthians-master-input.json"
 CORINTHIANS2_PATH = Path(__file__).parent / "2corinthians-master-input.json"
 GALATIANS_PATH = Path(__file__).parent / "galatians-master-input.json"
 EPHESIANS_PATH = Path(__file__).parent / "ephesians-master-input.json"
+PHILIPPIANS_PATH = Path(__file__).parent / "philippians-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -387,6 +388,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.ephesians_questions = {q["id"]: q for q in (raw_efe.get("questions", []) if isinstance(raw_efe, dict) else raw_efe)}
         else:
             cls.ephesians_questions = {}
+
+        if PHILIPPIANS_PATH.exists():
+            raw_fil = json.loads(PHILIPPIANS_PATH.read_text(encoding="utf-8"))
+            cls.philippians_questions = {q["id"]: q for q in (raw_fil.get("questions", []) if isinstance(raw_fil, dict) else raw_fil)}
+        else:
+            cls.philippians_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -5374,6 +5381,169 @@ class TestAuditorCanonical(unittest.TestCase):
         res36 = evaluate_question(q36, efe6_verses, book_key="ephesians")
         self.assertEqual(res36["controles_superados"].get("control_nombres_propios"), "PASS")
         self.assertNotEqual(res36["estado"], "REQUIERE_CORRECCION")
+
+    # --- PRUEBAS ESPECÍFICAS DE FILIPENSES ---
+
+    def get_philippians_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.philippians_questions, f"ID '{qid}' no encontrado en philippians-master-input.json")
+        return copy.deepcopy(self.philippians_questions[qid])
+
+    def test_detect_book_key_philippians(self) -> None:
+        """Verifica detección de book_key para Filipenses y sus variantes."""
+        spec_fil = {"questions": [{"id": "NQB-NT-FIL-0001", "book": "Filipenses"}]}
+        self.assertEqual(detect_book_key(spec_fil), "philippians")
+
+        spec_alias = {"questions": [{"id": "NQB-NT-FIL-0001", "book": "filipenses"}]}
+        self.assertEqual(detect_book_key(spec_alias), "philippians")
+
+        spec_en = {"questions": [{"id": "NQB-NT-FIL-0001", "book": "Philippians"}]}
+        self.assertEqual(detect_book_key(spec_en), "philippians")
+
+        spec_short = {"questions": [{"id": "NQB-NT-FIL-0001", "book": "fil"}]}
+        self.assertEqual(detect_book_key(spec_short), "philippians")
+
+        spec_carta = {"questions": [{"id": "NQB-NT-FIL-0001", "book": "Carta a los Filipenses"}]}
+        self.assertEqual(detect_book_key(spec_carta), "philippians")
+
+        spec_epistola = {"questions": [{"id": "NQB-NT-FIL-0001", "book": "Epístola a los Filipenses"}]}
+        self.assertEqual(detect_book_key(spec_epistola), "philippians")
+
+    def test_philippians_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de Filipenses en BOOK_CONFIGS."""
+        self.assertIn("philippians", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["philippians"]
+        self.assertEqual(cfg["canonical_name"], "Filipenses")
+        self.assertEqual(cfg["api_name"], "Filipenses")
+        self.assertEqual(cfg["total_chapters"], 4)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("filipenses", cfg["aliases"])
+        self.assertIn("philippians", cfg["aliases"])
+        self.assertIn("fil", cfg["aliases"])
+        self.assertIn("filipos", cfg["ambient_places"])
+        self.assertIn("macedonia", cfg["ambient_places"])
+        self.assertIn("roma", cfg["ambient_places"])
+
+    def test_global_canonical_id_reference_integrity_philippians(self) -> None:
+        """Verifica consistencia de IDs y referencias en Filipenses."""
+        if not self.philippians_questions:
+            self.skipTest("philippians-master-input.json no disponible")
+        for qid, q in self.philippians_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_philippians_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de Filipenses."""
+        if not self.philippians_questions:
+            self.skipTest("philippians-master-input.json no disponible")
+        self.assertEqual(len(self.philippians_questions), 24)
+
+        # 6 preguntas por capítulo (4 capítulos)
+        ch_counts = collections.Counter(q["chapter"] for q in self.philippians_questions.values())
+        self.assertEqual(len(ch_counts), 4)
+        for ch in range(1, 5):
+            self.assertEqual(ch_counts[ch], 6, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 6")
+
+        # Dificultad: Básico=7, Intermedio=7, Avanzado=8, Experto=2
+        diff_counts = collections.Counter(q["difficulty"] for q in self.philippians_questions.values())
+        self.assertEqual(diff_counts["Básico"], 7)
+        self.assertEqual(diff_counts["Intermedio"], 7)
+        self.assertEqual(diff_counts["Avanzado"], 8)
+        self.assertEqual(diff_counts["Experto"], 2)
+
+        # Tipos: 20 MC, 4 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.philippians_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 20)
+        self.assertEqual(type_counts["TRUE_FALSE"], 4)
+
+        tf_ids = [q["id"] for q in self.philippians_questions.values() if q.get("question_type") == "TRUE_FALSE"]
+        expected_tf = ["NQB-NT-FIL-0006", "NQB-NT-FIL-0012", "NQB-NT-FIL-0018", "NQB-NT-FIL-0024"]
+        self.assertEqual(sorted(tf_ids), sorted(expected_tf))
+
+    def test_philippians_additional_references(self) -> None:
+        """Verifica las 5 preguntas con 6 referencias adicionales en Filipenses."""
+        if not self.philippians_questions:
+            self.skipTest("philippians-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-FIL-0001": ["Hechos 16:12-40"],
+            "NQB-NT-FIL-0004": ["Hechos 16:19-40"],
+            "NQB-NT-FIL-0008": ["Isaías 45:23"],
+            "NQB-NT-FIL-0014": ["Hechos 22:3", "Hechos 23:6"],
+            "NQB-NT-FIL-0023": ["Génesis 8:21"]
+        }
+        found_add_refs = {}
+        for qid, q in self.philippians_questions.items():
+            refs = q.get("additional_references", [])
+            if refs:
+                found_add_refs[qid] = refs
+
+        self.assertEqual(len(found_add_refs), 5)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 6)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_philippians_modes_and_categories(self) -> None:
+        """Verifica la asignación de modos y categorías sin categorías de Jesús en Filipenses."""
+        if not self.philippians_questions:
+            self.skipTest("philippians-master-input.json no disponible")
+        for qid, q in self.philippians_questions.items():
+            cat = q.get("category")
+            self.assertIn(cat, {"NT_GENERAL", "PERSONAJES_BIBLICOS"})
+            self.assertNotIn(cat, {"JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"})
+            modes = q.get("eligible_modes", [])
+            self.assertIn("NT", modes)
+            self.assertIn("AMBOS", modes)
+            if cat == "PERSONAJES_BIBLICOS":
+                self.assertIn("PERSONAJES_NT", modes)
+                self.assertIn("PERSONAJES_AMBOS", modes)
+            if q.get("question_type") == "TRUE_FALSE":
+                self.assertIn("VERDADERO_FALSO_NT", modes)
+                self.assertIn("VERDADERO_FALSO_AMBOS", modes)
+
+    def test_philippians_true_false_0018_neutral_semantics(self) -> None:
+        """Verifica que NQB-NT-FIL-0018 opere con semántica neutral (A=Falso, B=Verdadero, correct=A)."""
+        if not self.philippians_questions:
+            self.skipTest("philippians-master-input.json no disponible")
+        q18 = self.get_philippians_question("NQB-NT-FIL-0018")
+        self.assertEqual(q18["opcion_a"].strip().lower(), "falso")
+        self.assertEqual(q18["opcion_b"].strip().lower(), "verdadero")
+        self.assertEqual(q18["correct_option"], "A")
+        self.assertEqual(q18["correct_answer"].strip().lower(), "falso")
+
+    def test_philippians_characters_and_safety(self) -> None:
+        """Verifica reconocimiento de Epafrodito, Evodia, Síntique, Clemente y pasajes clave."""
+        if not self.philippians_questions:
+            self.skipTest("philippians-master-input.json no disponible")
+
+        # Mock passage text de RVR1960 para Filipenses 2:25-30 (Epafrodito)
+        fil2_verses = {
+            25: "Mas tuve por necesario enviaros a Epafrodito, mi hermano y colaborador y compañero de milicia, vuestro mensajero, y ministrador de mis necesidades;",
+            26: "porque tenía gran deseo de veros a todos vosotros, y gravemente se angustió porque habíais oído que había estado enfermo.",
+            27: "Pues en verdad estuvo enfermo, a punto de morir; pero Dios tuvo misericordia de él, y no solamente de él, sino asimismo de mí, para que yo no tuviese tristeza sobre tristeza.",
+            28: "Así que le envío con mayor solicitud, para que al verle de nuevo, os gocéis, y yo esté con menos tristeza.",
+            29: "Recibidle, pues, en el Señor, con todo gozo, y tened en alta estima a los que son como él;",
+            30: "porque por la obra de Cristo estuvo próximo a la muerte, exponiendo su vida para suplir lo que faltaba en vuestro servicio por mí."
+        }
+        q12 = self.get_philippians_question("NQB-NT-FIL-0012")
+        res12 = evaluate_question(q12, fil2_verses, book_key="philippians")
+        self.assertEqual(res12["controles_superados"].get("control_nombres_propios"), "PASS")
+        self.assertNotEqual(res12["estado"], "REQUIERE_CORRECCION")
+
+        # Mock passage text de RVR1960 para Filipenses 4:2-3 (Evodia, Síntique, Clemente)
+        fil4_verses = {
+            2: "Ruego a Evodia y a Síntique, que sean de un mismo sentir en el Señor.",
+            3: "Asimismo te ruego también a ti, compañero fiel, que ayudes a éstas que combatieron juntamente conmigo en el evangelio, con Clemente también y los demás colaboradores míos, cuyos nombres están en el libro de la vida."
+        }
+        q19 = self.get_philippians_question("NQB-NT-FIL-0019")
+        res19 = evaluate_question(q19, fil4_verses, book_key="philippians")
+        self.assertEqual(res19["controles_superados"].get("control_nombres_propios"), "PASS")
+        self.assertNotEqual(res19["estado"], "REQUIERE_CORRECCION")
 
 
 if __name__ == "__main__":

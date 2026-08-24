@@ -1,0 +1,743 @@
+{
+  "source": "Quiz Bible master bank - Filipenses",
+  "version": "RVR1960",
+  "book": "Filipenses",
+  "total_questions": 24,
+  "questions": [
+    {
+      "id": "NQB-NT-FIL-0001",
+      "book": "Filipenses",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "Filipenses 1:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Saludo y remitentes",
+      "characters": [
+        "Pablo",
+        "Timoteo",
+        "santos en Filipos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos colaboradores figuran juntos en el saludo inicial?",
+      "opcion_a": "Pablo y Timoteo",
+      "opcion_b": "Pedro y Juan",
+      "opcion_c": "Santiago y Bernabé",
+      "opcion_d": "Lucas y Silas",
+      "correct_option": "A",
+      "correct_answer": "Pablo y Timoteo",
+      "explanation": "La apertura presenta a Pablo y Timoteo como siervos de Jesucristo y dirige el saludo a la comunidad de Filipos. La pregunta se limita a la identificación epistolar.",
+      "additional_references": [
+        "Hechos 16:12-40"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0002",
+      "book": "Filipenses",
+      "chapter": 1,
+      "verse_start": 3,
+      "verse_end": 8,
+      "reference": "Filipenses 1:3-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Gratitud y comunión",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitud domina el recuerdo que Pablo expresa por la comunidad?",
+      "opcion_a": "Gratitud, afecto y oración por su participación en el evangelio",
+      "opcion_b": "Desconfianza por su falta de recursos",
+      "opcion_c": "Deseo de competir con otras iglesias",
+      "opcion_d": "Preocupación por obtener poder político",
+      "correct_option": "A",
+      "correct_answer": "Gratitud, afecto y oración por su participación en el evangelio",
+      "explanation": "Pablo recuerda a la comunidad con gratitud y afecto, y vincula su oración con la participación que han mantenido en el evangelio. No presenta una relación de competencia o dominio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0003",
+      "book": "Filipenses",
+      "chapter": 1,
+      "verse_start": 9,
+      "verse_end": 11,
+      "reference": "Filipenses 1:9-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Amor y discernimiento",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pide Pablo que crezca junto con el amor de la comunidad?",
+      "opcion_a": "Conocimiento y discernimiento para escoger lo que es mejor",
+      "opcion_b": "Prestigio social para influir en la ciudad",
+      "opcion_c": "Aislamiento para evitar desacuerdos",
+      "opcion_d": "Riqueza como señal de madurez",
+      "correct_option": "A",
+      "correct_answer": "Conocimiento y discernimiento para escoger lo que es mejor",
+      "explanation": "La oración une amor, conocimiento y discernimiento con una vida fructífera. No equipara madurez con riqueza, aislamiento o prestigio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0004",
+      "book": "Filipenses",
+      "chapter": 1,
+      "verse_start": 12,
+      "verse_end": 18,
+      "reference": "Filipenses 1:12-18",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Prisión y avance del evangelio",
+      "characters": [
+        "Pablo",
+        "hermanos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo interpreta Pablo el efecto de su encarcelamiento sobre el anuncio del evangelio?",
+      "opcion_a": "Como una situación que terminó favoreciendo su difusión",
+      "opcion_b": "Como una orden para que otros busquen prisión",
+      "opcion_c": "Como prueba de que toda oposición desapareció",
+      "opcion_d": "Como motivo para abandonar su misión",
+      "correct_option": "A",
+      "correct_answer": "Como una situación que terminó favoreciendo su difusión",
+      "explanation": "Pablo describe cómo su situación de prisión produjo oportunidades inesperadas para el anuncio. El texto no invita a buscar daño, persecución o encarcelamiento.",
+      "additional_references": [
+        "Hechos 16:19-40"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0005",
+      "book": "Filipenses",
+      "chapter": 1,
+      "verse_start": 20,
+      "verse_end": 26,
+      "reference": "Filipenses 1:20-26",
+      "category": "NT_GENERAL",
+      "subcategory": "Vida, muerte y servicio",
+      "characters": [
+        "Pablo",
+        "Jesucristo",
+        "comunidad"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tensión expresa Pablo al considerar su futuro personal y el bien de la comunidad?",
+      "opcion_a": "Desea estar con Cristo, pero reconoce que permanecer puede servir al crecimiento de otros",
+      "opcion_b": "Considera que morir debe buscarse activamente",
+      "opcion_c": "Afirma que la vida presente carece de valor",
+      "opcion_d": "Ordena abandonar las responsabilidades comunitarias",
+      "correct_option": "A",
+      "correct_answer": "Desea estar con Cristo, pero reconoce que permanecer puede servir al crecimiento de otros",
+      "explanation": "Pablo expresa esperanza en Cristo y, al mismo tiempo, reconoce valor concreto en permanecer para servir a la comunidad. El pasaje no promueve buscar la muerte ni abandonar el cuidado de la vida.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0006",
+      "book": "Filipenses",
+      "chapter": 1,
+      "verse_start": 27,
+      "verse_end": 30,
+      "reference": "Filipenses 1:27-30",
+      "category": "NT_GENERAL",
+      "subcategory": "Conducta y firmeza",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la conducta digna del evangelio se relaciona con firmeza y unidad aun en medio de oposición",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. La exhortación llama a vivir de manera coherente, permanecer firmes y actuar unidos. La oposición no se convierte en una invitación a buscar sufrimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0007",
+      "book": "Filipenses",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Filipenses 2:1-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Unidad y humildad",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitud propone el pasaje para cuidar la unidad de la comunidad?",
+      "opcion_a": "Humildad que considera también el bien de los demás",
+      "opcion_b": "Competencia para demostrar quién es superior",
+      "opcion_c": "Aislamiento para evitar responsabilidades",
+      "opcion_d": "Obediencia ciega a una sola persona",
+      "correct_option": "A",
+      "correct_answer": "Humildad que considera también el bien de los demás",
+      "explanation": "La exhortación une unidad, humildad y atención al bien ajeno. No autoriza control de conciencia ni elimina la responsabilidad personal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0008",
+      "book": "Filipenses",
+      "chapter": 2,
+      "verse_start": 5,
+      "verse_end": 11,
+      "reference": "Filipenses 2:5-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Ejemplo de Cristo",
+      "characters": [
+        "Jesucristo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué modelo de actitud ofrece el pasaje al presentar a Cristo?",
+      "opcion_a": "Humildad y entrega seguidas por la exaltación otorgada por Dios",
+      "opcion_b": "Búsqueda de prestigio y dominio sobre otros",
+      "opcion_c": "Uso de la fuerza para imponer obediencia",
+      "opcion_d": "Desprecio del cuerpo y de la vida humana",
+      "correct_option": "A",
+      "correct_answer": "Humildad y entrega seguidas por la exaltación otorgada por Dios",
+      "explanation": "El himno presenta la humillación voluntaria y la obediencia de Cristo, seguidas de su exaltación por Dios. No legitima dominio, violencia ni desprecio del cuerpo.",
+      "additional_references": [
+        "Isaías 45:23"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0009",
+      "book": "Filipenses",
+      "chapter": 2,
+      "verse_start": 12,
+      "verse_end": 13,
+      "reference": "Filipenses 2:12-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Responsabilidad y obra de Dios",
+      "characters": [
+        "Dios",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo relaciona el pasaje la responsabilidad de los creyentes con la acción de Dios?",
+      "opcion_a": "Los llama a vivir responsablemente reconociendo que Dios obra en ellos",
+      "opcion_b": "Enseña que deben comprar su salvación mediante obras",
+      "opcion_c": "Afirma que la conducta ya no importa",
+      "opcion_d": "Sustituye toda decisión personal por la de un líder",
+      "correct_option": "A",
+      "correct_answer": "Los llama a vivir responsablemente reconociendo que Dios obra en ellos",
+      "explanation": "La exhortación combina responsabilidad humana con la acción de Dios. No presenta las obras como compra de salvación ni elimina el discernimiento personal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0010",
+      "book": "Filipenses",
+      "chapter": 2,
+      "verse_start": 14,
+      "verse_end": 16,
+      "reference": "Filipenses 2:14-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Testimonio y conducta",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué conducta acompaña la imagen de resplandecer en medio de una sociedad difícil?",
+      "opcion_a": "Actuar sin murmuraciones destructivas y sostener una vida íntegra",
+      "opcion_b": "Aislarse de toda persona diferente",
+      "opcion_c": "Responder a la hostilidad con violencia",
+      "opcion_d": "Buscar reconocimiento público",
+      "correct_option": "A",
+      "correct_answer": "Actuar sin murmuraciones destructivas y sostener una vida íntegra",
+      "explanation": "La imagen de resplandecer se relaciona con integridad y testimonio. No convierte a otros grupos en enemigos ni justifica violencia o aislamiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0011",
+      "book": "Filipenses",
+      "chapter": 2,
+      "verse_start": 19,
+      "verse_end": 24,
+      "reference": "Filipenses 2:19-24",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Timoteo y cuidado pastoral",
+      "characters": [
+        "Pablo",
+        "Timoteo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué rasgo destaca Pablo de Timoteo al explicar por qué desea enviarlo?",
+      "opcion_a": "Su interés sincero por el bienestar de la comunidad",
+      "opcion_b": "Su capacidad para imponer decisiones",
+      "opcion_c": "Su riqueza personal",
+      "opcion_d": "Su posición política",
+      "correct_option": "A",
+      "correct_answer": "Su interés sincero por el bienestar de la comunidad",
+      "explanation": "Timoteo es presentado como alguien que se interesa sinceramente por la situación de los creyentes. La autoridad ministerial se vincula aquí con cuidado, no con dominio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0012",
+      "book": "Filipenses",
+      "chapter": 2,
+      "verse_start": 25,
+      "verse_end": 30,
+      "reference": "Filipenses 2:25-30",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Epafrodito y servicio",
+      "characters": [
+        "Epafrodito",
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Epafrodito es presentado como colaborador que enfermó gravemente y debía ser recibido con alegría",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Epafrodito aparece como colaborador que estuvo muy enfermo y regresaría a la comunidad. El pasaje valora su servicio sin recomendar buscar enfermedad o riesgo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0013",
+      "book": "Filipenses",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 3,
+      "reference": "Filipenses 3:1-3",
+      "category": "NT_GENERAL",
+      "subcategory": "Confianza y advertencia",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Dónde sitúa Pablo la confianza que considera decisiva para la comunidad?",
+      "opcion_a": "En Cristo y en el servicio a Dios, no en credenciales externas",
+      "opcion_b": "En una identidad étnica superior",
+      "opcion_c": "En logros físicos como motivo de desprecio",
+      "opcion_d": "En el rechazo de toda tradición judía",
+      "correct_option": "A",
+      "correct_answer": "En Cristo y en el servicio a Dios, no en credenciales externas",
+      "explanation": "Pablo contrasta la confianza en Cristo con la autosuficiencia basada en credenciales. Su lenguaje polémico no autoriza desprecio hacia judíos, cuerpos o grupos actuales.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0014",
+      "book": "Filipenses",
+      "chapter": 3,
+      "verse_start": 4,
+      "verse_end": 6,
+      "reference": "Filipenses 3:4-6",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Credenciales de Pablo",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función cumplen las credenciales que Pablo enumera sobre su propio pasado?",
+      "opcion_a": "Mostrar que aun teniendo motivos de prestigio religioso no basa allí su confianza final",
+      "opcion_b": "Demostrar superioridad étnica permanente",
+      "opcion_c": "Despreciar a todas las personas judías",
+      "opcion_d": "Convertir su historia personal en requisito para otros",
+      "correct_option": "A",
+      "correct_answer": "Mostrar que aun teniendo motivos de prestigio religioso no basa allí su confianza final",
+      "explanation": "Pablo enumera aspectos de su propia trayectoria para luego relativizarlos frente a Cristo. La lista no debe convertirse en una jerarquía étnica ni en desprecio del judaísmo.",
+      "additional_references": [
+        "Hechos 22:3",
+        "Hechos 23:6"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0015",
+      "book": "Filipenses",
+      "chapter": 3,
+      "verse_start": 7,
+      "verse_end": 11,
+      "reference": "Filipenses 3:7-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Conocer a Cristo",
+      "characters": [
+        "Pablo",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo reevalúa Pablo aquello que antes consideraba ganancia?",
+      "opcion_a": "Lo considera secundario frente al valor de conocer a Cristo",
+      "opcion_b": "Lo convierte en garantía de riqueza",
+      "opcion_c": "Lo usa para justificar superioridad sobre otros",
+      "opcion_d": "Lo presenta como motivo para abandonar toda responsabilidad",
+      "correct_option": "A",
+      "correct_answer": "Lo considera secundario frente al valor de conocer a Cristo",
+      "explanation": "Pablo reorganiza sus prioridades alrededor de conocer a Cristo y de una justicia recibida por la fe. No promueve superioridad personal ni abandono de responsabilidades.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0016",
+      "book": "Filipenses",
+      "chapter": 3,
+      "verse_start": 12,
+      "verse_end": 14,
+      "reference": "Filipenses 3:12-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Meta y perseverancia",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitud expresa Pablo respecto de su propio progreso?",
+      "opcion_a": "Reconoce que aún no ha llegado a la meta y continúa avanzando",
+      "opcion_b": "Afirma que ya alcanzó perfección absoluta",
+      "opcion_c": "Deja de esforzarse porque todo está terminado",
+      "opcion_d": "Se compara para humillar a quienes avanzan menos",
+      "correct_option": "A",
+      "correct_answer": "Reconoce que aún no ha llegado a la meta y continúa avanzando",
+      "explanation": "Pablo niega haber alcanzado ya la meta y describe una perseverancia orientada hacia delante. La imagen no autoriza perfeccionismo abusivo ni desprecio de otras personas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0017",
+      "book": "Filipenses",
+      "chapter": 3,
+      "verse_start": 17,
+      "verse_end": 21,
+      "reference": "Filipenses 3:17-21",
+      "category": "NT_GENERAL",
+      "subcategory": "Ciudadanía y esperanza",
+      "characters": [
+        "Pablo",
+        "Jesucristo",
+        "comunidad"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué esperanza acompaña la afirmación sobre la ciudadanía celestial?",
+      "opcion_a": "Esperar a Cristo y la transformación del cuerpo, sin despreciar la vida presente",
+      "opcion_b": "Abandonar toda responsabilidad social",
+      "opcion_c": "Considerar malo el cuerpo físico",
+      "opcion_d": "Reclamar privilegios políticos en un país concreto",
+      "correct_option": "A",
+      "correct_answer": "Esperar a Cristo y la transformación del cuerpo, sin despreciar la vida presente",
+      "explanation": "La ciudadanía celestial y la transformación futura expresan esperanza cristológica. No equivalen a desprecio del cuerpo, evasión de responsabilidades o privilegios políticos modernos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0018",
+      "book": "Filipenses",
+      "chapter": 3,
+      "verse_start": 8,
+      "verse_end": 9,
+      "reference": "Filipenses 3:8-9",
+      "category": "NT_GENERAL",
+      "subcategory": "Justicia y confianza",
+      "characters": [
+        "Pablo",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo presenta su propia justicia basada en credenciales como suficiente para alcanzar su objetivo",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Pablo contrasta la justicia propia con la justicia vinculada a la fe en Cristo. La opción A es el valor correcto sin asumir que A siempre significa verdadero.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0019",
+      "book": "Filipenses",
+      "chapter": 4,
+      "verse_start": 2,
+      "verse_end": 3,
+      "reference": "Filipenses 4:2-3",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Evodia y Síntique",
+      "characters": [
+        "Pablo",
+        "Evodia",
+        "Síntique",
+        "Clemente"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué busca Pablo al mencionar a Evodia y Síntique?",
+      "opcion_a": "Que recuperen la concordia y reciban ayuda para superar su desacuerdo",
+      "opcion_b": "Que una sea expulsada sin diálogo",
+      "opcion_c": "Que la comunidad elija públicamente una vencedora",
+      "opcion_d": "Que su conflicto se ignore por completo",
+      "correct_option": "A",
+      "correct_answer": "Que recuperen la concordia y reciban ayuda para superar su desacuerdo",
+      "explanation": "Pablo exhorta a la concordia y pide colaboración para acompañarlas. El pasaje no legitima humillación pública, coerción ni silenciamiento de conflictos reales.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0020",
+      "book": "Filipenses",
+      "chapter": 4,
+      "verse_start": 4,
+      "verse_end": 7,
+      "reference": "Filipenses 4:4-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Gozo, oración y paz",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué respuesta propone el pasaje frente a las preocupaciones que llegan a la comunidad?",
+      "opcion_a": "Presentarlas a Dios con oración, petición y gratitud, buscando una paz que guarde la vida interior",
+      "opcion_b": "Negar que existan problemas reales",
+      "opcion_c": "Evitar toda ayuda profesional o comunitaria",
+      "opcion_d": "Culpar a quien experimenta ansiedad",
+      "correct_option": "A",
+      "correct_answer": "Presentarlas a Dios con oración, petición y gratitud, buscando una paz que guarde la vida interior",
+      "explanation": "El texto invita a la oración y a la gratitud en medio de las preocupaciones. No convierte la ansiedad clínica en culpa moral ni prohíbe buscar apoyo profesional o comunitario.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0021",
+      "book": "Filipenses",
+      "chapter": 4,
+      "verse_start": 8,
+      "verse_end": 9,
+      "reference": "Filipenses 4:8-9",
+      "category": "NT_GENERAL",
+      "subcategory": "Pensamiento y práctica",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué relación establece Pablo entre aquello que merece atención y la conducta aprendida?",
+      "opcion_a": "Invita a considerar lo verdadero y valioso y a poner en práctica lo aprendido",
+      "opcion_b": "Ordena ignorar toda noticia difícil",
+      "opcion_c": "Exige pensamientos positivos sin contacto con la realidad",
+      "opcion_d": "Sustituye la acción por imaginación",
+      "correct_option": "A",
+      "correct_answer": "Invita a considerar lo verdadero y valioso y a poner en práctica lo aprendido",
+      "explanation": "La exhortación combina atención a lo verdadero, justo y digno con práctica concreta. No exige negar problemas ni usar pensamiento positivo como sustituto de la realidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0022",
+      "book": "Filipenses",
+      "chapter": 4,
+      "verse_start": 10,
+      "verse_end": 13,
+      "reference": "Filipenses 4:10-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Contentamiento",
+      "characters": [
+        "Pablo",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué aprendizaje explica Pablo antes de afirmar que puede enfrentar distintas circunstancias?",
+      "opcion_a": "Ha aprendido contentamiento tanto en escasez como en abundancia con la fortaleza que recibe",
+      "opcion_b": "Ha descubierto una fórmula para conseguir cualquier objetivo",
+      "opcion_c": "Afirma que nunca volverá a tener necesidades",
+      "opcion_d": "Garantiza riqueza a toda persona creyente",
+      "correct_option": "A",
+      "correct_answer": "Ha aprendido contentamiento tanto en escasez como en abundancia con la fortaleza que recibe",
+      "explanation": "La conocida afirmación se encuentra en un contexto de contentamiento aprendido en abundancia y necesidad. No promete capacidad ilimitada, éxito automático o prosperidad financiera.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0023",
+      "book": "Filipenses",
+      "chapter": 4,
+      "verse_start": 14,
+      "verse_end": 20,
+      "reference": "Filipenses 4:14-20",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Apoyo y generosidad",
+      "characters": [
+        "Pablo",
+        "Epafrodito",
+        "filipenses"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo presenta Pablo el apoyo material recibido de la comunidad?",
+      "opcion_a": "Como participación generosa que agradece sin convertirla en negocio espiritual",
+      "opcion_b": "Como inversión con retorno financiero garantizado",
+      "opcion_c": "Como cuota obligatoria para demostrar fe",
+      "opcion_d": "Como permiso para que un líder exija recursos esenciales",
+      "correct_option": "A",
+      "correct_answer": "Como participación generosa que agradece sin convertirla en negocio espiritual",
+      "explanation": "Pablo agradece el apoyo y lo interpreta como colaboración generosa. La promesa sobre provisión de necesidades no debe transformarse en prosperidad garantizada ni presión económica.",
+      "additional_references": [
+        "Génesis 8:21"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FIL-0024",
+      "book": "Filipenses",
+      "chapter": 4,
+      "verse_start": 21,
+      "verse_end": 23,
+      "reference": "Filipenses 4:21-23",
+      "category": "NT_GENERAL",
+      "subcategory": "Saludos y gracia",
+      "characters": [
+        "Pablo",
+        "santos",
+        "hermanos"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la carta concluye con saludos a los creyentes y una bendición de gracia",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El cierre reúne saludos y una bendición centrada en la gracia, sin añadir exigencias nuevas al contenido de la carta.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}
