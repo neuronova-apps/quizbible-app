@@ -107,6 +107,7 @@ PETER2_PATH = Path(__file__).parent / "2peter-master-input.json"
 JOHN1_PATH = Path(__file__).parent / "1john-master-input.json"
 JOHN2_PATH = Path(__file__).parent / "2john-master-input.json"
 JOHN3_PATH = Path(__file__).parent / "3john-master-input.json"
+JUDE_PATH = Path(__file__).parent / "jude-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -492,6 +493,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.john3_questions = {q["id"]: q for q in (raw_3jn.get("questions", []) if isinstance(raw_3jn, dict) else raw_3jn)}
         else:
             cls.john3_questions = {}
+
+        if JUDE_PATH.exists():
+            raw_jud = json.loads(JUDE_PATH.read_text(encoding="utf-8"))
+            cls.jude_questions = {q["id"]: q for q in (raw_jud.get("questions", []) if isinstance(raw_jud, dict) else raw_jud)}
+        else:
+            cls.jude_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -8716,6 +8723,199 @@ class TestAuditorCanonical(unittest.TestCase):
             for pq in prior_questions:
                 self.assertNotIn(pq["question"].strip(), jn3_texts,
                                  f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y 3 Juan")
+
+    # --- PRUEBAS ESPECÍFICAS DE JUDAS ---
+
+    def get_jude_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.jude_questions, f"ID '{qid}' no encontrado en jude-master-input.json")
+        return copy.deepcopy(self.jude_questions[qid])
+
+    def test_detect_book_key_jude(self) -> None:
+        """Verifica detección de book_key para Judas y sus variantes."""
+        for alias in ["Judas", "judas", "Jude", "jude", "Jud", "jud", "Epístola de Judas", "Carta de Judas"]:
+            spec = {"questions": [{"id": "NQB-NT-JUD-0001", "book": alias}]}
+            self.assertEqual(detect_book_key(spec), "jude",
+                             f"detect_book_key failed for alias: {alias}")
+
+    def test_jude_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de Judas en BOOK_CONFIGS."""
+        self.assertIn("jude", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["jude"]
+        self.assertEqual(cfg["canonical_name"], "Judas")
+        self.assertEqual(cfg["api_name"], "Judas")
+        self.assertEqual(cfg["total_chapters"], 1)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("judas", cfg["aliases"])
+        self.assertIn("jude", cfg["aliases"])
+        self.assertIn("jud", cfg["aliases"])
+
+    def test_jude_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de Judas."""
+        if not self.jude_questions:
+            self.skipTest("jude-master-input.json no disponible")
+        self.assertEqual(len(self.jude_questions), 12)
+
+        # 12 preguntas en el capítulo 1
+        ch_counts = collections.Counter(q["chapter"] for q in self.jude_questions.values())
+        self.assertEqual(len(ch_counts), 1)
+        self.assertEqual(ch_counts[1], 12)
+
+        # IDs: NQB-NT-JUD-0001 a NQB-NT-JUD-0012
+        ids = sorted(self.jude_questions.keys())
+        self.assertEqual(ids[0], "NQB-NT-JUD-0001")
+        self.assertEqual(ids[-1], "NQB-NT-JUD-0012")
+        self.assertEqual(len(set(ids)), 12)
+
+        # Dificultad: Básico=2, Intermedio=3, Avanzado=4, Experto=3
+        diff_counts = collections.Counter(q["difficulty"] for q in self.jude_questions.values())
+        self.assertEqual(diff_counts["Básico"], 2)
+        self.assertEqual(diff_counts["Intermedio"], 3)
+        self.assertEqual(diff_counts["Avanzado"], 4)
+        self.assertEqual(diff_counts["Experto"], 3)
+
+        # Tipos: 10 MC, 2 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.jude_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 10)
+        self.assertEqual(type_counts["TRUE_FALSE"], 2)
+
+        tf_ids = sorted(q["id"] for q in self.jude_questions.values() if q.get("question_type") == "TRUE_FALSE")
+        self.assertEqual(tf_ids, ["NQB-NT-JUD-0010", "NQB-NT-JUD-0012"])
+
+    def test_jude_categories_and_characters(self) -> None:
+        """Verifica categorías y personajes de Judas (Judas, Miguel, Caín/Balaam/Coré, Enoc)."""
+        if not self.jude_questions:
+            self.skipTest("jude-master-input.json no disponible")
+        cat_counts = collections.Counter(q["category"] for q in self.jude_questions.values())
+        self.assertEqual(cat_counts["NT_GENERAL"], 8)
+        self.assertEqual(cat_counts["PERSONAJES_BIBLICOS"], 4)
+
+        pb_qs = {q["id"]: q for q in self.jude_questions.values() if q["category"] == "PERSONAJES_BIBLICOS"}
+        self.assertEqual(set(pb_qs.keys()), {"NQB-NT-JUD-0001", "NQB-NT-JUD-0006", "NQB-NT-JUD-0007", "NQB-NT-JUD-0009"})
+        self.assertEqual(pb_qs["NQB-NT-JUD-0001"]["characters"], ["Judas"])
+        self.assertEqual(pb_qs["NQB-NT-JUD-0006"]["characters"], ["Miguel"])
+        self.assertEqual(set(pb_qs["NQB-NT-JUD-0007"]["characters"]), {"Caín", "Balaam", "Coré"})
+        self.assertEqual(pb_qs["NQB-NT-JUD-0009"]["characters"], ["Enoc"])
+
+    def test_jude_additional_references(self) -> None:
+        """Verifica las 11 preguntas con 16 referencias en Judas."""
+        if not self.jude_questions:
+            self.skipTest("jude-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-JUD-0001": ["Santiago 1:1"],
+            "NQB-NT-JUD-0002": ["2 Pedro 2:1"],
+            "NQB-NT-JUD-0003": ["Números 14:22-23", "Hebreos 3:16-19"],
+            "NQB-NT-JUD-0004": ["2 Pedro 2:4"],
+            "NQB-NT-JUD-0005": ["Génesis 19:4-25", "2 Pedro 2:6"],
+            "NQB-NT-JUD-0006": ["Zacarías 3:2"],
+            "NQB-NT-JUD-0007": ["Génesis 4:3-8", "Números 22:7", "Números 16:1-35"],
+            "NQB-NT-JUD-0008": ["2 Pedro 2:17"],
+            "NQB-NT-JUD-0009": ["Génesis 5:21-24"],
+            "NQB-NT-JUD-0010": ["2 Pedro 3:2-3"],
+            "NQB-NT-JUD-0012": ["Romanos 16:25", "Efesios 3:20-21"],
+        }
+        found_add_refs = {
+            qid: q["additional_references"]
+            for qid, q in self.jude_questions.items()
+            if q.get("additional_references")
+        }
+        self.assertEqual(len(found_add_refs), 11)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 16)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_jude_modes(self) -> None:
+        """Verifica la asignación de modos en Judas."""
+        if not self.jude_questions:
+            self.skipTest("jude-master-input.json no disponible")
+        mode_counts = collections.defaultdict(int)
+        for q in self.jude_questions.values():
+            for m in q.get("eligible_modes", []):
+                mode_counts[m] += 1
+        self.assertEqual(mode_counts["NT"], 12)
+        self.assertEqual(mode_counts["AMBOS"], 12)
+        self.assertEqual(mode_counts["PERSONAJES_NT"], 4)
+        self.assertEqual(mode_counts["PERSONAJES_AMBOS"], 4)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_NT"], 2)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_AMBOS"], 2)
+
+    def test_jude_id_reference_integrity(self) -> None:
+        """Verifica consistencia de IDs y referencias en Judas."""
+        if not self.jude_questions:
+            self.skipTest("jude-master-input.json no disponible")
+        for qid, q in self.jude_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_jude_true_false_neutral_semantics(self) -> None:
+        """Verifica semántica neutral de TRUE_FALSE en Judas: JUD0010 (A=Falso/correct=A) y JUD0012 (A=Verdadero/correct=A)."""
+        if not self.jude_questions:
+            self.skipTest("jude-master-input.json no disponible")
+        q10 = self.get_jude_question("NQB-NT-JUD-0010")
+        self.assertEqual(q10["opcion_a"].strip().lower(), "falso", "JUD0010: opcion_a debe ser Falso")
+        self.assertEqual(q10["opcion_b"].strip().lower(), "verdadero", "JUD0010: opcion_b debe ser Verdadero")
+        self.assertEqual(q10["correct_option"], "A", "JUD0010: correct_option debe ser A")
+        self.assertEqual(q10["correct_answer"].strip().lower(), "falso", "JUD0010: correct_answer debe ser Falso")
+
+        q12 = self.get_jude_question("NQB-NT-JUD-0012")
+        self.assertEqual(q12["opcion_a"].strip().lower(), "verdadero", "JUD0012: opcion_a debe ser Verdadero")
+        self.assertEqual(q12["opcion_b"].strip().lower(), "falso", "JUD0012: opcion_b debe ser Falso")
+        self.assertEqual(q12["correct_option"], "A", "JUD0012: correct_option debe ser A")
+        self.assertEqual(q12["correct_answer"].strip().lower(), "verdadero", "JUD0012: correct_answer debe ser Verdadero")
+
+    def test_jude_no_duplicates_within(self) -> None:
+        """Verifica que no haya preguntas duplicadas internamente en Judas."""
+        if not self.jude_questions:
+            self.skipTest("jude-master-input.json no disponible")
+        questions_texts = [q["question"].strip() for q in self.jude_questions.values()]
+        self.assertEqual(len(questions_texts), len(set(questions_texts)), "Duplicados detectados internamente")
+
+    def test_jude_no_duplicates_cross_nt(self) -> None:
+        """Verifica que no haya preguntas duplicadas entre Judas y los 25 libros NT anteriores."""
+        if not self.jude_questions:
+            self.skipTest("jude-master-input.json no disponible")
+        jud_texts = {q["question"].strip() for q in self.jude_questions.values()}
+        prior_nt = [
+            PHILIPPIANS_PATH.parent / "matthew-master-input.json",
+            PHILIPPIANS_PATH.parent / "mark-master-input.json",
+            PHILIPPIANS_PATH.parent / "luke-master-input.json",
+            PHILIPPIANS_PATH.parent / "john-master-input.json",
+            PHILIPPIANS_PATH.parent / "acts-master-input.json",
+            PHILIPPIANS_PATH.parent / "romans-master-input.json",
+            PHILIPPIANS_PATH.parent / "1corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "galatians-master-input.json",
+            PHILIPPIANS_PATH.parent / "ephesians-master-input.json",
+            PHILIPPIANS_PATH.parent / "philippians-master-input.json",
+            PHILIPPIANS_PATH.parent / "colossians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "2timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "titus-master-input.json",
+            PHILIPPIANS_PATH.parent / "philemon-master-input.json",
+            PHILIPPIANS_PATH.parent / "hebrews-master-input.json",
+            PHILIPPIANS_PATH.parent / "james-master-input.json",
+            PHILIPPIANS_PATH.parent / "1peter-master-input.json",
+            PHILIPPIANS_PATH.parent / "2peter-master-input.json",
+            PHILIPPIANS_PATH.parent / "1john-master-input.json",
+            PHILIPPIANS_PATH.parent / "2john-master-input.json",
+            PHILIPPIANS_PATH.parent / "3john-master-input.json",
+        ]
+        for prior_path in prior_nt:
+            if not prior_path.exists():
+                continue
+            prior_data = json.loads(prior_path.read_text(encoding="utf-8"))
+            prior_questions = prior_data.get("questions", []) if isinstance(prior_data, dict) else prior_data
+            for pq in prior_questions:
+                self.assertNotIn(pq["question"].strip(), jud_texts,
+                                 f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y Judas")
 
 
 if __name__ == "__main__":

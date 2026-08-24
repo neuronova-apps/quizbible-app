@@ -1183,6 +1183,20 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
         "default_output_dir": "build/audit/3john",
         "ambient_places": set(),
     },
+    "jude": {
+        "canonical_name": "Judas",
+        "api_name": "Judas",
+        "aliases": {
+            "judas", "jude", "jud",
+            "epistola de judas", "carta de judas"
+        },
+        "total_chapters": 1,
+        "blocks": [
+            (1, 1, "jude-01-01.json"),
+        ],
+        "default_output_dir": "build/audit/jude",
+        "ambient_places": set(),
+    },
 }
 
 STOPWORDS = {

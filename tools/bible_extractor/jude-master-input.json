@@ -1,0 +1,369 @@
+{
+  "source": "Quiz Bible master bank - Judas",
+  "version": "RVR1960",
+  "book": "Judas",
+  "total_questions": 12,
+  "questions": [
+    {
+      "id": "NQB-NT-JUD-0001",
+      "book": "Judas",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "Judas 1:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Identidad de Judas y destinatarios",
+      "characters": [
+        "Judas"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo se presenta Judas al comienzo de la carta?",
+      "opcion_a": "Como siervo de Jesucristo y hermano de Jacobo",
+      "opcion_b": "Como uno de los doce apóstoles que ocupó el lugar de Judas Iscariote",
+      "opcion_c": "Como sumo sacerdote de Jerusalén",
+      "opcion_d": "Como gobernador de una provincia romana",
+      "correct_option": "A",
+      "correct_answer": "Como siervo de Jesucristo y hermano de Jacobo",
+      "explanation": "La carta se presenta con Judas como siervo de Jesucristo y hermano de Jacobo. No debe identificarse automáticamente con Judas Iscariote ni atribuirle cargos que el texto no menciona.",
+      "additional_references": [
+        "Santiago 1:1"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUD-0002",
+      "book": "Judas",
+      "chapter": 1,
+      "verse_start": 3,
+      "verse_end": 4,
+      "reference": "Judas 1:3-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Contender por la fe",
+      "characters": [],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué Judas considera necesario exhortar a sus lectores a contender por la fe?",
+      "opcion_a": "Porque habían entrado encubiertamente personas que desviaban la gracia hacia una conducta incompatible con la fe y negaban al Señor",
+      "opcion_b": "Porque la iglesia debía iniciar una disputa política con las autoridades",
+      "opcion_c": "Porque toda diferencia de opinión debía tratarse como apostasía",
+      "opcion_d": "Porque el mensaje cristiano necesitaba ser reemplazado por enseñanzas secretas",
+      "correct_option": "A",
+      "correct_answer": "Porque habían entrado encubiertamente personas que desviaban la gracia hacia una conducta incompatible con la fe y negaban al Señor",
+      "explanation": "La exhortación responde a la presencia de personas que pervertían la gracia y negaban al Señor. Contender por la fe no autoriza violencia, hostigamiento ni convertir cualquier desacuerdo secundario en condena.",
+      "additional_references": [
+        "2 Pedro 2:1"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUD-0003",
+      "book": "Judas",
+      "chapter": 1,
+      "verse_start": 5,
+      "verse_end": 5,
+      "reference": "Judas 1:5",
+      "category": "NT_GENERAL",
+      "subcategory": "Memoria del juicio y la incredulidad",
+      "characters": [],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste recuerda Judas al mencionar al pueblo que salió de Egipto?",
+      "opcion_a": "Que el Señor salvó al pueblo y después juzgó a quienes no creyeron",
+      "opcion_b": "Que todos los que salieron de Egipto entraron finalmente en la tierra prometida",
+      "opcion_c": "Que la liberación de Egipto eliminó toda responsabilidad posterior",
+      "opcion_d": "Que la incredulidad fue presentada como una virtud necesaria",
+      "correct_option": "A",
+      "correct_answer": "Que el Señor salvó al pueblo y después juzgó a quienes no creyeron",
+      "explanation": "Judas usa el episodio para advertir que haber recibido liberación no convierte la incredulidad posterior en algo irrelevante. El énfasis es exhortativo y no autoriza aplicar juicios personales sobre individuos actuales.",
+      "additional_references": [
+        "Números 14:22-23",
+        "Hebreos 3:16-19"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUD-0004",
+      "book": "Judas",
+      "chapter": 1,
+      "verse_start": 6,
+      "verse_end": 6,
+      "reference": "Judas 1:6",
+      "category": "NT_GENERAL",
+      "subcategory": "Ángeles que abandonaron su posición",
+      "characters": [],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué afirma Judas acerca de los ángeles que no guardaron su dignidad y abandonaron su propia morada?",
+      "opcion_a": "Que están reservados bajo oscuridad para el juicio del gran día",
+      "opcion_b": "Que recibieron autoridad para gobernar a la iglesia",
+      "opcion_c": "Que fueron presentados como ejemplo de arrepentimiento inmediato",
+      "opcion_d": "Que quedaron libres de toda consecuencia",
+      "correct_option": "A",
+      "correct_answer": "Que están reservados bajo oscuridad para el juicio del gran día",
+      "explanation": "La carta presenta a esos ángeles como reservados para juicio. El pasaje debe mantenerse dentro de su función de advertencia y no utilizarse para construir detalles especulativos que el texto no proporciona.",
+      "additional_references": [
+        "2 Pedro 2:4"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUD-0005",
+      "book": "Judas",
+      "chapter": 1,
+      "verse_start": 7,
+      "verse_end": 7,
+      "reference": "Judas 1:7",
+      "category": "NT_GENERAL",
+      "subcategory": "Sodoma, Gomorra y advertencia",
+      "characters": [],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Con qué propósito aparecen Sodoma, Gomorra y las ciudades vecinas en la argumentación de Judas?",
+      "opcion_a": "Como ejemplo de una conducta gravemente desordenada que quedó expuesta a juicio",
+      "opcion_b": "Como modelo de organización social que la iglesia debía imitar",
+      "opcion_c": "Como prueba de que toda ciudad grande está condenada por definición",
+      "opcion_d": "Como autorización para perseguir a personas por asociación con un lugar",
+      "correct_option": "A",
+      "correct_answer": "Como ejemplo de una conducta gravemente desordenada que quedó expuesta a juicio",
+      "explanation": "Judas las emplea como ejemplo de juicio ligado a una conducta descrita en el pasaje. No permite condenar colectivamente ciudades actuales ni justificar acoso, violencia o discriminación.",
+      "additional_references": [
+        "Génesis 19:4-25",
+        "2 Pedro 2:6"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUD-0006",
+      "book": "Judas",
+      "chapter": 1,
+      "verse_start": 8,
+      "verse_end": 10,
+      "reference": "Judas 1:8-10",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Miguel y el límite al hablar con arrogancia",
+      "characters": [
+        "Miguel"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitud de Miguel contrasta Judas con la arrogancia de quienes injurian lo que no comprenden?",
+      "opcion_a": "No pronunció un juicio injurioso por autoridad propia, sino que dejó la reprensión al Señor",
+      "opcion_b": "Se proclamó juez supremo por encima del Señor",
+      "opcion_c": "Respondió con insultos para demostrar autoridad espiritual",
+      "opcion_d": "Ordenó a los creyentes repetir una fórmula para obtener poder sobre seres espirituales",
+      "correct_option": "A",
+      "correct_answer": "No pronunció un juicio injurioso por autoridad propia, sino que dejó la reprensión al Señor",
+      "explanation": "Judas contrasta la conducta de Miguel con la presunción de quienes hablan con arrogancia. El relato no convierte una expresión en fórmula mágica ni autoriza prácticas de confrontación espiritual fuera del sentido del texto.",
+      "additional_references": [
+        "Zacarías 3:2"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUD-0007",
+      "book": "Judas",
+      "chapter": 1,
+      "verse_start": 11,
+      "verse_end": 11,
+      "reference": "Judas 1:11",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Caín, Balaam y Coré como advertencias",
+      "characters": [
+        "Caín",
+        "Balaam",
+        "Coré"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tres ejemplos usa Judas para describir el rumbo de quienes corrompen la comunidad?",
+      "opcion_a": "El camino de Caín, el error de Balaam por recompensa y la contradicción de Coré",
+      "opcion_b": "La fe de Abraham, la paciencia de Job y el valor de David",
+      "opcion_c": "El arrepentimiento de Nínive, la sabiduría de Salomón y la obediencia de Josué",
+      "opcion_d": "La hospitalidad de Abraham, la lealtad de Rut y el servicio de Samuel",
+      "correct_option": "A",
+      "correct_answer": "El camino de Caín, el error de Balaam por recompensa y la contradicción de Coré",
+      "explanation": "La carta reúne a Caín, Balaam y Coré como referencias negativas. Cada figura conserva su propio contexto bíblico; la comparación no autoriza etiquetar de manera automática a personas actuales.",
+      "additional_references": [
+        "Génesis 4:3-8",
+        "Números 22:7",
+        "Números 16:1-35"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUD-0008",
+      "book": "Judas",
+      "chapter": 1,
+      "verse_start": 12,
+      "verse_end": 13,
+      "reference": "Judas 1:12-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Imágenes de esterilidad e inestabilidad",
+      "characters": [],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué conjunto de imágenes utiliza Judas para describir la falta de fruto y estabilidad de los falsos maestros?",
+      "opcion_a": "Nubes sin agua, árboles sin fruto, fieras ondas del mar y estrellas errantes",
+      "opcion_b": "Ríos caudalosos, árboles junto al agua, montes firmes y estrellas fijas",
+      "opcion_c": "Semillas fértiles, viñas cuidadas, lámparas encendidas y casas sobre roca",
+      "opcion_d": "Pan abundante, fuentes limpias, ovejas protegidas y caminos rectos",
+      "correct_option": "A",
+      "correct_answer": "Nubes sin agua, árboles sin fruto, fieras ondas del mar y estrellas errantes",
+      "explanation": "Judas acumula imágenes de vacío, esterilidad, desorden e inestabilidad para describir a esas personas. Son imágenes retóricas dentro de la carta y no diagnósticos para clasificar a cualquiera que cometa un error.",
+      "additional_references": [
+        "2 Pedro 2:17"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUD-0009",
+      "book": "Judas",
+      "chapter": 1,
+      "verse_start": 14,
+      "verse_end": 15,
+      "reference": "Judas 1:14-15",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Profecía atribuida a Enoc",
+      "characters": [
+        "Enoc"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué anuncia la profecía de Enoc citada por Judas?",
+      "opcion_a": "La venida del Señor con sus santos para ejecutar juicio y poner en evidencia las obras impías",
+      "opcion_b": "La construcción de un nuevo templo en Jerusalén antes de cualquier juicio",
+      "opcion_c": "La desaparición de toda responsabilidad moral humana",
+      "opcion_d": "La autorización para que los creyentes ejecuten personalmente el juicio divino",
+      "correct_option": "A",
+      "correct_answer": "La venida del Señor con sus santos para ejecutar juicio y poner en evidencia las obras impías",
+      "explanation": "La cita anuncia la intervención judicial del Señor. El texto no transfiere a los creyentes la función de ejecutar violencia o castigo contra quienes consideran impíos.",
+      "additional_references": [
+        "Génesis 5:21-24"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUD-0010",
+      "book": "Judas",
+      "chapter": 1,
+      "verse_start": 17,
+      "verse_end": 19,
+      "reference": "Judas 1:17-19",
+      "category": "NT_GENERAL",
+      "subcategory": "Advertencia apostólica sobre burladores",
+      "characters": [],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Judas describe a los burladores como personas que fortalecen la unidad y viven guiadas por el Espíritu",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Judas recuerda la advertencia apostólica y describe a esas personas como causantes de divisiones, sensuales y sin el Espíritu.",
+      "additional_references": [
+        "2 Pedro 3:2-3"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUD-0011",
+      "book": "Judas",
+      "chapter": 1,
+      "verse_start": 20,
+      "verse_end": 23,
+      "reference": "Judas 1:20-23",
+      "category": "NT_GENERAL",
+      "subcategory": "Perseverancia, misericordia y discernimiento",
+      "characters": [],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación de acciones propone Judas para la vida de la comunidad frente al error?",
+      "opcion_a": "Edificarse en la fe, orar en el Espíritu Santo, mantenerse en el amor de Dios y actuar con misericordia y discernimiento",
+      "opcion_b": "Responder a toda persona exactamente del mismo modo y sin evaluar circunstancias",
+      "opcion_c": "Abandonar a cualquiera que tenga dudas para evitar riesgos",
+      "opcion_d": "Convertir la corrección en humillación pública y castigo personal",
+      "correct_option": "A",
+      "correct_answer": "Edificarse en la fe, orar en el Espíritu Santo, mantenerse en el amor de Dios y actuar con misericordia y discernimiento",
+      "explanation": "Judas combina perseverancia espiritual con respuestas diferenciadas hacia quienes están en riesgo o dudan. El pasaje no legitima humillación, coerción ni métodos peligrosos bajo pretexto de rescatar a alguien.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-JUD-0012",
+      "book": "Judas",
+      "chapter": 1,
+      "verse_start": 24,
+      "verse_end": 25,
+      "reference": "Judas 1:24-25",
+      "category": "NT_GENERAL",
+      "subcategory": "Doxología y preservación divina",
+      "characters": [],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la carta termina reconociendo que Dios es poderoso para guardar de caída y presentar a los creyentes sin mancha con gran alegría",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. La doxología atribuye a Dios poder para guardar y presentar a su pueblo, y concluye con gloria, majestad, imperio y potencia.",
+      "additional_references": [
+        "Romanos 16:25",
+        "Efesios 3:20-21"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}
