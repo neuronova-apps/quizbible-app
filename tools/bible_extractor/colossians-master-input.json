@@ -1,0 +1,754 @@
+{
+  "source": "Quiz Bible master bank - Colosenses",
+  "version": "RVR1960",
+  "book": "Colosenses",
+  "total_questions": 24,
+  "questions": [
+    {
+      "id": "NQB-NT-COL-0001",
+      "book": "Colosenses",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "Colosenses 1:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Saludo y remitentes",
+      "characters": [
+        "Pablo",
+        "Timoteo",
+        "santos en Colosas"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué dos nombres aparecen juntos como remitentes al inicio de la carta?",
+      "opcion_a": "Pablo y Timoteo",
+      "opcion_b": "Pedro y Juan",
+      "opcion_c": "Bernabé y Marcos",
+      "opcion_d": "Lucas y Silas",
+      "correct_option": "A",
+      "correct_answer": "Pablo y Timoteo",
+      "explanation": "La apertura identifica a Pablo y Timoteo y dirige el saludo a la comunidad. La pregunta se limita a la presentación epistolar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0002",
+      "book": "Colosenses",
+      "chapter": 1,
+      "verse_start": 3,
+      "verse_end": 8,
+      "reference": "Colosenses 1:3-8",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Gratitud y Epafras",
+      "characters": [
+        "Pablo",
+        "Epafras",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué destaca Pablo al recordar cómo la comunidad conoció el mensaje?",
+      "opcion_a": "Que lo aprendieron por medio de Epafras, un colaborador fiel",
+      "opcion_b": "Que recibieron una tradición secreta reservada para pocos",
+      "opcion_c": "Que dependieron de un poder político local",
+      "opcion_d": "Que abandonaron todo vínculo comunitario",
+      "correct_option": "A",
+      "correct_answer": "Que lo aprendieron por medio de Epafras, un colaborador fiel",
+      "explanation": "Pablo relaciona la fe y el amor de la comunidad con el mensaje recibido por medio de Epafras. No presenta conocimiento secreto ni dependencia de poder político.",
+      "additional_references": [
+        "Filemón 1:23"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0003",
+      "book": "Colosenses",
+      "chapter": 1,
+      "verse_start": 9,
+      "verse_end": 14,
+      "reference": "Colosenses 1:9-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Oración y redención",
+      "characters": [
+        "Pablo",
+        "comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación resume la oración por la comunidad y el cambio que Dios ha realizado?",
+      "opcion_a": "Conocimiento de su voluntad, vida fructífera y traslado al reino del Hijo con redención",
+      "opcion_b": "Riqueza material, prestigio y ausencia de dificultades",
+      "opcion_c": "Separación de toda persona que piense distinto",
+      "opcion_d": "Conquista de autoridad política",
+      "correct_option": "A",
+      "correct_answer": "Conocimiento de su voluntad, vida fructífera y traslado al reino del Hijo con redención",
+      "explanation": "La oración une conocimiento, conducta fructífera, fortaleza y gratitud con la liberación y redención en Cristo. No promete prosperidad o dominio.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0004",
+      "book": "Colosenses",
+      "chapter": 1,
+      "verse_start": 15,
+      "verse_end": 20,
+      "reference": "Colosenses 1:15-20",
+      "category": "NT_GENERAL",
+      "subcategory": "Supremacía y reconciliación en Cristo",
+      "characters": [
+        "Jesucristo",
+        "creación",
+        "iglesia"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué afirmación integra mejor la presentación de Cristo en esta sección?",
+      "opcion_a": "Es presentado en relación con la creación, la iglesia y la reconciliación de todas las cosas",
+      "opcion_b": "Es descrito solo como maestro moral sin relación con la creación",
+      "opcion_c": "Se le atribuye poder para justificar superioridad étnica",
+      "opcion_d": "Su autoridad se usa para legitimar dominio humano sin límites",
+      "correct_option": "A",
+      "correct_answer": "Es presentado en relación con la creación, la iglesia y la reconciliación de todas las cosas",
+      "explanation": "La sección presenta a Cristo como central para creación, iglesia y reconciliación. No ofrece una base para supremacía étnica o autoridad humana abusiva.",
+      "additional_references": [
+        "Juan 1:3",
+        "Hebreos 1:3"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0005",
+      "book": "Colosenses",
+      "chapter": 1,
+      "verse_start": 21,
+      "verse_end": 23,
+      "reference": "Colosenses 1:21-23",
+      "category": "NT_GENERAL",
+      "subcategory": "Reconciliación y perseverancia",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cambio describe el pasaje respecto de quienes estaban alejados y ahora han sido reconciliados?",
+      "opcion_a": "Han sido acercados para vivir en una relación renovada y permanecer firmes en la esperanza",
+      "opcion_b": "Han recibido permiso para despreciar a quienes discrepan",
+      "opcion_c": "Han quedado libres de toda responsabilidad ética",
+      "opcion_d": "Han obtenido superioridad sobre otros pueblos",
+      "correct_option": "A",
+      "correct_answer": "Han sido acercados para vivir en una relación renovada y permanecer firmes en la esperanza",
+      "explanation": "La reconciliación se vincula con una nueva relación en Cristo y con perseverancia en la fe. No crea jerarquías étnicas ni elimina responsabilidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0006",
+      "book": "Colosenses",
+      "chapter": 1,
+      "verse_start": 24,
+      "verse_end": 29,
+      "reference": "Colosenses 1:24-29",
+      "category": "NT_GENERAL",
+      "subcategory": "Ministerio y misterio",
+      "characters": [
+        "Pablo",
+        "comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo presenta su servicio como orientado a dar a conocer el misterio centrado en Cristo",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Pablo describe su servicio en relación con la proclamación del misterio y con la madurez de la comunidad, no con prestigio personal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0007",
+      "book": "Colosenses",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Colosenses 2:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Cuidado pastoral y firmeza",
+      "characters": [
+        "Pablo",
+        "comunidades"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué desea Pablo para comunidades que no lo han visto personalmente?",
+      "opcion_a": "Que sean alentadas, unidas en amor y firmes en su comprensión de Cristo",
+      "opcion_b": "Que dependan de información secreta controlada por una élite",
+      "opcion_c": "Que eviten toda relación con otras comunidades",
+      "opcion_d": "Que acepten cualquier enseñanza sin examinarla",
+      "correct_option": "A",
+      "correct_answer": "Que sean alentadas, unidas en amor y firmes en su comprensión de Cristo",
+      "explanation": "Pablo expresa preocupación pastoral por unidad, ánimo y comprensión. No propone control por conocimiento secreto ni aceptación acrítica.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0008",
+      "book": "Colosenses",
+      "chapter": 2,
+      "verse_start": 6,
+      "verse_end": 7,
+      "reference": "Colosenses 2:6-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Caminar arraigados en Cristo",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué imágenes usa la exhortación para describir una vida estable en Cristo?",
+      "opcion_a": "Estar arraigados, edificados y afirmados en la fe con gratitud",
+      "opcion_b": "Cambiar de enseñanza constantemente para adaptarse",
+      "opcion_c": "Buscar independencia total de la comunidad",
+      "opcion_d": "Medir la fe por éxito económico",
+      "correct_option": "A",
+      "correct_answer": "Estar arraigados, edificados y afirmados en la fe con gratitud",
+      "explanation": "La exhortación combina caminar en Cristo con imágenes de raíces, edificación, firmeza y gratitud. No vincula estabilidad con prosperidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0009",
+      "book": "Colosenses",
+      "chapter": 2,
+      "verse_start": 8,
+      "verse_end": 10,
+      "reference": "Colosenses 2:8-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Discernimiento y plenitud",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué criterio ofrece el pasaje frente a enseñanzas que pueden apartar de Cristo?",
+      "opcion_a": "Evaluarlas a la luz de Cristo, en quien se presenta la plenitud y la suficiencia del creyente",
+      "opcion_b": "Rechazar todo estudio, filosofía o razonamiento por definición",
+      "opcion_c": "Aceptar cualquier tradición porque sea antigua",
+      "opcion_d": "Seguir únicamente a la persona con más autoridad social",
+      "correct_option": "A",
+      "correct_answer": "Evaluarlas a la luz de Cristo, en quien se presenta la plenitud y la suficiencia del creyente",
+      "explanation": "La advertencia se dirige a enseñanzas que desplazan a Cristo mediante tradición o engaño. No constituye una condena general del pensamiento, estudio o filosofía.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0010",
+      "book": "Colosenses",
+      "chapter": 2,
+      "verse_start": 11,
+      "verse_end": 15,
+      "reference": "Colosenses 2:11-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Nueva vida, perdón y cruz",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cambio espiritual reúne el pasaje mediante las imágenes de circuncisión, bautismo, perdón y cruz?",
+      "opcion_a": "Una nueva pertenencia y vida en Cristo vinculada con el perdón y su obra",
+      "opcion_b": "Una obligación médica de practicar circuncisión",
+      "opcion_c": "Una fórmula ritual que elimina toda responsabilidad personal",
+      "opcion_d": "Una autorización para despreciar prácticas judías",
+      "correct_option": "A",
+      "correct_answer": "Una nueva pertenencia y vida en Cristo vinculada con el perdón y su obra",
+      "explanation": "El pasaje usa lenguaje teológico sobre unión con Cristo, perdón y victoria. No debe convertirse en consejo médico ni en desprecio del judaísmo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0011",
+      "book": "Colosenses",
+      "chapter": 2,
+      "verse_start": 16,
+      "verse_end": 19,
+      "reference": "Colosenses 2:16-19",
+      "category": "NT_GENERAL",
+      "subcategory": "Fiestas, sombras y libertad de juicio",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué orientación da el pasaje cuando otros juzgan por comida, bebida, festividades o días religiosos?",
+      "opcion_a": "No dejar que esas observancias se conviertan en base para condenar, manteniendo a Cristo como centro",
+      "opcion_b": "Despreciar las prácticas judías y a quienes las conservan",
+      "opcion_c": "Prohibir toda celebración religiosa o cultural",
+      "opcion_d": "Imponer un calendario único a todas las comunidades",
+      "correct_option": "A",
+      "correct_answer": "No dejar que esas observancias se conviertan en base para condenar, manteniendo a Cristo como centro",
+      "explanation": "La sección cuestiona que prácticas alimentarias o calendáricas se usen para juzgar y desplazar a Cristo. No legitima antijudaísmo ni obliga a eliminar celebraciones.",
+      "additional_references": [
+        "Levítico 23:2-3",
+        "Números 28:11-15"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0012",
+      "book": "Colosenses",
+      "chapter": 2,
+      "verse_start": 20,
+      "verse_end": 23,
+      "reference": "Colosenses 2:20-23",
+      "category": "NT_GENERAL",
+      "subcategory": "Regulaciones y ascetismo",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que las reglas ascéticas descritas son presentadas como suficientes para transformar realmente los deseos humanos",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. El pasaje critica regulaciones que parecen sabias pero no ofrecen el poder transformador que prometen. A representa Falso, preservando semántica neutral A/B.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0013",
+      "book": "Colosenses",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Colosenses 3:1-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Buscar las cosas de arriba",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo orienta el pasaje la esperanza de quienes han sido unidos a Cristo?",
+      "opcion_a": "A centrar la vida en Cristo y en la esperanza futura sin negar responsabilidades presentes",
+      "opcion_b": "A abandonar toda responsabilidad terrenal",
+      "opcion_c": "A despreciar el cuerpo físico",
+      "opcion_d": "A aislarse de la sociedad",
+      "correct_option": "A",
+      "correct_answer": "A centrar la vida en Cristo y en la esperanza futura sin negar responsabilidades presentes",
+      "explanation": "La orientación hacia Cristo y la esperanza futura no exige evasión social ni desprecio de la vida corporal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0014",
+      "book": "Colosenses",
+      "chapter": 3,
+      "verse_start": 5,
+      "verse_end": 11,
+      "reference": "Colosenses 3:5-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Vieja y nueva humanidad",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué relación establece el pasaje entre abandonar prácticas dañinas y la nueva identidad de la comunidad?",
+      "opcion_a": "Describe una renovación ética en la que las diferencias no justifican superioridad entre personas",
+      "opcion_b": "Afirma que las diferencias culturales deben desaparecer por la fuerza",
+      "opcion_c": "Declara inferior a un grupo étnico concreto",
+      "opcion_d": "Enseña que el cuerpo es malo por naturaleza",
+      "correct_option": "A",
+      "correct_answer": "Describe una renovación ética en la que las diferencias no justifican superioridad entre personas",
+      "explanation": "La nueva humanidad se describe mediante renovación ética y una identidad centrada en Cristo. No autoriza supremacía étnica, uniformidad forzada o desprecio corporal.",
+      "additional_references": [
+        "Génesis 1:26-27"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0015",
+      "book": "Colosenses",
+      "chapter": 3,
+      "verse_start": 12,
+      "verse_end": 17,
+      "reference": "Colosenses 3:12-17",
+      "category": "NT_GENERAL",
+      "subcategory": "Virtudes, perdón y paz",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué prácticas sostienen la convivencia que el pasaje propone para la comunidad?",
+      "opcion_a": "Compasión, humildad, paciencia, perdón, amor, paz y gratitud",
+      "opcion_b": "Vigilancia invasiva de la vida privada",
+      "opcion_c": "Humillación pública de quien falla",
+      "opcion_d": "Uniformidad obligatoria de opiniones",
+      "correct_option": "A",
+      "correct_answer": "Compasión, humildad, paciencia, perdón, amor, paz y gratitud",
+      "explanation": "La exhortación reúne virtudes relacionales, perdón, amor, paz y gratitud. El perdón no elimina límites, responsabilidad o protección frente al daño.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0016",
+      "book": "Colosenses",
+      "chapter": 3,
+      "verse_start": 18,
+      "verse_end": 19,
+      "reference": "Colosenses 3:18-19",
+      "category": "NT_GENERAL",
+      "subcategory": "Matrimonio y responsabilidad recíproca",
+      "characters": [
+        "Esposas",
+        "esposos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué límite debe conservarse al interpretar las instrucciones dirigidas a esposas y esposos?",
+      "opcion_a": "El amor y la responsabilidad mutua excluyen usar el pasaje para justificar abuso o control coercitivo",
+      "opcion_b": "Una persona puede controlar por completo a la otra",
+      "opcion_c": "La violencia puede considerarse disciplina espiritual",
+      "opcion_d": "La seguridad personal debe ceder ante cualquier exigencia",
+      "correct_option": "A",
+      "correct_answer": "El amor y la responsabilidad mutua excluyen usar el pasaje para justificar abuso o control coercitivo",
+      "explanation": "Las instrucciones domésticas no autorizan violencia, coerción, aislamiento, control financiero o espiritual ni permanencia obligatoria en situaciones inseguras.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0017",
+      "book": "Colosenses",
+      "chapter": 3,
+      "verse_start": 20,
+      "verse_end": 21,
+      "reference": "Colosenses 3:20-21",
+      "category": "NT_GENERAL",
+      "subcategory": "Hijos y padres",
+      "characters": [
+        "Hijos",
+        "padres"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué equilibrio aparece entre las instrucciones para hijos y para padres?",
+      "opcion_a": "Se pide responsabilidad a los hijos y se advierte a los padres que no los desalienten o exasperen",
+      "opcion_b": "Se concede a los padres autoridad sin límites",
+      "opcion_c": "Se obliga a ocultar cualquier maltrato familiar",
+      "opcion_d": "Se permite castigo dañino para conseguir obediencia",
+      "correct_option": "A",
+      "correct_answer": "Se pide responsabilidad a los hijos y se advierte a los padres que no los desalienten o exasperen",
+      "explanation": "El pasaje une responsabilidad filial con una restricción explícita sobre el trato de los padres. No legitima abuso, violencia o silencio ante el riesgo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0018",
+      "book": "Colosenses",
+      "chapter": 3,
+      "verse_start": 22,
+      "verse_end": 25,
+      "reference": "Colosenses 3:22-25",
+      "category": "NT_GENERAL",
+      "subcategory": "Siervos y responsabilidad ante Dios",
+      "characters": [
+        "Siervos",
+        "amos",
+        "Dios"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el trabajo de los siervos se presenta como responsable ante Dios y no solo como actuación para agradar a supervisores humanos",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera dentro del contexto histórico de la carta. El pasaje no convierte la esclavitud en ideal moral ni legitima trata, servidumbre o explotación moderna.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0019",
+      "book": "Colosenses",
+      "chapter": 4,
+      "verse_start": 2,
+      "verse_end": 4,
+      "reference": "Colosenses 4:2-4",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Oración y misión",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pide Pablo que acompañe la perseverancia de la comunidad en la oración?",
+      "opcion_a": "Gratitud y petición para que se abra oportunidad de anunciar claramente el mensaje",
+      "opcion_b": "Búsqueda deliberada de prisión y oposición",
+      "opcion_c": "Control de quienes escuchan",
+      "opcion_d": "Garantía de que nunca habrá dificultades",
+      "correct_option": "A",
+      "correct_answer": "Gratitud y petición para que se abra oportunidad de anunciar claramente el mensaje",
+      "explanation": "Pablo pide oración perseverante y una oportunidad abierta para comunicar el mensaje. Sus cadenas son contexto, no una invitación a buscar persecución.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0020",
+      "book": "Colosenses",
+      "chapter": 4,
+      "verse_start": 5,
+      "verse_end": 6,
+      "reference": "Colosenses 4:5-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Sabiduría y palabra",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué caracteriza la manera de relacionarse y hablar con quienes están fuera de la comunidad?",
+      "opcion_a": "Sabiduría, aprovechamiento de oportunidades y una palabra con gracia que sepa responder",
+      "opcion_b": "Hostilidad ante toda pregunta",
+      "opcion_c": "Silencio frente a cualquier persona diferente",
+      "opcion_d": "Discurso diseñado para humillar al interlocutor",
+      "correct_option": "A",
+      "correct_answer": "Sabiduría, aprovechamiento de oportunidades y una palabra con gracia que sepa responder",
+      "explanation": "La exhortación une conducta sabia y palabra con gracia. No autoriza hostilidad, acoso o desprecio hacia quienes piensan distinto.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0021",
+      "book": "Colosenses",
+      "chapter": 4,
+      "verse_start": 7,
+      "verse_end": 9,
+      "reference": "Colosenses 4:7-9",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Tíquico y Onésimo",
+      "characters": [
+        "Tíquico",
+        "Onésimo",
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función cumplen Tíquico y Onésimo en el cierre de la carta?",
+      "opcion_a": "Informar sobre la situación de Pablo y animar a la comunidad",
+      "opcion_b": "Reemplazar a todos los líderes locales",
+      "opcion_c": "Imponer decisiones económicas",
+      "opcion_d": "Juzgar públicamente a quienes discrepen",
+      "correct_option": "A",
+      "correct_answer": "Informar sobre la situación de Pablo y animar a la comunidad",
+      "explanation": "Tíquico y Onésimo aparecen como colaboradores enviados para informar y animar. Su servicio no supone autoridad ilimitada.",
+      "additional_references": [
+        "Efesios 6:21-22",
+        "Filemón 1:10-12"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0022",
+      "book": "Colosenses",
+      "chapter": 4,
+      "verse_start": 10,
+      "verse_end": 14,
+      "reference": "Colosenses 4:10-14",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Colaboradores y saludos",
+      "characters": [
+        "Aristarco",
+        "Marcos",
+        "Jesús llamado Justo",
+        "Epafras",
+        "Lucas",
+        "Demas"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué muestra la lista de colaboradores que envían saludos junto con Pablo?",
+      "opcion_a": "Una red diversa de personas que participan en el servicio y el cuidado de las comunidades",
+      "opcion_b": "Una jerarquía en la que una sola persona concentra todo el trabajo",
+      "opcion_c": "Un grupo definido por superioridad étnica",
+      "opcion_d": "Una estructura política destinada a gobernar ciudades",
+      "correct_option": "A",
+      "correct_answer": "Una red diversa de personas que participan en el servicio y el cuidado de las comunidades",
+      "explanation": "El cierre muestra una red de colaboradores con funciones e historias distintas. No establece superioridad étnica ni una jerarquía de dominio.",
+      "additional_references": [
+        "Filemón 1:23-24"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0023",
+      "book": "Colosenses",
+      "chapter": 4,
+      "verse_start": 15,
+      "verse_end": 17,
+      "reference": "Colosenses 4:15-17",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Ninfa, Arquipo y comunidades",
+      "characters": [
+        "Ninfa",
+        "Arquipo",
+        "Laodicea"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué responsabilidades aparecen en los saludos dirigidos a otras comunidades y a Arquipo?",
+      "opcion_a": "Mantener la comunión entre iglesias y atender fielmente el servicio recibido",
+      "opcion_b": "Aislar cada comunidad para evitar intercambio",
+      "opcion_c": "Otorgar a Arquipo autoridad sin rendición de cuentas",
+      "opcion_d": "Convertir una casa concreta en centro obligatorio para todos",
+      "correct_option": "A",
+      "correct_answer": "Mantener la comunión entre iglesias y atender fielmente el servicio recibido",
+      "explanation": "Los saludos muestran intercambio entre comunidades y una exhortación a Arquipo para cumplir su servicio. No implican aislamiento ni autoridad ilimitada.",
+      "additional_references": [
+        "Filemón 1:2"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-COL-0024",
+      "book": "Colosenses",
+      "chapter": 4,
+      "verse_start": 18,
+      "verse_end": 18,
+      "reference": "Colosenses 4:18",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Firma, cadenas y gracia",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo cierra con una firma personal, pide recordar sus cadenas y pronuncia gracia sobre la comunidad",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Las cadenas recuerdan su situación histórica y no se presentan como condición espiritual que otros deban buscar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}

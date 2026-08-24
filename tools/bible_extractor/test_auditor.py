@@ -93,6 +93,7 @@ CORINTHIANS2_PATH = Path(__file__).parent / "2corinthians-master-input.json"
 GALATIANS_PATH = Path(__file__).parent / "galatians-master-input.json"
 EPHESIANS_PATH = Path(__file__).parent / "ephesians-master-input.json"
 PHILIPPIANS_PATH = Path(__file__).parent / "philippians-master-input.json"
+COLOSSIANS_PATH = Path(__file__).parent / "colossians-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -394,6 +395,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.philippians_questions = {q["id"]: q for q in (raw_fil.get("questions", []) if isinstance(raw_fil, dict) else raw_fil)}
         else:
             cls.philippians_questions = {}
+
+        if COLOSSIANS_PATH.exists():
+            raw_col = json.loads(COLOSSIANS_PATH.read_text(encoding="utf-8"))
+            cls.colossians_questions = {q["id"]: q for q in (raw_col.get("questions", []) if isinstance(raw_col, dict) else raw_col)}
+        else:
+            cls.colossians_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -5544,6 +5551,182 @@ class TestAuditorCanonical(unittest.TestCase):
         res19 = evaluate_question(q19, fil4_verses, book_key="philippians")
         self.assertEqual(res19["controles_superados"].get("control_nombres_propios"), "PASS")
         self.assertNotEqual(res19["estado"], "REQUIERE_CORRECCION")
+
+    # --- PRUEBAS ESPECÍFICAS DE COLOSENSES ---
+
+    def get_colossians_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.colossians_questions, f"ID '{qid}' no encontrado en colossians-master-input.json")
+        return copy.deepcopy(self.colossians_questions[qid])
+
+    def test_detect_book_key_colossians(self) -> None:
+        """Verifica detección de book_key para Colosenses y sus variantes."""
+        spec_col = {"questions": [{"id": "NQB-NT-COL-0001", "book": "Colosenses"}]}
+        self.assertEqual(detect_book_key(spec_col), "colossians")
+
+        spec_alias = {"questions": [{"id": "NQB-NT-COL-0001", "book": "colosenses"}]}
+        self.assertEqual(detect_book_key(spec_alias), "colossians")
+
+        spec_en = {"questions": [{"id": "NQB-NT-COL-0001", "book": "Colossians"}]}
+        self.assertEqual(detect_book_key(spec_en), "colossians")
+
+        spec_short = {"questions": [{"id": "NQB-NT-COL-0001", "book": "col"}]}
+        self.assertEqual(detect_book_key(spec_short), "colossians")
+
+        spec_carta = {"questions": [{"id": "NQB-NT-COL-0001", "book": "Carta a los Colosenses"}]}
+        self.assertEqual(detect_book_key(spec_carta), "colossians")
+
+        spec_epistola = {"questions": [{"id": "NQB-NT-COL-0001", "book": "Epístola a los Colosenses"}]}
+        self.assertEqual(detect_book_key(spec_epistola), "colossians")
+
+    def test_colossians_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de Colosenses en BOOK_CONFIGS."""
+        self.assertIn("colossians", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["colossians"]
+        self.assertEqual(cfg["canonical_name"], "Colosenses")
+        self.assertEqual(cfg["api_name"], "Colosenses")
+        self.assertEqual(cfg["total_chapters"], 4)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("colosenses", cfg["aliases"])
+        self.assertIn("colossians", cfg["aliases"])
+        self.assertIn("col", cfg["aliases"])
+        self.assertIn("colosas", cfg["ambient_places"])
+        self.assertIn("laodicea", cfg["ambient_places"])
+        self.assertIn("hierapolis", cfg["ambient_places"])
+
+    def test_global_canonical_id_reference_integrity_colossians(self) -> None:
+        """Verifica consistencia de IDs y referencias en Colosenses."""
+        if not self.colossians_questions:
+            self.skipTest("colossians-master-input.json no disponible")
+        for qid, q in self.colossians_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_colossians_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de Colosenses."""
+        if not self.colossians_questions:
+            self.skipTest("colossians-master-input.json no disponible")
+        self.assertEqual(len(self.colossians_questions), 24)
+
+        # 6 preguntas por capítulo (4 capítulos)
+        ch_counts = collections.Counter(q["chapter"] for q in self.colossians_questions.values())
+        self.assertEqual(len(ch_counts), 4)
+        for ch in range(1, 5):
+            self.assertEqual(ch_counts[ch], 6, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 6")
+
+        # Dificultad: Básico=7, Intermedio=7, Avanzado=8, Experto=2
+        diff_counts = collections.Counter(q["difficulty"] for q in self.colossians_questions.values())
+        self.assertEqual(diff_counts["Básico"], 7)
+        self.assertEqual(diff_counts["Intermedio"], 7)
+        self.assertEqual(diff_counts["Avanzado"], 8)
+        self.assertEqual(diff_counts["Experto"], 2)
+
+        # Tipos: 20 MC, 4 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.colossians_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 20)
+        self.assertEqual(type_counts["TRUE_FALSE"], 4)
+
+        tf_ids = [q["id"] for q in self.colossians_questions.values() if q.get("question_type") == "TRUE_FALSE"]
+        expected_tf = ["NQB-NT-COL-0006", "NQB-NT-COL-0012", "NQB-NT-COL-0018", "NQB-NT-COL-0024"]
+        self.assertEqual(sorted(tf_ids), sorted(expected_tf))
+
+    def test_colossians_additional_references(self) -> None:
+        """Verifica las 7 preguntas con 10 referencias adicionales en Colosenses."""
+        if not self.colossians_questions:
+            self.skipTest("colossians-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-COL-0002": ["Filemón 1:23"],
+            "NQB-NT-COL-0004": ["Juan 1:3", "Hebreos 1:3"],
+            "NQB-NT-COL-0011": ["Levítico 23:2-3", "Números 28:11-15"],
+            "NQB-NT-COL-0014": ["Génesis 1:26-27"],
+            "NQB-NT-COL-0021": ["Efesios 6:21-22", "Filemón 1:10-12"],
+            "NQB-NT-COL-0022": ["Filemón 1:23-24"],
+            "NQB-NT-COL-0023": ["Filemón 1:2"]
+        }
+        found_add_refs = {}
+        for qid, q in self.colossians_questions.items():
+            refs = q.get("additional_references", [])
+            if refs:
+                found_add_refs[qid] = refs
+
+        self.assertEqual(len(found_add_refs), 7)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 10)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_colossians_modes_and_categories(self) -> None:
+        """Verifica la asignación de modos y categorías sin categorías de Jesús en Colosenses."""
+        if not self.colossians_questions:
+            self.skipTest("colossians-master-input.json no disponible")
+        for qid, q in self.colossians_questions.items():
+            cat = q.get("category")
+            self.assertIn(cat, {"NT_GENERAL", "PERSONAJES_BIBLICOS"})
+            self.assertNotIn(cat, {"JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"})
+            modes = q.get("eligible_modes", [])
+            self.assertIn("NT", modes)
+            self.assertIn("AMBOS", modes)
+            if cat == "PERSONAJES_BIBLICOS":
+                self.assertIn("PERSONAJES_NT", modes)
+                self.assertIn("PERSONAJES_AMBOS", modes)
+            if q.get("question_type") == "TRUE_FALSE":
+                self.assertIn("VERDADERO_FALSO_NT", modes)
+                self.assertIn("VERDADERO_FALSO_AMBOS", modes)
+
+    def test_colossians_true_false_0012_neutral_semantics(self) -> None:
+        """Verifica que NQB-NT-COL-0012 opere con semántica neutral (A=Falso, B=Verdadero, correct=A)."""
+        if not self.colossians_questions:
+            self.skipTest("colossians-master-input.json no disponible")
+        q12 = self.get_colossians_question("NQB-NT-COL-0012")
+        self.assertEqual(q12["opcion_a"].strip().lower(), "falso")
+        self.assertEqual(q12["opcion_b"].strip().lower(), "verdadero")
+        self.assertEqual(q12["correct_option"], "A")
+        self.assertEqual(q12["correct_answer"].strip().lower(), "falso")
+
+    def test_colossians_characters_and_safety(self) -> None:
+        """Verifica reconocimiento de colaboradores de Colosenses y resolución de entidades."""
+        if not self.colossians_questions:
+            self.skipTest("colossians-master-input.json no disponible")
+
+        # Mock passage text de RVR1960 para Colosenses 4:7-9 (Tíquico y Onésimo)
+        col4_7_9 = {
+            7: "Todo lo que a mí se refiere, os lo hará saber Tíquico, amado hermano y fiel ministro y consiervo en el Señor,",
+            8: "el cual he enviado a vosotros para esto mismo, para que conozca lo que a vosotros se refiere, y conforte vuestros corazones,",
+            9: "con Onésimo, amado y fiel hermano, que es uno de vosotros. Todo lo que acá pasa, os lo harán saber."
+        }
+        q21 = self.get_colossians_question("NQB-NT-COL-0021")
+        res21 = evaluate_question(q21, col4_7_9, book_key="colossians")
+        self.assertEqual(res21["controles_superados"].get("control_nombres_propios"), "PASS")
+        self.assertNotEqual(res21["estado"], "REQUIERE_CORRECCION")
+
+        # Mock passage text de RVR1960 para Colosenses 4:10-14 (Aristarco, Marcos, Jesús llamado Justo, Epafras, Lucas, Demas)
+        col4_10_14 = {
+            10: "Aristarco, mi compañero de prisiones, os saluda, y Marcos el sobrino de Bernabé, acerca del cual habéis recibido mandamientos; si fuere a vosotros, recibidle;",
+            11: "y Jesús, llamado Justo; que son los únicos de la circuncisión que me ayudan en el reino de Dios, y han sido para mí un consuelo.",
+            12: "Os saluda Epafras, el cual es uno de vosotros, siervo de Cristo, siempre rogando encarecidamente por vosotros en sus oraciones, para que estéis firmes, perfectos y completos en todo lo que Dios quiere.",
+            13: "Porque de él doy testimonio de que tiene gran solicitud por vosotros, y por los que están en Laodicea, y los que están en Hierápolis.",
+            14: "Os saluda Lucas el médico amado, y Demas."
+        }
+        q22 = self.get_colossians_question("NQB-NT-COL-0022")
+        res22 = evaluate_question(q22, col4_10_14, book_key="colossians")
+        self.assertEqual(res22["controles_superados"].get("control_nombres_propios"), "PASS")
+        self.assertNotEqual(res22["estado"], "REQUIERE_CORRECCION")
+
+        # Mock passage text de RVR1960 para Colosenses 4:15-17 (Ninfa, Arquipo, Laodicea)
+        col4_15_17 = {
+            15: "Saludad a los hermanos que están en Laodicea, y a Ninfa y a la iglesia que está en su casa.",
+            16: "Cuando esta carta haya sido leída entre vosotros, haced que también se lea en la iglesia de los laodicenses, y que la de Laodicea la leáis también vosotros.",
+            17: "Y decid a Arquipo: Mira que cumplas el ministerio que recibiste en el Señor."
+        }
+        q23 = self.get_colossians_question("NQB-NT-COL-0023")
+        res23 = evaluate_question(q23, col4_15_17, book_key="colossians")
+        self.assertEqual(res23["controles_superados"].get("control_nombres_propios"), "PASS")
+        self.assertNotEqual(res23["estado"], "REQUIERE_CORRECCION")
 
 
 if __name__ == "__main__":

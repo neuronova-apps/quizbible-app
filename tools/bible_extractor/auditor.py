@@ -960,6 +960,22 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "filipos", "macedonia", "roma", "jerusalen", "jerusalén", "cesarea", "cesarea marítima"
         },
     },
+    "colossians": {
+        "canonical_name": "Colosenses",
+        "api_name": "Colosenses",
+        "aliases": {
+            "colosenses", "colossians", "col",
+            "carta a los colosenses", "epistola a los colosenses", "epístola a los colosenses"
+        },
+        "total_chapters": 4,
+        "blocks": [
+            (1, 4, "colossians-01-04.json"),
+        ],
+        "default_output_dir": "build/audit/colossians",
+        "ambient_places": {
+            "colosas", "laodicea", "hierapolis", "hierápolis", "roma"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -1110,6 +1126,7 @@ BIBLE_PERSONAJES = {
     "lazaro", "lázaro", "marta", "cleofas", "cornelio", "saulo", "bernice", "agripa", "felix", "félix",
     "gamaliel", "tito", "silas", "apolos", "aquila", "áquila", "priscila", "filemon", "filemón", "onesimo", "onésimo",
     "epafrodito", "evodia", "sintique", "síntique", "clemente",
+    "aristarco", "arquipo", "demas", "epafras", "ninfa", "justo",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",
@@ -1158,7 +1175,9 @@ BIBLE_PLACES = {
     "sunem", "afec", "sela", "jocteel", "hamat", "arpat", "sefarvaim", "ribla", "ninive", "nínive", "asiria", "valle de la sal", "siloe", "siloé",
     "sihor", "jebus", "jebús", "beraca", "valle de beraca", "ahava", "rio ahava", "río ahava", "casifia", "ecbatana", "achmetha", "persia",
     "susa", "valle de ono", "ono", "opla", "ofel", "zonoa", "bet-sur", "betsur", "media", "india", "etiopia", "etiopía",
-    "uz", "tierra de uz", "teman", "temán", "sua", "súa", "naamat", "saba"
+    "uz", "tierra de uz", "teman", "temán", "sua", "súa", "naamat", "saba",
+    # Nuevo Testamento
+    "colosas", "laodicea", "hierapolis", "hierápolis"
 }
 
 # Raíces de parentesco y lemas
@@ -1454,6 +1473,22 @@ def resolve_implicit_speaker(
         full_ch_words = set(full_ch_norm.split())
         has_ch_1st_person = bool(full_ch_words & {"yo", "mi", "me", "dije", "nosotros", "nuestro"})
         if has_ch_1st_person:
+            return True
+
+    # 4. Autor epistolar paulino (Pablo en las epístolas paulinas)
+    is_pauline_epistle = book_key in {
+        "romans", "1corinthians", "2corinthians", "galatians", "ephesians", "philippians", "colossians",
+        "1thessalonians", "2thessalonians", "1timothy", "2timothy", "titus", "philemon",
+        "romanos", "1corintios", "2corintios", "galatas", "gálatas", "efesios", "filipenses", "colosenses",
+        "1tesalonicenses", "2tesalonicenses", "1timoteo", "2timoteo", "tito", "filemon", "filemón"
+    }
+    if is_pauline_epistle and norm_entity == "pablo":
+        competing_speakers = set()
+        for p in BIBLE_PERSONAJES:
+            if p != "pablo" and p in passage_words:
+                if any(f"{p} {verb}" in passage_norm for verb in SPEECH_PRAYER_VERBS) or any(f"{verb} {p}" in passage_norm for verb in SPEECH_PRAYER_VERBS):
+                    competing_speakers.add(p)
+        if not competing_speakers:
             return True
 
     return False
