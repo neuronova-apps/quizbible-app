@@ -1,0 +1,186 @@
+{
+  "source": "Quiz Bible master bank - 3 Juan",
+  "version": "RVR1960",
+  "book": "3 Juan",
+  "total_questions": 6,
+  "questions": [
+    {
+      "id": "NQB-NT-3JN-0001",
+      "book": "3 Juan",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "3 Juan 1:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Gayo, saludo y bienestar",
+      "characters": [
+        "Gayo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué deseo expresa el anciano por Gayo en el saludo personal?",
+      "opcion_a": "Que prospere en todas las cosas y tenga salud, así como prospera su alma",
+      "opcion_b": "Que reciba autoridad sobre todas las iglesias",
+      "opcion_c": "Que abandone sus responsabilidades para evitar dificultades",
+      "opcion_d": "Que su bienestar material demuestre automáticamente una fe superior",
+      "correct_option": "A",
+      "correct_answer": "Que prospere en todas las cosas y tenga salud, así como prospera su alma",
+      "explanation": "El saludo expresa un deseo personal de bienestar y salud para Gayo en relación con la prosperidad de su alma. No es una garantía universal de riqueza o curación, no mide la fe por el nivel económico y no sustituye cuidados médicos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-3JN-0002",
+      "book": "3 Juan",
+      "chapter": 1,
+      "verse_start": 3,
+      "verse_end": 4,
+      "reference": "3 Juan 1:3-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Andar en la verdad",
+      "characters": [],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué provoca gran gozo en el remitente al recibir noticias sobre Gayo?",
+      "opcion_a": "Saber que permanece en la verdad y anda conforme a ella",
+      "opcion_b": "Conocer que ha acumulado riquezas por encima de los demás",
+      "opcion_c": "Saber que evita a toda persona desconocida",
+      "opcion_d": "Comprobar que todos se someten sin preguntar a su autoridad",
+      "correct_option": "A",
+      "correct_answer": "Saber que permanece en la verdad y anda conforme a ella",
+      "explanation": "El gozo se relaciona con el testimonio de la verdad en la vida de Gayo. El pasaje no presenta riqueza, aislamiento ni obediencia ciega a una autoridad humana como prueba de fidelidad.",
+      "additional_references": [
+        "2 Juan 1:4"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-3JN-0003",
+      "book": "3 Juan",
+      "chapter": 1,
+      "verse_start": 5,
+      "verse_end": 8,
+      "reference": "3 Juan 1:5-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Hospitalidad y cooperación con la verdad",
+      "characters": [],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué el apoyo a los hermanos que salieron por amor del Nombre es presentado como una obra fiel?",
+      "opcion_a": "Porque al recibirlos y ayudarles en su camino se coopera con la verdad",
+      "opcion_b": "Porque toda persona desconocida debe recibir acceso irrestricto a cualquier hogar",
+      "opcion_c": "Porque la hospitalidad elimina toda necesidad de discernimiento y seguridad",
+      "opcion_d": "Porque quien recibe ayuda queda obligado a obedecer al anfitrión",
+      "correct_option": "A",
+      "correct_answer": "Porque al recibirlos y ayudarles en su camino se coopera con la verdad",
+      "explanation": "La carta valora la hospitalidad y el apoyo a quienes sirven por la verdad. Esto no exige eliminar límites razonables de seguridad, permitir explotación ni convertir la ayuda en control o deuda de obediencia.",
+      "additional_references": [
+        "Hebreos 13:2"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-3JN-0004",
+      "book": "3 Juan",
+      "chapter": 1,
+      "verse_start": 9,
+      "verse_end": 10,
+      "reference": "3 Juan 1:9-10",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Diótrefes y el abuso de preeminencia",
+      "characters": [
+        "Diótrefes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué conducta de Diótrefes es reprendida por la carta?",
+      "opcion_a": "Buscar el primer lugar, rechazar a los hermanos e impedir que otros los reciban",
+      "opcion_b": "Recibir a los hermanos y facilitar su servicio",
+      "opcion_c": "Renunciar voluntariamente a toda influencia en la comunidad",
+      "opcion_d": "Pedir que las decisiones sean examinadas con prudencia",
+      "correct_option": "A",
+      "correct_answer": "Buscar el primer lugar, rechazar a los hermanos e impedir que otros los reciban",
+      "explanation": "La carta reprende la búsqueda de preeminencia de Diótrefes, sus palabras maliciosas, el rechazo de los hermanos y la expulsión de quienes desean recibirlos. Esto no autoriza etiquetar automáticamente a líderes actuales, hostigar, vengarse ni ejercer violencia.",
+      "additional_references": [
+        "1 Pedro 5:3"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-3JN-0005",
+      "book": "3 Juan",
+      "chapter": 1,
+      "verse_start": 11,
+      "verse_end": 12,
+      "reference": "3 Juan 1:11-12",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Demetrio y el buen testimonio",
+      "characters": [
+        "Demetrio"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué testimonio recibe Demetrio en el pasaje?",
+      "opcion_a": "Buen testimonio de todos, de la verdad misma y también del remitente",
+      "opcion_b": "Una condena por buscar el primer lugar",
+      "opcion_c": "Una acusación de impedir la hospitalidad",
+      "opcion_d": "Una orden de abandonar la comunidad",
+      "correct_option": "A",
+      "correct_answer": "Buen testimonio de todos, de la verdad misma y también del remitente",
+      "explanation": "Demetrio recibe un buen testimonio de todos, de la verdad misma y del remitente. Este reconocimiento no lo convierte en infalible ni permite asumir que sea la misma persona llamada Demetrio en otros libros bíblicos sin evidencia contextual.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-3JN-0006",
+      "book": "3 Juan",
+      "chapter": 1,
+      "verse_start": 13,
+      "verse_end": 15,
+      "reference": "3 Juan 1:13-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Comunicación cara a cara y saludo final",
+      "characters": [],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el cierre expresa la preferencia de hablar cara a cara en lugar de continuar escribiendo",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El remitente expresa que tenía más que escribir pero esperaba hablar cara a cara. Esto no implica rechazo general de la escritura, de la tecnología o de otras formas de comunicación.",
+      "additional_references": [
+        "2 Juan 1:12"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}

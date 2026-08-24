@@ -1169,6 +1169,20 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
         "default_output_dir": "build/audit/2john",
         "ambient_places": set(),
     },
+    "3john": {
+        "canonical_name": "3 Juan",
+        "api_name": "3 Juan",
+        "aliases": {
+            "3 juan", "3juan", "3 john", "3john", "3jn", "3 jn",
+            "tercera de juan", "tercera carta de juan", "3ª juan", "3ra juan"
+        },
+        "total_chapters": 1,
+        "blocks": [
+            (1, 1, "3john-01-01.json"),
+        ],
+        "default_output_dir": "build/audit/3john",
+        "ambient_places": set(),
+    },
 }
 
 STOPWORDS = {
@@ -1307,7 +1321,7 @@ BIBLE_PERSONAJES = {
     "matias", "matías", "bernabe", "bernabé", "ananias", "ananías", "safira", "tabita", "dorcas",
     "agabo", "roda", "juan marcos", "sergio paulo", "elimas", "barjesus", "barjesús",
     "lidia", "carcelero", "jason", "jasón", "dionisio", "damaris", "dámaris", "crispo", "sostenes", "sóstenes",
-    "galion", "galión", "sceva", "esceva", "demetrio", "eutico", "tiquico", "tíquico", "trofimo", "trófimo",
+    "galion", "galión", "sceva", "esceva", "demetrio", "diotrefes", "diótrefes", "eutico", "tiquico", "tíquico", "trofimo", "trófimo",
     "claudio lisias", "drusila", "festo", "berenice", "tertulo", "tértulo", "julio", "publio",
     "febe", "prisca", "epeneto", "andronico", "andrónico", "junias", "amplias", "urbano", "estaquis",
     "apeles", "aristobulo", "aristóbulo", "herodion", "herodión", "narciso", "trifena", "trifosa",

@@ -106,6 +106,7 @@ PETER1_PATH = Path(__file__).parent / "1peter-master-input.json"
 PETER2_PATH = Path(__file__).parent / "2peter-master-input.json"
 JOHN1_PATH = Path(__file__).parent / "1john-master-input.json"
 JOHN2_PATH = Path(__file__).parent / "2john-master-input.json"
+JOHN3_PATH = Path(__file__).parent / "3john-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -485,6 +486,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.john2_questions = {q["id"]: q for q in (raw_2jn.get("questions", []) if isinstance(raw_2jn, dict) else raw_2jn)}
         else:
             cls.john2_questions = {}
+
+        if JOHN3_PATH.exists():
+            raw_3jn = json.loads(JOHN3_PATH.read_text(encoding="utf-8"))
+            cls.john3_questions = {q["id"]: q for q in (raw_3jn.get("questions", []) if isinstance(raw_3jn, dict) else raw_3jn)}
+        else:
+            cls.john3_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -8520,6 +8527,195 @@ class TestAuditorCanonical(unittest.TestCase):
             for pq in prior_questions:
                 self.assertNotIn(pq["question"].strip(), jn2_texts,
                                  f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y 2 Juan")
+
+    # --- PRUEBAS ESPECÍFICAS DE 3 JUAN ---
+
+    def get_3john_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.john3_questions, f"ID '{qid}' no encontrado en 3john-master-input.json")
+        return copy.deepcopy(self.john3_questions[qid])
+
+    def test_detect_book_key_3john(self) -> None:
+        """Verifica detección de book_key para 3 Juan y sus variantes."""
+        for alias in ["3 Juan", "3juan", "3 John", "3john", "3jn", "3 jn", "Tercera de Juan", "Tercera carta de Juan", "3ª Juan", "3ra Juan"]:
+            spec = {"questions": [{"id": "NQB-NT-3JN-0001", "book": alias}]}
+            self.assertEqual(detect_book_key(spec), "3john",
+                             f"detect_book_key failed for alias: {alias}")
+
+    def test_3john_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de 3 Juan en BOOK_CONFIGS."""
+        self.assertIn("3john", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["3john"]
+        self.assertEqual(cfg["canonical_name"], "3 Juan")
+        self.assertEqual(cfg["api_name"], "3 Juan")
+        self.assertEqual(cfg["total_chapters"], 1)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("3 juan", cfg["aliases"])
+        self.assertIn("3juan", cfg["aliases"])
+        self.assertIn("3jn", cfg["aliases"])
+        self.assertIn("3 jn", cfg["aliases"])
+
+    def test_3john_author_not_forced(self) -> None:
+        """Verifica que no se fuerce speaker=Juan en 3 Juan cuando el texto solo dice 'El anciano'."""
+        from auditor import resolve_implicit_speaker
+        verse_map = {
+            1: "El anciano a Gayo, el amado, a quien amo en la verdad."
+        }
+        passage_norm = "el anciano a gayo el amado a quien amo en la verdad"
+        resolved_juan = resolve_implicit_speaker("juan", passage_norm, verse_map, 1, ["Juan"], book_key="3john")
+        self.assertFalse(resolved_juan, "No debe resolverse 'Juan' como hablante implícito en 3 Juan sin mención en el texto")
+
+    def test_3john_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de 3 Juan."""
+        if not self.john3_questions:
+            self.skipTest("3john-master-input.json no disponible")
+        self.assertEqual(len(self.john3_questions), 6)
+
+        # 6 preguntas en el capítulo 1
+        ch_counts = collections.Counter(q["chapter"] for q in self.john3_questions.values())
+        self.assertEqual(len(ch_counts), 1)
+        self.assertEqual(ch_counts[1], 6)
+
+        # IDs: NQB-NT-3JN-0001 a NQB-NT-3JN-0006
+        ids = sorted(self.john3_questions.keys())
+        self.assertEqual(ids[0], "NQB-NT-3JN-0001")
+        self.assertEqual(ids[-1], "NQB-NT-3JN-0006")
+        self.assertEqual(len(set(ids)), 6)
+
+        # Dificultad: Básico=2, Intermedio=2, Avanzado=1, Experto=1
+        diff_counts = collections.Counter(q["difficulty"] for q in self.john3_questions.values())
+        self.assertEqual(diff_counts["Básico"], 2)
+        self.assertEqual(diff_counts["Intermedio"], 2)
+        self.assertEqual(diff_counts["Avanzado"], 1)
+        self.assertEqual(diff_counts["Experto"], 1)
+
+        # Tipos: 5 MC, 1 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.john3_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 5)
+        self.assertEqual(type_counts["TRUE_FALSE"], 1)
+
+        tf_ids = sorted(q["id"] for q in self.john3_questions.values() if q.get("question_type") == "TRUE_FALSE")
+        self.assertEqual(tf_ids, ["NQB-NT-3JN-0006"])
+
+    def test_3john_categories_and_characters(self) -> None:
+        """Verifica categorías y personajes de 3 Juan (Gayo, Diótrefes, Demetrio)."""
+        if not self.john3_questions:
+            self.skipTest("3john-master-input.json no disponible")
+        cat_counts = collections.Counter(q["category"] for q in self.john3_questions.values())
+        self.assertEqual(cat_counts["NT_GENERAL"], 3)
+        self.assertEqual(cat_counts["PERSONAJES_BIBLICOS"], 3)
+
+        pb_qs = {q["id"]: q for q in self.john3_questions.values() if q["category"] == "PERSONAJES_BIBLICOS"}
+        self.assertEqual(set(pb_qs.keys()), {"NQB-NT-3JN-0001", "NQB-NT-3JN-0004", "NQB-NT-3JN-0005"})
+        self.assertEqual(pb_qs["NQB-NT-3JN-0001"]["characters"], ["Gayo"])
+        self.assertEqual(pb_qs["NQB-NT-3JN-0004"]["characters"], ["Diótrefes"])
+        self.assertEqual(pb_qs["NQB-NT-3JN-0005"]["characters"], ["Demetrio"])
+
+    def test_3john_additional_references(self) -> None:
+        """Verifica las 4 preguntas con 4 referencias en 3 Juan."""
+        if not self.john3_questions:
+            self.skipTest("3john-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-3JN-0002": ["2 Juan 1:4"],
+            "NQB-NT-3JN-0003": ["Hebreos 13:2"],
+            "NQB-NT-3JN-0004": ["1 Pedro 5:3"],
+            "NQB-NT-3JN-0006": ["2 Juan 1:12"],
+        }
+        found_add_refs = {
+            qid: q["additional_references"]
+            for qid, q in self.john3_questions.items()
+            if q.get("additional_references")
+        }
+        self.assertEqual(len(found_add_refs), 4)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 4)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_3john_modes(self) -> None:
+        """Verifica la asignación de modos en 3 Juan."""
+        if not self.john3_questions:
+            self.skipTest("3john-master-input.json no disponible")
+        mode_counts = collections.defaultdict(int)
+        for q in self.john3_questions.values():
+            for m in q.get("eligible_modes", []):
+                mode_counts[m] += 1
+        self.assertEqual(mode_counts["NT"], 6)
+        self.assertEqual(mode_counts["AMBOS"], 6)
+        self.assertEqual(mode_counts["PERSONAJES_NT"], 3)
+        self.assertEqual(mode_counts["PERSONAJES_AMBOS"], 3)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_NT"], 1)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_AMBOS"], 1)
+
+    def test_3john_id_reference_integrity(self) -> None:
+        """Verifica consistencia de IDs y referencias en 3 Juan."""
+        if not self.john3_questions:
+            self.skipTest("3john-master-input.json no disponible")
+        for qid, q in self.john3_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_3john_true_false_neutral_semantics(self) -> None:
+        """Verifica semántica neutral de TRUE_FALSE en 3 Juan: 3JN0006 A=Verdadero/correct=A."""
+        if not self.john3_questions:
+            self.skipTest("3john-master-input.json no disponible")
+        q6 = self.get_3john_question("NQB-NT-3JN-0006")
+        self.assertEqual(q6["opcion_a"].strip().lower(), "verdadero", "3JN0006: opcion_a debe ser Verdadero")
+        self.assertEqual(q6["opcion_b"].strip().lower(), "falso", "3JN0006: opcion_b debe ser Falso")
+        self.assertEqual(q6["correct_option"], "A", "3JN0006: correct_option debe ser A")
+        self.assertEqual(q6["correct_answer"].strip().lower(), "verdadero", "3JN0006: correct_answer debe ser Verdadero")
+
+    def test_3john_no_duplicates_within(self) -> None:
+        """Verifica que no haya preguntas duplicadas internamente en 3 Juan."""
+        if not self.john3_questions:
+            self.skipTest("3john-master-input.json no disponible")
+        questions_texts = [q["question"].strip() for q in self.john3_questions.values()]
+        self.assertEqual(len(questions_texts), len(set(questions_texts)), "Duplicados detectados internamente")
+
+    def test_3john_no_duplicates_cross_nt(self) -> None:
+        """Verifica que no haya preguntas duplicadas entre 3 Juan y los 24 libros NT anteriores."""
+        if not self.john3_questions:
+            self.skipTest("3john-master-input.json no disponible")
+        jn3_texts = {q["question"].strip() for q in self.john3_questions.values()}
+        prior_nt = [
+            PHILIPPIANS_PATH.parent / "matthew-master-input.json",
+            PHILIPPIANS_PATH.parent / "mark-master-input.json",
+            PHILIPPIANS_PATH.parent / "luke-master-input.json",
+            PHILIPPIANS_PATH.parent / "john-master-input.json",
+            PHILIPPIANS_PATH.parent / "acts-master-input.json",
+            PHILIPPIANS_PATH.parent / "romans-master-input.json",
+            PHILIPPIANS_PATH.parent / "1corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "galatians-master-input.json",
+            PHILIPPIANS_PATH.parent / "ephesians-master-input.json",
+            PHILIPPIANS_PATH.parent / "philippians-master-input.json",
+            PHILIPPIANS_PATH.parent / "colossians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "2timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "titus-master-input.json",
+            PHILIPPIANS_PATH.parent / "philemon-master-input.json",
+            PHILIPPIANS_PATH.parent / "hebrews-master-input.json",
+            PHILIPPIANS_PATH.parent / "james-master-input.json",
+            PHILIPPIANS_PATH.parent / "1peter-master-input.json",
+            PHILIPPIANS_PATH.parent / "2peter-master-input.json",
+            PHILIPPIANS_PATH.parent / "1john-master-input.json",
+            PHILIPPIANS_PATH.parent / "2john-master-input.json",
+        ]
+        for prior_path in prior_nt:
+            if not prior_path.exists():
+                continue
+            prior_data = json.loads(prior_path.read_text(encoding="utf-8"))
+            prior_questions = prior_data.get("questions", []) if isinstance(prior_data, dict) else prior_data
+            for pq in prior_questions:
+                self.assertNotIn(pq["question"].strip(), jn3_texts,
+                                 f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y 3 Juan")
 
 
 if __name__ == "__main__":
