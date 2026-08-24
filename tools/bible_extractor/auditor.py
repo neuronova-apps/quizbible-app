@@ -1596,6 +1596,19 @@ def is_biblical_person_usage(token: str, full_text: str) -> bool:
         # 4. En cualquier otro caso, comportamiento conservador: True
         return True
 
+    if norm_token == "justo":
+        raw_text = str(full_text)
+        text_norm = normalize(full_text)
+
+        # 1. Nombre propio de personaje bíblico (ej: Jesús llamado Justo, Tito Justo, José llamado Justo):
+        if re.search(r"\b(?:llamado|sobrenombre|tito)\s+justo\b", text_norm):
+            return True
+        if re.search(r"\bJusto\b", raw_text) and not re.search(r"\b(?:el|un|aquel|este|al|del|hombre|varon|dios|jesucristo|padre|juez|siervo)\s+Justo\b", raw_text, re.IGNORECASE):
+            return True
+
+        # 2. Uso como adjetivo calificativo, epíteto o sustantivo común (ej: 'Jesucristo el justo', 'el justo por los injustos', 'juicio justo'):
+        return False
+
     return True
 
 
@@ -2085,6 +2098,8 @@ def token_matches_text(token: str, text_norm: str) -> bool:
 BIBLICAL_PERSON_ALIASES: dict[str, set[str]] = {
     "cefas": {"pedro"},
     "pedro": {"cefas"},
+    "cristo": {"jesucristo", "jesus"},
+    "jesucristo": {"cristo", "jesus"},
 }
 
 
@@ -2105,6 +2120,94 @@ def person_token_matches_text(entity: str, passage_norm: str) -> bool:
         if token_matches_text(alias, norm_p):
             return True
     return False
+
+
+def resolve_contextual_person_reference(
+    entity_name: str,
+    raw_passage: str,
+    verse_map: dict[int, str],
+    start_verse: int,
+    end_verse: int,
+    characters: list[str] | None = None,
+    max_backtrack: int = 5,
+) -> bool:
+    """
+    Determina si un personaje bíblico ausente en el rango versicular principal se resuelve de
+    forma anafórica mediante pronombres de tercera persona (ej: 'él', 'en él', 'como él anduvo')
+    cuyo antecedente inmediato fue establecido en versículos anteriores del MISMO capítulo.
+
+    Reglas deterministas y conservadoras:
+    1. Señal anafórica real: el rango actual contiene pronombres personales de 3ª persona (con tilde 'él')
+       o construcciones anafóricas claras sobre el texto original.
+    2. Búsqueda de antecedente: retrocede hasta max_backtrack versículos dentro del mismo capítulo (sin cruzar capítulo).
+    3. Compatibilidad: el antecedente más cercano coincide con entity_name (o sus aliases seguros).
+    4. Sin competidores: si entre el antecedente y el rango hay otro personaje diferente como sujeto,
+       o si en el mismo versículo antecedente hay múltiples personajes ambiguos, no resuelve (retorna False).
+    """
+    if not entity_name or not verse_map or start_verse <= 1:
+        return False
+
+    # 1. Condición: Señal anafórica real en el texto raw del rango actual
+    anaphoric_pattern = re.compile(
+        r"\b(?:él|en él|de él|por él|con él|como él|para él|a él|hacia él|sobre él|tras él|según él|le|les)\b"
+    )
+    range_raw = " ".join(verse_map.get(v, "") for v in range(start_verse, end_verse + 1))
+    target_raw = raw_passage if raw_passage else range_raw
+
+    has_pronoun = bool(re.search(r"\b[Éé]l\b", target_raw)) or bool(anaphoric_pattern.search(target_raw))
+    if not has_pronoun:
+        return False
+
+    norm_entity = normalize(entity_name).strip()
+
+    # 2. Condición: Búsqueda de antecedentes en versículos anteriores del MISMO capítulo
+    earliest_verse = max(1, start_verse - max_backtrack)
+    backtrack_verses = [v for v in range(start_verse - 1, earliest_verse - 1, -1) if v in verse_map]
+    if not backtrack_verses:
+        return False
+
+    # 3. Recorrer versículos anteriores para identificar los personajes mencionados
+    matching_antecedent_found = False
+    intervening_competitor = False
+
+    def entity_matches_person(e: str, p: str) -> bool:
+        if e == p or e in p or p in e:
+            return True
+        if person_token_matches_text(e, p) or person_token_matches_text(p, e):
+            return True
+        return False
+
+    for v in backtrack_verses:
+        v_text = verse_map[v]
+        v_norm = normalize(v_text)
+        words = set(v_norm.split())
+
+        v_persons = set()
+        for w in words:
+            if w in BIBLE_PERSONAJES and is_biblical_person_usage(w, v_text):
+                v_persons.add(w)
+
+        if not v_persons:
+            continue
+
+        matching_persons = {p for p in v_persons if entity_matches_person(norm_entity, p)}
+        other_persons = {p for p in v_persons if not entity_matches_person(norm_entity, p)}
+
+        if matching_persons:
+            if other_persons:
+                # Ambigüedad: dos personajes distintos presentes en el mismo versículo
+                return False
+            matching_antecedent_found = True
+            break
+        else:
+            # Hay un personaje diferente más cercano en versículos intermedios que actúa como competidor
+            intervening_competitor = True
+            break
+
+    if intervening_competitor or not matching_antecedent_found:
+        return False
+
+    return True
 
 
 def detect_book_key(spec: dict[str, Any] | list[dict[str, Any]]) -> str:
@@ -2640,6 +2743,13 @@ def evaluate_question(
                     for n in missing_entities:
                         if person_token_matches_text(n, full_ch_norm) and (not characters or any(n == normalize(c) for c in characters)):
                             context_resolved.append(n)
+
+                # Resolución de correferencia anafórica de tercera persona (pronombres él/ella con antecedente en el mismo capítulo)
+                for n in missing_entities:
+                    if n not in context_resolved and resolve_contextual_person_reference(
+                        n, passage, verse_map, start, end, characters
+                    ):
+                        context_resolved.append(n)
 
                 # Resolución de hablante implícito en 1ª persona
                 for n in missing_entities:

@@ -8226,6 +8226,109 @@ class TestAuditorCanonical(unittest.TestCase):
                 self.assertNotIn(pq["question"].strip(), jn1_texts,
                                  f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y 1 Juan")
 
+    def test_resolve_contextual_person_reference_unit(self) -> None:
+        """Pruebas unitarias completas para resolve_contextual_person_reference."""
+        from auditor import resolve_contextual_person_reference
+
+        verse_map_1jn2 = {
+            1: "Hijitos míos, estas cosas os escribo para que no pequéis; y si alguno hubiere pecado, abogado tenemos para con el Padre, a Jesucristo el justo.",
+            2: "Y él es la propiciación por nuestros pecados; y no solamente por los nuestros, sino también por los de todo el mundo.",
+            3: "Y en esto sabemos que nosotros le conocemos, si guardamos sus mandamientos.",
+            4: "El que dice: Yo le conozco, y no guarda sus mandamientos, el tal es mentiroso, y la verdad no está en él;",
+            5: "pero el que guarda su palabra, en éste verdaderamente el amor de Dios se ha perfeccionado; por esto sabemos que estamos en él.",
+            6: "El que dice que permanece en él, debe andar como él anduvo."
+        }
+        raw_pass_3_6 = " ".join(verse_map_1jn2[v] for v in range(3, 7))
+
+        # Caso positivo 1: 1 Juan 2:1-6, antecedente Jesucristo en v1, entidad cristo en v3-6
+        self.assertTrue(resolve_contextual_person_reference("cristo", raw_pass_3_6, verse_map_1jn2, 3, 6))
+
+        # Caso positivo de alias: antecedente Jesucristo, entidad Jesucristo / Cristo
+        self.assertTrue(resolve_contextual_person_reference("jesucristo", raw_pass_3_6, verse_map_1jn2, 3, 6))
+
+        # Caso negativo 1: Rango actual contiene 'él' pero no hay antecedente en versículos anteriores
+        isolated_map = {3: verse_map_1jn2[3], 4: verse_map_1jn2[4], 5: verse_map_1jn2[5], 6: verse_map_1jn2[6]}
+        self.assertFalse(resolve_contextual_person_reference("cristo", raw_pass_3_6, isolated_map, 3, 6))
+
+        # Caso negativo 2: Competidor intermedio (Pedro en v2, Jesucristo en v1)
+        competitor_map = {
+            1: "a Jesucristo el justo.",
+            2: "Y Pedro dijo a todos los oyentes...",
+            3: "permanece en él y debe andar como él anduvo."
+        }
+        self.assertFalse(resolve_contextual_person_reference("cristo", competitor_map[3], competitor_map, 3, 3))
+
+        # Caso negativo 3: Dos personajes distintos en el antecedente (ambigüedad)
+        ambiguous_map = {
+            1: "Jesucristo y Pedro estaban en el monte.",
+            2: "él dijo a los discípulos..."
+        }
+        self.assertFalse(resolve_contextual_person_reference("cristo", ambiguous_map[2], ambiguous_map, 2, 2))
+
+        # Caso negativo 4: start_verse <= 1 (no hay versículos anteriores en el capítulo)
+        self.assertFalse(resolve_contextual_person_reference("cristo", verse_map_1jn2[1], verse_map_1jn2, 1, 1))
+
+        # Caso negativo 5: Antecedente no respalda al personaje solicitado
+        no_match_map = {
+            1: "Y Abraham se levantó de mañana...",
+            2: "él dijo a sus siervos..."
+        }
+        self.assertFalse(resolve_contextual_person_reference("moises", no_match_map[2], no_match_map, 2, 2))
+
+    def test_1john_0008_canonical_regression(self) -> None:
+        """Regresión canónica: NQB-NT-1JN-0008 resuelve 'Cristo' por correferencia anafórica."""
+        if not self.john1_questions:
+            self.skipTest("1john-master-input.json no disponible")
+        from auditor import evaluate_question
+
+        verse_map_1jn2 = {
+            1: "Hijitos míos, estas cosas os escribo para que no pequéis; y si alguno hubiere pecado, abogado tenemos para con el Padre, a Jesucristo el justo.",
+            2: "Y él es la propiciación por nuestros pecados; y no solamente por los nuestros, sino también por los de todo el mundo.",
+            3: "Y en esto sabemos que nosotros le conocemos, si guardamos sus mandamientos.",
+            4: "El que dice: Yo le conozco, y no guarda sus mandamientos, el tal es mentiroso, y la verdad no está en él;",
+            5: "pero el que guarda su palabra, en éste verdaderamente el amor de Dios se ha perfeccionado; por esto sabemos que estamos en él.",
+            6: "El que dice que permanece en él, debe andar como él anduvo."
+        }
+        q8 = self.get_1john_question("NQB-NT-1JN-0008")
+        res = evaluate_question(q8, verse_map_1jn2, book_key="1john")
+
+        self.assertEqual(res["controles_superados"]["control_nombres_propios"], "PASS")
+        self.assertNotEqual(res["controles_superados"]["control_rango_suficiente"], "FAIL")
+        self.assertNotEqual(res["estado"], "REQUIERE_CORRECCION")
+
+    def test_non_degradation_missing_entity_with_pronoun(self) -> None:
+        """Prueba de no degradación: personaje no respaldado en antecedente sigue fallando control_nombres_propios."""
+        from auditor import evaluate_question
+
+        verse_map = {
+            1: "Y aconteció que cuando Moisés descendía del monte...",
+            2: "él habló a toda la congregación..."
+        }
+        fictitious_q = {
+            "id": "TEST-NO-DEG-001",
+            "book": "Éxodo",
+            "chapter": 34,
+            "verse_start": 2,
+            "verse_end": 2,
+            "reference": "Éxodo 34:2",
+            "category": "OT_GENERAL",
+            "difficulty": "Básico",
+            "question_type": "MULTIPLE_CHOICE",
+            "question": "¿Qué hizo el líder al descender?",
+            "opcion_a": "David dio órdenes a los sacerdotes",
+            "opcion_b": "Construyó un altar de piedra",
+            "opcion_c": "Envió mensajeros a Moab",
+            "opcion_d": "Permaneció en silencio",
+            "correct_option": "A",
+            "correct_answer": "David dio órdenes a los sacerdotes",
+            "explanation": "El pasaje describe los hechos.",
+            "additional_references": [],
+            "eligible_modes": ["AT", "AMBOS"]
+        }
+        res = evaluate_question(fictitious_q, verse_map, book_key="exodus")
+        self.assertEqual(res["controles_superados"]["control_nombres_propios"], "FAIL")
+        self.assertEqual(res["estado"], "REQUIERE_CORRECCION")
+
 
 if __name__ == "__main__":
     unittest.main()
