@@ -9138,6 +9138,42 @@ class TestAuditorCanonical(unittest.TestCase):
                 self.assertNotIn(pq["question"].strip(), apo_texts,
                                  f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y Apocalipsis")
 
+    def test_revelation_no_modern_mappings(self) -> None:
+        """Verifica que ninguna pregunta ni respuesta de Apocalipsis contenga mapeos a tecnologías o entidades modernas."""
+        if not self.revelation_questions:
+            self.skipTest("revelation-master-input.json no disponible")
+        prohibited = [
+            "microchip", "chip", "vacuna", "código de barras", "codigo de barras",
+            "código qr", "codigo qr", "inteligencia artificial", "helicóptero", "helicoptero",
+            "drone", "dron", "tanque", "avión", "avion", "internet"
+        ]
+        for q in self.revelation_questions.values():
+            full_content = (
+                q["question"] + " " + q.get("opcion_a", "") + " " + q.get("opcion_b", "") + " " +
+                q.get("opcion_c", "") + " " + q.get("opcion_d", "") + " " + q.get("explanation", "")
+            ).lower()
+            for term in prohibited:
+                self.assertNotIn(term, full_content, f"Término moderno prohibido '{term}' en {q['id']}")
+
+    def test_revelation_speaker_resolution_christ_discourse(self) -> None:
+        """Verifica la resolución contextual del hablante en el discurso de Cristo (NQB-NT-APO-0008)."""
+        if not self.revelation_questions:
+            self.skipTest("revelation-master-input.json no disponible")
+        q8 = self.get_revelation_question("NQB-NT-APO-0008")
+        verse_map = {
+            7: "Escribe al ángel de la iglesia en Filadelfia: Esto dice el Santo, el Verdadero, el que tiene la llave de David, el que abre y ninguno cierra, y cierra y ninguno abre:",
+            8: "Yo conozco tus obras; he aquí, he puesto delante de ti una puerta abierta, la cual nadie puede cerrar; porque aunque tienes poca fuerza, has guardado mi palabra, y no has negado mi nombre.",
+            9: "He aquí, yo entrego de la sinagoga de Satanás a los que se dicen ser judíos y no lo son, sino que mienten; he aquí, yo haré que vengan y se postren a tus pies, y reconozcan que yo te he amado.",
+            10: "Por cuanto has guardado la palabra de mi paciencia, yo también te guardaré de la hora de la prueba que ha de venir sobre el mundo entero, para probar a los que moran sobre la tierra.",
+            11: "He aquí, yo vengo pronto; retén lo que tienes, para que ninguno tome tu corona.",
+            12: "Al que venciere, yo lo haré columna en el templo de mi Dios, y nunca más saldrá de allí; y escribiré sobre él el nombre de mi Dios, y el nombre de la ciudad de mi Dios, la nueva Jerusalén, la cual desciende del cielo, de mi Dios, y mi nombre nuevo.",
+            13: "El que tiene oído, oiga lo que el Espíritu dice a las iglesias."
+        }
+        res = evaluate_question(q8, verse_map, "revelation")
+        self.assertIn(res["estado"], ["VERIFICADO", "NO_CONCLUYENTE"], f"Estado inesperado para APO0008: {res['estado']}")
+        self.assertNotEqual(res["estado"], "REQUIERE_CORRECCION", f"APO0008 no debe ser REQUIERE_CORRECCION. Incidencias: {res.get('incidencias')}")
+        self.assertEqual(res["controles_superados"].get("control_nombres_propios"), "PASS")
+
 
 if __name__ == "__main__":
     unittest.main()

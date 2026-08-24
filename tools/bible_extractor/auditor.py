@@ -1731,20 +1731,20 @@ def resolve_implicit_speaker(
     if len(candidate_speakers) > 1 and norm_entity not in candidate_speakers:
         return False
 
-    # 2. Continuidad discursiva en discursos y palabras de Jesús (Evangelios: Mateo, Marcos, Lucas, Juan)
-    # En discursos continuos largos (ej. Juan 14-16, Mateo 5-7, etc.), Jesús habla en primera persona
-    # sin repetir 'Jesús dijo' en cada segmento de versículos.
-    is_gospel_book = book_key in {"matthew", "mark", "luke", "john", "mateo", "marcos", "lucas", "juan"}
+    # 2. Continuidad discursiva en discursos y palabras de Jesús (Evangelios, Hechos, Apocalipsis, etc.)
+    # En discursos de Jesús o en la categoría JESUS_PALABRAS / personajes cristológicos,
+    # el hablante en 1ª persona ("mi palabra", "mi nombre", "yo", etc.) es Jesús / Jesucristo / Cristo.
+    is_jesus_entity = norm_entity in {"jesus", "jesucristo", "cristo"}
     is_jesus_discourse = (
         category == "JESUS_PALABRAS"
         or (eligible_modes and "JESUS_PALABRAS" in eligible_modes)
-        or (norm_entity == "jesus" and ("jesus" in norm_chars or not characters))
+        or any(c in {"jesus", "jesucristo", "cristo"} for c in norm_chars)
     )
-    if is_gospel_book and norm_entity == "jesus" and is_jesus_discourse:
+    if is_jesus_entity and is_jesus_discourse:
         # Verificar que no exista en el pasaje un orador explícito en conflicto (ej: 'Pedro dijo:', 'Pilato dijo:')
         competing_speakers = set()
         for p in BIBLE_PERSONAJES:
-            if p != "jesus" and p in passage_words:
+            if p not in {"jesus", "jesucristo", "cristo"} and p in passage_words:
                 if any(f"{p} {verb}" in passage_norm for verb in SPEECH_PRAYER_VERBS) or any(f"{verb} {p}" in passage_norm for verb in SPEECH_PRAYER_VERBS):
                     competing_speakers.add(p)
         if not competing_speakers:
