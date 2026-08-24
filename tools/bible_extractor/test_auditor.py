@@ -101,6 +101,7 @@ TIMOTHY2_PATH = Path(__file__).parent / "2timothy-master-input.json"
 TITUS_PATH = Path(__file__).parent / "titus-master-input.json"
 PHILEMON_PATH = Path(__file__).parent / "philemon-master-input.json"
 HEBREWS_PATH = Path(__file__).parent / "hebrews-master-input.json"
+JAMES_PATH = Path(__file__).parent / "james-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -450,6 +451,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.hebrews_questions = {q["id"]: q for q in (raw_heb.get("questions", []) if isinstance(raw_heb, dict) else raw_heb)}
         else:
             cls.hebrews_questions = {}
+
+        if JAMES_PATH.exists():
+            raw_san = json.loads(JAMES_PATH.read_text(encoding="utf-8"))
+            cls.james_questions = {q["id"]: q for q in (raw_san.get("questions", []) if isinstance(raw_san, dict) else raw_san)}
+        else:
+            cls.james_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -7256,6 +7263,206 @@ class TestAuditorCanonical(unittest.TestCase):
             eligible_modes=["NT"]
         )
         self.assertFalse(res, "Sin versículos anteriores con anclaje, no debe conceder título")
+
+    # --- PRUEBAS ESPECÍFICAS DE SANTIAGO ---
+
+    def get_james_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.james_questions, f"ID '{qid}' no encontrado en james-master-input.json")
+        return copy.deepcopy(self.james_questions[qid])
+
+    def test_detect_book_key_james(self) -> None:
+        """Verifica detección de book_key para Santiago y sus variantes."""
+        for alias in ["Santiago", "santiago", "James", "james", "stg", "san", "Epístola de Santiago", "Carta de Santiago"]:
+            spec = {"questions": [{"id": "NQB-NT-SAN-0001", "book": alias}]}
+            self.assertEqual(detect_book_key(spec), "james",
+                             f"detect_book_key failed for alias: {alias}")
+
+    def test_james_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de Santiago en BOOK_CONFIGS."""
+        self.assertIn("james", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["james"]
+        self.assertEqual(cfg["canonical_name"], "Santiago")
+        self.assertEqual(cfg["api_name"], "Santiago")
+        self.assertEqual(cfg["total_chapters"], 5)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("santiago", cfg["aliases"])
+        self.assertIn("james", cfg["aliases"])
+        self.assertIn("stg", cfg["aliases"])
+        self.assertIn("san", cfg["aliases"])
+
+    def test_james_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de Santiago."""
+        if not self.james_questions:
+            self.skipTest("james-master-input.json no disponible")
+        self.assertEqual(len(self.james_questions), 30)
+
+        # 6 preguntas en cada uno de los 5 capítulos
+        ch_counts = collections.Counter(q["chapter"] for q in self.james_questions.values())
+        self.assertEqual(len(ch_counts), 5)
+        for ch in range(1, 6):
+            self.assertEqual(ch_counts[ch], 6, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 6")
+
+        # IDs: NQB-NT-SAN-0001 a NQB-NT-SAN-0030
+        ids = sorted(self.james_questions.keys())
+        self.assertEqual(ids[0], "NQB-NT-SAN-0001")
+        self.assertEqual(ids[-1], "NQB-NT-SAN-0030")
+        self.assertEqual(len(set(ids)), 30)
+
+        # Dificultad: Básico=6, Intermedio=10, Avanzado=9, Experto=5
+        diff_counts = collections.Counter(q["difficulty"] for q in self.james_questions.values())
+        self.assertEqual(diff_counts["Básico"], 6)
+        self.assertEqual(diff_counts["Intermedio"], 10)
+        self.assertEqual(diff_counts["Avanzado"], 9)
+        self.assertEqual(diff_counts["Experto"], 5)
+
+        # Tipos: 25 MC, 5 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.james_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 25)
+        self.assertEqual(type_counts["TRUE_FALSE"], 5)
+
+        tf_ids = sorted(q["id"] for q in self.james_questions.values() if q.get("question_type") == "TRUE_FALSE")
+        expected_tf = sorted([f"NQB-NT-SAN-{i:04d}" for i in [6, 12, 18, 24, 30]])
+        self.assertEqual(tf_ids, expected_tf)
+
+    def test_james_categories(self) -> None:
+        """Verifica categorías sin categorías de Evangelios en Santiago."""
+        if not self.james_questions:
+            self.skipTest("james-master-input.json no disponible")
+        cat_counts = collections.Counter(q["category"] for q in self.james_questions.values())
+        self.assertEqual(cat_counts["NT_GENERAL"], 25)
+        self.assertEqual(cat_counts["PERSONAJES_BIBLICOS"], 5)
+        for forbidden in ["JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"]:
+            self.assertEqual(cat_counts.get(forbidden, 0), 0, f"Categoría no permitida: {forbidden}")
+
+    def test_james_additional_references(self) -> None:
+        """Verifica las 9 preguntas con 11 referencias individuales en Santiago."""
+        if not self.james_questions:
+            self.skipTest("james-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-SAN-0002": ["Romanos 5:3-4"],
+            "NQB-NT-SAN-0007": ["Levítico 19:15"],
+            "NQB-NT-SAN-0009": ["1 Juan 3:17-18"],
+            "NQB-NT-SAN-0011": ["Génesis 22:1-18"],
+            "NQB-NT-SAN-0012": ["Josué 2:1-21"],
+            "NQB-NT-SAN-0015": ["Proverbios 15:1"],
+            "NQB-NT-SAN-0023": ["Proverbios 27:1"],
+            "NQB-NT-SAN-0026": ["Job 1:20-22", "Job 2:9-10"],
+            "NQB-NT-SAN-0029": ["1 Reyes 17:1", "1 Reyes 18:41-45"],
+        }
+        found_add_refs = {
+            qid: q["additional_references"]
+            for qid, q in self.james_questions.items()
+            if q.get("additional_references")
+        }
+        self.assertEqual(len(found_add_refs), 9)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 11)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_james_modes(self) -> None:
+        """Verifica la asignación de modos en Santiago."""
+        if not self.james_questions:
+            self.skipTest("james-master-input.json no disponible")
+        mode_counts = collections.defaultdict(int)
+        for q in self.james_questions.values():
+            for m in q.get("eligible_modes", []):
+                mode_counts[m] += 1
+        self.assertEqual(mode_counts["NT"], 30)
+        self.assertEqual(mode_counts["AMBOS"], 30)
+        self.assertEqual(mode_counts["PERSONAJES_NT"], 5)
+        self.assertEqual(mode_counts["PERSONAJES_AMBOS"], 5)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_NT"], 5)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_AMBOS"], 5)
+
+    def test_james_id_reference_integrity(self) -> None:
+        """Verifica consistencia de IDs y referencias en Santiago."""
+        if not self.james_questions:
+            self.skipTest("james-master-input.json no disponible")
+        for qid, q in self.james_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_james_true_false_neutral_semantics(self) -> None:
+        """Verifica semántica neutral de TRUE_FALSE: SAN0012 A=Verdadero/correct=A, otros 4 A=Falso/correct=A."""
+        if not self.james_questions:
+            self.skipTest("james-master-input.json no disponible")
+        for qid in ["NQB-NT-SAN-0006", "NQB-NT-SAN-0018", "NQB-NT-SAN-0024", "NQB-NT-SAN-0030"]:
+            q = self.get_james_question(qid)
+            self.assertEqual(q["opcion_a"].strip().lower(), "falso", f"{qid}: opcion_a debe ser Falso")
+            self.assertEqual(q["opcion_b"].strip().lower(), "verdadero", f"{qid}: opcion_b debe ser Verdadero")
+            self.assertEqual(q["correct_option"], "A", f"{qid}: correct_option debe ser A")
+            self.assertEqual(q["correct_answer"].strip().lower(), "falso", f"{qid}: correct_answer debe ser Falso")
+
+        # SAN0012: A=Verdadero, B=Falso, correct_option=A, correct_answer=Verdadero
+        q12 = self.get_james_question("NQB-NT-SAN-0012")
+        self.assertEqual(q12["opcion_a"].strip().lower(), "verdadero", "SAN0012: opcion_a debe ser Verdadero")
+        self.assertEqual(q12["opcion_b"].strip().lower(), "falso", "SAN0012: opcion_b debe ser Falso")
+        self.assertEqual(q12["correct_option"], "A", "SAN0012: correct_option debe ser A")
+        self.assertEqual(q12["correct_answer"].strip().lower(), "verdadero", "SAN0012: correct_answer debe ser Verdadero")
+
+    def test_james_characters_and_epistolar_speaker(self) -> None:
+        """Verifica que personajes de Santiago estén en BIBLE_PERSONAJES y resolve_implicit_speaker funcione."""
+        from auditor import BIBLE_PERSONAJES, resolve_implicit_speaker
+        expected_chars = ["santiago", "abraham", "rahab", "job", "elias"]
+        for p in expected_chars:
+            self.assertIn(p, BIBLE_PERSONAJES, f"Falta personaje: {p}")
+
+        verse_map = {
+            1: "Santiago, siervo de Dios y del Señor Jesucristo, a las doce tribus que están en la dispersión: Salud.",
+            2: "Hermanos míos, tened por sumo gozo cuando os halléis en diversas pruebas,"
+        }
+        passage_norm = "hermanos mios tened por sumo gozo cuando os halleis en diversas pruebas"
+        resolved = resolve_implicit_speaker("santiago", passage_norm, verse_map, 2, ["Santiago"], book_key="james")
+        self.assertTrue(resolved, "Santiago debe resolverse como autor/remitente epistolar en Santiago")
+
+    def test_james_no_duplicates_within(self) -> None:
+        """Verifica que no haya preguntas duplicadas internamente en Santiago."""
+        if not self.james_questions:
+            self.skipTest("james-master-input.json no disponible")
+        questions_texts = [q["question"].strip() for q in self.james_questions.values()]
+        self.assertEqual(len(questions_texts), len(set(questions_texts)), "Duplicados detectados internamente")
+
+    def test_james_no_duplicates_cross_nt(self) -> None:
+        """Verifica que no haya preguntas duplicadas entre Santiago y los 19 libros NT anteriores."""
+        if not self.james_questions:
+            self.skipTest("james-master-input.json no disponible")
+        san_texts = {q["question"].strip() for q in self.james_questions.values()}
+        prior_nt = [
+            PHILIPPIANS_PATH.parent / "matthew-master-input.json",
+            PHILIPPIANS_PATH.parent / "mark-master-input.json",
+            PHILIPPIANS_PATH.parent / "luke-master-input.json",
+            PHILIPPIANS_PATH.parent / "john-master-input.json",
+            PHILIPPIANS_PATH.parent / "acts-master-input.json",
+            PHILIPPIANS_PATH.parent / "romans-master-input.json",
+            PHILIPPIANS_PATH.parent / "1corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "galatians-master-input.json",
+            PHILIPPIANS_PATH.parent / "ephesians-master-input.json",
+            PHILIPPIANS_PATH.parent / "philippians-master-input.json",
+            PHILIPPIANS_PATH.parent / "colossians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "2timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "titus-master-input.json",
+            PHILIPPIANS_PATH.parent / "philemon-master-input.json",
+            PHILIPPIANS_PATH.parent / "hebrews-master-input.json",
+        ]
+        for prior_path in prior_nt:
+            if not prior_path.exists():
+                continue
+            prior_data = json.loads(prior_path.read_text(encoding="utf-8"))
+            prior_questions = prior_data.get("questions", []) if isinstance(prior_data, dict) else prior_data
+            for pq in prior_questions:
+                self.assertNotIn(pq["question"].strip(), san_texts,
+                                 f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y Santiago")
 
 
 if __name__ == "__main__":

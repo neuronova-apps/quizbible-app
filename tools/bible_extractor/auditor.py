@@ -1096,6 +1096,21 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "salem", "sinai", "sinaí", "sion", "sión", "roma", "italia", "jerusalen", "jerusalén"
         },
     },
+    "james": {
+        "canonical_name": "Santiago",
+        "api_name": "Santiago",
+        "aliases": {
+            "santiago", "james", "stg", "san",
+            "epistola de santiago", "epístola de santiago",
+            "carta de santiago"
+        },
+        "total_chapters": 5,
+        "blocks": [
+            (1, 5, "james-01-05.json"),
+        ],
+        "default_output_dir": "build/audit/james",
+        "ambient_places": set(),
+    },
 }
 
 STOPWORDS = {
@@ -1251,7 +1266,7 @@ BIBLE_PERSONAJES = {
     "crescente", "carpo", "pudente", "lino", "claudia", "artemas", "zenas", "apia",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
-    "lucas", "esteban", "timoteo",
+    "lucas", "esteban", "timoteo", "santiago",
 }
 
 # Lugares, regiones y accidentes geográficos bíblicos
@@ -1345,7 +1360,7 @@ COLLECTIVE_PREFIX_PATTERN = re.compile(
 )
 
 FIRST_PERSON_DISCOURSE_MARKERS = {
-    "yo", "mi", "mis", "mio", "mia", "conmigo", "me",
+    "yo", "mi", "mis", "mio", "mia", "mios", "mias", "conmigo", "me",
     "nosotros", "nosotras", "nos", "nuestro", "nuestra", "nuestros", "nuestras",
     "diremos", "hemos", "estamos", "hablamos", "somos", "hicimos", "dejamos",
     "peque", "pequemos", "dije", "clame", "ore", "estoy", "tengo", "veo"
@@ -1612,6 +1627,17 @@ def resolve_implicit_speaker(
         competing_speakers = set()
         for p in BIBLE_PERSONAJES:
             if p != "pablo" and p in passage_words:
+                if any(f"{p} {verb}" in passage_norm for verb in SPEECH_PRAYER_VERBS) or any(f"{verb} {p}" in passage_norm for verb in SPEECH_PRAYER_VERBS):
+                    competing_speakers.add(p)
+        if not competing_speakers:
+            return True
+
+    # 5. Autor epistolar general (Santiago en la epístola de Santiago)
+    is_james_epistle = book_key in {"james", "santiago", "stg", "san"}
+    if is_james_epistle and norm_entity == "santiago":
+        competing_speakers = set()
+        for p in BIBLE_PERSONAJES:
+            if p != "santiago" and p in passage_words:
                 if any(f"{p} {verb}" in passage_norm for verb in SPEECH_PRAYER_VERBS) or any(f"{verb} {p}" in passage_norm for verb in SPEECH_PRAYER_VERBS):
                     competing_speakers.add(p)
         if not competing_speakers:
