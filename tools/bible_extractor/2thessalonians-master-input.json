@@ -1,0 +1,555 @@
+{
+  "source": "Quiz Bible master bank - 2 Tesalonicenses",
+  "version": "RVR1960",
+  "book": "2 Tesalonicenses",
+  "total_questions": 18,
+  "questions": [
+    {
+      "id": "NQB-NT-2TS-0001",
+      "book": "2 Tesalonicenses",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "2 Tesalonicenses 1:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Saludo y remitentes",
+      "characters": [
+        "Pablo",
+        "Silvano",
+        "Timoteo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tres nombres aparecen juntos como remitentes al inicio de la carta?",
+      "opcion_a": "Pablo, Silvano y Timoteo",
+      "opcion_b": "Pedro, Juan y Santiago",
+      "opcion_c": "Aquila, Priscila y Apolos",
+      "opcion_d": "Bernabé, Marcos y Lucas",
+      "correct_option": "A",
+      "correct_answer": "Pablo, Silvano y Timoteo",
+      "explanation": "La apertura presenta a Pablo, Silvano y Timoteo como remitentes y dirige el saludo a la comunidad. La pregunta se limita a la identificación epistolar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0002",
+      "book": "2 Tesalonicenses",
+      "chapter": 1,
+      "verse_start": 3,
+      "verse_end": 4,
+      "reference": "2 Tesalonicenses 1:3-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Fe, amor y perseverancia",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué crecimiento de la comunidad motiva una acción de gracias especial?",
+      "opcion_a": "El aumento de la fe, del amor mutuo y de la perseverancia en medio de dificultades",
+      "opcion_b": "El crecimiento de riqueza y prestigio social",
+      "opcion_c": "La desaparición completa de toda oposición",
+      "opcion_d": "La superioridad sobre otras comunidades",
+      "correct_option": "A",
+      "correct_answer": "El aumento de la fe, del amor mutuo y de la perseverancia en medio de dificultades",
+      "explanation": "La acción de gracias destaca una fe creciente, amor mutuo y perseverancia. No identifica madurez con riqueza, ausencia de problemas o superioridad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0003",
+      "book": "2 Tesalonicenses",
+      "chapter": 1,
+      "verse_start": 5,
+      "verse_end": 7,
+      "reference": "2 Tesalonicenses 1:5-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Justicia y aflicción",
+      "characters": [
+        "Comunidad",
+        "Dios",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio debe conservarse al leer la promesa de justicia en medio de la persecución?",
+      "opcion_a": "La justicia final corresponde a Dios y no autoriza a la comunidad a tomar venganza violenta",
+      "opcion_b": "La comunidad debe castigar físicamente a sus perseguidores",
+      "opcion_c": "Toda oposición religiosa debe responderse con represalias",
+      "opcion_d": "El sufrimiento convierte automáticamente a una persona en moralmente superior",
+      "correct_option": "A",
+      "correct_answer": "La justicia final corresponde a Dios y no autoriza a la comunidad a tomar venganza violenta",
+      "explanation": "El pasaje sitúa la respuesta final en Dios. No entrega a la comunidad permiso para venganza, violencia o represalias contra adversarios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0004",
+      "book": "2 Tesalonicenses",
+      "chapter": 1,
+      "verse_start": 7,
+      "verse_end": 10,
+      "reference": "2 Tesalonicenses 1:7-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Revelación y juicio",
+      "characters": [
+        "Jesucristo",
+        "ángeles",
+        "comunidad"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cautela evita distorsionar el lenguaje de juicio y retribución de esta sección?",
+      "opcion_a": "No usarlo para justificar violencia humana ni para señalar grupos actuales como objetivos de castigo",
+      "opcion_b": "Identificar enemigos políticos modernos como destinatarios directos",
+      "opcion_c": "Aplicar el castigo mediante acciones humanas preventivas",
+      "opcion_d": "Convertir toda diferencia religiosa en una amenaza que deba eliminarse",
+      "correct_option": "A",
+      "correct_answer": "No usarlo para justificar violencia humana ni para señalar grupos actuales como objetivos de castigo",
+      "explanation": "La sección emplea lenguaje escatológico de juicio divino. No autoriza violencia humana, persecución religiosa ni la identificación arbitraria de colectivos actuales como blancos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0005",
+      "book": "2 Tesalonicenses",
+      "chapter": 1,
+      "verse_start": 11,
+      "verse_end": 12,
+      "reference": "2 Tesalonicenses 1:11-12",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Oración por una vida digna",
+      "characters": [
+        "Pablo",
+        "comunidad",
+        "Dios",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pide Pablo al orar por la comunidad en esta sección?",
+      "opcion_a": "Que Dios los haga dignos del llamado y lleve a cumplimiento propósitos de bondad y obras de fe",
+      "opcion_b": "Que alcancen prestigio público como prueba de aprobación divina",
+      "opcion_c": "Que dejen de necesitar crecimiento espiritual",
+      "opcion_d": "Que obtengan dominio sobre quienes los contradicen",
+      "correct_option": "A",
+      "correct_answer": "Que Dios los haga dignos del llamado y lleve a cumplimiento propósitos de bondad y obras de fe",
+      "explanation": "Pablo ora por una vida coherente con el llamado, por bondad y obra de fe sostenidas por Dios. No promete prestigio, dominio o autosuficiencia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0006",
+      "book": "2 Tesalonicenses",
+      "chapter": 1,
+      "verse_start": 3,
+      "verse_end": 4,
+      "reference": "2 Tesalonicenses 1:3-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Perseverancia comunitaria",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la perseverancia de la comunidad se menciona junto con una fe creciente y un amor mutuo que aumenta",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El pasaje reúne crecimiento de fe y amor con constancia en medio de persecuciones y dificultades.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0007",
+      "book": "2 Tesalonicenses",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "2 Tesalonicenses 2:1-2",
+      "category": "NT_GENERAL",
+      "subcategory": "Día del Señor y estabilidad",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué reacción intenta prevenir Pablo ante mensajes que afirman que el día del Señor ya ha llegado?",
+      "opcion_a": "Que la comunidad se deje sacudir o alarmar con facilidad",
+      "opcion_b": "Que examine con serenidad lo que escucha",
+      "opcion_c": "Que recuerde la enseñanza recibida",
+      "opcion_d": "Que mantenga esperanza sin fijar fechas",
+      "correct_option": "A",
+      "correct_answer": "Que la comunidad se deje sacudir o alarmar con facilidad",
+      "explanation": "Pablo pide no dejarse perturbar por afirmaciones sobre la llegada del día. El objetivo es estabilidad, no alarmismo ni cronologías especulativas.",
+      "additional_references": [
+        "1 Tesalonicenses 5:1-6"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0008",
+      "book": "2 Tesalonicenses",
+      "chapter": 2,
+      "verse_start": 3,
+      "verse_end": 4,
+      "reference": "2 Tesalonicenses 2:3-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Apostasía y hombre de pecado",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cautela es necesaria al interpretar la figura descrita como hombre de pecado o de iniquidad?",
+      "opcion_a": "No identificar automáticamente a una persona política o religiosa contemporánea sin evidencia textual",
+      "opcion_b": "Asignar el título al gobernante actual que más desagrade",
+      "opcion_c": "Usar la descripción para acusar a una denominación completa",
+      "opcion_d": "Convertir cualquier rival ideológico en cumplimiento profético",
+      "correct_option": "A",
+      "correct_answer": "No identificar automáticamente a una persona política o religiosa contemporánea sin evidencia textual",
+      "explanation": "La figura pertenece al argumento escatológico del pasaje. El texto no autoriza identificar de forma automática a figuras políticas, religiosas o grupos contemporáneos concretos.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0009",
+      "book": "2 Tesalonicenses",
+      "chapter": 2,
+      "verse_start": 5,
+      "verse_end": 8,
+      "reference": "2 Tesalonicenses 2:5-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Restricción del mal y revelación",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo debe tratarse la identidad de aquello o aquel que detiene temporalmente la revelación del inicuo?",
+      "opcion_a": "Como un punto cuya identificación precisa no debe forzarse cuando el texto no la resuelve de manera inequívoca",
+      "opcion_b": "Como una referencia segura a un gobierno contemporáneo concreto",
+      "opcion_c": "Como una prueba definitiva de una única cronología escatológica",
+      "opcion_d": "Como una autorización para acusar a personas actuales de impedir el plan de Dios",
+      "correct_option": "A",
+      "correct_answer": "Como un punto cuya identificación precisa no debe forzarse cuando el texto no la resuelve de manera inequívoca",
+      "explanation": "La identidad del elemento que restringe ha recibido interpretaciones diversas. El auditor no debe imponer una identificación que exceda la evidencia explícita del rango.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0010",
+      "book": "2 Tesalonicenses",
+      "chapter": 2,
+      "verse_start": 9,
+      "verse_end": 12,
+      "reference": "2 Tesalonicenses 2:9-12",
+      "category": "NT_GENERAL",
+      "subcategory": "Engaño, señales y verdad",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué enfoque conserva mejor la advertencia sobre engaño, señales y rechazo de la verdad?",
+      "opcion_a": "Llamar al discernimiento sin convertir cualquier noticia extraordinaria en una teoría de conspiración",
+      "opcion_b": "Suponer que todo acontecimiento tecnológico es una señal del fin",
+      "opcion_c": "Identificar automáticamente toda señal religiosa como fraude",
+      "opcion_d": "Desconfiar por principio de cualquier persona fuera de la comunidad",
+      "correct_option": "A",
+      "correct_answer": "Llamar al discernimiento sin convertir cualquier noticia extraordinaria en una teoría de conspiración",
+      "explanation": "El pasaje advierte sobre engaño y rechazo de la verdad, pero no ofrece una licencia para construir conspiraciones contemporáneas ni para desconfiar indiscriminadamente.",
+      "additional_references": [
+        "Mateo 24:23-27"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0011",
+      "book": "2 Tesalonicenses",
+      "chapter": 2,
+      "verse_start": 13,
+      "verse_end": 15,
+      "reference": "2 Tesalonicenses 2:13-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Firmeza y enseñanza recibida",
+      "characters": [
+        "Comunidad",
+        "Señor"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación resume la exhortación dirigida a quienes han recibido la enseñanza?",
+      "opcion_a": "Permanecer firmes y conservar lo aprendido de manera coherente con el mensaje recibido",
+      "opcion_b": "Aceptar cualquier tradición posterior sin examen",
+      "opcion_c": "Someter la conciencia a una autoridad humana sin límites",
+      "opcion_d": "Rechazar toda enseñanza escrita por ser menos espiritual",
+      "correct_option": "A",
+      "correct_answer": "Permanecer firmes y conservar lo aprendido de manera coherente con el mensaje recibido",
+      "explanation": "La exhortación llama a firmeza respecto de la enseñanza apostólica comunicada. No legitima autoridad humana ilimitada ni la aceptación acrítica de cualquier tradición posterior.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0012",
+      "book": "2 Tesalonicenses",
+      "chapter": 2,
+      "verse_start": 16,
+      "verse_end": 17,
+      "reference": "2 Tesalonicenses 2:16-17",
+      "category": "NT_GENERAL",
+      "subcategory": "Consuelo y fortaleza",
+      "characters": [
+        "Comunidad",
+        "Jesucristo",
+        "Dios"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que esta oración pide consuelo y fortaleza para toda buena palabra y obra",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El cierre pide que la comunidad sea consolada y afirmada en buenas palabras y acciones.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0013",
+      "book": "2 Tesalonicenses",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "2 Tesalonicenses 3:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Petición de oración",
+      "characters": [
+        "Pablo",
+        "hermanos",
+        "Señor"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pide Pablo que la comunidad presente en oración respecto de su misión?",
+      "opcion_a": "Que el mensaje del Señor avance y sea honrado y que los mensajeros sean librados de personas perversas",
+      "opcion_b": "Que desaparezca toda crítica pública hacia los misioneros",
+      "opcion_c": "Que nadie pueda cuestionar su enseñanza",
+      "opcion_d": "Que la comunidad busque poder político para protegerlos",
+      "correct_option": "A",
+      "correct_answer": "Que el mensaje del Señor avance y sea honrado y que los mensajeros sean librados de personas perversas",
+      "explanation": "Pablo pide oración por la difusión del mensaje y por protección frente a personas dañinas. No reclama inmunidad a toda crítica ni poder político.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0014",
+      "book": "2 Tesalonicenses",
+      "chapter": 3,
+      "verse_start": 3,
+      "verse_end": 5,
+      "reference": "2 Tesalonicenses 3:3-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Fidelidad y dirección del Señor",
+      "characters": [
+        "Comunidad",
+        "Señor"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué confianza expresa el pasaje sobre el cuidado y la dirección de la comunidad?",
+      "opcion_a": "Que el Señor es fiel, puede afirmarlos y dirigir sus corazones hacia el amor y la perseverancia",
+      "opcion_b": "Que nunca experimentarán dificultades futuras",
+      "opcion_c": "Que no necesitan tomar decisiones responsables",
+      "opcion_d": "Que cualquier dirigente humano puede garantizar su seguridad",
+      "correct_option": "A",
+      "correct_answer": "Que el Señor es fiel, puede afirmarlos y dirigir sus corazones hacia el amor y la perseverancia",
+      "explanation": "La confianza se coloca en la fidelidad del Señor y en su dirección hacia amor y perseverancia. No promete ausencia total de problemas ni control humano absoluto.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0015",
+      "book": "2 Tesalonicenses",
+      "chapter": 3,
+      "verse_start": 6,
+      "verse_end": 9,
+      "reference": "2 Tesalonicenses 3:6-9",
+      "category": "NT_GENERAL",
+      "subcategory": "Ejemplo de trabajo y responsabilidad",
+      "characters": [
+        "Pablo",
+        "colaboradores",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué propósito tiene el ejemplo de trabajo que los remitentes recuerdan a la comunidad?",
+      "opcion_a": "Mostrar una conducta responsable y evitar convertirse innecesariamente en carga mientras servían",
+      "opcion_b": "Establecer que recibir ayuda económica siempre es incorrecto",
+      "opcion_c": "Condenar a quienes no pueden trabajar por enfermedad o discapacidad",
+      "opcion_d": "Convertir la productividad en medida de valor personal",
+      "correct_option": "A",
+      "correct_answer": "Mostrar una conducta responsable y evitar convertirse innecesariamente en carga mientras servían",
+      "explanation": "El ejemplo apostólico destaca responsabilidad y renuncia voluntaria a ciertos apoyos en ese contexto. No desvaloriza a quien legítimamente necesita ayuda.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0016",
+      "book": "2 Tesalonicenses",
+      "chapter": 3,
+      "verse_start": 10,
+      "verse_end": 12,
+      "reference": "2 Tesalonicenses 3:10-12",
+      "category": "NT_GENERAL",
+      "subcategory": "Trabajo, tranquilidad y necesidad",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué distinción es esencial al aplicar la instrucción dirigida a quien no quiere trabajar?",
+      "opcion_a": "Distinguir la negativa deliberada a contribuir de la incapacidad, el desempleo involuntario o la necesidad legítima de apoyo",
+      "opcion_b": "Negar alimento a cualquier persona desempleada",
+      "opcion_c": "Considerar la pobreza como prueba de pereza",
+      "opcion_d": "Aplicar la regla a personas enfermas o con discapacidad sin considerar su situación",
+      "correct_option": "A",
+      "correct_answer": "Distinguir la negativa deliberada a contribuir de la incapacidad, el desempleo involuntario o la necesidad legítima de apoyo",
+      "explanation": "La formulación se dirige a quien no quiere trabajar, dentro de un problema de conducta concreto. No justifica castigar pobreza, desempleo involuntario, enfermedad o discapacidad.",
+      "additional_references": [
+        "1 Tesalonicenses 4:11-12"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0017",
+      "book": "2 Tesalonicenses",
+      "chapter": 3,
+      "verse_start": 16,
+      "verse_end": 18,
+      "reference": "2 Tesalonicenses 3:16-18",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Paz, firma y gracia",
+      "characters": [
+        "Pablo",
+        "comunidad",
+        "Señor"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué elementos aparecen juntos en el cierre personal de la carta?",
+      "opcion_a": "Deseo de paz, una señal de autenticidad en el saludo de Pablo y una bendición de gracia",
+      "opcion_b": "Una amenaza contra quienes tengan dudas",
+      "opcion_c": "Una orden de romper toda relación con otras comunidades",
+      "opcion_d": "Una fecha para la venida del Señor",
+      "correct_option": "A",
+      "correct_answer": "Deseo de paz, una señal de autenticidad en el saludo de Pablo y una bendición de gracia",
+      "explanation": "El cierre reúne paz, la identificación del saludo personal de Pablo y gracia. No añade amenazas, aislamiento ni cronologías.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TS-0018",
+      "book": "2 Tesalonicenses",
+      "chapter": 3,
+      "verse_start": 14,
+      "verse_end": 15,
+      "reference": "2 Tesalonicenses 3:14-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Corrección sin enemistad",
+      "characters": [
+        "Comunidad",
+        "hermano"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la persona que no obedece la instrucción de la carta debe ser considerada y tratada como enemiga",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Aunque se indica una medida correctiva, el pasaje ordena no considerar a la persona como enemiga, sino amonestarla como a un hermano.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}

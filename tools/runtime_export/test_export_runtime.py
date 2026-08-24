@@ -598,6 +598,201 @@ class TestRuntimeExport(unittest.TestCase):
         col_qs = raw_col.get("questions", raw_col)
         status_map = {q["id"]: "VERIFIED" for q in col_qs}
 
+        raw = json.loads(mar_path.read_text(encoding="utf-8"))
+        mar_qs = raw.get("questions", raw) if isinstance(raw, dict) else raw
+        status_map = {q["id"]: "VERIFIED" for q in mar_qs}
+
+        collection = export_canonical_data(mar_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 74)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Marcos")
+        self.assertTrue(validate_runtime_collection(collection))
+
+    def test_luke_testament_nt_and_runtime_export(self) -> None:
+        """Verifica que las preguntas de Lucas produzcan testament=NT y validen contra el schema."""
+        luk_path = self.extractor_dir / "luke-master-input.json"
+        if not luk_path.exists():
+            self.skipTest("luke-master-input.json no disponible")
+        raw = json.loads(luk_path.read_text(encoding="utf-8"))
+        luk_qs = raw.get("questions", raw) if isinstance(raw, dict) else raw
+        status_map = {q["id"]: "VERIFIED" for q in luk_qs}
+
+        collection = export_canonical_data(luk_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 96)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Lucas")
+        self.assertTrue(validate_runtime_collection(collection))
+
+    def test_john_testament_nt_and_runtime_export(self) -> None:
+        """Verifica que las preguntas de Juan produzcan testament=NT y validen contra el schema."""
+        joh_path = self.extractor_dir / "john-master-input.json"
+        if not joh_path.exists():
+            self.skipTest("john-master-input.json no disponible")
+        raw = json.loads(joh_path.read_text(encoding="utf-8"))
+        joh_qs = raw.get("questions", raw) if isinstance(raw, dict) else raw
+        status_map = {q["id"]: "VERIFIED" for q in joh_qs}
+
+        collection = export_canonical_data(joh_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 100)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Juan")
+        self.assertTrue(validate_runtime_collection(collection))
+
+    def test_true_false_inverted_options_runtime_export(self) -> None:
+        """Verifica que TRUE_FALSE con opcion_a='Falso' y opcion_b='Verdadero' se exporte preservando el texto de A y B."""
+        q_tf = {
+            "id": "NQB-NT-JUA-0009",
+            "book": "Juan",
+            "chapter": 2,
+            "verse_start": 1,
+            "verse_end": 12,
+            "reference": "Juan 2:1-12",
+            "category": "JESUS_MILAGROS",
+            "difficulty": "Básico",
+            "question_type": "TRUE_FALSE",
+            "question": "¿El primer milagro de Jesús fue la multiplicación de los panes?",
+            "opcion_a": "Falso",
+            "opcion_b": "Verdadero",
+            "opcion_c": "",
+            "opcion_d": "",
+            "correct_option": "A",
+            "correct_answer": "Falso",
+            "explanation": "El primer milagro fue convertir agua en vino en Caná."
+        }
+        res = export_question_to_runtime(q_tf, audit_status="VERIFIED")
+        self.assertEqual(res["questionType"], "TRUE_FALSE")
+        self.assertEqual(len(res["options"]), 2)
+        self.assertEqual(res["options"][0], {"id": "A", "text": "Falso"})
+        self.assertEqual(res["options"][1], {"id": "B", "text": "Verdadero"})
+        self.assertEqual(res["correctOptionId"], "A")
+        # Verificar que la opción A contiene el texto esperado "Falso"
+        correct_text = next(opt["text"] for opt in res["options"] if opt["id"] == res["correctOptionId"])
+        self.assertEqual(correct_text, "Falso")
+
+    def test_export_acts_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de Hechos al formato runtime."""
+        act_path = REPO_ROOT / "tools" / "bible_extractor" / "acts-master-input.json"
+        if not act_path.exists():
+            self.skipTest("acts-master-input.json no encontrado")
+        raw_act = json.loads(act_path.read_text(encoding="utf-8"))
+        act_qs = raw_act.get("questions", raw_act)
+        status_map = {q["id"]: "VERIFIED" for q in act_qs}
+
+        collection = export_canonical_data(act_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 112)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Hechos")
+        self.assertTrue(validate_runtime_collection(collection))
+
+    def test_export_romans_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de Romanos al formato runtime."""
+        rom_path = REPO_ROOT / "tools" / "bible_extractor" / "romans-master-input.json"
+        if not rom_path.exists():
+            self.skipTest("romans-master-input.json no encontrado")
+        raw_rom = json.loads(rom_path.read_text(encoding="utf-8"))
+        rom_qs = raw_rom.get("questions", raw_rom)
+        status_map = {q["id"]: "VERIFIED" for q in rom_qs}
+
+        collection = export_canonical_data(rom_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 80)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Romanos")
+        self.assertTrue(validate_runtime_collection(collection))
+
+    def test_export_1corinthians_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de 1 Corintios al formato runtime."""
+        co1_path = REPO_ROOT / "tools" / "bible_extractor" / "1corinthians-master-input.json"
+        if not co1_path.exists():
+            self.skipTest("1corinthians-master-input.json no encontrado")
+        raw_co1 = json.loads(co1_path.read_text(encoding="utf-8"))
+        co1_qs = raw_co1.get("questions", raw_co1)
+        status_map = {q["id"]: "VERIFIED" for q in co1_qs}
+
+        collection = export_canonical_data(co1_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 80)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "1 Corintios")
+        self.assertTrue(validate_runtime_collection(collection))
+
+    def test_export_2corinthians_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de 2 Corintios al formato runtime."""
+        co2_path = REPO_ROOT / "tools" / "bible_extractor" / "2corinthians-master-input.json"
+        if not co2_path.exists():
+            self.skipTest("2corinthians-master-input.json no encontrado")
+        raw_co2 = json.loads(co2_path.read_text(encoding="utf-8"))
+        co2_qs = raw_co2.get("questions", raw_co2)
+        status_map = {q["id"]: "VERIFIED" for q in co2_qs}
+
+        collection = export_canonical_data(co2_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 65)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "2 Corintios")
+        self.assertTrue(validate_runtime_collection(collection))
+
+    def test_export_galatians_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de Gálatas al formato runtime."""
+        gal_path = REPO_ROOT / "tools" / "bible_extractor" / "galatians-master-input.json"
+        if not gal_path.exists():
+            self.skipTest("galatians-master-input.json no encontrado")
+        raw_gal = json.loads(gal_path.read_text(encoding="utf-8"))
+        gal_qs = raw_gal.get("questions", raw_gal)
+        status_map = {q["id"]: "VERIFIED" for q in gal_qs}
+
+        collection = export_canonical_data(gal_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 36)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Gálatas")
+        self.assertTrue(validate_runtime_collection(collection))
+
+    def test_export_ephesians_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de Efesios al formato runtime."""
+        efe_path = REPO_ROOT / "tools" / "bible_extractor" / "ephesians-master-input.json"
+        if not efe_path.exists():
+            self.skipTest("ephesians-master-input.json no encontrado")
+        raw_efe = json.loads(efe_path.read_text(encoding="utf-8"))
+        efe_qs = raw_efe.get("questions", raw_efe)
+        status_map = {q["id"]: "VERIFIED" for q in efe_qs}
+
+        collection = export_canonical_data(efe_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 36)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Efesios")
+        self.assertTrue(validate_runtime_collection(collection))
+
+    def test_export_philippians_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de Filipenses al formato runtime."""
+        fil_path = REPO_ROOT / "tools" / "bible_extractor" / "philippians-master-input.json"
+        if not fil_path.exists():
+            self.skipTest("philippians-master-input.json no encontrado")
+        raw_fil = json.loads(fil_path.read_text(encoding="utf-8"))
+        fil_qs = raw_fil.get("questions", raw_fil)
+        status_map = {q["id"]: "VERIFIED" for q in fil_qs}
+
+        collection = export_canonical_data(fil_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 24)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Filipenses")
+        self.assertTrue(validate_runtime_collection(collection))
+
+    def test_export_colossians_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de Colosenses al formato runtime."""
+        col_path = REPO_ROOT / "tools" / "bible_extractor" / "colossians-master-input.json"
+        if not col_path.exists():
+            self.skipTest("colossians-master-input.json no encontrado")
+        raw_col = json.loads(col_path.read_text(encoding="utf-8"))
+        col_qs = raw_col.get("questions", raw_col)
+        status_map = {q["id"]: "VERIFIED" for q in col_qs}
+
         collection = export_canonical_data(col_qs, audit_status_map=status_map)
         self.assertEqual(collection["totalQuestions"], 24)
         for q in collection["questions"]:
@@ -631,6 +826,36 @@ class TestRuntimeExport(unittest.TestCase):
         # Verify MC questions have exactly 4 options A/B/C/D
         mc_qs = [q for q in collection["questions"] if q["questionType"] == "MULTIPLE_CHOICE"]
         self.assertEqual(len(mc_qs), 25)
+        for q in mc_qs:
+            self.assertEqual(len(q["options"]), 4)
+            self.assertEqual([o["id"] for o in q["options"]], ["A", "B", "C", "D"])
+
+    def test_export_2thessalonians_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de 2 Tesalonicenses al formato runtime."""
+        ts_path = REPO_ROOT / "tools" / "bible_extractor" / "2thessalonians-master-input.json"
+        if not ts_path.exists():
+            self.skipTest("2thessalonians-master-input.json no encontrado")
+        raw_ts = json.loads(ts_path.read_text(encoding="utf-8"))
+        ts_qs = raw_ts.get("questions", raw_ts)
+        status_map = {q["id"]: "VERIFIED" for q in ts_qs}
+
+        collection = export_canonical_data(ts_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 18)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "2 Tesalonicenses")
+        self.assertTrue(validate_runtime_collection(collection))
+
+        # Verify TF questions have exactly 2 options A/B
+        tf_qs = [q for q in collection["questions"] if q["questionType"] == "TRUE_FALSE"]
+        self.assertEqual(len(tf_qs), 3)
+        for q in tf_qs:
+            self.assertEqual(len(q["options"]), 2)
+            self.assertEqual([o["id"] for o in q["options"]], ["A", "B"])
+
+        # Verify MC questions have exactly 4 options A/B/C/D
+        mc_qs = [q for q in collection["questions"] if q["questionType"] == "MULTIPLE_CHOICE"]
+        self.assertEqual(len(mc_qs), 15)
         for q in mc_qs:
             self.assertEqual(len(q["options"]), 4)
             self.assertEqual([o["id"] for o in q["options"]], ["A", "B", "C", "D"])

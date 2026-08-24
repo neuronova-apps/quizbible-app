@@ -994,6 +994,24 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "filipos", "judea", "jerusalen", "jerusalén", "roma"
         },
     },
+    "2thessalonians": {
+        "canonical_name": "2 Tesalonicenses",
+        "api_name": "2Tesalonicenses",
+        "aliases": {
+            "2 tesalonicenses", "2tesalonicenses", "2 thessalonians", "2thessalonians",
+            "2 thess", "2ts", "segunda de tesalonicenses",
+            "segunda carta a los tesalonicenses"
+        },
+        "total_chapters": 3,
+        "blocks": [
+            (1, 3, "2thessalonians-01-03.json"),
+        ],
+        "default_output_dir": "build/audit/2thessalonians",
+        "ambient_places": {
+            "tesalonica", "tesalónica", "macedonia", "atenas", "corinto", "berea",
+            "filipos", "judea", "jerusalen", "jerusalén", "roma"
+        },
+    },
 }
 
 STOPWORDS = {
