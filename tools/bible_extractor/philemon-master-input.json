@@ -1,0 +1,205 @@
+{
+  "source": "Quiz Bible master bank - Filemón",
+  "version": "RVR1960",
+  "book": "Filemón",
+  "total_questions": 6,
+  "questions": [
+    {
+      "id": "NQB-NT-FLM-0001",
+      "book": "Filemón",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 3,
+      "reference": "Filemón 1:1-3",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Saludo y comunidad doméstica",
+      "characters": [
+        "Pablo",
+        "Timoteo",
+        "Filemón",
+        "Apia",
+        "Arquipo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿A quiénes incluye Pablo en el saludo inicial junto con Filemón?",
+      "opcion_a": "A Apia, a Arquipo y a la iglesia que se reúne en su casa",
+      "opcion_b": "A los gobernadores de la provincia y a sus soldados",
+      "opcion_c": "Solo a Timoteo y a ningún miembro de la comunidad",
+      "opcion_d": "A sacerdotes del templo de Jerusalén",
+      "correct_option": "A",
+      "correct_answer": "A Apia, a Arquipo y a la iglesia que se reúne en su casa",
+      "explanation": "El saludo nombra a Filemón, Apia, Arquipo y a la iglesia que se reúne en una casa. El texto no exige definir vínculos familiares entre ellos que la carta no explica.",
+      "additional_references": [
+        "Colosenses 4:17"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FLM-0002",
+      "book": "Filemón",
+      "chapter": 1,
+      "verse_start": 4,
+      "verse_end": 7,
+      "reference": "Filemón 1:4-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Fe, amor y consuelo comunitario",
+      "characters": [
+        "Filemón"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué motivo de alegría destaca Pablo al hablar del amor y la fe de su destinatario?",
+      "opcion_a": "Que el amor mostrado ha dado consuelo y ha confortado el corazón de otros creyentes",
+      "opcion_b": "Que ha obtenido autoridad política sobre la ciudad",
+      "opcion_c": "Que ha dejado de relacionarse con personas necesitadas",
+      "opcion_d": "Que sus bienes materiales demuestran una fe superior",
+      "correct_option": "A",
+      "correct_answer": "Que el amor mostrado ha dado consuelo y ha confortado el corazón de otros creyentes",
+      "explanation": "Pablo relaciona el amor y la fe con un efecto concreto de consuelo y fortalecimiento para otros. No presenta riqueza, estatus o poder como prueba de superioridad espiritual.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FLM-0003",
+      "book": "Filemón",
+      "chapter": 1,
+      "verse_start": 8,
+      "verse_end": 16,
+      "reference": "Filemón 1:8-16",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Apelación por Onésimo y relación fraterna",
+      "characters": [
+        "Pablo",
+        "Filemón",
+        "Onésimo"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué enfoque adopta Pablo al interceder por Onésimo?",
+      "opcion_a": "Prefiere apelar por amor y pide que sea recibido ya no solo como esclavo, sino como hermano amado",
+      "opcion_b": "Ordena usar la fuerza para obligarlo a regresar",
+      "opcion_c": "Declara que toda forma de esclavitud debe restaurarse",
+      "opcion_d": "Pide castigarlo públicamente para dar ejemplo",
+      "correct_option": "A",
+      "correct_answer": "Prefiere apelar por amor y pide que sea recibido ya no solo como esclavo, sino como hermano amado",
+      "explanation": "La carta formula una apelación personal y redefine la relación en términos fraternales. Este pasaje no debe usarse para legitimar esclavitud, trata, trabajo forzado, castigo corporal o coerción moderna.",
+      "additional_references": [
+        "Colosenses 4:9"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FLM-0004",
+      "book": "Filemón",
+      "chapter": 1,
+      "verse_start": 17,
+      "verse_end": 20,
+      "reference": "Filemón 1:17-20",
+      "category": "NT_GENERAL",
+      "subcategory": "Recepción, deuda y responsabilidad",
+      "characters": [
+        "Pablo",
+        "Filemón",
+        "Onésimo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ofrece Pablo si Onésimo ha causado algún perjuicio o tiene alguna deuda?",
+      "opcion_a": "Que se cargue a su cuenta, expresando su disposición a responder por ello",
+      "opcion_b": "Que la deuda se cobre mediante violencia",
+      "opcion_c": "Que se presuma automáticamente que Onésimo cometió un delito",
+      "opcion_d": "Que toda deuda económica quede anulada sin acuerdo entre las partes",
+      "correct_option": "A",
+      "correct_answer": "Que se cargue a su cuenta, expresando su disposición a responder por ello",
+      "explanation": "Pablo ofrece asumir la obligación si existe perjuicio o deuda. El texto no permite afirmar automáticamente robo u otro delito, ni funciona como una regla general para resolver cualquier deuda moderna.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FLM-0005",
+      "book": "Filemón",
+      "chapter": 1,
+      "verse_start": 21,
+      "verse_end": 22,
+      "reference": "Filemón 1:21-22",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Confianza, oración y hospedaje",
+      "characters": [
+        "Pablo",
+        "Filemón"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué petición práctica añade Pablo al expresar confianza en la respuesta de Filemón?",
+      "opcion_a": "Que le prepare alojamiento porque espera poder visitarlo gracias a las oraciones de la comunidad",
+      "opcion_b": "Que venda su casa y entregue todo el dinero",
+      "opcion_c": "Que abandone sus responsabilidades para acompañarlo de inmediato",
+      "opcion_d": "Que organice una campaña política para conseguir su liberación",
+      "correct_option": "A",
+      "correct_answer": "Que le prepare alojamiento porque espera poder visitarlo gracias a las oraciones de la comunidad",
+      "explanation": "Pablo pide que se prepare alojamiento ante la esperanza de una futura visita. La petición no implica derecho ilimitado sobre bienes ajenos ni obligación de descuidar otras responsabilidades.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-FLM-0006",
+      "book": "Filemón",
+      "chapter": 1,
+      "verse_start": 23,
+      "verse_end": 25,
+      "reference": "Filemón 1:23-25",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Saludos de colaboradores",
+      "characters": [
+        "Epafras",
+        "Marcos",
+        "Aristarco",
+        "Demas",
+        "Lucas"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo cierra la carta nombrando únicamente a Epafras y no menciona a otros colaboradores",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. En el cierre también aparecen Marcos, Aristarco, Demas y Lucas entre quienes envían saludos.",
+      "additional_references": [
+        "Colosenses 4:10-14"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}

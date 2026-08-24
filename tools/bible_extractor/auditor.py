@@ -1062,6 +1062,23 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "creta", "nicopolis", "nicópolis", "dalmacia"
         },
     },
+    "philemon": {
+        "canonical_name": "Filemón",
+        "api_name": "Filemon",
+        "aliases": {
+            "filemon", "filemón", "philemon", "phlm", "flm",
+            "epistola a filemon", "epístola a filemón",
+            "carta a filemon", "carta a filemón"
+        },
+        "total_chapters": 1,
+        "blocks": [
+            (1, 1, "philemon-01-01.json"),
+        ],
+        "default_output_dir": "build/audit/philemon",
+        "ambient_places": {
+            "roma", "colosas"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -1214,7 +1231,7 @@ BIBLE_PERSONAJES = {
     "epafrodito", "evodia", "sintique", "síntique", "clemente",
     "aristarco", "arquipo", "demas", "epafras", "ninfa", "justo", "himeneo",
     "loida", "eunice", "figelo", "hermogenes", "hermógenes", "onesiforo", "onesíforo", "fileto", "janes", "jambres",
-    "crescente", "carpo", "pudente", "lino", "claudia", "artemas", "zenas",
+    "crescente", "carpo", "pudente", "lino", "claudia", "artemas", "zenas", "apia",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",

@@ -4,6 +4,7 @@ on:
   push:
     branches: [rvr1960-audit, main, audit-genesis-full-rvr1960]
     paths:
+      - "tools/bible_extractor/philemon-master-input.json"
       - "tools/bible_extractor/titus-master-input.json"
       - "tools/bible_extractor/2timothy-master-input.json"
       - "tools/bible_extractor/1timothy-master-input.json"
@@ -68,6 +69,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - "tools/bible_extractor/philemon-master-input.json"
       - "tools/bible_extractor/titus-master-input.json"
       - "tools/bible_extractor/2timothy-master-input.json"
       - "tools/bible_extractor/1timothy-master-input.json"
@@ -134,7 +136,7 @@ on:
       input_file:
         description: "Ruta del archivo de entrada de preguntas"
         required: true
-        default: "tools/bible_extractor/titus-master-input.json"
+        default: "tools/bible_extractor/philemon-master-input.json"
         type: string
 
 permissions:
@@ -163,7 +165,9 @@ jobs:
         run: |
           INPUT_FILE="${{ inputs.input_file || '' }}"
           if [ -z "$INPUT_FILE" ]; then
-            if [ -f "tools/bible_extractor/titus-master-input.json" ]; then
+            if [ -f "tools/bible_extractor/philemon-master-input.json" ]; then
+              INPUT_FILE="tools/bible_extractor/philemon-master-input.json"
+            elif [ -f "tools/bible_extractor/titus-master-input.json" ]; then
               INPUT_FILE="tools/bible_extractor/titus-master-input.json"
             elif [ -f "tools/bible_extractor/2timothy-master-input.json" ]; then
               INPUT_FILE="tools/bible_extractor/2timothy-master-input.json"
@@ -283,7 +287,10 @@ jobs:
             fi
           fi
 
-          if [[ "$INPUT_FILE" == *"titus"* ]] || [[ "$INPUT_FILE" == *"tito"* ]] || [[ "$INPUT_FILE" == *"tit"* ]]; then
+          if [[ "$INPUT_FILE" == *"philemon"* ]] || [[ "$INPUT_FILE" == *"filemon"* ]] || [[ "$INPUT_FILE" == *"filemón"* ]] || [[ "$INPUT_FILE" == *"flm"* ]]; then
+            OUTPUT_DIR="build/audit/philemon"
+            ARTIFACT_NAME="auditoria-filemon-rvr1960-${{ github.run_number }}"
+          elif [[ "$INPUT_FILE" == *"titus"* ]] || [[ "$INPUT_FILE" == *"tito"* ]] || [[ "$INPUT_FILE" == *"tit"* ]]; then
             OUTPUT_DIR="build/audit/titus"
             ARTIFACT_NAME="auditoria-tito-rvr1960-${{ github.run_number }}"
           elif [[ "$INPUT_FILE" == *"2timothy"* ]] || [[ "$INPUT_FILE" == *"2timoteo"* ]] || [[ "$INPUT_FILE" == *"2ti"* ]]; then
