@@ -1,0 +1,70 @@
+name: Auditoría Global del Nuevo Testamento
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - audit-genesis-full-rvr1960
+    paths:
+      - 'tools/bible_extractor/audit_nt_global.py'
+      - 'tools/bible_extractor/test_audit_nt_global.py'
+      - 'tools/bible_extractor/nt-global-manifest-v1.json'
+      - 'tools/bible_extractor/nt-global-audit-status-map-v1.json'
+      - '.github/workflows/audit-nt-global.yml'
+  pull_request:
+    branches:
+      - audit-genesis-full-rvr1960
+    paths:
+      - 'tools/bible_extractor/audit_nt_global.py'
+      - 'tools/bible_extractor/test_audit_nt_global.py'
+      - 'tools/bible_extractor/nt-global-manifest-v1.json'
+      - 'tools/bible_extractor/nt-global-audit-status-map-v1.json'
+      - '.github/workflows/audit-nt-global.yml'
+
+jobs:
+  audit-nt-global:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install requests flake8 mypy pytest beautifulsoup4
+
+      - name: Ejecutar verificación de calidad web y SEO
+        run: python scripts/quality_check.py
+
+      - name: Ejecutar batería de pruebas de auditor individual
+        run: python tools/bible_extractor/test_auditor.py
+
+      - name: Ejecutar batería de pruebas de auditor global AT
+        run: python tools/bible_extractor/test_audit_ot_global.py
+
+      - name: Ejecutar batería de pruebas de auditor global NT
+        run: python tools/bible_extractor/test_audit_nt_global.py
+
+      - name: Ejecutar batería de pruebas de exportación runtime
+        run: python tools/runtime_export/test_export_runtime.py
+
+      - name: Ejecutar Auditoría Global del Nuevo Testamento
+        run: python tools/bible_extractor/audit_nt_global.py --output-dir build/audit/nt-global
+
+      - name: Subir artefacto de auditoría global NT
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-global-nt-rvr1960-${{ github.run_number }}
+          path: build/audit/nt-global/
+          if-no-files-found: error
+          retention-days: 90
