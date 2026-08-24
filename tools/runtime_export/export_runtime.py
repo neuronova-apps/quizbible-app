@@ -480,7 +480,7 @@ def export_files_to_runtime(
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     serialized = json.dumps(collection, indent=2, ensure_ascii=False) + "\n"
-    output_path.write_text(serialized, encoding="utf-8")
+    output_path.write_bytes(serialized.encode("utf-8"))
 
     sha256_hash = hashlib.sha256(serialized.encode("utf-8")).hexdigest()
     return collection, sha256_hash

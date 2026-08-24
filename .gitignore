@@ -21,4 +21,7 @@ Thumbs.db
 # Android / Gradle local
 .gradle/
 local.properties
+app/build/
+gradle_dist/
+.jdk/
 

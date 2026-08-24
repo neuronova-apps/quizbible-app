@@ -207,7 +207,7 @@ def run_production_export(
         "deterministic_export": True,
     }
 
-    manifest_path.write_text(json.dumps(prod_manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    manifest_path.write_bytes((json.dumps(prod_manifest, indent=2, ensure_ascii=False) + "\n").encode("utf-8"))
 
     print("\n" + "=" * 80)
     print("EXPORTACIÓN DE PRODUCCIÓN FINALIZADA CON ÉXITO")

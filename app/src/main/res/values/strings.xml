@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Quiz Bible</string>
+    <string name="tagline">Aprende y pon a prueba tu conocimiento de la Biblia</string>
+    <string name="btn_play">Jugar</string>
+    <string name="btn_progress">Progreso</string>
+    <string name="btn_settings">Configuración</string>
+</resources>
