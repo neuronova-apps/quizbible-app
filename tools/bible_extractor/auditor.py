@@ -1127,6 +1127,20 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "ponto", "galacia", "capadocia", "asia", "bitinia", "babilonia"
         },
     },
+    "2peter": {
+        "canonical_name": "2 Pedro",
+        "api_name": "2 Pedro",
+        "aliases": {
+            "2 pedro", "2pedro", "2 peter", "2peter", "2 pe", "2pe",
+            "segunda de pedro", "segunda carta de pedro", "2ª pedro", "2ra pedro"
+        },
+        "total_chapters": 3,
+        "blocks": [
+            (1, 3, "2peter-01-03.json"),
+        ],
+        "default_output_dir": "build/audit/2peter",
+        "ambient_places": set(),
+    },
 }
 
 STOPWORDS = {

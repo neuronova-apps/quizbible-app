@@ -4,6 +4,7 @@ on:
   push:
     branches: [rvr1960-audit, main, audit-genesis-full-rvr1960]
     paths:
+      - "tools/bible_extractor/2peter-master-input.json"
       - "tools/bible_extractor/1peter-master-input.json"
       - "tools/bible_extractor/james-master-input.json"
       - "tools/bible_extractor/hebrews-master-input.json"
@@ -72,6 +73,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - "tools/bible_extractor/2peter-master-input.json"
       - "tools/bible_extractor/1peter-master-input.json"
       - "tools/bible_extractor/james-master-input.json"
       - "tools/bible_extractor/hebrews-master-input.json"
@@ -142,7 +144,7 @@ on:
       input_file:
         description: "Ruta del archivo de entrada de preguntas"
         required: true
-        default: "tools/bible_extractor/1peter-master-input.json"
+        default: "tools/bible_extractor/2peter-master-input.json"
         type: string
 
 permissions:
@@ -183,7 +185,7 @@ jobs:
           extractor_dir = repo_root / "tools" / "bible_extractor"
 
           priority_order = [
-              "1peter", "james", "hebrews", "philemon", "titus", "2timothy", "1timothy",
+              "2peter", "1peter", "james", "hebrews", "philemon", "titus", "2timothy", "1timothy",
               "2thessalonians", "1thessalonians", "colossians", "philippians",
               "ephesians", "galatians", "2corinthians", "1corinthians", "romans",
               "acts", "john", "luke", "mark", "matthew",

@@ -103,6 +103,7 @@ PHILEMON_PATH = Path(__file__).parent / "philemon-master-input.json"
 HEBREWS_PATH = Path(__file__).parent / "hebrews-master-input.json"
 JAMES_PATH = Path(__file__).parent / "james-master-input.json"
 PETER1_PATH = Path(__file__).parent / "1peter-master-input.json"
+PETER2_PATH = Path(__file__).parent / "2peter-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -464,6 +465,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.peter1_questions = {q["id"]: q for q in (raw_1pe.get("questions", []) if isinstance(raw_1pe, dict) else raw_1pe)}
         else:
             cls.peter1_questions = {}
+
+        if PETER2_PATH.exists():
+            raw_2pe = json.loads(PETER2_PATH.read_text(encoding="utf-8"))
+            cls.peter2_questions = {q["id"]: q for q in (raw_2pe.get("questions", []) if isinstance(raw_2pe, dict) else raw_2pe)}
+        else:
+            cls.peter2_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -7793,6 +7800,206 @@ class TestAuditorCanonical(unittest.TestCase):
             for pq in prior_questions:
                 self.assertNotIn(pq["question"].strip(), pe1_texts,
                                  f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y 1 Pedro")
+
+    # --- PRUEBAS ESPECÍFICAS DE 2 PEDRO ---
+
+    def get_2peter_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.peter2_questions, f"ID '{qid}' no encontrado en 2peter-master-input.json")
+        return copy.deepcopy(self.peter2_questions[qid])
+
+    def test_detect_book_key_2peter(self) -> None:
+        """Verifica detección de book_key para 2 Pedro y sus variantes."""
+        for alias in ["2 Pedro", "2pedro", "2 Peter", "2peter", "2 pe", "2pe", "Segunda de Pedro", "Segunda carta de Pedro", "2ª Pedro", "2ra Pedro"]:
+            spec = {"questions": [{"id": "NQB-NT-2PE-0001", "book": alias}]}
+            self.assertEqual(detect_book_key(spec), "2peter",
+                             f"detect_book_key failed for alias: {alias}")
+
+    def test_2peter_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de 2 Pedro en BOOK_CONFIGS."""
+        self.assertIn("2peter", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["2peter"]
+        self.assertEqual(cfg["canonical_name"], "2 Pedro")
+        self.assertEqual(cfg["api_name"], "2 Pedro")
+        self.assertEqual(cfg["total_chapters"], 3)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("2 pedro", cfg["aliases"])
+        self.assertIn("2peter", cfg["aliases"])
+        self.assertIn("2pe", cfg["aliases"])
+        self.assertIn("2 pe", cfg["aliases"])
+
+    def test_2peter_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de 2 Pedro."""
+        if not self.peter2_questions:
+            self.skipTest("2peter-master-input.json no disponible")
+        self.assertEqual(len(self.peter2_questions), 18)
+
+        # 6 preguntas en cada uno de los 3 capítulos
+        ch_counts = collections.Counter(q["chapter"] for q in self.peter2_questions.values())
+        self.assertEqual(len(ch_counts), 3)
+        for ch in range(1, 4):
+            self.assertEqual(ch_counts[ch], 6, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 6")
+
+        # IDs: NQB-NT-2PE-0001 a NQB-NT-2PE-0018
+        ids = sorted(self.peter2_questions.keys())
+        self.assertEqual(ids[0], "NQB-NT-2PE-0001")
+        self.assertEqual(ids[-1], "NQB-NT-2PE-0018")
+        self.assertEqual(len(set(ids)), 18)
+
+        # Dificultad: Básico=5, Intermedio=6, Avanzado=5, Experto=2
+        diff_counts = collections.Counter(q["difficulty"] for q in self.peter2_questions.values())
+        self.assertEqual(diff_counts["Básico"], 5)
+        self.assertEqual(diff_counts["Intermedio"], 6)
+        self.assertEqual(diff_counts["Avanzado"], 5)
+        self.assertEqual(diff_counts["Experto"], 2)
+
+        # Tipos: 15 MC, 3 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.peter2_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 15)
+        self.assertEqual(type_counts["TRUE_FALSE"], 3)
+
+        tf_ids = sorted(q["id"] for q in self.peter2_questions.values() if q.get("question_type") == "TRUE_FALSE")
+        expected_tf = sorted([f"NQB-NT-2PE-{i:04d}" for i in [6, 12, 18]])
+        self.assertEqual(tf_ids, expected_tf)
+
+    def test_2peter_categories(self) -> None:
+        """Verifica categorías sin categorías de Evangelios en 2 Pedro."""
+        if not self.peter2_questions:
+            self.skipTest("2peter-master-input.json no disponible")
+        cat_counts = collections.Counter(q["category"] for q in self.peter2_questions.values())
+        self.assertEqual(cat_counts["NT_GENERAL"], 14)
+        self.assertEqual(cat_counts["PERSONAJES_BIBLICOS"], 4)
+        for forbidden in ["JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"]:
+            self.assertEqual(cat_counts.get(forbidden, 0), 0, f"Categoría no permitida: {forbidden}")
+
+    def test_2peter_additional_references(self) -> None:
+        """Verifica las 6 preguntas con 7 referencias individuales en 2 Pedro."""
+        if not self.peter2_questions:
+            self.skipTest("2peter-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-2PE-0005": ["Mateo 17:1-8"],
+            "NQB-NT-2PE-0006": ["2 Timoteo 3:16"],
+            "NQB-NT-2PE-0008": ["Génesis 6:9-22", "Génesis 19:15-29"],
+            "NQB-NT-2PE-0009": ["Números 22:21-35"],
+            "NQB-NT-2PE-0014": ["Génesis 6:5-9:17"],
+            "NQB-NT-2PE-0015": ["Salmos 90:4"],
+        }
+        found_add_refs = {
+            qid: q["additional_references"]
+            for qid, q in self.peter2_questions.items()
+            if q.get("additional_references")
+        }
+        self.assertEqual(len(found_add_refs), 6)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 7)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_2peter_modes(self) -> None:
+        """Verifica la asignación de modos en 2 Pedro."""
+        if not self.peter2_questions:
+            self.skipTest("2peter-master-input.json no disponible")
+        mode_counts = collections.defaultdict(int)
+        for q in self.peter2_questions.values():
+            for m in q.get("eligible_modes", []):
+                mode_counts[m] += 1
+        self.assertEqual(mode_counts["NT"], 18)
+        self.assertEqual(mode_counts["AMBOS"], 18)
+        self.assertEqual(mode_counts["PERSONAJES_NT"], 4)
+        self.assertEqual(mode_counts["PERSONAJES_AMBOS"], 4)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_NT"], 3)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_AMBOS"], 3)
+
+    def test_2peter_id_reference_integrity(self) -> None:
+        """Verifica consistencia de IDs y referencias en 2 Pedro."""
+        if not self.peter2_questions:
+            self.skipTest("2peter-master-input.json no disponible")
+        for qid, q in self.peter2_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_2peter_true_false_neutral_semantics(self) -> None:
+        """Verifica semántica neutral de TRUE_FALSE: 2PE0018 A=Verdadero/correct=A, otros 2 A=Falso/correct=A."""
+        if not self.peter2_questions:
+            self.skipTest("2peter-master-input.json no disponible")
+        for qid in ["NQB-NT-2PE-0006", "NQB-NT-2PE-0012"]:
+            q = self.get_2peter_question(qid)
+            self.assertEqual(q["opcion_a"].strip().lower(), "falso", f"{qid}: opcion_a debe ser Falso")
+            self.assertEqual(q["opcion_b"].strip().lower(), "verdadero", f"{qid}: opcion_b debe ser Verdadero")
+            self.assertEqual(q["correct_option"], "A", f"{qid}: correct_option debe ser A")
+            self.assertEqual(q["correct_answer"].strip().lower(), "falso", f"{qid}: correct_answer debe ser Falso")
+
+        # 2PE0018: A=Verdadero, B=Falso, correct_option=A, correct_answer=Verdadero
+        q18 = self.get_2peter_question("NQB-NT-2PE-0018")
+        self.assertEqual(q18["opcion_a"].strip().lower(), "verdadero", "2PE0018: opcion_a debe ser Verdadero")
+        self.assertEqual(q18["opcion_b"].strip().lower(), "falso", "2PE0018: opcion_b debe ser Falso")
+        self.assertEqual(q18["correct_option"], "A", "2PE0018: correct_option debe ser A")
+        self.assertEqual(q18["correct_answer"].strip().lower(), "verdadero", "2PE0018: correct_answer debe ser Verdadero")
+
+    def test_2peter_characters_and_epistolar_speaker(self) -> None:
+        """Verifica entidades y resolve_implicit_speaker para Pedro en 2 Pedro."""
+        from auditor import BIBLE_PERSONAJES, resolve_implicit_speaker
+        expected_chars = ["pedro", "noe", "lot", "balaam", "pablo", "simon"]
+        for p in expected_chars:
+            self.assertIn(p, BIBLE_PERSONAJES, f"Falta personaje: {p}")
+
+        verse_map = {
+            1: "Simón Pedro, siervo y apóstol de Jesucristo, a los que habéis alcanzado, por la justicia de nuestro Dios y Salvador Jesucristo, una fe igualmente preciosa que la nuestra:",
+            2: "Gracia y paz os sean multiplicadas, en el conocimiento de Dios y de nuestro Señor Jesús.",
+            3: "Como todas las cosas que pertenecen a la vida y a la piedad nos han sido dadas por su divino poder..."
+        }
+        passage_norm = "como todas las cosas que pertenecen a la vida y a la piedad nos han sido dadas por su divino poder"
+        resolved = resolve_implicit_speaker("pedro", passage_norm, verse_map, 3, ["Pedro"], book_key="2peter")
+        self.assertTrue(resolved, "Pedro debe resolverse como autor/remitente epistolar en 2 Pedro")
+
+    def test_2peter_no_duplicates_within(self) -> None:
+        """Verifica que no haya preguntas duplicadas internamente en 2 Pedro."""
+        if not self.peter2_questions:
+            self.skipTest("2peter-master-input.json no disponible")
+        questions_texts = [q["question"].strip() for q in self.peter2_questions.values()]
+        self.assertEqual(len(questions_texts), len(set(questions_texts)), "Duplicados detectados internamente")
+
+    def test_2peter_no_duplicates_cross_nt(self) -> None:
+        """Verifica que no haya preguntas duplicadas entre 2 Pedro y los 21 libros NT anteriores."""
+        if not self.peter2_questions:
+            self.skipTest("2peter-master-input.json no disponible")
+        pe2_texts = {q["question"].strip() for q in self.peter2_questions.values()}
+        prior_nt = [
+            PHILIPPIANS_PATH.parent / "matthew-master-input.json",
+            PHILIPPIANS_PATH.parent / "mark-master-input.json",
+            PHILIPPIANS_PATH.parent / "luke-master-input.json",
+            PHILIPPIANS_PATH.parent / "john-master-input.json",
+            PHILIPPIANS_PATH.parent / "acts-master-input.json",
+            PHILIPPIANS_PATH.parent / "romans-master-input.json",
+            PHILIPPIANS_PATH.parent / "1corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "galatians-master-input.json",
+            PHILIPPIANS_PATH.parent / "ephesians-master-input.json",
+            PHILIPPIANS_PATH.parent / "philippians-master-input.json",
+            PHILIPPIANS_PATH.parent / "colossians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "2timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "titus-master-input.json",
+            PHILIPPIANS_PATH.parent / "philemon-master-input.json",
+            PHILIPPIANS_PATH.parent / "hebrews-master-input.json",
+            PHILIPPIANS_PATH.parent / "james-master-input.json",
+            PHILIPPIANS_PATH.parent / "1peter-master-input.json",
+        ]
+        for prior_path in prior_nt:
+            if not prior_path.exists():
+                continue
+            prior_data = json.loads(prior_path.read_text(encoding="utf-8"))
+            prior_questions = prior_data.get("questions", []) if isinstance(prior_data, dict) else prior_data
+            for pq in prior_questions:
+                self.assertNotIn(pq["question"].strip(), pe2_texts,
+                                 f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y 2 Pedro")
 
 
 if __name__ == "__main__":
