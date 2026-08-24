@@ -14,6 +14,7 @@ import hashlib
 import json
 import random
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 from typing import Any
@@ -30,6 +31,7 @@ from tools.runtime_export.export_runtime import (
     export_canonical_data,
     export_files_to_runtime,
     export_question_to_runtime,
+    load_audit_status_map,
     normalize_difficulty,
     normalize_question_type,
     validate_runtime_collection,
@@ -1249,6 +1251,78 @@ class TestRuntimeExport(unittest.TestCase):
         for q in mc_qs:
             self.assertEqual(len(q["options"]), 4)
             self.assertEqual([o["id"] for o in q["options"]], ["A", "B", "C", "D"])
+
+
+
+    def test_global_bible_status_map_entries_format(self) -> None:
+        """Verifica la carga del status map global oficial de la Biblia (3847 QIDs)."""
+        status_map_file = REPO_ROOT / "tools" / "bible_extractor" / "bible-global-audit-status-map-v1.json"
+        self.assertTrue(status_map_file.exists(), "bible-global-audit-status-map-v1.json no encontrado")
+        loaded = load_audit_status_map(status_map_file, strict=True)
+        self.assertEqual(len(loaded), 3847)
+        self.assertEqual(sum(1 for s in loaded.values() if s == "VERIFIED"), 2486)
+        self.assertEqual(sum(1 for s in loaded.values() if s == "INCONCLUSIVE"), 1361)
+        self.assertEqual(sum(1 for s in loaded.values() if s == "REQUIRES_CORRECTION"), 0)
+
+    def test_missing_status_fails_export(self) -> None:
+        """Verifica Fail-Closed si una pregunta carece de estado de auditoría."""
+        sample_q = self.sample_canonical[0]
+        with self.assertRaises(ValueError):
+            export_canonical_data([sample_q], audit_status_map={})
+
+    def test_unknown_status_fails_export(self) -> None:
+        """Verifica Fail-Closed si una pregunta posee estado UNKNOWN en modo estricto de producción."""
+        sample_q = self.sample_canonical[0]
+        with self.assertRaises(ValueError):
+            export_canonical_data([sample_q], audit_status_map={sample_q["id"]: "UNKNOWN"})
+
+    def test_conflicting_status_fails_export(self) -> None:
+        """Verifica Fail-Closed si el mismo QID recibe estados contradictorios entre fuentes."""
+        sample_q = self.sample_canonical[0]
+        qid = sample_q["id"]
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            file_a = Path(tmp_dir) / "a.json"
+            file_b = Path(tmp_dir) / "b.json"
+            file_a.write_text(json.dumps({"entries": {qid: {"audit_status": "VERIFIED"}}}), encoding="utf-8")
+            file_b.write_text(json.dumps({"entries": {qid: {"audit_status": "INCONCLUSIVE"}}}), encoding="utf-8")
+
+            with self.assertRaises(ValueError) as ctx:
+                load_audit_status_map([file_a, file_b], strict=True)
+            self.assertIn("Conflicto de estado", str(ctx.exception))
+
+    def test_production_export_66_books_contract(self) -> None:
+        """Verifica la exportación de producción de los 66 libros y el contrato canónico completo."""
+        from tools.runtime_export.export_bible_production import run_production_export
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            out_json = Path(tmp_dir) / "quiz_bible_protestant_rvr1960_runtime_v1.json"
+            out_manifest = Path(tmp_dir) / "quiz_bible_protestant_rvr1960_runtime_v1.manifest.json"
+
+            col, sha, manifest = run_production_export(
+                output_path=out_json,
+                manifest_path=out_manifest,
+                generated_at="2026-08-24T00:00:00Z"
+            )
+
+            self.assertEqual(col["totalQuestions"], 3847)
+            self.assertEqual(len(col["questions"]), 3847)
+            self.assertEqual(manifest["total_books"], 66)
+            self.assertEqual(manifest["total_chapters"], 1189)
+            self.assertEqual(manifest["ot_questions"], 2620)
+            self.assertEqual(manifest["nt_questions"], 1227)
+            self.assertEqual(manifest["verified_count"], 2486)
+            self.assertEqual(manifest["inconclusive_count"], 1361)
+            self.assertEqual(manifest["requires_correction_count"], 0)
+            self.assertEqual(manifest["multiple_choice_count"], 3692)
+            self.assertEqual(manifest["true_false_count"], 155)
+            self.assertEqual(manifest["difficulty_counts"], {
+                "BASIC": 693,
+                "INTERMEDIATE": 1437,
+                "ADVANCED": 1243,
+                "EXPERT": 474
+            })
+            self.assertEqual(sha, "94c6b721ab0004b2a064e998530c2d46838c314f4aa41398c84dbd0ce8ef79d1")
+            self.assertTrue(validate_runtime_collection(col))
 
 
 if __name__ == "__main__":

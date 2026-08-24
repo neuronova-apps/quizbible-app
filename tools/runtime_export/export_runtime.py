@@ -59,7 +59,6 @@ OLD_TESTAMENT_BOOKS = {
     "sofonías", "sofonias", "hageo", "zacarías", "zacarias", "malaquías", "malaquias"
 }
 
-
 NEW_TESTAMENT_BOOKS = {
     "mateo", "matthew", "marcos", "mark", "lucas", "luke", "juan", "john",
     "hechos", "acts", "romanos", "romans", "1 corintios", "1corintios", "1corinthians",
@@ -129,21 +128,28 @@ def determine_testament(q: dict[str, Any]) -> str:
     )
 
 
-def normalize_audit_status(status_str: str) -> str:
+def normalize_audit_status(status_str: str, strict: bool = True) -> str:
     """Normaliza el estado de auditoría a la enumeración técnica de runtime (Fail-Closed)."""
     if not status_str:
         raise ValueError("Estado de auditoría vacío o no definido. Fail-closed: exportación rechazada.")
     st_upper = str(status_str).strip().upper()
     if st_upper in {"VERIFICADO", "VERIFIED", "PASS"}:
         return "VERIFIED"
-    if st_upper in {"NO_CONCLUYENTE", "INCONCLUSIVE", "UNKNOWN"}:
+    if st_upper in {"NO_CONCLUYENTE", "INCONCLUSIVE"}:
         return "INCONCLUSIVE"
     if st_upper in {"REQUIERE_CORRECCION", "REQUIRES_CORRECTION", "FAIL"}:
         return "REQUIRES_CORRECTION"
+    if st_upper == "UNKNOWN":
+        if strict:
+            raise ValueError(f"Estado de auditoría inválido 'UNKNOWN'. Fail-closed: exportación rechazada.")
+        return "INCONCLUSIVE"
     raise ValueError(f"Estado de auditoría inválido o no reconocido: '{status_str}'. Fail-closed: exportación rechazada.")
 
 
-def load_audit_status_map(sources: list[Path | str] | Path | str | None) -> dict[str, str]:
+def load_audit_status_map(
+    sources: list[Path | str] | Path | str | None,
+    strict: bool = True
+) -> dict[str, str]:
     """Carga de forma exhaustiva el mapa de estados de auditoría desde archivos o directorios de artefactos."""
     if not sources:
         return {}
@@ -151,6 +157,17 @@ def load_audit_status_map(sources: list[Path | str] | Path | str | None) -> dict
         sources = [sources]
 
     status_map: dict[str, str] = {}
+
+    def add_status(qid: str, st_raw: str, origin: str) -> None:
+        if not qid or not str(qid).strip():
+            return
+        qid_clean = str(qid).strip()
+        norm_st = normalize_audit_status(st_raw, strict=strict)
+        if qid_clean in status_map and status_map[qid_clean] != norm_st:
+            raise ValueError(
+                f"Conflicto de estado de auditoría para QID '{qid_clean}': '{status_map[qid_clean]}' vs '{norm_st}' en {origin}. Fail-closed: exportación rechazada."
+            )
+        status_map[qid_clean] = norm_st
 
     def process_file(p: Path) -> None:
         try:
@@ -160,48 +177,53 @@ def load_audit_status_map(sources: list[Path | str] | Path | str | None) -> dict
         if not isinstance(data, dict):
             return
 
-        # 1. results list (bloques de auditoría)
+        # 0. entries dict (formato canónico de status maps globales v1)
+        entries = data.get("entries")
+        if isinstance(entries, dict):
+            for qid, entry in entries.items():
+                if not str(qid).startswith("NQB-"):
+                    continue
+                if isinstance(entry, dict):
+                    st = entry.get("audit_status") or entry.get("estado")
+                else:
+                    st = str(entry)
+                if not st:
+                    raise ValueError(f"Falta audit_status para QID '{qid}' en status map '{p}'. Fail-closed.")
+                add_status(qid, st, f"{p} (entries)")
+
+        # 1. results list (bloques de auditoría individual)
         for item in data.get("results", []):
             if isinstance(item, dict) and "id" in item:
-                try:
-                    status_map[item["id"]] = normalize_audit_status(item.get("estado", ""))
-                except ValueError:
-                    pass
+                st = item.get("estado") or item.get("audit_status", "")
+                if st:
+                    add_status(item["id"], st, f"{p} (results)")
 
         # 2. evaluaciones dict
         if "evaluaciones" in data and isinstance(data["evaluaciones"], dict):
             for qid, ev in data["evaluaciones"].items():
-                st = ev.get("estado") if isinstance(ev, dict) else str(ev)
-                try:
-                    status_map[qid] = normalize_audit_status(st)
-                except ValueError:
-                    pass
+                st = ev.get("estado") or ev.get("audit_status") if isinstance(ev, dict) else str(ev)
+                if st:
+                    add_status(qid, st, f"{p} (evaluaciones)")
 
         # 3. requires_correction_items
         for item in data.get("requires_correction_items", []):
             if isinstance(item, dict) and "id" in item:
-                status_map[item["id"]] = "REQUIRES_CORRECTION"
+                add_status(item["id"], "REQUIRES_CORRECTION", f"{p} (requires_correction_items)")
 
         # 4. inconclusive_items
         for item in data.get("inconclusive_items", []):
             if isinstance(item, dict) and "id" in item:
-                status_map[item["id"]] = "INCONCLUSIVE"
+                add_status(item["id"], "INCONCLUSIVE", f"{p} (inconclusive_items)")
 
         # 5. revision-manual-pendiente
         for item in data.get("pendientes", data.get("items", [])):
             if isinstance(item, dict) and "id" in item:
-                try:
-                    status_map[item["id"]] = normalize_audit_status(item.get("estado", "INCONCLUSIVE"))
-                except ValueError:
-                    status_map[item["id"]] = "INCONCLUSIVE"
+                add_status(item["id"], item.get("estado", "INCONCLUSIVE"), f"{p} (pendientes)")
 
         # 6. Mapeo directo {qid: status}
         for k, v in data.items():
             if k.startswith("NQB-") and isinstance(v, str):
-                try:
-                    status_map[k] = normalize_audit_status(v)
-                except ValueError:
-                    pass
+                add_status(k, v, f"{p} (direct key)")
 
     for src in sources:
         sp = Path(src)
@@ -254,7 +276,7 @@ def export_question_to_runtime(
 
     characters = [str(c).strip() for c in canonical_q.get("characters", [])]
     difficulty = normalize_difficulty(str(canonical_q.get("difficulty", "Intermedio")))
-    question_type = normalize_question_type(str(canonical_q.get("question_type", "Selección múltiple")))
+    question_type = normalize_question_type(str(canonical_q.get("question_type", canonical_q.get("type", "Selección múltiple"))))
     prompt = str(canonical_q.get("question", "")).strip()
 
     opcion_a = str(canonical_q.get("opcion_a", "")).strip()
@@ -292,7 +314,7 @@ def export_question_to_runtime(
     explanation = str(canonical_q.get("explanation", "")).strip()
     eligible_modes = [str(m).strip() for m in canonical_q.get("eligible_modes", ["AT", "AMBOS"])]
 
-    validated_audit_status = normalize_audit_status(audit_status)
+    validated_audit_status = normalize_audit_status(audit_status, strict=True)
 
     runtime_obj: dict[str, Any] = {
         "id": qid,
@@ -390,9 +412,13 @@ def export_canonical_data(
     """Transforma una lista de preguntas canónicas a una colección runtime oficial (Fail-Closed)."""
     final_status_map: dict[str, str] = {}
     if audit_sources:
-        final_status_map.update(load_audit_status_map(audit_sources))
+        final_status_map.update(load_audit_status_map(audit_sources, strict=True))
     if audit_status_map:
-        final_status_map.update({k: normalize_audit_status(v) for k, v in audit_status_map.items()})
+        for k, v in audit_status_map.items():
+            norm_st = normalize_audit_status(v, strict=True)
+            if k in final_status_map and final_status_map[k] != norm_st:
+                raise ValueError(f"Conflicto de estado de auditoría para QID '{k}': '{final_status_map[k]}' vs '{norm_st}'. Fail-closed.")
+            final_status_map[k] = norm_st
 
     runtime_questions: list[dict[str, Any]] = []
     filter_set = set(filter_ids) if filter_ids is not None else None

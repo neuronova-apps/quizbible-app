@@ -1,0 +1,76 @@
+name: Exportación Runtime de Producción Quiz Bible
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - audit-genesis-full-rvr1960
+    paths:
+      - 'tools/runtime_export/**'
+      - 'tools/bible_extractor/bible-bank-freeze-v1.json'
+      - 'tools/bible_extractor/bible-global-manifest-v1.json'
+      - 'tools/bible_extractor/bible-global-audit-status-map-v1.json'
+      - '.github/workflows/export-bible-runtime.yml'
+  pull_request:
+    branches:
+      - audit-genesis-full-rvr1960
+    paths:
+      - 'tools/runtime_export/**'
+      - 'tools/bible_extractor/bible-bank-freeze-v1.json'
+      - 'tools/bible_extractor/bible-global-manifest-v1.json'
+      - 'tools/bible_extractor/bible-global-audit-status-map-v1.json'
+      - '.github/workflows/export-bible-runtime.yml'
+
+jobs:
+  export-runtime:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install requests flake8 mypy pytest beautifulsoup4 jsonschema
+
+      - name: Ejecutar verificación de calidad web y SEO
+        run: python scripts/quality_check.py
+
+      - name: Ejecutar batería de pruebas de auditor individual
+        run: python tools/bible_extractor/test_auditor.py
+
+      - name: Ejecutar batería de pruebas de auditor global AT
+        run: python tools/bible_extractor/test_audit_ot_global.py
+
+      - name: Ejecutar batería de pruebas de auditor global NT
+        run: python tools/bible_extractor/test_audit_nt_global.py
+
+      - name: Ejecutar batería de pruebas de auditor global Biblia (66 libros)
+        run: python tools/bible_extractor/test_audit_bible_global.py
+
+      - name: Ejecutar batería de pruebas de exportación runtime
+        run: python tools/runtime_export/test_export_runtime.py
+
+      - name: Ejecutar exportación runtime de producción
+        run: python tools/runtime_export/export_bible_production.py
+
+      - name: Subir artefacto de runtime de producción
+        uses: actions/upload-artifact@v4
+        with:
+          name: quiz-bible-runtime-protestant-rvr1960-v1-${{ github.run_number }}
+          path: |
+            build/runtime/quiz_bible_protestant_rvr1960_runtime_v1.json
+            build/runtime/quiz_bible_protestant_rvr1960_runtime_v1.manifest.json
+            tools/bible_extractor/bible-bank-freeze-v1.json
+          if-no-files-found: error
+          retention-days: 90

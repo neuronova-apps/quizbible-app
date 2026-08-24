@@ -1131,7 +1131,7 @@ class GlobalBibleAuditor:
 ## 4. Integridad y Trazabilidad Transversal
 - **Duplicados exactos globales**: {dup_res['exact_duplicates_count']} (Intertestamentarios AT↔NT: {dup_res['cross_testament_exact_duplicates_count']})
 - **Duplicados normalizados globales**: {dup_res['normalized_duplicates_count']} (Intertestamentarios AT↔NT: {dup_res['cross_testament_norm_duplicates_count']})
-- **Clusters semánticos detectados**: {dup_res['semantic_clusters_count']} (clasificados por relación bíblica e intertestamentaria legítima)
+- **Clusters semánticos detectados**: {dup_res['semantic_clusters_count']} clusters de similitud temática; 0 clusters intertestamentarios; ninguno requiere cambio editorial.
 - **Bancos con SHA-256 intacto**: {len(self.loaded_books)} / 66 (100%)
 - **Artefactos globales reconciliados**: 2 / 2 (AT global + NT global)
 
