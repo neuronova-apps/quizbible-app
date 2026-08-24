@@ -1,0 +1,754 @@
+{
+  "source": "Quiz Bible master bank - 2 Timoteo",
+  "version": "RVR1960",
+  "book": "2 Timoteo",
+  "total_questions": 24,
+  "questions": [
+    {
+      "id": "NQB-NT-2TI-0001",
+      "book": "2 Timoteo",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "2 Timoteo 1:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Saludo y vínculo pastoral",
+      "characters": [
+        "Pablo",
+        "Timoteo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo presenta Pablo a Timoteo en el saludo de la carta?",
+      "opcion_a": "Como amado hijo a quien desea gracia, misericordia y paz",
+      "opcion_b": "Como gobernante de una provincia",
+      "opcion_c": "Como desconocido para la comunidad",
+      "opcion_d": "Como autor principal de la carta",
+      "correct_option": "A",
+      "correct_answer": "Como amado hijo a quien desea gracia, misericordia y paz",
+      "explanation": "El saludo presenta a Pablo como remitente y a Timoteo como amado hijo, dentro de una relación pastoral y formativa.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0002",
+      "book": "2 Timoteo",
+      "chapter": 1,
+      "verse_start": 3,
+      "verse_end": 5,
+      "reference": "2 Timoteo 1:3-5",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Fe heredada y memoria familiar",
+      "characters": [
+        "Pablo",
+        "Timoteo",
+        "Loida",
+        "Eunice"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué recuerdo familiar acompaña la mención de la fe sincera de Timoteo?",
+      "opcion_a": "La fe que antes habitó en su abuela Loida y en su madre Eunice",
+      "opcion_b": "Una tradición política transmitida por sus antepasados",
+      "opcion_c": "Una herencia económica recibida de su familia",
+      "opcion_d": "Una genealogía usada para reclamar autoridad",
+      "correct_option": "A",
+      "correct_answer": "La fe que antes habitó en su abuela Loida y en su madre Eunice",
+      "explanation": "Pablo recuerda la fe sincera asociada primero con Loida y Eunice y luego con Timoteo. El énfasis es espiritual y formativo, no étnico ni económico.",
+      "additional_references": [
+        "Hechos 16:1-3"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0003",
+      "book": "2 Timoteo",
+      "chapter": 1,
+      "verse_start": 6,
+      "verse_end": 7,
+      "reference": "2 Timoteo 1:6-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Don, poder, amor y dominio propio",
+      "characters": [
+        "Timoteo",
+        "Dios"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué debe acompañar el avivamiento del don recibido por Timoteo?",
+      "opcion_a": "Poder, amor y dominio propio en lugar de un espíritu de cobardía",
+      "opcion_b": "Temor constante a cometer cualquier error",
+      "opcion_c": "Autoridad para intimidar a quienes discrepan",
+      "opcion_d": "Aislamiento para evitar toda dificultad",
+      "correct_option": "A",
+      "correct_answer": "Poder, amor y dominio propio en lugar de un espíritu de cobardía",
+      "explanation": "La exhortación une el don con poder, amor y dominio propio. No legitima intimidación, agresividad ni rechazo de emociones humanas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0004",
+      "book": "2 Timoteo",
+      "chapter": 1,
+      "verse_start": 8,
+      "verse_end": 12,
+      "reference": "2 Timoteo 1:8-12",
+      "category": "NT_GENERAL",
+      "subcategory": "Testimonio, sufrimiento y confianza",
+      "characters": [
+        "Pablo",
+        "Timoteo",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué equilibrio conserva mejor la exhortación a no avergonzarse del testimonio y participar en las dificultades del evangelio?",
+      "opcion_a": "Mantener fidelidad y confianza sin convertir el sufrimiento o el daño en una meta que deba buscarse",
+      "opcion_b": "Provocar persecución para demostrar valentía",
+      "opcion_c": "Rechazar protección ante cualquier riesgo",
+      "opcion_d": "Considerar el dolor como medida automática de santidad",
+      "correct_option": "A",
+      "correct_answer": "Mantener fidelidad y confianza sin convertir el sufrimiento o el daño en una meta que deba buscarse",
+      "explanation": "Pablo habla desde un contexto real de sufrimiento y confianza en Dios. El pasaje no ordena buscar daño, persecución o encarcelamiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0005",
+      "book": "2 Timoteo",
+      "chapter": 1,
+      "verse_start": 13,
+      "verse_end": 14,
+      "reference": "2 Timoteo 1:13-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Sanas palabras y buen depósito",
+      "characters": [
+        "Pablo",
+        "Timoteo",
+        "Espíritu Santo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación resume el encargo de conservar la enseñanza recibida?",
+      "opcion_a": "Retener el modelo de sanas palabras con fe y amor y guardar el buen depósito",
+      "opcion_b": "Repetir fórmulas sin comprender su sentido",
+      "opcion_c": "Aceptar cualquier enseñanza posterior sin examen",
+      "opcion_d": "Depender únicamente de la autoridad personal de un líder",
+      "correct_option": "A",
+      "correct_answer": "Retener el modelo de sanas palabras con fe y amor y guardar el buen depósito",
+      "explanation": "El encargo une fidelidad doctrinal con fe, amor y la ayuda del Espíritu. No exige credulidad indiscriminada ni autoridad humana ilimitada.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0006",
+      "book": "2 Timoteo",
+      "chapter": 1,
+      "verse_start": 15,
+      "verse_end": 18,
+      "reference": "2 Timoteo 1:15-18",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Abandono y apoyo de Onesíforo",
+      "characters": [
+        "Pablo",
+        "Figelo",
+        "Hermógenes",
+        "Onesíforo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo afirma que todos los de Asia permanecieron a su lado y ninguno se apartó",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Pablo menciona que muchos se apartaron y contrasta esa situación con la ayuda y el ánimo recibidos de Onesíforo.",
+      "additional_references": [
+        "2 Timoteo 4:19"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0007",
+      "book": "2 Timoteo",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "2 Timoteo 2:1-2",
+      "category": "NT_GENERAL",
+      "subcategory": "Gracia y transmisión responsable",
+      "characters": [
+        "Pablo",
+        "Timoteo",
+        "testigos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué proceso de transmisión propone Pablo para que la enseñanza continúe?",
+      "opcion_a": "Encargar lo aprendido a personas fieles capaces de enseñar también a otras",
+      "opcion_b": "Reservar el conocimiento para una élite secreta",
+      "opcion_c": "Depender únicamente de una persona sin formar a nadie más",
+      "opcion_d": "Transmitir solo tradiciones sin evaluar su fidelidad",
+      "correct_option": "A",
+      "correct_answer": "Encargar lo aprendido a personas fieles capaces de enseñar también a otras",
+      "explanation": "El pasaje describe una cadena de transmisión responsable: Pablo, Timoteo, personas fieles y otras personas. No promueve secretismo ni monopolio del conocimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0008",
+      "book": "2 Timoteo",
+      "chapter": 2,
+      "verse_start": 3,
+      "verse_end": 7,
+      "reference": "2 Timoteo 2:3-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Soldado, atleta y labrador como metáforas",
+      "characters": [
+        "Timoteo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función cumplen las imágenes del soldado, el atleta y el labrador?",
+      "opcion_a": "Ilustrar enfoque, disciplina, perseverancia y trabajo dentro del servicio",
+      "opcion_b": "Autorizar violencia física contra opositores",
+      "opcion_c": "Convertir la fe en competencia por superioridad",
+      "opcion_d": "Recomendar entrenamiento militar a toda la comunidad",
+      "correct_option": "A",
+      "correct_answer": "Ilustrar enfoque, disciplina, perseverancia y trabajo dentro del servicio",
+      "explanation": "Las tres imágenes son comparaciones pedagógicas sobre dedicación y perseverancia. La figura del soldado no convierte el pasaje en una orden de violencia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0009",
+      "book": "2 Timoteo",
+      "chapter": 2,
+      "verse_start": 8,
+      "verse_end": 13,
+      "reference": "2 Timoteo 2:8-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Memoria de Cristo y fidelidad",
+      "characters": [
+        "Jesucristo",
+        "Pablo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué centro de esperanza mantiene Pablo mientras habla de cadenas y perseverancia?",
+      "opcion_a": "Recordar a Jesucristo resucitado y la fidelidad que no depende de las circunstancias",
+      "opcion_b": "Buscar encarcelamiento como prueba de autenticidad",
+      "opcion_c": "Suponer que las cadenas garantizan autoridad espiritual",
+      "opcion_d": "Abandonar responsabilidades para esperar una liberación inmediata",
+      "correct_option": "A",
+      "correct_answer": "Recordar a Jesucristo resucitado y la fidelidad que no depende de las circunstancias",
+      "explanation": "Pablo vincula su situación con el anuncio de Jesucristo resucitado y con la fidelidad de Dios. No glorifica la prisión ni la convierte en requisito espiritual.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0010",
+      "book": "2 Timoteo",
+      "chapter": 2,
+      "verse_start": 14,
+      "verse_end": 19,
+      "reference": "2 Timoteo 2:14-19",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Controversias y error sobre la resurrección",
+      "characters": [
+        "Himeneo",
+        "Fileto",
+        "Timoteo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué error específico se atribuye a Himeneo y Fileto?",
+      "opcion_a": "Afirmar que la resurrección ya había ocurrido y trastornar la fe de algunos",
+      "opcion_b": "Negar que Pablo hubiera escrito alguna carta",
+      "opcion_c": "Prohibir todo trabajo manual",
+      "opcion_d": "Enseñar que la creación material era intrínsecamente mala",
+      "correct_option": "A",
+      "correct_answer": "Afirmar que la resurrección ya había ocurrido y trastornar la fe de algunos",
+      "explanation": "El pasaje nombra a Himeneo y Fileto y señala como error afirmar que la resurrección ya había sucedido. La pregunta no extrapola ese conflicto a grupos actuales.",
+      "additional_references": [
+        "1 Timoteo 1:20"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0011",
+      "book": "2 Timoteo",
+      "chapter": 2,
+      "verse_start": 20,
+      "verse_end": 22,
+      "reference": "2 Timoteo 2:20-22",
+      "category": "NT_GENERAL",
+      "subcategory": "Vasos, limpieza y deseos juveniles",
+      "characters": [
+        "Timoteo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué orientación práctica acompaña la imagen de ser un instrumento útil?",
+      "opcion_a": "Apartarse de lo dañino y seguir justicia, fe, amor y paz junto con otros",
+      "opcion_b": "Despreciar el cuerpo como si fuera malo",
+      "opcion_c": "Aislarse de toda comunidad para alcanzar pureza",
+      "opcion_d": "Usar castigos físicos para controlar los deseos",
+      "correct_option": "A",
+      "correct_answer": "Apartarse de lo dañino y seguir justicia, fe, amor y paz junto con otros",
+      "explanation": "La exhortación combina apartarse de prácticas dañinas con perseguir virtudes en comunidad. No promueve vergüenza corporal, autolesión ni aislamiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0012",
+      "book": "2 Timoteo",
+      "chapter": 2,
+      "verse_start": 23,
+      "verse_end": 26,
+      "reference": "2 Timoteo 2:23-26",
+      "category": "NT_GENERAL",
+      "subcategory": "Corrección paciente y no violenta",
+      "characters": [
+        "Timoteo",
+        "siervo del Señor"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el siervo del Señor debe evitar contiendas y corregir con mansedumbre y paciencia",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El texto contrasta la contienda con amabilidad, capacidad de enseñar, paciencia y corrección humilde.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0013",
+      "book": "2 Timoteo",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "2 Timoteo 3:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Conductas destructivas en tiempos difíciles",
+      "characters": [
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cautela evita usar correctamente la lista de conductas negativas descritas para tiempos difíciles?",
+      "opcion_a": "No convertirla en una etiqueta automática contra generaciones, culturas o grupos políticos actuales",
+      "opcion_b": "Aplicarla a cualquier grupo que piense distinto",
+      "opcion_c": "Usarla para diagnosticar trastornos mentales",
+      "opcion_d": "Presentarla como permiso para hostigar a personas consideradas problemáticas",
+      "correct_option": "A",
+      "correct_answer": "No convertirla en una etiqueta automática contra generaciones, culturas o grupos políticos actuales",
+      "explanation": "La lista describe conductas moralmente dañinas, no una herramienta para etiquetar colectivamente generaciones, culturas, adversarios políticos o condiciones clínicas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0014",
+      "book": "2 Timoteo",
+      "chapter": 3,
+      "verse_start": 6,
+      "verse_end": 9,
+      "reference": "2 Timoteo 3:6-9",
+      "category": "NT_GENERAL",
+      "subcategory": "Manipulación y resistencia a la verdad",
+      "characters": [
+        "Janes",
+        "Jambres"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué límite es necesario al leer la comparación con Janes y Jambres?",
+      "opcion_a": "Mantener la comparación dentro del argumento sobre resistencia a la verdad sin usar esos nombres para acusar arbitrariamente a personas actuales",
+      "opcion_b": "Identificar a líderes modernos concretos como equivalentes directos",
+      "opcion_c": "Usar el pasaje para justificar persecución de maestros rivales",
+      "opcion_d": "Convertir toda discrepancia doctrinal en evidencia de engaño deliberado",
+      "correct_option": "A",
+      "correct_answer": "Mantener la comparación dentro del argumento sobre resistencia a la verdad sin usar esos nombres para acusar arbitrariamente a personas actuales",
+      "explanation": "Janes y Jambres aparecen como comparación dentro del argumento de la carta. El texto no autoriza identificar automáticamente a individuos actuales con esas figuras.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0015",
+      "book": "2 Timoteo",
+      "chapter": 3,
+      "verse_start": 10,
+      "verse_end": 13,
+      "reference": "2 Timoteo 3:10-13",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Ejemplo de Pablo y persecuciones",
+      "characters": [
+        "Pablo",
+        "Timoteo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué ha observado Timoteo en Pablo además de su enseñanza?",
+      "opcion_a": "Conducta, propósito, fe, paciencia, amor, perseverancia y experiencias de persecución",
+      "opcion_b": "Solo éxito público y ausencia de dificultades",
+      "opcion_c": "Una estrategia de represalia contra adversarios",
+      "opcion_d": "Un método para buscar sufrimiento deliberadamente",
+      "correct_option": "A",
+      "correct_answer": "Conducta, propósito, fe, paciencia, amor, perseverancia y experiencias de persecución",
+      "explanation": "Timoteo conoce de cerca la enseñanza y el carácter de Pablo, así como persecuciones sufridas. El recuerdo no convierte el daño en meta espiritual.",
+      "additional_references": [
+        "Hechos 13:50",
+        "Hechos 14:5-6",
+        "Hechos 14:19"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0016",
+      "book": "2 Timoteo",
+      "chapter": 3,
+      "verse_start": 14,
+      "verse_end": 15,
+      "reference": "2 Timoteo 3:14-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Continuidad en lo aprendido",
+      "characters": [
+        "Timoteo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué fundamento acompaña el llamado a permanecer en lo aprendido?",
+      "opcion_a": "Saber de quién lo aprendió y conocer desde la niñez las Sagradas Escrituras",
+      "opcion_b": "Evitar toda revisión o estudio posterior",
+      "opcion_c": "Rechazar preguntas como señal de infidelidad",
+      "opcion_d": "Confiar solamente en la edad de quien enseña",
+      "correct_option": "A",
+      "correct_answer": "Saber de quién lo aprendió y conocer desde la niñez las Sagradas Escrituras",
+      "explanation": "Pablo relaciona continuidad con fuentes conocidas y con las Escrituras aprendidas desde la niñez. No elimina estudio, preguntas o discernimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0017",
+      "book": "2 Timoteo",
+      "chapter": 3,
+      "verse_start": 16,
+      "verse_end": 17,
+      "reference": "2 Timoteo 3:16-17",
+      "category": "NT_GENERAL",
+      "subcategory": "Utilidad de las Escrituras",
+      "characters": [
+        "comunidad",
+        "Dios"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué funciones atribuye el pasaje a la Escritura para formar a la persona de Dios?",
+      "opcion_a": "Enseñar, redargüir, corregir e instruir para capacitar en toda buena obra",
+      "opcion_b": "Sustituir toda experiencia, consejo y aprendizaje práctico",
+      "opcion_c": "Dar autoridad ilimitada a quien la cite",
+      "opcion_d": "Resolver automáticamente cualquier cuestión sin interpretación responsable",
+      "correct_option": "A",
+      "correct_answer": "Enseñar, redargüir, corregir e instruir para capacitar en toda buena obra",
+      "explanation": "El pasaje presenta la Escritura como inspirada y útil para enseñanza, corrección y formación orientada a buenas obras. No legitima el uso manipulador de citas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0018",
+      "book": "2 Timoteo",
+      "chapter": 3,
+      "verse_start": 16,
+      "verse_end": 17,
+      "reference": "2 Timoteo 3:16-17",
+      "category": "NT_GENERAL",
+      "subcategory": "Preparación para buenas obras",
+      "characters": [
+        "comunidad",
+        "Dios"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el propósito descrito incluye preparar y capacitar para toda buena obra",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. La utilidad de la Escritura se relaciona con la formación y preparación de la persona de Dios para buenas obras.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0019",
+      "book": "2 Timoteo",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "2 Timoteo 4:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Predicación, paciencia y sobriedad",
+      "characters": [
+        "Pablo",
+        "Timoteo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué equilibrio acompaña el encargo de anunciar la palabra aun cuando surjan enseñanzas atractivas para el oído?",
+      "opcion_a": "Persistir con paciencia, enseñanza y sobriedad sin recurrir a coerción o censura abusiva",
+      "opcion_b": "Silenciar por la fuerza a toda persona que tenga preguntas",
+      "opcion_c": "Usar miedo para asegurar obediencia",
+      "opcion_d": "Convertir cualquier interés nuevo en prueba de apostasía",
+      "correct_option": "A",
+      "correct_answer": "Persistir con paciencia, enseñanza y sobriedad sin recurrir a coerción o censura abusiva",
+      "explanation": "El encargo combina proclamación, corrección paciente, enseñanza y sobriedad. No autoriza violencia, miedo, control de conciencia ni rechazo de toda pregunta.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0020",
+      "book": "2 Timoteo",
+      "chapter": 4,
+      "verse_start": 6,
+      "verse_end": 8,
+      "reference": "2 Timoteo 4:6-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Final de la carrera y esperanza",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué expresa Pablo al mirar el final de su servicio y la esperanza futura?",
+      "opcion_a": "Que ha peleado la buena batalla, terminado la carrera y guardado la fe esperando la corona de justicia",
+      "opcion_b": "Que desea acelerar su muerte para obtener recompensa",
+      "opcion_c": "Que el sufrimiento físico produce automáticamente santidad",
+      "opcion_d": "Que todos deben abandonar responsabilidades para imitar su situación",
+      "correct_option": "A",
+      "correct_answer": "Que ha peleado la buena batalla, terminado la carrera y guardado la fe esperando la corona de justicia",
+      "explanation": "Pablo interpreta retrospectivamente su servicio y expresa esperanza. El lenguaje sobre su partida no promueve autolesión, búsqueda de muerte ni abandono de responsabilidades.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0021",
+      "book": "2 Timoteo",
+      "chapter": 4,
+      "verse_start": 9,
+      "verse_end": 13,
+      "reference": "2 Timoteo 4:9-13",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Colaboradores, partida de Demas y utilidad de Marcos",
+      "characters": [
+        "Pablo",
+        "Timoteo",
+        "Demas",
+        "Lucas",
+        "Marcos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste aparece al mencionar a Demas, Lucas y Marcos?",
+      "opcion_a": "Demas se marchó, Lucas permanecía con Pablo y Marcos era considerado útil para el ministerio",
+      "opcion_b": "Los tres habían abandonado definitivamente a Pablo",
+      "opcion_c": "Marcos era rechazado como inútil",
+      "opcion_d": "Lucas había sido enviado a Tesalónica",
+      "correct_option": "A",
+      "correct_answer": "Demas se marchó, Lucas permanecía con Pablo y Marcos era considerado útil para el ministerio",
+      "explanation": "El pasaje distingue situaciones diferentes: Demas se fue, Lucas permanecía y Pablo pidió traer a Marcos porque era útil para el ministerio.",
+      "additional_references": [
+        "Colosenses 4:14",
+        "Filemón 1:24"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0022",
+      "book": "2 Timoteo",
+      "chapter": 4,
+      "verse_start": 14,
+      "verse_end": 15,
+      "reference": "2 Timoteo 4:14-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Alejandro el calderero y prudencia",
+      "characters": [
+        "Pablo",
+        "Timoteo",
+        "Alejandro"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué límite debe conservarse al leer la advertencia sobre Alejandro el calderero?",
+      "opcion_a": "Reconocer el daño mencionado y actuar con prudencia sin convertir el pasaje en permiso para venganza personal",
+      "opcion_b": "Responder al daño con violencia equivalente",
+      "opcion_c": "Perseguir a cualquier persona que comparta ese nombre",
+      "opcion_d": "Usar la advertencia para castigar a rivales religiosos",
+      "correct_option": "A",
+      "correct_answer": "Reconocer el daño mencionado y actuar con prudencia sin convertir el pasaje en permiso para venganza personal",
+      "explanation": "Pablo advierte a Timoteo sobre una persona concreta y deja la retribución en manos del Señor. El texto no autoriza represalias o violencia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0023",
+      "book": "2 Timoteo",
+      "chapter": 4,
+      "verse_start": 16,
+      "verse_end": 18,
+      "reference": "2 Timoteo 4:16-18",
+      "category": "NT_GENERAL",
+      "subcategory": "Primera defensa, abandono y confianza",
+      "characters": [
+        "Pablo",
+        "Señor"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué equilibrio aparece cuando Pablo recuerda que nadie estuvo a su lado en su primera defensa?",
+      "opcion_a": "Reconoce el abandono, pide que no les sea tomado en cuenta y afirma que el Señor lo sostuvo",
+      "opcion_b": "Celebra el aislamiento como forma superior de espiritualidad",
+      "opcion_c": "Ordena romper toda relación con quienes estuvieron ausentes",
+      "opcion_d": "Niega que haya experimentado vulnerabilidad o necesidad",
+      "correct_option": "A",
+      "correct_answer": "Reconoce el abandono, pide que no les sea tomado en cuenta y afirma que el Señor lo sostuvo",
+      "explanation": "Pablo reconoce una experiencia concreta de abandono y al mismo tiempo expresa perdón y confianza. No presenta el aislamiento como ideal ni prohíbe buscar apoyo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2TI-0024",
+      "book": "2 Timoteo",
+      "chapter": 4,
+      "verse_start": 19,
+      "verse_end": 22,
+      "reference": "2 Timoteo 4:19-22",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Saludos finales y colaboradores",
+      "characters": [
+        "Pablo",
+        "Prisca",
+        "Aquila",
+        "Onesíforo",
+        "Erasto",
+        "Trófimo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el cierre afirma que Trófimo estaba completamente sano y acompañaba a Pablo cuando se escribió la carta",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Pablo señala que dejó a Trófimo enfermo en Mileto. El dato no debe convertirse en consejo médico ni en una negación de la oración o del cuidado de salud.",
+      "additional_references": [
+        "Hechos 18:2-3",
+        "Hechos 20:4"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}

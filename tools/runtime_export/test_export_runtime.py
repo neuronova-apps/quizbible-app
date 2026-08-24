@@ -890,6 +890,36 @@ class TestRuntimeExport(unittest.TestCase):
             self.assertEqual(len(q["options"]), 4)
             self.assertEqual([o["id"] for o in q["options"]], ["A", "B", "C", "D"])
 
+    def test_export_2timothy_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de 2 Timoteo al formato runtime."""
+        ti_path = REPO_ROOT / "tools" / "bible_extractor" / "2timothy-master-input.json"
+        if not ti_path.exists():
+            self.skipTest("2timothy-master-input.json no encontrado")
+        raw_ti = json.loads(ti_path.read_text(encoding="utf-8"))
+        ti_qs = raw_ti.get("questions", raw_ti)
+        status_map = {q["id"]: "VERIFIED" for q in ti_qs}
+
+        collection = export_canonical_data(ti_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 24)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "2 Timoteo")
+        self.assertTrue(validate_runtime_collection(collection))
+
+        # Verify TF questions have exactly 2 options A/B
+        tf_qs = [q for q in collection["questions"] if q["questionType"] == "TRUE_FALSE"]
+        self.assertEqual(len(tf_qs), 4)
+        for q in tf_qs:
+            self.assertEqual(len(q["options"]), 2)
+            self.assertEqual([o["id"] for o in q["options"]], ["A", "B"])
+
+        # Verify MC questions have exactly 4 options A/B/C/D
+        mc_qs = [q for q in collection["questions"] if q["questionType"] == "MULTIPLE_CHOICE"]
+        self.assertEqual(len(mc_qs), 20)
+        for q in mc_qs:
+            self.assertEqual(len(q["options"]), 4)
+            self.assertEqual([o["id"] for o in q["options"]], ["A", "B", "C", "D"])
+
 
 if __name__ == "__main__":
     unittest.main()

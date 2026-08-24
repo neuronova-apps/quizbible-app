@@ -1029,6 +1029,24 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "efeso", "éfeso", "macedonia", "roma"
         },
     },
+    "2timothy": {
+        "canonical_name": "2 Timoteo",
+        "api_name": "2Timoteo",
+        "aliases": {
+            "2 timoteo", "2timoteo", "2 timothy", "2timothy",
+            "2 tim", "2ti", "segunda de timoteo",
+            "segunda carta a timoteo"
+        },
+        "total_chapters": 4,
+        "blocks": [
+            (1, 4, "2timothy-01-04.json"),
+        ],
+        "default_output_dir": "build/audit/2timothy",
+        "ambient_places": {
+            "roma", "efeso", "éfeso", "mileto", "troas", "tróade", "troade",
+            "antioquia", "antioquía", "iconio", "listra", "galacia", "dalmacia", "corinto"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -1180,6 +1198,8 @@ BIBLE_PERSONAJES = {
     "gamaliel", "tito", "silas", "apolos", "aquila", "áquila", "priscila", "filemon", "filemón", "onesimo", "onésimo",
     "epafrodito", "evodia", "sintique", "síntique", "clemente",
     "aristarco", "arquipo", "demas", "epafras", "ninfa", "justo", "himeneo",
+    "loida", "eunice", "figelo", "hermogenes", "hermógenes", "onesiforo", "onesíforo", "fileto", "janes", "jambres",
+    "crescente", "carpo", "pudente", "lino", "claudia",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",
@@ -1232,7 +1252,8 @@ BIBLE_PLACES = {
     # Nuevo Testamento
     "colosas", "laodicea", "hierapolis", "hierápolis",
     "tesalonica", "tesalónica", "berea", "atenas", "corinto", "macedonia", "filipos",
-    "efeso", "éfeso",
+    "efeso", "éfeso", "roma", "mileto", "troas", "tróade", "troade",
+    "antioquia", "antioquía", "iconio", "listra", "galacia", "dalmacia",
 }
 
 # Raíces de parentesco y lemas
