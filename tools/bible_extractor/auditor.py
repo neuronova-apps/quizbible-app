@@ -928,6 +928,22 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "antioquia", "antioquía", "judea", "sinaí", "sinai"
         },
     },
+    "ephesians": {
+        "canonical_name": "Efesios",
+        "api_name": "Efesios",
+        "aliases": {
+            "efesios", "ephesians", "efe",
+            "carta a los efesios", "epistola a los efesios", "epístola a los efesios"
+        },
+        "total_chapters": 6,
+        "blocks": [
+            (1, 6, "ephesians-01-06.json"),
+        ],
+        "default_output_dir": "build/audit/ephesians",
+        "ambient_places": {
+            "efeso", "éfeso", "roma", "jerusalen", "jerusalén", "israel", "sion", "sión"
+        },
+    },
 }
 
 STOPWORDS = {

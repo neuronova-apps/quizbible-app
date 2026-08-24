@@ -557,6 +557,22 @@ class TestRuntimeExport(unittest.TestCase):
             self.assertEqual(q["book"], "Gálatas")
         self.assertTrue(validate_runtime_collection(collection))
 
+    def test_export_ephesians_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de Efesios al formato runtime."""
+        efe_path = REPO_ROOT / "tools" / "bible_extractor" / "ephesians-master-input.json"
+        if not efe_path.exists():
+            self.skipTest("ephesians-master-input.json no encontrado")
+        raw_efe = json.loads(efe_path.read_text(encoding="utf-8"))
+        efe_qs = raw_efe.get("questions", raw_efe)
+        status_map = {q["id"]: "VERIFIED" for q in efe_qs}
+
+        collection = export_canonical_data(efe_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 36)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "Efesios")
+        self.assertTrue(validate_runtime_collection(collection))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,1099 @@
+{
+  "source": "Quiz Bible master bank - Efesios",
+  "version": "RVR1960",
+  "book": "Efesios",
+  "total_questions": 36,
+  "questions": [
+    {
+      "id": "NQB-NT-EFE-0001",
+      "book": "Efesios",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "Efesios 1:1-2",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Saludo y remitente",
+      "characters": [
+        "Pablo",
+        "santos en Éfeso"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Quién se presenta como autor de la carta al inicio?",
+      "opcion_a": "Pablo",
+      "opcion_b": "Pedro",
+      "opcion_c": "Santiago",
+      "opcion_d": "Juan",
+      "correct_option": "A",
+      "correct_answer": "Pablo",
+      "explanation": "La carta se abre identificando a Pablo como apóstol de Jesucristo. La pregunta se limita a la presentación epistolar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0002",
+      "book": "Efesios",
+      "chapter": 1,
+      "verse_start": 3,
+      "verse_end": 6,
+      "reference": "Efesios 1:3-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Bendiciones espirituales",
+      "characters": [
+        "Dios",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Dónde sitúa la carta las bendiciones espirituales recibidas por los creyentes?",
+      "opcion_a": "En Cristo",
+      "opcion_b": "En el poder político",
+      "opcion_c": "En la riqueza material",
+      "opcion_d": "En la pertenencia étnica",
+      "correct_option": "A",
+      "correct_answer": "En Cristo",
+      "explanation": "El pasaje concentra las bendiciones espirituales en la unión con Cristo. No las vincula con privilegio económico, político o étnico.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0003",
+      "book": "Efesios",
+      "chapter": 1,
+      "verse_start": 7,
+      "verse_end": 10,
+      "reference": "Efesios 1:7-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Redención y propósito",
+      "characters": [
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué relación establece el pasaje entre redención y perdón?",
+      "opcion_a": "Los vincula con la gracia manifestada en Cristo",
+      "opcion_b": "Los presenta como recompensas por superioridad moral",
+      "opcion_c": "Los limita a una sola nación",
+      "opcion_d": "Los reemplaza por logros personales",
+      "correct_option": "A",
+      "correct_answer": "Los vincula con la gracia manifestada en Cristo",
+      "explanation": "La redención y el perdón aparecen como expresión de la gracia de Dios en Cristo, no como premio por estatus o autosuficiencia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0004",
+      "book": "Efesios",
+      "chapter": 1,
+      "verse_start": 13,
+      "verse_end": 14,
+      "reference": "Efesios 1:13-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Sello del Espíritu",
+      "characters": [
+        "Espíritu Santo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función cumple el Espíritu en la imagen del sello y la garantía?",
+      "opcion_a": "Confirmar la pertenencia y anticipar la herencia prometida",
+      "opcion_b": "Garantizar ausencia de dificultades",
+      "opcion_c": "Asegurar prosperidad financiera",
+      "opcion_d": "Eliminar toda responsabilidad personal",
+      "correct_option": "A",
+      "correct_answer": "Confirmar la pertenencia y anticipar la herencia prometida",
+      "explanation": "La imagen del sello y la garantía comunica pertenencia y esperanza futura. No promete una vida sin sufrimiento ni éxito económico.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0005",
+      "book": "Efesios",
+      "chapter": 1,
+      "verse_start": 15,
+      "verse_end": 19,
+      "reference": "Efesios 1:15-19",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Oración por conocimiento",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pide Pablo que la comunidad comprenda con mayor profundidad?",
+      "opcion_a": "La esperanza, la herencia y el poder de Dios",
+      "opcion_b": "El modo de dominar a otras comunidades",
+      "opcion_c": "Una fecha secreta para el fin",
+      "opcion_d": "Una fórmula para obtener riqueza",
+      "correct_option": "A",
+      "correct_answer": "La esperanza, la herencia y el poder de Dios",
+      "explanation": "La oración busca comprensión espiritual de la esperanza, la herencia y el poder de Dios, no información secreta ni ventajas sobre otros.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0006",
+      "book": "Efesios",
+      "chapter": 1,
+      "verse_start": 20,
+      "verse_end": 23,
+      "reference": "Efesios 1:20-23",
+      "category": "NT_GENERAL",
+      "subcategory": "Cristo y la iglesia",
+      "characters": [
+        "Jesucristo",
+        "iglesia"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la exaltación de Cristo se presenta en relación con su autoridad y con la iglesia",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El cierre presenta la exaltación de Cristo y usa imágenes de cabeza y cuerpo para describir su relación con la iglesia.",
+      "additional_references": [
+        "Salmos 8:6"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0007",
+      "book": "Efesios",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "Efesios 2:1-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Gracia y vida nueva",
+      "characters": [
+        "Dios",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cambio fundamental describe el pasaje en la condición de los creyentes?",
+      "opcion_a": "De muerte espiritual a vida con Cristo por gracia",
+      "opcion_b": "De pobreza a riqueza obligatoria",
+      "opcion_c": "De una nación a otra",
+      "opcion_d": "De anonimato a poder político",
+      "correct_option": "A",
+      "correct_answer": "De muerte espiritual a vida con Cristo por gracia",
+      "explanation": "El contraste es teológico: muerte y vida en relación con Cristo. No promete enriquecimiento ni ascenso social automático.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0008",
+      "book": "Efesios",
+      "chapter": 2,
+      "verse_start": 8,
+      "verse_end": 10,
+      "reference": "Efesios 2:8-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Salvación y obras",
+      "characters": [
+        "Dios",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo relaciona el pasaje la gracia, la fe y las buenas obras?",
+      "opcion_a": "La salvación es por gracia y las buenas obras son parte de la vida resultante",
+      "opcion_b": "Las obras compran la gracia",
+      "opcion_c": "La fe elimina toda conducta ética",
+      "opcion_d": "La salvación depende del prestigio social",
+      "correct_option": "A",
+      "correct_answer": "La salvación es por gracia y las buenas obras son parte de la vida resultante",
+      "explanation": "El texto distingue entre la salvación como don y las buenas obras como fruto de una vida preparada para hacer el bien.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0009",
+      "book": "Efesios",
+      "chapter": 2,
+      "verse_start": 11,
+      "verse_end": 13,
+      "reference": "Efesios 2:11-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Gentiles acercados",
+      "characters": [
+        "Gentiles",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cambio describe el pasaje respecto de quienes antes estaban lejos?",
+      "opcion_a": "Han sido acercados en Cristo",
+      "opcion_b": "Han recibido superioridad sobre Israel",
+      "opcion_c": "Han sustituido toda la historia de Israel",
+      "opcion_d": "Han quedado libres de toda responsabilidad",
+      "correct_option": "A",
+      "correct_answer": "Han sido acercados en Cristo",
+      "explanation": "El pasaje habla de acercamiento y reconciliación en Cristo. No autoriza desprecio hacia Israel ni una jerarquía étnica inversa.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0010",
+      "book": "Efesios",
+      "chapter": 2,
+      "verse_start": 14,
+      "verse_end": 18,
+      "reference": "Efesios 2:14-18",
+      "category": "NT_GENERAL",
+      "subcategory": "Paz y reconciliación",
+      "characters": [
+        "Judíos",
+        "gentiles",
+        "Jesucristo"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cuál es el efecto principal de la obra de Cristo sobre grupos antes separados?",
+      "opcion_a": "Crear paz y reconciliarlos en una nueva humanidad",
+      "opcion_b": "Uniformar todas sus identidades culturales",
+      "opcion_c": "Declarar enemigo a uno de los grupos",
+      "opcion_d": "Dar privilegios políticos al grupo mayoritario",
+      "correct_option": "A",
+      "correct_answer": "Crear paz y reconciliarlos en una nueva humanidad",
+      "explanation": "La imagen central es la reconciliación y la paz entre grupos antes separados. La unidad no exige borrar identidades ni promueve hostilidad contra el judaísmo.",
+      "additional_references": [
+        "Isaías 57:19"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0011",
+      "book": "Efesios",
+      "chapter": 2,
+      "verse_start": 19,
+      "verse_end": 22,
+      "reference": "Efesios 2:19-22",
+      "category": "NT_GENERAL",
+      "subcategory": "Ciudadanía y templo",
+      "characters": [
+        "Iglesia",
+        "apóstoles",
+        "profetas"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué imagen resume la nueva pertenencia comunitaria descrita al final?",
+      "opcion_a": "Una casa y un templo que crecen unidos",
+      "opcion_b": "Un ejército nacional",
+      "opcion_c": "Una élite intelectual",
+      "opcion_d": "Una empresa económica",
+      "correct_option": "A",
+      "correct_answer": "Una casa y un templo que crecen unidos",
+      "explanation": "El pasaje usa imágenes de ciudadanía, familia, edificio y templo para expresar pertenencia y crecimiento comunitario.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0012",
+      "book": "Efesios",
+      "chapter": 2,
+      "verse_start": 4,
+      "verse_end": 7,
+      "reference": "Efesios 2:4-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Misericordia y gracia",
+      "characters": [
+        "Dios",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la misericordia y la gracia ocupan un lugar central en el cambio descrito",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El argumento atribuye el cambio a la misericordia, el amor y la gracia de Dios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0013",
+      "book": "Efesios",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 6,
+      "reference": "Efesios 3:1-6",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Ministerio a los gentiles",
+      "characters": [
+        "Pablo",
+        "gentiles"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué responsabilidad dice Pablo haber recibido respecto de los gentiles?",
+      "opcion_a": "Administrar y anunciar la gracia que también los incluye",
+      "opcion_b": "Separarlos permanentemente de los creyentes judíos",
+      "opcion_c": "Imponerles una identidad étnica distinta",
+      "opcion_d": "Concederles privilegios políticos",
+      "correct_option": "A",
+      "correct_answer": "Administrar y anunciar la gracia que también los incluye",
+      "explanation": "Pablo describe una responsabilidad ministerial vinculada con la inclusión de los gentiles en la promesa. No plantea sustitución étnica ni dominio político.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0014",
+      "book": "Efesios",
+      "chapter": 3,
+      "verse_start": 7,
+      "verse_end": 9,
+      "reference": "Efesios 3:7-9",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Servicio y gracia",
+      "characters": [
+        "Pablo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo presenta Pablo su propio ministerio?",
+      "opcion_a": "Como un servicio recibido por gracia para anunciar las riquezas de Cristo",
+      "opcion_b": "Como prueba de superioridad personal",
+      "opcion_c": "Como derecho a controlar conciencias",
+      "opcion_d": "Como medio para acumular riqueza",
+      "correct_option": "A",
+      "correct_answer": "Como un servicio recibido por gracia para anunciar las riquezas de Cristo",
+      "explanation": "Pablo atribuye su ministerio a la gracia y lo orienta al anuncio, no al prestigio, control personal o enriquecimiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0015",
+      "book": "Efesios",
+      "chapter": 3,
+      "verse_start": 10,
+      "verse_end": 12,
+      "reference": "Efesios 3:10-12",
+      "category": "NT_GENERAL",
+      "subcategory": "Sabiduría de Dios e iglesia",
+      "characters": [
+        "Iglesia"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué función atribuye el pasaje a la iglesia en relación con la sabiduría de Dios?",
+      "opcion_a": "Hacer visible la multiforme sabiduría de Dios",
+      "opcion_b": "Sustituir toda responsabilidad individual",
+      "opcion_c": "Gobernar políticamente todas las naciones",
+      "opcion_d": "Eliminar toda diversidad cultural",
+      "correct_option": "A",
+      "correct_answer": "Hacer visible la multiforme sabiduría de Dios",
+      "explanation": "La iglesia aparece como escenario donde se manifiesta la sabiduría de Dios. El pasaje no establece un programa de dominación política.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0016",
+      "book": "Efesios",
+      "chapter": 3,
+      "verse_start": 14,
+      "verse_end": 19,
+      "reference": "Efesios 3:14-19",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Oración por fortaleza y amor",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pide Pablo que arraigue y se fortalezca en la comunidad?",
+      "opcion_a": "Una vida interior fortalecida y arraigada en el amor",
+      "opcion_b": "Una actitud de superioridad frente a otros",
+      "opcion_c": "Una dependencia del temor",
+      "opcion_d": "Una búsqueda de prestigio",
+      "correct_option": "A",
+      "correct_answer": "Una vida interior fortalecida y arraigada en el amor",
+      "explanation": "La oración se orienta a fortaleza interior, fe y amor. No legitima manipulación emocional ni superioridad grupal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0017",
+      "book": "Efesios",
+      "chapter": 3,
+      "verse_start": 20,
+      "verse_end": 21,
+      "reference": "Efesios 3:20-21",
+      "category": "NT_GENERAL",
+      "subcategory": "Doxología",
+      "characters": [
+        "Dios",
+        "iglesia",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué reconoce la doxología acerca del poder de Dios?",
+      "opcion_a": "Que puede obrar más allá de lo que se pide o imagina",
+      "opcion_b": "Que garantiza cualquier deseo personal",
+      "opcion_c": "Que elimina toda incertidumbre humana",
+      "opcion_d": "Que convierte la oración en fórmula automática",
+      "correct_option": "A",
+      "correct_answer": "Que puede obrar más allá de lo que se pide o imagina",
+      "explanation": "La doxología alaba el poder de Dios y no convierte la oración en una garantía automática de cualquier resultado solicitado.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0018",
+      "book": "Efesios",
+      "chapter": 3,
+      "verse_start": 6,
+      "verse_end": 6,
+      "reference": "Efesios 3:6",
+      "category": "NT_GENERAL",
+      "subcategory": "Coherederos",
+      "characters": [
+        "Gentiles",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que los gentiles son presentados como coherederos y participantes de la misma promesa en Cristo",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. La inclusión se expresa como participación compartida en la promesa, no como reemplazo hostil de otro pueblo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0019",
+      "book": "Efesios",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 6,
+      "reference": "Efesios 4:1-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Unidad y vocación",
+      "characters": [
+        "Comunidad",
+        "Espíritu Santo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitudes acompañan el llamado a preservar la unidad?",
+      "opcion_a": "Humildad, mansedumbre, paciencia y amor",
+      "opcion_b": "Competencia, temor y aislamiento",
+      "opcion_c": "Dominio, imposición y prestigio",
+      "opcion_d": "Uniformidad cultural obligatoria",
+      "correct_option": "A",
+      "correct_answer": "Humildad, mansedumbre, paciencia y amor",
+      "explanation": "La unidad se asocia con humildad, paciencia, amor y paz. No implica uniformidad forzada ni control de conciencia.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0020",
+      "book": "Efesios",
+      "chapter": 4,
+      "verse_start": 7,
+      "verse_end": 13,
+      "reference": "Efesios 4:7-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Dones y madurez",
+      "characters": [
+        "Jesucristo",
+        "iglesia"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Para qué se presentan los diversos ministerios y dones en la comunidad?",
+      "opcion_a": "Para capacitar, servir y contribuir a la madurez común",
+      "opcion_b": "Para crear una casta intocable de líderes",
+      "opcion_c": "Para concentrar poder sin rendición de cuentas",
+      "opcion_d": "Para reemplazar la responsabilidad de todos",
+      "correct_option": "A",
+      "correct_answer": "Para capacitar, servir y contribuir a la madurez común",
+      "explanation": "Los dones y ministerios se orientan al servicio y a la edificación común, no a una jerarquía inmune a evaluación.",
+      "additional_references": [
+        "Salmos 68:18"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0021",
+      "book": "Efesios",
+      "chapter": 4,
+      "verse_start": 14,
+      "verse_end": 16,
+      "reference": "Efesios 4:14-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Madurez y crecimiento",
+      "characters": [
+        "Iglesia",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contrasta el pasaje con la inestabilidad espiritual?",
+      "opcion_a": "Crecer con verdad y amor hacia una madurez compartida",
+      "opcion_b": "Seguir cualquier enseñanza novedosa",
+      "opcion_c": "Evitar todo desacuerdo",
+      "opcion_d": "Depender de una sola persona para decidir",
+      "correct_option": "A",
+      "correct_answer": "Crecer con verdad y amor hacia una madurez compartida",
+      "explanation": "El crecimiento se describe como madurez, verdad y amor en un cuerpo interdependiente, no como dependencia absoluta de un líder.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0022",
+      "book": "Efesios",
+      "chapter": 4,
+      "verse_start": 17,
+      "verse_end": 24,
+      "reference": "Efesios 4:17-24",
+      "category": "NT_GENERAL",
+      "subcategory": "Nueva manera de vivir",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué imagen usa el pasaje para describir el cambio ético esperado?",
+      "opcion_a": "Despojarse de la vieja manera de vivir y revestirse de la nueva",
+      "opcion_b": "Ocultar los problemas sin cambiarlos",
+      "opcion_c": "Adoptar una identidad étnica distinta",
+      "opcion_d": "Eliminar toda emoción intensa",
+      "correct_option": "A",
+      "correct_answer": "Despojarse de la vieja manera de vivir y revestirse de la nueva",
+      "explanation": "La metáfora de despojarse y revestirse expresa transformación ética. No implica borrar identidad cultural ni negar emociones humanas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0023",
+      "book": "Efesios",
+      "chapter": 4,
+      "verse_start": 25,
+      "verse_end": 32,
+      "reference": "Efesios 4:25-32",
+      "category": "NT_GENERAL",
+      "subcategory": "Verdad, ira y perdón",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué orientación da el pasaje para manejar conflictos dentro de la comunidad?",
+      "opcion_a": "Hablar verdad, limitar la ira dañina y practicar bondad y perdón",
+      "opcion_b": "Guardar resentimiento indefinidamente",
+      "opcion_c": "Responder con violencia",
+      "opcion_d": "Ocultar abusos para preservar una apariencia de unidad",
+      "correct_option": "A",
+      "correct_answer": "Hablar verdad, limitar la ira dañina y practicar bondad y perdón",
+      "explanation": "El texto combina verdad, control de la ira, trabajo honesto, palabras edificantes y perdón. El perdón no exige ocultar abuso ni renunciar a límites o justicia.",
+      "additional_references": [
+        "Zacarías 8:16"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0024",
+      "book": "Efesios",
+      "chapter": 4,
+      "verse_start": 4,
+      "verse_end": 6,
+      "reference": "Efesios 4:4-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Unidad fundamental",
+      "characters": [
+        "Dios",
+        "Jesucristo",
+        "Espíritu Santo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la unidad descrita incluye un cuerpo, un Espíritu, una esperanza, un Señor, una fe y un bautismo",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. La enumeración subraya una base compartida para la unidad de la comunidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0025",
+      "book": "Efesios",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "Efesios 5:1-2",
+      "category": "NT_GENERAL",
+      "subcategory": "Imitación y amor",
+      "characters": [
+        "Dios",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué modelo de conducta se presenta al comienzo de la exhortación?",
+      "opcion_a": "Caminar en amor siguiendo el ejemplo de Cristo",
+      "opcion_b": "Buscar reconocimiento público",
+      "opcion_c": "Responder al daño con venganza",
+      "opcion_d": "Demostrar superioridad moral",
+      "correct_option": "A",
+      "correct_answer": "Caminar en amor siguiendo el ejemplo de Cristo",
+      "explanation": "La exhortación comienza con imitación de Dios y una vida marcada por el amor, no por venganza o superioridad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0026",
+      "book": "Efesios",
+      "chapter": 5,
+      "verse_start": 3,
+      "verse_end": 14,
+      "reference": "Efesios 5:3-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Conducta y luz",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué contraste organiza esta sección ética?",
+      "opcion_a": "Obras de oscuridad frente a una vida propia de la luz",
+      "opcion_b": "Pobreza frente a riqueza",
+      "opcion_c": "Una cultura frente a otra",
+      "opcion_d": "Emoción frente a razón",
+      "correct_option": "A",
+      "correct_answer": "Obras de oscuridad frente a una vida propia de la luz",
+      "explanation": "La imagen de oscuridad y luz organiza una exhortación moral. No debe usarse para estigmatizar grupos sociales, culturales o personas con condiciones de salud.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0027",
+      "book": "Efesios",
+      "chapter": 5,
+      "verse_start": 15,
+      "verse_end": 21,
+      "reference": "Efesios 5:15-21",
+      "category": "NT_GENERAL",
+      "subcategory": "Sabiduría y vida comunitaria",
+      "characters": [
+        "Comunidad",
+        "Espíritu Santo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación caracteriza la vida sabia descrita en el pasaje?",
+      "opcion_a": "Aprovechar bien el tiempo, comprender, agradecer y relacionarse con consideración mutua",
+      "opcion_b": "Buscar poder sobre otros",
+      "opcion_c": "Evitar toda celebración",
+      "opcion_d": "Obedecer sin discernimiento a cualquier líder",
+      "correct_option": "A",
+      "correct_answer": "Aprovechar bien el tiempo, comprender, agradecer y relacionarse con consideración mutua",
+      "explanation": "La vida sabia incluye discernimiento, gratitud y consideración mutua. No elimina responsabilidad personal ni autoriza obediencia ciega.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0028",
+      "book": "Efesios",
+      "chapter": 5,
+      "verse_start": 22,
+      "verse_end": 33,
+      "reference": "Efesios 5:22-33",
+      "category": "NT_GENERAL",
+      "subcategory": "Matrimonio y amor sacrificial",
+      "characters": [
+        "Esposas",
+        "esposos",
+        "Jesucristo",
+        "iglesia"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué elemento impide leer las instrucciones matrimoniales como permiso para el abuso?",
+      "opcion_a": "El marco de amor sacrificial, cuidado y consideración mutua",
+      "opcion_b": "La superioridad física de una persona",
+      "opcion_c": "La obediencia sin límites",
+      "opcion_d": "La renuncia de una parte a toda protección",
+      "correct_option": "A",
+      "correct_answer": "El marco de amor sacrificial, cuidado y consideración mutua",
+      "explanation": "El pasaje debe leerse dentro de su marco de amor, entrega y cuidado. No autoriza violencia, coerción, control, aislamiento ni obliga a permanecer en situaciones inseguras.",
+      "additional_references": [
+        "Génesis 2:24"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0029",
+      "book": "Efesios",
+      "chapter": 5,
+      "verse_start": 31,
+      "verse_end": 32,
+      "reference": "Efesios 5:31-32",
+      "category": "NT_GENERAL",
+      "subcategory": "Una sola carne y misterio",
+      "characters": [
+        "Esposos",
+        "Jesucristo",
+        "iglesia"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué relación establece el pasaje entre la unión matrimonial y una imagen mayor?",
+      "opcion_a": "Usa la unión matrimonial para hablar también de Cristo y la iglesia",
+      "opcion_b": "La convierte en una obligación de soportar abuso",
+      "opcion_c": "La reduce a una alianza económica",
+      "opcion_d": "La usa para negar toda individualidad",
+      "correct_option": "A",
+      "correct_answer": "Usa la unión matrimonial para hablar también de Cristo y la iglesia",
+      "explanation": "La cita sobre una sola carne se conecta con la relación entre Cristo y la iglesia. Esta imagen no elimina la dignidad, seguridad ni responsabilidad individual.",
+      "additional_references": [
+        "Génesis 2:24"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0030",
+      "book": "Efesios",
+      "chapter": 5,
+      "verse_start": 18,
+      "verse_end": 20,
+      "reference": "Efesios 5:18-20",
+      "category": "NT_GENERAL",
+      "subcategory": "Plenitud y gratitud",
+      "characters": [
+        "Espíritu Santo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la plenitud del Espíritu se relaciona con adoración y gratitud comunitaria",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El pasaje conecta la plenitud del Espíritu con canto, adoración y gratitud, no con pérdida de control o coerción.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0031",
+      "book": "Efesios",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Efesios 6:1-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Hijos y padres",
+      "characters": [
+        "Hijos",
+        "padres"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué equilibrio aparece en las instrucciones dirigidas a hijos y padres?",
+      "opcion_a": "Responsabilidad de los hijos y deber de los padres de no provocar ni maltratar",
+      "opcion_b": "Autoridad parental sin límites",
+      "opcion_c": "Derecho a castigar físicamente sin restricción",
+      "opcion_d": "Obligación de ocultar el abuso familiar",
+      "correct_option": "A",
+      "correct_answer": "Responsabilidad de los hijos y deber de los padres de no provocar ni maltratar",
+      "explanation": "El pasaje combina responsabilidad filial con una obligación explícita de los padres de no provocar. No legitima abuso, violencia ni silencio ante situaciones inseguras.",
+      "additional_references": [
+        "Éxodo 20:12",
+        "Deuteronomio 5:16"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0032",
+      "book": "Efesios",
+      "chapter": 6,
+      "verse_start": 5,
+      "verse_end": 9,
+      "reference": "Efesios 6:5-9",
+      "category": "NT_GENERAL",
+      "subcategory": "Esclavitud y responsabilidad moral",
+      "characters": [
+        "Siervos",
+        "amos"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo debe tratarse hoy el lenguaje sobre esclavos y amos en su contexto histórico?",
+      "opcion_a": "Como instrucciones dentro de una realidad antigua que no legitiman la esclavitud moderna",
+      "opcion_b": "Como aprobación permanente de poseer personas",
+      "opcion_c": "Como modelo laboral obligatorio",
+      "opcion_d": "Como negación del daño histórico de la esclavitud",
+      "correct_option": "A",
+      "correct_answer": "Como instrucciones dentro de una realidad antigua que no legitiman la esclavitud moderna",
+      "explanation": "El texto regula relaciones dentro de una institución antigua sin convertirla en ideal moral. No debe usarse para defender esclavitud, trata, explotación laboral o servidumbre.",
+      "additional_references": [
+        "Deuteronomio 10:17"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0033",
+      "book": "Efesios",
+      "chapter": 6,
+      "verse_start": 10,
+      "verse_end": 13,
+      "reference": "Efesios 6:10-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Fortaleza y conflicto espiritual",
+      "characters": [
+        "Dios",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Contra qué dirige el pasaje la lucha principal de la comunidad?",
+      "opcion_a": "Contra fuerzas espirituales del mal, no contra grupos humanos",
+      "opcion_b": "Contra personas de otra religión",
+      "opcion_c": "Contra naciones actuales",
+      "opcion_d": "Contra adversarios políticos identificables",
+      "correct_option": "A",
+      "correct_answer": "Contra fuerzas espirituales del mal, no contra grupos humanos",
+      "explanation": "La sección desplaza la lucha fuera de la hostilidad contra seres humanos. No autoriza violencia religiosa, política, étnica o social.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0034",
+      "book": "Efesios",
+      "chapter": 6,
+      "verse_start": 14,
+      "verse_end": 17,
+      "reference": "Efesios 6:14-17",
+      "category": "NT_GENERAL",
+      "subcategory": "Armadura de Dios",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tipo de recursos simboliza la armadura de Dios?",
+      "opcion_a": "Verdad, justicia, paz, fe, salvación y palabra de Dios",
+      "opcion_b": "Armas físicas para imponer la fe",
+      "opcion_c": "Tecnología militar",
+      "opcion_d": "Poder económico",
+      "correct_option": "A",
+      "correct_answer": "Verdad, justicia, paz, fe, salvación y palabra de Dios",
+      "explanation": "La armadura es una metáfora espiritual y ética. No es una invitación a usar armas o ejercer violencia contra personas.",
+      "additional_references": [
+        "Isaías 11:5",
+        "Isaías 52:7",
+        "Isaías 59:17"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0035",
+      "book": "Efesios",
+      "chapter": 6,
+      "verse_start": 18,
+      "verse_end": 20,
+      "reference": "Efesios 6:18-20",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Oración y misión",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué pide Pablo respecto de su propia tarea de anunciar el mensaje?",
+      "opcion_a": "Oración para hablar con claridad y valentía aun en su condición de prisionero",
+      "opcion_b": "Recursos para controlar a sus oyentes",
+      "opcion_c": "Protección para evitar toda oposición",
+      "opcion_d": "Autoridad para castigar a quienes discrepen",
+      "correct_option": "A",
+      "correct_answer": "Oración para hablar con claridad y valentía aun en su condición de prisionero",
+      "explanation": "Pablo solicita oración para comunicar el mensaje con valentía. Su encarcelamiento no se convierte en una orden de buscar sufrimiento ni de coaccionar a otros.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-EFE-0036",
+      "book": "Efesios",
+      "chapter": 6,
+      "verse_start": 21,
+      "verse_end": 24,
+      "reference": "Efesios 6:21-24",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Tíquico y cierre",
+      "characters": [
+        "Tíquico",
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Tíquico es presentado como colaborador que informará y animará a la comunidad",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Tíquico aparece como colaborador de confianza encargado de informar y animar a los destinatarios.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}

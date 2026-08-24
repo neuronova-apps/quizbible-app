@@ -91,6 +91,7 @@ ROMANS_PATH = Path(__file__).parent / "romans-master-input.json"
 CORINTHIANS1_PATH = Path(__file__).parent / "1corinthians-master-input.json"
 CORINTHIANS2_PATH = Path(__file__).parent / "2corinthians-master-input.json"
 GALATIANS_PATH = Path(__file__).parent / "galatians-master-input.json"
+EPHESIANS_PATH = Path(__file__).parent / "ephesians-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -380,6 +381,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.galatians_questions = {q["id"]: q for q in (raw_gal.get("questions", []) if isinstance(raw_gal, dict) else raw_gal)}
         else:
             cls.galatians_questions = {}
+
+        if EPHESIANS_PATH.exists():
+            raw_efe = json.loads(EPHESIANS_PATH.read_text(encoding="utf-8"))
+            cls.ephesians_questions = {q["id"]: q for q in (raw_efe.get("questions", []) if isinstance(raw_efe, dict) else raw_efe)}
+        else:
+            cls.ephesians_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -5226,6 +5233,147 @@ class TestAuditorCanonical(unittest.TestCase):
         self.assertNotEqual(res9["controles_superados"].get("control_nombres_propios"), "FAIL")
         self.assertNotEqual(res9["controles_superados"].get("control_rango_suficiente"), "FAIL")
         self.assertIn(res9["estado"], {"VERIFICADO", "NO_CONCLUYENTE"})
+
+    # --- PRUEBAS ESPECÍFICAS DE EFESIOS ---
+
+    def get_ephesians_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.ephesians_questions, f"ID '{qid}' no encontrado en ephesians-master-input.json")
+        return copy.deepcopy(self.ephesians_questions[qid])
+
+    def test_detect_book_key_ephesians(self) -> None:
+        """Verifica detección de book_key para Efesios y sus variantes."""
+        spec_efe = {"questions": [{"id": "NQB-NT-EFE-0001", "book": "Efesios"}]}
+        self.assertEqual(detect_book_key(spec_efe), "ephesians")
+
+        spec_alias = {"questions": [{"id": "NQB-NT-EFE-0001", "book": "efesios"}]}
+        self.assertEqual(detect_book_key(spec_alias), "ephesians")
+
+        spec_en = {"questions": [{"id": "NQB-NT-EFE-0001", "book": "Ephesians"}]}
+        self.assertEqual(detect_book_key(spec_en), "ephesians")
+
+        spec_short = {"questions": [{"id": "NQB-NT-EFE-0001", "book": "efe"}]}
+        self.assertEqual(detect_book_key(spec_short), "ephesians")
+
+        spec_carta = {"questions": [{"id": "NQB-NT-EFE-0001", "book": "Carta a los Efesios"}]}
+        self.assertEqual(detect_book_key(spec_carta), "ephesians")
+
+    def test_ephesians_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de Efesios en BOOK_CONFIGS."""
+        self.assertIn("ephesians", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["ephesians"]
+        self.assertEqual(cfg["canonical_name"], "Efesios")
+        self.assertEqual(cfg["api_name"], "Efesios")
+        self.assertEqual(cfg["total_chapters"], 6)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("efesios", cfg["aliases"])
+        self.assertIn("ephesians", cfg["aliases"])
+        self.assertIn("efe", cfg["aliases"])
+        self.assertIn("efeso", cfg["ambient_places"])
+        self.assertIn("roma", cfg["ambient_places"])
+
+    def test_global_canonical_id_reference_integrity_ephesians(self) -> None:
+        """Verifica consistencia de IDs y referencias en Efesios."""
+        if not self.ephesians_questions:
+            self.skipTest("ephesians-master-input.json no disponible")
+        for qid, q in self.ephesians_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_ephesians_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de Efesios."""
+        if not self.ephesians_questions:
+            self.skipTest("ephesians-master-input.json no disponible")
+        self.assertEqual(len(self.ephesians_questions), 36)
+
+        # 6 preguntas por capítulo
+        ch_counts = collections.Counter(q["chapter"] for q in self.ephesians_questions.values())
+        self.assertEqual(len(ch_counts), 6)
+        for ch in range(1, 7):
+            self.assertEqual(ch_counts[ch], 6, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 6")
+
+        # Dificultad: Básico=9, Intermedio=13, Avanzado=11, Experto=3
+        diff_counts = collections.Counter(q["difficulty"] for q in self.ephesians_questions.values())
+        self.assertEqual(diff_counts["Básico"], 9)
+        self.assertEqual(diff_counts["Intermedio"], 13)
+        self.assertEqual(diff_counts["Avanzado"], 11)
+        self.assertEqual(diff_counts["Experto"], 3)
+
+        # Tipos: 30 MC, 6 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.ephesians_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 30)
+        self.assertEqual(type_counts["TRUE_FALSE"], 6)
+
+        tf_ids = [q["id"] for q in self.ephesians_questions.values() if q.get("question_type") == "TRUE_FALSE"]
+        expected_tf = ["NQB-NT-EFE-0006", "NQB-NT-EFE-0012", "NQB-NT-EFE-0018", "NQB-NT-EFE-0024", "NQB-NT-EFE-0030", "NQB-NT-EFE-0036"]
+        self.assertEqual(sorted(tf_ids), sorted(expected_tf))
+
+    def test_ephesians_additional_references(self) -> None:
+        """Verifica las 9 preguntas con 12 referencias adicionales en Efesios."""
+        if not self.ephesians_questions:
+            self.skipTest("ephesians-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-EFE-0006": ["Salmos 8:6"],
+            "NQB-NT-EFE-0010": ["Isaías 57:19"],
+            "NQB-NT-EFE-0020": ["Salmos 68:18"],
+            "NQB-NT-EFE-0023": ["Zacarías 8:16"],
+            "NQB-NT-EFE-0028": ["Génesis 2:24"],
+            "NQB-NT-EFE-0029": ["Génesis 2:24"],
+            "NQB-NT-EFE-0031": ["Éxodo 20:12", "Deuteronomio 5:16"],
+            "NQB-NT-EFE-0032": ["Deuteronomio 10:17"],
+            "NQB-NT-EFE-0034": ["Isaías 11:5", "Isaías 52:7", "Isaías 59:17"]
+        }
+        found_add_refs = {}
+        for qid, q in self.ephesians_questions.items():
+            refs = q.get("additional_references", [])
+            if refs:
+                found_add_refs[qid] = refs
+
+        self.assertEqual(len(found_add_refs), 9)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 12)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_ephesians_modes_and_categories(self) -> None:
+        """Verifica la asignación de modos y categorías sin categorías de Jesús en Efesios."""
+        if not self.ephesians_questions:
+            self.skipTest("ephesians-master-input.json no disponible")
+        for qid, q in self.ephesians_questions.items():
+            cat = q.get("category")
+            self.assertIn(cat, {"NT_GENERAL", "PERSONAJES_BIBLICOS"})
+            self.assertNotIn(cat, {"JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"})
+            modes = q.get("eligible_modes", [])
+            self.assertIn("NT", modes)
+            self.assertIn("AMBOS", modes)
+            if cat == "PERSONAJES_BIBLICOS":
+                self.assertIn("PERSONAJES_NT", modes)
+                self.assertIn("PERSONAJES_AMBOS", modes)
+            if q.get("question_type") == "TRUE_FALSE":
+                self.assertIn("VERDADERO_FALSO_NT", modes)
+                self.assertIn("VERDADERO_FALSO_AMBOS", modes)
+
+    def test_ephesians_0036_tiquico_and_armadura_metaphor(self) -> None:
+        """Verifica que Tíquico sea reconocido como personaje real y la armadura como metáfora."""
+        if not self.ephesians_questions:
+            self.skipTest("ephesians-master-input.json no disponible")
+
+        # Mock passage text de RVR1960 para Efesios 6:21-24
+        efe6_verses = {
+            21: "Para que también vosotros sepáis mis asuntos, y lo que hago, todo os lo hará saber Tíquico, hermano amado y fiel ministro en el Señor,",
+            22: "el cual envié a vosotros para esto mismo, para que sepáis lo tocante a nosotros, y que consuele vuestros corazones.",
+            23: "Paz sea a los hermanos, y amor con fe, de Dios Padre y del Señor Jesucristo.",
+            24: "La gracia sea con todos los que aman a nuestro Señor Jesucristo con amor inalterable. Amén."
+        }
+        q36 = self.get_ephesians_question("NQB-NT-EFE-0036")
+        res36 = evaluate_question(q36, efe6_verses, book_key="ephesians")
+        self.assertEqual(res36["controles_superados"].get("control_nombres_propios"), "PASS")
+        self.assertNotEqual(res36["estado"], "REQUIERE_CORRECCION")
 
 
 if __name__ == "__main__":
