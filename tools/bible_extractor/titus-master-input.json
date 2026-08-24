@@ -1,0 +1,559 @@
+{
+  "source": "Quiz Bible master bank - Tito",
+  "version": "RVR1960",
+  "book": "Tito",
+  "total_questions": 18,
+  "questions": [
+    {
+      "id": "NQB-NT-TIT-0001",
+      "book": "Tito",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "Tito 1:1-4",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Saludo y relación pastoral",
+      "characters": [
+        "Pablo",
+        "Tito"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo presenta Pablo a Tito en el saludo de la carta?",
+      "opcion_a": "Como verdadero hijo en la común fe",
+      "opcion_b": "Como gobernador de Creta",
+      "opcion_c": "Como autor de la carta",
+      "opcion_d": "Como sacerdote del templo",
+      "correct_option": "A",
+      "correct_answer": "Como verdadero hijo en la común fe",
+      "explanation": "El saludo presenta a Pablo como remitente y a Tito como verdadero hijo en la común fe, dentro de una relación pastoral y formativa.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0002",
+      "book": "Tito",
+      "chapter": 1,
+      "verse_start": 5,
+      "verse_end": 5,
+      "reference": "Tito 1:5",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Encargo en Creta",
+      "characters": [
+        "Pablo",
+        "Tito"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué encargo dejó Pablo a Tito respecto de las comunidades de Creta?",
+      "opcion_a": "Poner en orden lo que faltaba y establecer ancianos en cada ciudad",
+      "opcion_b": "Fundar un gobierno civil en la isla",
+      "opcion_c": "Cerrar toda comunidad que tuviera desacuerdos",
+      "opcion_d": "Sustituir la enseñanza por tradiciones locales",
+      "correct_option": "A",
+      "correct_answer": "Poner en orden lo que faltaba y establecer ancianos en cada ciudad",
+      "explanation": "Pablo recuerda que dejó a Tito en Creta para completar la organización pendiente y establecer ancianos. El encargo es eclesial, no político.",
+      "additional_references": [
+        "Hechos 14:23"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0003",
+      "book": "Tito",
+      "chapter": 1,
+      "verse_start": 6,
+      "verse_end": 9,
+      "reference": "Tito 1:6-9",
+      "category": "NT_GENERAL",
+      "subcategory": "Carácter y enseñanza de los ancianos",
+      "characters": [
+        "Tito",
+        "ancianos"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación refleja mejor los requisitos destacados para quienes sirven como ancianos?",
+      "opcion_a": "Carácter íntegro, dominio propio, hospitalidad y fidelidad a la palabra enseñada",
+      "opcion_b": "Prestigio económico y capacidad para imponer obediencia",
+      "opcion_c": "Ausencia total de errores pasados y autoridad sin supervisión",
+      "opcion_d": "Fuerza para intimidar a quienes contradicen",
+      "correct_option": "A",
+      "correct_answer": "Carácter íntegro, dominio propio, hospitalidad y fidelidad a la palabra enseñada",
+      "explanation": "La sección prioriza carácter, sobriedad, hospitalidad y apego a la enseñanza fiel. No convierte el liderazgo en dominio, intimidación o impunidad.",
+      "additional_references": [
+        "1 Timoteo 3:1-7"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0004",
+      "book": "Tito",
+      "chapter": 1,
+      "verse_start": 10,
+      "verse_end": 11,
+      "reference": "Tito 1:10-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Enseñanza engañosa y daño a hogares",
+      "characters": [
+        "comunidad",
+        "Tito"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué problema concreto se atribuye a ciertos habladores y engañadores que debían ser corregidos?",
+      "opcion_a": "Trastornaban familias enteras enseñando por ganancia deshonesta lo que no convenía",
+      "opcion_b": "Hacían demasiadas preguntas durante las reuniones",
+      "opcion_c": "Estudiaban genealogías familiares con fines históricos",
+      "opcion_d": "Se negaban a ocupar cargos políticos",
+      "correct_option": "A",
+      "correct_answer": "Trastornaban familias enteras enseñando por ganancia deshonesta lo que no convenía",
+      "explanation": "La preocupación es el daño producido por enseñanza engañosa asociada a ganancia deshonesta. No autoriza censura indiscriminada ni castigo violento de quien discrepa.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0005",
+      "book": "Tito",
+      "chapter": 1,
+      "verse_start": 12,
+      "verse_end": 14,
+      "reference": "Tito 1:12-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Cita sobre los cretenses y corrección contextual",
+      "characters": [
+        "cretenses",
+        "Tito"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cautela es necesaria al leer la dura cita sobre los cretenses incluida en la argumentación?",
+      "opcion_a": "No convertir una polémica contextual en un estereotipo contra todos los cretenses de cualquier época",
+      "opcion_b": "Usar la frase para describir a toda persona nacida en Creta",
+      "opcion_c": "Aplicar la acusación a los griegos modernos en general",
+      "opcion_d": "Considerar la nacionalidad como prueba de carácter moral",
+      "correct_option": "A",
+      "correct_answer": "No convertir una polémica contextual en un estereotipo contra todos los cretenses de cualquier época",
+      "explanation": "La carta incorpora una cita polémica dentro de una corrección concreta. No debe transformarse en prejuicio étnico, nacional o cultural contra personas actuales.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0006",
+      "book": "Tito",
+      "chapter": 1,
+      "verse_start": 12,
+      "verse_end": 14,
+      "reference": "Tito 1:12-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Cita contextual y estereotipos",
+      "characters": [
+        "cretenses"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la cita polémica permite etiquetar a todos los cretenses de cualquier época como mentirosos",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. La cita aparece en un argumento contextual y no autoriza estereotipos permanentes contra una población por su origen.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0007",
+      "book": "Tito",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "Tito 2:1-2",
+      "category": "NT_GENERAL",
+      "subcategory": "Madurez de los hombres mayores",
+      "characters": [
+        "hombres mayores"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cualidades se destacan para los hombres mayores dentro de la enseñanza sana?",
+      "opcion_a": "Sobriedad, dignidad, dominio propio y firmeza en fe, amor y paciencia",
+      "opcion_b": "Superioridad sobre las generaciones jóvenes",
+      "opcion_c": "Derecho a controlar sin límites a la familia",
+      "opcion_d": "Aislamiento de quienes tengan menos edad",
+      "correct_option": "A",
+      "correct_answer": "Sobriedad, dignidad, dominio propio y firmeza en fe, amor y paciencia",
+      "explanation": "El pasaje describe cualidades de madurez. No convierte la edad en superioridad moral automática ni en autoridad abusiva.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0008",
+      "book": "Tito",
+      "chapter": 2,
+      "verse_start": 3,
+      "verse_end": 5,
+      "reference": "Tito 2:3-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Mujeres mayores y enseñanza del bien",
+      "characters": [
+        "mujeres mayores",
+        "mujeres jóvenes"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué enfoque conserva mejor la instrucción dirigida a mujeres mayores y jóvenes?",
+      "opcion_a": "Promover conducta reverente, enseñanza del bien y relaciones responsables sin usar el pasaje para inferioridad o control abusivo",
+      "opcion_b": "Prohibir a todas las mujeres cualquier forma de enseñanza",
+      "opcion_c": "Autorizar a familiares a controlar ropa, amistades y decisiones mediante coerción",
+      "opcion_d": "Afirmar que la dignidad espiritual depende exclusivamente del estado civil",
+      "correct_option": "A",
+      "correct_answer": "Promover conducta reverente, enseñanza del bien y relaciones responsables sin usar el pasaje para inferioridad o control abusivo",
+      "explanation": "La sección organiza consejos pastorales para distintos grupos. No justifica inferioridad femenina, violencia doméstica, coerción ni prohibición universal de enseñar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0009",
+      "book": "Tito",
+      "chapter": 2,
+      "verse_start": 6,
+      "verse_end": 8,
+      "reference": "Tito 2:6-8",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Ejemplo de Tito y jóvenes",
+      "characters": [
+        "Tito",
+        "jóvenes"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo debe acompañar Tito su exhortación a los jóvenes al dominio propio?",
+      "opcion_a": "Siendo él mismo ejemplo de buenas obras, integridad y palabra sana",
+      "opcion_b": "Imponiendo respeto mediante amenazas",
+      "opcion_c": "Reclamando obediencia por su posición sin rendir cuentas",
+      "opcion_d": "Evitar toda relación con personas jóvenes",
+      "correct_option": "A",
+      "correct_answer": "Siendo él mismo ejemplo de buenas obras, integridad y palabra sana",
+      "explanation": "Tito debe unir exhortación y ejemplo personal. La autoridad pastoral se vincula con integridad, enseñanza sana y conducta observable.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0010",
+      "book": "Tito",
+      "chapter": 2,
+      "verse_start": 9,
+      "verse_end": 10,
+      "reference": "Tito 2:9-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Esclavitud antigua y conducta responsable",
+      "characters": [
+        "siervos",
+        "amos"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué límite es imprescindible al aplicar hoy la instrucción dirigida a siervos dentro del mundo antiguo?",
+      "opcion_a": "No usarla para aprobar esclavitud, trata, trabajo forzado o explotación moderna",
+      "opcion_b": "Considerar la esclavitud una institución que debe restaurarse",
+      "opcion_c": "Negar derechos laborales cuando una autoridad lo ordena",
+      "opcion_d": "Exigir obediencia incluso ante abuso o delito",
+      "correct_option": "A",
+      "correct_answer": "No usarla para aprobar esclavitud, trata, trabajo forzado o explotación moderna",
+      "explanation": "La exhortación se sitúa en una estructura social antigua. No legitima esclavitud moderna, trata, coerción laboral ni obediencia ante abuso.",
+      "additional_references": [
+        "Filemón 1:15-16"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0011",
+      "book": "Tito",
+      "chapter": 2,
+      "verse_start": 11,
+      "verse_end": 14,
+      "reference": "Tito 2:11-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Gracia, vida presente y esperanza",
+      "characters": [
+        "Jesucristo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué efecto formativo se atribuye a la gracia de Dios mientras se espera la esperanza futura?",
+      "opcion_a": "Enseñar a vivir con dominio propio, justicia y piedad en el presente",
+      "opcion_b": "Garantizar prosperidad económica a toda persona creyente",
+      "opcion_c": "Eliminar la necesidad de decisiones responsables",
+      "opcion_d": "Permitir despreciar la vida presente por esperar el futuro",
+      "correct_option": "A",
+      "correct_answer": "Enseñar a vivir con dominio propio, justicia y piedad en el presente",
+      "explanation": "La gracia se presenta como salvadora y formativa, orientando la conducta presente y la esperanza. No promete riqueza ni fuga de responsabilidades.",
+      "additional_references": [
+        "Efesios 2:8-10"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0012",
+      "book": "Tito",
+      "chapter": 2,
+      "verse_start": 15,
+      "verse_end": 15,
+      "reference": "Tito 2:15",
+      "category": "NT_GENERAL",
+      "subcategory": "Encargo de enseñar y exhortar",
+      "characters": [
+        "Tito"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Tito recibe el encargo de hablar, exhortar y corregir conforme a la enseñanza que se le ha confiado",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El encargo pastoral incluye enseñar, exhortar y corregir; no convierte esa responsabilidad en permiso para humillar, intimidar o abusar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0013",
+      "book": "Tito",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "Tito 3:1-2",
+      "category": "NT_GENERAL",
+      "subcategory": "Autoridades, buenas obras y mansedumbre",
+      "characters": [
+        "comunidad",
+        "autoridades"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitud comunitaria acompaña la instrucción respecto de gobernantes y autoridades?",
+      "opcion_a": "Estar dispuestos para toda buena obra, evitar la difamación y mostrar mansedumbre",
+      "opcion_b": "Aprobar sin examen cualquier decisión del gobierno",
+      "opcion_c": "Guardar silencio ante todo abuso o injusticia",
+      "opcion_d": "Buscar poder político como condición de fidelidad",
+      "correct_option": "A",
+      "correct_answer": "Estar dispuestos para toda buena obra, evitar la difamación y mostrar mansedumbre",
+      "explanation": "La exhortación combina orden cívico, buenas obras y trato respetuoso. No exige obediencia ciega, encubrimiento de delitos ni renuncia a la crítica legítima.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0014",
+      "book": "Tito",
+      "chapter": 3,
+      "verse_start": 3,
+      "verse_end": 7,
+      "reference": "Tito 3:3-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Misericordia, renovación y salvación",
+      "characters": [
+        "Dios",
+        "Jesucristo",
+        "Espíritu Santo",
+        "comunidad"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué fundamento se destaca para la salvación al contrastarlo con obras realizadas por mérito propio?",
+      "opcion_a": "La misericordia de Dios y su acción renovadora, no las obras de justicia hechas para merecerla",
+      "opcion_b": "La superioridad moral acumulada por años de servicio",
+      "opcion_c": "Un ritual de higiene corporal que garantiza salvación",
+      "opcion_d": "La pertenencia étnica o familiar a una comunidad",
+      "correct_option": "A",
+      "correct_answer": "La misericordia de Dios y su acción renovadora, no las obras de justicia hechas para merecerla",
+      "explanation": "El pasaje atribuye la salvación a la misericordia y renovación de Dios. El lenguaje de lavamiento no es una recomendación médica ni de higiene corporal.",
+      "additional_references": [
+        "Efesios 2:4-9"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0015",
+      "book": "Tito",
+      "chapter": 3,
+      "verse_start": 8,
+      "verse_end": 8,
+      "reference": "Tito 3:8",
+      "category": "NT_GENERAL",
+      "subcategory": "Buenas obras y utilidad comunitaria",
+      "characters": [
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Por qué se insiste en que quienes han creído procuren ocuparse en buenas obras?",
+      "opcion_a": "Porque son buenas y útiles para las personas como fruto de una vida coherente",
+      "opcion_b": "Porque las buenas obras compran la salvación",
+      "opcion_c": "Porque sustituyen completamente la fe",
+      "opcion_d": "Porque permiten sentirse superiores a quienes necesitan ayuda",
+      "correct_option": "A",
+      "correct_answer": "Porque son buenas y útiles para las personas como fruto de una vida coherente",
+      "explanation": "La carta valora las buenas obras por su utilidad y coherencia práctica. No las presenta como pago para obtener salvación ni como motivo de superioridad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0016",
+      "book": "Tito",
+      "chapter": 3,
+      "verse_start": 9,
+      "verse_end": 9,
+      "reference": "Tito 3:9",
+      "category": "NT_GENERAL",
+      "subcategory": "Controversias y discusiones improductivas",
+      "characters": [
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tipo de discusiones aconseja evitar por ser inútiles y vanas?",
+      "opcion_a": "Controversias necias, genealogías y disputas legalistas que no producen fruto",
+      "opcion_b": "Todo estudio histórico o académico",
+      "opcion_c": "Cualquier pregunta sincera sobre la fe",
+      "opcion_d": "Toda conversación sobre diferencias de interpretación",
+      "correct_option": "A",
+      "correct_answer": "Controversias necias, genealogías y disputas legalistas que no producen fruto",
+      "explanation": "La advertencia se dirige a controversias improductivas. No es una prohibición general de investigar, estudiar, preguntar o razonar críticamente.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0017",
+      "book": "Tito",
+      "chapter": 3,
+      "verse_start": 10,
+      "verse_end": 11,
+      "reference": "Tito 3:10-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Persona divisiva y límites de la disciplina",
+      "characters": [
+        "comunidad",
+        "persona divisiva"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué límite debe conservarse al aplicar la medida pastoral respecto de una persona que persiste en causar divisiones tras advertencias?",
+      "opcion_a": "Aplicar límites comunitarios sin convertir la disciplina en odio, violencia, humillación o abandono de protección básica",
+      "opcion_b": "Tratar a la persona como enemiga a la que se puede hostigar",
+      "opcion_c": "Difundir acusaciones no verificadas para aislarla socialmente",
+      "opcion_d": "Usar fuerza física para conseguir arrepentimiento",
+      "correct_option": "A",
+      "correct_answer": "Aplicar límites comunitarios sin convertir la disciplina en odio, violencia, humillación o abandono de protección básica",
+      "explanation": "La carta contempla una medida tras advertencias reiteradas. Esto no autoriza violencia, acoso, difamación ni prácticas abusivas de aislamiento.",
+      "additional_references": [
+        "2 Timoteo 2:23-26"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-TIT-0018",
+      "book": "Tito",
+      "chapter": 3,
+      "verse_start": 12,
+      "verse_end": 15,
+      "reference": "Tito 3:12-15",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Colaboradores y necesidades prácticas",
+      "characters": [
+        "Pablo",
+        "Tito",
+        "Artemas",
+        "Tíquico",
+        "Zenas",
+        "Apolos"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo ordena impedir que Zenas y Apolos reciban ayuda para continuar su viaje",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Pablo pide que Zenas y Apolos sean encaminados con diligencia y que nada les falte, dentro de una exhortación final a buenas obras.",
+      "additional_references": [
+        "Hechos 18:24-28"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}

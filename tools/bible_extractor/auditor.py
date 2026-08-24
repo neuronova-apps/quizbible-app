@@ -1047,6 +1047,21 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "antioquia", "antioquía", "iconio", "listra", "galacia", "dalmacia", "corinto"
         },
     },
+    "titus": {
+        "canonical_name": "Tito",
+        "api_name": "Tito",
+        "aliases": {
+            "tito", "titus", "tit", "epistola a tito", "epístola a tito", "carta a tito"
+        },
+        "total_chapters": 3,
+        "blocks": [
+            (1, 3, "titus-01-03.json"),
+        ],
+        "default_output_dir": "build/audit/titus",
+        "ambient_places": {
+            "creta", "nicopolis", "nicópolis", "dalmacia"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -1199,7 +1214,7 @@ BIBLE_PERSONAJES = {
     "epafrodito", "evodia", "sintique", "síntique", "clemente",
     "aristarco", "arquipo", "demas", "epafras", "ninfa", "justo", "himeneo",
     "loida", "eunice", "figelo", "hermogenes", "hermógenes", "onesiforo", "onesíforo", "fileto", "janes", "jambres",
-    "crescente", "carpo", "pudente", "lino", "claudia",
+    "crescente", "carpo", "pudente", "lino", "claudia", "artemas", "zenas",
     # Otros comunes
     "david", "saul", "samuel", "nabucodonosor", "pablo", "pedro", "juan", "jesus", "mateo", "marcos",
     "lucas", "esteban", "timoteo",
@@ -1254,6 +1269,7 @@ BIBLE_PLACES = {
     "tesalonica", "tesalónica", "berea", "atenas", "corinto", "macedonia", "filipos",
     "efeso", "éfeso", "roma", "mileto", "troas", "tróade", "troade",
     "antioquia", "antioquía", "iconio", "listra", "galacia", "dalmacia",
+    "creta", "nicopolis", "nicópolis",
 }
 
 # Raíces de parentesco y lemas

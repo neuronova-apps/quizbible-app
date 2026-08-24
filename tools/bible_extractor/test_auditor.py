@@ -98,6 +98,7 @@ THESSALONIANS1_PATH = Path(__file__).parent / "1thessalonians-master-input.json"
 THESSALONIANS2_PATH = Path(__file__).parent / "2thessalonians-master-input.json"
 TIMOTHY1_PATH = Path(__file__).parent / "1timothy-master-input.json"
 TIMOTHY2_PATH = Path(__file__).parent / "2timothy-master-input.json"
+TITUS_PATH = Path(__file__).parent / "titus-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -429,6 +430,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.timothy2_questions = {q["id"]: q for q in (raw_2ti.get("questions", []) if isinstance(raw_2ti, dict) else raw_2ti)}
         else:
             cls.timothy2_questions = {}
+
+        if TITUS_PATH.exists():
+            raw_tit = json.loads(TITUS_PATH.read_text(encoding="utf-8"))
+            cls.titus_questions = {q["id"]: q for q in (raw_tit.get("questions", []) if isinstance(raw_tit, dict) else raw_tit)}
+        else:
+            cls.titus_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -6528,6 +6535,204 @@ class TestAuditorCanonical(unittest.TestCase):
             for pq in prior_questions:
                 self.assertNotIn(pq["question"].strip(), ti_texts,
                                  f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y 2 Timoteo")
+
+    # --- PRUEBAS ESPECÍFICAS DE TITO ---
+
+    def get_titus_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.titus_questions, f"ID '{qid}' no encontrado en titus-master-input.json")
+        return copy.deepcopy(self.titus_questions[qid])
+
+    def test_detect_book_key_titus(self) -> None:
+        """Verifica detección de book_key para Tito y sus variantes."""
+        for alias in ["Tito", "tito", "Titus", "titus", "tit", "Epístola a Tito", "Carta a Tito"]:
+            spec = {"questions": [{"id": "NQB-NT-TIT-0001", "book": alias}]}
+            self.assertEqual(detect_book_key(spec), "titus",
+                             f"detect_book_key failed for alias: {alias}")
+
+    def test_titus_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de Tito en BOOK_CONFIGS."""
+        self.assertIn("titus", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["titus"]
+        self.assertEqual(cfg["canonical_name"], "Tito")
+        self.assertEqual(cfg["api_name"], "Tito")
+        self.assertEqual(cfg["total_chapters"], 3)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("tito", cfg["aliases"])
+        self.assertIn("titus", cfg["aliases"])
+        self.assertIn("tit", cfg["aliases"])
+        self.assertIn("creta", cfg["ambient_places"])
+        self.assertIn("nicopolis", cfg["ambient_places"])
+        self.assertIn("dalmacia", cfg["ambient_places"])
+
+    def test_titus_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de Tito."""
+        if not self.titus_questions:
+            self.skipTest("titus-master-input.json no disponible")
+        self.assertEqual(len(self.titus_questions), 18)
+
+        # 6 preguntas por capítulo (3 capítulos)
+        ch_counts = collections.Counter(q["chapter"] for q in self.titus_questions.values())
+        self.assertEqual(len(ch_counts), 3)
+        for ch in range(1, 4):
+            self.assertEqual(ch_counts[ch], 6, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 6")
+
+        # IDs: NQB-NT-TIT-0001 a NQB-NT-TIT-0018
+        ids = sorted(self.titus_questions.keys())
+        self.assertEqual(ids[0], "NQB-NT-TIT-0001")
+        self.assertEqual(ids[-1], "NQB-NT-TIT-0018")
+        self.assertEqual(len(set(ids)), 18)
+
+        # Dificultad: Básico=5, Intermedio=6, Avanzado=5, Experto=2
+        diff_counts = collections.Counter(q["difficulty"] for q in self.titus_questions.values())
+        self.assertEqual(diff_counts["Básico"], 5)
+        self.assertEqual(diff_counts["Intermedio"], 6)
+        self.assertEqual(diff_counts["Avanzado"], 5)
+        self.assertEqual(diff_counts["Experto"], 2)
+
+        # Tipos: 15 MC, 3 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.titus_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 15)
+        self.assertEqual(type_counts["TRUE_FALSE"], 3)
+
+        tf_ids = sorted(q["id"] for q in self.titus_questions.values() if q.get("question_type") == "TRUE_FALSE")
+        expected_tf = sorted(["NQB-NT-TIT-0006", "NQB-NT-TIT-0012", "NQB-NT-TIT-0018"])
+        self.assertEqual(tf_ids, expected_tf)
+
+    def test_titus_categories(self) -> None:
+        """Verifica categorías sin categorías de Evangelios en Tito."""
+        if not self.titus_questions:
+            self.skipTest("titus-master-input.json no disponible")
+        cat_counts = collections.Counter(q["category"] for q in self.titus_questions.values())
+        self.assertEqual(cat_counts["NT_GENERAL"], 14)
+        self.assertEqual(cat_counts["PERSONAJES_BIBLICOS"], 4)
+        for forbidden in ["JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"]:
+            self.assertEqual(cat_counts.get(forbidden, 0), 0, f"Categoría no permitida: {forbidden}")
+
+    def test_titus_additional_references(self) -> None:
+        """Verifica las 7 preguntas con 7 referencias individuales en Tito."""
+        if not self.titus_questions:
+            self.skipTest("titus-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-TIT-0002": ["Hechos 14:23"],
+            "NQB-NT-TIT-0003": ["1 Timoteo 3:1-7"],
+            "NQB-NT-TIT-0010": ["Filemón 1:15-16"],
+            "NQB-NT-TIT-0011": ["Efesios 2:8-10"],
+            "NQB-NT-TIT-0014": ["Efesios 2:4-9"],
+            "NQB-NT-TIT-0017": ["2 Timoteo 2:23-26"],
+            "NQB-NT-TIT-0018": ["Hechos 18:24-28"],
+        }
+        found_add_refs = {
+            qid: q["additional_references"]
+            for qid, q in self.titus_questions.items()
+            if q.get("additional_references")
+        }
+        self.assertEqual(len(found_add_refs), 7)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 7)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_titus_modes(self) -> None:
+        """Verifica la asignación de modos en Tito."""
+        if not self.titus_questions:
+            self.skipTest("titus-master-input.json no disponible")
+        mode_counts = collections.defaultdict(int)
+        for q in self.titus_questions.values():
+            for m in q.get("eligible_modes", []):
+                mode_counts[m] += 1
+        self.assertEqual(mode_counts["NT"], 18)
+        self.assertEqual(mode_counts["AMBOS"], 18)
+        self.assertEqual(mode_counts["PERSONAJES_NT"], 4)
+        self.assertEqual(mode_counts["PERSONAJES_AMBOS"], 4)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_NT"], 3)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_AMBOS"], 3)
+
+    def test_titus_id_reference_integrity(self) -> None:
+        """Verifica consistencia de IDs y referencias en Tito."""
+        if not self.titus_questions:
+            self.skipTest("titus-master-input.json no disponible")
+        for qid, q in self.titus_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_titus_true_false_neutral_semantics(self) -> None:
+        """Verifica que TIT0006 y TIT0018 operen con semántica neutral (A=Falso, B=Verdadero, correct=A)."""
+        if not self.titus_questions:
+            self.skipTest("titus-master-input.json no disponible")
+        for qid in ["NQB-NT-TIT-0006", "NQB-NT-TIT-0018"]:
+            q = self.get_titus_question(qid)
+            self.assertEqual(q["opcion_a"].strip().lower(), "falso", f"{qid}: opcion_a debe ser Falso")
+            self.assertEqual(q["opcion_b"].strip().lower(), "verdadero", f"{qid}: opcion_b debe ser Verdadero")
+            self.assertEqual(q["correct_option"], "A", f"{qid}: correct_option debe ser A")
+            self.assertEqual(q["correct_answer"].strip().lower(), "falso", f"{qid}: correct_answer debe ser Falso")
+
+    def test_titus_epistle_epistolary_resolution(self) -> None:
+        """Verifica que Pablo y Tito se resuelvan en Tito."""
+        if not self.titus_questions:
+            self.skipTest("titus-master-input.json no disponible")
+
+        # Tito 1:5 — Por esta causa te dejé en Creta
+        tit1_5 = {
+            5: "Por esta causa te dejé en Creta, para que corrigieses lo deficiente, y establecieses ancianos en cada ciudad, así como yo te mandé;"
+        }
+        q2 = self.titus_questions.get("NQB-NT-TIT-0002")
+        if q2:
+            res = evaluate_question(q2, tit1_5, book_key="titus")
+            self.assertNotEqual(res["estado"], "REQUIERE_CORRECCION",
+                                f"Q NQB-NT-TIT-0002 no debe ser REQUIERE_CORRECCION: {res.get('incidencias')}")
+
+    def test_titus_characters_and_places(self) -> None:
+        """Verifica que personajes y lugares de Tito estén en sus lexicons."""
+        from auditor import BIBLE_PERSONAJES, BIBLE_PLACES
+        for p in ["pablo", "tito", "artemas", "tiquico", "zenas", "apolos"]:
+            self.assertIn(p, BIBLE_PERSONAJES, f"Falta personaje: {p}")
+        for l in ["creta", "nicopolis", "dalmacia"]:
+            self.assertIn(l, BIBLE_PLACES, f"Falta lugar: {l}")
+
+    def test_titus_no_duplicates_within(self) -> None:
+        """Verifica que no haya preguntas duplicadas internamente en Tito."""
+        if not self.titus_questions:
+            self.skipTest("titus-master-input.json no disponible")
+        questions_texts = [q["question"].strip() for q in self.titus_questions.values()]
+        self.assertEqual(len(questions_texts), len(set(questions_texts)), "Duplicados detectados internamente")
+
+    def test_titus_no_duplicates_cross_nt(self) -> None:
+        """Verifica que no haya preguntas duplicadas entre Tito y los 16 libros NT anteriores."""
+        if not self.titus_questions:
+            self.skipTest("titus-master-input.json no disponible")
+        tit_texts = {q["question"].strip() for q in self.titus_questions.values()}
+        prior_nt = [
+            PHILIPPIANS_PATH.parent / "matthew-master-input.json",
+            PHILIPPIANS_PATH.parent / "mark-master-input.json",
+            PHILIPPIANS_PATH.parent / "luke-master-input.json",
+            PHILIPPIANS_PATH.parent / "john-master-input.json",
+            PHILIPPIANS_PATH.parent / "acts-master-input.json",
+            PHILIPPIANS_PATH.parent / "romans-master-input.json",
+            PHILIPPIANS_PATH.parent / "1corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "galatians-master-input.json",
+            PHILIPPIANS_PATH.parent / "ephesians-master-input.json",
+            PHILIPPIANS_PATH.parent / "philippians-master-input.json",
+            PHILIPPIANS_PATH.parent / "colossians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2thessalonians-master-input.json",
+            PHILIPPIANS_PATH.parent / "1timothy-master-input.json",
+            PHILIPPIANS_PATH.parent / "2timothy-master-input.json",
+        ]
+        for prior_path in prior_nt:
+            if not prior_path.exists():
+                continue
+            prior_data = json.loads(prior_path.read_text(encoding="utf-8"))
+            prior_questions = prior_data.get("questions", []) if isinstance(prior_data, dict) else prior_data
+            for pq in prior_questions:
+                self.assertNotIn(pq["question"].strip(), tit_texts,
+                                 f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y Tito")
 
 
 if __name__ == "__main__":
