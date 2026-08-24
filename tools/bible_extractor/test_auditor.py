@@ -7464,6 +7464,122 @@ class TestAuditorCanonical(unittest.TestCase):
                 self.assertNotIn(pq["question"].strip(), san_texts,
                                  f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y Santiago")
 
+    def test_is_biblical_person_usage_demas(self) -> None:
+        """Verifica la desambiguación genérica entre Demas (personaje bíblico) y demás (uso común)."""
+        from auditor import is_biblical_person_usage
+
+        # TEST 1: Uso común con tilde
+        self.assertFalse(
+            is_biblical_person_usage("demas", "una persona humana como los demás"),
+            "Uso común con tilde ('los demás') debe retornar False"
+        )
+
+        # TEST 2: Texto sin tilde
+        self.assertFalse(
+            is_biblical_person_usage("demas", "una persona humana como los demas"),
+            "Uso común sin tilde ('los demas') debe retornar False"
+        )
+
+        # Locuciones comunes adicionales
+        self.assertFalse(is_biblical_person_usage("demas", "a los demás creyentes"))
+        self.assertFalse(is_biblical_person_usage("demas", "de las demás personas"))
+        self.assertFalse(is_biblical_person_usage("demas", "por lo demás, hermanos míos"))
+        self.assertFalse(is_biblical_person_usage("demas", "y demás cosas semejantes"))
+
+        # TEST 3: Uso bíblico real (2 Timoteo 4:10)
+        self.assertTrue(
+            is_biblical_person_usage("demas", "Demas me ha desamparado, amando este mundo"),
+            "Uso bíblico real con nombre 'Demas' debe retornar True"
+        )
+
+        # TEST 4: Uso bíblico real (Colosenses 4:14)
+        self.assertTrue(
+            is_biblical_person_usage("demas", "Lucas el médico amado, y Demas"),
+            "Uso bíblico real 'Lucas el médico amado, y Demas' debe retornar True"
+        )
+
+        # TEST 5: Uso bíblico real (Filemón 1:24)
+        self.assertTrue(
+            is_biblical_person_usage("demas", "Te saludan ... Demas y Lucas"),
+            "Uso bíblico real 'Te saludan ... Demas y Lucas' debe retornar True"
+        )
+
+    def test_regression_san_0029_demas_disambiguation(self) -> None:
+        """Verifica que NQB-NT-SAN-0029 no falle por el falso positivo de Demas/demás."""
+        from auditor import evaluate_question
+
+        san29_q = {
+            "id": "NQB-NT-SAN-0029",
+            "book": "Santiago",
+            "chapter": 5,
+            "verse_start": 17,
+            "verse_end": 18,
+            "reference": "Santiago 5:17-18",
+            "category": "PERSONAJES_BIBLICOS",
+            "subcategory": "Elías y la oración",
+            "characters": ["Elías"],
+            "difficulty": "Avanzado",
+            "question_type": "MULTIPLE_CHOICE",
+            "question": "¿Qué propósito cumple el ejemplo de Elías dentro de la enseñanza sobre la oración?",
+            "opcion_a": "Mostrar que una persona humana como los demás puede orar con fervor y que la oración importa",
+            "opcion_b": "Convertir a Elías en garantía de que toda petición producirá el mismo fenómeno natural",
+            "opcion_c": "Autorizar a creyentes actuales a controlar el clima",
+            "opcion_d": "Enseñar que una oración no respondida demuestra necesariamente falta de fe",
+            "correct_option": "A",
+            "correct_answer": "Mostrar que una persona humana como los demás puede orar con fervor y que la oración importa",
+            "explanation": "Elías ejemplifica una oración ferviente dentro del argumento de Santiago. El ejemplo no ofrece control automático del clima ni una fórmula para juzgar la fe de otras personas.",
+            "additional_references": ["1 Reyes 17:1", "1 Reyes 18:41-45"],
+            "eligible_modes": ["NT", "AMBOS", "PERSONAJES_NT", "PERSONAJES_AMBOS"]
+        }
+
+        # Simular verse_map completo del capítulo 5 de Santiago
+        verse_map = {v: f"Versículo simulado {v}" for v in range(1, 21)}
+        verse_map[17] = "Elías era hombre sujeto a pasiones semejantes a las nuestras, y oró fervientemente para que no lloviese, y no llovió sobre la tierra por tres años y seis meses."
+        verse_map[18] = "Y otra vez oró, y el cielo dio lluvia, y la tierra produjo su fruto."
+
+        eval_res = evaluate_question(san29_q, verse_map, book_key="james")
+
+        self.assertNotEqual(eval_res["controles_superados"]["control_nombres_propios"], "FAIL",
+                            "control_nombres_propios no debe ser FAIL por 'demás'")
+        self.assertNotEqual(eval_res["controles_superados"]["control_rango_suficiente"], "FAIL",
+                            "control_rango_suficiente no debe ser FAIL")
+        self.assertNotEqual(eval_res["estado"], "REQUIERE_CORRECCION",
+                            "El estado de SAN-0029 no debe ser REQUIERE_CORRECCION")
+
+    def test_regression_demas_biblical_character_references(self) -> None:
+        """Verifica que el personaje Demas sea correctamente reconocido en sus referencias bíblicas reales."""
+        from auditor import evaluate_question
+
+        # 2 Timoteo 4:10
+        tim2_q = {
+            "id": "TEST-2TI-0001",
+            "book": "2 Timoteo",
+            "chapter": 4,
+            "verse_start": 10,
+            "verse_end": 10,
+            "reference": "2 Timoteo 4:10",
+            "category": "PERSONAJES_BIBLICOS",
+            "characters": ["Demas"],
+            "difficulty": "Intermedio",
+            "question_type": "MULTIPLE_CHOICE",
+            "question": "¿Quién desamparó a Pablo por amor al mundo presente?",
+            "opcion_a": "Demas",
+            "opcion_b": "Lucas",
+            "opcion_c": "Tito",
+            "opcion_d": "Crescencio",
+            "correct_option": "A",
+            "correct_answer": "Demas",
+            "explanation": "Demas desamparó a Pablo habiendo amado este mundo.",
+            "additional_references": [],
+            "eligible_modes": ["NT"]
+        }
+        verse_map = {v: f"Versículo simulado {v}" for v in range(1, 23)}
+        verse_map[10] = "porque Demas me ha desamparado, amando este mundo, y se ha ido a Tesalónica, Crescente a Galacia, y Tito a Dalmacia."
+
+        eval_res = evaluate_question(tim2_q, verse_map, book_key="2timothy")
+        self.assertEqual(eval_res["controles_superados"]["control_nombres_propios"], "PASS",
+                         "Demas debe ser detectado como personaje bíblico válido en 2 Timoteo 4:10")
+
 
 if __name__ == "__main__":
     unittest.main()

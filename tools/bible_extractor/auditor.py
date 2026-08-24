@@ -1486,39 +1486,70 @@ def is_biblical_place_usage(token: str, full_text: str) -> bool:
 def is_biblical_person_usage(token: str, full_text: str) -> bool:
     """
     Determina si un token que coincide con una entrada de BIBLE_PERSONAJES está siendo utilizado
-    como personaje bíblico real o como sustantivo/verbo común homógrafo (ej: 'la mesa compartida' vs rey 'Mesa').
+    como personaje bíblico real o como sustantivo/pronombre/adjetivo/verbo común homógrafo
+    (ej: 'la mesa compartida' vs rey 'Mesa'; 'como los demás' vs colaborador paulino 'Demas').
     """
     norm_token = normalize(token).strip()
 
-    if norm_token != "mesa":
+    if norm_token == "mesa":
+        text_norm = normalize(full_text)
+        raw_lower = full_text.lower()
+
+        # 1. Patrones claros de uso como personaje bíblico real (Rey Mesa de Moab)
+        person_pattern = (
+            r"\b(?:el\s+)?rey\s+mesa\b|"
+            r"\bmesa\s*,?\s*(?:rey\s+de\s+moab|el\s+moabita|moabita)\b"
+        )
+        if re.search(person_pattern, raw_lower):
+            return True
+
+        # 2. Patrones claros de sustantivo común (mesa como mueble o acto de compartir comida)
+        common_noun_pattern = (
+            r"\b(?:la|una|esta|aquella|las|estas|cada|toda|otra|de\s+la|a\s+la|en\s+la|de\s+una|a\s+una|en\s+una)\s+mesas?\b|"
+            r"\bmesas?\s+(?:compartida|comun|puesta|servida|del\s+senor|de\s+los\s+senores|de\s+los\s+cambistas|de\s+dinero)\b|"
+            r"\b(?:sentar\w*|sentad\w*|com\w*|serv\w*|reclin\w*|particip\w*|acerc\w*)\s+(?:a\s+la|a\s+una|en\s+la|en\s+una)?\s*mesas?\b|"
+            r"\bmesas?\s+con\s+(?:otras\s+personas|creyentes|gentiles|judios|discipulos)\b"
+        )
+        if re.search(common_noun_pattern, text_norm):
+            return False
+
+        # Si aparece "mesa" en minúscula en el texto sin contexto de rey Mesa
+        if "mesa" in raw_lower:
+            return False
+
         return True
 
-    text_norm = normalize(full_text)
-    raw_lower = full_text.lower()
+    if norm_token == "demas":
+        raw_text = str(full_text)
+        text_norm = normalize(full_text)
 
-    # 1. Patrones claros de uso como personaje bíblico real (Rey Mesa de Moab)
-    # Ej: "Mesa rey de Moab", "rey Mesa", "el rey Mesa", "Mesa, rey"
-    person_pattern = (
-        r"\b(?:el\s+)?rey\s+mesa\b|"
-        r"\bmesa\s*,?\s*(?:rey\s+de\s+moab|el\s+moabita|moabita)\b"
-    )
-    if re.search(person_pattern, raw_lower):
+        # 1. Si el texto original contiene 'demás' o 'Demás' (con tilde diacrítica), es el uso común en español
+        if re.search(r"\b[Dd]em[áa]s\b", raw_text):
+            if re.search(r"\b[Dd]emás\b", raw_text):
+                return False
+
+        # 2. Si el texto original contiene 'Demas' (con mayúscula de nombre propio, sin tilde):
+        # Ej: "Demas me ha desamparado", "Lucas el médico amado, y Demas", "Te saludan ... Demas y Lucas"
+        if re.search(r"\bDemas\b", raw_text):
+            return True
+
+        # 3. Patrones de locución común pronominal/adjetiva sobre text_norm o texto sin tildes:
+        common_demas_pattern = (
+            r"\b(?:los|las|a\s+los|a\s+las|de\s+los|de\s+las|para\s+los|para\s+las|"
+            r"con\s+los|con\s+las|entre\s+los|entre\s+las|hacia\s+los|hacia\s+las|"
+            r"como\s+los|como\s+las|sobre\s+los|sobre\s+las|ante\s+los|ante\s+las|"
+            r"por\s+lo|y)\s+demas\b|"
+            r"\bdemas\s+(?:personas|creyentes|hombres|mujeres|discipulos|apostoles|hermanos|cosas)\b"
+        )
+        if re.search(common_demas_pattern, text_norm):
+            return False
+
+        # Si aparece "demas" en minúsculas en raw_text sin mayúscula de nombre propio
+        if re.search(r"\bdemas\b", raw_text):
+            return False
+
+        # 4. En cualquier otro caso, comportamiento conservador: True
         return True
-
-    # 2. Patrones claros de sustantivo común (mesa como mueble o acto de compartir comida)
-    # Ej: "la mesa", "una mesa", "mesa compartida", "a la mesa", "en la mesa", "sentados a la mesa", "comer a la mesa"
-    common_noun_pattern = (
-        r"\b(?:la|una|esta|aquella|las|estas|cada|toda|otra|de\s+la|a\s+la|en\s+la|de\s+una|a\s+una|en\s+una)\s+mesas?\b|"
-        r"\bmesas?\s+(?:compartida|comun|puesta|servida|del\s+senor|de\s+los\s+senores|de\s+los\s+cambistas|de\s+dinero)\b|"
-        r"\b(?:sentar\w*|sentad\w*|com\w*|serv\w*|reclin\w*|particip\w*|acerc\w*)\s+(?:a\s+la|a\s+una|en\s+la|en\s+una)?\s*mesas?\b|"
-        r"\bmesas?\s+con\s+(?:otras\s+personas|creyentes|gentiles|judios|discipulos)\b"
-    )
-    if re.search(common_noun_pattern, text_norm):
-        return False
-
-    # Si aparece "mesa" en minúscula en el texto sin contexto de rey Mesa
-    if "mesa" in raw_lower:
-        return False
 
     return True
 
