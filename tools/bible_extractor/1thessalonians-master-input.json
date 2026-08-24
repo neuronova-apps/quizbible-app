@@ -1,0 +1,915 @@
+{
+  "source": "Quiz Bible master bank - 1 Tesalonicenses",
+  "version": "RVR1960",
+  "book": "1 Tesalonicenses",
+  "total_questions": 30,
+  "questions": [
+    {
+      "id": "NQB-NT-1TS-0001",
+      "book": "1 Tesalonicenses",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 1,
+      "reference": "1 Tesalonicenses 1:1",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Saludo y remitentes",
+      "characters": [
+        "Pablo",
+        "Silvano",
+        "Timoteo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tres colaboradores aparecen juntos en el saludo inicial?",
+      "opcion_a": "Pablo, Silvano y Timoteo",
+      "opcion_b": "Pedro, Juan y Santiago",
+      "opcion_c": "Bernabé, Marcos y Lucas",
+      "opcion_d": "Aquila, Priscila y Apolos",
+      "correct_option": "A",
+      "correct_answer": "Pablo, Silvano y Timoteo",
+      "explanation": "La apertura presenta conjuntamente a Pablo, Silvano y Timoteo como remitentes de la carta. La pregunta se limita a la identificación epistolar.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0002",
+      "book": "1 Tesalonicenses",
+      "chapter": 1,
+      "verse_start": 2,
+      "verse_end": 3,
+      "reference": "1 Tesalonicenses 1:2-3",
+      "category": "NT_GENERAL",
+      "subcategory": "Fe, amor y esperanza",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué tres rasgos de la comunidad son recordados en la acción de gracias?",
+      "opcion_a": "La obra de la fe, el trabajo del amor y la constancia de la esperanza",
+      "opcion_b": "La riqueza, el prestigio y la influencia política",
+      "opcion_c": "El aislamiento, el silencio y la uniformidad",
+      "opcion_d": "El poder militar, la fama y el dominio",
+      "correct_option": "A",
+      "correct_answer": "La obra de la fe, el trabajo del amor y la constancia de la esperanza",
+      "explanation": "La gratitud vincula fe, amor y esperanza con acciones y perseverancia concretas. No relaciona madurez con riqueza o poder.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0003",
+      "book": "1 Tesalonicenses",
+      "chapter": 1,
+      "verse_start": 4,
+      "verse_end": 5,
+      "reference": "1 Tesalonicenses 1:4-5",
+      "category": "NT_GENERAL",
+      "subcategory": "Evangelio y poder del Espíritu",
+      "characters": [
+        "Pablo",
+        "comunidad",
+        "Espíritu Santo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo describe Pablo la llegada del evangelio a la comunidad?",
+      "opcion_a": "No solo en palabras, sino también con poder, Espíritu Santo y plena convicción",
+      "opcion_b": "Como una filosofía secreta reservada a una élite",
+      "opcion_c": "Como una estrategia política para dominar la ciudad",
+      "opcion_d": "Como un mensaje sin efectos en la vida",
+      "correct_option": "A",
+      "correct_answer": "No solo en palabras, sino también con poder, Espíritu Santo y plena convicción",
+      "explanation": "Pablo contrasta una recepción meramente verbal con una experiencia acompañada por poder, Espíritu Santo y convicción. El texto no presenta una élite secreta ni dominio político.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0004",
+      "book": "1 Tesalonicenses",
+      "chapter": 1,
+      "verse_start": 6,
+      "verse_end": 7,
+      "reference": "1 Tesalonicenses 1:6-7",
+      "category": "NT_GENERAL",
+      "subcategory": "Imitación y ejemplo",
+      "characters": [
+        "Comunidad",
+        "Pablo",
+        "Señor"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación caracteriza la recepción del mensaje pese a la dificultad?",
+      "opcion_a": "Aflicción junto con gozo del Espíritu y un ejemplo que alcanzó a otras comunidades",
+      "opcion_b": "Ausencia total de oposición desde el comienzo",
+      "opcion_c": "Búsqueda deliberada de sufrimiento para ganar mérito",
+      "opcion_d": "Aislamiento de otras iglesias",
+      "correct_option": "A",
+      "correct_answer": "Aflicción junto con gozo del Espíritu y un ejemplo que alcanzó a otras comunidades",
+      "explanation": "La comunidad recibió el mensaje en medio de aflicción y con gozo, llegando a ser ejemplo. Esto no convierte el sufrimiento en algo que deba buscarse.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0005",
+      "book": "1 Tesalonicenses",
+      "chapter": 1,
+      "verse_start": 8,
+      "verse_end": 9,
+      "reference": "1 Tesalonicenses 1:8-9",
+      "category": "NT_GENERAL",
+      "subcategory": "Conversión y servicio",
+      "characters": [
+        "Comunidad",
+        "Dios"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cambio de orientación se describe al resumir la respuesta de la comunidad?",
+      "opcion_a": "Volverse de los ídolos para servir al Dios vivo y verdadero",
+      "opcion_b": "Cambiar una identidad étnica por otra",
+      "opcion_c": "Abandonar toda actividad laboral",
+      "opcion_d": "Buscar superioridad sobre otros pueblos",
+      "correct_option": "A",
+      "correct_answer": "Volverse de los ídolos para servir al Dios vivo y verdadero",
+      "explanation": "El resumen describe un cambio religioso y ético hacia el servicio a Dios. No implica superioridad étnica ni abandono de responsabilidades ordinarias.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0006",
+      "book": "1 Tesalonicenses",
+      "chapter": 1,
+      "verse_start": 9,
+      "verse_end": 10,
+      "reference": "1 Tesalonicenses 1:9-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Espera y esperanza",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que la esperanza descrita incluye esperar al Hijo de Dios desde los cielos",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. La espera se vincula con Jesús y con la liberación futura, sin proporcionar una fecha para calcular su retorno.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0007",
+      "book": "1 Tesalonicenses",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 4,
+      "reference": "1 Tesalonicenses 2:1-4",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Valor después del sufrimiento",
+      "characters": [
+        "Pablo",
+        "Silvano",
+        "Timoteo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué actitud describe Pablo después del maltrato sufrido antes de llegar a la ciudad?",
+      "opcion_a": "Hablar con valentía en Dios pese a la oposición",
+      "opcion_b": "Buscar venganza contra quienes lo habían maltratado",
+      "opcion_c": "Ocultar el mensaje para evitar toda dificultad",
+      "opcion_d": "Presentar el sufrimiento como condición que otros debían buscar",
+      "correct_option": "A",
+      "correct_answer": "Hablar con valentía en Dios pese a la oposición",
+      "explanation": "Pablo recuerda dificultades previas y, aun así, valentía para anunciar el mensaje. No promueve venganza ni la búsqueda deliberada de daño.",
+      "additional_references": [
+        "Hechos 16:22-40"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0008",
+      "book": "1 Tesalonicenses",
+      "chapter": 2,
+      "verse_start": 3,
+      "verse_end": 6,
+      "reference": "1 Tesalonicenses 2:3-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Integridad del ministerio",
+      "characters": [
+        "Pablo",
+        "colaboradores"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué motivación rechaza Pablo al describir la manera en que él y sus colaboradores hablaron?",
+      "opcion_a": "Engaño, impureza, manipulación y búsqueda de aprobación humana",
+      "opcion_b": "Responsabilidad ante Dios por el mensaje recibido",
+      "opcion_c": "Cuidado por quienes escuchaban",
+      "opcion_d": "Examen de sus propias motivaciones",
+      "correct_option": "A",
+      "correct_answer": "Engaño, impureza, manipulación y búsqueda de aprobación humana",
+      "explanation": "El pasaje insiste en integridad y responsabilidad ante Dios, rechazando engaño, adulación y motivos interesados.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0009",
+      "book": "1 Tesalonicenses",
+      "chapter": 2,
+      "verse_start": 7,
+      "verse_end": 8,
+      "reference": "1 Tesalonicenses 2:7-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Cuidado afectuoso",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué imagen usa Pablo para expresar el trato afectuoso dado a la comunidad?",
+      "opcion_a": "El cuidado de una madre que atiende con ternura a sus propios hijos",
+      "opcion_b": "El mando de un gobernante que exige obediencia absoluta",
+      "opcion_c": "La vigilancia de un supervisor que castiga errores",
+      "opcion_d": "La distancia de un maestro que evita vínculos",
+      "correct_option": "A",
+      "correct_answer": "El cuidado de una madre que atiende con ternura a sus propios hijos",
+      "explanation": "La comparación comunica ternura y entrega. No legitima control coercitivo ni autoridad ilimitada.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0010",
+      "book": "1 Tesalonicenses",
+      "chapter": 2,
+      "verse_start": 9,
+      "verse_end": 12,
+      "reference": "1 Tesalonicenses 2:9-12",
+      "category": "NT_GENERAL",
+      "subcategory": "Trabajo y exhortación",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué equilibrio muestra Pablo al recordar su trabajo y su trato con cada creyente?",
+      "opcion_a": "Trabajó para no ser carga y a la vez exhortó, consoló y animó como un padre",
+      "opcion_b": "Exigió apoyo económico como prueba de fidelidad",
+      "opcion_c": "Evitó toda responsabilidad pastoral",
+      "opcion_d": "Concentró la autoridad en el control financiero",
+      "correct_option": "A",
+      "correct_answer": "Trabajó para no ser carga y a la vez exhortó, consoló y animó como un padre",
+      "explanation": "Pablo une trabajo para evitar una carga innecesaria con cuidado personal y exhortación. No convierte el apoyo económico en mecanismo de control.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0011",
+      "book": "1 Tesalonicenses",
+      "chapter": 2,
+      "verse_start": 13,
+      "verse_end": 16,
+      "reference": "1 Tesalonicenses 2:13-16",
+      "category": "NT_GENERAL",
+      "subcategory": "Recepción de la palabra y persecución",
+      "characters": [
+        "Pablo",
+        "comunidad",
+        "iglesias de Judea"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué cautela es necesaria al interpretar la comparación con comunidades de Judea que también sufrieron oposición?",
+      "opcion_a": "Reconocer el contexto de conflicto sin convertirlo en culpa colectiva contra el pueblo judío",
+      "opcion_b": "Usar el pasaje para responsabilizar a todos los judíos de cualquier época",
+      "opcion_c": "Presentar el judaísmo como intrínsecamente hostil",
+      "opcion_d": "Aplicar el conflicto antiguo a grupos étnicos actuales",
+      "correct_option": "A",
+      "correct_answer": "Reconocer el contexto de conflicto sin convertirlo en culpa colectiva contra el pueblo judío",
+      "explanation": "El pasaje nace de conflictos concretos del primer siglo. Su lenguaje no debe convertirse en antijudaísmo, culpa colectiva ni hostilidad hacia judíos actuales.",
+      "additional_references": [
+        "Hechos 17:1-10"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0012",
+      "book": "1 Tesalonicenses",
+      "chapter": 2,
+      "verse_start": 17,
+      "verse_end": 20,
+      "reference": "1 Tesalonicenses 2:17-20",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Deseo de volver y gozo pastoral",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo expresa un fuerte deseo de volver a ver a la comunidad y la llama su gozo y corona",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. Pablo describe separación involuntaria, deseo de regreso y profundo afecto pastoral por la comunidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0013",
+      "book": "1 Tesalonicenses",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 5,
+      "reference": "1 Tesalonicenses 3:1-5",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Misión de Timoteo",
+      "characters": [
+        "Pablo",
+        "Timoteo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Para qué fue enviado Timoteo a la comunidad durante la separación de Pablo?",
+      "opcion_a": "Para fortalecer y animar su fe en medio de las dificultades",
+      "opcion_b": "Para reemplazar permanentemente a todos los responsables locales",
+      "opcion_c": "Para exigir recursos económicos",
+      "opcion_d": "Para imponer decisiones sin diálogo",
+      "correct_option": "A",
+      "correct_answer": "Para fortalecer y animar su fe en medio de las dificultades",
+      "explanation": "Timoteo es enviado para fortalecer y alentar a la comunidad. Su misión se presenta como apoyo pastoral, no como autoridad ilimitada.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0014",
+      "book": "1 Tesalonicenses",
+      "chapter": 3,
+      "verse_start": 3,
+      "verse_end": 4,
+      "reference": "1 Tesalonicenses 3:3-4",
+      "category": "NT_GENERAL",
+      "subcategory": "Aflicciones y estabilidad",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué propósito tiene la advertencia previa sobre las dificultades que podían enfrentar?",
+      "opcion_a": "Evitar que las pruebas los desestabilizaran o les hicieran pensar que todo había fracasado",
+      "opcion_b": "Convencerlos de que debían provocar persecución",
+      "opcion_c": "Enseñar que toda persona fiel sufrirá exactamente lo mismo",
+      "opcion_d": "Prohibirles buscar protección en una situación de riesgo",
+      "correct_option": "A",
+      "correct_answer": "Evitar que las pruebas los desestabilizaran o les hicieran pensar que todo había fracasado",
+      "explanation": "Pablo busca preparar a la comunidad para dificultades reales, no convertirlas en meta espiritual ni impedir medidas razonables de protección.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0015",
+      "book": "1 Tesalonicenses",
+      "chapter": 3,
+      "verse_start": 6,
+      "verse_end": 8,
+      "reference": "1 Tesalonicenses 3:6-8",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Informe de Timoteo",
+      "characters": [
+        "Timoteo",
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué noticia de Timoteo produjo consuelo en Pablo?",
+      "opcion_a": "Buenas noticias sobre la fe, el amor y el buen recuerdo de la comunidad",
+      "opcion_b": "Que toda oposición había terminado definitivamente",
+      "opcion_c": "Que la comunidad había alcanzado riqueza",
+      "opcion_d": "Que ya no necesitaban apoyo ni enseñanza",
+      "correct_option": "A",
+      "correct_answer": "Buenas noticias sobre la fe, el amor y el buen recuerdo de la comunidad",
+      "explanation": "Timoteo informa favorablemente sobre fe, amor y afecto mutuo. El consuelo de Pablo no depende de prosperidad o ausencia absoluta de problemas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0016",
+      "book": "1 Tesalonicenses",
+      "chapter": 3,
+      "verse_start": 9,
+      "verse_end": 10,
+      "reference": "1 Tesalonicenses 3:9-10",
+      "category": "NT_GENERAL",
+      "subcategory": "Gratitud y oración",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué deseo acompaña la gratitud de Pablo al recibir noticias alentadoras?",
+      "opcion_a": "Poder verlos nuevamente y completar lo que aún falta en su fe",
+      "opcion_b": "Controlar cada decisión privada de la comunidad",
+      "opcion_c": "Recibir reconocimiento público",
+      "opcion_d": "Evitar que hagan preguntas",
+      "correct_option": "A",
+      "correct_answer": "Poder verlos nuevamente y completar lo que aún falta en su fe",
+      "explanation": "Pablo combina gratitud con el deseo de volver y ayudar en el crecimiento de la fe. No describe control de conciencia ni autosuficiencia de la comunidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0017",
+      "book": "1 Tesalonicenses",
+      "chapter": 3,
+      "verse_start": 11,
+      "verse_end": 13,
+      "reference": "1 Tesalonicenses 3:11-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Amor creciente y firmeza",
+      "characters": [
+        "Pablo",
+        "comunidad",
+        "Señor Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué crecimiento pide Pablo que prepare a la comunidad para permanecer firme?",
+      "opcion_a": "Un amor abundante entre ellos y hacia todos",
+      "opcion_b": "Una separación hostil de quienes no pertenecen al grupo",
+      "opcion_c": "Una obediencia sin discernimiento a cualquier líder",
+      "opcion_d": "Una superioridad moral basada en comparaciones",
+      "correct_option": "A",
+      "correct_answer": "Un amor abundante entre ellos y hacia todos",
+      "explanation": "La oración vincula amor creciente con corazones firmes delante de Dios. El horizonte incluye amor hacia todos, no hostilidad o superioridad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0018",
+      "book": "1 Tesalonicenses",
+      "chapter": 3,
+      "verse_start": 11,
+      "verse_end": 13,
+      "reference": "1 Tesalonicenses 3:11-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Oración por el camino y la santidad",
+      "characters": [
+        "Pablo",
+        "comunidad",
+        "Dios",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo ora por poder volver a la comunidad y por el crecimiento de su amor",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El cierre del capítulo reúne deseo de reencuentro, amor creciente y firmeza de la comunidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0019",
+      "book": "1 Tesalonicenses",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 2,
+      "reference": "1 Tesalonicenses 4:1-2",
+      "category": "NT_GENERAL",
+      "subcategory": "Vida que agrada a Dios",
+      "characters": [
+        "Pablo",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué orientación general abre las exhortaciones prácticas del capítulo?",
+      "opcion_a": "Seguir creciendo en una manera de vivir que agrade a Dios",
+      "opcion_b": "Abandonar toda actividad cotidiana",
+      "opcion_c": "Buscar aprobación social como criterio principal",
+      "opcion_d": "Reducir la fe a conocimiento sin conducta",
+      "correct_option": "A",
+      "correct_answer": "Seguir creciendo en una manera de vivir que agrade a Dios",
+      "explanation": "La exhortación parte de una vida ya aprendida y llama a seguir avanzando. La fe se relaciona con conducta y crecimiento continuo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0020",
+      "book": "1 Tesalonicenses",
+      "chapter": 4,
+      "verse_start": 3,
+      "verse_end": 8,
+      "reference": "1 Tesalonicenses 4:3-8",
+      "category": "NT_GENERAL",
+      "subcategory": "Santificación y sexualidad",
+      "characters": [
+        "Comunidad",
+        "Dios",
+        "Espíritu Santo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué principio debe conservarse al interpretar la enseñanza sobre santificación y conducta sexual?",
+      "opcion_a": "La sexualidad debe vivirse con santidad, honor y respeto, sin explotación de otras personas",
+      "opcion_b": "El cuerpo es malo por naturaleza",
+      "opcion_c": "La vergüenza y la humillación son métodos legítimos de corrección",
+      "opcion_d": "La coerción sexual puede justificarse dentro de una relación religiosa",
+      "correct_option": "A",
+      "correct_answer": "La sexualidad debe vivirse con santidad, honor y respeto, sin explotación de otras personas",
+      "explanation": "El pasaje llama a santidad y dominio responsable, rechazando el agravio al prójimo. No autoriza vergüenza, coerción o desprecio del cuerpo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0021",
+      "book": "1 Tesalonicenses",
+      "chapter": 4,
+      "verse_start": 9,
+      "verse_end": 12,
+      "reference": "1 Tesalonicenses 4:9-12",
+      "category": "NT_GENERAL",
+      "subcategory": "Amor fraternal, tranquilidad y trabajo",
+      "characters": [
+        "Comunidad"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación propone Pablo para una vida respetable ante quienes están fuera de la comunidad?",
+      "opcion_a": "Crecer en amor, vivir tranquilamente, atender los propios asuntos y trabajar",
+      "opcion_b": "Depender económicamente de otros sin necesidad",
+      "opcion_c": "Buscar notoriedad mediante conflictos",
+      "opcion_d": "Aislarse completamente de la sociedad",
+      "correct_option": "A",
+      "correct_answer": "Crecer en amor, vivir tranquilamente, atender los propios asuntos y trabajar",
+      "explanation": "La exhortación une amor fraternal, vida responsable y trabajo. No convierte la tranquilidad en aislamiento ni justifica despreciar a quien necesita apoyo.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0022",
+      "book": "1 Tesalonicenses",
+      "chapter": 4,
+      "verse_start": 13,
+      "verse_end": 14,
+      "reference": "1 Tesalonicenses 4:13-14",
+      "category": "NT_GENERAL",
+      "subcategory": "Duelo y esperanza",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué diferencia busca introducir Pablo al hablar de creyentes que han muerto?",
+      "opcion_a": "Que el duelo sea acompañado por esperanza en la resurrección, no que se elimine el dolor humano",
+      "opcion_b": "Que llorar sea considerado falta de fe",
+      "opcion_c": "Que toda tristeza deba ocultarse",
+      "opcion_d": "Que se abandone el cuidado de quienes están de duelo",
+      "correct_option": "A",
+      "correct_answer": "Que el duelo sea acompañado por esperanza en la resurrección, no que se elimine el dolor humano",
+      "explanation": "Pablo no prohíbe el duelo; ofrece una esperanza que distingue la manera de afrontarlo. El pasaje no invalida tristeza, apoyo emocional o acompañamiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0023",
+      "book": "1 Tesalonicenses",
+      "chapter": 4,
+      "verse_start": 15,
+      "verse_end": 18,
+      "reference": "1 Tesalonicenses 4:15-18",
+      "category": "NT_GENERAL",
+      "subcategory": "Venida del Señor y consuelo",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué uso pastoral da Pablo a su enseñanza sobre la venida del Señor y la reunión de los creyentes?",
+      "opcion_a": "Consolar y animar mutuamente a la comunidad",
+      "opcion_b": "Calcular una fecha exacta para el acontecimiento",
+      "opcion_c": "Clasificar como infiel a quien tenga preguntas escatológicas",
+      "opcion_d": "Abandonar responsabilidades presentes para esperar el evento",
+      "correct_option": "A",
+      "correct_answer": "Consolar y animar mutuamente a la comunidad",
+      "explanation": "El bloque culmina en consuelo mutuo. No entrega una fecha ni autoriza abandonar responsabilidades o imponer un esquema escatológico como prueba de fidelidad.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0024",
+      "book": "1 Tesalonicenses",
+      "chapter": 4,
+      "verse_start": 13,
+      "verse_end": 18,
+      "reference": "1 Tesalonicenses 4:13-18",
+      "category": "NT_GENERAL",
+      "subcategory": "Esperanza futura",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que Pablo enseña que el duelo cristiano debe desaparecer por completo y que llorar demuestra falta de fe",
+      "opcion_a": "Falso",
+      "opcion_b": "Verdadero",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Falso",
+      "explanation": "La afirmación es falsa. Pablo reconoce el duelo y lo sitúa dentro de una esperanza distinta; no condena el llanto ni las emociones humanas.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0025",
+      "book": "1 Tesalonicenses",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 6,
+      "reference": "1 Tesalonicenses 5:1-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Día del Señor y vigilancia",
+      "characters": [
+        "Comunidad",
+        "Señor"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué consecuencia práctica extrae Pablo de que el momento del día del Señor no pueda tratarse como una fecha segura?",
+      "opcion_a": "Permanecer despiertos y sobrios en lugar de confiar en cálculos o falsa seguridad",
+      "opcion_b": "Fijar fechas aproximadas cada generación",
+      "opcion_c": "Abandonar el trabajo para esperar el acontecimiento",
+      "opcion_d": "Vivir con miedo constante a cualquier noticia",
+      "correct_option": "A",
+      "correct_answer": "Permanecer despiertos y sobrios en lugar de confiar en cálculos o falsa seguridad",
+      "explanation": "La imagen del ladrón subraya imprevisibilidad y vigilancia. El pasaje no ofrece un calendario ni promueve pánico o abandono de responsabilidades.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0026",
+      "book": "1 Tesalonicenses",
+      "chapter": 5,
+      "verse_start": 7,
+      "verse_end": 11,
+      "reference": "1 Tesalonicenses 5:7-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Sobriedad y ánimo mutuo",
+      "characters": [
+        "Comunidad",
+        "Jesucristo"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué recursos simbólicos acompañan el llamado a mantenerse sobrios?",
+      "opcion_a": "Fe y amor como coraza y esperanza de salvación como casco",
+      "opcion_b": "Armas físicas para combatir a otras personas",
+      "opcion_c": "Aislamiento de todo grupo diferente",
+      "opcion_d": "Riqueza como protección espiritual",
+      "correct_option": "A",
+      "correct_answer": "Fe y amor como coraza y esperanza de salvación como casco",
+      "explanation": "El lenguaje de coraza y casco es metafórico y se refiere a fe, amor y esperanza. No constituye una invitación a violencia física.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0027",
+      "book": "1 Tesalonicenses",
+      "chapter": 5,
+      "verse_start": 12,
+      "verse_end": 15,
+      "reference": "1 Tesalonicenses 5:12-15",
+      "category": "NT_GENERAL",
+      "subcategory": "Cuidado comunitario",
+      "characters": [
+        "Comunidad",
+        "responsables"
+      ],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué combinación resume mejor las responsabilidades comunitarias indicadas hacia personas con distintas necesidades?",
+      "opcion_a": "Reconocer el servicio, corregir con cuidado, animar, sostener a los débiles y tener paciencia",
+      "opcion_b": "Tratar a todos exactamente igual sin considerar su situación",
+      "opcion_c": "Humillar públicamente a quien comete un error",
+      "opcion_d": "Responder al mal con represalias",
+      "correct_option": "A",
+      "correct_answer": "Reconocer el servicio, corregir con cuidado, animar, sostener a los débiles y tener paciencia",
+      "explanation": "El pasaje distingue necesidades: advertir, animar, sostener y ser pacientes. Además rechaza devolver mal por mal.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0028",
+      "book": "1 Tesalonicenses",
+      "chapter": 5,
+      "verse_start": 16,
+      "verse_end": 22,
+      "reference": "1 Tesalonicenses 5:16-22",
+      "category": "NT_GENERAL",
+      "subcategory": "Oración y discernimiento",
+      "characters": [
+        "Comunidad",
+        "Espíritu"
+      ],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué equilibrio aparece en las instrucciones sobre profecía y discernimiento?",
+      "opcion_a": "No despreciar de antemano, examinarlo todo, retener lo bueno y apartarse del mal",
+      "opcion_b": "Aceptar cualquier mensaje espiritual sin evaluación",
+      "opcion_c": "Rechazar toda profecía por principio",
+      "opcion_d": "Obedecer a quien afirme hablar por Dios sin rendición de cuentas",
+      "correct_option": "A",
+      "correct_answer": "No despreciar de antemano, examinarlo todo, retener lo bueno y apartarse del mal",
+      "explanation": "La exhortación combina apertura y examen crítico. No respalda credulidad automática ni autoridad espiritual sin evaluación.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0029",
+      "book": "1 Tesalonicenses",
+      "chapter": 5,
+      "verse_start": 23,
+      "verse_end": 24,
+      "reference": "1 Tesalonicenses 5:23-24",
+      "category": "NT_GENERAL",
+      "subcategory": "Santificación y fidelidad de Dios",
+      "characters": [
+        "Comunidad",
+        "Dios"
+      ],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Dónde coloca Pablo la confianza final al orar por la santificación completa de la comunidad?",
+      "opcion_a": "En la fidelidad de Dios, quien llama y llevará adelante su obra",
+      "opcion_b": "En el perfeccionismo individual sin ayuda",
+      "opcion_c": "En la ausencia de cualquier dificultad futura",
+      "opcion_d": "En la obediencia absoluta a un dirigente humano",
+      "correct_option": "A",
+      "correct_answer": "En la fidelidad de Dios, quien llama y llevará adelante su obra",
+      "explanation": "La oración termina destacando la fidelidad de Dios. No presenta perfeccionismo autosuficiente ni control humano como fundamento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-1TS-0030",
+      "book": "1 Tesalonicenses",
+      "chapter": 5,
+      "verse_start": 25,
+      "verse_end": 28,
+      "reference": "1 Tesalonicenses 5:25-28",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Cierre, lectura y gracia",
+      "characters": [
+        "Pablo",
+        "hermanos",
+        "comunidad"
+      ],
+      "difficulty": "Básico",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el cierre incluye petición de oración, saludos, lectura pública de la carta y una bendición de gracia",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El cierre reúne oración, saludos, lectura comunitaria y gracia, mostrando circulación pública de la carta.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}
