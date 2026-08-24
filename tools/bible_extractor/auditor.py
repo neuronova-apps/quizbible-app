@@ -1155,6 +1155,20 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
         "default_output_dir": "build/audit/1john",
         "ambient_places": set(),
     },
+    "2john": {
+        "canonical_name": "2 Juan",
+        "api_name": "2 Juan",
+        "aliases": {
+            "2 juan", "2juan", "2 john", "2john", "2jn", "2 jn",
+            "segunda de juan", "segunda carta de juan", "2ª juan", "2da juan"
+        },
+        "total_chapters": 1,
+        "blocks": [
+            (1, 1, "2john-01-01.json"),
+        ],
+        "default_output_dir": "build/audit/2john",
+        "ambient_places": set(),
+    },
 }
 
 STOPWORDS = {

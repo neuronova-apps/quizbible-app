@@ -1,0 +1,176 @@
+{
+  "source": "Quiz Bible master bank - 2 Juan",
+  "version": "RVR1960",
+  "book": "2 Juan",
+  "total_questions": 6,
+  "questions": [
+    {
+      "id": "NQB-NT-2JN-0001",
+      "book": "2 Juan",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 3,
+      "reference": "2 Juan 1:1-3",
+      "category": "NT_GENERAL",
+      "subcategory": "Saludo, verdad y amor",
+      "characters": [],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué énfasis acompaña el saludo dirigido a la señora elegida y a sus hijos?",
+      "opcion_a": "El amor en verdad y la permanencia de la verdad junto con gracia, misericordia y paz",
+      "opcion_b": "Una promesa de autoridad política sobre otras comunidades",
+      "opcion_c": "Una identidad biográfica detallada de la destinataria",
+      "opcion_d": "Un mandato para aislarse de toda persona externa",
+      "correct_option": "A",
+      "correct_answer": "El amor en verdad y la permanencia de la verdad junto con gracia, misericordia y paz",
+      "explanation": "El saludo vincula a la destinataria y sus hijos con el amor en verdad y expresa gracia, misericordia y paz. El pasaje no identifica de forma inequívoca quién es la señora elegida ni autoriza superioridad o aislamiento.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2JN-0002",
+      "book": "2 Juan",
+      "chapter": 1,
+      "verse_start": 4,
+      "verse_end": 6,
+      "reference": "2 Juan 1:4-6",
+      "category": "NT_GENERAL",
+      "subcategory": "Verdad, amor y mandamientos",
+      "characters": [],
+      "difficulty": "Intermedio",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Cómo relaciona el pasaje el amor con los mandamientos recibidos?",
+      "opcion_a": "Describe el amor como andar conforme a los mandamientos de Dios",
+      "opcion_b": "Presenta el amor como una emoción que hace innecesaria toda conducta",
+      "opcion_c": "Exige obediencia ilimitada a cualquier dirigente religioso",
+      "opcion_d": "Reduce el amor a evitar todo contacto con quien piensa distinto",
+      "correct_option": "A",
+      "correct_answer": "Describe el amor como andar conforme a los mandamientos de Dios",
+      "explanation": "El pasaje une amor y obediencia a los mandamientos, retomando lo recibido desde el principio. No convierte esto en obediencia ciega a líderes humanos, coerción ni aislamiento social.",
+      "additional_references": [
+        "1 Juan 5:3"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2JN-0003",
+      "book": "2 Juan",
+      "chapter": 1,
+      "verse_start": 7,
+      "verse_end": 7,
+      "reference": "2 Juan 1:7",
+      "category": "PERSONAJES_BIBLICOS",
+      "subcategory": "Jesucristo y los engañadores",
+      "characters": [
+        "Jesucristo"
+      ],
+      "difficulty": "Básico",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué rasgo atribuye la carta a los engañadores al hablar de Jesucristo?",
+      "opcion_a": "No confiesan que Jesucristo ha venido en carne",
+      "opcion_b": "Afirman que Jesucristo fue solamente un gobernante civil",
+      "opcion_c": "Enseñan que Pedro sustituyó a Jesucristo como salvador",
+      "opcion_d": "Niegan que exista cualquier deber de amor al prójimo",
+      "correct_option": "A",
+      "correct_answer": "No confiesan que Jesucristo ha venido en carne",
+      "explanation": "El criterio del pasaje es cristológico: los engañadores no confiesan a Jesucristo venido en carne. No debe usarse la etiqueta para señalar automáticamente a personas actuales, partidos, países o grupos que discrepan de buena fe.",
+      "additional_references": [
+        "1 Juan 4:2-3"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "PERSONAJES_NT",
+        "PERSONAJES_AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2JN-0004",
+      "book": "2 Juan",
+      "chapter": 1,
+      "verse_start": 8,
+      "verse_end": 9,
+      "reference": "2 Juan 1:8-9",
+      "category": "NT_GENERAL",
+      "subcategory": "Permanecer en la doctrina de Cristo",
+      "characters": [],
+      "difficulty": "Avanzado",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué advertencia acompaña el llamado a permanecer en la doctrina de Cristo?",
+      "opcion_a": "Cuidarse para no perder el fruto del trabajo y permanecer en la enseñanza de Cristo",
+      "opcion_b": "Rechazar todo estudio o pregunta que examine una interpretación",
+      "opcion_c": "Declarar infalible a cualquier maestro que use lenguaje cristiano",
+      "opcion_d": "Fijar una fecha para la consumación de todas las promesas",
+      "correct_option": "A",
+      "correct_answer": "Cuidarse para no perder el fruto del trabajo y permanecer en la enseñanza de Cristo",
+      "explanation": "El pasaje exhorta a cuidarse y permanecer en la doctrina de Cristo. Esta permanencia no debe convertirse en antiintelectualismo, prohibición de preguntar ni autoridad ilimitada de un intérprete humano.",
+      "additional_references": [
+        "1 Juan 2:24-27"
+      ],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2JN-0005",
+      "book": "2 Juan",
+      "chapter": 1,
+      "verse_start": 10,
+      "verse_end": 11,
+      "reference": "2 Juan 1:10-11",
+      "category": "NT_GENERAL",
+      "subcategory": "Hospitalidad, apoyo y enseñanza",
+      "characters": [],
+      "difficulty": "Experto",
+      "question_type": "MULTIPLE_CHOICE",
+      "question": "¿Qué límite de apoyo comunitario establece la carta respecto de quien llega sin esta enseñanza?",
+      "opcion_a": "No recibirlo ni saludarlo de una manera que implique participar o respaldar sus malas obras",
+      "opcion_b": "Ejercer violencia física para impedir que pueda hablar",
+      "opcion_c": "Negarle ayuda humanitaria urgente aunque esté en peligro",
+      "opcion_d": "Hostigar públicamente a toda persona que formule una pregunta doctrinal",
+      "correct_option": "A",
+      "correct_answer": "No recibirlo ni saludarlo de una manera que implique participar o respaldar sus malas obras",
+      "explanation": "El pasaje establece un límite de hospitalidad y bienvenida ligado a no participar en malas obras. No autoriza violencia, hostigamiento, negación de ayuda humanitaria urgente, discriminación ni silenciamiento de preguntas de buena fe.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS"
+      ]
+    },
+    {
+      "id": "NQB-NT-2JN-0006",
+      "book": "2 Juan",
+      "chapter": 1,
+      "verse_start": 12,
+      "verse_end": 13,
+      "reference": "2 Juan 1:12-13",
+      "category": "NT_GENERAL",
+      "subcategory": "Comunicación cara a cara y cierre",
+      "characters": [],
+      "difficulty": "Intermedio",
+      "question_type": "TRUE_FALSE",
+      "question": "Indica si es verdadero o falso que el cierre expresa el deseo de hablar cara a cara para que el gozo sea cumplido",
+      "opcion_a": "Verdadero",
+      "opcion_b": "Falso",
+      "opcion_c": "",
+      "opcion_d": "",
+      "correct_option": "A",
+      "correct_answer": "Verdadero",
+      "explanation": "La afirmación es verdadera. El cierre expresa que, aunque había mucho por escribir, se esperaba una conversación cara a cara vinculada al gozo. El saludo final no permite identificar con certeza a todas las personas mencionadas más allá de lo explícito.",
+      "additional_references": [],
+      "eligible_modes": [
+        "NT",
+        "AMBOS",
+        "VERDADERO_FALSO_NT",
+        "VERDADERO_FALSO_AMBOS"
+      ]
+    }
+  ]
+}

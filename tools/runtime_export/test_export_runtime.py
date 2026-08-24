@@ -1130,6 +1130,36 @@ class TestRuntimeExport(unittest.TestCase):
             self.assertEqual(len(q["options"]), 4)
             self.assertEqual([o["id"] for o in q["options"]], ["A", "B", "C", "D"])
 
+    def test_export_2john_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de 2 Juan al formato runtime."""
+        jn2_path = REPO_ROOT / "tools" / "bible_extractor" / "2john-master-input.json"
+        if not jn2_path.exists():
+            self.skipTest("2john-master-input.json no encontrado")
+        raw_jn2 = json.loads(jn2_path.read_text(encoding="utf-8"))
+        jn2_qs = raw_jn2.get("questions", raw_jn2)
+        status_map = {q["id"]: "VERIFIED" for q in jn2_qs}
+
+        collection = export_canonical_data(jn2_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 6)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "2 Juan")
+        self.assertTrue(validate_runtime_collection(collection))
+
+        # Verify TF questions have exactly 2 options A/B
+        tf_qs = [q for q in collection["questions"] if q["questionType"] == "TRUE_FALSE"]
+        self.assertEqual(len(tf_qs), 1)
+        for q in tf_qs:
+            self.assertEqual(len(q["options"]), 2)
+            self.assertEqual([o["id"] for o in q["options"]], ["A", "B"])
+
+        # Verify MC questions have exactly 4 options A/B/C/D
+        mc_qs = [q for q in collection["questions"] if q["questionType"] == "MULTIPLE_CHOICE"]
+        self.assertEqual(len(mc_qs), 5)
+        for q in mc_qs:
+            self.assertEqual(len(q["options"]), 4)
+            self.assertEqual([o["id"] for o in q["options"]], ["A", "B", "C", "D"])
+
 
 if __name__ == "__main__":
     unittest.main()
