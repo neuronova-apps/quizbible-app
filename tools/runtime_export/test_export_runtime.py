@@ -605,7 +605,36 @@ class TestRuntimeExport(unittest.TestCase):
             self.assertEqual(q["book"], "Colosenses")
         self.assertTrue(validate_runtime_collection(collection))
 
+    def test_export_1thessalonians_canonical_to_runtime(self) -> None:
+        """Verifica la exportación del banco de 1 Tesalonicenses al formato runtime."""
+        ts_path = REPO_ROOT / "tools" / "bible_extractor" / "1thessalonians-master-input.json"
+        if not ts_path.exists():
+            self.skipTest("1thessalonians-master-input.json no encontrado")
+        raw_ts = json.loads(ts_path.read_text(encoding="utf-8"))
+        ts_qs = raw_ts.get("questions", raw_ts)
+        status_map = {q["id"]: "VERIFIED" for q in ts_qs}
+
+        collection = export_canonical_data(ts_qs, audit_status_map=status_map)
+        self.assertEqual(collection["totalQuestions"], 30)
+        for q in collection["questions"]:
+            self.assertEqual(q["testament"], "NT")
+            self.assertEqual(q["book"], "1 Tesalonicenses")
+        self.assertTrue(validate_runtime_collection(collection))
+
+        # Verify TF questions have exactly 2 options A/B
+        tf_qs = [q for q in collection["questions"] if q["questionType"] == "TRUE_FALSE"]
+        self.assertEqual(len(tf_qs), 5)
+        for q in tf_qs:
+            self.assertEqual(len(q["options"]), 2)
+            self.assertEqual([o["id"] for o in q["options"]], ["A", "B"])
+
+        # Verify MC questions have exactly 4 options A/B/C/D
+        mc_qs = [q for q in collection["questions"] if q["questionType"] == "MULTIPLE_CHOICE"]
+        self.assertEqual(len(mc_qs), 25)
+        for q in mc_qs:
+            self.assertEqual(len(q["options"]), 4)
+            self.assertEqual([o["id"] for o in q["options"]], ["A", "B", "C", "D"])
+
 
 if __name__ == "__main__":
     unittest.main()
-

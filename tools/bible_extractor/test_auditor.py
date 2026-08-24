@@ -40,7 +40,7 @@ from auditor import (
     evaluate_question, run_audit, extract_numbers, normalize, detect_book_key,
     token_matches_text, BOOK_CONFIGS, is_locative_or_collective_entity, resolve_implicit_speaker,
     is_narrative_source_attribution, is_biblical_place_usage, is_biblical_person_usage,
-    BIBLICAL_PERSON_ALIASES, person_token_matches_text
+    BIBLICAL_PERSON_ALIASES, person_token_matches_text, BIBLE_PERSONAJES
 )
 
 GENESIS_PATH = Path(__file__).parent / "genesis-master-input.json"
@@ -94,6 +94,7 @@ GALATIANS_PATH = Path(__file__).parent / "galatians-master-input.json"
 EPHESIANS_PATH = Path(__file__).parent / "ephesians-master-input.json"
 PHILIPPIANS_PATH = Path(__file__).parent / "philippians-master-input.json"
 COLOSSIANS_PATH = Path(__file__).parent / "colossians-master-input.json"
+THESSALONIANS1_PATH = Path(__file__).parent / "1thessalonians-master-input.json"
 
 
 class TestAuditorCanonical(unittest.TestCase):
@@ -401,6 +402,12 @@ class TestAuditorCanonical(unittest.TestCase):
             cls.colossians_questions = {q["id"]: q for q in (raw_col.get("questions", []) if isinstance(raw_col, dict) else raw_col)}
         else:
             cls.colossians_questions = {}
+
+        if THESSALONIANS1_PATH.exists():
+            raw_1ts = json.loads(THESSALONIANS1_PATH.read_text(encoding="utf-8"))
+            cls.thessalonians1_questions = {q["id"]: q for q in (raw_1ts.get("questions", []) if isinstance(raw_1ts, dict) else raw_1ts)}
+        else:
+            cls.thessalonians1_questions = {}
 
     def setUp(self) -> None:
         self.temp_dir = Path(tempfile.mkdtemp())
@@ -5727,6 +5734,197 @@ class TestAuditorCanonical(unittest.TestCase):
         res23 = evaluate_question(q23, col4_15_17, book_key="colossians")
         self.assertEqual(res23["controles_superados"].get("control_nombres_propios"), "PASS")
         self.assertNotEqual(res23["estado"], "REQUIERE_CORRECCION")
+
+    # --- PRUEBAS ESPECÍFICAS DE 1 TESALONICENSES ---
+
+    def get_thessalonians1_question(self, qid: str) -> dict:
+        self.assertIn(qid, self.thessalonians1_questions, f"ID '{qid}' no encontrado en 1thessalonians-master-input.json")
+        return copy.deepcopy(self.thessalonians1_questions[qid])
+
+    def test_detect_book_key_1thessalonians(self) -> None:
+        """Verifica detección de book_key para 1 Tesalonicenses y sus variantes."""
+        for alias in ["1 Tesalonicenses", "1tesalonicenses", "1 Thessalonians", "1thessalonians",
+                       "1 thess", "1ts", "Primera de Tesalonicenses", "Primera carta a los Tesalonicenses"]:
+            spec = {"questions": [{"id": "NQB-NT-1TS-0001", "book": alias}]}
+            self.assertEqual(detect_book_key(spec), "1thessalonians",
+                             f"detect_book_key failed for alias: {alias}")
+
+    def test_1thessalonians_book_config_and_aliases(self) -> None:
+        """Verifica la configuración canónica de 1 Tesalonicenses en BOOK_CONFIGS."""
+        self.assertIn("1thessalonians", BOOK_CONFIGS)
+        cfg = BOOK_CONFIGS["1thessalonians"]
+        self.assertEqual(cfg["canonical_name"], "1 Tesalonicenses")
+        self.assertEqual(cfg["api_name"], "1Tesalonicenses")
+        self.assertEqual(cfg["total_chapters"], 5)
+        self.assertEqual(len(cfg["blocks"]), 1)
+        self.assertIn("1 tesalonicenses", cfg["aliases"])
+        self.assertIn("1thessalonians", cfg["aliases"])
+        self.assertIn("1ts", cfg["aliases"])
+        self.assertIn("tesalonica", cfg["ambient_places"])
+        self.assertIn("macedonia", cfg["ambient_places"])
+
+    def test_1thessalonians_canonical_baseline_structure(self) -> None:
+        """Verifica conteos, tipos, dificultad y distribución por capítulo de 1 Tesalonicenses."""
+        if not self.thessalonians1_questions:
+            self.skipTest("1thessalonians-master-input.json no disponible")
+        self.assertEqual(len(self.thessalonians1_questions), 30)
+
+        # 6 preguntas por capítulo (5 capítulos)
+        ch_counts = collections.Counter(q["chapter"] for q in self.thessalonians1_questions.values())
+        self.assertEqual(len(ch_counts), 5)
+        for ch in range(1, 6):
+            self.assertEqual(ch_counts[ch], 6, f"Capítulo {ch} tiene {ch_counts[ch]} preguntas, se esperaban 6")
+
+        # IDs: NQB-NT-1TS-0001 a NQB-NT-1TS-0030
+        ids = sorted(self.thessalonians1_questions.keys())
+        self.assertEqual(ids[0], "NQB-NT-1TS-0001")
+        self.assertEqual(ids[-1], "NQB-NT-1TS-0030")
+        self.assertEqual(len(set(ids)), 30)
+
+        # Dificultad: Básico=10, Intermedio=10, Avanzado=7, Experto=3
+        diff_counts = collections.Counter(q["difficulty"] for q in self.thessalonians1_questions.values())
+        self.assertEqual(diff_counts["Básico"], 10)
+        self.assertEqual(diff_counts["Intermedio"], 10)
+        self.assertEqual(diff_counts["Avanzado"], 7)
+        self.assertEqual(diff_counts["Experto"], 3)
+
+        # Tipos: 25 MC, 5 TF
+        type_counts = collections.Counter(q.get("question_type", "MULTIPLE_CHOICE") for q in self.thessalonians1_questions.values())
+        self.assertEqual(type_counts["MULTIPLE_CHOICE"], 25)
+        self.assertEqual(type_counts["TRUE_FALSE"], 5)
+
+        tf_ids = sorted(q["id"] for q in self.thessalonians1_questions.values() if q.get("question_type") == "TRUE_FALSE")
+        expected_tf = sorted(["NQB-NT-1TS-0006", "NQB-NT-1TS-0012", "NQB-NT-1TS-0018", "NQB-NT-1TS-0024", "NQB-NT-1TS-0030"])
+        self.assertEqual(tf_ids, expected_tf)
+
+    def test_1thessalonians_categories(self) -> None:
+        """Verifica categorías sin categorías de Evangelios en 1 Tesalonicenses."""
+        if not self.thessalonians1_questions:
+            self.skipTest("1thessalonians-master-input.json no disponible")
+        cat_counts = collections.Counter(q["category"] for q in self.thessalonians1_questions.values())
+        self.assertEqual(cat_counts["NT_GENERAL"], 24)
+        self.assertEqual(cat_counts["PERSONAJES_BIBLICOS"], 6)
+        for forbidden in ["JESUS_PALABRAS", "JESUS_MILAGROS", "JESUS_PARABOLAS"]:
+            self.assertEqual(cat_counts.get(forbidden, 0), 0, f"Categoría no permitida: {forbidden}")
+
+    def test_1thessalonians_additional_references(self) -> None:
+        """Verifica las 2 preguntas con 2 referencias adicionales en 1 Tesalonicenses."""
+        if not self.thessalonians1_questions:
+            self.skipTest("1thessalonians-master-input.json no disponible")
+        expected_add_refs = {
+            "NQB-NT-1TS-0007": ["Hechos 16:22-40"],
+            "NQB-NT-1TS-0011": ["Hechos 17:1-10"],
+        }
+        found_add_refs = {
+            qid: q["additional_references"]
+            for qid, q in self.thessalonians1_questions.items()
+            if q.get("additional_references")
+        }
+        self.assertEqual(len(found_add_refs), 2)
+        self.assertEqual(sum(len(r) for r in found_add_refs.values()), 2)
+        for qid, exp_refs in expected_add_refs.items():
+            self.assertEqual(found_add_refs.get(qid), exp_refs)
+
+    def test_1thessalonians_modes(self) -> None:
+        """Verifica la asignación de modos en 1 Tesalonicenses."""
+        if not self.thessalonians1_questions:
+            self.skipTest("1thessalonians-master-input.json no disponible")
+        mode_counts = collections.defaultdict(int)
+        for q in self.thessalonians1_questions.values():
+            for m in q.get("eligible_modes", []):
+                mode_counts[m] += 1
+        self.assertEqual(mode_counts["NT"], 30)
+        self.assertEqual(mode_counts["AMBOS"], 30)
+        self.assertEqual(mode_counts["PERSONAJES_NT"], 6)
+        self.assertEqual(mode_counts["PERSONAJES_AMBOS"], 6)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_NT"], 5)
+        self.assertEqual(mode_counts["VERDADERO_FALSO_AMBOS"], 5)
+
+    def test_1thessalonians_id_reference_integrity(self) -> None:
+        """Verifica consistencia de IDs y referencias en 1 Tesalonicenses."""
+        if not self.thessalonians1_questions:
+            self.skipTest("1thessalonians-master-input.json no disponible")
+        for qid, q in self.thessalonians1_questions.items():
+            ref = q.get("reference", "")
+            ch = q.get("chapter")
+            start = q.get("verse_start")
+            end = q.get("verse_end", start)
+            expected_suffix = f"{ch}:{start}" if start == end else f"{ch}:{start}-{end}"
+            self.assertTrue(
+                expected_suffix in ref or ref.endswith(expected_suffix),
+                f"Referencia inconsistente en {qid}: ref='{ref}', esperada terminada en '{expected_suffix}'"
+            )
+
+    def test_1thessalonians_true_false_0024_neutral_semantics(self) -> None:
+        """Verifica que NQB-NT-1TS-0024 opere con semántica neutral (A=Falso, B=Verdadero, correct=A)."""
+        if not self.thessalonians1_questions:
+            self.skipTest("1thessalonians-master-input.json no disponible")
+        q24 = self.get_thessalonians1_question("NQB-NT-1TS-0024")
+        self.assertEqual(q24["opcion_a"].strip().lower(), "falso")
+        self.assertEqual(q24["opcion_b"].strip().lower(), "verdadero")
+        self.assertEqual(q24["correct_option"], "A")
+        self.assertEqual(q24["correct_answer"].strip().lower(), "falso")
+
+    def test_1thessalonians_epistle_epistolary_resolution(self) -> None:
+        """Verifica que Pablo como autor epistolar se resuelva sin exigir token en cada versículo."""
+        if not self.thessalonians1_questions:
+            self.skipTest("1thessalonians-master-input.json no disponible")
+
+        # NQB-NT-1TS-0010 cubre 1 Tesalonicenses 2:9-12 — Pablo sin token en cada verso
+        q10 = self.thessalonians1_questions.get("NQB-NT-1TS-0010")
+        if not q10:
+            self.skipTest("NQB-NT-1TS-0010 no disponible")
+
+        ts2_9_12 = {
+            9: "Porque os recordáis, hermanos, nuestro trabajo y fatiga; cómo trabajando de noche y de día, para no ser gravosos a ninguno de vosotros, os predicamos el evangelio de Dios.",
+            10: "Vosotros sois testigos, y Dios también, de cuán santa, justa e irreprensiblemente nos comportamos con vosotros los creyentes;",
+            11: "así como también sabéis de qué modo, como el padre a sus hijos, exhortábamos y consolábamos a cada uno de vosotros,",
+            12: "y os encargábamos que anduvieseis como es digno de Dios, que os llamó a su reino y gloria."
+        }
+        res = evaluate_question(q10, ts2_9_12, book_key="1thessalonians")
+        self.assertNotEqual(res["estado"], "REQUIERE_CORRECCION",
+                            f"Q NQB-NT-1TS-0010 no debe ser REQUIERE_CORRECCION: {res.get('motivos_correccion')}")
+
+    def test_1thessalonians_characters_silvano_timoteo(self) -> None:
+        """Verifica que Silvano y Timoteo estén en BIBLE_PERSONAJES."""
+        self.assertIn("silvano", BIBLE_PERSONAJES)
+        self.assertIn("timoteo", BIBLE_PERSONAJES)
+        self.assertIn("pablo", BIBLE_PERSONAJES)
+
+    def test_1thessalonians_no_duplicates_within(self) -> None:
+        """Verifica que no haya preguntas duplicadas internamente en 1 Tesalonicenses."""
+        if not self.thessalonians1_questions:
+            self.skipTest("1thessalonians-master-input.json no disponible")
+        questions_texts = [q["question"].strip() for q in self.thessalonians1_questions.values()]
+        self.assertEqual(len(questions_texts), len(set(questions_texts)), "Duplicados detectados internamente")
+
+    def test_1thessalonians_no_duplicates_cross_nt(self) -> None:
+        """Verifica que no haya preguntas duplicadas entre 1 Tesalonicenses y los 12 libros NT anteriores."""
+        if not self.thessalonians1_questions:
+            self.skipTest("1thessalonians-master-input.json no disponible")
+        ts_texts = {q["question"].strip() for q in self.thessalonians1_questions.values()}
+        prior_nt = [
+            PHILIPPIANS_PATH.parent / "matthew-master-input.json",
+            PHILIPPIANS_PATH.parent / "mark-master-input.json",
+            PHILIPPIANS_PATH.parent / "luke-master-input.json",
+            PHILIPPIANS_PATH.parent / "john-master-input.json",
+            PHILIPPIANS_PATH.parent / "acts-master-input.json",
+            PHILIPPIANS_PATH.parent / "romans-master-input.json",
+            PHILIPPIANS_PATH.parent / "1corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "2corinthians-master-input.json",
+            PHILIPPIANS_PATH.parent / "galatians-master-input.json",
+            PHILIPPIANS_PATH.parent / "ephesians-master-input.json",
+            PHILIPPIANS_PATH.parent / "philippians-master-input.json",
+            PHILIPPIANS_PATH.parent / "colossians-master-input.json",
+        ]
+        for prior_path in prior_nt:
+            if not prior_path.exists():
+                continue
+            prior_data = json.loads(prior_path.read_text(encoding="utf-8"))
+            prior_questions = prior_data.get("questions", []) if isinstance(prior_data, dict) else prior_data
+            for pq in prior_questions:
+                self.assertNotIn(pq["question"].strip(), ts_texts,
+                                 f"Pregunta duplicada entre {prior_path.name} ({pq['id']}) y 1 Tesalonicenses")
 
 
 if __name__ == "__main__":

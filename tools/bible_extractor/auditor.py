@@ -976,6 +976,24 @@ BOOK_CONFIGS: dict[str, dict[str, Any]] = {
             "colosas", "laodicea", "hierapolis", "hierápolis", "roma"
         },
     },
+    "1thessalonians": {
+        "canonical_name": "1 Tesalonicenses",
+        "api_name": "1Tesalonicenses",
+        "aliases": {
+            "1 tesalonicenses", "1tesalonicenses", "1 thessalonians", "1thessalonians",
+            "1 thess", "1ts", "primera de tesalonicenses",
+            "primera carta a los tesalonicenses"
+        },
+        "total_chapters": 5,
+        "blocks": [
+            (1, 5, "1thessalonians-01-05.json"),
+        ],
+        "default_output_dir": "build/audit/1thessalonians",
+        "ambient_places": {
+            "tesalonica", "tesalónica", "macedonia", "atenas", "corinto", "berea",
+            "filipos", "judea", "jerusalen", "jerusalén", "roma"
+        },
+    },
 }
 
 STOPWORDS = {
@@ -1177,7 +1195,8 @@ BIBLE_PLACES = {
     "susa", "valle de ono", "ono", "opla", "ofel", "zonoa", "bet-sur", "betsur", "media", "india", "etiopia", "etiopía",
     "uz", "tierra de uz", "teman", "temán", "sua", "súa", "naamat", "saba",
     # Nuevo Testamento
-    "colosas", "laodicea", "hierapolis", "hierápolis"
+    "colosas", "laodicea", "hierapolis", "hierápolis",
+    "tesalonica", "tesalónica", "berea", "atenas", "corinto", "macedonia", "filipos",
 }
 
 # Raíces de parentesco y lemas

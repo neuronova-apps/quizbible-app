@@ -4,6 +4,7 @@ on:
   push:
     branches: [rvr1960-audit, main, audit-genesis-full-rvr1960]
     paths:
+      - "tools/bible_extractor/1thessalonians-master-input.json"
       - "tools/bible_extractor/colossians-master-input.json"
       - "tools/bible_extractor/philippians-master-input.json"
       - "tools/bible_extractor/ephesians-master-input.json"
@@ -63,6 +64,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - "tools/bible_extractor/1thessalonians-master-input.json"
       - "tools/bible_extractor/colossians-master-input.json"
       - "tools/bible_extractor/philippians-master-input.json"
       - "tools/bible_extractor/ephesians-master-input.json"
@@ -124,7 +126,7 @@ on:
       input_file:
         description: "Ruta del archivo de entrada de preguntas"
         required: true
-        default: "tools/bible_extractor/colossians-master-input.json"
+        default: "tools/bible_extractor/1thessalonians-master-input.json"
         type: string
 
 permissions:
@@ -153,7 +155,9 @@ jobs:
         run: |
           INPUT_FILE="${{ inputs.input_file || '' }}"
           if [ -z "$INPUT_FILE" ]; then
-            if [ -f "tools/bible_extractor/colossians-master-input.json" ]; then
+            if [ -f "tools/bible_extractor/1thessalonians-master-input.json" ]; then
+              INPUT_FILE="tools/bible_extractor/1thessalonians-master-input.json"
+            elif [ -f "tools/bible_extractor/colossians-master-input.json" ]; then
               INPUT_FILE="tools/bible_extractor/colossians-master-input.json"
             elif [ -f "tools/bible_extractor/philippians-master-input.json" ]; then
               INPUT_FILE="tools/bible_extractor/philippians-master-input.json"
@@ -263,7 +267,10 @@ jobs:
             fi
           fi
 
-          if [[ "$INPUT_FILE" == *"colossians"* ]] || [[ "$INPUT_FILE" == *"colosenses"* ]] || [[ "$INPUT_FILE" == *"col"* ]]; then
+          if [[ "$INPUT_FILE" == *"1thessalonians"* ]] || [[ "$INPUT_FILE" == *"1tesalonicenses"* ]] || [[ "$INPUT_FILE" == *"1ts"* ]]; then
+            OUTPUT_DIR="build/audit/1thessalonians"
+            ARTIFACT_NAME="auditoria-1tesalonicenses-rvr1960-${{ github.run_number }}"
+          elif [[ "$INPUT_FILE" == *"colossians"* ]] || [[ "$INPUT_FILE" == *"colosenses"* ]] || [[ "$INPUT_FILE" == *"col"* ]]; then
             OUTPUT_DIR="build/audit/colossians"
             ARTIFACT_NAME="auditoria-colosenses-rvr1960-${{ github.run_number }}"
           elif [[ "$INPUT_FILE" == *"philippians"* ]] || [[ "$INPUT_FILE" == *"filipenses"* ]] || [[ "$INPUT_FILE" == *"fil"* ]]; then
