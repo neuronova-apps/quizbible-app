@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "product": "Quiz Bible",
+  "web": {
+    "role": "Acceso web oficial",
+    "available": true,
+    "url": "https://neuronova-apps.github.io/quizbible-app/"
+  },
+  "android": {
+    "projectExists": true,
+    "distribution": "Google Play",
+    "status": "En desarrollo / preparación de distribución",
+    "publicUrl": null
+  },
+  "facebookInstantGames": {
+    "supported": false,
+    "status": "No aplica actualmente",
+    "publicUrl": null
+  }
+}
